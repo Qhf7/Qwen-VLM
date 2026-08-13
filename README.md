@@ -38,6 +38,9 @@ Real-IAD Variety 复杂工业场景异常检测算法挑战赛项目。
 | `dinov2_vlm_multiview_v2.py` | DINOv2 多层 patch memory bank + 多类型伪异常 head + 局部 CLIP + 五视角一致性 |
 | `dinov2_vlm_multiview_v3.py` | 去除逐测试图拉伸的 DINOv2 Train 校准版，使用 category/view memory bank、五视角伪异常 head 和局部 CLIP gate |
 | `build_model_fusion_v3.py` | 将已验证 CLIP/ensemble 分支与 DINOv2 v3 高置信局部证据做保守融合 |
+| `build_object_aware_segmentation_v1.py` | 前景零件区域估计 + 背景清黑 + 低频轮廓响应抑制 |
+| `build_object_aware_segmentation_v2.py` | Train 正常图像残差校准，生成更稀疏的局部缺陷候选 |
+| `build_object_aware_segmentation_v3.py` | v1/v2 平衡版：背景清黑、压制整件零件泛亮，同时保留局部异常召回 |
 | `build_ensemble_submission.py` | 多模型融合和提交包生成 |
 | `build_pseudo_fusion.py` | 伪异常结果融合 |
 | `validate_submission.py` | 提交文件格式校验 |
@@ -97,6 +100,21 @@ python build_model_fusion_v3.py \
   --output /root/autodl-tmp/submission_fusion_v3 \
   --zip /root/autodl-tmp/submission_fusion_v3.zip
 ```
+
+### Object-Aware Segmentation
+
+如果观察到 mask 把整个零件轮廓都高亮，而不是只高亮异常区域，可以使用 object-aware refinement。当前推荐先试 v3，它保留 `submission.csv` 图像级分数，只重建像素级 mask：
+
+```bash
+python build_object_aware_segmentation_v3.py \
+  --data-root /root/autodl-tmp/Dataset \
+  --base /root/autodl-tmp/submission_clip_vlm_v1 \
+  --output /root/autodl-tmp/submission_object_aware_v3 \
+  --zip /root/autodl-tmp/submission_object_aware_v3.zip \
+  --workers 12
+```
+
+本地可视化统计中，`submission_clip_vlm_v1` 的 `mask>0.5` 面积约为 `5.6%`，v3 降到约 `1.0%`；背景区域被压黑，零件整体泛亮明显减轻。
 
 ## 提交格式
 
