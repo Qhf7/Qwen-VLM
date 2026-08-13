@@ -36,6 +36,8 @@ Real-IAD Variety 复杂工业场景异常检测算法挑战赛项目。
 | `clip_vlm_fusion.py` | 通用 CLIP 零样本语义分数融合 |
 | `vlm_patch_prototype_infer.py` | CLIP 语义分数 + ViT patch 正常原型模型 |
 | `dinov2_vlm_multiview_v2.py` | DINOv2 多层 patch memory bank + 多类型伪异常 head + 局部 CLIP + 五视角一致性 |
+| `dinov2_vlm_multiview_v3.py` | 去除逐测试图拉伸的 DINOv2 Train 校准版，使用 category/view memory bank、五视角伪异常 head 和局部 CLIP gate |
+| `build_model_fusion_v3.py` | 将已验证 CLIP/ensemble 分支与 DINOv2 v3 高置信局部证据做保守融合 |
 | `build_ensemble_submission.py` | 多模型融合和提交包生成 |
 | `build_pseudo_fusion.py` | 伪异常结果融合 |
 | `validate_submission.py` | 提交文件格式校验 |
@@ -66,6 +68,35 @@ python validate_submission.py \
 ```
 
 校验内容包括：750 条 CSV 记录、3750 张 mask、目录结构、灰度模式、448×448 尺寸和 ZIP 完整性。
+
+### DINOv2 VLM v3
+
+v2 的 A 榜结果低于最佳融合包，主要原因是 mask 虽然更亮，但异常区域扩散到大量正常纹理和背景：本地统计中 v2 的 `area>0.5` 约为 `10.3%`，而最佳 CLIP/ensemble 包约为 `5.7%`。像素级 AP 和 F1max 关注异常像素排序、误报面积和阈值下的 precision/recall 平衡，整体更亮并不等价于定位更准。
+
+v3 针对这个问题做了模型侧修正：
+
+- 去掉测试图逐图 percentile 拉伸；
+- 用 Train 正常样本建立类别/视角像素分数校准；
+- 用 farthest-point sampling 构建 DINOv2 patch prototypes；
+- 伪异常 head 使用所有五视角正常图训练；
+- CLIP 只作为局部语义 gate，避免把全局文本分数直接当作像素 mask。
+
+服务器运行示例：
+
+```bash
+python dinov2_vlm_multiview_v3.py \
+  --data-root /root/autodl-tmp/Dataset \
+  --clip-weight /root/.cache/clip/ViT-B-32.pt \
+  --output /root/autodl-tmp/submission_dinov2_vlm_v3 \
+  --zip /root/autodl-tmp/submission_dinov2_vlm_v3.zip \
+  --batch-size 10
+
+python build_model_fusion_v3.py \
+  --base /root/autodl-tmp/submission_clip_vlm_v1 \
+  --candidate /root/autodl-tmp/submission_dinov2_vlm_v3 \
+  --output /root/autodl-tmp/submission_fusion_v3 \
+  --zip /root/autodl-tmp/submission_fusion_v3.zip
+```
 
 ## 提交格式
 
