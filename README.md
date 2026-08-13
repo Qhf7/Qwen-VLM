@@ -35,6 +35,7 @@ Real-IAD Variety 复杂工业场景异常检测算法挑战赛项目。
 | `pseudo_anomaly_head.py` | 基于官方正常样本构造伪异常并训练轻量 patch head |
 | `clip_vlm_fusion.py` | 通用 CLIP 零样本语义分数融合 |
 | `vlm_patch_prototype_infer.py` | CLIP 语义分数 + ViT patch 正常原型模型 |
+| `dinov2_vlm_multiview_v2.py` | DINOv2 多层 patch memory bank + 多类型伪异常 head + 局部 CLIP + 五视角一致性 |
 | `build_ensemble_submission.py` | 多模型融合和提交包生成 |
 | `build_pseudo_fusion.py` | 伪异常结果融合 |
 | `validate_submission.py` | 提交文件格式校验 |
