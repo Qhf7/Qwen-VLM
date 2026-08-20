@@ -170,6 +170,18 @@ group_folder,anomaly_score
 
 提交结果 ZIP、数据集和模型权重不纳入 Git 仓库，请在本地或服务器单独保存。
 
+## v2 训练链路（2026-08-21）
+
+在不覆盖 v1 的前提下，`v4_hybrid_v2/` 保存了独立的 v2 实现。该版本针对像素级 AP/F1max 偏低和零件轮廓误检问题进行了模型侧改进：
+
+- 使用更偏向细小划痕、污渍、凹陷和破损的多尺度伪异常构造；
+- 训练 pseudo-anomaly pixel head，并增加背景 BCE 与零件轮廓 hard-negative 约束；
+- 通过 DINOv2 高分辨率 patch、类别/视角 memory bank 和重建分支生成 dense anomaly map；
+- 使用 Train-only 校准面积先验、图像门控和 Qwen3-VL 局部 proposal 融合；
+- 对 Qwen 审计结果启用完整性校验，避免不完整审计参与融合。
+
+对应运行脚本和参数说明见 [`v4_hybrid_v2/README.md`](v4_hybrid_v2/README.md)。该目录只包含代码和文档，不包含数据、权重、checkpoint 或提交 ZIP。
+
 ## 论文方向
 
 项目参考了以下公开研究方向：
