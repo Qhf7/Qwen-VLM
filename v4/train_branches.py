@@ -30,6 +30,7 @@ from common import (
     LAYER_SETS,
     list_samples,
     load_dinov2,
+    load_many,
     load_rgb,
     per_layer_features,
     pick_device,
@@ -63,10 +64,9 @@ class NormalFeatureStream:
         order = rng.permutation(len(flat))
         for st in range(0, len(order), self.batch):
             idx = order[st : st + self.batch]
-            images = []
-            for i in idx:
-                s, v = flat[i]
-                images.append(load_rgb(s.paths[v]))
+            # Parallel decode: each source PNG is 2000-3600 px, so serial
+            # decoding leaves the GPU idle roughly 70% of the time.
+            images = load_many([flat[i][0].paths[flat[i][1]] for i in idx], workers=self.batch)
             maps, side = per_layer_features(
                 self.model, images, self.size, self.device, self.layers
             )
@@ -132,6 +132,10 @@ def train_reconstruction(
                     flush=True,
                 )
         print(f"recon epoch {ep+1}/{epochs} loss {np.mean(losses):.5f} ({time.time()-t0:.0f}s)", flush=True)
+        torch.save(
+            {"state": branch.state_dict(), "dims": dims, "size": size, "layers": list(layers), "epoch": ep + 1},
+            out_dir / f"recon_epoch{ep+1}.pt",
+        )
     torch.save(
         {"state": branch.state_dict(), "dims": dims, "size": size, "layers": list(layers)},
         out_dir / "recon.pt",
@@ -163,11 +167,11 @@ def train_pseudo_head(
             idx = order[step * batch_images : (step + 1) * batch_images]
             if len(idx) == 0:
                 continue
-            images, targets = [], []
-            fg_targets = []
-            for i in idx:
-                s, v = flat[i]
-                im = load_rgb(s.paths[v])
+            # Parallel image loading: each PNG is 2000-3600 px, so serial
+            # decoding leaves the GPU idle ~70% of the time.
+            raw = load_many([flat[i][0].paths[flat[i][1]] for i in idx], workers=min(len(idx), 8))
+            images, targets, fg_targets = [], [], []
+            for im in raw:
                 # half the batch stays normal so the head sees the true
                 # normal distribution, not only defect-vs-defect contrast
                 if rng.random() < 0.5:
@@ -224,6 +228,10 @@ def train_pseudo_head(
                     flush=True,
                 )
         print(f"head epoch {ep+1}/{epochs} loss {np.mean(losses):.5f} ({time.time()-t0:.0f}s)", flush=True)
+        torch.save(
+            {"state": head.state_dict(), "dim": total_dim, "size": size, "layers": list(layers), "epoch": ep + 1},
+            out_dir / f"head_epoch{ep+1}.pt",
+        )
     torch.save(
         {"state": head.state_dict(), "dim": total_dim, "size": size, "layers": list(layers)},
         out_dir / "head.pt",

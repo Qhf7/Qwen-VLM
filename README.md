@@ -142,13 +142,30 @@ group_folder,anomaly_score
 
 ## 已验证结果
 
-目前已知最佳 A 榜结果来自 ViT、INP-Former 和 Dinomaly 的融合版本：
+当前最佳 A 榜结果来自 `DINOv2 dense stream + Qwen3-VL conservative proposal fusion`：
 
 ```text
-总分：59.0327
-分类指标：0.8456
-分割指标：0.9201
-综合/零样本指标：0.8772
+提交文件：submission_qwen_dinov2_hybrid_v1_stream.zip
+提交时间：2026-08-20 10:34:49
+总分：70.1399
+图像级 AUROC：0.8984
+图像级 AP：0.9521
+像素级 AUROC：0.8542
+像素级 AP：0.4524
+像素级 F1max：0.5097
+```
+
+对应的纯 DINOv2 dense stream 版本也已验证：
+
+```text
+提交文件：submission_qwen_dinov2_dense_v1_stream.zip
+提交时间：2026-08-20 10:34:39
+总分：70.0925
+图像级 AUROC：0.9008
+图像级 AP：0.9524
+像素级 AUROC：0.8542
+像素级 AP：0.4499
+像素级 F1max：0.5085
 ```
 
 提交结果 ZIP、数据集和模型权重不纳入 Git 仓库，请在本地或服务器单独保存。
