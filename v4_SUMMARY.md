@@ -102,7 +102,7 @@ scp -P 21091 Dataset.tar.gz root@connect.westc.seetacloud.com:/root/autodl-tmp/
 
 ```bash
 ssh -p 21091 root@connect.westc.seetacloud.com
-# 密码: I9gWM7PIMRI6
+# 密码请通过安全渠道获取，不要写入仓库
 
 cd /root/autodl-tmp
 tar xzf v4_cloud_bundle.tar.gz

@@ -66,7 +66,7 @@ scp -P 21091 -r Dataset root@connect.westc.seetacloud.com:/root/autodl-tmp/
 
 # 远程
 ssh -p 21091 root@connect.westc.seetacloud.com
-# 密码: I9gWM7PIMRI6
+# 密码请通过安全渠道获取，不要写入仓库
 cd /root/autodl-tmp
 tar xzf v4_cloud_bundle.tar.gz
 pip3 install torch torchvision timm pillow numpy scikit-learn tqdm

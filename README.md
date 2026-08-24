@@ -44,6 +44,7 @@ Real-IAD Variety 复杂工业场景异常检测算法挑战赛项目。
 | `build_ensemble_submission.py` | 多模型融合和提交包生成 |
 | `build_pseudo_fusion.py` | 伪异常结果融合 |
 | `validate_submission.py` | 提交文件格式校验 |
+| `v8_vlm_guided_residual_v6/` | DINOv2 主定位 + 有界 VLM 语义残差 + hard-normal 抑制的独立 v6 训练与推理流水线 |
 | `COMPETITION_RULES.md` | 固定比赛规则和开发约束 |
 | `VLM_PAPERS_AND_COMPLIANCE.md` | VLM 论文方向和合规边界 |
 
@@ -142,30 +143,35 @@ group_folder,anomaly_score
 
 ## 已验证结果
 
-当前最佳 A 榜结果来自 `DINOv2 dense stream + Qwen3-VL conservative proposal fusion`：
+全部 21 个已测评提交、官方指标和对应方法见
+[`SUBMISSION_RESULTS_AND_METHODS.md`](SUBMISSION_RESULTS_AND_METHODS.md)。当前正在训练的
+DINO-primary / VLM-guided residual v6 见
+[`VLM_GUIDED_RESIDUAL_V6_METHOD.md`](VLM_GUIDED_RESIDUAL_V6_METHOD.md)。
+
+当前最佳 A 榜结果来自 `DINOv2 dense v2 + Qwen3-VL conservative proposal fusion`：
 
 ```text
-提交文件：submission_qwen_dinov2_hybrid_v1_stream.zip
-提交时间：2026-08-20 10:34:49
-总分：70.1399
-图像级 AUROC：0.8984
-图像级 AP：0.9521
-像素级 AUROC：0.8542
-像素级 AP：0.4524
-像素级 F1max：0.5097
+提交文件：submission_qwen_dinov2_hybrid_v2.zip
+提交时间：2026-08-21 01:46:17
+总分：70.5793
+图像级 AUROC：0.9092
+图像级 AP：0.9564
+像素级 AUROC：0.8537
+像素级 AP：0.4579
+像素级 F1max：0.5139
 ```
 
-对应的纯 DINOv2 dense stream 版本也已验证：
+对应的纯 DINOv2 dense v2 版本也已验证：
 
 ```text
-提交文件：submission_qwen_dinov2_dense_v1_stream.zip
-提交时间：2026-08-20 10:34:39
-总分：70.0925
-图像级 AUROC：0.9008
-图像级 AP：0.9524
-像素级 AUROC：0.8542
-像素级 AP：0.4499
-像素级 F1max：0.5085
+提交文件：submission_qwen_dinov2_dense_v2.zip
+提交时间：2026-08-21 01:46:09
+总分：70.4787
+图像级 AUROC：0.9084
+图像级 AP：0.9563
+像素级 AUROC：0.8537
+像素级 AP：0.4556
+像素级 F1max：0.5124
 ```
 
 提交结果 ZIP、数据集和模型权重不纳入 Git 仓库，请在本地或服务器单独保存。
