@@ -52,10 +52,10 @@ Real-IAD Variety 复杂工业场景异常检测算法挑战赛项目。
 ## 当前模型架构
 
 当前新版本的完整架构图见 [`V9_ARCHITECTURE.md`](V9_ARCHITECTURE.md)，可编辑 draw.io 源文件见
-[`v9_best_hybrid_vlm_architecture.drawio`](docs/v9_best_hybrid_vlm_architecture.drawio)，方法与结果说明见
-[`V9_METHOD_AND_RESULTS.md`](V9_METHOD_AND_RESULTS.md)。核心链路为：
+[`v9_best_hybrid_vlm_architecture_paper.drawio`](docs/v9_best_hybrid_vlm_architecture_paper.drawio)，方法与结果说明见
+[`BEST_HYBRID_VLM_V9_METHOD.md`](BEST_HYBRID_VLM_V9_METHOD.md)。核心链路为：
 
-![Best Hybrid VLM v9 论文风格模型架构图](docs/v9_best_hybrid_vlm_architecture.svg)
+![Best Hybrid VLM v9 论文风格模型架构图](docs/v9_best_hybrid_vlm_architecture_paper.svg)
 
 图中左侧是只使用官方 Train 正常样本的 DINOv2 dense 定位分支，右侧是本地
 Qwen3-VL crop 语义分支。两者在 DINO support gate 处汇合，最终同时输出 dense control

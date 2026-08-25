@@ -3,13 +3,17 @@
 GitHub renders the following Mermaid diagram directly. The model is a dense
 DINOv2-first anomaly detector with a bounded local Qwen3-VL semantic branch.
 
-Editable draw.io source: [v9_best_hybrid_vlm_architecture.drawio](docs/v9_best_hybrid_vlm_architecture.drawio)
+Editable draw.io source: [v9_best_hybrid_vlm_architecture_paper.drawio](docs/v9_best_hybrid_vlm_architecture_paper.drawio)
 
 Static SVG preview: [v9_architecture.svg](docs/v9_architecture.svg)
 
-Publication-style SVG: [v9_best_hybrid_vlm_architecture.svg](docs/v9_best_hybrid_vlm_architecture.svg)
+Publication-style SVG: [v9_best_hybrid_vlm_architecture_paper.svg](docs/v9_best_hybrid_vlm_architecture_paper.svg)
 
-![Best Hybrid VLM v9 architecture](docs/v9_architecture.svg)
+![Best Hybrid VLM v9 architecture](docs/v9_best_hybrid_vlm_architecture_paper.svg)
+
+The visual specification and refinement log are available at
+[`docs/v9_architecture_visual_spec.md`](docs/v9_architecture_visual_spec.md) and
+[`docs/v9_architecture_defect_log.md`](docs/v9_architecture_defect_log.md).
 
 ```mermaid
 flowchart LR
