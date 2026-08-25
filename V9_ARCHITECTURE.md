@@ -7,6 +7,8 @@ Editable draw.io source: [v9_best_hybrid_vlm_architecture.drawio](docs/v9_best_h
 
 Static SVG preview: [v9_architecture.svg](docs/v9_architecture.svg)
 
+Publication-style SVG: [v9_best_hybrid_vlm_architecture.svg](docs/v9_best_hybrid_vlm_architecture.svg)
+
 ![Best Hybrid VLM v9 architecture](docs/v9_architecture.svg)
 
 ```mermaid

@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1120" viewBox="0 0 1800 1120" role="img" aria-labelledby="title desc">
+  <title id="title">Best Hybrid VLM v9 professional architecture</title>
+  <desc id="desc">A publication-style architecture diagram for five-view industrial anomaly detection using DINOv2 and local Qwen3-VL evidence.</desc>
+  <defs>
+    <marker id="arrow-blue" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0 L12 6 L0 12 Z" fill="#2563eb"/></marker>
+    <marker id="arrow-orange" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0 L12 6 L0 12 Z" fill="#d97706"/></marker>
+    <marker id="arrow-purple" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0 L12 6 L0 12 Z" fill="#9333ea"/></marker>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0f172a" flood-opacity=".14"/></filter>
+    <style>
+      .title{font:700 32px Arial,sans-serif;fill:#0f172a}.subtitle{font:16px Arial,sans-serif;fill:#475569}
+      .lane-title{font:700 18px Arial,sans-serif;letter-spacing:1px}.h{font:700 19px Arial,sans-serif;fill:#0f172a}.t{font:15px Arial,sans-serif;fill:#334155}.tiny{font:13px Arial,sans-serif;fill:#475569}
+      .node{stroke-width:2;rx:14;filter:url(#shadow)}.train{fill:#eff6ff;stroke:#60a5fa}.core{fill:#ecfdf5;stroke:#34d399}.vlm{fill:#fff7ed;stroke:#fb923c}.fusion{fill:#faf5ff;stroke:#c084fc}.out{fill:#f1f5f9;stroke:#64748b}
+      .lane{rx:18;stroke-width:2}.train-lane{fill:#f8fbff;stroke:#bfdbfe}.test-lane{fill:#fffaf3;stroke:#fed7aa}.edge-blue{stroke:#2563eb;stroke-width:3;fill:none;marker-end:url(#arrow-blue)}.edge-orange{stroke:#d97706;stroke-width:3;fill:none;marker-end:url(#arrow-orange)}.edge-purple{stroke:#9333ea;stroke-width:3;fill:none;marker-end:url(#arrow-purple)}.dashed{stroke-dasharray:9 7}
+      .tag{font:700 13px Arial,sans-serif;fill:#fff}.legend{font:14px Arial,sans-serif;fill:#334155}
+    </style>
+  </defs>
+  <rect width="1800" height="1120" fill="#ffffff"/>
+  <text x="900" y="48" text-anchor="middle" class="title">Best Hybrid VLM v9</text>
+  <text x="900" y="77" text-anchor="middle" class="subtitle">DINOv2-first dense localization with bounded local Qwen3-VL semantic reasoning</text>
+
+  <rect x="35" y="105" width="980" height="835" class="lane train-lane"/>
+  <rect x="1045" y="105" width="720" height="835" class="lane test-lane"/>
+  <rect x="55" y="125" width="280" height="32" rx="16" fill="#2563eb"/>
+  <text x="195" y="147" text-anchor="middle" class="tag">TRAIN-ONLY NORMAL MODELING</text>
+  <rect x="1065" y="125" width="300" height="32" rx="16" fill="#d97706"/>
+  <text x="1215" y="147" text-anchor="middle" class="tag">TEST-TIME ZERO-SHOT INFERENCE</text>
+
+  <rect x="70" y="195" width="220" height="105" class="node train"/>
+  <text x="180" y="230" text-anchor="middle" class="h">Official Train</text><text x="180" y="256" text-anchor="middle" class="t">Normal images</text><text x="180" y="279" text-anchor="middle" class="t">5 fixed views / product</text>
+  <rect x="70" y="350" width="220" height="125" class="node train"/>
+  <text x="180" y="384" text-anchor="middle" class="h">Pseudo anomalies</text><text x="180" y="410" text-anchor="middle" class="t">scratch · chip · dent</text><text x="180" y="433" text-anchor="middle" class="t">microcrack · stain</text><text x="180" y="456" text-anchor="middle" class="tiny">generated from Train only</text>
+  <rect x="70" y="525" width="220" height="125" class="node train"/>
+  <text x="180" y="559" text-anchor="middle" class="h">Hard-normal labels</text><text x="180" y="585" text-anchor="middle" class="t">background · contour</text><text x="180" y="608" text-anchor="middle" class="t">highlight · strong texture</text><text x="180" y="631" text-anchor="middle" class="tiny">supervised as non-anomaly</text>
+
+  <rect x="365" y="275" width="270" height="145" class="node core"/>
+  <text x="500" y="315" text-anchor="middle" class="h">Frozen DINOv2 ViT-B/14</text><text x="500" y="345" text-anchor="middle" class="t">1036px + 518px inputs</text><text x="500" y="370" text-anchor="middle" class="t">multi-layer patch features</text><text x="500" y="395" text-anchor="middle" class="tiny">fine texture + structure + semantics</text>
+  <path d="M290 247 H365" class="edge-blue"/><path d="M290 412 C325 412 325 370 365 370" class="edge-blue dashed"/><path d="M290 585 C325 585 325 395 365 395" class="edge-blue dashed"/>
+
+  <rect x="710" y="190" width="245" height="100" class="node core"/>
+  <text x="832" y="225" text-anchor="middle" class="h">Reconstruction</text><text x="832" y="252" text-anchor="middle" class="t">normal-manifold distance</text><text x="832" y="275" text-anchor="middle" class="tiny">structure / texture deviation</text>
+  <rect x="710" y="340" width="245" height="110" class="node core"/>
+  <text x="832" y="375" text-anchor="middle" class="h">Memory banks</text><text x="832" y="402" text-anchor="middle" class="t">category / view coreset</text><text x="832" y="425" text-anchor="middle" class="t">global bank + kNN distance</text>
+  <rect x="710" y="500" width="245" height="125" class="node core"/>
+  <text x="832" y="535" text-anchor="middle" class="h">Pseudo pixel head</text><text x="832" y="562" text-anchor="middle" class="t">BCE + Tversky loss</text><text x="832" y="586" text-anchor="middle" class="t">hard-negative constraints</text><text x="832" y="610" text-anchor="middle" class="tiny">continuous patch anomaly map</text>
+  <path d="M635 320 H680 V240 H710" class="edge-blue"/><path d="M635 345 H680 V395 H710" class="edge-blue"/><path d="M635 370 H680 V560 H710" class="edge-blue"/><path d="M290 410 H680 V560 H710" class="edge-blue dashed"/><path d="M290 585 H680 V590 H710" class="edge-blue dashed"/>
+
+  <rect x="365" y="720" width="270" height="105" class="node core"/>
+  <text x="500" y="755" text-anchor="middle" class="h">Train-only calibration</text><text x="500" y="782" text-anchor="middle" class="t">category-stratified normal bounds</text><text x="500" y="805" text-anchor="middle" class="tiny">pixel 90/99.9 · image 50/99</text>
+  <path d="M832 290 C832 680 635 680 635 770" class="edge-blue"/><path d="M832 450 C832 680 635 680 635 790" class="edge-blue"/><path d="M832 625 C832 700 635 700 635 810" class="edge-blue"/>
+  <rect x="710" y="720" width="245" height="105" class="node out"/>
+  <text x="832" y="755" text-anchor="middle" class="h">DINO dense control</text><text x="832" y="782" text-anchor="middle" class="t">continuous anomaly map</text><text x="832" y="805" text-anchor="middle" class="tiny">image score + 448×448 mask</text>
+  <path d="M635 770 H710" class="edge-blue"/>
+
+  <rect x="1080" y="195" width="245" height="105" class="node vlm"/>
+  <text x="1202" y="230" text-anchor="middle" class="h">Test A / B input</text><text x="1202" y="257" text-anchor="middle" class="t">five-view product images</text><text x="1202" y="280" text-anchor="middle" class="tiny">unseen-category capable</text>
+  <rect x="1450" y="195" width="245" height="105" class="node vlm"/>
+  <text x="1572" y="230" text-anchor="middle" class="h">Local Qwen3-VL</text><text x="1572" y="257" text-anchor="middle" class="t">crop-level structured audit</text><text x="1572" y="280" text-anchor="middle" class="tiny">local inference, no online API</text>
+  <path d="M1325 247 H1450" class="edge-orange"/>
+  <rect x="1265" y="360" width="300" height="175" class="node vlm"/>
+  <text x="1415" y="397" text-anchor="middle" class="h">Semantic evidence</text><text x="1415" y="425" text-anchor="middle" class="t">is_anomaly + five score tiers</text><text x="1415" y="450" text-anchor="middle" class="t">reason keywords + defect type</text><text x="1415" y="475" text-anchor="middle" class="t">compact box area</text><text x="1415" y="500" text-anchor="middle" class="t">crop overlap + five-view agreement</text>
+  <path d="M1572 300 V360" class="edge-orange"/>
+  <rect x="1080" y="590" width="245" height="105" class="node fusion"/>
+  <text x="1202" y="625" text-anchor="middle" class="h">DINO support gate</text><text x="1202" y="652" text-anchor="middle" class="t">VLM acts only on DINO</text><text x="1202" y="676" text-anchor="middle" class="tiny">positive dense support</text>
+  <rect x="1450" y="590" width="245" height="105" class="node fusion"/>
+  <text x="1572" y="625" text-anchor="middle" class="h">Bounded residual</text><text x="1572" y="652" text-anchor="middle" class="t">maximum increment ≤ 0.12</text><text x="1572" y="676" text-anchor="middle" class="tiny">box is never rasterized</text>
+  <path d="M1415 535 V590 H1325" class="edge-orange"/><path d="M1325 642 H1450" class="edge-purple"/><path d="M955 770 H1020 V642 H1080" class="edge-blue"/>
+
+  <rect x="1080" y="760" width="615" height="105" class="node out"/>
+  <text x="1387" y="795" text-anchor="middle" class="h">Final submission outputs</text><text x="1387" y="822" text-anchor="middle" class="t">submission.csv · 5 × 448×448 grayscale masks per group</text><text x="1387" y="845" text-anchor="middle" class="tiny">dense control ZIP + VLM hybrid ZIP</text>
+  <path d="M1572 695 V760" class="edge-purple"/><path d="M1202 695 V735 H1387 V760" class="edge-blue dashed"/>
+
+  <rect x="70" y="990" width="20" height="20" fill="#eff6ff" stroke="#60a5fa"/><text x="100" y="1006" class="legend">Train-only data / supervision</text>
+  <rect x="350" y="990" width="20" height="20" fill="#ecfdf5" stroke="#34d399"/><text x="380" y="1006" class="legend">DINOv2 dense branches</text>
+  <rect x="650" y="990" width="20" height="20" fill="#fff7ed" stroke="#fb923c"/><text x="680" y="1006" class="legend">Qwen3-VL semantic evidence</text>
+  <rect x="1010" y="990" width="20" height="20" fill="#faf5ff" stroke="#c084fc"/><text x="1040" y="1006" class="legend">Cross-modal gate / fusion</text>
+  <rect x="1350" y="990" width="20" height="20" fill="#f1f5f9" stroke="#64748b"/><text x="1380" y="1006" class="legend">Submission outputs</text>
+</svg>
