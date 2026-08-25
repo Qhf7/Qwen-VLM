@@ -51,7 +51,8 @@ Real-IAD Variety 复杂工业场景异常检测算法挑战赛项目。
 
 ## 当前模型架构
 
-当前新版本的完整架构图见 [`V9_ARCHITECTURE.md`](V9_ARCHITECTURE.md)，方法与结果说明见
+当前新版本的完整架构图见 [`V9_ARCHITECTURE.md`](V9_ARCHITECTURE.md)，可编辑 draw.io 源文件见
+[`v9_best_hybrid_vlm_architecture.drawio`](docs/v9_best_hybrid_vlm_architecture.drawio)，方法与结果说明见
 [`V9_METHOD_AND_RESULTS.md`](V9_METHOD_AND_RESULTS.md)。核心链路为：
 
 ![Best Hybrid VLM v9 论文风格模型架构图](docs/v9_architecture.svg)
