@@ -5,6 +5,8 @@ DINOv2-first anomaly detector with a bounded local Qwen3-VL semantic branch.
 
 Static SVG version: [v9_architecture.svg](docs/v9_architecture.svg)
 
+![Best Hybrid VLM v9 architecture](docs/v9_architecture.svg)
+
 ```mermaid
 flowchart LR
     A[Official Train normal images\n5 fixed views] --> B[Frozen DINOv2 ViT-B/14]
