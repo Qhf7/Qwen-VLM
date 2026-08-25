@@ -10,6 +10,15 @@
 - 所有表内结果均为实际提交结果，不是本地 Proxy；
 - ZIP、数据集、权重和 checkpoint 不进入 Git 仓库。
 
+## 当前未提交开发版本
+
+| 版本 | 状态 | 真实榜单结果 | 方法 |
+|---|---|---|---|
+| `v9_best_hybrid_vlm/` | 服务器训练中 | 尚未提交，指标暂缺 | 以最佳 Hybrid v2 的 DINOv2 三分支为主定位，加入类别分层 Train 校准、microcrack/低对比污渍伪异常、轮廓/高光/强纹理 hard-normal 监督，以及受 DINO support gate 约束的 Qwen3-VL 局部残差。 |
+
+v9 当前没有官方成绩。训练完成后会分别生成 dense control 和 hybrid 两个 ZIP，并以竞赛
+平台实际返回的指标补充，不使用 proxy 结果替代真实榜单结果。
+
 ## 全部已测评提交
 
 | 提交文件 | 提交时间 | 状态 | 总分 | I-AUROC | I-AP | P-AUROC | P-AP | P-F1max | 模型与方法 |

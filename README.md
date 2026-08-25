@@ -45,8 +45,24 @@ Real-IAD Variety 复杂工业场景异常检测算法挑战赛项目。
 | `build_pseudo_fusion.py` | 伪异常结果融合 |
 | `validate_submission.py` | 提交文件格式校验 |
 | `v8_vlm_guided_residual_v6/` | DINOv2 主定位 + 有界 VLM 语义残差 + hard-normal 抑制的独立 v6 训练与推理流水线 |
+| `v9_best_hybrid_vlm/` | 从最佳 Hybrid v2 独立复制的 DINOv2 三分支 + 分层 Train 校准 + 困难正常监督 + 有界 Qwen3-VL 局部残差流水线 |
 | `COMPETITION_RULES.md` | 固定比赛规则和开发约束 |
 | `VLM_PAPERS_AND_COMPLIANCE.md` | VLM 论文方向和合规边界 |
+
+## 当前模型架构
+
+当前新版本的完整架构图见 [`V9_ARCHITECTURE.md`](V9_ARCHITECTURE.md)，方法与结果说明见
+[`V9_METHOD_AND_RESULTS.md`](V9_METHOD_AND_RESULTS.md)。核心链路为：
+
+```text
+Train normal -> DINOv2 multi-layer features -> reconstruction / memory / pseudo head
+             -> Train-only calibration -> dense control mask
+Test crop audit -> Qwen3-VL local evidence -> DINO support gate -> bounded residual
+             -> dense ZIP + hybrid ZIP
+```
+
+V9 不把 Qwen 的 box 直接栅格化为 mask。Qwen 只能在 DINO 已经响应的候选像素上提供
+局部语义增量，避免把整个零件的语义区域误当成异常区域。
 
 ## 运行示例
 
@@ -143,10 +159,25 @@ group_folder,anomaly_score
 
 ## 已验证结果
 
-全部 21 个已测评提交、官方指标和对应方法见
+全部已测评提交、官方指标和对应方法见
 [`SUBMISSION_RESULTS_AND_METHODS.md`](SUBMISSION_RESULTS_AND_METHODS.md)。当前正在训练的
-DINO-primary / VLM-guided residual v6 见
-[`VLM_GUIDED_RESIDUAL_V6_METHOD.md`](VLM_GUIDED_RESIDUAL_V6_METHOD.md)。
+DINO-primary / VLM-guided residual v6 和新 v9 的状态也在该表中单独标注。
+
+当前重要版本结果：
+
+| 方法 | 总分 | I-AUROC | I-AP | P-AUROC | P-AP | P-F1max | 状态 |
+|---|---:|---:|---:|---:|---:|---:|---|
+| Frozen ImageNet ViT baseline | 41.9916 | 0.7562 | 0.8579 | 0.5958 | 0.0469 | 0.1193 | 已测评 |
+| DINOv2 Dense v1 Stream | 70.0925 | 0.9008 | 0.9524 | 0.8542 | 0.4499 | 0.5085 | 已测评 |
+| Qwen3-VL + DINOv2 Hybrid v1 | 70.1399 | 0.8984 | 0.9521 | 0.8542 | 0.4524 | 0.5097 | 已测评 |
+| DINOv2 Dense v2 | 70.4787 | 0.9084 | 0.9563 | 0.8537 | 0.4556 | 0.5124 | 已测评 |
+| **Qwen3-VL + DINOv2 Hybrid v2** | **70.5793** | **0.9092** | **0.9564** | 0.8537 | **0.4579** | **0.5139** | 当前最佳 |
+| VLM-Primary v5 | 51.8962 | 0.8499 | 0.8976 | 0.8539 | 0.0846 | 0.1622 | 已测评 |
+| **Best Hybrid VLM v9** | - | - | - | - | - | - | **训练中，尚未提交** |
+
+完整的 21 个历史提交及算法说明继续保留在
+[`SUBMISSION_RESULTS_AND_METHODS.md`](SUBMISSION_RESULTS_AND_METHODS.md)；v9 的详细设计、
+训练链路和合规说明见 [`V9_METHOD_AND_RESULTS.md`](V9_METHOD_AND_RESULTS.md)。
 
 当前最佳 A 榜结果来自 `DINOv2 dense v2 + Qwen3-VL conservative proposal fusion`：
 
@@ -187,6 +218,20 @@ DINO-primary / VLM-guided residual v6 见
 - 对 Qwen 审计结果启用完整性校验，避免不完整审计参与融合。
 
 对应运行脚本和参数说明见 [`v4_hybrid_v2/README.md`](v4_hybrid_v2/README.md)。该目录只包含代码和文档，不包含数据、权重、checkpoint 或提交 ZIP。
+
+## V9 独立升级
+
+V9 在 `qwen_dinov2_hybrid_v2` 基础上创建独立目录，不覆盖原有代码和结果。它保留
+DINOv2 reconstruction、category/view memory bank 和 pseudo-anomaly head，并新增：
+
+- 类别分层 Train-normal 校准；
+- `microcrack`、`low_contrast_stain` 等弱对比伪异常；
+- 对轮廓、反光、高光和强纹理的困难正常监督；
+- 联合 Qwen `is_anomaly`、五档 score、reason 关键词、box 面积、crop 一致性和五视角证据；
+- DINO support gate 约束的局部 VLM residual，最大幅值为 0.12；
+- 同时生成 dense control 和 VLM hybrid 两个提交 ZIP。
+
+运行和当前服务器状态见 [`v9_best_hybrid_vlm/README.md`](v9_best_hybrid_vlm/README.md)。
 
 ## 论文方向
 
