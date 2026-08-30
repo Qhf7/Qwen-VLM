@@ -214,6 +214,21 @@ DINO-primary / VLM-guided residual v6 和新 v9 的状态也在该表中单独�
 
 提交结果 ZIP、数据集和模型权重不纳入 Git 仓库，请在本地或服务器单独保存。
 
+## V12 Region-Ranked Recovery Compact2
+
+在 v12 的 DINOv2 多尺度 dense proposal、类别/视角 memory bank 和
+Train-only Region Ranker 基础上，`v12_region_ranked_recovery_compact2/`
+提供了可恢复的低内存生产流程。它将 reference bank 与 calibration 分离
+保存，并通过 JSON manifest 加载，避免在 50GB 服务器磁盘上生成第二份约
+10GB 的合并 cache；同时保留多阈值候选区域、22 维区域特征、候选排序和
+可拒绝视角机制，避免把整个零件轮廓写成异常 mask。
+
+本版已完成 Test A 推理和格式校验：750 行 `submission.csv`、3750 张
+448×448 单通道 mask，ZIP 已在本地保存为
+`submission_v12_region_ranked_recovery_compact2.zip`。该结果尚未获得平台
+测评分数，因此不能将其宣称为已提升的线上成绩。详细方法见
+[`V12_RECOVERY_COMPACT2_METHOD.md`](V12_RECOVERY_COMPACT2_METHOD.md)。
+
 ## v2 训练链路（2026-08-21）
 
 在不覆盖 v1 的前提下，`v4_hybrid_v2/` 保存了独立的 v2 实现。该版本针对像素级 AP/F1max 偏低和零件轮廓误检问题进行了模型侧改进：
