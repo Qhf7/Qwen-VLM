@@ -1,0 +1,26 @@
+# 数据集（17 GB，不入库）
+Dataset/
+
+# 文献 PDF（47 MB，版权原因不入库）
+文献阅读/
+
+# 实验输出
+outputs/
+runs/
+checkpoints/
+*.pth
+*.ckpt
+*.safetensors
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+
+# 工具
+.claude/
