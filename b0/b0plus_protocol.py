@@ -1,0 +1,58 @@
+"""B0+ 预注册协议。
+
+这个文件在运行 P0/P1/P2 之前冻结；不根据结果追加 prompt。
+"""
+
+from __future__ import annotations
+
+PROTOCOL_VERSION = "B0plus-preregistered-v1"
+PREREGISTERED_AT = "2026-09-01"
+
+P0 = """You are inspecting one view of an industrial component for visible defects.
+A defect means a visible scratch, crack, deformation, discoloration, stain, missing or broken part, pit, burn mark, coating problem, contaminant, or another localized abnormality. Normal edges, holes, reflections, shadows, text, and regular texture are not defects.
+
+The first generated token must be exactly Yes or No. Then output exactly one JSON object with a region selected from: top-left, top-center, top-right, middle-left, center, middle-right, bottom-left, bottom-center, bottom-right, none.
+Format: Yes {"region":"center"}
+For a normal image use: No {"region":"none"}
+Do not output Markdown or an explanation."""
+
+P1 = """Inspect this image of an industrial component and classify only what is visibly present.
+
+Normal: the component is intact and its edges, holes, reflections, shadows, text, color, and repeated texture are internally consistent.
+Anomalous: a localized region visibly breaks that consistency through damage, missing material, contamination, deformation, or an irregular surface or color change.
+
+Treat the normal and anomalous hypotheses symmetrically. The first generated token must be exactly Yes for anomalous or No for normal. Then output exactly one JSON object whose region is one of: top-left, top-center, top-right, middle-left, center, middle-right, bottom-left, bottom-center, bottom-right, none.
+Use No {"region":"none"} when the normal hypothesis is stronger. Do not output Markdown or an explanation."""
+
+P2 = """Compare two hypotheses for the pictured <object> using only visible image evidence.
+
+H0: this is a normal instance; visible structure and appearance are mutually consistent.
+H1: this instance contains a localized anomaly; some visible region is inconsistent with the rest of the object.
+
+Choose the better-supported hypothesis. The first generated token must be exactly No for H0 or Yes for H1. Then output exactly one JSON object whose region is one of: top-left, top-center, top-right, middle-left, center, middle-right, bottom-left, bottom-center, bottom-right, none.
+For H0 use No {"region":"none"}. Do not output Markdown or an explanation."""
+
+PROMPTS = {"P0": P0, "P1": P1, "P2": P2}
+
+SELECTION_RULE = (
+    "Use 5-view max on smoke20. Sort descending by sample AUROC, then sample AUPR, "
+    "then macro class AUROC; break an exact tie by prompt id ascending."
+)
+SELECTION_KEYS = ("sample_auroc", "sample_aupr", "macro_class_auroc")
+
+AGGREGATIONS = ("max", "top2_mean", "mean")
+FORWARD_GENERATE_ATOL = 1e-5
+BATCH_SINGLE_ATOL = 5e-4
+
+FIVE_CROPS = (
+    "global",
+    "top-left",
+    "top-right",
+    "bottom-left",
+    "bottom-right",
+)
+FIVE_CROP_DEFINITION = (
+    "One direct-resized global image plus the four non-overlapping native-image quadrants; "
+    "each crop is independently resized to 448x448 with INTER_AREA. A view score is the "
+    "maximum P(Yes) over five crops; a sample score remains max over five views."
+)

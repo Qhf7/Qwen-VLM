@@ -1,0 +1,38 @@
+{
+  "protocol": "E1-hard-normal-v1",
+  "train_sha256": "c44e24f910364b7cf31194e8153f68df35dda5a8e3ab08d9fbc9b2a6719a9d41",
+  "holdout_classes_sha256": "17f73822c890c01b52b166c91b08dd56eb1ad08d21bc7c33900c61fadc87bfe3",
+  "holdout_intersection": [],
+  "candidate_rule": "fold1/train view_label == 0",
+  "cues": [
+    "edge_density",
+    "texture_logvar",
+    "specular_fraction",
+    "dark_fraction",
+    "contrast"
+  ],
+  "resize": "direct 448 cv2.INTER_AREA",
+  "per_class_per_cue": 8,
+  "per_class_total": 40,
+  "selected_total": 720,
+  "classes": [
+    "3_adapter",
+    "PLCC_socket",
+    "accurate_detection_switch",
+    "audio_jack_socket",
+    "battery_holder_connector",
+    "battery_socket_connector",
+    "ceramic_fuse",
+    "ceramic_wave_filter",
+    "jam_jar_model",
+    "knob_cap",
+    "lilypad_led",
+    "miniature_laser_module",
+    "mobile_charging_connector",
+    "nylon_ball_head",
+    "pneumatic_elbow",
+    "side_press_switch",
+    "slide_switch",
+    "smd_receiver_module"
+  ]
+}

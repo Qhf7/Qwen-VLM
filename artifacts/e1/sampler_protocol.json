@@ -1,0 +1,34 @@
+{
+  "protocol": "E1-balanced-sampler-v1",
+  "sources": [
+    "real_anomaly",
+    "normal",
+    "hard_normal",
+    "pseudo_anomaly"
+  ],
+  "source_probability": {
+    "real_anomaly": 0.25,
+    "normal": 0.25,
+    "hard_normal": 0.25,
+    "pseudo_anomaly": 0.25
+  },
+  "batch_size": 8,
+  "quota_per_source": 2,
+  "default_steps_per_epoch": 7891,
+  "area_bins": [
+    "tiny<=0.5%",
+    "small0.5-2%",
+    "large>2%"
+  ],
+  "real_anomaly_requires_nonempty_mask": true,
+  "pseudo_pool_requires_sample_level_ok": true,
+  "holdout_intersection": [],
+  "counts": {
+    "hard_normal": 720,
+    "normal": 2273,
+    "pseudo_anomaly": 2695,
+    "real_anomaly": 15782
+  },
+  "self_test_batches": 100,
+  "self_test_passed": true
+}

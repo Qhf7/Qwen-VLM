@@ -67,6 +67,10 @@ E2、E3 只有上一轮 **识别过线** 才开。三轮损失、prompt、子集
 
 ## 3. 数据（三轮共用，先造齐再开训）
 
+> S0 已于 2026-08-31 冻结：主输入 direct 448；GT nearest-neighbor 对齐；
+> 图像级样本按 `group_path`（5 视角）聚合；train/dev 按跨批互为最近邻得到的
+> `visual_group_id` 原子化拆分；四折 holdout 类表默认不可重建。
+
 和 schema 对齐，建议第一批就能训 E1：
 
 - ≥ 伪异常（Cut-Paste/NSA + 近似 mask）+ 正常 + **hard-normal**（边、反光、纹理）  
@@ -74,6 +78,9 @@ E2、E3 只有上一轮 **识别过线** 才开。三轮损失、prompt、子集
 - 解析稳定后可加短 JSON（`is_anomaly`, `region`），**不要让模型输出多边形 mask**  
 - `train` / `dev-mini` / `Holdout-zs` 划死；Holdout 类不进训练、不进调参  
 - 可选混少量通用图文，防 E3 之后只会答质检
+
+Holdout 不用于决定是否开 E2/E3；阶段门只看 Dev-mini 与冻结折稳定性。
+B0+、E1、E2、E3 配置全部冻结后，再一次性跑 holdout，并且不根据结果返回调参。
 
 没有 hard-normal 不要开 E1：decoder 会学成物体性。
 
@@ -94,10 +101,19 @@ M → Prompt Learner → 若干 prompt embedding
 与图像 token、用户问题一起进 LLM → 只生成是/否 + 3×3
 ```
 
-- 损失：`λ_seg (focal+dice)` + `CE(回答 token)`，`λ_seg` 先小。  
-- Checkpoint 按 **Dev-mini 图级 AP / F1** 选，不按 Pixel AUROC。  
-- 过线：Holdout 上图级 AP 或 F1 **明显高于 B0**，且同方向可复现。  
+- 实现冻结为视觉塔第 7/15/23/31 层 patch，256-channel decoder，4 个条件虚拟 prompt token。
+- 损失：`BCE(Yes/No logits) + 0.2×(focal+dice) + 0.1×CE(3×3+none)`。
+- Checkpoint 只按 **Dev-mini 18 类宏平均 I-AUPR** 选，不按 Pixel AUROC。
+- 过线：宏 I-AUPR 相对最终 B0+ `0.7495` 绝对提升≥0.03，宏 F1max 不低于
+  `0.7380`，至少 3/4 个冻结折为正增益，小缺陷召回不降且预测面积不爆炸。
 - 不过线：查 hard-normal、层数、λ，**不要立刻上 LoRA**。
+
+2026-09-01 fold1 已完成 1000 步：四次完整 Dev-mini 中，step 500 的
+宏 AUPR/F1max 最优为 `0.7489/0.7679`，小缺陷召回 `0.8214`。
+宏 AUPR 低于 `0.7795` 阶段门，且 step 750/1000 出现空掩码塌缩。
+结论是 **E1 fold1 未过线，不开 E2 Visual Adapter 或 E3 LoRA**；
+下一步只做 E1 内部的损失、hard-normal、decoder 取层或 `lambda_seg`
+单变量诊断。完整记录见 `E1-fold1实验结果分析.md`。
 
 
 
@@ -111,7 +127,8 @@ M → Prompt Learner → 若干 prompt embedding
 
 - 只挂 `q_proj, v_proj`，rank 8 或 16，lr 大于 decoder 一档。  
 - 继续冻视觉塔；decoder/adapter 可冻住只训 LoRA，或用更小 lr 联训。  
-- 必须看：Holdout 是否掉点（过拟合指令格式 / 品类词）。掉了就回 E1/E2。  
+- 阶段门只看 Dev-mini 是否掉点。配置冻结后在最终一次性 Holdout 报告中
+  检查是否过拟合指令格式 / 品类词；若掉点，作为负结果记录，不用 Holdout 调回去。
 - 消融里保留「只 LoRA、无 decoder」一行（E3−）：论文里这条往往不如 decoder+prompt。用来证明 **不是调了 LLM 就行**。
 
 
@@ -181,5 +198,3 @@ A 榜期间：提交仍走 DINO hybrid；这条线只占训评叙事。
 | 相对上一行归因    | —     |       |       |     |
 | N1 Hit@1%  | —     |       | —     | —   |
 | 是否开下一刀     | 先做 E1 | □是 □否 | □是 □否 | 停   |
-
-

@@ -1,0 +1,33 @@
+{
+  "seed": 20260901,
+  "model_id": "models/Qwen2.5-VL-3B-Instruct",
+  "image": "Dataset448/3_adapter/NG/FiberorBurrs/S0009/3_adapter__0009_NG_FiberorBurrs_C1_20240530131537870.png",
+  "trainable_parameters": {
+    "decoder": 2693643,
+    "prompt_learner": 4342272,
+    "base_model": 0
+  },
+  "loss": 1.8769423961639404,
+  "classification_loss": 1.4180086851119995,
+  "segmentation_loss": 1.11125648021698,
+  "region_loss": 2.3668246269226074,
+  "anomaly_logits_shape": [
+    1
+  ],
+  "mask_logits_shape": [
+    1,
+    1,
+    448,
+    448
+  ],
+  "region_logits_shape": [
+    1,
+    10
+  ],
+  "decoder_parameters_with_finite_grad": 36,
+  "prompt_parameters_with_finite_grad": 5,
+  "peak_cuda_memory_gib": 9.262412548065186,
+  "base_dtype": "torch.float16",
+  "trainable_dtype": "torch.float32",
+  "autocast_dtype": "torch.float16"
+}

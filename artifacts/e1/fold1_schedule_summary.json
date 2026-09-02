@@ -1,0 +1,17 @@
+{
+  "protocol": "E1-fold1-fixed-schedule-v1",
+  "seed": 20260901,
+  "steps": 1000,
+  "batch_size": 8,
+  "draws": 8000,
+  "source_draws": {
+    "hard_normal": 2000,
+    "normal": 2000,
+    "pseudo_anomaly": 2000,
+    "real_anomaly": 2000
+  },
+  "unique_primary_images": 4209,
+  "unique_donor_images": 1100,
+  "required_images": 4371,
+  "required_masks": 1750
+}

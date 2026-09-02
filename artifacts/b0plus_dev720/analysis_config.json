@@ -1,0 +1,29 @@
+{
+  "primary_configuration": "P0 + direct448 + B0f + max",
+  "primary_aggregation_remains_frozen": true,
+  "bootstrap_repeats": 2000,
+  "bootstrap_seed": 20260901,
+  "latency": {
+    "n_groups": 720,
+    "execution_mode": "serial",
+    "total_p50_s": 0.6077335455920547,
+    "total_p95_s": 0.8648998632095753,
+    "forward_p50_s": 0.5240001680795103,
+    "forward_p95_s": 0.752246838551946,
+    "formal_single_view_forward_estimate_p50_s": 0.10480003361590207,
+    "validation_batch5_forward_s": 0.5835950928740203
+  },
+  "cuda_equivalence_gate": {
+    "execution_mode": "serial",
+    "forward_generate_max_abs": 3.814697265625e-06,
+    "forward_generate_atol": 1e-05,
+    "batch_single_max_abs": 0.00522160530090332,
+    "batch_single_atol": 0.0005,
+    "reason": "batch5 failed the preregistered equivalence gate; use single-view B0f for every formal score without relaxing the tolerance"
+  },
+  "cross_hardware_smoke_comparison": {
+    "n_overlap_views": 100,
+    "max_abs_probability_delta": 0.010906785726547297,
+    "median_abs_probability_delta": 3.1292438509855636e-07
+  }
+}

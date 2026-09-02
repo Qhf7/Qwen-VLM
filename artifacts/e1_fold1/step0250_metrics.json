@@ -1,0 +1,33 @@
+{
+  "tag": "step0250",
+  "n_views": 3600,
+  "elapsed_s": 478.70004439586774,
+  "forward_p50_s": 0.1141921179369092,
+  "peak_cuda_memory_gib": 9.33130168914795,
+  "overall": {
+    "auroc": 0.6129012345679012,
+    "aupr": 0.6410572911585564,
+    "f1max": 0.6732090284588168,
+    "f1max_threshold": 0.377552330493927
+  },
+  "macro_auroc": 0.7020833333333333,
+  "macro_aupr": 0.7240032491687433,
+  "macro_f1max": 0.7392017004768183,
+  "small_defect_n": 84,
+  "small_defect_recall": 0.9166666666666666,
+  "predicted_area": {
+    "view_mean": 0.0004153629144444595,
+    "view_p95": 0.001744110713480039,
+    "ok_view_mean": 0.0003256924460861733,
+    "ng_view_mean": 0.0005050333828027457,
+    "sample_max_mean": 0.0016860234978998455
+  },
+  "stage_gate": {
+    "macro_aupr": false,
+    "macro_f1max": true,
+    "small_defect_recall": false,
+    "ok_predicted_area": true,
+    "area_p95": true,
+    "fold1_pass": false
+  }
+}

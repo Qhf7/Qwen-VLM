@@ -1,5 +1,7 @@
 # 数据集（17 GB，不入库）
 Dataset/
+Dataset448/
+Train448/
 
 # 文献 PDF（47 MB，版权原因不入库）
 文献阅读/
@@ -8,9 +10,28 @@ Dataset/
 outputs/
 runs/
 checkpoints/
+models/
+third_party/
 *.pth
+*.pt
 *.ckpt
 *.safetensors
+
+# 实验产物默认不入库，只保留轻量协议和汇总报告
+artifacts/**
+!artifacts/b0/
+!artifacts/b0/*.json
+!artifacts/b0/*.md
+!artifacts/b0plus/
+!artifacts/b0plus/*.json
+!artifacts/b0plus/*.md
+!artifacts/b0plus_dev720/
+!artifacts/b0plus_dev720/*.json
+!artifacts/b0plus_dev720/*.md
+!artifacts/e1/
+!artifacts/e1/*.json
+!artifacts/e1_fold1/
+!artifacts/e1_fold1/*.json
 
 # Python
 __pycache__/
