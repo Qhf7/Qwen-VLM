@@ -30,6 +30,20 @@ def parse_quotas(value: str) -> dict[str, int]:
     return parsed
 
 
+def parse_area_weights(value: str) -> dict[str, float]:
+    if not value:
+        return {}
+    parsed = {}
+    for item in value.split("|"):
+        key, raw = item.rsplit(":", 1)
+        parsed[key.strip()] = float(raw)
+    expected = {"tiny<=0.5%", "small0.5-2%", "large>2%"}
+    if set(parsed) != expected or any(v <= 0 for v in parsed.values()):
+        raise ValueError(f"real-area-weights must contain positive weights for {sorted(expected)}")
+    total = sum(parsed.values())
+    return {key: value / total for key, value in parsed.items()}
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--pool", type=Path, default=Path("artifacts/e1/sampler_pool.parquet"))
@@ -40,8 +54,13 @@ def main() -> None:
     parser.add_argument("--batch-size", type=int, default=8)
     parser.add_argument("--seed", type=int, default=20260901)
     parser.add_argument("--quotas", default="real_anomaly=3,normal=1,hard_normal=1,pseudo_anomaly=3")
+    parser.add_argument(
+        "--real-area-weights", default="",
+        help="optional bin weights, e.g. tiny<=0.5%:0.5|small0.5-2%:0.3|large>2%:0.2",
+    )
     args = parser.parse_args()
     quotas = parse_quotas(args.quotas)
+    real_area_weights = parse_area_weights(args.real_area_weights)
     if sum(quotas.values()) != args.batch_size:
         raise ValueError("source quotas must sum to batch-size")
     args.out_dir.mkdir(parents=True, exist_ok=True)
@@ -56,6 +75,7 @@ def main() -> None:
     # save it so training cannot accidentally pair the schedule with the
     # unfiltered source pool.
     cells = {}
+    real_cells_by_bin = {}
     for source in SOURCES:
         frame = pool[pool.source_type.eq(source)].copy()
         frame = frame[frame.image_path.map(lambda value: (args.cache_root / str(value)).is_file())]
@@ -64,6 +84,15 @@ def main() -> None:
         if frame.empty:
             raise ValueError(f"source pool is empty: {source}")
         cells[source] = [part.index.to_numpy(dtype=np.int64) for _, part in frame.groupby("sampler_cell", sort=True)]
+        if source == "real_anomaly" and real_area_weights:
+            for area_bin in real_area_weights:
+                area_frame = frame[frame.area_train_bin.eq(area_bin)]
+                if area_frame.empty:
+                    raise ValueError(f"real anomaly area bin is empty: {area_bin}")
+                real_cells_by_bin[area_bin] = [
+                    part.index.to_numpy(dtype=np.int64)
+                    for _, part in area_frame.groupby("sampler_cell", sort=True)
+                ]
 
     dataset = E1TrainingDataset(pool, cache_root=Path("."), global_seed=args.seed)
     rng = np.random.default_rng(args.seed)
@@ -72,7 +101,12 @@ def main() -> None:
         batch = []
         for source in SOURCES:
             for _ in range(quotas[source]):
-                source_cells = cells[source]
+                if source == "real_anomaly" and real_area_weights:
+                    bins = list(real_area_weights)
+                    area_bin = str(rng.choice(bins, p=[real_area_weights[b] for b in bins]))
+                    source_cells = real_cells_by_bin[area_bin]
+                else:
+                    source_cells = cells[source]
                 cell = source_cells[int(rng.integers(0, len(source_cells)))]
                 batch.append((source, int(cell[rng.integers(0, len(cell))])))
         rng.shuffle(batch)
@@ -120,7 +154,8 @@ def main() -> None:
         "source_draws": schedule.source_type.value_counts().sort_index().to_dict(),
         "required_images": len(required_images),
         "required_masks": len(required_masks),
-        "single_variable": "source quota only",
+        "single_variable": "real anomaly area-bin weights only" if real_area_weights else "source quota only",
+        "real_area_weights": real_area_weights or None,
     }
     (args.out_dir / "protocol.json").write_text(json.dumps(protocol, ensure_ascii=False, indent=2), encoding="utf-8")
     print(json.dumps(protocol, ensure_ascii=False, indent=2))
