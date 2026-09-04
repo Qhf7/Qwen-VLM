@@ -10,7 +10,7 @@ import torch
 from PIL import Image
 from torch.utils.data import Dataset
 
-from b0.b0plus_protocol import P0
+from b0.b0plus_protocol import P0, P4_CLASSIFICATION_ONLY
 from e1.pseudo_anomaly import make_pseudo_anomaly, sample_seed
 
 
@@ -119,6 +119,43 @@ class E1TrainingDataset(Dataset):
         }
 
 
+class E1ClassificationDataset(E1TrainingDataset):
+    """Same frozen source schedule as E1, without loading or returning GT masks."""
+
+    def __getitem__(self, index: int) -> dict:
+        row = self.pool.iloc[int(index)]
+        image_path = str(row.image_path)
+        source_type = str(row.source_type)
+        image = read_rgb(self.cache_root / image_path)
+
+        if source_type == "real_anomaly":
+            label = 1.0
+        elif source_type == "pseudo_anomaly":
+            donor = read_rgb(self.cache_root / self._donor_path(image_path))
+            image, _ = make_pseudo_anomaly(
+                image=image,
+                donor=donor,
+                method=str(row.augmentation),
+                image_path=image_path,
+                epoch=self.epoch,
+                global_seed=self.global_seed,
+            )
+            label = 1.0
+        elif source_type in {"normal", "hard_normal"}:
+            label = 0.0
+        else:
+            raise ValueError(f"unknown source_type: {source_type}")
+
+        return {
+            "image": image,
+            "sample_label": label,
+            "pool_index": int(row.pool_index),
+            "source_type": source_type,
+            "class_name": str(row.class_name),
+            "image_path": image_path,
+        }
+
+
 def list_collate(examples: list[dict]) -> list[dict]:
     return examples
 
@@ -155,3 +192,31 @@ def encode_examples(processor, examples: list[dict], device: torch.device) -> tu
         ),
     }
     return inputs, targets
+
+
+def encode_classification_examples(
+    processor, examples: list[dict], device: torch.device
+) -> tuple[dict, torch.Tensor]:
+    conversations = [
+        [{
+            "role": "user",
+            "content": [
+                {"type": "image", "image": Image.fromarray(example["image"])},
+                {"type": "text", "text": P4_CLASSIFICATION_ONLY},
+            ],
+        }]
+        for example in examples
+    ]
+    inputs = processor.apply_chat_template(
+        conversations,
+        tokenize=True,
+        add_generation_prompt=True,
+        return_dict=True,
+        return_tensors="pt",
+        processor_kwargs={"text_kwargs": {"padding": True}},
+    )
+    inputs = {key: value.to(device, non_blocking=True) for key, value in inputs.items()}
+    labels = torch.tensor(
+        [example["sample_label"] for example in examples], device=device, dtype=torch.float32
+    )
+    return inputs, labels

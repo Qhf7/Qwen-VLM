@@ -47,7 +47,22 @@ For normal use: Yes {"component":"short component type","region":"none"}
 For defective use: No {"component":"short component type","region":"center"}
 Do not output Markdown or an explanation."""
 
-PROMPTS = {"P0": P0, "P1": P1, "P2": P2, "P3_COMPONENT_FIRST": P3_COMPONENT_FIRST}
+P4_CLASSIFICATION_ONLY = """Inspect one view of an industrial component.
+
+First infer internally what kind of component it is and what its normal structure, edges, holes, markings, color, and surface should look like. Then decide only whether this image contains a visible defect.
+
+A defect means a visible scratch, crack, deformation, discoloration, stain, missing or broken material, pit, burn mark, coating problem, contaminant, or another localized abnormality. Normal edges, holes, reflections, shadows, text, and regular texture are not defects.
+
+The first generated token must be exactly Yes or No. Yes means the image contains a visible defect. No means the image is normal.
+Do not locate or segment the defect. Do not output JSON, Markdown, or an explanation."""
+
+PROMPTS = {
+    "P0": P0,
+    "P1": P1,
+    "P2": P2,
+    "P3_COMPONENT_FIRST": P3_COMPONENT_FIRST,
+    "P4_CLASSIFICATION_ONLY": P4_CLASSIFICATION_ONLY,
+}
 
 SELECTION_RULE = (
     "Use 5-view max on smoke20. Sort descending by sample AUROC, then sample AUPR, "

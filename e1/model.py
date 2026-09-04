@@ -96,8 +96,15 @@ class ConditionalPromptLearner(nn.Module):
         weights = torch.sigmoid(mask_logits).flatten(2)
         values = fused.flatten(2)
         pooled = (values * weights).sum(-1) / weights.sum(-1).clamp_min(1e-6)
+        return self._condition(pooled)
+
+    def forward_global(self, fused: torch.Tensor) -> torch.Tensor:
+        """Classification-only prompt without mask-conditioned spatial pooling."""
+        return self._condition(fused.float().mean(dim=(-2, -1)))
+
+    def _condition(self, pooled: torch.Tensor) -> torch.Tensor:
         conditioned = self.conditioner(pooled).view(
-            fused.shape[0], self.n_virtual_tokens, -1
+            pooled.shape[0], self.n_virtual_tokens, -1
         )
         return conditioned + self.base_prompt.unsqueeze(0)
 
