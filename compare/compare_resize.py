@@ -45,7 +45,160 @@ def overlay(image: np.ndarray, mask: np.ndarray) -> np.ndarray:
     return np.clip(result, 0, 255).astype(np.uint8)
 
 
-def draw_panel(row: pd.Series, out_path: Path, split_path: Path, dataset_root: Path) -> dict:
+def mask_centroid(mask: np.ndarray) -> np.ndarray | None:
+    y, x = np.nonzero(mask)
+    if len(x) == 0:
+        return None
+    return np.array([x.mean(), y.mean()], dtype=np.float64)
+
+
+def mask_bbox_edges(mask: np.ndarray) -> np.ndarray | None:
+    """Return left/top/right/bottom pixel-edge coordinates; right/bottom are exclusive."""
+    y, x = np.nonzero(mask)
+    if len(x) == 0:
+        return None
+    return np.array([x.min(), y.min(), x.max() + 1, y.max() + 1], dtype=np.float64)
+
+
+def overlap_metrics(a: np.ndarray, b: np.ndarray) -> tuple[float, float]:
+    a = a.astype(bool)
+    b = b.astype(bool)
+    intersection = int(np.logical_and(a, b).sum())
+    total = int(a.sum() + b.sum())
+    union = int(np.logical_or(a, b).sum())
+    dice = 1.0 if total == 0 else 2.0 * intersection / total
+    iou = 1.0 if union == 0 else intersection / union
+    return float(dice), float(iou)
+
+
+def mask_boundary(mask: np.ndarray) -> np.ndarray:
+    mask = mask.astype(np.uint8)
+    eroded = cv2.erode(mask, np.ones((3, 3), dtype=np.uint8), iterations=1)
+    return (mask > 0) & (eroded == 0)
+
+
+def boundary_distances(a: np.ndarray, b: np.ndarray) -> tuple[float, float]:
+    """Symmetric Hausdorff and mean boundary distance in source-image pixels."""
+    boundary_a = mask_boundary(a)
+    boundary_b = mask_boundary(b)
+    if not boundary_a.any() and not boundary_b.any():
+        return 0.0, 0.0
+    if not boundary_a.any() or not boundary_b.any():
+        return float("inf"), float("inf")
+    distance_to_b = cv2.distanceTransform(
+        (~boundary_b).astype(np.uint8), cv2.DIST_L2, cv2.DIST_MASK_PRECISE
+    )
+    distance_to_a = cv2.distanceTransform(
+        (~boundary_a).astype(np.uint8), cv2.DIST_L2, cv2.DIST_MASK_PRECISE
+    )
+    a_to_b = distance_to_b[boundary_a]
+    b_to_a = distance_to_a[boundary_b]
+    hausdorff = max(float(a_to_b.max()), float(b_to_a.max()))
+    mean_symmetric = (float(a_to_b.mean()) + float(b_to_a.mean())) / 2.0
+    return hausdorff, mean_symmetric
+
+
+def geometry_diagnostics(mask: np.ndarray, mask448: np.ndarray) -> tuple[dict, np.ndarray]:
+    height, width = mask.shape
+    roundtrip = cv2.resize(mask448, (width, height), interpolation=cv2.INTER_NEAREST)
+    original_center = mask_centroid(mask)
+    resized_center = mask_centroid(mask448)
+    original_bbox = mask_bbox_edges(mask)
+    resized_bbox = mask_bbox_edges(mask448)
+
+    empty = original_center is None
+    if empty:
+        centroid_dx_448 = centroid_dy_448 = centroid_error_448 = np.nan
+        centroid_dx_original = centroid_dy_original = centroid_error_original = np.nan
+        bbox_errors_448 = np.full(4, np.nan)
+        bbox_errors_original = np.full(4, np.nan)
+    else:
+        scale = np.array([SIDE / width, SIDE / height], dtype=np.float64)
+        # OpenCV maps pixel centers as (dst + 0.5) / scale - 0.5.
+        expected_center_448 = (original_center + 0.5) * scale - 0.5
+        center_delta_448 = resized_center - expected_center_448
+        centroid_dx_448, centroid_dy_448 = center_delta_448
+        centroid_error_448 = float(np.linalg.norm(center_delta_448))
+
+        roundtrip_center = mask_centroid(roundtrip)
+        center_delta_original = roundtrip_center - original_center
+        centroid_dx_original, centroid_dy_original = center_delta_original
+        centroid_error_original = float(np.linalg.norm(center_delta_original))
+
+        expected_bbox_448 = original_bbox * np.array(
+            [SIDE / width, SIDE / height, SIDE / width, SIDE / height], dtype=np.float64
+        )
+        bbox_errors_448 = resized_bbox - expected_bbox_448
+        bbox_errors_original = mask_bbox_edges(roundtrip) - original_bbox
+
+    original_components, labels, stats, _ = cv2.connectedComponentsWithStats(
+        mask.astype(np.uint8), connectivity=8
+    )
+    resized_components, _, _, _ = cv2.connectedComponentsWithStats(
+        mask448.astype(np.uint8), connectivity=8
+    )
+    original_components -= 1
+    resized_components -= 1
+    if original_components:
+        component_areas = stats[1:, cv2.CC_STAT_AREA]
+        smallest_label = int(np.argmin(component_areas)) + 1
+        resized_labels = cv2.resize(
+            labels.astype(np.float32), (SIDE, SIDE), interpolation=cv2.INTER_NEAREST
+        ).astype(np.int32)
+        surviving_labels = set(np.unique(resized_labels).tolist()) - {0}
+        vanished_labels = set(range(1, original_components + 1)) - surviving_labels
+        smallest_area = int(component_areas.min())
+        smallest_survives = smallest_label in surviving_labels
+        vanished_count = len(vanished_labels)
+        smallest_vanished_area = (
+            min(int(stats[label, cv2.CC_STAT_AREA]) for label in vanished_labels)
+            if vanished_labels
+            else 0
+        )
+    else:
+        smallest_area = 0
+        smallest_survives = True
+        vanished_count = 0
+        smallest_vanished_area = 0
+
+    dice, iou = overlap_metrics(mask, roundtrip)
+    hausdorff, mean_boundary = boundary_distances(mask, roundtrip)
+    diagonal = float(np.hypot(width, height))
+    metrics = {
+        "centroid_dx_448_px": centroid_dx_448,
+        "centroid_dy_448_px": centroid_dy_448,
+        "centroid_error_448_px": centroid_error_448,
+        "centroid_dx_original_px": centroid_dx_original,
+        "centroid_dy_original_px": centroid_dy_original,
+        "centroid_error_original_px": centroid_error_original,
+        "bbox_left_error_448_px": bbox_errors_448[0],
+        "bbox_top_error_448_px": bbox_errors_448[1],
+        "bbox_right_error_448_px": bbox_errors_448[2],
+        "bbox_bottom_error_448_px": bbox_errors_448[3],
+        "bbox_max_abs_error_448_px": float(np.nanmax(np.abs(bbox_errors_448))) if not empty else np.nan,
+        "bbox_left_error_original_px": bbox_errors_original[0],
+        "bbox_top_error_original_px": bbox_errors_original[1],
+        "bbox_right_error_original_px": bbox_errors_original[2],
+        "bbox_bottom_error_original_px": bbox_errors_original[3],
+        "bbox_max_abs_error_original_px": float(np.nanmax(np.abs(bbox_errors_original))) if not empty else np.nan,
+        "original_connected_components": original_components,
+        "resized_connected_components": resized_components,
+        "connected_component_count_delta": resized_components - original_components,
+        "vanished_original_components": vanished_count,
+        "smallest_original_component_area_px": smallest_area,
+        "smallest_component_survives": bool(smallest_survives),
+        "smallest_vanished_component_area_px": smallest_vanished_area,
+        "roundtrip_dice": dice,
+        "roundtrip_iou": iou,
+        "boundary_hausdorff_original_px": hausdorff,
+        "boundary_mean_symmetric_original_px": mean_boundary,
+        "boundary_hausdorff_normalized": hausdorff / diagonal,
+        "boundary_mean_symmetric_normalized": mean_boundary / diagonal,
+    }
+    return metrics, roundtrip
+
+
+def draw_panel(row: pd.Series, out_path: Path, dataset_root: Path) -> dict:
     image_path = Path(row.image_path)
     if not image_path.is_file():
         image_path = dataset_root / image_path
@@ -61,8 +214,9 @@ def draw_panel(row: pd.Series, out_path: Path, split_path: Path, dataset_root: P
     resized_ratio = float(mask448.mean())
     ratio_delta = resized_ratio - original_ratio
     relative_delta = ratio_delta / original_ratio if original_ratio > 0 else 0.0
+    geometry, roundtrip = geometry_diagnostics(mask, mask448)
 
-    fig, axes = plt.subplots(2, 3, figsize=(15, 10), constrained_layout=True)
+    fig, axes = plt.subplots(2, 4, figsize=(20, 10), constrained_layout=True)
     panels = [
         (rgb, f"Original image\n{rgb.shape[1]}×{rgb.shape[0]}"),
         (rgb448, "Model image\n448×448, INTER_AREA"),
@@ -70,6 +224,8 @@ def draw_panel(row: pd.Series, out_path: Path, split_path: Path, dataset_root: P
         (mask448, f"Model mask\n448×448, INTER_NEAREST\narea={resized_ratio:.4%}"),
         (overlay(rgb, mask), "Original overlay\nmask in red"),
         (overlay(rgb448, mask448), "Model overlay\nmask in red"),
+        (roundtrip, f"448 mask mapped back\n{rgb.shape[1]}×{rgb.shape[0]}"),
+        (overlay(rgb, roundtrip), "Roundtrip overlay\nmask in red"),
     ]
     for axis, (image, title) in zip(axes.flat, panels):
         if image.ndim == 2:
@@ -88,9 +244,16 @@ def draw_panel(row: pd.Series, out_path: Path, split_path: Path, dataset_root: P
     cv2.imwrite(str(component_dir / f"{stem}_448.png"), cv2.cvtColor(rgb448, cv2.COLOR_RGB2BGR))
     cv2.imwrite(str(component_dir / f"{stem}_mask_original.png"), mask * 255)
     cv2.imwrite(str(component_dir / f"{stem}_mask_448.png"), mask448 * 255)
+    cv2.imwrite(str(component_dir / f"{stem}_mask_448_back_to_original.png"), roundtrip * 255)
+    geometry_title = ""
+    if condition == "NG":
+        geometry_title = (
+            f" | center error={geometry['centroid_error_448_px']:.3f}px@448"
+            f" | Dice={geometry['roundtrip_dice']:.4f}"
+        )
     fig.suptitle(
         f"{class_name} | {condition} | {defect} | view C{int(row.view_idx) + 1}\n"
-        f"source: {image_path}",
+        f"source: {image_path}{geometry_title}",
         fontsize=12,
     )
     out_path.parent.mkdir(parents=True, exist_ok=True)
@@ -114,6 +277,7 @@ def draw_panel(row: pd.Series, out_path: Path, split_path: Path, dataset_root: P
         "resize_interpolation": "cv2.INTER_AREA",
         "mask_resize_interpolation": "cv2.INTER_NEAREST",
         "panel_path": str(out_path),
+        **geometry,
     }
 
 
@@ -145,7 +309,7 @@ def main() -> None:
         condition = str(row_series.condition)
         class_name = str(row_series.class_name)
         out_path = args.out_dir / class_name / f"{condition.lower()}_c1_resize_compare.png"
-        records.append(draw_panel(row_series, out_path, args.split, args.dataset_root))
+        records.append(draw_panel(row_series, out_path, args.dataset_root))
 
     summary = pd.DataFrame(records)
     summary.to_csv(args.out_dir / "resize_mask_summary.csv", index=False)
@@ -160,7 +324,7 @@ def main() -> None:
         "- 模型图：`cv2.INTER_AREA` 直接缩放到 448×448，与当前 B0/E1 输入协议一致。\n"
         "- GT mask：原始 mask 与 `cv2.INTER_NEAREST` 缩放到 448×448，与训练/评测对齐代码一致。\n"
         "- 红色 overlay：帮助观察异常区域在缩放后是否仍可见。\n"
-        "- `resize_mask_summary.csv`：记录原始与 448 mask 面积比例及变化；正常样本没有 GT mask 时按全零 mask 处理。\n\n"
+        "- `resize_mask_summary.csv`：记录面积、中心点、边界框、连通域、反向映射 Dice/IoU 和边界距离；正常样本没有 GT mask 时按全零 mask 处理。\n\n"
         "本目录仅用于缩放诊断，不改变任何训练、评测或冻结配置。\n",
         encoding="utf-8",
     )
