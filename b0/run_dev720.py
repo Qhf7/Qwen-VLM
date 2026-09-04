@@ -1,4 +1,4 @@
-"""在 CUDA 上运行冻结的 Qwen2.5-VL-3B + P0 + direct448 + B0f。"""
+"""Run a fixed Dev720 manifest with a specified B0 prompt and binary token score."""
 
 from __future__ import annotations
 
@@ -16,9 +16,9 @@ from PIL import Image
 from transformers import AutoModelForImageTextToText, AutoProcessor
 
 try:
-    from b0.b0plus_protocol import BATCH_SINGLE_ATOL, P0, PROTOCOL_VERSION
+    from b0.b0plus_protocol import BATCH_SINGLE_ATOL, PROMPTS, PROTOCOL_VERSION
 except ModuleNotFoundError:
-    from b0plus_protocol import BATCH_SINGLE_ATOL, P0, PROTOCOL_VERSION
+    from b0plus_protocol import BATCH_SINGLE_ATOL, PROMPTS, PROTOCOL_VERSION
 
 
 SIDE = 448
@@ -46,11 +46,18 @@ def candidate_ids(tokenizer, word: str) -> list[int]:
     return sorted(ids)
 
 
-def yes_probability(logits: torch.Tensor, yes_ids: list[int], no_ids: list[int]) -> float:
+def binary_scores(logits: torch.Tensor, yes_ids: list[int], no_ids: list[int]) -> dict[str, float]:
     values = logits.float()
     yes_logit = torch.logsumexp(values[yes_ids], dim=0)
     no_logit = torch.logsumexp(values[no_ids], dim=0)
-    return float(torch.softmax(torch.stack([no_logit, yes_logit]), dim=0)[1])
+    probabilities = torch.softmax(torch.stack([no_logit, yes_logit]), dim=0)
+    return {
+        "p_yes": float(probabilities[1]),
+        "p_no": float(probabilities[0]),
+        "yes_logit": float(yes_logit),
+        "no_logit": float(no_logit),
+        "logit_margin_no_minus_yes": float(no_logit - yes_logit),
+    }
 
 
 def load_direct(path: Path) -> Image.Image:
@@ -60,22 +67,22 @@ def load_direct(path: Path) -> Image.Image:
     return Image.fromarray(resized)
 
 
-def conversations(images: list[Image.Image]) -> list[list[dict]]:
+def conversations(images: list[Image.Image], prompt: str) -> list[list[dict]]:
     return [
         [{
             "role": "user",
             "content": [
                 {"type": "image", "image": image},
-                {"type": "text", "text": P0},
+                {"type": "text", "text": prompt},
             ],
         }]
         for image in images
     ]
 
 
-def encode(processor, images: list[Image.Image], device: torch.device) -> dict:
+def encode(processor, images: list[Image.Image], prompt: str, device: torch.device) -> dict:
     inputs = processor.apply_chat_template(
-        conversations(images),
+        conversations(images, prompt),
         tokenize=True,
         add_generation_prompt=True,
         return_dict=True,
@@ -116,9 +123,45 @@ def generate_logits(model, inputs: dict) -> tuple[torch.Tensor, float]:
     return logits, elapsed
 
 
+def generation_audit(
+    model, processor, subset: pd.DataFrame, root: Path, device: torch.device,
+    prompt: str, out_dir: Path, count: int,
+) -> None:
+    """Record a balanced set of complete responses without using them for scores."""
+    if count <= 0:
+        return
+    audit_path = out_dir / "generation_audit.csv"
+    if audit_path.is_file() and len(pd.read_csv(audit_path)) >= count:
+        print(f"[generation audit] reuse {audit_path}", flush=True)
+        return
+    per_stratum = max(1, count // (subset.class_name.nunique() * 2))
+    selected = (
+        subset.groupby(["class_name", "sample_label"], group_keys=False, sort=True)
+        .head(per_stratum)
+        .head(count)
+    )
+    records = []
+    for index, row in enumerate(selected.itertuples(index=False), 1):
+        image = load_direct(root / row.image_path)
+        inputs = encode(processor, [image], prompt, device)
+        with torch.inference_mode():
+            generated = model.generate(**inputs, max_new_tokens=64, do_sample=False, use_cache=True)
+        continuation = generated[:, inputs["input_ids"].shape[1]:]
+        response = processor.batch_decode(continuation, skip_special_tokens=True)[0].strip()
+        records.append({
+            "class_name": row.class_name, "group_path": row.group_path,
+            "image_path": row.image_path, "sample_label": row.sample_label,
+            "response": response, "first_word": response.split(maxsplit=1)[0] if response else "",
+        })
+        if index % 12 == 0 or index == len(selected):
+            print(f"[generation audit] {index}/{len(selected)}", flush=True)
+    pd.DataFrame(records).to_csv(audit_path, index=False)
+
+
 def validate_cuda(
     model, processor, group: pd.DataFrame, root: Path, device: torch.device,
-    yes_ids: list[int], no_ids: list[int], out_dir: Path,
+    yes_ids: list[int], no_ids: list[int], prompt: str, anomaly_token: str,
+    out_dir: Path, forward_generate_atol: float,
 ) -> str:
     path = out_dir / "cuda_validation.csv"
     if path.is_file():
@@ -126,17 +169,18 @@ def validate_cuda(
         if (
             len(prior) == 5
             and prior.abs_batch_single.max() <= BATCH_SINGLE_ATOL
-            and prior.abs_forward_generate.max() <= 1e-5
+            and prior.abs_forward_generate.max() <= forward_generate_atol
         ):
             print(f"[validation] reuse {path}", flush=True)
             return "batch5"
+    score_key = "p_yes" if anomaly_token == "yes" else "p_no"
     images = [load_direct(root / image_path) for image_path in group.image_path]
     singles = []
     records = []
     for index, ((_, row), image) in enumerate(zip(group.iterrows(), images)):
-        inputs = encode(processor, [image], device)
+        inputs = encode(processor, [image], prompt, device)
         logits, forward_s = forward_logits(model, inputs)
-        score = yes_probability(logits[0], yes_ids, no_ids)
+        score = binary_scores(logits[0], yes_ids, no_ids)[score_key]
         singles.append(score)
         record = {
             "image_path": row.image_path,
@@ -145,16 +189,16 @@ def validate_cuda(
         }
         if index == 0:
             generated, generate_s = generate_logits(model, inputs)
-            generated_score = yes_probability(generated[0], yes_ids, no_ids)
+            generated_score = binary_scores(generated[0], yes_ids, no_ids)[score_key]
             record.update({
                 "p_generate": generated_score,
                 "generate_one_s": generate_s,
                 "abs_forward_generate": abs(score - generated_score),
             })
         records.append(record)
-    batch_inputs = encode(processor, images, device)
+    batch_inputs = encode(processor, images, prompt, device)
     batch_logits, batch_s = forward_logits(model, batch_inputs)
-    batch_scores = [yes_probability(value, yes_ids, no_ids) for value in batch_logits]
+    batch_scores = [binary_scores(value, yes_ids, no_ids)[score_key] for value in batch_logits]
     for record, single, batch in zip(records, singles, batch_scores):
         record["p_batch5"] = batch
         record["abs_batch_single"] = abs(batch - single)
@@ -165,14 +209,14 @@ def validate_cuda(
     max_fg = float(frame.abs_forward_generate.max())
     max_bs = float(frame.abs_batch_single.max())
     print(f"[validation] forward-generate={max_fg:.3g}; batch-single={max_bs:.3g}", flush=True)
-    if max_fg > 1e-5:
+    if max_fg > forward_generate_atol:
         raise RuntimeError("forward-only 与 generate 首 token 未通过冻结容差")
 
     execution_mode = "batch5" if max_bs <= BATCH_SINGLE_ATOL else "serial"
     decision = {
         "execution_mode": execution_mode,
         "forward_generate_max_abs": max_fg,
-        "forward_generate_atol": 1e-5,
+        "forward_generate_atol": forward_generate_atol,
         "batch_single_max_abs": max_bs,
         "batch_single_atol": BATCH_SINGLE_ATOL,
         "reason": (
@@ -194,7 +238,7 @@ def validate_cuda(
 
 
 def write_protocol(
-    args, subset: pd.DataFrame, yes_ids: list[int], no_ids: list[int], out_dir: Path,
+    args, subset: pd.DataFrame, yes_ids: list[int], no_ids: list[int], prompt: str, out_dir: Path,
 ) -> None:
     holdout = {
         line.strip()
@@ -207,10 +251,14 @@ def write_protocol(
         raise RuntimeError(f"Dev-mini 混入 holdout 类: {overlap}")
     protocol = {
         "parent_protocol": PROTOCOL_VERSION,
-        "protocol": "B0plus-dev720-frozen-v1",
-        "model": "Qwen/Qwen2.5-VL-3B-Instruct",
-        "prompt_id": "P0",
-        "prompt_sha256": hashlib.sha256(P0.encode()).hexdigest(),
+        "protocol": (
+            "B0plus-dev720-frozen-v1" if args.prompt_id == "P0"
+            else "B0plus-dev720-prompt-diagnostic-v1"
+        ),
+        "model": str(args.model_id),
+        "prompt_id": args.prompt_id,
+        "prompt_sha256": hashlib.sha256(prompt.encode()).hexdigest(),
+        "anomaly_token": args.anomaly_token,
         "preprocess": "direct 448x448 cv2.INTER_AREA",
         "input_root": str(args.root),
         "preprocessed_cache_manifest": (
@@ -258,8 +306,14 @@ def main() -> None:
     parser.add_argument("--root", type=Path, default=Path("Dataset"))
     parser.add_argument("--preprocessed-cache-manifest", type=Path)
     parser.add_argument("--out-dir", type=Path, default=Path("artifacts/b0plus_dev720"))
+    parser.add_argument("--prompt-id", choices=sorted(PROMPTS), default="P0")
+    parser.add_argument("--anomaly-token", choices=("yes", "no"), default="yes")
+    parser.add_argument("--generation-audit-count", type=int, default=0)
+    parser.add_argument("--generation-audit-only", action="store_true")
+    parser.add_argument("--forward-generate-atol", type=float, default=1e-5)
     args = parser.parse_args()
     args.out_dir.mkdir(parents=True, exist_ok=True)
+    prompt = PROMPTS[args.prompt_id]
 
     subset = pd.read_parquet(args.subset).sort_values(
         ["class_name", "condition", "group_path", "view_idx"], kind="mergesort"
@@ -303,7 +357,7 @@ def main() -> None:
     processor.tokenizer.padding_side = "left"
     yes_ids = candidate_ids(processor.tokenizer, "Yes")
     no_ids = candidate_ids(processor.tokenizer, "No")
-    write_protocol(args, subset, yes_ids, no_ids, args.out_dir)
+    write_protocol(args, subset, yes_ids, no_ids, prompt, args.out_dir)
     print("[protocol] frozen; holdout intersection=0", flush=True)
 
     load_started = time.perf_counter()
@@ -316,12 +370,21 @@ def main() -> None:
     model.eval().to(device)
     print(f"[load] {time.perf_counter()-load_started:.2f}s", flush=True)
 
+    generation_audit(
+        model, processor, subset, args.root, device, prompt, args.out_dir,
+        args.generation_audit_count,
+    )
+    if args.generation_audit_only:
+        print("[done] generation audit only", flush=True)
+        return
+
     first_group = next(iter(subset.groupby("group_path", sort=False)))[1]
     execution_mode = validate_cuda(
-        model, processor, first_group, args.root, device, yes_ids, no_ids, args.out_dir
+        model, processor, first_group, args.root, device, yes_ids, no_ids,
+        prompt, args.anomaly_token, args.out_dir, args.forward_generate_atol,
     )
 
-    views_path = args.out_dir / "P0_views.csv"
+    views_path = args.out_dir / f"{args.prompt_id}_views.csv"
     timings_path = args.out_dir / "group_timings.csv"
     existing = pd.read_csv(views_path) if views_path.is_file() else pd.DataFrame()
     if len(existing):
@@ -347,27 +410,29 @@ def main() -> None:
         scores = []
         if execution_mode == "batch5":
             processor_started = time.perf_counter()
-            inputs = encode(processor, images, device)
+            inputs = encode(processor, images, prompt, device)
             processor_s = time.perf_counter() - processor_started
             logits, forward_s = forward_logits(model, inputs)
-            scores = [yes_probability(value, yes_ids, no_ids) for value in logits]
+            scores = [binary_scores(value, yes_ids, no_ids) for value in logits]
         else:
             for image in images:
                 processor_started = time.perf_counter()
-                inputs = encode(processor, [image], device)
+                inputs = encode(processor, [image], prompt, device)
                 processor_s += time.perf_counter() - processor_started
                 logits, one_forward_s = forward_logits(model, inputs)
                 forward_s += one_forward_s
-                scores.append(yes_probability(logits[0], yes_ids, no_ids))
+                scores.append(binary_scores(logits[0], yes_ids, no_ids))
         for (_, row), score in zip(group.iterrows(), scores):
+            anomaly_score = score["p_yes" if args.anomaly_token == "yes" else "p_no"]
             new_views.append({
-                "prompt_id": "P0", "class_name": row.class_name,
+                "prompt_id": args.prompt_id, "class_name": row.class_name,
                 "group_path": group_path, "image_path": row.image_path,
                 "view_idx": row.view_idx, "condition": row.condition,
                 "defect_norm": row.defect_norm, "sample_label": row.sample_label,
                 "view_label": row.view_label, "width": row.width, "height": row.height,
                 "defect_ratio": row.defect_ratio, "area_bucket": row.area_bucket,
-                "p_yes": score,
+                "p_anomaly": anomaly_score,
+                **score,
             })
         timing_records.append({
             "class_name": group.iloc[0].class_name,

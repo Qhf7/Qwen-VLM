@@ -19,6 +19,14 @@ class E1Output:
     classification_loss: torch.Tensor | None = None
     segmentation_loss: torch.Tensor | None = None
     region_loss: torch.Tensor | None = None
+    focal_loss: torch.Tensor | None = None
+    dice_loss: torch.Tensor | None = None
+    dice_loss_nonempty: torch.Tensor | None = None
+    dice_loss_empty: torch.Tensor | None = None
+    dice_nonempty_count: int = 0
+    dice_empty_count: int = 0
+    mask_probability_mean: torch.Tensor | None = None
+    predicted_area: torch.Tensor | None = None
 
 
 class ResidualConvBlock(nn.Module):
@@ -94,7 +102,11 @@ class ConditionalPromptLearner(nn.Module):
         return conditioned + self.base_prompt.unsqueeze(0)
 
 
-def focal_dice_loss(logits: torch.Tensor, targets: torch.Tensor) -> torch.Tensor:
+def segmentation_loss_components(
+    logits: torch.Tensor,
+    targets: torch.Tensor,
+    dice_nonempty_only: bool = False,
+) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor, int, int]:
     # Reductions span 448 * 448 pixels.  Keep the loss math in FP32 even when
     # the decoder forward runs under autocast: an FP16 reduction/gradient can
     # overflow on an otherwise finite example before GradScaler unscales it.
@@ -107,8 +119,32 @@ def focal_dice_loss(logits: torch.Tensor, targets: torch.Tensor) -> torch.Tensor
     focal = (alpha * (1 - pt).pow(2) * bce).mean()
     intersection = (probabilities * targets).flatten(1).sum(1)
     denominator = probabilities.flatten(1).sum(1) + targets.flatten(1).sum(1)
-    dice = 1 - ((2 * intersection + 1) / (denominator + 1)).mean()
-    return focal + dice
+    dice_per_example = 1 - (2 * intersection + 1) / (denominator + 1)
+    nonempty = targets.flatten(1).sum(1) > 0
+    if dice_nonempty_only:
+        dice = dice_per_example[nonempty].mean() if nonempty.any() else logits.float().sum() * 0.0
+    else:
+        dice = dice_per_example.mean()
+    return focal + dice, focal, dice, int(nonempty.sum().item()), int((~nonempty).sum().item())
+
+
+def dice_loss_by_mask(
+    logits: torch.Tensor, targets: torch.Tensor
+) -> tuple[torch.Tensor, torch.Tensor]:
+    """Return mean Dice loss for non-empty and empty GT masks separately."""
+    probabilities = torch.sigmoid(logits.float())
+    targets = targets.float()
+    intersection = (probabilities * targets).flatten(1).sum(1)
+    denominator = probabilities.flatten(1).sum(1) + targets.flatten(1).sum(1)
+    values = 1 - (2 * intersection + 1) / (denominator + 1)
+    nonempty = targets.flatten(1).sum(1) > 0
+    nonempty_loss = values[nonempty].mean() if nonempty.any() else values.sum() * 0.0
+    empty_loss = values[~nonempty].mean() if (~nonempty).any() else values.sum() * 0.0
+    return nonempty_loss, empty_loss
+
+
+def focal_dice_loss(logits: torch.Tensor, targets: torch.Tensor) -> torch.Tensor:
+    return segmentation_loss_components(logits, targets)[0]
 
 
 class QwenE1(nn.Module):
@@ -124,12 +160,14 @@ class QwenE1(nn.Module):
         n_virtual_tokens: int = 4,
         lambda_seg: float = 0.2,
         lambda_region: float = 0.1,
+        dice_nonempty_only: bool = False,
     ) -> None:
         super().__init__()
         self.base_model = base_model
         self.feature_layers = feature_layers
         self.lambda_seg = lambda_seg
         self.lambda_region = lambda_region
+        self.dice_nonempty_only = bool(dice_nonempty_only)
         for parameter in self.base_model.parameters():
             parameter.requires_grad_(False)
         vision_config = base_model.config.vision_config
@@ -264,13 +302,18 @@ class QwenE1(nn.Module):
         anomaly_logits = yes - no
 
         total = classification = segmentation = region = None
+        focal = dice = dice_nonempty = dice_empty = None
+        dice_nonempty_count = dice_empty_count = 0
         if sample_labels is not None:
             classification = F.binary_cross_entropy_with_logits(
                 anomaly_logits, sample_labels.to(anomaly_logits.dtype)
             )
             total = classification
         if masks is not None:
-            segmentation = focal_dice_loss(mask_logits, masks)
+            segmentation, focal, dice, dice_nonempty_count, dice_empty_count = segmentation_loss_components(
+                mask_logits, masks, dice_nonempty_only=self.dice_nonempty_only
+            )
+            dice_nonempty, dice_empty = dice_loss_by_mask(mask_logits, masks)
             total = self.lambda_seg * segmentation if total is None else total + self.lambda_seg * segmentation
         if region_labels is not None:
             region = F.cross_entropy(region_logits.float(), region_labels.long())
@@ -283,6 +326,14 @@ class QwenE1(nn.Module):
             classification_loss=classification,
             segmentation_loss=segmentation,
             region_loss=region,
+            focal_loss=focal,
+            dice_loss=dice,
+            dice_loss_nonempty=dice_nonempty,
+            dice_loss_empty=dice_empty,
+            dice_nonempty_count=dice_nonempty_count,
+            dice_empty_count=dice_empty_count,
+            mask_probability_mean=torch.sigmoid(mask_logits).mean().detach(),
+            predicted_area=(torch.sigmoid(mask_logits) >= 0.5).float().mean().detach(),
         )
 
     def trainable_parameter_summary(self) -> dict[str, int]:

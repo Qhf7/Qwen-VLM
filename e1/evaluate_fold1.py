@@ -11,6 +11,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 import torch
+import cv2
 from PIL import Image
 from sklearn.metrics import average_precision_score, precision_recall_curve, roc_auc_score
 from transformers import AutoModelForImageTextToText, AutoProcessor
@@ -55,6 +56,16 @@ def binary_metrics(labels: np.ndarray, scores: np.ndarray) -> dict[str, float]:
     }
 
 
+def mask_dice(predicted: np.ndarray, target: np.ndarray) -> float:
+    predicted = predicted.astype(bool, copy=False)
+    target = target.astype(bool, copy=False)
+    predicted_count = int(predicted.sum())
+    target_count = int(target.sum())
+    if predicted_count == 0 and target_count == 0:
+        return 1.0
+    return float(2 * np.logical_and(predicted, target).sum() / (predicted_count + target_count))
+
+
 def build_sample_scores(views: pd.DataFrame) -> pd.DataFrame:
     return (
         views.groupby(["class_name", "group_path"], as_index=False)
@@ -82,6 +93,14 @@ def summarize(views: pd.DataFrame) -> tuple[dict, pd.DataFrame, pd.DataFrame]:
     threshold = overall["f1max_threshold"]
     small = samples[samples.sample_label.eq(1) & samples.max_defect_ratio.le(0.01)]
     ok_views = views[views.sample_label.eq(0)]
+    if {"dice", "gt_mask_nonempty"}.issubset(views.columns):
+        dice_views = views[views.dice.notna()]
+        nonempty_dice = dice_views[dice_views.gt_mask_nonempty.eq(True)].dice
+        empty_dice = dice_views[dice_views.gt_mask_nonempty.eq(False)].dice
+    else:
+        nonempty_dice = pd.Series(dtype=float)
+        empty_dice = pd.Series(dtype=float)
+        dice_views = views.iloc[0:0]
     summary = {
         "overall": overall,
         "macro_auroc": float(per_class.auroc.mean()),
@@ -95,6 +114,13 @@ def summarize(views: pd.DataFrame) -> tuple[dict, pd.DataFrame, pd.DataFrame]:
             "ok_view_mean": float(ok_views.predicted_area.mean()),
             "ng_view_mean": float(views.loc[views.sample_label.eq(1), "predicted_area"].mean()),
             "sample_max_mean": float(samples.predicted_area.mean()),
+        },
+        "mask_dice": {
+            "available_n": int(len(dice_views)),
+            "nonempty_n": int(len(nonempty_dice)),
+            "nonempty_mean": float(nonempty_dice.mean()) if len(nonempty_dice) else None,
+            "empty_n": int(len(empty_dice)),
+            "empty_mean": float(empty_dice.mean()) if len(empty_dice) else None,
         },
     }
     summary["stage_gate"] = {
@@ -117,6 +143,7 @@ def evaluate_model(
     out_dir: Path,
     tag: str,
     max_views: int | None = None,
+    gt_root: Path | None = None,
 ) -> dict:
     out_dir.mkdir(parents=True, exist_ok=True)
     rows = dev.sort_values(
@@ -156,7 +183,30 @@ def evaluate_model(
             output = model(inputs)
         torch.cuda.synchronize()
         probability = float(torch.sigmoid(output.anomaly_logits[0]).cpu())
-        predicted_area = float((torch.sigmoid(output.mask_logits[0, 0]) >= 0.5).float().mean().cpu())
+        mask_probability = torch.sigmoid(output.mask_logits[0, 0]).float().cpu().numpy()
+        predicted_mask = mask_probability >= 0.5
+        predicted_area = float(predicted_mask.mean())
+        mask_path_value = getattr(row, "mask_path", "")
+        mask_path = "" if pd.isna(mask_path_value) else str(mask_path_value)
+        if mask_path.lower() == "nan":
+            mask_path = ""
+        mask_file = None
+        if mask_path:
+            candidates = []
+            if gt_root is not None:
+                candidates.append(Path(gt_root) / mask_path)
+            candidates.append(cache_root / mask_path)
+            mask_file = next((candidate for candidate in candidates if candidate.is_file()), candidates[0])
+        gt_mask = None
+        if mask_file is not None and mask_file.is_file():
+            with Image.open(mask_file) as mask_source:
+                mask_pixels = np.asarray(mask_source.convert("L")) > 0
+            gt_mask = cv2.resize(
+                mask_pixels.astype(np.uint8), (SIDE, SIDE), interpolation=cv2.INTER_NEAREST
+            ) > 0
+        elif int(getattr(row, "view_label", 0)) == 0:
+            gt_mask = np.zeros((SIDE, SIDE), dtype=bool)
+        gt_nonempty = bool(gt_mask.any()) if gt_mask is not None else None
         records.append({
             "class_name": row.class_name,
             "group_path": row.group_path,
@@ -166,7 +216,10 @@ def evaluate_model(
             "view_label": row.view_label,
             "defect_ratio": row.defect_ratio,
             "p_yes": probability,
+            "mask_probability_mean": float(mask_probability.mean()),
             "predicted_area": predicted_area,
+            "gt_mask_nonempty": gt_nonempty,
+            "dice": mask_dice(predicted_mask, gt_mask) if gt_mask is not None else np.nan,
             "forward_s": time.perf_counter() - one_started,
         })
         if index % 100 == 0:
@@ -199,6 +252,9 @@ def build_model(
     checkpoint: Path | None,
     device: torch.device,
     dtype: torch.dtype = torch.bfloat16,
+    dice_nonempty_only: bool = False,
+    lambda_seg: float | None = None,
+    feature_layers: tuple[int, ...] = (7, 15, 23, 31),
 ):
     processor = AutoProcessor.from_pretrained(
         model_id, min_pixels=SIDE * SIDE, max_pixels=SIDE * SIDE
@@ -214,6 +270,9 @@ def build_model(
         base,
         yes_token_ids=candidate_ids(processor.tokenizer, "Yes"),
         no_token_ids=candidate_ids(processor.tokenizer, "No"),
+        dice_nonempty_only=dice_nonempty_only,
+        lambda_seg=0.2 if lambda_seg is None else float(lambda_seg),
+        feature_layers=feature_layers,
     ).to(device)
     model.autocast_dtype = dtype
     if checkpoint is not None:
@@ -230,9 +289,16 @@ def main() -> None:
     parser.add_argument("--dev", type=Path, default=Path("artifacts/splits/fold1/dev.parquet"))
     parser.add_argument("--holdout-classes", type=Path, default=Path("artifacts/splits/fold1/holdout_classes.txt"))
     parser.add_argument("--cache-root", type=Path, default=Path("Dataset448"))
+    parser.add_argument("--gt-root", type=Path, default=Path("Dataset"))
     parser.add_argument("--out-dir", type=Path, default=Path("artifacts/e1_fold1"))
     parser.add_argument("--tag", default="best")
     parser.add_argument("--max-views", type=int)
+    parser.add_argument(
+        "--empty-mask-dice-only-nonempty",
+        action="store_true",
+        help="Load E1 ablation-A model configuration (loss behavior is inactive during eval)",
+    )
+    parser.add_argument("--feature-layers", default="7,15,23,31")
     args = parser.parse_args()
 
     dev = pd.read_parquet(args.dev)
@@ -244,9 +310,24 @@ def main() -> None:
     ):
         raise RuntimeError("fold1 Dev is not the frozen 3600-view split")
     device = torch.device("cuda:0")
-    model, processor = build_model(args.model_id, args.checkpoint, device)
+    feature_layers = tuple(int(v) for v in args.feature_layers.split(",") if v.strip())
+    model, processor = build_model(
+        args.model_id,
+        args.checkpoint,
+        device,
+        dice_nonempty_only=args.empty_mask_dice_only_nonempty,
+        feature_layers=feature_layers,
+    )
     result = evaluate_model(
-        model, processor, dev, args.cache_root, device, args.out_dir, args.tag, args.max_views
+        model,
+        processor,
+        dev,
+        args.cache_root,
+        device,
+        args.out_dir,
+        args.tag,
+        args.max_views,
+        gt_root=args.gt_root,
     )
     result["dev_sha256"] = sha256_file(args.dev)
     result["holdout_intersection"] = []

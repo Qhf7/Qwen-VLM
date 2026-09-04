@@ -80,6 +80,7 @@ def main() -> None:
     parser.add_argument("--pool", type=Path, default=Path("artifacts/e1/sampler_pool.parquet"))
     parser.add_argument("--cache-root", type=Path, default=Path("Train448"))
     parser.add_argument("--dev-cache-root", type=Path, default=Path("Dataset448"))
+    parser.add_argument("--gt-root", type=Path, default=Path("Dataset"))
     parser.add_argument("--cache-manifest", type=Path, default=Path("artifacts/e1/train448_cache_manifest.csv"))
     parser.add_argument("--schedule", type=Path, default=Path("artifacts/e1/fold1_schedule.parquet"))
     parser.add_argument("--holdout-classes", type=Path, default=Path("artifacts/splits/fold1/holdout_classes.txt"))
@@ -89,11 +90,37 @@ def main() -> None:
     parser.add_argument("--stop-after-step", type=int)
     parser.add_argument("--eval-steps", type=str)
     parser.add_argument("--skip-eval", action="store_true")
+    parser.add_argument(
+        "--empty-mask-dice-only-nonempty",
+        action="store_true",
+        help="E1 ablation A: exclude empty GT masks from the Dice term",
+    )
+    parser.add_argument(
+        "--lambda-seg",
+        type=float,
+        help="E1 ablation B: override only the segmentation-loss weight",
+    )
+    parser.add_argument(
+        "--feature-layers",
+        type=str,
+        default="7,15,23,31",
+        help="comma-separated visual block indices for decoder features",
+    )
     parser.add_argument("--num-workers", type=int, default=4)
     args = parser.parse_args()
+    feature_layers = tuple(int(value.strip()) for value in args.feature_layers.split(",") if value.strip())
+    if not feature_layers:
+        raise ValueError("feature-layers must contain at least one layer")
 
     config = json.loads(args.config.read_text(encoding="utf-8"))
     training = config["training"]
+    lambda_seg = (
+        float(args.lambda_seg)
+        if args.lambda_seg is not None
+        else float(config["loss"]["lambda_seg"])
+    )
+    if lambda_seg <= 0:
+        raise ValueError("lambda-seg must be positive")
     max_steps = args.max_steps or int(training["max_steps"])
     run_until_step = args.stop_after_step or max_steps
     if run_until_step > max_steps:
@@ -166,6 +193,22 @@ def main() -> None:
         "schedule_sha256": sha256_file(args.schedule) if schedule is not None else None,
         "scheduled_unique_images": len(required_images),
         "scheduled_unique_masks": len(required_masks),
+        "empty_mask_dice_only_nonempty": bool(args.empty_mask_dice_only_nonempty),
+        "lambda_seg": lambda_seg,
+        "feature_layers": list(feature_layers),
+        "experiment_variant": (
+            "E1-C-feature-layers"
+            if tuple(feature_layers) != (7, 15, 23, 31)
+            else (
+                "E1-B-lambda-seg"
+                if args.lambda_seg is not None
+                else (
+                    "E1-A-empty-mask-dice-nonempty"
+                    if args.empty_mask_dice_only_nonempty
+                    else "E1-B0-original"
+                )
+            )
+        ),
     }
     (args.out_dir / "frozen_training_protocol.json").write_text(
         json.dumps(protocol, ensure_ascii=False, indent=2), encoding="utf-8"
@@ -180,7 +223,15 @@ def main() -> None:
         raise RuntimeError("the frozen E1 protocol requires CUDA BF16 support")
 
     device = torch.device("cuda:0")
-    model, processor = build_model(args.model_id, None, device, dtype=amp_dtype)
+    model, processor = build_model(
+        args.model_id,
+        None,
+        device,
+        dtype=amp_dtype,
+        dice_nonempty_only=args.empty_mask_dice_only_nonempty,
+        lambda_seg=lambda_seg,
+        feature_layers=feature_layers,
+    )
     summary = model.trainable_parameter_summary()
     if summary["base_model"] != 0:
         raise RuntimeError("base model contains trainable parameters")
@@ -222,6 +273,13 @@ def main() -> None:
     best_step = 0
     if args.resume:
         state = torch.load(args.resume, map_location="cpu", weights_only=False)
+        prior_config = state.get("config", {})
+        prior_ablation = bool(prior_config.get("empty_mask_dice_only_nonempty", False))
+        if prior_ablation != bool(args.empty_mask_dice_only_nonempty):
+            raise RuntimeError("resume checkpoint ablation mode does not match this run")
+        prior_lambda_seg = float(prior_config.get("lambda_seg", 0.2))
+        if not math.isclose(prior_lambda_seg, lambda_seg, rel_tol=0.0, abs_tol=1e-12):
+            raise RuntimeError("resume checkpoint lambda_seg does not match this run")
         model.decoder.load_state_dict(state["decoder"])
         model.prompt_learner.load_state_dict(state["prompt_learner"])
         optimizer.load_state_dict(state["optimizer"])
@@ -271,7 +329,33 @@ def main() -> None:
             continue
         model.train()
         optimizer.zero_grad(set_to_none=True)
-        loss_sums = {"loss": 0.0, "classification": 0.0, "segmentation": 0.0, "region": 0.0}
+        loss_sums = {
+            "loss": 0.0,
+            "classification": 0.0,
+            "segmentation": 0.0,
+            "focal": 0.0,
+            "dice": 0.0,
+            "region": 0.0,
+        }
+        source_stats = {
+            source: {
+                "loss": [],
+                "classification": [],
+                "segmentation": [],
+                "focal": [],
+                "dice": [],
+                "region": [],
+                "mask_probability_mean": [],
+                "predicted_area": [],
+                "dice_nonempty": [],
+                "dice_empty": [],
+                "dice_nonempty_count": 0,
+                "dice_empty_count": 0,
+            }
+            for source in ("real_anomaly", "pseudo_anomaly", "normal", "hard_normal")
+        }
+        all_dice_nonempty = []
+        all_dice_empty = []
         step_started = time.perf_counter()
         for example in examples:
             inputs, targets = encode_examples(processor, [example], device)
@@ -282,7 +366,29 @@ def main() -> None:
             loss_sums["loss"] += float(output.loss.detach())
             loss_sums["classification"] += float(output.classification_loss.detach())
             loss_sums["segmentation"] += float(output.segmentation_loss.detach())
+            loss_sums["focal"] += float(output.focal_loss.detach())
+            loss_sums["dice"] += float(output.dice_loss.detach())
             loss_sums["region"] += float(output.region_loss.detach())
+            source = str(example["source_type"])
+            stats = source_stats[source]
+            stats["loss"].append(float(output.loss.detach()))
+            stats["classification"].append(float(output.classification_loss.detach()))
+            stats["segmentation"].append(float(output.segmentation_loss.detach()))
+            stats["focal"].append(float(output.focal_loss.detach()))
+            stats["dice"].append(float(output.dice_loss.detach()))
+            stats["region"].append(float(output.region_loss.detach()))
+            stats["mask_probability_mean"].append(float(output.mask_probability_mean))
+            stats["predicted_area"].append(float(output.predicted_area))
+            if output.dice_nonempty_count:
+                value = float(output.dice_loss_nonempty.detach())
+                stats["dice_nonempty"].append(value)
+                all_dice_nonempty.append(value)
+            if output.dice_empty_count:
+                value = float(output.dice_loss_empty.detach())
+                stats["dice_empty"].append(value)
+                all_dice_empty.append(value)
+            stats["dice_nonempty_count"] += int(output.dice_nonempty_count)
+            stats["dice_empty_count"] += int(output.dice_empty_count)
             del output, inputs, targets, scaled_loss
 
         if not first_gradient_gate_done:
@@ -314,6 +420,48 @@ def main() -> None:
             "elapsed_s": time.perf_counter() - run_started,
             "peak_cuda_memory_gib": torch.cuda.max_memory_allocated() / 2**30,
         }
+        for source, stats in source_stats.items():
+            prefix = f"source_{source}"
+            record[f"{prefix}_n"] = len(stats["loss"])
+            for key in ("loss", "classification", "segmentation", "focal", "dice", "region"):
+                record[f"{prefix}_{key}_mean"] = (
+                    float(np.mean(stats[key])) if stats[key] else float("nan")
+                )
+            for key in ("mask_probability_mean", "predicted_area"):
+                values = stats[key]
+                record[f"{prefix}_{key}_mean"] = float(np.mean(values)) if values else float("nan")
+                record[f"{prefix}_{key}_p50"] = float(np.percentile(values, 50)) if values else float("nan")
+                record[f"{prefix}_{key}_p95"] = float(np.percentile(values, 95)) if values else float("nan")
+            record[f"{prefix}_dice_nonempty_mean"] = (
+                float(np.mean(stats["dice_nonempty"])) if stats["dice_nonempty"] else float("nan")
+            )
+            record[f"{prefix}_dice_empty_mean"] = (
+                float(np.mean(stats["dice_empty"])) if stats["dice_empty"] else float("nan")
+            )
+            record[f"{prefix}_dice_score_nonempty_mean"] = (
+                1.0 - record[f"{prefix}_dice_nonempty_mean"]
+                if stats["dice_nonempty"] else float("nan")
+            )
+            record[f"{prefix}_dice_score_empty_mean"] = (
+                1.0 - record[f"{prefix}_dice_empty_mean"]
+                if stats["dice_empty"] else float("nan")
+            )
+            record[f"{prefix}_dice_nonempty_count"] = stats["dice_nonempty_count"]
+            record[f"{prefix}_dice_empty_count"] = stats["dice_empty_count"]
+        record["dice_nonempty_mean"] = (
+            float(np.mean(all_dice_nonempty)) if all_dice_nonempty else float("nan")
+        )
+        record["dice_empty_mean"] = (
+            float(np.mean(all_dice_empty)) if all_dice_empty else float("nan")
+        )
+        record["dice_score_nonempty_mean"] = (
+            1.0 - record["dice_nonempty_mean"] if all_dice_nonempty else float("nan")
+        )
+        record["dice_score_empty_mean"] = (
+            1.0 - record["dice_empty_mean"] if all_dice_empty else float("nan")
+        )
+        record["dice_nonempty_count"] = len(all_dice_nonempty)
+        record["dice_empty_count"] = len(all_dice_empty)
         history.append(record)
         pd.DataFrame(history).to_csv(history_path, index=False)
         if step % 10 == 0 or step == 1:
@@ -331,7 +479,14 @@ def main() -> None:
         if step in eval_steps:
             tag = f"step{step:04d}"
             metrics = evaluate_model(
-                model, processor, dev, args.dev_cache_root, device, args.out_dir, tag
+                model,
+                processor,
+                dev,
+                args.dev_cache_root,
+                device,
+                args.out_dir,
+                tag,
+                gt_root=args.gt_root,
             )
             macro_aupr = float(metrics["macro_aupr"])
             print(

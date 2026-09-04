@@ -32,7 +32,22 @@ H1: this instance contains a localized anomaly; some visible region is inconsist
 Choose the better-supported hypothesis. The first generated token must be exactly No for H0 or Yes for H1. Then output exactly one JSON object whose region is one of: top-left, top-center, top-right, middle-left, center, middle-right, bottom-left, bottom-center, bottom-right, none.
 For H0 use No {"region":"none"}. Do not output Markdown or an explanation."""
 
-PROMPTS = {"P0": P0, "P1": P1, "P2": P2}
+# This post-registration diagnostic deliberately reverses P0's label wording:
+# Yes means normal and No means defective.  The runner records P(No) as the
+# anomaly score, rather than relying on a prompt-specific column name.
+P3_COMPONENT_FIRST = """Inspect one view of an industrial component.
+
+First identify internally what kind of component it is and its expected repeated structure, edges, holes, markings, color, and surface. Then decide whether any visible local region breaks that expected structure.
+
+The first generated token must be exactly Yes or No. Yes means the component is normal. No means the component has a visible defect.
+A defect includes a visible scratch, crack, deformation, discoloration, stain, missing or broken material, pit, burn mark, coating problem, contaminant, or other localized inconsistency. Normal edges, holes, reflections, shadows, text, and regular texture are not defects.
+
+Then output exactly one JSON object. Its component value must be a short component-type description, and its region must be one of: top-left, top-center, top-right, middle-left, center, middle-right, bottom-left, bottom-center, bottom-right, none.
+For normal use: Yes {"component":"short component type","region":"none"}
+For defective use: No {"component":"short component type","region":"center"}
+Do not output Markdown or an explanation."""
+
+PROMPTS = {"P0": P0, "P1": P1, "P2": P2, "P3_COMPONENT_FIRST": P3_COMPONENT_FIRST}
 
 SELECTION_RULE = (
     "Use 5-view max on smoke20. Sort descending by sample AUROC, then sample AUPR, "

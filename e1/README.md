@@ -123,6 +123,25 @@ python -m e1.evaluate_fold1 \
   --tag best_confirm
 ```
 
+当前下一项是 E1 消融 A。它必须使用新的输出目录，从 step 1 独立训练；`Dataset`
+仅用于读取原始 GT mask，模型输入仍来自 direct448 缓存：
+
+```bash
+python -m e1.train_fold1 \
+  --model-id models/Qwen2.5-VL-3B-Instruct \
+  --cache-root /path/to/Train448 \
+  --dev-cache-root Dataset448 \
+  --gt-root Dataset \
+  --out-dir artifacts/e1_fold1_ablation_a \
+  --empty-mask-dice-only-nonempty
+```
+
+`training_history.csv` 现在按四路来源记录总/分类/分割/focal/Dice/区域损失、mask
+概率和预测面积的均值及 P50/P95，并记录空/非空 GT 的 Dice 损失、Dice score 与样本数。评测的
+逐视角 CSV 增加 `mask_probability_mean`、`gt_mask_nonempty` 和二值 `dice`；对应
+`*_metrics.json` 的 `mask_dice` 分开汇总空、非空 mask。`--gt-root` 默认是原始
+`Dataset`，因为 `Dataset448` 构建脚本只缓存图像。
+
 ## Fold1 正式结果（2026-09-01）
 
 | Step | 宏 AUPR | 宏 F1max | 小缺陷召回 | OK 面积均值 | 面积 P95 | 过门 |
