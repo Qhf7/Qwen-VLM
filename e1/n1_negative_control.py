@@ -21,7 +21,45 @@ from PIL import Image
 
 from b0.b0plus_protocol import P0
 from e1.evaluate_fold1 import build_model
-from s0 import metrics as pixel_metrics
+try:
+    from s0 import metrics as pixel_metrics
+except ModuleNotFoundError:
+    # The migrated training server may contain only b0/e1. Keep N1
+    # self-contained so the negative control does not depend on S0 files.
+    from types import SimpleNamespace
+
+    class _PixelMetrics:
+        N_THRESHOLDS = 256
+
+        @staticmethod
+        def _accumulate(pos, neg, pred, gt, n_bins):
+            pred = np.clip(np.nan_to_num(pred.astype(np.float32)), 0.0, 1.0)
+            bins = np.linspace(0.0, 1.0, n_bins + 1)
+            digit = np.clip(np.digitize(pred.ravel(), bins) - 1, 0, n_bins - 1)
+            pos += np.bincount(digit[gt.ravel()], minlength=n_bins)
+            neg += np.bincount(digit[~gt.ravel()], minlength=n_bins)
+            return pos, neg
+
+        @staticmethod
+        def _scan(pos, neg):
+            tp = np.cumsum(pos[::-1])[::-1]; fp = np.cumsum(neg[::-1])[::-1]
+            p = tp / (tp + fp + 1e-12); r = tp / (tp[0] + 1e-12)
+            f1 = 2 * p * r / (p + r + 1e-12)
+            aupr = float(sum(max(0.0, r[i] - (r[i + 1] if i + 1 < len(r) else 0.0)) * p[i] for i in range(len(r))))
+            fpr = fp / (fp[0] + 1e-12)
+            roc_tpr = np.r_[0.0, r[::-1]]; roc_fpr = np.r_[0.0, fpr[::-1]]
+            integrate = np.trapezoid if hasattr(np, "trapezoid") else np.trapz
+            return float(integrate(roc_tpr, roc_fpr)), aupr, float(np.max(f1))
+
+        @classmethod
+        def finish_pixel_metrics(cls, pos, neg, ratios, n_images, hits):
+            auroc, aupr, f1 = cls._scan(pos, neg)
+            return SimpleNamespace(
+                n_images=n_images, p_auroc=[auroc], p_aupr=[aupr], p_f1max=[f1],
+                hit_at_1pct=hits, pred_area_ratio=ratios,
+            )
+
+    pixel_metrics = _PixelMetrics()
 
 
 SIDE = 448
