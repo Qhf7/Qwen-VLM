@@ -1,0 +1,21 @@
+{
+  "protocol": "N1-decoder-heatmap-direct-mask-v1",
+  "checkpoint": "artifacts/e1_fold1/best.pt",
+  "feature_layers": [
+    7,
+    15,
+    23,
+    31
+  ],
+  "n_views": 3600,
+  "n_classes": 18,
+  "macro_pixel_auroc": 0.5689998567532132,
+  "macro_pixel_aupr": 0.0178025151725681,
+  "macro_pixel_f1max": 0.05076148575527747,
+  "macro_hit_at_1pct": 0.0429179223858309,
+  "predicted_area_mean": 0.006840482612315759,
+  "view_latency_p50_s": 0.15266503347083926,
+  "view_latency_p95_s": 0.18330694558098912,
+  "elapsed_s": 626.7245522188023,
+  "checkpoint_selection": "not used; negative control only"
+}
