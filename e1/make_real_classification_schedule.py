@@ -5,8 +5,10 @@ import numpy as np
 import pandas as pd
 
 def main():
-    p=argparse.ArgumentParser(); p.add_argument('--train',type=Path,default=Path('artifacts/splits/fold1/train.parquet')); p.add_argument('--out-dir',type=Path,default=Path('artifacts/e1_real_classification')); p.add_argument('--steps',type=int,default=1000); p.add_argument('--batch-size',type=int,default=8); args=p.parse_args(); args.out_dir.mkdir(parents=True,exist_ok=True)
+    p=argparse.ArgumentParser(); p.add_argument('--train',type=Path,default=Path('artifacts/splits/fold1/train.parquet')); p.add_argument('--cache-manifest',type=Path,default=Path('artifacts/e1/train448_cache_manifest.csv')); p.add_argument('--out-dir',type=Path,default=Path('artifacts/e1_real_classification')); p.add_argument('--steps',type=int,default=1000); p.add_argument('--batch-size',type=int,default=8); args=p.parse_args(); args.out_dir.mkdir(parents=True,exist_ok=True)
     df=pd.read_parquet(args.train).copy()
+    cached=set(pd.read_csv(args.cache_manifest).image_path)
+    df=df[df.image_path.isin(cached)].copy()
     # view_label is the target: an invisible angle of an NG part is normal.
     real=df[df.view_label.eq(1)].copy(); normal=df[df.view_label.eq(0)].copy()
     pools={'real_anomaly':real,'normal':normal}; rows=[]
