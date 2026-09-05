@@ -176,7 +176,9 @@ def main() -> None:
         raise RuntimeError("classification schedule has incorrect source quotas")
 
     active_schedule = schedule[schedule.step.le(run_until_step)]
-    required_images = set(active_schedule.image_path) | (set(active_schedule.donor_path) - {""})
+    required_images = set(active_schedule.image_path)
+    if "donor_path" in active_schedule.columns:
+        required_images |= set(active_schedule.donor_path) - {""}
     missing_images = [path for path in required_images if not (args.cache_root / path).is_file()]
     if missing_images:
         raise FileNotFoundError(f"missing {len(missing_images)} scheduled images; first={missing_images[0]}")
