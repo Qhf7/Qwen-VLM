@@ -14,14 +14,16 @@ def main():
     pools={'real_anomaly':real,'normal':normal}; rows=[]
     rng=np.random.default_rng(20260901)
     for source,part in pools.items():
-        parts=[]
+        by_class={}
         for cls,g in part.groupby('class_name',sort=True):
-            vals=g.index.to_numpy().copy(); rng.shuffle(vals); parts.extend(vals.tolist())
-        pools[source]=df.loc[parts].reset_index(drop=True)
+            vals=g.index.to_numpy().copy(); rng.shuffle(vals); by_class[cls]=df.loc[vals].reset_index(drop=True)
+        pools[source]=by_class
     for step in range(1,args.steps+1):
-        for pos,source in enumerate(['real_anomaly']*(args.batch_size//2)+['normal']*(args.batch_size//2)):
-            pool=pools[source]; row=pool.iloc[((step-1)*(args.batch_size//2)+(pos%(args.batch_size//2)))%len(pool)]
-            rows.append({'step':step,'batch_position':pos,'dataset_index':int(row.name),'image_path':row.image_path,'source_type':source})
+        for pos in range(args.batch_size):
+            source='real_anomaly' if pos < args.batch_size//2 else 'normal'
+            classes=sorted(pools[source]); cls=classes[((step-1)*(args.batch_size//2)+(pos % (args.batch_size//2))) % len(classes)]
+            pool=pools[source][cls]; row=pool.iloc[((step-1)//len(classes)) % len(pool)]
+            rows.append({'step':step,'batch_position':pos,'image_path':row.image_path,'source_type':source})
     # pool index is the row identity consumed by the training Dataset.
     pool=pd.concat([real.assign(source_type='real_anomaly'),normal.assign(source_type='normal')],ignore_index=True); pool.insert(0,'pool_index',np.arange(len(pool)))
     # rebuild dataset indices against concatenated pool

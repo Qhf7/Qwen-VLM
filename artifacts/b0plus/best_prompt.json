@@ -1,9 +1,0 @@
-{
-  "best_prompt": "P0",
-  "selection_rule": "Use 5-view max on smoke20. Sort descending by sample AUROC, then sample AUPR, then macro class AUROC; break an exact tie by prompt id ascending.",
-  "selection_keys": [
-    "sample_auroc",
-    "sample_aupr",
-    "macro_class_auroc"
-  ]
-}

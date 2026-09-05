@@ -37,7 +37,7 @@ class QwenE1Classification(QwenE1):
         inputs: dict[str, torch.Tensor],
         sample_labels: torch.Tensor | None = None,
     ) -> ClassificationOutput:
-        features, image_embeds = self._vision_features(
+        features, image_embeds, deepstack_features = self._vision_features(
             inputs["pixel_values"], inputs["image_grid_thw"]
         )
         # PatchDecoder returns mask/region outputs, but those frozen heads are
@@ -45,7 +45,7 @@ class QwenE1Classification(QwenE1):
         # blocks receive gradients from the image-level classification loss.
         _, _, fused = self.decoder(features)
         virtual_prompt = self.prompt_learner.forward_global(fused)
-        vocabulary_logits = self._language_logits(inputs, image_embeds, virtual_prompt)
+        vocabulary_logits = self._language_logits(inputs, image_embeds, virtual_prompt, deepstack_features)
         yes = torch.logsumexp(vocabulary_logits[:, self.yes_token_ids], dim=1)
         no = torch.logsumexp(vocabulary_logits[:, self.no_token_ids], dim=1)
         anomaly_logits = yes - no
@@ -60,4 +60,3 @@ class QwenE1Classification(QwenE1):
             loss=classification,
             classification_loss=classification,
         )
-

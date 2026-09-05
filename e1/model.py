@@ -256,13 +256,17 @@ class QwenE1(nn.Module):
             for handle in handles:
                 handle.remove()
         features = [self._restore_spatial(captured[index], grid_thw) for index in self.feature_layers]
-        return features, vision_outputs.pooler_output.detach()
+        deepstack = getattr(vision_outputs, "deepstack_features", None)
+        if deepstack is not None:
+            deepstack = [value.detach() for value in deepstack]
+        return features, vision_outputs.pooler_output.detach(), deepstack
 
     def _language_logits(
         self,
         inputs: dict[str, torch.Tensor],
         image_embeds: torch.Tensor,
         virtual_prompt: torch.Tensor,
+        deepstack_features=None,
     ) -> torch.Tensor:
         model = self.base_model.model
         input_ids = inputs["input_ids"]
@@ -303,12 +307,28 @@ class QwenE1(nn.Module):
             device=attention_mask.device, dtype=attention_mask.dtype,
         )
         attention_mask = torch.cat([prompt_mask, attention_mask], dim=1)
-        outputs = model.language_model(
+        language_kwargs = dict(
             inputs_embeds=embeddings,
             attention_mask=attention_mask,
             position_ids=position_ids,
             use_cache=False,
         )
+        if deepstack_features is not None and len(deepstack_features):
+            visual_pos_masks = image_mask[..., 0] if image_mask.ndim == 3 else image_mask
+            prompt_false = torch.zeros(
+                visual_pos_masks.shape[0], n_virtual,
+                device=visual_pos_masks.device, dtype=visual_pos_masks.dtype,
+            )
+            language_kwargs["visual_pos_masks"] = torch.cat([prompt_false, visual_pos_masks], dim=1)
+            language_kwargs["deepstack_visual_embeds"] = deepstack_features
+        try:
+            outputs = model.language_model(**language_kwargs)
+        except TypeError as error:
+            if "deepstack_visual_embeds" not in str(error):
+                raise
+            language_kwargs.pop("visual_pos_masks", None)
+            language_kwargs.pop("deepstack_visual_embeds", None)
+            outputs = model.language_model(**language_kwargs)
         return self.base_model.lm_head(outputs.last_hidden_state[:, -1, :]).float()
 
     def forward(
@@ -318,7 +338,7 @@ class QwenE1(nn.Module):
         masks: torch.Tensor | None = None,
         region_labels: torch.Tensor | None = None,
     ) -> E1Output:
-        features, image_embeds = self._vision_features(
+        features, image_embeds, deepstack_features = self._vision_features(
             inputs["pixel_values"], inputs["image_grid_thw"]
         )
         lowres_mask, region_logits, fused = self.decoder(features)
@@ -326,7 +346,7 @@ class QwenE1(nn.Module):
             lowres_mask, size=(448, 448), mode="bilinear", align_corners=False
         )
         virtual_prompt = self.prompt_learner(fused, lowres_mask)
-        vocabulary_logits = self._language_logits(inputs, image_embeds, virtual_prompt)
+        vocabulary_logits = self._language_logits(inputs, image_embeds, virtual_prompt, deepstack_features)
         yes = torch.logsumexp(vocabulary_logits[:, self.yes_token_ids], dim=1)
         no = torch.logsumexp(vocabulary_logits[:, self.no_token_ids], dim=1)
         anomaly_logits = yes - no

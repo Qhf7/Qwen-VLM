@@ -1,8 +1,0 @@
-{
-  "device": "NVIDIA GeForce RTX 4090 D",
-  "torch": "2.5.1+cu124",
-  "cuda": "12.4",
-  "dtype": "float16",
-  "n_parameters": 3754622976,
-  "peak_cuda_memory_gib": 7.389011859893799
-}

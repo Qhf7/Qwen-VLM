@@ -1,7 +1,0 @@
-{
-  "model": "Qwen/Qwen2.5-VL-3B-Instruct",
-  "device": "mps",
-  "dtype": "float16",
-  "best_prompt": "P0",
-  "n_parameters": 3754622976
-}
