@@ -17,7 +17,7 @@ try:
 except ModuleNotFoundError:
     from model import QwenE1
     from b0plus_protocol import P0
-    from run_dev720 import candidate_ids
+    from b0.single_view import candidate_ids
 
 
 def main() -> None:
@@ -25,6 +25,7 @@ def main() -> None:
     parser.add_argument("--model-id", default="models/Qwen2.5-VL-3B-Instruct")
     parser.add_argument("--image", type=Path, required=True)
     parser.add_argument("--out", type=Path, default=Path("artifacts/e1/e1_smoke.json"))
+    parser.add_argument("--feature-layers", default="7,15,23,31")
     args = parser.parse_args()
     seed = 20260901
     torch.manual_seed(seed)
@@ -58,10 +59,12 @@ def main() -> None:
         low_cpu_mem_usage=True,
         attn_implementation="eager",
     ).eval().to(device)
+    feature_layers = tuple(int(value) for value in args.feature_layers.split(","))
     model = QwenE1(
         base,
         yes_token_ids=candidate_ids(processor.tokenizer, "Yes"),
         no_token_ids=candidate_ids(processor.tokenizer, "No"),
+        feature_layers=feature_layers,
     ).to(device).train()
     labels = torch.zeros(1, device=device)
     masks = torch.zeros(1, 1, 448, 448, device=device)
