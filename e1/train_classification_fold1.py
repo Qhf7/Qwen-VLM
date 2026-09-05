@@ -17,7 +17,7 @@ from torch.nn.utils import clip_grad_norm_
 from torch.utils.data import DataLoader
 
 from b0.b0plus_protocol import P4_CLASSIFICATION_ONLY
-from e1.data import E1ClassificationDataset, encode_classification_examples, list_collate
+from e1.data import E1ClassificationDataset, RealClassificationDataset, encode_classification_examples, list_collate
 from e1.evaluate_classification_fold1 import (
     build_classification_model,
     evaluate_classification,
@@ -121,6 +121,7 @@ def main() -> None:
     parser.add_argument("--eval-steps", type=str)
     parser.add_argument("--skip-eval", action="store_true")
     parser.add_argument("--feature-layers", default="7,15,23,31")
+    parser.add_argument("--real-only", action="store_true")
     parser.add_argument("--num-workers", type=int, default=4)
     args = parser.parse_args()
 
@@ -157,7 +158,7 @@ def main() -> None:
         raise RuntimeError(f"fold1 train/dev contains holdout classes: {overlap}")
 
     cache_manifest = pd.read_csv(args.cache_manifest)
-    if len(cache_manifest) != len(train) or set(cache_manifest.image_path) != set(train.image_path):
+    if not args.real_only and (len(cache_manifest) != len(train) or set(cache_manifest.image_path) != set(train.image_path)):
         raise RuntimeError("train448 cache manifest does not match fold1/train")
     schedule = schedule[schedule.step.le(max_steps)].copy()
     if len(schedule) != max_steps * logical_batch_size:
@@ -169,9 +170,10 @@ def main() -> None:
     ):
         raise RuntimeError("fixed schedule no longer matches sampler_pool")
     per_step_source_counts = schedule.groupby(["step", "source_type"]).size().unstack(fill_value=0)
-    expected_sources = {"real_anomaly", "pseudo_anomaly", "normal", "hard_normal"}
-    if set(per_step_source_counts.columns) != expected_sources or not per_step_source_counts.eq(2).all().all():
-        raise RuntimeError("classification experiment must preserve the frozen 2/2/2/2 source schedule")
+    expected_sources = {"real_anomaly", "normal"} if args.real_only else {"real_anomaly", "pseudo_anomaly", "normal", "hard_normal"}
+    expected_quota = logical_batch_size // len(expected_sources)
+    if set(per_step_source_counts.columns) != expected_sources or not per_step_source_counts.eq(expected_quota).all().all():
+        raise RuntimeError("classification schedule has incorrect source quotas")
 
     active_schedule = schedule[schedule.step.le(run_until_step)]
     required_images = set(active_schedule.image_path) | (set(active_schedule.donor_path) - {""})
@@ -182,7 +184,7 @@ def main() -> None:
     feature_layers = tuple(int(value) for value in args.feature_layers.split(",") if value.strip())
     prompt_sha = hashlib.sha256(P4_CLASSIFICATION_ONLY.encode()).hexdigest()
     protocol = {
-        "protocol": "E1-stage1-classification-only-v1",
+        "protocol": "E1-stage1-classification-only-real-v1" if args.real_only else "E1-stage1-classification-only-v1",
         "causal_question": "Does removing mask and region objectives prevent classification collapse?",
         "single_variable_relative_to_original_e1": "classification objective only; no mask/region loss or mask-conditioned pooling",
         "prompt_id": "P4_CLASSIFICATION_ONLY",
@@ -191,7 +193,7 @@ def main() -> None:
         "segmentation_loss": None,
         "region_loss": None,
         "mask_targets_loaded": False,
-        "source_schedule": "unchanged 2/2/2/2 real/pseudo/normal/hard-normal",
+        "source_schedule": "balanced real_anomaly/normal views only" if args.real_only else "unchanged 2/2/2/2 real/pseudo/normal/hard-normal",
         "feature_layers": list(feature_layers),
         "train_sha256": sha256_file(args.train),
         "dev_sha256": sha256_file(args.dev),
@@ -262,7 +264,8 @@ def main() -> None:
         best_macro_aupr = float(state["best_macro_aupr"])
         best_step = int(state["best_step"])
 
-    dataset = E1ClassificationDataset(pool, args.cache_root, global_seed=seed)
+    dataset_cls = RealClassificationDataset if args.real_only else E1ClassificationDataset
+    dataset = dataset_cls(pool, args.cache_root, global_seed=seed)
     batches = [
         part.sort_values("batch_position").dataset_index.astype(int).tolist()
         for _, part in schedule.groupby("step", sort=True)
@@ -408,4 +411,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

@@ -156,6 +156,30 @@ class E1ClassificationDataset(E1TrainingDataset):
         }
 
 
+class RealClassificationDataset(E1ClassificationDataset):
+    """Classification dataset using only original real views."""
+
+    def __getitem__(self, index: int) -> dict:
+        row = self.pool.iloc[int(index)]
+        image_path = str(row.image_path)
+        source_type = str(row.source_type)
+        image = read_rgb(self.cache_root / image_path)
+        if source_type == "real_anomaly":
+            label = 1.0
+        elif source_type == "normal":
+            label = 0.0
+        else:
+            raise ValueError(f"real-only schedule contains {source_type}")
+        return {
+            "image": image,
+            "sample_label": label,
+            "pool_index": int(row.pool_index),
+            "source_type": source_type,
+            "class_name": str(row.class_name),
+            "image_path": image_path,
+        }
+
+
 def list_collate(examples: list[dict]) -> list[dict]:
     return examples
 
