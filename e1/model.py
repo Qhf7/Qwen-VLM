@@ -208,14 +208,16 @@ class QwenE1(nn.Module):
         # already ordered patch tokens after spatial merging.
         if not hasattr(visual, "window_size"):
             maps = []
-            merge = int(getattr(visual, "spatial_merge_size", 2))
             offset = 0
             for shape in grid_thw.tolist():
                 temporal, height, width = (int(value) for value in shape)
-                count = temporal * (height // merge) * (width // merge)
+                # Hooks on Qwen3 blocks see the pre-merger sequence. The merger
+                # is only for the frozen LLM image tokens; decoder keeps the
+                # full HxW patch map so no spatial information is discarded.
+                count = temporal * height * width
                 part = hidden[offset:offset + count]
                 offset += count
-                feature = part.reshape(temporal, height // merge, width // merge, -1).mean(0)
+                feature = part.reshape(temporal, height, width, -1).mean(0)
                 maps.append(feature.permute(2, 0, 1).contiguous())
             return torch.stack(maps)
         window_index, _ = get_vision_window_index(

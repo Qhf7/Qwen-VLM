@@ -16,7 +16,7 @@ from sklearn.metrics import average_precision_score, precision_recall_curve, roc
 from transformers import AutoModelForImageTextToText, AutoProcessor
 
 from b0.b0plus_protocol import P4_CLASSIFICATION_ONLY
-from b0.run_dev720 import candidate_ids
+from b0.single_view import candidate_ids
 from e1.classification_model import QwenE1Classification
 
 
@@ -265,4 +265,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

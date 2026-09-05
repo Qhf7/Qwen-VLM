@@ -12,7 +12,7 @@ from transformers import AutoModelForImageTextToText, AutoProcessor
 
 try:
     from b0.b0plus_protocol import P0
-    from b0.run_dev720 import candidate_ids
+    from b0.single_view import candidate_ids
     from e1.model import QwenE1
 except ModuleNotFoundError:
     from model import QwenE1
