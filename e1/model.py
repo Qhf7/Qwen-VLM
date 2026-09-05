@@ -204,6 +204,20 @@ class QwenE1(nn.Module):
 
     def _restore_spatial(self, hidden: torch.Tensor, grid_thw: torch.Tensor) -> torch.Tensor:
         visual = self.visual
+        # Qwen3-VL has no sliding-window vision attention. Its block outputs are
+        # already ordered patch tokens after spatial merging.
+        if not hasattr(visual, "window_size"):
+            maps = []
+            merge = int(getattr(visual, "spatial_merge_size", 2))
+            offset = 0
+            for shape in grid_thw.tolist():
+                temporal, height, width = (int(value) for value in shape)
+                count = temporal * (height // merge) * (width // merge)
+                part = hidden[offset:offset + count]
+                offset += count
+                feature = part.reshape(temporal, height // merge, width // merge, -1).mean(0)
+                maps.append(feature.permute(2, 0, 1).contiguous())
+            return torch.stack(maps)
         window_index, _ = get_vision_window_index(
             grid_thw,
             spatial_merge_size=visual.spatial_merge_size,
