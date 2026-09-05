@@ -272,7 +272,7 @@ class QwenE1(nn.Module):
         embeddings = embeddings.masked_scatter(
             image_mask, image_embeds.to(embeddings.device, embeddings.dtype)
         )
-        position_ids = model.compute_3d_position_ids(
+        position_kwargs = dict(
             input_ids=input_ids,
             image_grid_thw=inputs["image_grid_thw"],
             video_grid_thw=None,
@@ -282,6 +282,13 @@ class QwenE1(nn.Module):
             second_per_grid_ts=None,
             mm_token_type_ids=inputs.get("mm_token_type_ids"),
         )
+        try:
+            position_ids = model.compute_3d_position_ids(**position_kwargs)
+        except TypeError as error:
+            if "second_per_grid_ts" not in str(error):
+                raise
+            position_kwargs.pop("second_per_grid_ts")
+            position_ids = model.compute_3d_position_ids(**position_kwargs)
         if position_ids is None:
             raise RuntimeError("processor 未提供构造 Qwen MRoPE 所需的 mm_token_type_ids")
         n_virtual = virtual_prompt.shape[1]
