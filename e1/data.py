@@ -159,6 +159,12 @@ class E1ClassificationDataset(E1TrainingDataset):
 class RealClassificationDataset(E1ClassificationDataset):
     """Classification dataset using only original real views."""
 
+    def __init__(self, pool: pd.DataFrame, cache_root: Path, global_seed: int = 20260901) -> None:
+        self.pool = pool.reset_index(drop=True).copy()
+        self.cache_root = Path(cache_root)
+        self.global_seed = int(global_seed)
+        self.epoch = 0
+
     def __getitem__(self, index: int) -> dict:
         row = self.pool.iloc[int(index)]
         image_path = str(row.image_path)
