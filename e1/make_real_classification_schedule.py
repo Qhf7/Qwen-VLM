@@ -14,7 +14,7 @@ def main():
     for source,part in pools.items():
         parts=[]
         for cls,g in part.groupby('class_name',sort=True):
-            vals=g.index.to_numpy(); rng.shuffle(vals); parts.extend(vals.tolist())
+            vals=g.index.to_numpy().copy(); rng.shuffle(vals); parts.extend(vals.tolist())
         pools[source]=df.loc[parts].reset_index(drop=True)
     for step in range(1,args.steps+1):
         for pos,source in enumerate(['real_anomaly']*(args.batch_size//2)+['normal']*(args.batch_size//2)):
