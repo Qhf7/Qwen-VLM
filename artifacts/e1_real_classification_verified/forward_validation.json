@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "precision": "bfloat16",
+  "examples": [
+    {
+      "view_label": 0,
+      "image_path": "3_adapter/NG/OilStain/S0001/3_adapter__0001_NG_Oil_Stain_C5_20240530112352354.png",
+      "loss": 5.753177642822266,
+      "p_yes": 0.9968273043632507,
+      "native_max_abs_difference": 0.0,
+      "gradient_norm": {
+        "decoder": 100.7697811614978,
+        "prompt": 71.3260173640814
+      }
+    },
+    {
+      "view_label": 1,
+      "image_path": "3_adapter/NG/FiberorBurrs/S0001/3_adapter__0001_NG_FiberorBurrs_C2_20240530131316716.png",
+      "loss": 0.3868710398674011,
+      "p_yes": 0.6791787147521973,
+      "native_max_abs_difference": 0.0,
+      "gradient_norm": {
+        "decoder": 24.991019824902192,
+        "prompt": 17.06772831052376
+      }
+    }
+  ]
+}

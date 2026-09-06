@@ -64,25 +64,5 @@ PROMPTS = {
     "P4_CLASSIFICATION_ONLY": P4_CLASSIFICATION_ONLY,
 }
 
-SELECTION_RULE = (
-    "Use 5-view max on smoke20. Sort descending by sample AUROC, then sample AUPR, "
-    "then macro class AUROC; break an exact tie by prompt id ascending."
-)
-SELECTION_KEYS = ("sample_auroc", "sample_aupr", "macro_class_auroc")
-
-AGGREGATIONS = ("max", "top2_mean", "mean")
 FORWARD_GENERATE_ATOL = 1e-5
 BATCH_SINGLE_ATOL = 5e-4
-
-FIVE_CROPS = (
-    "global",
-    "top-left",
-    "top-right",
-    "bottom-left",
-    "bottom-right",
-)
-FIVE_CROP_DEFINITION = (
-    "One direct-resized global image plus the four non-overlapping native-image quadrants; "
-    "each crop is independently resized to 448x448 with INTER_AREA. A view score is the "
-    "maximum P(Yes) over five crops; a sample score remains max over five views."
-)

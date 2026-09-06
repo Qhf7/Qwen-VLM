@@ -32,8 +32,21 @@ def main() -> None:
         raise RuntimeError("a positive training view is missing its mask")
 
     existing = pd.read_csv(args.manifest) if args.manifest.is_file() else pd.DataFrame()
-    done = set(existing.image_path) if len(existing) else set()
-    records = existing.to_dict("records") if len(existing) else []
+    # A manifest can survive an interrupted/partial cache build.  Treat a row
+    # as complete only when its cached image exists (and, for positive views,
+    # the cached mask exists too); otherwise rebuild it.
+    records = []
+    done = set()
+    if len(existing):
+        for rec in existing.to_dict("records"):
+            image_ok = (args.cache_root / rec["image_path"]).is_file()
+            mask_ok = True
+            if int(rec.get("view_label", 0)) == 1:
+                mask_path = rec.get("mask_path", "")
+                mask_ok = bool(mask_path) and (args.cache_root / mask_path).is_file()
+            if image_ok and mask_ok:
+                records.append(rec)
+                done.add(rec["image_path"])
     for index, row in enumerate(train.to_dict("records"), 1):
         if row["image_path"] in done:
             continue

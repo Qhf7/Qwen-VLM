@@ -158,8 +158,21 @@ def main() -> None:
         raise RuntimeError(f"fold1 train/dev contains holdout classes: {overlap}")
 
     cache_manifest = pd.read_csv(args.cache_manifest)
-    if not args.real_only and (len(cache_manifest) != len(train) or set(cache_manifest.image_path) != set(train.image_path)):
+    if len(cache_manifest) != len(train) or set(cache_manifest.image_path) != set(train.image_path):
         raise RuntimeError("train448 cache manifest does not match fold1/train")
+    if args.real_only:
+        if len(pool) != len(train) or set(pool.image_path) != set(train.image_path):
+            raise RuntimeError('Real training pool must cover the full training split')
+        targets=train.set_index('image_path').view_label
+        if not pool.view_label.eq(pool.image_path.map(targets)).all():
+            raise RuntimeError('Pool labels do not match per-image train labels')
+        source_labels=pool.source_type.map({'real_anomaly':1,'normal':0})
+        if not source_labels.eq(pool.view_label).all():
+            raise RuntimeError('Source type disagrees with view_label')
+        for frame, root in ((train,args.cache_root),(dev,args.dev_cache_root)):
+            missing=[p for p in frame.image_path if not (root/p).is_file()]
+            if missing:
+                raise RuntimeError(f'Incomplete cache {root}: {len(missing)} missing images')
     schedule = schedule[schedule.step.le(max_steps)].copy()
     if len(schedule) != max_steps * logical_batch_size:
         raise RuntimeError("fixed schedule does not cover every requested step")
@@ -373,8 +386,8 @@ def main() -> None:
             print(
                 f"[classification dev] step={step} macro_aupr={macro_aupr:.4f} "
                 f"macro_f1={metrics['macro_f1max']:.4f} "
-                f"small_recall={metrics['small_defect_recall']:.4f} "
-                f"score_std={metrics['score_diagnostics']['sample_std']:.6f}",
+                f"small_recall={metrics['small_defect_recall']} "
+                f"score_std={metrics['score_diagnostics']['view_std']:.6f}",
                 flush=True,
             )
             if macro_aupr > best_macro_aupr:

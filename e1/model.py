@@ -217,8 +217,14 @@ class QwenE1(nn.Module):
                 count = temporal * height * width
                 part = hidden[offset:offset + count]
                 offset += count
-                feature = part.reshape(temporal, height, width, -1).mean(0)
+                merge = visual.spatial_merge_size
+                feature = part.reshape(temporal, height // merge, width // merge,
+                                       merge, merge, -1)
+                feature = feature.permute(0, 1, 3, 2, 4, 5).reshape(
+                    temporal, height, width, -1).mean(0)
                 maps.append(feature.permute(2, 0, 1).contiguous())
+            if offset != len(hidden):
+                raise ValueError('Vision patch count does not match image_grid_thw')
             return torch.stack(maps)
         window_index, _ = get_vision_window_index(
             grid_thw,
@@ -321,14 +327,7 @@ class QwenE1(nn.Module):
             )
             language_kwargs["visual_pos_masks"] = torch.cat([prompt_false, visual_pos_masks], dim=1)
             language_kwargs["deepstack_visual_embeds"] = deepstack_features
-        try:
-            outputs = model.language_model(**language_kwargs)
-        except TypeError as error:
-            if "deepstack_visual_embeds" not in str(error):
-                raise
-            language_kwargs.pop("visual_pos_masks", None)
-            language_kwargs.pop("deepstack_visual_embeds", None)
-            outputs = model.language_model(**language_kwargs)
+        outputs = model.language_model(**language_kwargs)
         return self.base_model.lm_head(outputs.last_hidden_state[:, -1, :]).float()
 
     def forward(

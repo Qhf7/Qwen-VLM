@@ -12,7 +12,8 @@ import numpy as np
 import pandas as pd
 import torch
 from PIL import Image
-from sklearn.metrics import average_precision_score, precision_recall_curve, roc_auc_score
+from sklearn.metrics import (average_precision_score, precision_recall_curve, roc_auc_score,
+                            accuracy_score, precision_score, recall_score, f1_score, confusion_matrix)
 from transformers import AutoModelForImageTextToText, AutoProcessor
 
 from b0.b0plus_protocol import P4_CLASSIFICATION_ONLY
@@ -43,7 +44,15 @@ def f1max_threshold(labels: np.ndarray, scores: np.ndarray) -> tuple[float, floa
 
 def binary_metrics(labels: np.ndarray, scores: np.ndarray) -> dict[str, float]:
     f1, threshold = f1max_threshold(labels, scores)
+    predicted = scores >= 0.5
+    tn, fp, fn, tp = confusion_matrix(labels, predicted, labels=[0, 1]).ravel()
     return {
+        "accuracy": float(accuracy_score(labels, predicted)),
+        "precision": float(precision_score(labels, predicted, zero_division=0)),
+        "recall": float(recall_score(labels, predicted, zero_division=0)),
+        "f1": float(f1_score(labels, predicted, zero_division=0)),
+        "threshold": 0.5,
+        "tn": int(tn), "fp": int(fp), "fn": int(fn), "tp": int(tp),
         "auroc": float(roc_auc_score(labels, scores)),
         "aupr": float(average_precision_score(labels, scores)),
         "f1max": f1,
@@ -52,51 +61,46 @@ def binary_metrics(labels: np.ndarray, scores: np.ndarray) -> dict[str, float]:
 
 
 def summarize(views: pd.DataFrame) -> tuple[dict, pd.DataFrame, pd.DataFrame]:
-    samples = (
-        views.groupby(["class_name", "group_path"], as_index=False)
-        .agg(
-            sample_label=("sample_label", "first"),
-            score=("p_yes", "max"),
-            max_defect_ratio=("defect_ratio", "max"),
-        )
-        .sort_values(["class_name", "group_path"], kind="mergesort")
-    )
-    overall = binary_metrics(samples.sample_label.to_numpy(), samples.score.to_numpy())
+    if views.image_path.duplicated().any() or not views.view_label.isin([0, 1]).all():
+        raise ValueError("Every evaluation row must be a unique image with a binary view label")
+    overall = binary_metrics(views.view_label.to_numpy(), views.p_yes.to_numpy())
     class_rows = []
-    for class_name, part in samples.groupby("class_name", sort=True):
+    for class_name, part in views.groupby("class_name", sort=True):
         class_rows.append({
             "class_name": class_name,
-            **binary_metrics(part.sample_label.to_numpy(), part.score.to_numpy()),
-            "n_samples": len(part),
-            "n_ok": int(part.sample_label.eq(0).sum()),
-            "n_ng": int(part.sample_label.eq(1).sum()),
+            **binary_metrics(part.view_label.to_numpy(), part.p_yes.to_numpy()),
+            "n_views": len(part),
+            "n_ok": int(part.view_label.eq(0).sum()),
+            "n_ng": int(part.view_label.eq(1).sum()),
         })
     per_class = pd.DataFrame(class_rows)
     threshold = overall["f1max_threshold"]
-    small = samples[samples.sample_label.eq(1) & samples.max_defect_ratio.le(0.01)]
-    ok = samples[samples.sample_label.eq(0)].score
-    ng = samples[samples.sample_label.eq(1)].score
+    small = views[views.view_label.eq(1) & views.defect_ratio.gt(0) & views.defect_ratio.le(0.01)]
+    ok = views[views.view_label.eq(0)].p_yes
+    ng = views[views.view_label.eq(1)].p_yes
     result = {
         "task": "image-level classification only",
-        "aggregation": "max over five views",
+        "evaluation_unit": "single image",
+        "target": "view_label",
         "overall": overall,
         "macro_auroc": float(per_class.auroc.mean()),
         "macro_aupr": float(per_class.aupr.mean()),
         "macro_f1max": float(per_class.f1max.mean()),
         "small_defect_n": len(small),
-        "small_defect_recall": float((small.score >= threshold).mean()),
+        "small_defect_recall": float((small.p_yes >= 0.5).mean()) if len(small) else None,
+        "small_defect_recall_at_f1max": float((small.p_yes >= threshold).mean()) if len(small) else None,
         "score_diagnostics": {
             "view_std": float(views.p_yes.std(ddof=0)),
-            "sample_std": float(samples.score.std(ddof=0)),
             "ok_mean": float(ok.mean()),
             "ok_median": float(ok.median()),
             "ng_mean": float(ng.mean()),
             "ng_median": float(ng.median()),
             "median_separation_ng_minus_ok": float(ng.median() - ok.median()),
-            "sample_positive_rate_at_f1max": float((samples.score >= threshold).mean()),
+            "positive_rate_at_0_5": float((views.p_yes >= 0.5).mean()),
+            "positive_rate_at_f1max": float((views.p_yes >= threshold).mean()),
         },
     }
-    return result, samples, per_class
+    return result, views, per_class
 
 
 def encode(processor, image: Image.Image, device: torch.device) -> dict[str, torch.Tensor]:
@@ -181,9 +185,8 @@ def evaluate_classification(
             or views.class_name.nunique() != EXPECTED_CLASSES
         ):
             raise RuntimeError("classification evaluation is not complete Dev720")
-        metrics, samples, per_class = summarize(views)
+        metrics, _, per_class = summarize(views)
         result.update(metrics)
-        samples.to_csv(out_dir / f"{tag}_samples.csv", index=False)
         per_class.to_csv(out_dir / f"{tag}_per_class.csv", index=False)
     (out_dir / f"{tag}_metrics.json").write_text(
         json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8"

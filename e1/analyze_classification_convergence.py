@@ -23,7 +23,7 @@ def main() -> None:
             "macro_aupr": metrics["macro_aupr"],
             "macro_f1max": metrics["macro_f1max"],
             "small_defect_recall": metrics["small_defect_recall"],
-            "sample_score_std": metrics["score_diagnostics"]["sample_std"],
+            "view_score_std": metrics["score_diagnostics"]["view_std"],
             "ok_median": metrics["score_diagnostics"]["ok_median"],
             "ng_median": metrics["score_diagnostics"]["ng_median"],
             "median_separation": metrics["score_diagnostics"]["median_separation_ng_minus_ok"],
@@ -31,7 +31,7 @@ def main() -> None:
     frame = pd.DataFrame(rows).sort_values("step")
     if len(frame) != 4 or frame.step.tolist() != [250, 500, 750, 1000]:
         raise RuntimeError("expected complete step250/500/750/1000 classification evaluations")
-    frame["constant_score_collapse"] = frame.sample_score_std.lt(1e-3)
+    frame["constant_score_collapse"] = frame.view_score_std.lt(1e-3)
     frame["near_random_ranking"] = frame.macro_aupr.le(0.55)
     best_index = frame.macro_aupr.idxmax()
     best_step = int(frame.loc[best_index, "step"])
@@ -47,8 +47,8 @@ def main() -> None:
         "constant_score_collapse_any_checkpoint": bool(frame.constant_score_collapse.any()),
         "near_random_ranking_any_checkpoint": bool(frame.near_random_ranking.any()),
         "collapse_rules_preregistered": {
-            "constant_score": "sample score std < 0.001",
-            "near_random_ranking": "macro AUPR <= 0.55 on balanced per-class Dev",
+            "constant_score": "view score std < 0.001 (diagnostic flag)",
+            "near_random_ranking": "macro AUPR <= 0.55 (heuristic warning; not a statistical test)",
             "late_metric": "best step is before 1000 and macro AUPR drops >= 0.05 by step1000",
         },
     }
@@ -66,7 +66,7 @@ def main() -> None:
         lines.append(
             f"| {row.step} | {row.macro_auroc:.4f} | {row.macro_aupr:.4f} | "
             f"{row.macro_f1max:.4f} | {row.small_defect_recall:.4f} | "
-            f"{row.sample_score_std:.6f} | {row.ok_median:.6f} | {row.ng_median:.6f} | "
+            f"{row.view_score_std:.6f} | {row.ok_median:.6f} | {row.ng_median:.6f} | "
             f"{row.median_separation:.6f} | {row.constant_score_collapse} | {row.near_random_ranking} |"
         )
     lines += ["", "```json", json.dumps(verdict, ensure_ascii=False, indent=2), "```", ""]
@@ -79,4 +79,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
