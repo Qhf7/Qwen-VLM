@@ -385,6 +385,20 @@ class QwenE1(nn.Module):
             predicted_area=(torch.sigmoid(mask_logits) >= 0.5).float().mean().detach(),
         )
 
+    def segmentation_only(self, inputs: dict[str, torch.Tensor], masks: torch.Tensor) -> E1Output:
+        """Use frozen visual features and a supervised mask decoder only."""
+        if tuple(masks.shape[-2:]) != (448, 448) or not (masks.flatten(1).sum(1) > 0).all():
+            raise ValueError('Segmentation training requires nonempty 448x448 anomaly masks')
+        features, _, _ = self._vision_features(inputs["pixel_values"], inputs["image_grid_thw"])
+        lowres, region, _ = self.decoder(features)
+        logits = F.interpolate(lowres, size=(448, 448), mode="bilinear", align_corners=False)
+        loss, focal, dice, n, e = segmentation_loss_components(logits, masks, dice_nonempty_only=True)
+        return E1Output(anomaly_logits=logits.flatten(1).mean(1), mask_logits=logits,
+                        region_logits=region, loss=loss, segmentation_loss=loss,
+                        focal_loss=focal, dice_loss=dice, dice_nonempty_count=n,
+                        dice_empty_count=e, mask_probability_mean=torch.sigmoid(logits).mean(),
+                        predicted_area=(torch.sigmoid(logits)>=0.5).float().mean())
+
     def trainable_parameter_summary(self) -> dict[str, int]:
         result = {"decoder": 0, "prompt_learner": 0, "base_model": 0}
         for name, parameter in self.named_parameters():
