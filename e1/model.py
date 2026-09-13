@@ -74,7 +74,7 @@ class PatchDecoder(nn.Module):
         if len(features) != len(self.projections):
             raise ValueError("vision feature 数量与 decoder projection 不一致")
         fused = torch.cat(
-            [projection(feature) for projection, feature in zip(self.projections, features)], dim=1
+            [projection(feature.float()) for projection, feature in zip(self.projections, features)], dim=1
         )
         fused = self.fusion(fused)
         return self.mask_head(fused), self.region_head(fused), fused
@@ -163,7 +163,7 @@ class QwenE1(nn.Module):
         yes_token_ids: list[int],
         no_token_ids: list[int],
         feature_layers: tuple[int, ...] = (7, 15, 23, 31),
-        decoder_channels: int = 256,
+        decoder_channels: int = 288,
         n_virtual_tokens: int = 4,
         lambda_seg: float = 0.2,
         lambda_region: float = 0.1,

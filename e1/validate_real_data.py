@@ -15,6 +15,8 @@ def main():
     p.add_argument('--pool-dir',type=Path,required=True)
     p.add_argument('--train',type=Path,default=Path('artifacts/splits/fold1/train.parquet'))
     p.add_argument('--dev',type=Path,default=Path('artifacts/splits/fold1/dev.parquet'))
+    p.add_argument('--expected-steps',type=int)
+    p.add_argument('--check-steps',default='250,500,750,1000,1500,2000,2500,3000')
     args=p.parse_args()
     train=pd.read_parquet(args.train); dev=pd.read_parquet(args.dev)
     manifest=pd.read_csv(args.manifest)
@@ -28,13 +30,20 @@ def main():
     assert not set(train.visual_group_id)&set(dev.visual_group_id)
     assert pool.view_label.eq(pool.image_path.map(train.set_index('image_path').view_label)).all()
     assert pool.source_type.map({'normal':0,'real_anomaly':1}).eq(pool.view_label).all()
-    assert len(schedule)==8000 and set(schedule.step)==set(range(1,1001))
+    max_step=int(schedule.step.max())
+    if args.expected_steps is not None:
+        assert max_step==args.expected_steps
+    assert len(schedule)==max_step*8 and set(schedule.step)==set(range(1,max_step+1))
     assert schedule.groupby(['step','source_type']).size().eq(4).all()
     expected=pool.iloc[schedule.dataset_index].reset_index(drop=True)
     assert expected.image_path.eq(schedule.image_path).all()
     assert expected.source_type.eq(schedule.source_type).all()
     checks=[]
-    for step in (250,500,750,1000):
+    check_steps=[int(value) for value in args.check_steps.split(',') if value]
+    check_steps=sorted(set(step for step in check_steps if step<=max_step))
+    if max_step not in check_steps:
+        check_steps.append(max_step)
+    for step in check_steps:
         part=expected[schedule.step<=step]
         counts=part.groupby(['source_type','class_name']).size()
         assert len(counts)==36 and counts.max()-counts.min()<=1
@@ -46,7 +55,7 @@ def main():
             pixels=np.asarray(image.convert('RGB'))
             assert hashlib.sha256(pixels.tobytes()).hexdigest()==row.image_pixel_sha256,row.image_path
     report=dict(passed=True,train_images=len(train),normal=int(train.view_label.eq(0).sum()),
-                anomaly=int(train.view_label.eq(1).sum()),classes=18,steps=checks,
+                anomaly=int(train.view_label.eq(1).sum()),classes=18,max_steps=max_step,steps=checks,
                 cached_image_hashes_verified=len(manifest),group_overlap=0,visual_group_overlap=0)
     (args.pool_dir/'data_validation.json').write_text(json.dumps(report,indent=2))
     print(json.dumps(report,indent=2),flush=True)

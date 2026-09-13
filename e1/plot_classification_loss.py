@@ -25,15 +25,26 @@ def main():
     axes[0].plot(steps[width-1:], smooth(loss), color="#1859a0", lw=2.3, label=f"Trailing {width}-step mean")
     axes[0].axhline(np.log(2), color="#777777", ls=":", label="BCE at p=0.5")
     axes[0].set(title="Classification-only E1: training loss", ylabel="BCE loss")
-    for source, label in [("real_anomaly", "Real anomaly"), ("pseudo_anomaly", "Pseudo anomaly"), ("normal", "Normal"), ("hard_normal", "Hard normal")]:
-        values = [float(row[f"source_{source}_loss_mean"]) for row in rows]
+    source_columns = sorted(
+        key for key in rows[0]
+        if key.startswith("source_") and key.endswith("_loss_mean")
+    )
+    for key in source_columns:
+        source = key.removeprefix("source_").removesuffix("_loss_mean")
+        label = source.replace("_", " ").title()
+        values = [float(row[key]) for row in rows]
         axes[1].plot(steps[width-1:], smooth(values), label=label)
         print(f"{label}: last 100 steps mean BCE = {np.mean(values[-100:]):.6f}")
     axes[1].set(title="Loss by training source (trailing 50-step mean)", ylabel="BCE loss")
     metrics = [json.loads(path.read_text()) for path in sorted(args.run_dir.glob("step*_metrics.json"))]
-    for key, label in [("macro_aupr", "Macro I-AUPR"), ("macro_f1max", "Macro F1max"), ("small_defect_recall", "Small-defect recall*")]:
+    for key, label in [
+        ("macro_aupr", "Macro I-AUPR"),
+        ("macro_f1max", "Macro F1max"),
+        ("small_defect_recall", "Small-defect recall @ 0.5"),
+        ("small_defect_recall_at_f1max", "Small-defect recall @ F1max threshold"),
+    ]:
         axes[2].plot([int(m["tag"].replace("step", "")) for m in metrics], [m[key] for m in metrics], marker="o", label=label)
-    axes[2].set(title="Dev: 720 groups / 3600 views (*checkpoint-specific F1max threshold)", ylabel="Metric", ylim=(0.45, 1.04))
+    axes[2].set(title="Single-image Dev evaluation: 3600 views", ylabel="Metric", ylim=(0.0, 1.04))
     for axis in axes:
         axis.set_xlabel("Optimizer step")
         axis.grid(alpha=0.18)

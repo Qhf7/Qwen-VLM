@@ -73,7 +73,7 @@ def save_checkpoint(
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--model-id", default="models/Qwen2.5-VL-3B-Instruct")
+    parser.add_argument("--model-id", default="models/Qwen3-VL-2B-Instruct")
     parser.add_argument("--config", type=Path, default=Path("e1/config.json"))
     parser.add_argument("--train", type=Path, default=Path("artifacts/splits/fold1/train.parquet"))
     parser.add_argument("--dev", type=Path, default=Path("artifacts/splits/fold1/dev.parquet"))
@@ -103,7 +103,7 @@ def main() -> None:
     parser.add_argument(
         "--feature-layers",
         type=str,
-        default="7,15,23,31",
+        default="5,11,17",
         help="comma-separated visual block indices for decoder features",
     )
     parser.add_argument("--num-workers", type=int, default=4)

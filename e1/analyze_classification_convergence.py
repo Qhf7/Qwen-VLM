@@ -29,27 +29,29 @@ def main() -> None:
             "median_separation": metrics["score_diagnostics"]["median_separation_ng_minus_ok"],
         })
     frame = pd.DataFrame(rows).sort_values("step")
-    if len(frame) != 4 or frame.step.tolist() != [250, 500, 750, 1000]:
-        raise RuntimeError("expected complete step250/500/750/1000 classification evaluations")
+    if frame.empty or frame.step.duplicated().any() or not frame.step.is_monotonic_increasing:
+        raise RuntimeError("expected one or more ordered classification evaluations")
     frame["constant_score_collapse"] = frame.view_score_std.lt(1e-3)
     frame["near_random_ranking"] = frame.macro_aupr.le(0.55)
     best_index = frame.macro_aupr.idxmax()
     best_step = int(frame.loc[best_index, "step"])
     best_aupr = float(frame.loc[best_index, "macro_aupr"])
     final_aupr = float(frame.iloc[-1].macro_aupr)
+    final_step = int(frame.iloc[-1].step)
     late_drop = best_aupr - final_aupr
     verdict = {
         "best_step": best_step,
         "best_macro_aupr": best_aupr,
         "final_macro_aupr": final_aupr,
         "best_to_final_drop": late_drop,
-        "late_metric_collapse": bool(best_step < 1000 and late_drop >= 0.05),
+        "final_step": final_step,
+        "late_metric_collapse": bool(best_step < final_step and late_drop >= 0.05),
         "constant_score_collapse_any_checkpoint": bool(frame.constant_score_collapse.any()),
         "near_random_ranking_any_checkpoint": bool(frame.near_random_ranking.any()),
         "collapse_rules_preregistered": {
             "constant_score": "view score std < 0.001 (diagnostic flag)",
             "near_random_ranking": "macro AUPR <= 0.55 (heuristic warning; not a statistical test)",
-            "late_metric": "best step is before 1000 and macro AUPR drops >= 0.05 by step1000",
+            "late_metric": "best checkpoint is before the final checkpoint and macro AUPR drops >= 0.05 by the final checkpoint",
         },
     }
     frame.to_csv(args.run_dir / "classification_convergence.csv", index=False)
