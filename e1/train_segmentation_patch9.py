@@ -194,8 +194,8 @@ def validate(model, processor, row, root: Path, gt_root: Path, out: Path) -> dic
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--model-id", default="models/Qwen3-VL-2B-Instruct")
-    parser.add_argument("--train", type=Path, default=Path("artifacts/segmentation_real_anomaly/train.parquet"))
-    parser.add_argument("--dev", type=Path, default=Path("artifacts/segmentation_real_anomaly/dev.parquet"))
+    parser.add_argument("--train", type=Path, default=Path("artifacts/splits/fold1/train.parquet"))
+    parser.add_argument("--dev", type=Path, default=Path("artifacts/splits/fold1/dev.parquet"))
     parser.add_argument("--root", type=Path, default=Path("Dataset"))
     parser.add_argument("--gt-root", type=Path, default=Path("Dataset"))
     parser.add_argument("--out", type=Path, default=Path("artifacts/segmentation_qwen3_patch9_12000"))
@@ -211,7 +211,8 @@ def main() -> None:
     report = audit(train, dev, args.root, args.gt_root)
     write_json(args.out / "data_validation.json", report)
     model, processor, layers = build_model(args.model_id)
-    forward = validate(model, processor, train.iloc[0], args.root, args.gt_root, args.out / "forward_validation.json")
+    validation_row = train[train.view_label.eq(1)].iloc[0]
+    forward = validate(model, processor, validation_row, args.root, args.gt_root, args.out / "forward_validation.json")
     print(json.dumps({"data": report, "forward": forward}, ensure_ascii=False, indent=2), flush=True)
     if args.validate_only:
         return
@@ -223,7 +224,7 @@ def main() -> None:
         "experiment": "segmentation_qwen3_patch9_12000", "model": args.model_id,
         "feature_layers": list(layers), "decoder_channels": 288, "seed": seed,
         "steps": args.steps, "evaluation_steps": list(EVAL_STEPS),
-        "input": "anomaly: full image + positive 3x3 patch; normal: full image + empty mask",
+        "input": "anomaly: full image + positive 3x3 patch; normal: full image + empty mask; balanced 4/4 examples",
         "patch_window_fraction": 0.4, "patch_stride_fraction": 0.3,
         "loss": "existing focal(gamma=2,positive_alpha=0.25)+soft_Dice; empty masks allowed",
         "classification": "unchanged; classifier checkpoint is not touched",
