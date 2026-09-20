@@ -385,7 +385,8 @@ class QwenE1(nn.Module):
             predicted_area=(torch.sigmoid(mask_logits) >= 0.5).float().mean().detach(),
         )
 
-    def segmentation_only(self, inputs: dict[str, torch.Tensor], masks: torch.Tensor, allow_empty: bool = False) -> E1Output:
+    def segmentation_only(self, inputs: dict[str, torch.Tensor], masks: torch.Tensor, allow_empty: bool = False,
+                          dice_nonempty_only: bool | None = None) -> E1Output:
         """Use frozen visual features and a supervised mask decoder only."""
         if tuple(masks.shape[-2:]) != (448, 448):
             raise ValueError('Segmentation training requires 448x448 masks')
@@ -394,7 +395,10 @@ class QwenE1(nn.Module):
         features, _, _ = self._vision_features(inputs["pixel_values"], inputs["image_grid_thw"])
         lowres, region, _ = self.decoder(features)
         logits = F.interpolate(lowres, size=(448, 448), mode="bilinear", align_corners=False)
-        loss, focal, dice, n, e = segmentation_loss_components(logits, masks, dice_nonempty_only=not allow_empty)
+        # Keep existing callers compatible; Patch9 explicitly specifies the
+        # reduction policy independently of whether empty targets are accepted.
+        dice_policy = not allow_empty if dice_nonempty_only is None else dice_nonempty_only
+        loss, focal, dice, n, e = segmentation_loss_components(logits, masks, dice_nonempty_only=dice_policy)
         return E1Output(anomaly_logits=logits.flatten(1).mean(1), mask_logits=logits,
                         region_logits=region, loss=loss, segmentation_loss=loss,
                         focal_loss=focal, dice_loss=dice, dice_nonempty_count=n,
