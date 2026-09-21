@@ -1,0 +1,20 @@
+{
+  "train": {
+    "rows": 18775,
+    "classes": 18,
+    "positive_patch_min": 0,
+    "positive_patch_max": 9,
+    "positive_patch_mean": 3.031531291611185,
+    "empty_mask_rows": 2993,
+    "all_positive_patch_anomaly_rows": 153
+  },
+  "dev": {
+    "rows": 3600,
+    "classes": 18,
+    "positive_patch_min": 0,
+    "positive_patch_max": 9,
+    "positive_patch_mean": 1.7552777777777777,
+    "empty_mask_rows": 1825,
+    "all_positive_patch_anomaly_rows": 10
+  }
+}

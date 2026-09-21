@@ -32,6 +32,12 @@ artifacts/**
 !artifacts/e1/*.json
 !artifacts/e1_fold1/
 !artifacts/e1_fold1/*.json
+!artifacts/segmentation_qwen3_patch9_mixed_v3_12000/
+!artifacts/segmentation_qwen3_patch9_mixed_v3_12000/*.csv
+!artifacts/segmentation_qwen3_patch9_mixed_v3_12000/*.json
+!artifacts/segmentation_qwen3_patch9_mixed_v3_12000/*.html
+!artifacts/segmentation_qwen3_patch9_mixed_v3_12000/*.md
+!artifacts/segmentation_qwen3_patch9_mixed_v3_12000/*.py
 
 # Python
 __pycache__/
