@@ -13,6 +13,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 import torch
+import torch.nn.functional as F
 from torch.nn.utils import clip_grad_norm_
 from torch.utils.data import DataLoader
 
@@ -122,8 +123,15 @@ def main() -> None:
     parser.add_argument("--skip-eval", action="store_true")
     parser.add_argument("--feature-layers", default="7,15,23,31")
     parser.add_argument("--real-only", action="store_true")
+    parser.add_argument(
+        "--normal-loss-weight", type=float, default=1.0,
+        help="weight for view_label=0 BCE terms; v1.2 uses 1.25 to reduce normal->NG false positives",
+    )
+    parser.add_argument("--run-name", default="E1-stage1-classification-only-v1")
     parser.add_argument("--num-workers", type=int, default=4)
     args = parser.parse_args()
+    if args.normal_loss_weight <= 0:
+        raise ValueError("normal-loss-weight must be positive")
 
     config = json.loads(args.config.read_text(encoding="utf-8"))
     training = config["training"]
@@ -199,12 +207,12 @@ def main() -> None:
     feature_layers = tuple(int(value) for value in args.feature_layers.split(",") if value.strip())
     prompt_sha = hashlib.sha256(P4_CLASSIFICATION_ONLY.encode()).hexdigest()
     protocol = {
-        "protocol": "E1-stage1-classification-only-real-v1" if args.real_only else "E1-stage1-classification-only-v1",
+        "protocol": args.run_name,
         "causal_question": "Does removing mask and region objectives prevent classification collapse?",
         "single_variable_relative_to_original_e1": "classification objective only; no mask/region loss or mask-conditioned pooling",
         "prompt_id": "P4_CLASSIFICATION_ONLY",
         "prompt_sha256": prompt_sha,
-        "loss": "binary Yes/No next-token BCE only",
+        "loss": "binary Yes/No next-token BCE only; normal_weight=" + str(args.normal_loss_weight),
         "segmentation_loss": None,
         "region_loss": None,
         "mask_targets_loaded": False,
@@ -315,9 +323,19 @@ def main() -> None:
             inputs, labels = encode_classification_examples(processor, [example], device)
             with torch.autocast("cuda", dtype=amp_dtype):
                 output = model(inputs, sample_labels=labels)
-                scaled_loss = output.loss / len(examples)
+                if args.normal_loss_weight == 1.0:
+                    loss = output.loss
+                else:
+                    target = torch.tensor(
+                        [float(example["view_label"])], device=device, dtype=output.anomaly_logits.dtype
+                    )
+                    weight = torch.where(target < 0.5, args.normal_loss_weight, 1.0)
+                    loss = F.binary_cross_entropy_with_logits(
+                        output.anomaly_logits.reshape(-1), target, weight=weight
+                    )
+                scaled_loss = loss / len(examples)
             scaler.scale(scaled_loss).backward()
-            loss_value = float(output.loss.detach())
+            loss_value = float(loss.detach())
             probability = float(torch.sigmoid(output.anomaly_logits[0]).detach())
             source = str(example["source_type"])
             losses.append(loss_value)
