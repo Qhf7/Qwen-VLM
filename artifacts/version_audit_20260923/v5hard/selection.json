@@ -1,0 +1,33 @@
+{
+  "tuning_choice": {
+    "slice": "tune",
+    "gate": 0.0,
+    "weight": 0.5,
+    "rows": 3010,
+    "pixel_auroc": 0.9852577976405918,
+    "pixel_ap": 0.87265490598065,
+    "pixel_f1max": 0.8232021005514253,
+    "anomaly_dice05": 0.7955426662187649,
+    "anomaly_recall05": 0.81836136846153,
+    "empty_prediction_fraction": 0.44285714285714284,
+    "prediction_area_p95": 0.04698511240433673
+  },
+  "holdout": [
+    {
+      "slice": "holdout",
+      "gate": 0.0,
+      "weight": 0.5,
+      "rows": 590,
+      "pixel_auroc": 0.9821650969423004,
+      "pixel_ap": 0.8684444022880352,
+      "pixel_f1max": 0.8279551093342247,
+      "anomaly_dice05": 0.803344512514105,
+      "anomaly_recall05": 0.8154749619058557,
+      "empty_prediction_fraction": 0.5203389830508475,
+      "prediction_area_p95": 0.048805205676020376
+    }
+  ],
+  "rule": "maximize mean pixel AUROC/AP/F1max on tune only; holdout does not select",
+  "group_column": "visual_group_id",
+  "checkpoint_sha256": "19b947fa457a6243a0bd5b66b72374e940d5a79bfb7a6e9a0c482cacf816fc7d"
+}
