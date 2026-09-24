@@ -105,7 +105,7 @@ def audit_split(train: pd.DataFrame, dev: pd.DataFrame) -> dict:
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--model-id", default="models/Qwen2.5-VL-3B-Instruct")
+    parser.add_argument("--model-id", default="models/Qwen3-VL-2B-Instruct")
     parser.add_argument("--config", type=Path, default=Path("e1/config.json"))
     parser.add_argument("--train", type=Path, default=Path("artifacts/splits/fold1/train.parquet"))
     parser.add_argument("--dev", type=Path, default=Path("artifacts/splits/fold1/dev.parquet"))
@@ -121,7 +121,7 @@ def main() -> None:
     parser.add_argument("--stop-after-step", type=int)
     parser.add_argument("--eval-steps", type=str)
     parser.add_argument("--skip-eval", action="store_true")
-    parser.add_argument("--feature-layers", default="7,15,23,31")
+    parser.add_argument("--feature-layers", default="5,11,17,23")
     parser.add_argument("--real-only", action="store_true")
     parser.add_argument(
         "--normal-loss-weight", type=float, default=1.0,

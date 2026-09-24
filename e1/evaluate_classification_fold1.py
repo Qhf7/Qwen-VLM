@@ -229,7 +229,7 @@ def build_classification_model(
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--model-id", default="models/Qwen2.5-VL-3B-Instruct")
+    parser.add_argument("--model-id", default="models/Qwen3-VL-2B-Instruct")
     parser.add_argument("--checkpoint", type=Path)
     parser.add_argument("--dev", type=Path, default=Path("artifacts/splits/fold1/dev.parquet"))
     parser.add_argument("--holdout-classes", type=Path, default=Path("artifacts/splits/fold1/holdout_classes.txt"))
@@ -237,7 +237,7 @@ def main() -> None:
     parser.add_argument("--out-dir", type=Path, default=Path("artifacts/e1_classification_fold1"))
     parser.add_argument("--tag", default="best")
     parser.add_argument("--max-views", type=int)
-    parser.add_argument("--feature-layers", default="7,15,23,31")
+    parser.add_argument("--feature-layers", default="5,11,17,23")
     args = parser.parse_args()
 
     dev = pd.read_parquet(args.dev)

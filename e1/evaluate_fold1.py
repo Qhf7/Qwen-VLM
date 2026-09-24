@@ -284,7 +284,7 @@ def build_model(
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--model-id", default="models/Qwen2.5-VL-3B-Instruct")
+    parser.add_argument("--model-id", default="models/Qwen3-VL-2B-Instruct")
     parser.add_argument("--checkpoint", type=Path)
     parser.add_argument("--dev", type=Path, default=Path("artifacts/splits/fold1/dev.parquet"))
     parser.add_argument("--holdout-classes", type=Path, default=Path("artifacts/splits/fold1/holdout_classes.txt"))
