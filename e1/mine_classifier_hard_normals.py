@@ -23,14 +23,16 @@ def main() -> None:
     p.add_argument("--cache-root", type=Path, default=Path("Train448"))
     p.add_argument("--out", type=Path, default=Path("artifacts/e1/classifier_hard_normals_v1_1.csv"))
     p.add_argument("--top-per-class", type=int, default=128)
-    p.add_argument("--model-id", default="models/Qwen2.5-VL-3B-Instruct")
+    p.add_argument("--model-id", default="models/Qwen3-VL-2B-Instruct")
+    p.add_argument("--feature-layers", default="5,11,17,23")
     args = p.parse_args()
     if args.top_per_class <= 0:
         raise ValueError("top-per-class must be positive")
     train = pd.read_parquet(args.train)
     normals = train[train.view_label.eq(0)].copy()
     device = torch.device("cuda:0")
-    model, processor = build_classification_model(args.model_id, args.checkpoint, device)
+    layers = tuple(int(value) for value in args.feature_layers.split(","))
+    model, processor = build_classification_model(args.model_id, args.checkpoint, device, feature_layers=layers)
     rows = []
     model.eval()
     for i, row in enumerate(normals.itertuples(index=False), 1):

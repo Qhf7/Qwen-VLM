@@ -327,7 +327,7 @@ def main() -> None:
                     loss = output.loss
                 else:
                     target = torch.tensor(
-                        [float(example["view_label"])], device=device, dtype=output.anomaly_logits.dtype
+                        [float(example["sample_label"])], device=device, dtype=output.anomaly_logits.dtype
                     )
                     weight = torch.where(target < 0.5, args.normal_loss_weight, 1.0)
                     loss = F.binary_cross_entropy_with_logits(

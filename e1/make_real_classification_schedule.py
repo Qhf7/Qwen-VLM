@@ -5,7 +5,7 @@ import numpy as np
 import pandas as pd
 
 def main():
-    p=argparse.ArgumentParser(); p.add_argument('--train',type=Path,default=Path('artifacts/splits/fold1/train.parquet')); p.add_argument('--cache-manifest',type=Path,default=Path('artifacts/e1/train448_cache_manifest.csv')); p.add_argument('--cache-root',type=Path,default=Path('Train448')); p.add_argument('--out-dir',type=Path,default=Path('artifacts/e1_real_classification')); p.add_argument('--steps',type=int,default=1000); p.add_argument('--batch-size',type=int,default=8); args=p.parse_args(); args.out_dir.mkdir(parents=True,exist_ok=True)
+    p=argparse.ArgumentParser(); p.add_argument('--train',type=Path,default=Path('artifacts/splits/fold1/train.parquet')); p.add_argument('--cache-manifest',type=Path,default=Path('artifacts/e1/train448_cache_manifest.csv')); p.add_argument('--cache-root',type=Path,default=Path('Train448')); p.add_argument('--out-dir',type=Path,default=Path('artifacts/e1_real_classification')); p.add_argument('--steps',type=int,default=1000); p.add_argument('--batch-size',type=int,default=8); p.add_argument('--hard-normals',type=Path); p.add_argument('--hard-normal-fraction',type=float,default=0.25); args=p.parse_args(); args.out_dir.mkdir(parents=True,exist_ok=True)
     df=pd.read_parquet(args.train).copy()
     cached=set(pd.read_csv(args.cache_manifest).image_path)
     missing=df[~df.image_path.isin(cached) | ~df.image_path.map(lambda x: (args.cache_root / x).is_file())]
@@ -17,6 +17,13 @@ def main():
         raise ValueError('Invalid steps, image labels, or duplicate training images')
     # view_label is the target: an invisible angle of an NG part is normal.
     real=df[df.view_label.eq(1)].copy(); normal=df[df.view_label.eq(0)].copy()
+    hard_paths=set()
+    if args.hard_normals is not None:
+        if not 0 < args.hard_normal_fraction < 1:
+            raise ValueError('hard-normal-fraction must be between 0 and 1')
+        hard_paths=set(pd.read_csv(args.hard_normals).image_path.astype(str))
+        if not hard_paths or not hard_paths.issubset(set(normal.image_path.astype(str))):
+            raise ValueError('hard normals must be a nonempty subset of train normal views')
     pools={'real_anomaly':real,'normal':normal}; rows=[]
     rng=np.random.default_rng(20260901)
     for source,part in pools.items():
@@ -32,6 +39,12 @@ def main():
             source='real_anomaly' if pos < args.batch_size//2 else 'normal'
             classes=sorted(pools[source]); cls=classes[((step-1)*(args.batch_size//2)+(pos % (args.batch_size//2))) % len(classes)]
             pool=pools[source][cls]
+            if source == 'normal' and hard_paths and pos % (args.batch_size//2) < round(args.hard_normal_fraction*(args.batch_size//2)):
+                hard_pool=pool[pool.image_path.isin(hard_paths)].reset_index(drop=True)
+                if not hard_pool.empty:
+                    row=hard_pool.iloc[int(rng.integers(0,len(hard_pool)))]
+                    rows.append({'step':step,'batch_position':pos,'image_path':row.image_path,'source_type':source})
+                    continue
             key=(source,cls); cursor=cursors[key]
             if cursor and cursor % len(pool) == 0:
                 pool=pool.iloc[rng.permutation(len(pool))].reset_index(drop=True)
