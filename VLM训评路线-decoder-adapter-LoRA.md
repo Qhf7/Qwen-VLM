@@ -198,3 +198,8 @@ A 榜期间：提交仍走 DINO hybrid；这条线只占训评叙事。
 | 相对上一行归因    | —     |       |       |     |
 | N1 Hit@1%  | —     |       | —     | —   |
 | 是否开下一刀     | 先做 E1 | □是 □否 | □是 □否 | 停   |
+
+---
+## 相关论文调研
+
+详见 [VLM分割论文调研与本项目路线建议_20260928.md](VLM分割论文调研与本项目路线建议_20260928.md)。该报告将 CLIPSeg、SegGPT、SEEM、LISA、AnomalyGPT、AnomalyCLIP、PixelLM、GLaMM、OMG-LLaVA 和 CLAD 的结构、loss、数据、训练预算、局限性与本项目的 E1/E2/E3 路线逐项对应。
