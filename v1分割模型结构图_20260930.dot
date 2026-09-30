@@ -1,0 +1,45 @@
+digraph V1Segmentation {
+  graph [rankdir=TB, bgcolor="#ffffff", pad="0.24", nodesep="0.34", ranksep="0.48", splines=ortho, fontname="PingFang SC", labelloc=t, label="v1 Patch9 分割模型：训练结构与提交推理", fontsize=24, fontcolor="#14243b"];
+  node [shape=box, style="rounded,filled", color="#b8c8d9", fillcolor="#f8fbff", fontname="PingFang SC", fontsize=13, fontcolor="#15243a", margin="0.19,0.13"];
+  edge [color="#58718f", arrowsize=0.75, penwidth=1.4, fontname="PingFang SC", fontsize=11];
+
+  subgraph cluster_data {
+    label="训练样本构造（仅训练期）";
+    color="#b9d7dc"; style="rounded,filled"; fillcolor="#f1fafb";
+    original [label="原始 RGB 图像 + GT mask\n18 类 fold1 train；正常 mask 为空", fillcolor="#e1f4f3"];
+    full [label="异常整图 → 448×448\nGT mask 最近邻缩放"];
+    positive [label="异常图 3×3 窗口中\n随机选一个含缺陷 patch → 448×448"];
+    normal [label="正常整图 → 448×448\n全零 GT mask"];
+    original -> {full positive normal};
+  }
+
+  subgraph cluster_core {
+    label="v1 分割模型：每个输入独立走同一套网络";
+    color="#aabfdf"; style="rounded,filled"; fillcolor="#f3f6fc";
+    processor [label="Qwen3 图像预处理\n448×448 → 28×28 patch 网格", fillcolor="#e4edfb"];
+    qwen [label="Qwen3-VL-2B-Instruct 视觉塔\n冻结；读取第 5 / 11 / 17 层特征", fillcolor="#d9e7fb", penwidth=2];
+    restore [label="恢复三层 28×28 空间特征图"];
+    projection [label="每层 1×1 Conv + GroupNorm + GELU\n每支 96 通道；拼接成 288 通道", fillcolor="#f0e8fd"];
+    fusion [label="2 个残差卷积块\n融合多层视觉特征", fillcolor="#f0e8fd"];
+    head [label="1×1 mask head → 28×28 logits\n双线性上采样 → 448×448 logits", fillcolor="#eadcfb", penwidth=2];
+    processor -> qwen -> restore -> projection -> fusion -> head;
+  }
+
+  trainloss [label="训练：Focal + Soft Dice\n反向传播只更新投影、融合块、mask head\n约 3,285,505 个可训练参数", fillcolor="#fff0d7", color="#e4bd74", penwidth=2];
+  full -> processor; positive -> processor; normal -> processor;
+  head -> trainloss [label="与对应 GT mask 比较"];
+
+  subgraph cluster_infer {
+    label="提交推理（复用上方同一分割模型）";
+    color="#d7c2b0"; style="rounded,filled"; fillcolor="#fffaf5";
+    testimage [label="测试图像：每组 5 个视角", fillcolor="#ffeddc"];
+    tiles [label="每个视角：整图 + 原分辨率 9 个重叠 patch\n共 10 次分割前向；各输入 448×448"];
+    maps [label="10 张概率图 → patch 回投原图\n历史 v1 stitching：中心加权 max\n统一消融：mean_w0.5", fillcolor="#ffe8d1"];
+    classifier [label="独立训练的图像分类器 v1.0\n每视角异常概率 p；不属于分割 v1 权重", fillcolor="#d9f0e1", color="#9bc9a8"];
+    gate [label="门控：若 p < 阈值则输出全零 mask\n若 gate=0 则全部保留分割图"];
+    result [label="每视角 448×448 灰度软 mask\n每组异常分数 = 5 个视角 p 的最大值", fillcolor="#e1f4f3", penwidth=2];
+    testimage -> tiles -> maps -> gate -> result;
+    testimage -> classifier -> gate;
+  }
+  head -> maps [style=dashed, label="重复 10 次前向", constraint=false];
+}
