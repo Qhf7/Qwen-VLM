@@ -44,6 +44,7 @@ from transformers import AutoProcessor, Qwen3VLForConditionalGeneration
 from b0.single_view import candidate_ids
 from e1.model import QwenE1
 from e1.patch9 import crop_resize, crop_resize_mask, grid_boxes, positive_boxes, read_mask, read_rgb
+from e1.dataset_config import BASE_DEV, BASE_TRAIN, assert_original_paths, assert_original_split
 
 SIDE = 448
 EVAL_STEPS = (250, 500, 750, 1000, 1500, 2000, 2500, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000)
@@ -243,8 +244,8 @@ def validate(model, processor, train: pd.DataFrame, root: Path, gt_root: Path, o
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--model-id", default="models/Qwen3-VL-2B-Instruct")
-    parser.add_argument("--train", type=Path, default=Path("artifacts/splits/fold1/train.parquet"))
-    parser.add_argument("--dev", type=Path, default=Path("artifacts/splits/fold1/dev.parquet"))
+    parser.add_argument("--train", type=Path, default=BASE_TRAIN)
+    parser.add_argument("--dev", type=Path, default=BASE_DEV)
     parser.add_argument("--root", type=Path, default=Path("Dataset"))
     parser.add_argument("--gt-root", type=Path, default=Path("Dataset"))
     parser.add_argument("--out", type=Path, default=Path("artifacts/segmentation_qwen3_patch9_mixed_v3_12000"))
@@ -257,6 +258,10 @@ def main() -> None:
         raise RuntimeError("CUDA BF16 is required")
     train = pd.read_parquet(args.train).reset_index(drop=True)
     dev = pd.read_parquet(args.dev).reset_index(drop=True)
+    assert_original_split(train, "train")
+    assert_original_split(dev, "dev")
+    assert_original_paths(train, "train")
+    assert_original_paths(dev, "dev")
     report = audit(train, dev, args.root, args.gt_root)
     write_json(args.out / "data_validation.json", report)
     model, processor, layers = build_model(args.model_id)

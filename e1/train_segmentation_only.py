@@ -15,9 +15,10 @@ from PIL import Image
 from transformers import AutoProcessor, Qwen3VLForConditionalGeneration
 from b0.single_view import candidate_ids
 from e1.model import QwenE1
+from e1.dataset_config import BASE_DEV, BASE_TRAIN, assert_original_paths, assert_original_split
 
 SIDE = 448
-EVAL_STEPS = (250, 500, 750, 1000, 1500, 2000, 2500, 3000)
+EVAL_STEPS = (250, 500, 750, 1000, 1500, 2000, 2500, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000)
 
 
 def digest(path):
@@ -217,13 +218,13 @@ def save_checkpoint(path, state):
 def main():
     p = argparse.ArgumentParser()
     p.add_argument('--model-id', default='models/Qwen3-VL-2B-Instruct')
-    p.add_argument('--train', type=Path, default=Path('artifacts/segmentation_real_anomaly/train.parquet'))
-    p.add_argument('--dev', type=Path, default=Path('artifacts/segmentation_real_anomaly/dev.parquet'))
+    p.add_argument('--train', type=Path, default=BASE_TRAIN)
+    p.add_argument('--dev', type=Path, default=BASE_DEV)
     p.add_argument('--root', type=Path, default=Path('Train448_verified_20260905'))
     p.add_argument('--dev-root', type=Path, default=Path('Dataset448'))
     p.add_argument('--gt-root', type=Path, default=Path('Dataset'))
     p.add_argument('--out', type=Path, default=Path('artifacts/segmentation_qwen3_decoder_only'))
-    p.add_argument('--steps', type=int, default=3000, choices=[1000, 3000])
+    p.add_argument('--steps', type=int, default=12000, choices=[1000, 3000, 12000])
     p.add_argument('--validate-only', action='store_true')
     args = p.parse_args()
     args.out.mkdir(parents=True, exist_ok=True)
@@ -237,6 +238,10 @@ def main():
         raise RuntimeError('CUDA BF16 is required')
     train = pd.read_parquet(args.train).reset_index(drop=True)
     dev = pd.read_parquet(args.dev).reset_index(drop=True)
+    assert_original_split(train, "train")
+    assert_original_split(dev, "dev")
+    assert_original_paths(train, "train")
+    assert_original_paths(dev, "dev")
     write_json(args.out / 'data_validation.json', audit_data(args, train, dev))
     proc = AutoProcessor.from_pretrained(args.model_id, min_pixels=SIDE**2, max_pixels=SIDE**2)
     base = Qwen3VLForConditionalGeneration.from_pretrained(args.model_id, dtype=torch.bfloat16,

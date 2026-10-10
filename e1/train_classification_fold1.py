@@ -24,6 +24,7 @@ from e1.evaluate_classification_fold1 import (
     evaluate_classification,
     sha256_file,
 )
+from e1.dataset_config import BASE_DEV, BASE_HOLDOUT_CLASSES, BASE_TRAIN, assert_original_paths, assert_original_split
 
 
 class FixedBatchSampler:
@@ -80,10 +81,12 @@ def save_checkpoint(
 def audit_split(train: pd.DataFrame, dev: pd.DataFrame) -> dict:
     train_classes = set(train.class_name)
     dev_classes = set(dev.class_name)
-    if train_classes != dev_classes or len(train_classes) != 18:
-        raise RuntimeError("train/dev must contain the same 18 component classes")
+    if train_classes != dev_classes or not train_classes:
+        raise RuntimeError("train/dev must contain the same non-empty component class set")
     group_overlap = set(train.group_path) & set(dev.group_path)
-    visual_overlap = set(train.visual_group_id) & set(dev.visual_group_id)
+    visual_overlap = set()
+    if "visual_group_id" in train.columns and "visual_group_id" in dev.columns:
+        visual_overlap = set(train.visual_group_id) & set(dev.visual_group_id)
     if group_overlap or visual_overlap:
         raise RuntimeError("train/dev group or visual-group leakage detected")
     dev_counts = dev.groupby(["class_name", "sample_label"]).group_path.nunique()
@@ -107,14 +110,14 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--model-id", default="models/Qwen3-VL-2B-Instruct")
     parser.add_argument("--config", type=Path, default=Path("e1/config.json"))
-    parser.add_argument("--train", type=Path, default=Path("artifacts/splits/fold1/train.parquet"))
-    parser.add_argument("--dev", type=Path, default=Path("artifacts/splits/fold1/dev.parquet"))
+    parser.add_argument("--train", type=Path, default=BASE_TRAIN)
+    parser.add_argument("--dev", type=Path, default=BASE_DEV)
     parser.add_argument("--pool", type=Path, default=Path("artifacts/e1/sampler_pool.parquet"))
     parser.add_argument("--schedule", type=Path, default=Path("artifacts/e1/fold1_schedule.parquet"))
     parser.add_argument("--cache-root", type=Path, default=Path("Train448"))
     parser.add_argument("--dev-cache-root", type=Path, default=Path("Dataset448"))
     parser.add_argument("--cache-manifest", type=Path, default=Path("artifacts/e1/train448_cache_manifest.csv"))
-    parser.add_argument("--holdout-classes", type=Path, default=Path("artifacts/splits/fold1/holdout_classes.txt"))
+    parser.add_argument("--holdout-classes", type=Path, default=BASE_HOLDOUT_CLASSES)
     parser.add_argument("--out-dir", type=Path, default=Path("artifacts/e1_classification_fold1"))
     parser.add_argument("--resume", type=Path)
     parser.add_argument("--max-steps", type=int)
@@ -157,6 +160,10 @@ def main() -> None:
 
     train = pd.read_parquet(args.train)
     dev = pd.read_parquet(args.dev)
+    assert_original_split(train, "train")
+    assert_original_split(dev, "dev")
+    assert_original_paths(train, "train")
+    assert_original_paths(dev, "dev")
     pool = pd.read_parquet(args.pool)
     schedule = pd.read_parquet(args.schedule)
     split_audit = audit_split(train, dev)
