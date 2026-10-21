@@ -19,7 +19,7 @@ from pathlib import Path
 
 import numpy as np
 
-from .metrics_pixel import EDGES, N_BINS, _trapz
+from .metrics_pixel import EDGES, N_BINS, _trapz, pooled_metrics_from_hist
 
 MAX_FPR = 0.30
 
@@ -85,7 +85,8 @@ class PixelStats:
         return len(self.label)
 
     # ---------------- 存取 ----------------
-    def save(self, path: Path) -> None:
+    def save(self, path) -> None:
+        path = Path(path)
         path.parent.mkdir(parents=True, exist_ok=True)
         np.savez_compressed(
             path,
@@ -99,17 +100,20 @@ class PixelStats:
         )
 
     @classmethod
-    def load(cls, path: Path) -> "PixelStats":
-        z = np.load(path, allow_pickle=False)
+    def load(cls, path) -> "PixelStats":
+        z = np.load(Path(path), allow_pickle=False)
         st = cls()
         st.group = [str(x) for x in z["group"]]
         st.cls = [str(x) for x in z["cls"]]
         st.area = [str(x) for x in z["area"]]
         st.label = [int(x) for x in z["label"]]
         st.img_score = [float(x) for x in z["img_score"]]
-        st.neg = [z["neg"][i] for i in range(len(st.label))]
-        st.pos = [z["pos"][i] for i in range(len(st.label))]
-        st.pro = [z["pro"][i] for i in range(len(st.label))]
+        # 关键：先把三个大数组**各解压一次**，再逐行切；不能写成 z["neg"][i]
+        neg, pos, pro = z["neg"], z["pos"], z["pro"]
+        n = len(st.label)
+        st.neg = [neg[i] for i in range(n)]
+        st.pos = [pos[i] for i in range(n)]
+        st.pro = [pro[i] for i in range(n)]
         st.n_regions = [int(x) for x in z["n_regions"]]
         return st
 
@@ -143,35 +147,31 @@ class PixelStats:
             neg = NEG.sum(0); pos = POS.sum(0); pro_sum = PRO.sum(0)
             n_anom = int((NREG > 0).sum()); lbl = LBL; img = IMG; n = len(NREG)
         else:
-            neg = NEG[idx].sum(0); pos = POS[idx].sum(0); pro_sum = PRO[idx].sum(0)
-            n_anom = int((NREG[idx] > 0).sum()); lbl = LBL[idx]; img = IMG[idx]; n = len(idx)
+            # 用重采样计数做加权求和：不拷贝 (n_images × 256) 的大矩阵
+            cnt = np.bincount(idx, minlength=len(NREG)).astype(np.float64)
+            neg = NEG.T @ cnt; pos = POS.T @ cnt; pro_sum = PRO.T @ cnt
+            n_anom = int(np.dot((NREG > 0).astype(np.float64), cnt))
+            lbl = LBL[idx]; img = IMG[idx]; n = len(idx)
         tot_neg, tot_pos = neg.sum(), pos.sum()
         # 阈值从高到低 → 累计（分数 >= t）
         cneg = np.cumsum(neg[::-1])[::-1]
-        cpos = np.cumsum(pos[::-1])[::-1]
-        tpr = cpos / max(tot_pos, 1)
         fpr = cneg / max(tot_neg, 1)
-        out = {
-            "n_images": int(n),
-            "pos_rate_px": float(tot_pos / max(tot_pos + tot_neg, 1)),
-        }
-        # AUROC
         order = np.argsort(fpr)
-        out["auroc"] = float(_trapz(tpr[order], fpr[order]))
-        # AUPR（阶梯积分）
-        prec = cpos / np.maximum(cpos + cneg, 1)
-        # 平均精度：按阈值从高到低，每次新增 bin k 的正像素贡献 ΔR = pos[k]/tot_pos
-        out["aupr"] = float(np.sum(prec * (pos / max(tot_pos, 1))))
-        out["aupr_minus_prevalence"] = out["aupr"] - out["pos_rate_px"]
-        with np.errstate(divide="ignore", invalid="ignore"):
-            f1 = np.where((prec + tpr) > 0, 2 * prec * tpr / (prec + tpr), 0.0)
-        out["f1max"] = float(np.nanmax(f1))
+        out = {"n_images": int(n), "pos_rate_px": float(tot_pos / max(tot_pos + tot_neg, 1))}
+        out.update(pooled_metrics_from_hist(neg, pos))
         # AUPRO
         out["n_anomalous_images"] = n_anom
         if n_anom > 0 and tot_neg > 0:
             pro = pro_sum / n_anom
+            # 与 PixelEvaluator 一致：补端点 (0,0)/(1,1)，同一 FPR 取最大 PRO
+            f2 = np.concatenate([[0.0], fpr, [1.0]])
+            p2 = np.concatenate([[0.0], pro, [1.0]])
+            o2 = np.argsort(f2)
+            f2, p2 = f2[o2], p2[o2]
+            uf = np.unique(f2)
+            up = np.array([p2[f2 == v].max() for v in uf])
             grid = np.linspace(0.0, max_fpr, 101)
-            pro_g = np.interp(grid, fpr[order], pro[order])
+            pro_g = np.interp(grid, uf, up)
             out["apro_0.3"] = float(_trapz(pro_g, grid) / max_fpr)
         else:
             out["apro_0.3"] = float("nan")

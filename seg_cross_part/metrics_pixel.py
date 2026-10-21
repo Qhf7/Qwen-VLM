@@ -69,16 +69,43 @@ def _hist_ge(x: np.ndarray) -> np.ndarray:
     return np.cumsum(h[::-1])[::-1].astype(np.float64)
 
 
+def pooled_metrics_from_hist(neg: np.ndarray, pos: np.ndarray) -> dict:
+    """由正/负像素的分数直方图直接算池化 AUROC / AUPR / F1max。
+
+    训练期评测与离线复评共用这一份实现，避免两套口径。
+    （曾经的实现按「剩余预算」抽样，前 ~10 张图就把预算吃完，后面的图 rate=0 被跳过，
+      导致 P-AUPR/P-AUROC 只在前 10 张图上统计——已废弃。）
+    """
+    neg = np.asarray(neg, dtype=np.float64)
+    pos = np.asarray(pos, dtype=np.float64)
+    tot_neg, tot_pos = float(neg.sum()), float(pos.sum())
+    out = {"pos_rate": tot_pos / max(tot_pos + tot_neg, 1)}
+    if tot_pos == 0 or tot_neg == 0:
+        out.update({k: float("nan") for k in ("auroc", "aupr", "aupr_minus_prevalence", "f1max")})
+        return out
+    cneg = np.cumsum(neg[::-1])[::-1]
+    cpos = np.cumsum(pos[::-1])[::-1]
+    tpr = cpos / tot_pos
+    fpr = cneg / tot_neg
+    order = np.argsort(fpr)
+    out["auroc"] = float(_trapz(tpr[order], fpr[order]))
+    prec = cpos / np.maximum(cpos + cneg, 1.0)
+    out["aupr"] = float(np.sum(prec * (pos / tot_pos)))
+    out["aupr_minus_prevalence"] = out["aupr"] - out["pos_rate"]
+    with np.errstate(divide="ignore", invalid="ignore"):
+        f1 = np.where((prec + tpr) > 0, 2 * prec * tpr / (prec + tpr), 0.0)
+    out["f1max"] = float(np.nanmax(f1))
+    return out
+
+
 class PixelEvaluator:
-    def __init__(self, max_fpr: float = 0.30, max_pixels: int = 2_000_000,
+    def __init__(self, max_fpr: float = 0.30, max_pixels: int | None = None,
                  seed: int = 20261020):
         self.max_fpr = max_fpr
-        self.max_pixels = max_pixels
-        self.rng = np.random.default_rng(seed)
-        # 池化像素（标签无关均匀抽样）
-        self._y: list[np.ndarray] = []
-        self._s: list[np.ndarray] = []
-        self._pooled = 0
+        self.max_pixels = max_pixels      # 已废弃：现在用全量直方图，不抽样
+        # 池化指标：累加正/负像素的分数直方图（全量，不抽样）
+        self._pos_hist = np.zeros(N_BINS, dtype=np.float64)
+        self._neg_hist = np.zeros(N_BINS, dtype=np.float64)
         # AUPRO 累加器
         self._fp = np.zeros(N_BINS, dtype=np.float64)
         self._neg_total = 0
@@ -109,16 +136,11 @@ class PixelEvaluator:
         self.n_neg_px += neg
         flat_s, flat_y = score.ravel(), gt.ravel()
 
-        # ---- 池化像素：标签无关的均匀抽样，保阳性率 ----
-        room = self.max_pixels - self._pooled
-        rate = 0.0 if room <= 0 else min(1.0, room / max(flat_s.size, 1))
-        if rate > 0:
-            idx = (np.flatnonzero(self.rng.random(flat_s.size) < rate)
-                   if rate < 1.0 else np.arange(flat_s.size))
-            if len(idx):
-                self._y.append(flat_y[idx].astype(np.int8))
-                self._s.append(flat_s[idx])
-                self._pooled += len(idx)
+        # ---- 池化指标：全量像素的直方图累加（不抽样，无偏）----
+        if pos:
+            self._pos_hist += np.histogram(flat_s[flat_y], bins=EDGES)[0]
+        if neg:
+            self._neg_hist += np.histogram(flat_s[~flat_y], bins=EDGES)[0]
 
         # ---- AUPRO：全图阈值计数 ----
         if neg > 0:
@@ -148,22 +170,10 @@ class PixelEvaluator:
             "n_pos_px": int(self.n_pos_px),
             "n_neg_px": int(self.n_neg_px),
             "pos_rate_px": float(self.n_pos_px / max(self.n_pos_px + self.n_neg_px, 1)),
-            "pooled_pixels_used": int(self._pooled),
+            "pooled_pixels_used": int(self.n_pos_px + self.n_neg_px),
         }
-
-        if self._y:
-            y = np.concatenate(self._y)
-            s = np.concatenate(self._s)
-            aupr = metrics.aupr(y, s)
-            out.update({
-                "auroc": metrics.auroc(y, s),
-                "aupr": aupr,
-                "aupr_minus_prevalence": aupr - float(y.mean()),
-                "f1max": metrics.f1max(y, s),
-            })
-        else:
-            out.update({k: float("nan") for k in
-                        ("auroc", "aupr", "aupr_minus_prevalence", "f1max")})
+        pooled = pooled_metrics_from_hist(self._neg_hist, self._pos_hist)
+        out.update({k: pooled[k] for k in ("auroc", "aupr", "aupr_minus_prevalence", "f1max")})
 
         if self._n_anomalous > 0 and self._neg_total > 0:
             fpr = self._fp / float(self._neg_total)
