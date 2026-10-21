@@ -55,6 +55,32 @@ TEMPLATES = [
     "a photo of the {c}.",
 ]
 
+# 具体缺陷名（Real-IAD 的 defect_norm，CamelCase → 自然语言）
+DEFECT_WORDS = {
+    "OilStain": "oil stain", "GelatinousContaminant": "gelatinous contaminant",
+    "FiberorBurrs": "fiber or burrs", "CharacterOmission": "character omission",
+    "UnevenCoating": "uneven coating", "BrokenWire": "broken wire",
+    "TwistedWire": "twisted wire", "MetallicContaminant": "metallic contaminant",
+    "ImpactDamage": "impact damage", "MissingPart": "missing part",
+    "BurnMark": "burn mark", "Discoloration": "discoloration", "Deformation": "deformation",
+    "Scratch": "scratch", "Damage": "damage", "Fracture": "fracture",
+    "Pit": "pit", "Warpage": "warpage", "Porosity": "porosity", "Abrasion": "abrasion",
+}
+
+# 缺陷条件化模板（方向 B）：把"异常"拆成具体缺陷词
+TEMPLATES_NORMAL_CLS = [
+    "a photo of a normal {c}",
+    "a photo of a flawless {c}",
+    "a photo of an undamaged {c}",
+    "a photo of a {c} with no defects",
+    "a clean photo of a {c}",
+]
+TEMPLATES_DEFECT = [
+    "a photo of a {c} with {d}",
+    "a close-up photo of a {c} with {d}",
+    "a photo of a {c} showing {d}",
+]
+
 CLIP_MEAN = (0.48145466, 0.4578275, 0.40821073)
 CLIP_STD = (0.26862954, 0.26130258, 0.27577711)
 IMG_MEAN = (0.485, 0.456, 0.406)
@@ -97,7 +123,19 @@ class ClipWindowScorer:
 
     # ---- 文本原型 ----
     @torch.no_grad()
-    def text_prototypes(self, obj_word: str = "object") -> torch.Tensor:
+    def text_prototypes(self, obj_word: str = "object", defects: list[str] | None = None) -> torch.Tensor:
+        """defects=None 走通用状态词；给了 defects 就走「具体缺陷」条件化（方向 B）。"""
+        if defects:
+            texts_n = [t.format(c=obj_word) for t in TEMPLATES_NORMAL_CLS]
+            texts_a = [t.format(c=obj_word, d=DEFECT_WORDS.get(d, d.lower()))
+                       for d in defects for t in TEMPLATES_DEFECT]
+            batch = self.tok(texts_n + texts_a, padding=True, truncation=True,
+                             return_tensors="pt").to(self.device)
+            txt = self.clip.text_model(**batch)
+            emb = F.normalize(self.clip.text_projection(txt.pooler_output), dim=-1)
+            proto = torch.stack([emb[:len(texts_n)].mean(0), emb[len(texts_n):].mean(0)])
+            return F.normalize(proto, dim=-1)
+
         texts = [t.format(c=f"{w} {obj_word}") for w in STATE_NORMAL + STATE_ANOMALY
                  for t in TEMPLATES]
         batch = self.tok(texts, padding=True, truncation=True, return_tensors="pt").to(self.device)
@@ -211,6 +249,8 @@ def main() -> None:
     ap.add_argument("--fuse", choices=["harmonic", "mean", "max", "ref"], default="harmonic",
                     help="ref=只用 DINOv2 参考关联（视觉下界 B1，不加载 CLIP，快很多）")
     ap.add_argument("--obj-word", default="object", choices=["object", "class"])
+    ap.add_argument("--prompts", choices=["generic", "defect"], default="generic",
+                    help="generic=通用状态词（B0/B2 原版）；defect=用该类自己的 4 种缺陷名（方向 B）")
     ap.add_argument("--win-stride", type=int, default=2,
                     help="窗口滑动步长（1=论文设定但很慢；2 约快 4 倍）")
     ap.add_argument("--seed", type=int, default=0)
@@ -223,7 +263,8 @@ def main() -> None:
     splits = resolve_splits(cfg, args.fold)
     df = pd.read_parquet(splits[args.split])
     pix = pd.read_parquet(MANIFEST_PIXEL,
-                          columns=["image_path", "mask_path", "mask_valid", "area_bucket"])
+                          columns=["image_path", "mask_path", "mask_valid", "area_bucket",
+                                   "defect_norm"])
     df = df.merge(pix, on="image_path", how="left")
     src = ROOT / cfg["data"]["source_root"]
     if args.limit:
@@ -254,8 +295,14 @@ def main() -> None:
             mem = dino.build_memory(torch.stack(feats))
         ref_paths = {normals.iloc[i]["image_path"] for i in ref_idx}
 
-        proto = None if clip_sc is None else clip_sc.text_prototypes(
-            sub["class_name"].iloc[0].replace("_", " ") if args.obj_word == "class" else "object")
+        obj = (sub["class_name"].iloc[0].replace("_", " ") if args.obj_word == "class"
+               else ("machine part" if args.prompts == "defect" else "object"))
+        defects = None
+        if args.prompts == "defect":
+            anom = sub[sub["view_label"] == 1]["defect_norm"].dropna()
+            defects = sorted(set(anom) - {""})
+            print(f"[defect] {cls}: {defects}", flush=True)
+        proto = None if clip_sc is None else clip_sc.text_prototypes(obj, defects)
 
         st = PixelStats()
         for _, r in sub.iterrows():
@@ -294,8 +341,9 @@ def main() -> None:
         print(f"[{ci+1}/{len(classes)}] {cls:28s} AUPRO={texts[cls]['apro_0.3']:.4f} "
               f"n={len(st)} shots={len(ref_idx)} ({time.time()-t0:.0f}s)", flush=True)
 
-    out_dir = Path(args.out) if args.out else ROOT / "artifacts" / "seg_cross_part" / \
-        f"b2_{args.protocol.split('_')[1]}_f{args.fold}_k{args.shots}_{args.fuse}"
+    tag = f"b2_{args.protocol.split('_')[1]}_f{args.fold}_k{args.shots}_{args.fuse}" + \
+        ("" if args.prompts == "generic" else "_defect")
+    out_dir = Path(args.out) if args.out else ROOT / "artifacts" / "seg_cross_part" / tag
     out_dir.mkdir(parents=True, exist_ok=True)
     allst = PixelStats()
     for st in stats_by_cls.values():
