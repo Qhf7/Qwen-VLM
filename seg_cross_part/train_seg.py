@@ -460,6 +460,8 @@ def main():
     ap.add_argument("--aux-weight", type=float, default=0.5,
                     help="语言分支辅助损失权重")
     ap.add_argument("--backbone", type=str, default="models/dinov2-base")
+    ap.add_argument("--image-size", type=int, default=None,
+                    help="覆盖输入分辨率（需为 14 的倍数：448 / 518 / 616）；默认取配置")
     ap.add_argument("--device", type=str, default=None)
     ap.add_argument("--exp-id", type=str, default=None)
     ap.add_argument("--limit-per-split", type=int, default=None)
@@ -485,6 +487,13 @@ def main():
     cfg = with_defaults(load_config(args.config))
     if args.protocol:
         cfg["protocol"]["name"] = args.protocol
+    if args.image_size:
+        sz = int(args.image_size)
+        if sz % 14 != 0:
+            raise SystemExit(f"--image-size 必须是 14 的倍数（DINOv2 patch=14），收到 {sz}")
+        cfg["input"]["image_size"] = sz
+        print(f"[config] 输入分辨率覆盖为 {sz}（patch 网格 {sz//14}×{sz//14}）")
+
     if args.smoke:
         cfg["train"]["max_steps"] = 4
         cfg["train"]["eval_steps"] = [2, 4]
