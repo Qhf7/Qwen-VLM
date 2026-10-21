@@ -75,6 +75,8 @@ def main() -> None:
     ap.add_argument("--backbone", default="models/dinov2-base")
     ap.add_argument("--hidden", type=int, default=256)
     ap.add_argument("--image-size", type=int, default=448)
+    ap.add_argument("--score-source", choices=["final", "lang"], default="final",
+                    help="final=融合输出（默认）；lang=只评测语言分支本身（A2 诊断用）")
     args = ap.parse_args()
 
     device = args.device or ("cuda" if torch.cuda.is_available()
@@ -138,8 +140,15 @@ def main() -> None:
     st = PixelStats()
     with torch.no_grad():
         for bi, (x, gt, paths, cls, lbl) in enumerate(loader):
-            out = model(x.to(device))
-            logits = out[0] if isinstance(out, tuple) else out
+            xb = x.to(device)
+            if args.score_source == "lang":
+                if getattr(model, "lang", None) is None:
+                    raise SystemExit("--score-source lang 只适用于 arm=a2")
+                f = model.feats(xb)
+                logits = model.lang(f, out_size=size)
+            else:
+                out = model(xb)
+                logits = out[0] if isinstance(out, tuple) else out
             prob = torch.sigmoid(logits).cpu().numpy()
             gts = gt.numpy()
             for i, p in enumerate(paths):
@@ -154,17 +163,19 @@ def main() -> None:
                 print(f"  {min((bi+1)*args.batch, len(df))}/{len(df)}", flush=True)
 
     out = {"overall": st.metrics(), "by_class": st.by_class(), "by_area": st.by_area(),
-           "run": args.run.name, "split": args.split, "stub": bool(args.stub)}
+           "run": args.run.name, "split": args.split, "stub": bool(args.stub),
+           "score_source": args.score_source}
+    suffix = "" if args.score_source == "final" else f"_{args.score_source}"
     (args.run / f"stats_{args.split}.npz").parent.mkdir(parents=True, exist_ok=True)
-    st.save(args.run / f"stats_{args.split}.npz")
-    (args.run / f"eval_{args.split}.json").write_text(
+    st.save(args.run / f"stats_{args.split}{suffix}.npz")
+    (args.run / f"eval_{args.split}{suffix}.json").write_text(
         json.dumps(out, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
     o = out["overall"]
     print(f"\n[overall] AUPRO={o['apro_0.3']:.4f}  P-AUPR={o['aupr']:.4f}  "
           f"P-AUROC={o['auroc']:.4f}  I-AUROC={o['i_auroc']:.4f}")
     print("[by_area] " + "  ".join(f"{k}:{v['apro_0.3']:.3f}" for k, v in out["by_area"].items()))
-    print(f"已写出 {args.run}/eval_{args.split}.json 与 stats_{args.split}.npz")
+    print(f"已写出 {args.run}/eval_{args.split}{suffix}.json 与 stats_{args.split}{suffix}.npz")
 
 
 if __name__ == "__main__":
