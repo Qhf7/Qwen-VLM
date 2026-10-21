@@ -64,11 +64,31 @@ def main() -> None:
     ap.add_argument("--limit", type=int, default=None, help="只评测 N 张（试跑）")
     ap.add_argument("--device", type=str, default=None)
     ap.add_argument("--batch", type=int, default=8)
+    # 下面的参数只在 run 目录里没有 frozen_protocol.json 时使用（例如训练被中断）
+    ap.add_argument("--protocol", default="protocol_c_unseen_category")
+    ap.add_argument("--fold", type=int, default=None)
+    ap.add_argument("--backbone", default="models/dinov2-base")
+    ap.add_argument("--hidden", type=int, default=256)
+    ap.add_argument("--image-size", type=int, default=448)
     args = ap.parse_args()
 
     device = args.device or ("cuda" if torch.cuda.is_available()
                              else ("mps" if torch.backends.mps.is_available() else "cpu"))
-    frozen = json.loads((args.run / "frozen_protocol.json").read_text(encoding="utf-8"))
+    fp = args.run / "frozen_protocol.json"
+    if fp.exists():
+        frozen = json.loads(fp.read_text(encoding="utf-8"))
+    else:
+        typ = "c" if args.fold is not None else "b"
+        frozen = {
+            "protocol": {"name": args.protocol, "type": typ,
+                         "split_dir": "artifacts/splits",
+                         "split_prefix": f"protocol_{typ}", "fold": args.fold},
+            "model": {"backbone": args.backbone, "hidden": args.hidden},
+            "input": {"image_size": args.image_size},
+            "arm": "a0",
+        }
+        print("[eval] 未找到 frozen_protocol.json，按命令行参数重建协议"
+              f"（type={typ} fold={args.fold}）")
     proto = frozen["protocol"]
     cfg = with_defaults({"protocol": proto,
                          "model": {"hidden": frozen.get("model", {}).get("hidden", 256)},
