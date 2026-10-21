@@ -338,7 +338,8 @@ def train(cfg, args):
         lang, anchor_meta = build_language_branch(sum(in_dims), args, hidden=cfg["model"]["hidden"])
         lang.to(device)
         print(f"[A2] 语言分支：mode={anchor_meta['mode']} K={anchor_meta['n_prompts']} "
-              f"d_text={anchor_meta['d_text']} shuffled={anchor_meta['shuffled']}")
+              f"d_text={anchor_meta['d_text']} shuffled={anchor_meta['shuffled']} "
+              f"fuse={anchor_meta.get('fuse')}")
     model = SegModel(feats, decoder, dummy_scale, lang, out_size=size).to(device)
     forward = model
 
@@ -374,7 +375,7 @@ def train(cfg, args):
     out_dir.mkdir(parents=True, exist_ok=True)
     if lang is not None:
         torch.save({"anchors": lang.anchors.detach().cpu(), "n_normal": lang.n_normal,
-                    "meta": anchor_meta}, out_dir / "anchors.pt")
+                    "fuse": lang.fuse, "meta": anchor_meta}, out_dir / "anchors.pt")
 
     history, best = [], -1.0
     step = 0
@@ -459,6 +460,8 @@ def main():
                     help="打乱锚点与语义的对应（随机锚点消融）")
     ap.add_argument("--aux-weight", type=float, default=0.5,
                     help="语言分支辅助损失权重")
+    ap.add_argument("--fuse", choices=["add", "gate"], default="add",
+                    help="add=语言热图与解码器 logits 相加（A2-a）；gate=逐 patch 文本调制（A2-c）")
     ap.add_argument("--backbone", type=str, default="models/dinov2-base")
     ap.add_argument("--image-size", type=int, default=None,
                     help="覆盖输入分辨率（需为 14 的倍数：448 / 518 / 616）；默认取配置")

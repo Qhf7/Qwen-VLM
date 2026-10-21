@@ -53,9 +53,10 @@ def build_model(arm: str, backbone: str, hidden: int, size: int, device, stub: b
             raise SystemExit("arm=a2 但运行目录里没有 anchors.pt，无法复评")
         blob = torch.load(ap_, map_location="cpu", weights_only=False)
         lang = LanguageBranch(sum(dims), blob["anchors"], hidden=hidden,
-                              n_normal=blob.get("n_normal", 5)).to(device)
+                              n_normal=blob.get("n_normal", 5),
+                              fuse=blob.get("fuse", "add")).to(device)
         print(f"[eval] 载入语言锚点：{blob['anchors'].shape} "
-              f"meta={blob.get('meta', {}).get('mode')}")
+              f"meta={blob.get('meta', {}).get('mode')} fuse={blob.get('fuse', 'add')}")
 
     return SegModel(feats, dec, up, lang, out_size=size).to(device)
 
@@ -75,6 +76,8 @@ def main() -> None:
     ap.add_argument("--backbone", default="models/dinov2-base")
     ap.add_argument("--hidden", type=int, default=256)
     ap.add_argument("--image-size", type=int, default=448)
+    ap.add_argument("--arm", choices=["a0", "a2"], default=None,
+                    help="无 frozen_protocol.json 时用它指定模型臂")
     ap.add_argument("--score-source", choices=["final", "lang"], default="final",
                     help="final=融合输出（默认）；lang=只评测语言分支本身（A2 诊断用）")
     args = ap.parse_args()
@@ -92,7 +95,7 @@ def main() -> None:
                          "split_prefix": f"protocol_{typ}", "fold": args.fold},
             "model": {"backbone": args.backbone, "hidden": args.hidden},
             "input": {"image_size": args.image_size},
-            "arm": "a0",
+            "arm": args.arm or "a0",
         }
         print("[eval] 未找到 frozen_protocol.json，按命令行参数重建协议"
               f"（type={typ} fold={args.fold}）")
@@ -102,7 +105,7 @@ def main() -> None:
                          "input": {"image_size": frozen.get("input", {}).get("image_size", 448)}})
     size = cfg["input"]["image_size"]
     backbone = frozen.get("model", {}).get("backbone", "models/dinov2-base")
-    arm = frozen.get("arm", "a0")
+    arm = args.arm or frozen.get("arm", "a0")
     print(f"[eval] run={args.run.name} arm={arm} split={args.split} device={device} stub={args.stub}")
 
     splits = resolve_splits(cfg, None if proto.get("type") != "c" else proto.get("fold"))

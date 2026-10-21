@@ -82,7 +82,8 @@ class LanguageBranch(nn.Module):
     """DINOv2 多层 patch 特征 → 文本空间 → 与锚点做余弦 → 异常 logit 图。"""
 
     def __init__(self, in_dim: int, anchors: torch.Tensor, hidden: int = 256,
-                 n_normal: int = len(PROMPTS_NORMAL), scale: float = 10.0):
+                 n_normal: int = len(PROMPTS_NORMAL), scale: float = 10.0,
+                 fuse: str = "add"):
         super().__init__()
         self.proj = nn.Sequential(
             nn.Conv2d(in_dim, hidden, 1), nn.GroupNorm(8, hidden), nn.GELU(),
@@ -92,13 +93,33 @@ class LanguageBranch(nn.Module):
         self.register_buffer("anchors", anchors.clone().float())
         self.n_normal = int(n_normal)
         self.scale = float(scale)
+        self.fuse = str(fuse)
+        if self.fuse == "gate":
+            # 逐 patch 调制：门控由「特征 + 文本上下文」共同决定（输入相关，不会退化）
+            self.gate = nn.Sequential(
+                nn.Conv2d(in_dim + int(anchors.shape[1]), hidden, 1), nn.GELU(),
+                nn.Conv2d(hidden, in_dim, 1), nn.Sigmoid(),
+            )
 
-    def forward(self, feats: list[torch.Tensor], out_size: int) -> torch.Tensor:
+    def _sim(self, feats: list[torch.Tensor]) -> torch.Tensor:
         x = torch.cat(feats, dim=1)                       # (B, 4*768, h, w)
         z = F.normalize(self.proj(x), dim=1)              # (B, d, h, w)
         a = F.normalize(self.anchors, dim=1)              # (K, d)
-        sim = torch.einsum("bdhw,kd->bkhw", z, a)         # 余弦相似度
-        sim = sim * self.scale
+        return torch.einsum("bdhw,kd->bkhw", z, a) * self.scale
+
+    def modulate(self, feats: list[torch.Tensor]) -> list[torch.Tensor]:
+        """用文本语义逐位置改写特征：f' = f ⊙ (1 + gate)。"""
+        sim = self._sim(feats)                            # (B, K, h, w)
+        attn = torch.softmax(sim, dim=1)
+        a = F.normalize(self.anchors, dim=1)
+        ctx = torch.einsum("bkhw,kd->bdhw", attn, a)      # 每个 patch 查回来的"语义"
+        x = torch.cat(feats, dim=1)
+        g = self.gate(torch.cat([x, ctx], dim=1))         # (B, 4*768, h, w)
+        parts = torch.split(g, [f.shape[1] for f in feats], dim=1)
+        return [f * (1.0 + gi) for f, gi in zip(feats, parts)]
+
+    def forward(self, feats: list[torch.Tensor], out_size: int) -> torch.Tensor:
+        sim = self._sim(feats)                            # (B, K, h, w) 余弦相似度
         norm = torch.logsumexp(sim[:, :self.n_normal], dim=1)
         anom = torch.logsumexp(sim[:, self.n_normal:], dim=1)
         logit = anom - norm
@@ -111,4 +132,6 @@ def build_language_branch(in_dim: int, args, hidden: int = 256) -> tuple[Languag
     anchors, meta = build_anchors(mode=args.text_encoder, model_id=args.text_model,
                                   seed=args.seed if hasattr(args, "seed") else 0,
                                   shuffle=args.shuffle_anchors)
-    return LanguageBranch(in_dim, anchors, hidden=hidden), meta
+    fuse = getattr(args, "fuse", "add")
+    meta["fuse"] = fuse
+    return LanguageBranch(in_dim, anchors, hidden=hidden, fuse=fuse), meta
