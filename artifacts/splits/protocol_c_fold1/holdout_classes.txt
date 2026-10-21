@@ -1,0 +1,6 @@
+PLCC_socket
+battery_holder_connector
+ceramic_fuse
+knob_cap
+multi_function_switch
+silicon_cell_sensor

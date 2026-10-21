@@ -1,165 +1,46 @@
-# VLM_Ali · 基于多模态大模型的工业异常检测
+# 跨零件异常分割（Cross-Part Anomaly Segmentation）
 
-用 **VLM（Qwen-VL）** 而非传统重建类方法，解决 **Real-IAD Variety** 数据集上的
-工业零件异常分类、像素级缺陷分割与**未见类别零样本泛化**。
+用 **DINOv2 的密集视觉特征** + **VLM 的语言语义**，验证「语义能弥补纯视觉模型在
+未见零件类别上的泛化缺陷」。
 
-个人研究项目。任务定义、数据与指标取自 CSIG / 阿里云天池的工业异常检测赛道，
-但**不参赛、不打榜，全部评测在本地完成**。
+> **先读这两份文档，再动代码：**
+> - [`docs/项目说明.md`](docs/项目说明.md) —— 任务、数据、协议、每个实验的设计与读法（唯一依据）
+> - [`docs/实验进度与版本记录.md`](docs/实验进度与版本记录.md) —— 版本迭代、实验台账、已知问题
+>
+> 框架图：[`docs/框架图.png`](docs/框架图.png)
 
----
+## 目录
 
-## 为什么用 VLM 而不是 Dinomaly / INP-Former
+```
+seg_cross_part/           实验代码（分割）
+├── common.py             路径 / 配置 / split 解析 / 台账
+├── metrics.py            AUROC、AUPR、F1max、阈值
+├── metrics_pixel.py      AUPRO@0.3、池化像素指标
+├── build_mask_manifest.py
+├── train_seg.py          A0 训练器（A1/A2/A3 待接）
+└── protocols/
 
-赛道推荐的是重建 / 蒸馏类方法。这条仓库刻意不走那条路，赌的是一个具体假设：
+artifacts/
+├── manifest.parquet      冻结 manifest
+├── splits/               Protocol A/B/C（冻结）
+└── seg_cross_part/       manifest_pixel、results.csv、各 exp 产物
 
-> 跨类别共享的不是"正常的样子"，而是**缺陷的语言概念**。
-
-数据实测支持这一点。在已下载的 24 个产品类别中：
-
-```text
-Scratch 出现在 12 类  ·  Deformation 10 类  ·  Damage 10 类  ·  Discoloration 9 类
+docs/                     文档与图
+Dataset/                  24 类工业零件图像 + mask
+models/                   dinov2-base、Qwen3-VL-2B
+third_party/              WinCLIP / AdaCLIP 参考实现
+论文参考/ 文献阅读/        文献
 ```
 
-而"正常的样子"在 24 个类别之间**零共享**——这正是重建类方法类别一多就性能衰减、
-遇到新产品就失效的原因。语言侧的缺陷概念天然跨类别，这是 VLM 路线**唯一可能的结构性优势**，
-也是整个项目要验证或证伪的东西。
+## 快速开始
 
-代价也很明确：通用 VLM **没见过工业缺陷，也不会做像素级定位**。
-整条路线就是在回答——**用最少的可训练模块，把这两件事补上。**
+```bash
+python -m seg_cross_part.build_mask_manifest --verify 500   # 数据地基
+python -m seg_cross_part.train_seg --smoke                   # 离线冒烟（无需权重）
+python -m seg_cross_part.train_seg --protocol protocol_b_seen_category \
+  --backbone models/dinov2-base --arm a0 --exp-id b_a0_s20261020
 
----
-
-
-## 路线
-
-```text
- 阶段          做什么                                  可训练模块       产出
-────────────────────────────────────────────────────────────────────────────────
- S0  数据      标签口径 / resize策略 / 三集划死 / 评测   无             评测地基
- S1  B0       整图 → Qwen-VL 零样本问答（含"哪些像素"）   无             起点 + 负对照
- S2  B0+      同模型，只改 prompt / 读 token 概率 / 切窗  无             零样本天花板
- S3  E1       Decoder + Prompt Adapter                 decoder+PL     主消融（第一刀）
- S4  E2       + Visual Adapter                         浅层 adapter   第二刀
- S5  E3       + LLM LoRA                               q/v LoRA       第三刀
- S6  ZS       零样本专项：缺陷语义迁移 / 品类名解耦        —             泛化能力
- S7  部署      延迟 ≤ 1s 的可行形态                       —             工程收口
+# 离线复评（分层 + 统计量）与 bootstrap CI
+python -m seg_cross_part.evaluate_pixel --run artifacts/seg_cross_part/b_a0_fix_s20261021 --split test
+python -m seg_cross_part.bootstrap_pixel --stats artifacts/seg_cross_part/b_a0_fix_s20261021/stats_test.npz
 ```
-
-**铁律：一次只开一种可训练模块。** 同时动两块，任何结论都不可归因。
-每一步都有明确的开/停条件，上一刀不过线不开下一刀。
-
-### 起点是一次刻意保留的失败
-
-B0 直接问 Qwen-VL：*这个零件正常还是异常？什么缺陷？在哪些像素？*
-让它输出多边形坐标当 mask。
-
-这在像素指标上**必然崩溃**——生成式模型的坐标精度以"物体"为单位而非"缺陷"为单位，
-会把整个零件涂亮，而 P-AUPR 对预测面积惩罚极重。
-
-保留它的价值不在分数，在于它一次性证明了三件事，后面三个设计决策全部由此推出：
-
-| B0 的失败 | 推出的设计 |
-| --- | --- |
-| 整图语义盖住小缺陷 | VLM 需要被喂**局部信号** → decoder |
-| 多边形当 mask，面积占比爆炸 | mask **不该由生成模块给** → decoder 出热图 |
-| 文本 "Yes"/"No" 算不了 AUROC | 图级分走 **token 概率**而非文本解析 |
-
----
-
-## 数据
-
-**Real-IAD Variety** 深度清洗子集（本机实测，2026-08-31）：
-
-| 项 | 数值 |
-| --- | --- |
-| 类别 | **24** / 100 |
-| 样本组（零件 × 5 视角） | **5971**（正常 1199 / 异常 4772） |
-| 图像 | **29855** 张 + **23378** 张 mask 文件（其中 **23369** 张非空） |
-| 分辨率 | **179×179 ~ 3669×3669**，2106 种尺寸，中位 849 |
-| 缺陷类型 | 22 种原始标签 → 归一化 20 类 |
-| 体积 | 17 GB |
-
-标注为 **labelme 多边形**，即有缺陷类型词 + 像素级轮廓。
-这是本项目相对赛题官方"仅正常样本"设定的最大信息优势——可以做**有监督定位**。
-
-### 三个已知的数据陷阱
-
-1. **491 张 NG 视角没有有效缺陷 mask。** 其中 482 张无文件、9 张 mask 为空；
-   样本级 NG，但视角级按正常处理。继承样本标签去训 decoder，会让它学成**物体性**而非缺陷性。
-2. **分辨率跨一个数量级。** `3_adapter` 2256–3600px，`smd_receiver_module` 401–1067px。
-   S0 分层审计中，731 张 mask 压到 448 后均仍有至少 4 个高覆盖像素；但 6.82% 视角会
-   下采样至少 4 倍，RGB 细纹理仍可能损失。主基线因此冻结为 direct 448，原尺度滑窗只做 B0w 独立消融。
-3. **正常:异常 ≈ 1:4**，与工业现场相反。按原始比例采样会让模型学到"默认答异常"。
-
-> 数据集本身**不入库**（17 GB）。本仓库只放文档与代码。
-
----
-
-## 文档
-
-| 文件 | 内容 |
-| --- | --- |
-| [`任务说明.md`](任务说明.md) | 任务定义、数据实测现状、评测口径、与赛题规则的偏离声明 |
-| [`研究路线.md`](研究路线.md) | S0→S7 完整链路、每一步的动机、决策门、实验记录纪律 |
-| [`VLM训评路线-decoder-adapter-LoRA.md`](VLM训评路线-decoder-adapter-LoRA.md) | E1/E2/E3 三刀的冻训表与排期 |
-| [`B0-baseline分析与下一步.md`](B0-baseline分析与下一步.md) | B0 完整结果解读、成立边界、B0+→E1 执行清单 |
-| [`E1-fold1实验结果分析.md`](E1-fold1实验结果分析.md) | E1 fold1 协议、四个 checkpoint、失败门判定与后续诊断 |
-
----
-
-## 评测
-
-全部本地运行。核心口径：
-
-```text
-图像级：I-AUROC · I-AUPR · F1max                    按类别宏平均
-像素级：P-AUPR · P-F1max                            按类别宏平均
-        主口径 448×448 ＋ 原分辨率对照
-诊断：  平均预测面积占比 · Hit@1% · 按缺陷面积分档召回
-延迟：  p50 / p95，分大图类与小图类
-```
-
-两条不可动摇的规则：
-
-- **P-AUROC 不参与任何决策。** 缺陷面积小到万分之几时它恒在 0.95+，没有区分度。
-- **`holdout-zs` 整类扣出，全程不训练、不调参、不看。**
-  本地评测没有"每日限 3 次"的外部约束，唯一防止自欺的只有这条自律。
-
-## S0 当前状态
-
-S0 已完成并通过自检：视角级 manifest、20 类缺陷词表、跨批互为最近邻的
-`visual_group_id`、冻结四折、流式评测、端到端延迟和 resize 审计均已落盘。
-图像级评测单位固定为 `group_path`（一次 5 视角拍摄），防泄漏代理只用于划分，
-二者不得混用。复现入口与审计结果见 [`s0/README.md`](s0/README.md)。
-
-## B0 当前状态
-
-B0 已在 M3 Pro 18 GB 本机上完成同一冻结子集对照：10 类、20 个完整样本、
-100 个视角，direct 448，统一 Yes/No next-token logits + JSON 协议。
-Qwen3-VL-2B 的 5-view AUROC 为 0.5400，warm 单视角 p50 为 2.89 s；
-Qwen2.5-VL-3B 分别为 0.7250 和 4.06 s。两者均有严重的零样本阈值偏置，
-且 5 视角延迟远超 1 s。复现方法、完整表和产物见 [`b0/README.md`](b0/README.md)。
-
-B0+ 已先在 `smoke20` 上完成 P0/P1/P2、forward-only、三种聚合和
-5-crop 预注册消融，再将冻结的 `Qwen2.5-VL-3B + P0 + direct448 + B0f`
-扩展至 18 类、720 个 Dev-mini 样本。最终 max 主口径的宏平均
-AUROC/AUPR/F1max 为 `0.7208/0.7495/0.7380`；4090D 上 5 视角逐图 B0f
-端到端 p50/p95 为 `0.608/0.865 s`。FP16 batch5 未通过与单图的冻结数值
-容差，所以只保留为延迟测量，不用于正式分数。
-
-E1 fold1 已在 4090D 上完成 1000 步正式训练和 250/500/750/1000
-四次完整 Dev-mini 评测。best 为 step 500，宏 AUPR/F1max 为
-`0.7489/0.7679`，小缺陷召回 `0.8214`；独立重载复评的逐视角分数差为 0。
-由于宏 AUPR 未达 `0.7795`且小缺陷召回下降，E1 阶段门失败；
-Visual Adapter、LoRA 与 holdout-zs 仍未开启。详见
-[`E1-fold1实验结果分析.md`](E1-fold1实验结果分析.md)。
-
----
-
-## 参考
-
-`AnomalyGPT`（decoder + prompt learner 主路径）、`WinCLIP`（文本侧零样本）、
-`AdaCLIP`（可学习 prompt）、`INP-Former` / `Dinomaly`（对照基线）。
-
-数据集：[Real-IAD](https://realiad4ad.github.io/Real-IAD/) (CVPR 2024) /
-Real-IAD Variety (PR 2026)。

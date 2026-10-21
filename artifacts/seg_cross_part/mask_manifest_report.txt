@@ -1,0 +1,20 @@
+====================================================================
+像素级 manifest 构建报告（分割任务）
+====================================================================
+rows: 29855
+classes: 24
+groups: 5971
+views_normal: 6486
+views_anomaly: 23369
+mask_valid: 23369
+blind_ng_excluded_from_pixel: 0
+blind_ng_views_labeled_normal: 491
+pixel_eval_valid: 29855
+area_thresholds_defect_ratio: [0.008469250521958573, 0.023600292979316418]
+area_bucket_counts: {'large': 7790, 'small': 7790, 'medium': 7789, 'none': 6486}
+verify: {'抽查数': 50, '读取失败': 0, '像素数不一致': 0, '正常视角却有缺陷像素': 0}
+
+三条冻结规则：
+1) mask_valid = (view_label==1 且 defect_px>0)
+2) 所属 NG 零件但本视角无缺陷的 491 个视角，按视角级正常处理（GT 全 0），既不是盲区也不是错误
+3) area_bucket 按有效 mask 的 defect_ratio 三分位切分，阈值已写入本报告

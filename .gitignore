@@ -1,53 +1,31 @@
-# 数据集（17 GB，不入库）
+# 数据与模型（体积大，不入库）
 Dataset/
-Dataset448/
-Train448/
-
-# 文献 PDF（47 MB，版权原因不入库）
-文献阅读/
-
-# 实验输出
-outputs/
-runs/
-checkpoints/
 models/
 third_party/
-*.pth
+论文参考/
+文献阅读/
+.workbuddy/
+.claude/
+.ossutil_checkpoint/
+
+# 权重与压缩包
 *.pt
-*.ckpt
-*.safetensors
+*.pth
+*.zip
+*.tgz
+*.tar.gz
 
-# 实验产物默认不入库，只保留轻量协议和汇总报告
-artifacts/**
-!artifacts/b0/
-!artifacts/b0/*.json
-!artifacts/b0/*.md
-!artifacts/b0plus/
-!artifacts/b0plus/*.json
-!artifacts/b0plus/*.md
-!artifacts/b0plus_dev720/
-!artifacts/b0plus_dev720/*.json
-!artifacts/b0plus_dev720/*.md
-!artifacts/e1/
-!artifacts/e1/*.json
-!artifacts/e1_fold1/
-!artifacts/e1_fold1/*.json
-!artifacts/segmentation_qwen3_patch9_mixed_v3_12000/
-!artifacts/segmentation_qwen3_patch9_mixed_v3_12000/*.csv
-!artifacts/segmentation_qwen3_patch9_mixed_v3_12000/*.json
-!artifacts/segmentation_qwen3_patch9_mixed_v3_12000/*.html
-!artifacts/segmentation_qwen3_patch9_mixed_v3_12000/*.md
-!artifacts/segmentation_qwen3_patch9_mixed_v3_12000/*.py
+# 运行产物（只保留冻结的数据地基）
+artifacts/seg_cross_part/*
+!artifacts/seg_cross_part/manifest_pixel.parquet
+!artifacts/seg_cross_part/mask_manifest_report.txt
+!artifacts/seg_cross_part/mask_manifest_stats.json
 
-# Python
+# Python / 系统
 __pycache__/
 *.py[cod]
-.venv/
-venv/
 .ipynb_checkpoints/
-
-# macOS
 .DS_Store
-
-# 工具
-.claude/
+._*
+.vscode/
+.idea/
