@@ -35,8 +35,8 @@ from PIL import Image
 from torchvision import transforms
 from torchvision.datasets.folder import default_loader
 
-from .common import (MANIFEST_PIXEL, ROOT, load_config, resolve_splits,
-                     sha256_of, with_defaults)
+from .common import (MANIFEST_PIXEL, ROOT, check_protocol, load_config,
+                     resolve_splits, sha256_of, with_defaults)
 from .metrics_pixel import PixelEvaluator, load_mask
 
 OUT_ROOT = ROOT / "artifacts" / "seg_cross_part"
@@ -274,6 +274,12 @@ def train(cfg, args):
     print(f"[seg] device={device} size={size} arm={args.arm}")
 
     splits = resolve_splits(cfg, args.fold)
+    info = check_protocol(cfg, splits)
+    print(f"[protocol] type={info['type']} fold={info['fold']} | "
+          f"train {info['train_classes']} 类 / test {info['test_classes']} 类 | "
+          f"类别交集 {info['train_test_class_overlap']} | "
+          f"train {info['train_views']} 视图 / test {info['test_views']} 视图")
+    print(f"[protocol] test 示例类: {info['test_sample_classes']}")
     split_sha = {s: sha256_of(p) for s, p in splits.items()}
     pix = pd.read_parquet(MANIFEST_PIXEL)
 
@@ -415,12 +421,21 @@ def main():
     ap.add_argument("--overwrite", action="store_true")
     ap.add_argument("--check-align", action="store_true",
                     help="只做几何对齐自检（不训练）")
+    ap.add_argument("--skip-preflight", action="store_true",
+                    help="跳过开跑前复核（默认强制跑；跳过请在版本记录里写明理由）")
     args = ap.parse_args()
 
     if args.check_align:
         check_alignment()
         return
 
+    # 没显式给 --config 时，按 --protocol 自动挑配置文件（避免"改了名字没换划分"）
+    default_cfg = ROOT / "seg_cross_part" / "protocols" / "seg_default.yaml"
+    if args.protocol and args.config == default_cfg:
+        cand = ROOT / "seg_cross_part" / "protocols" / f"{args.protocol}.yaml"
+        if cand.exists():
+            args.config = cand
+            print(f"[config] 按 --protocol 自动使用 {cand.name}")
     cfg = with_defaults(load_config(args.config))
     if args.protocol:
         cfg["protocol"]["name"] = args.protocol
@@ -434,6 +449,18 @@ def main():
         args.limit_per_split = args.limit_per_split or 8
         args.overwrite = True
         args.exp_id = args.exp_id or "smoke"
+    # ---- 强制复核：不通过就不开跑 ----
+    if not args.smoke and not args.skip_preflight:
+        from .preflight import run_preflight
+        print("=" * 60)
+        print("开跑前复核（preflight）")
+        print("=" * 60)
+        if not run_preflight(cfg["protocol"]["name"], args.fold, args.config,
+                             args.exp_id, sample=10):
+            raise SystemExit("复核未通过，已阻止训练。修好后重跑；确需跳过用 --skip-preflight")
+    elif args.smoke:
+        print("[preflight] 冒烟模式跳过复核（不影响真跑）")
+
     train(cfg, args)
 
 

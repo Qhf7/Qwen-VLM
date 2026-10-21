@@ -35,6 +35,9 @@ third_party/              WinCLIP / AdaCLIP 参考实现
 ## 快速开始
 
 ```bash
+# 开跑前复核（强制；train_seg 也会自动跑）
+python -m seg_cross_part.preflight --protocol protocol_c_unseen_category --fold 0
+
 python -m seg_cross_part.build_mask_manifest --verify 500   # 数据地基
 python -m seg_cross_part.train_seg --smoke                   # 离线冒烟（无需权重）
 python -m seg_cross_part.train_seg --protocol protocol_b_seen_category \

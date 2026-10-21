@@ -76,6 +76,43 @@ def resolve_splits(cfg: dict, cli_fold: int | None = None) -> dict[str, Path]:
     return paths
 
 
+def check_protocol(cfg: dict, splits: dict[str, Path]) -> dict:
+    """硬校验：协议名、type、fold、类别交集必须自洽。
+
+    这是为了防止「用 --protocol 改了名字，但配置文件还是 B」这类静默错误——
+    那会让你以为在跑四折整类留出，其实跑的是同类新零件。
+    """
+    import pandas as pd
+
+    p = cfg["protocol"]
+    name, typ, fold = p.get("name", ""), p.get("type"), p.get("fold")
+    if "unseen" in name and typ != "c":
+        raise SystemExit(
+            f"协议名 {name} 表示「未见类别」，但配置 type={typ}。\n"
+            f"请用 --config seg_cross_part/protocols/protocol_c_unseen_category.yaml")
+    if typ == "c" and fold is None:
+        raise SystemExit("Protocol C 必须给 --fold 0..3")
+    if typ != "c" and fold is not None:
+        raise SystemExit(f"--fold 只对 Protocol C 有效，但当前 type={typ}")
+
+    tr = pd.read_parquet(splits["train"], columns=["class_name"])
+    va = pd.read_parquet(splits["val"], columns=["class_name"])
+    te = pd.read_parquet(splits["test"], columns=["class_name"])
+    a, b_, c_ = set(tr.class_name), set(va.class_name), set(te.class_name)
+    overlap = a & c_
+    if typ == "c" and overlap:
+        raise SystemExit(f"Protocol C 的 train/test 类别有交集: {sorted(overlap)[:5]}")
+    if typ != "c" and not overlap:
+        raise SystemExit("非 C 协议应含相同类别，但 train/test 类别不相交——配置可能错了")
+    return {
+        "type": typ, "fold": fold,
+        "train_classes": len(a), "val_classes": len(b_), "test_classes": len(c_),
+        "train_test_class_overlap": len(overlap),
+        "train_views": int(len(tr)), "test_views": int(len(te)),
+        "train_sample_classes": sorted(a)[:3], "test_sample_classes": sorted(c_)[:3],
+    }
+
+
 def sha256_of(path: Path) -> str:
     h = hashlib.sha256()
     with open(path, "rb") as f:
