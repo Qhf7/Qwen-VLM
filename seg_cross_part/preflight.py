@@ -136,6 +136,15 @@ def run_preflight(protocol: str = "protocol_b_seen_category", fold: int | None =
     except Exception as e:            # noqa: BLE001
         rep.add(False, "图像/mask 几何对齐", f"{type(e).__name__}: {e}")
 
+    # 指标口径自洽：两套实现（训练器 / 统计量）必须给同一批数据同样的数
+    try:
+        from .check_metrics import compare_implementations
+        d = compare_implementations(n_images=12, seed=0)
+        rep.add(max(d.values()) < 1e-6, "指标口径自洽",
+                "PixelEvaluator vs PixelStats Δmax=" + f"{max(d.values()):.2e}")
+    except Exception as e:            # noqa: BLE001
+        rep.add(False, "指标口径自洽", f"{type(e).__name__}: {e}")
+
     # 输出目录冲突
     if exp_id:
         out = ROOT / "artifacts" / "seg_cross_part" / exp_id

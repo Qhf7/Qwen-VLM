@@ -28,10 +28,12 @@ from torch.utils.data import DataLoader
 
 from .common import MANIFEST_PIXEL, ROOT, resolve_splits, with_defaults
 from .stats_pixel import PixelStats, image_hist, image_pro
-from .train_seg import DinoFeatures, SegCollate, SegDataset, SegDecoder, StubFeatures
+from .train_seg import (DinoFeatures, SegCollate, SegDataset, SegDecoder, SegModel,
+                        StubFeatures)
 
 
-def build_model(arm: str, backbone: str, hidden: int, size: int, device, stub: bool):
+def build_model(arm: str, backbone: str, hidden: int, size: int, device, stub: bool,
+                run: Path | None = None):
     if stub:
         feats = StubFeatures()
         dims = [feats.dim] * 4
@@ -43,16 +45,19 @@ def build_model(arm: str, backbone: str, hidden: int, size: int, device, stub: b
     dec = SegDecoder(dims, hidden=hidden, out_size=size).to(device)
     feats.to(device)
 
-    class M(torch.nn.Module):
-        def forward(self, x):
-            f = self.feats(x)
-            if self.up != 1:
-                f = [torch.nn.functional.interpolate(t, scale_factor=self.up, mode="nearest") for t in f]
-            return self.dec(f)
+    lang = None
+    if arm == "a2":
+        from .a2_language import LanguageBranch
+        ap_ = run / "anchors.pt" if run is not None else None
+        if ap_ is None or not ap_.exists():
+            raise SystemExit("arm=a2 但运行目录里没有 anchors.pt，无法复评")
+        blob = torch.load(ap_, map_location="cpu", weights_only=False)
+        lang = LanguageBranch(sum(dims), blob["anchors"], hidden=hidden,
+                              n_normal=blob.get("n_normal", 5)).to(device)
+        print(f"[eval] 载入语言锚点：{blob['anchors'].shape} "
+              f"meta={blob.get('meta', {}).get('mode')}")
 
-    m = M()
-    m.feats, m.dec, m.up = feats, dec, up
-    return m
+    return SegModel(feats, dec, up, lang, out_size=size).to(device)
 
 
 def main() -> None:
@@ -117,11 +122,14 @@ def main() -> None:
                         collate_fn=SegCollate())
     meta = {r["image_path"]: r for _, r in df.iterrows()}
 
-    model = build_model(arm, backbone, cfg["model"]["hidden"], size, device, args.stub)
+    model = build_model(arm, backbone, cfg["model"]["hidden"], size, device, args.stub,
+                        run=args.run)
     ck = args.run / args.weights
     if ck.exists() and not args.stub:
         state = torch.load(ck, map_location=device, weights_only=False)
-        model.dec.load_state_dict(state["decoder"])
+        model.decoder.load_state_dict(state["decoder"])
+        if model.lang is not None and "lang" in state:
+            model.lang.load_state_dict(state["lang"])
         print(f"[eval] 载入 {ck.name}（step={state.get('step')}）")
     elif not args.stub:
         raise SystemExit(f"找不到权重 {ck}")
@@ -130,7 +138,9 @@ def main() -> None:
     st = PixelStats()
     with torch.no_grad():
         for bi, (x, gt, paths, cls, lbl) in enumerate(loader):
-            prob = torch.sigmoid(model(x.to(device))).cpu().numpy()
+            out = model(x.to(device))
+            logits = out[0] if isinstance(out, tuple) else out
+            prob = torch.sigmoid(logits).cpu().numpy()
             gts = gt.numpy()
             for i, p in enumerate(paths):
                 r = meta[p]

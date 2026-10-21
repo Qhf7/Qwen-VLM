@@ -217,6 +217,29 @@ class SegDecoder(nn.Module):
         return self.head(x).squeeze(1)
 
 
+
+class SegModel(nn.Module):
+    """冻结视觉特征 + 解码器 (+ 可选语言分支)。训练与离线复评共用。"""
+
+    def __init__(self, feats, decoder, upscale=1, lang=None, out_size=448):
+        super().__init__()
+        self.feats, self.decoder, self.upscale, self.lang = feats, decoder, upscale, lang
+        self.out_size = out_size
+
+    def forward(self, xb):
+        f = self.feats(xb)
+        # 语言分支在原始 patch 网格（32×32）上算；放到 448 会慢 8 倍以上
+        aux = None
+        if self.lang is not None:
+            aux = self.lang(f, out_size=self.out_size)
+        if self.upscale != 1:
+            f = [F.interpolate(t, scale_factor=self.upscale, mode="nearest") for t in f]
+        logits = self.decoder(f)
+        if aux is None:
+            return logits, None
+        return logits + aux, aux
+
+
 # --------------------------------------------------------------------------
 # 损失
 # --------------------------------------------------------------------------
@@ -240,7 +263,9 @@ def evaluate(model, loader, device, size, n_classes_log=0):
     for batch in loader:
         x, gt, paths, cls, lbl = batch
         x = x.to(device)
-        prob = torch.sigmoid(model(x)).cpu().numpy()
+        out = model(x)
+        logits = out[0] if isinstance(out, tuple) else out
+        prob = torch.sigmoid(logits).cpu().numpy()
         gts = gt.numpy()
         for i in range(len(paths)):
             ev = per_class.setdefault(cls[i], PixelEvaluator())
@@ -307,21 +332,19 @@ def train(cfg, args):
     decoder = SegDecoder(in_dims, hidden=cfg["model"]["hidden"], out_size=size)
     feats.to(device); decoder.to(device)
 
-    class SegModel(nn.Module):
-        def __init__(self, feats, decoder, upscale):
-            super().__init__()
-            self.feats, self.decoder, self.upscale = feats, decoder, upscale
-
-        def forward(self, xb):
-            f = self.feats(xb)
-            if self.upscale != 1:
-                f = [F.interpolate(t, scale_factor=self.upscale, mode="nearest") for t in f]
-            return self.decoder(f)
-
-    model = SegModel(feats, decoder, dummy_scale).to(device)
+    lang, anchor_meta = None, None
+    if args.arm == "a2":
+        from .a2_language import build_language_branch
+        lang, anchor_meta = build_language_branch(sum(in_dims), args, hidden=cfg["model"]["hidden"])
+        lang.to(device)
+        print(f"[A2] 语言分支：mode={anchor_meta['mode']} K={anchor_meta['n_prompts']} "
+              f"d_text={anchor_meta['d_text']} shuffled={anchor_meta['shuffled']}")
+    model = SegModel(feats, decoder, dummy_scale, lang, out_size=size).to(device)
     forward = model
 
     params = [p for p in decoder.parameters() if p.requires_grad]
+    if lang is not None:
+        params += [p for p in lang.parameters() if p.requires_grad]
     n_train = sum(p.numel() for p in params)
     print(f"[model] trainable={n_train:,}")
 
@@ -349,6 +372,9 @@ def train(cfg, args):
     if out_dir.exists() and any(out_dir.iterdir()) and not args.overwrite:
         raise SystemExit(f"产物目录已存在: {out_dir}（换 --exp-id 或加 --overwrite）")
     out_dir.mkdir(parents=True, exist_ok=True)
+    if lang is not None:
+        torch.save({"anchors": lang.anchors.detach().cpu(), "n_normal": lang.n_normal,
+                    "meta": anchor_meta}, out_dir / "anchors.pt")
 
     history, best = [], -1.0
     step = 0
@@ -356,8 +382,10 @@ def train(cfg, args):
     while step < total:
         for x, gt, *_ in tr_loader:
             x, gt = x.to(device), gt.to(device)
-            logits = forward(x)
+            logits, aux = forward(x)
             loss = focal_dice(logits, gt)
+            if aux is not None:                     # 辅助监督，帮 projector 对齐
+                loss = loss + args.aux_weight * focal_dice(aux, gt)
             opt.zero_grad(set_to_none=True)
             loss.backward()
             torch.nn.utils.clip_grad_norm_(params, cfg["train"]["grad_clip"])
@@ -377,16 +405,25 @@ def train(cfg, args):
                       f"I-AUROC={res['macro'].get('i_auroc', float('nan')):.4f}", flush=True)
                 if macro == macro and macro > best:
                     best = macro
-                    torch.save({"decoder": decoder.state_dict(), "step": step}, out_dir / "best.pt")
+                    ck = {"decoder": decoder.state_dict(), "step": step, "arm": args.arm}
+                    if lang is not None:
+                        ck["lang"] = lang.state_dict()
+                    torch.save(ck, out_dir / "best.pt")
                 if step >= total:
                     break
     pd.DataFrame(history).to_csv(out_dir / "training_history.csv", index=False)
 
     ck = out_dir / "best.pt"
     if ck.exists():
-        decoder.load_state_dict(torch.load(ck, map_location=device, weights_only=False)["decoder"])
+        state = torch.load(ck, map_location=device, weights_only=False)
+        decoder.load_state_dict(state["decoder"])
+        if lang is not None and "lang" in state:
+            lang.load_state_dict(state["lang"])
     else:
-        torch.save({"decoder": decoder.state_dict(), "step": step}, out_dir / "last.pt")
+        last = {"decoder": decoder.state_dict(), "step": step, "arm": args.arm}
+        if lang is not None:
+            last["lang"] = lang.state_dict()
+        torch.save(last, out_dir / "last.pt")
 
     te = evaluate(model, te_loader, device, size)
     va = evaluate(model, va_loader, device, size)
@@ -401,6 +438,7 @@ def train(cfg, args):
         "model": {"backbone": args.backbone, "hidden": cfg["model"]["hidden"]},
         "train": cfg["train"], "split_sha256": split_sha,
         "best_val_macro_apro": best, "device": str(device),
+        "anchors": anchor_meta,
         "note": "frozen backbone + trainable decoder; checkpoint by val macro AUPRO@0.3",
     }, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(f"[seg] 完成 {out_dir}（{(time.time()-t0)/60:.1f} min, best AUPRO={best:.4f}）")
@@ -412,7 +450,15 @@ def main():
                     default=ROOT / "seg_cross_part" / "protocols" / "seg_default.yaml")
     ap.add_argument("--protocol", type=str, default=None)
     ap.add_argument("--fold", type=int, default=None)
-    ap.add_argument("--arm", choices=["a0"], default="a0")
+    ap.add_argument("--arm", choices=["a0", "a2"], default="a0",
+                    help="a0=纯 DINOv2；a2=+文本锚点语言分支")
+    ap.add_argument("--text-encoder", choices=["clip", "random"], default="clip",
+                    help="文本锚点来源：clip=CLIP 文本塔；random=随机向量（消融/冒烟）")
+    ap.add_argument("--text-model", default="openai/clip-vit-large-patch14-336")
+    ap.add_argument("--shuffle-anchors", action="store_true",
+                    help="打乱锚点与语义的对应（随机锚点消融）")
+    ap.add_argument("--aux-weight", type=float, default=0.5,
+                    help="语言分支辅助损失权重")
     ap.add_argument("--backbone", type=str, default="models/dinov2-base")
     ap.add_argument("--device", type=str, default=None)
     ap.add_argument("--exp-id", type=str, default=None)
