@@ -81,8 +81,9 @@ class VLMJudge:
     def __init__(self, model_dir: str, device: str = "cuda"):
         from transformers import AutoProcessor, Qwen3VLForConditionalGeneration
         self.proc = AutoProcessor.from_pretrained(model_dir)
+        dt = torch.bfloat16 if "8B" in model_dir else torch.float16
         self.model = Qwen3VLForConditionalGeneration.from_pretrained(
-            model_dir, dtype=torch.float16, device_map=device).eval()
+            model_dir, dtype=dt, device_map=device).eval()
         self.device = device
 
     @torch.no_grad()
@@ -136,6 +137,8 @@ def main() -> None:
     ap.add_argument("--topk", type=int, default=3)
     ap.add_argument("--limit", type=int, default=0, help=">0 只跑前 N 张（冒烟）")
     ap.add_argument("--mode", choices=["yesno", "compare"], default="yesno")
+    ap.add_argument("--vlm-size", type=int, default=1024,
+                    help="候选裁剪送进 VLM 的分辨率（448 会抹掉小缺陷，见 I-24）")
     ap.add_argument("--out", default="artifacts/seg_cross_part/vlm_recheck")
     args = ap.parse_args()
 
@@ -189,9 +192,10 @@ def main() -> None:
             if args.mode == "compare":
                 for _, rr in refs.head(2).iterrows():
                     rim = Image.open(src / rr["image_path"])
-                    ref_crops.append(crop_around(rim, m.shape[0] // 2, m.shape[1] // 2, m.shape[0]))
+                    ref_crops.append(crop_around(rim, m.shape[0] // 2, m.shape[1] // 2,
+                                                 m.shape[0], out_size=args.vlm_size))
             for (pr, pc, ps) in pk:
-                crop = crop_around(im, pr, pc, m.shape[0])
+                crop = crop_around(im, pr, pc, m.shape[0], out_size=args.vlm_size)
                 yes.append(judge.ask_compare(ref_crops, crop) if args.mode == "compare"
                            else judge.ask_yes(crop))
             rows.append({"image_path": r["image_path"], "class": cls,
