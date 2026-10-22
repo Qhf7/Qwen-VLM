@@ -1,0 +1,24 @@
+{
+ "adapter": null,
+ "max_px": 448,
+ "n_pairs": 300,
+ "acc": 0.75,
+ "wilson_ci": [
+  0.6980473999132475,
+  0.7956308850878847
+ ],
+ "boot_ci": [
+  0.7033333333333334,
+  0.8
+ ],
+ "p_vs_chance": 0.0,
+ "per_class": {
+  "3_adapter": 0.9,
+  "balun_transformer": 0.52,
+  "boost_converter_module": 0.72,
+  "jam_jar_model": 0.78,
+  "mobile_charging_connector": 0.72,
+  "side_press_switch": 0.86
+ },
+ "ans_first_rate": 0.5133333333333333
+}
