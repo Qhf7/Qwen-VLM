@@ -1,0 +1,4418 @@
+[
+ {
+  "image_path": "3_adapter/NG/FiberorBurrs/S0022/3_adapter__0022_NG_FiberorBurrs_C5_20240530131850950.png",
+  "class": "3_adapter",
+  "label": 1,
+  "b1_max": 0.23461252450942993,
+  "b1_top": [
+   0.2346,
+   0.2105,
+   0.1834
+  ],
+  "vlm": [
+   0.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "3_adapter/NG/UnevenCoating/S0032/3_adapter__0032_NG_UnevenCoating_C5_20240530104523615.png",
+  "class": "3_adapter",
+  "label": 1,
+  "b1_max": 0.12857258319854736,
+  "b1_top": [
+   0.1286,
+   0.1238,
+   0.1228
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   0.0
+  ]
+ },
+ {
+  "image_path": "3_adapter/NG/Fracture/S0018/3_adapter__0018_NG_Fracture_C3_20240530105714684.png",
+  "class": "3_adapter",
+  "label": 1,
+  "b1_max": 0.13675159215927124,
+  "b1_top": [
+   0.1368,
+   0.1275,
+   0.0999
+  ],
+  "vlm": [
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "image_path": "3_adapter/NG/OilStain/S0044/3_adapter__0044_NG_Oil_Stain_C4_20240530113354024.png",
+  "class": "3_adapter",
+  "label": 1,
+  "b1_max": 0.2791798710823059,
+  "b1_top": [
+   0.2792,
+   0.2242,
+   0.217
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "3_adapter/NG/UnevenCoating/S0044/3_adapter__0044_NG_UnevenCoating_C4_20240530104810154.png",
+  "class": "3_adapter",
+  "label": 1,
+  "b1_max": 0.1557236909866333,
+  "b1_top": [
+   0.1557,
+   0.1107,
+   0.1027
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   0.0
+  ]
+ },
+ {
+  "image_path": "3_adapter/NG/FiberorBurrs/S0047/3_adapter__0047_NG_FiberorBurrs_C3_20240530132936438.png",
+  "class": "3_adapter",
+  "label": 1,
+  "b1_max": 0.23390531539916992,
+  "b1_top": [
+   0.2339,
+   0.2297,
+   0.2221
+  ],
+  "vlm": [
+   0.0,
+   0.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "3_adapter/NG/Fracture/S0032/3_adapter__0032_NG_Fracture_C5_20240530105948944.png",
+  "class": "3_adapter",
+  "label": 1,
+  "b1_max": 0.11373966932296753,
+  "b1_top": [
+   0.1137,
+   0.1135,
+   0.1063
+  ],
+  "vlm": [
+   1.0,
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "image_path": "3_adapter/NG/FiberorBurrs/S0044/3_adapter__0044_NG_FiberorBurrs_C1_20240530132856338.png",
+  "class": "3_adapter",
+  "label": 1,
+  "b1_max": 0.2399386167526245,
+  "b1_top": [
+   0.2399,
+   0.234,
+   0.2213
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   0.0
+  ]
+ },
+ {
+  "image_path": "3_adapter/NG/Fracture/S0029/3_adapter__0029_NG_Fracture_C3_20240530105915764.png",
+  "class": "3_adapter",
+  "label": 1,
+  "b1_max": 0.15170979499816895,
+  "b1_top": [
+   0.1517,
+   0.1401,
+   0.1176
+  ],
+  "vlm": [
+   0.0,
+   1.0,
+   0.0
+  ]
+ },
+ {
+  "image_path": "3_adapter/OK/S0031/3_adapter_0031_OK_C2_20240530102955381.png",
+  "class": "3_adapter",
+  "label": 0,
+  "b1_max": 0.13055044412612915,
+  "b1_top": [
+   0.1306,
+   0.0998,
+   0.0723
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   0.0
+  ]
+ },
+ {
+  "image_path": "3_adapter/NG/Fracture/S0028/3_adapter__0028_NG_Fracture_C2_20240530105905392.png",
+  "class": "3_adapter",
+  "label": 1,
+  "b1_max": 0.16610082983970642,
+  "b1_top": [
+   0.1661,
+   0.1154,
+   0.0918
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   0.0
+  ]
+ },
+ {
+  "image_path": "3_adapter/OK/S0020/3_adapter_0020_OK_C5_20240530102728244.png",
+  "class": "3_adapter",
+  "label": 0,
+  "b1_max": 0.10408788919448853,
+  "b1_top": [
+   0.1041,
+   0.101,
+   0.0957
+  ],
+  "vlm": [
+   1.0,
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "image_path": "3_adapter/NG/FiberorBurrs/S0006/3_adapter__0006_NG_FiberorBurrs_C3_20240530131458817.png",
+  "class": "3_adapter",
+  "label": 1,
+  "b1_max": 0.19386953115463257,
+  "b1_top": [
+   0.1939,
+   0.1686,
+   0.1597
+  ],
+  "vlm": [
+   0.0,
+   0.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "3_adapter/NG/OilStain/S0008/3_adapter__0008_NG_Oil_Stain_C3_20240530112548061.png",
+  "class": "3_adapter",
+  "label": 1,
+  "b1_max": 0.2636412978172302,
+  "b1_top": [
+   0.2636,
+   0.2511,
+   0.2048
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "3_adapter/NG/UnevenCoating/S0038/3_adapter__0038_NG_UnevenCoating_C5_20240709182631602.png",
+  "class": "3_adapter",
+  "label": 1,
+  "b1_max": 0.11484047770500183,
+  "b1_top": [
+   0.1148,
+   0.1086,
+   0.1074
+  ],
+  "vlm": [
+   0.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "3_adapter/NG/UnevenCoating/S0045/3_adapter__0045_NG_UnevenCoating_C5_20240530104821870.png",
+  "class": "3_adapter",
+  "label": 1,
+  "b1_max": 0.1654362678527832,
+  "b1_top": [
+   0.1654,
+   0.1522,
+   0.1348
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "3_adapter/OK/S0030/3_adapter_0030_OK_C3_20240530102945462.png",
+  "class": "3_adapter",
+  "label": 0,
+  "b1_max": 0.14149394631385803,
+  "b1_top": [
+   0.1415,
+   0.1186,
+   0.1168
+  ],
+  "vlm": [
+   0.0,
+   1.0,
+   0.0
+  ]
+ },
+ {
+  "image_path": "3_adapter/NG/FiberorBurrs/S0025/3_adapter__0025_NG_FiberorBurrs_C4_20240530131950280.png",
+  "class": "3_adapter",
+  "label": 1,
+  "b1_max": 0.25539302825927734,
+  "b1_top": [
+   0.2554,
+   0.2455,
+   0.244
+  ],
+  "vlm": [
+   1.0,
+   0.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "3_adapter/NG/OilStain/S0012/3_adapter__0012_NG_Oil_Stain_C1_20240530112633238.png",
+  "class": "3_adapter",
+  "label": 1,
+  "b1_max": 0.25020739436149597,
+  "b1_top": [
+   0.2502,
+   0.242,
+   0.2169
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "3_adapter/NG/FiberorBurrs/S0021/3_adapter__0021_NG_FiberorBurrs_C5_20240530131835625.png",
+  "class": "3_adapter",
+  "label": 1,
+  "b1_max": 0.12413516640663147,
+  "b1_top": [
+   0.1241,
+   0.1194,
+   0.1183
+  ],
+  "vlm": [
+   1.0,
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "image_path": "3_adapter/OK/S0032/3_adapter_0032_OK_C2_20240530103006691.png",
+  "class": "3_adapter",
+  "label": 0,
+  "b1_max": 0.08822652697563171,
+  "b1_top": [
+   0.0882,
+   0.0813,
+   0.0683
+  ],
+  "vlm": [
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "image_path": "3_adapter/NG/FiberorBurrs/S0003/3_adapter__0003_NG_FiberorBurrs_C5_20240530131420592.png",
+  "class": "3_adapter",
+  "label": 1,
+  "b1_max": 0.17756539583206177,
+  "b1_top": [
+   0.1776,
+   0.167,
+   0.1465
+  ],
+  "vlm": [
+   0.0,
+   0.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "3_adapter/NG/FiberorBurrs/S0007/3_adapter__0007_NG_FiberorBurrs_C2_20240530131511564.png",
+  "class": "3_adapter",
+  "label": 1,
+  "b1_max": 0.19694918394088745,
+  "b1_top": [
+   0.1969,
+   0.1913,
+   0.1885
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "3_adapter/NG/Fracture/S0036/3_adapter__0036_NG_Fracture_C4_20240530110049180.png",
+  "class": "3_adapter",
+  "label": 1,
+  "b1_max": 0.10018926858901978,
+  "b1_top": [
+   0.1002,
+   0.0929,
+   0.0912
+  ],
+  "vlm": [
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "image_path": "3_adapter/OK/S0047/3_adapter_0047_OK_C1_20240530103306289.png",
+  "class": "3_adapter",
+  "label": 0,
+  "b1_max": 0.09003680944442749,
+  "b1_top": [
+   0.09,
+   0.0773,
+   0.0747
+  ],
+  "vlm": [
+   0.0,
+   0.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "3_adapter/NG/Fracture/S0035/3_adapter__0035_NG_Fracture_C5_20240530110037214.png",
+  "class": "3_adapter",
+  "label": 1,
+  "b1_max": 0.13352343440055847,
+  "b1_top": [
+   0.1335,
+   0.1111,
+   0.1037
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   0.0
+  ]
+ },
+ {
+  "image_path": "3_adapter/OK/S0038/3_adapter_0038_OK_C2_20240530103123564.png",
+  "class": "3_adapter",
+  "label": 0,
+  "b1_max": 0.10813537240028381,
+  "b1_top": [
+   0.1081,
+   0.1054,
+   0.0964
+  ],
+  "vlm": [
+   0.0,
+   0.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "3_adapter/OK/S0024/3_adapter_0024_OK_C2_20240530102824481.png",
+  "class": "3_adapter",
+  "label": 0,
+  "b1_max": 0.08580353856086731,
+  "b1_top": [
+   0.0858,
+   0.08,
+   0.0769
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   0.0
+  ]
+ },
+ {
+  "image_path": "3_adapter/NG/UnevenCoating/S0016/3_adapter__0016_NG_UnevenCoating_C3_20240709182410446.png",
+  "class": "3_adapter",
+  "label": 1,
+  "b1_max": 0.15163743495941162,
+  "b1_top": [
+   0.1516,
+   0.151,
+   0.1474
+  ],
+  "vlm": [
+   1.0,
+   0.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "3_adapter/OK/S0020/3_adapter_0020_OK_C1_20240530102730806.png",
+  "class": "3_adapter",
+  "label": 0,
+  "b1_max": 0.09622752666473389,
+  "b1_top": [
+   0.0962,
+   0.0935,
+   0.0889
+  ],
+  "vlm": [
+   1.0,
+   0.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "3_adapter/OK/S0032/3_adapter_0032_OK_C1_20240530103009331.png",
+  "class": "3_adapter",
+  "label": 0,
+  "b1_max": 0.12416502833366394,
+  "b1_top": [
+   0.1242,
+   0.0958,
+   0.0808
+  ],
+  "vlm": [
+   1.0,
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "image_path": "3_adapter/NG/FiberorBurrs/S0010/3_adapter__0010_NG_FiberorBurrs_C1_20240530131553726.png",
+  "class": "3_adapter",
+  "label": 1,
+  "b1_max": 0.18587416410446167,
+  "b1_top": [
+   0.1859,
+   0.182,
+   0.1762
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "3_adapter/NG/UnevenCoating/S0030/3_adapter__0030_NG_UnevenCoating_C5_20240530104458855.png",
+  "class": "3_adapter",
+  "label": 1,
+  "b1_max": 0.13107997179031372,
+  "b1_top": [
+   0.1311,
+   0.1141,
+   0.1125
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   0.0
+  ]
+ },
+ {
+  "image_path": "3_adapter/NG/UnevenCoating/S0010/3_adapter__0010_NG_UnevenCoating_C3_20240709182308333.png",
+  "class": "3_adapter",
+  "label": 1,
+  "b1_max": 0.1450425684452057,
+  "b1_top": [
+   0.145,
+   0.1293,
+   0.1255
+  ],
+  "vlm": [
+   0.0,
+   1.0,
+   0.0
+  ]
+ },
+ {
+  "image_path": "3_adapter/OK/S0040/3_adapter_0040_OK_C3_20240530103143559.png",
+  "class": "3_adapter",
+  "label": 0,
+  "b1_max": 0.14599460363388062,
+  "b1_top": [
+   0.146,
+   0.1295,
+   0.1251
+  ],
+  "vlm": [
+   1.0,
+   0.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "3_adapter/NG/OilStain/S0046/3_adapter__0046_NG_Oil_Stain_C5_20240530113418268.png",
+  "class": "3_adapter",
+  "label": 1,
+  "b1_max": 0.28980594873428345,
+  "b1_top": [
+   0.2898,
+   0.2746,
+   0.2568
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "3_adapter/OK/S0022/3_adapter_0022_OK_C3_20240530102803361.png",
+  "class": "3_adapter",
+  "label": 0,
+  "b1_max": 0.1286655068397522,
+  "b1_top": [
+   0.1287,
+   0.1283,
+   0.1162
+  ],
+  "vlm": [
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "image_path": "3_adapter/NG/Fracture/S0038/3_adapter__0038_NG_Fracture_C4_20240530110110425.png",
+  "class": "3_adapter",
+  "label": 1,
+  "b1_max": 0.08927902579307556,
+  "b1_top": [
+   0.0893,
+   0.084,
+   0.0801
+  ],
+  "vlm": [
+   1.0,
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "image_path": "3_adapter/OK/S0013/3_adapter_0013_OK_C2_20240530102608747.png",
+  "class": "3_adapter",
+  "label": 0,
+  "b1_max": 0.10248973965644836,
+  "b1_top": [
+   0.1025,
+   0.0938,
+   0.0734
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   0.0
+  ]
+ },
+ {
+  "image_path": "3_adapter/NG/UnevenCoating/S0018/3_adapter__0018_NG_UnevenCoating_C1_20240530104201881.png",
+  "class": "3_adapter",
+  "label": 1,
+  "b1_max": 0.11618253588676453,
+  "b1_top": [
+   0.1162,
+   0.1051,
+   0.1042
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   0.0
+  ]
+ },
+ {
+  "image_path": "3_adapter/OK/S0017/3_adapter_0017_OK_C2_20240530102653034.png",
+  "class": "3_adapter",
+  "label": 0,
+  "b1_max": 0.10064470767974854,
+  "b1_top": [
+   0.1006,
+   0.0943,
+   0.0808
+  ],
+  "vlm": [
+   0.0,
+   0.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "3_adapter/OK/S0034/3_adapter_0034_OK_C4_20240530103035590.png",
+  "class": "3_adapter",
+  "label": 0,
+  "b1_max": 0.07842957973480225,
+  "b1_top": [
+   0.0784,
+   0.0783,
+   0.0756
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   0.0
+  ]
+ },
+ {
+  "image_path": "3_adapter/NG/UnevenCoating/S0006/3_adapter__0006_NG_UnevenCoating_C1_20240530103919248.png",
+  "class": "3_adapter",
+  "label": 1,
+  "b1_max": 0.10144361853599548,
+  "b1_top": [
+   0.1014,
+   0.088,
+   0.0872
+  ],
+  "vlm": [
+   0.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "3_adapter/OK/S0027/3_adapter_0027_OK_C4_20240530102901925.png",
+  "class": "3_adapter",
+  "label": 0,
+  "b1_max": 0.09631291031837463,
+  "b1_top": [
+   0.0963,
+   0.0808,
+   0.0773
+  ],
+  "vlm": [
+   1.0,
+   0.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "3_adapter/NG/UnevenCoating/S0020/3_adapter__0020_NG_UnevenCoating_C4_20240530104225985.png",
+  "class": "3_adapter",
+  "label": 1,
+  "b1_max": 0.0954192578792572,
+  "b1_top": [
+   0.0954,
+   0.0929,
+   0.0859
+  ],
+  "vlm": [
+   0.0,
+   1.0,
+   0.0
+  ]
+ },
+ {
+  "image_path": "3_adapter/OK/S0034/3_adapter_0034_OK_C5_20240530103035637.png",
+  "class": "3_adapter",
+  "label": 0,
+  "b1_max": 0.11323589086532593,
+  "b1_top": [
+   0.1132,
+   0.1053,
+   0.1046
+  ],
+  "vlm": [
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "image_path": "balun_transformer/NG/GelatinousContaminant/S0012/balun_transformer__0012_NG_GelatinousContaminant_C4_20240706134928769.png",
+  "class": "balun_transformer",
+  "label": 1,
+  "b1_max": 0.18208631873130798,
+  "b1_top": [
+   0.1821,
+   0.1737,
+   0.1693
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "balun_transformer/NG/GelatinousContaminant/S0048/balun_transformer__0048_NG_GelatinousContaminant_C1_20240706135744597.png",
+  "class": "balun_transformer",
+  "label": 1,
+  "b1_max": 0.24744635820388794,
+  "b1_top": [
+   0.2474,
+   0.2466,
+   0.2408
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "balun_transformer/NG/Warpage/S0048/balun_transformer__0048_NG_Warpage_C3_20240706141002600.png",
+  "class": "balun_transformer",
+  "label": 1,
+  "b1_max": 0.12810122966766357,
+  "b1_top": [
+   0.1281,
+   0.1175,
+   0.1143
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "balun_transformer/NG/GelatinousContaminant/S0010/balun_transformer__0010_NG_GelatinousContaminant_C5_20240706134902510.png",
+  "class": "balun_transformer",
+  "label": 1,
+  "b1_max": 0.17555034160614014,
+  "b1_top": [
+   0.1756,
+   0.1714,
+   0.1575
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "balun_transformer/NG/CharacterOmission/S0029/balun_transformer__0029_NG_CharacterOmission_C5_20240706131655790.png",
+  "class": "balun_transformer",
+  "label": 1,
+  "b1_max": 0.13490641117095947,
+  "b1_top": [
+   0.1349,
+   0.1316,
+   0.1004
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "balun_transformer/NG/CharacterOmission/S0016/balun_transformer__0016_NG_CharacterOmission_C3_20240706131428553.png",
+  "class": "balun_transformer",
+  "label": 1,
+  "b1_max": 0.15440309047698975,
+  "b1_top": [
+   0.1544,
+   0.1268,
+   0.1226
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "balun_transformer/NG/GelatinousContaminant/S0038/balun_transformer__0038_NG_GelatinousContaminant_C5_20240706135525151.png",
+  "class": "balun_transformer",
+  "label": 1,
+  "b1_max": 0.23374301195144653,
+  "b1_top": [
+   0.2337,
+   0.2197,
+   0.2153
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "balun_transformer/NG/OilStain/S0014/balun_transformer__0014_NG_Oil_Stain_C3_20240706130129064.png",
+  "class": "balun_transformer",
+  "label": 1,
+  "b1_max": 0.1581590473651886,
+  "b1_top": [
+   0.1582,
+   0.1559,
+   0.1415
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "balun_transformer/OK/S0009/balun_transformer_0009_OK_C2_20240706112728042.png",
+  "class": "balun_transformer",
+  "label": 0,
+  "b1_max": 0.1004546582698822,
+  "b1_top": [
+   0.1005,
+   0.0968,
+   0.0956
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "balun_transformer/NG/GelatinousContaminant/S0005/balun_transformer__0005_NG_GelatinousContaminant_C3_20240706134807510.png",
+  "class": "balun_transformer",
+  "label": 1,
+  "b1_max": 0.2029559314250946,
+  "b1_top": [
+   0.203,
+   0.1934,
+   0.1916
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "balun_transformer/NG/OilStain/S0025/balun_transformer__0025_NG_Oil_Stain_C5_20240706130409093.png",
+  "class": "balun_transformer",
+  "label": 1,
+  "b1_max": 0.16448211669921875,
+  "b1_top": [
+   0.1645,
+   0.1347,
+   0.0811
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "balun_transformer/NG/GelatinousContaminant/S0022/balun_transformer__0022_NG_GelatinousContaminant_C2_20240706135121003.png",
+  "class": "balun_transformer",
+  "label": 1,
+  "b1_max": 0.1837943196296692,
+  "b1_top": [
+   0.1838,
+   0.1677,
+   0.1629
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "balun_transformer/OK/S0035/balun_transformer_0035_OK_C1_20240706113327892.png",
+  "class": "balun_transformer",
+  "label": 0,
+  "b1_max": 0.12027007341384888,
+  "b1_top": [
+   0.1203,
+   0.1045,
+   0.1026
+  ],
+  "vlm": [
+   1.0,
+   0.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "balun_transformer/NG/OilStain/S0007/balun_transformer__0007_NG_Oil_Stain_C4_20240706130003831.png",
+  "class": "balun_transformer",
+  "label": 1,
+  "b1_max": 0.16783344745635986,
+  "b1_top": [
+   0.1678,
+   0.1549,
+   0.143
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "balun_transformer/NG/OilStain/S0040/balun_transformer__0040_NG_Oil_Stain_C2_20240706130726250.png",
+  "class": "balun_transformer",
+  "label": 1,
+  "b1_max": 0.1716994345188141,
+  "b1_top": [
+   0.1717,
+   0.1629,
+   0.1625
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "balun_transformer/NG/GelatinousContaminant/S0006/balun_transformer__0006_NG_GelatinousContaminant_C5_20240706134817569.png",
+  "class": "balun_transformer",
+  "label": 1,
+  "b1_max": 0.22292011976242065,
+  "b1_top": [
+   0.2229,
+   0.2112,
+   0.1685
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "balun_transformer/OK/S0045/balun_transformer_0045_OK_C1_20240706113616909.png",
+  "class": "balun_transformer",
+  "label": 0,
+  "b1_max": 0.2403850257396698,
+  "b1_top": [
+   0.2404,
+   0.1999,
+   0.1671
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "balun_transformer/NG/CharacterOmission/S0040/balun_transformer__0040_NG_CharacterOmission_C2_20240706134409913.png",
+  "class": "balun_transformer",
+  "label": 1,
+  "b1_max": 0.14132875204086304,
+  "b1_top": [
+   0.1413,
+   0.1346,
+   0.1308
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "balun_transformer/NG/OilStain/S0037/balun_transformer__0037_NG_Oil_Stain_C3_20240706130633356.png",
+  "class": "balun_transformer",
+  "label": 1,
+  "b1_max": 0.1457872986793518,
+  "b1_top": [
+   0.1458,
+   0.1256,
+   0.1249
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "balun_transformer/NG/GelatinousContaminant/S0037/balun_transformer__0037_NG_GelatinousContaminant_C5_20240706135514323.png",
+  "class": "balun_transformer",
+  "label": 1,
+  "b1_max": 0.2052702009677887,
+  "b1_top": [
+   0.2053,
+   0.1945,
+   0.1646
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "balun_transformer/OK/S0032/balun_transformer_0032_OK_C3_20240706113244513.png",
+  "class": "balun_transformer",
+  "label": 0,
+  "b1_max": 0.13974380493164062,
+  "b1_top": [
+   0.1397,
+   0.1073,
+   0.1021
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "balun_transformer/NG/GelatinousContaminant/S0011/balun_transformer__0011_NG_GelatinousContaminant_C5_20240706134918661.png",
+  "class": "balun_transformer",
+  "label": 1,
+  "b1_max": 0.19491219520568848,
+  "b1_top": [
+   0.1949,
+   0.1772,
+   0.176
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "balun_transformer/OK/S0036/balun_transformer_0036_OK_C5_20240706113353841.png",
+  "class": "balun_transformer",
+  "label": 0,
+  "b1_max": 0.096668541431427,
+  "b1_top": [
+   0.0967,
+   0.0816,
+   0.0788
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "balun_transformer/NG/CharacterOmission/S0003/balun_transformer__0003_NG_CharacterOmission_C5_20240706131106469.png",
+  "class": "balun_transformer",
+  "label": 1,
+  "b1_max": 0.12099722027778625,
+  "b1_top": [
+   0.121,
+   0.1068,
+   0.1034
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "balun_transformer/NG/OilStain/S0017/balun_transformer__0017_NG_Oil_Stain_C2_20240706130213365.png",
+  "class": "balun_transformer",
+  "label": 1,
+  "b1_max": 0.1635485589504242,
+  "b1_top": [
+   0.1635,
+   0.1437,
+   0.1159
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "balun_transformer/NG/Warpage/S0047/balun_transformer__0047_NG_Warpage_C4_20240706140950025.png",
+  "class": "balun_transformer",
+  "label": 1,
+  "b1_max": 0.13192430138587952,
+  "b1_top": [
+   0.1319,
+   0.1294,
+   0.1083
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "balun_transformer/OK/S0036/balun_transformer_0036_OK_C4_20240706113353825.png",
+  "class": "balun_transformer",
+  "label": 0,
+  "b1_max": 0.1314396858215332,
+  "b1_top": [
+   0.1314,
+   0.1265,
+   0.1118
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "balun_transformer/OK/S0040/balun_transformer_0040_OK_C3_20240706113444225.png",
+  "class": "balun_transformer",
+  "label": 0,
+  "b1_max": 0.1427435576915741,
+  "b1_top": [
+   0.1427,
+   0.1095,
+   0.103
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "balun_transformer/NG/Warpage/S0024/balun_transformer__0024_NG_Warpage_C2_20240706140351239.png",
+  "class": "balun_transformer",
+  "label": 0,
+  "b1_max": 0.11309480667114258,
+  "b1_top": [
+   0.1131,
+   0.1129,
+   0.106
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "balun_transformer/OK/S0006/balun_transformer_0006_OK_C1_20240706112600319.png",
+  "class": "balun_transformer",
+  "label": 0,
+  "b1_max": 0.12446179986000061,
+  "b1_top": [
+   0.1245,
+   0.1048,
+   0.1028
+  ],
+  "vlm": [
+   1.0,
+   0.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "balun_transformer/NG/OilStain/S0009/balun_transformer__0009_NG_Oil_Stain_C4_20240706130028327.png",
+  "class": "balun_transformer",
+  "label": 1,
+  "b1_max": 0.21279841661453247,
+  "b1_top": [
+   0.2128,
+   0.1861,
+   0.1664
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "balun_transformer/OK/S0018/balun_transformer_0018_OK_C3_20240706112917683.png",
+  "class": "balun_transformer",
+  "label": 0,
+  "b1_max": 0.1241692304611206,
+  "b1_top": [
+   0.1242,
+   0.1168,
+   0.1131
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "balun_transformer/NG/CharacterOmission/S0048/balun_transformer__0048_NG_CharacterOmission_C5_20240706134555895.png",
+  "class": "balun_transformer",
+  "label": 1,
+  "b1_max": 0.19722416996955872,
+  "b1_top": [
+   0.1972,
+   0.1288,
+   0.1156
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "balun_transformer/NG/OilStain/S0046/balun_transformer__0046_NG_Oil_Stain_C3_20240706130832347.png",
+  "class": "balun_transformer",
+  "label": 1,
+  "b1_max": 0.1676117181777954,
+  "b1_top": [
+   0.1676,
+   0.1673,
+   0.1329
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "balun_transformer/OK/S0038/balun_transformer_0038_OK_C4_20240706113418051.png",
+  "class": "balun_transformer",
+  "label": 0,
+  "b1_max": 0.13723576068878174,
+  "b1_top": [
+   0.1372,
+   0.1291,
+   0.1285
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "balun_transformer/NG/Warpage/S0016/balun_transformer__0016_NG_Warpage_C4_20240706140217825.png",
+  "class": "balun_transformer",
+  "label": 0,
+  "b1_max": 0.1436745524406433,
+  "b1_top": [
+   0.1437,
+   0.1351,
+   0.1328
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "balun_transformer/NG/Warpage/S0013/balun_transformer__0013_NG_Warpage_C4_20240706140142503.png",
+  "class": "balun_transformer",
+  "label": 0,
+  "b1_max": 0.18932491540908813,
+  "b1_top": [
+   0.1893,
+   0.1661,
+   0.1518
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "balun_transformer/NG/Warpage/S0032/balun_transformer__0032_NG_Warpage_C4_20240706140531861.png",
+  "class": "balun_transformer",
+  "label": 1,
+  "b1_max": 0.12878566980361938,
+  "b1_top": [
+   0.1288,
+   0.1177,
+   0.1123
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "balun_transformer/NG/OilStain/S0027/balun_transformer__0027_NG_Oil_Stain_C1_20240706130436695.png",
+  "class": "balun_transformer",
+  "label": 1,
+  "b1_max": 0.20435845851898193,
+  "b1_top": [
+   0.2044,
+   0.1912,
+   0.158
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "balun_transformer/NG/Warpage/S0050/balun_transformer__0050_NG_Warpage_C1_20240706141029159.png",
+  "class": "balun_transformer",
+  "label": 1,
+  "b1_max": 0.1365349292755127,
+  "b1_top": [
+   0.1365,
+   0.1168,
+   0.1148
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "balun_transformer/NG/OilStain/S0021/balun_transformer__0021_NG_Oil_Stain_C1_20240706130306291.png",
+  "class": "balun_transformer",
+  "label": 1,
+  "b1_max": 0.23154446482658386,
+  "b1_top": [
+   0.2315,
+   0.227,
+   0.21
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "balun_transformer/OK/S0042/balun_transformer_0042_OK_C2_20240706113525967.png",
+  "class": "balun_transformer",
+  "label": 0,
+  "b1_max": 0.12193876504898071,
+  "b1_top": [
+   0.1219,
+   0.1219,
+   0.1036
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "balun_transformer/NG/GelatinousContaminant/S0021/balun_transformer__0021_NG_GelatinousContaminant_C2_20240706135110788.png",
+  "class": "balun_transformer",
+  "label": 1,
+  "b1_max": 0.20054101943969727,
+  "b1_top": [
+   0.2005,
+   0.1941,
+   0.1829
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "balun_transformer/OK/S0001/balun_transformer_0001_OK_C4_20240706112113685.png",
+  "class": "balun_transformer",
+  "label": 0,
+  "b1_max": 0.13308808207511902,
+  "b1_top": [
+   0.1331,
+   0.1044,
+   0.104
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "balun_transformer/NG/CharacterOmission/S0007/balun_transformer__0007_NG_CharacterOmission_C2_20240706131155693.png",
+  "class": "balun_transformer",
+  "label": 1,
+  "b1_max": 0.13667196035385132,
+  "b1_top": [
+   0.1367,
+   0.1299,
+   0.1255
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "balun_transformer/OK/S0032/balun_transformer_0032_OK_C2_20240706113244497.png",
+  "class": "balun_transformer",
+  "label": 0,
+  "b1_max": 0.10719525814056396,
+  "b1_top": [
+   0.1072,
+   0.1032,
+   0.0886
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "boost_converter_module/NG/Damage/S0023/boost_converter_module__0023_NG_Damage_C5_20240529110226893.png",
+  "class": "boost_converter_module",
+  "label": 1,
+  "b1_max": 0.16306978464126587,
+  "b1_top": [
+   0.1631,
+   0.107,
+   0.1055
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "boost_converter_module/NG/BrokenWire/S0047/boost_converter_module__0047_NG_BrokenWire_C1_20240529112022541.png",
+  "class": "boost_converter_module",
+  "label": 1,
+  "b1_max": 0.1765965223312378,
+  "b1_top": [
+   0.1766,
+   0.1428,
+   0.1377
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "boost_converter_module/NG/Discoloration/S0039/boost_converter_module__0039_NG_Discoloration_C5_20240529102805352.png",
+  "class": "boost_converter_module",
+  "label": 1,
+  "b1_max": 0.20737290382385254,
+  "b1_top": [
+   0.2074,
+   0.1956,
+   0.1943
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "boost_converter_module/NG/Damage/S0024/boost_converter_module__0024_NG_Damage_C5_20240529110237243.png",
+  "class": "boost_converter_module",
+  "label": 1,
+  "b1_max": 0.17468726634979248,
+  "b1_top": [
+   0.1747,
+   0.1687,
+   0.1681
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "boost_converter_module/NG/Discoloration/S0043/boost_converter_module__0043_NG_Discoloration_C1_20240529102854650.png",
+  "class": "boost_converter_module",
+  "label": 1,
+  "b1_max": 0.26329416036605835,
+  "b1_top": [
+   0.2633,
+   0.2623,
+   0.258
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "boost_converter_module/NG/MetallicContaminant/S0046/boost_converter_module__0046_NG_MetallicContaminant_C3_20240529105430091.png",
+  "class": "boost_converter_module",
+  "label": 1,
+  "b1_max": 0.16865241527557373,
+  "b1_top": [
+   0.1687,
+   0.1494,
+   0.144
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "boost_converter_module/NG/Discoloration/S0039/boost_converter_module__0039_NG_Discoloration_C3_20240529102805298.png",
+  "class": "boost_converter_module",
+  "label": 1,
+  "b1_max": 0.24900734424591064,
+  "b1_top": [
+   0.249,
+   0.2434,
+   0.2383
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "boost_converter_module/NG/Damage/S0016/boost_converter_module__0016_NG_Damage_C3_20240529110116869.png",
+  "class": "boost_converter_module",
+  "label": 1,
+  "b1_max": 0.16470682621002197,
+  "b1_top": [
+   0.1647,
+   0.1576,
+   0.1415
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "boost_converter_module/NG/BrokenWire/S0042/boost_converter_module__0042_NG_BrokenWire_C4_20240529111921726.png",
+  "class": "boost_converter_module",
+  "label": 0,
+  "b1_max": 0.18066677451133728,
+  "b1_top": [
+   0.1807,
+   0.1627,
+   0.1157
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "boost_converter_module/OK/S0018/boost_converter_module_0018_OK_C2_20240529100255853.png",
+  "class": "boost_converter_module",
+  "label": 0,
+  "b1_max": 0.19384145736694336,
+  "b1_top": [
+   0.1938,
+   0.172,
+   0.0859
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "boost_converter_module/NG/Discoloration/S0008/boost_converter_module__0008_NG_Discoloration_C5_20240529101858894.png",
+  "class": "boost_converter_module",
+  "label": 1,
+  "b1_max": 0.18787875771522522,
+  "b1_top": [
+   0.1879,
+   0.1852,
+   0.1696
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "boost_converter_module/NG/Damage/S0006/boost_converter_module__0006_NG_Damage_C5_20240529105929309.png",
+  "class": "boost_converter_module",
+  "label": 1,
+  "b1_max": 0.1639317274093628,
+  "b1_top": [
+   0.1639,
+   0.1538,
+   0.1415
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "boost_converter_module/NG/Damage/S0026/boost_converter_module__0026_NG_Damage_C3_20240529110258457.png",
+  "class": "boost_converter_module",
+  "label": 1,
+  "b1_max": 0.14875569939613342,
+  "b1_top": [
+   0.1488,
+   0.1471,
+   0.1374
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "boost_converter_module/NG/Discoloration/S0042/boost_converter_module__0042_NG_Discoloration_C4_20240529102838460.png",
+  "class": "boost_converter_module",
+  "label": 1,
+  "b1_max": 0.12847357988357544,
+  "b1_top": [
+   0.1285,
+   0.1181,
+   0.1125
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "boost_converter_module/OK/S0037/boost_converter_module_0037_OK_C1_20240529100637125.png",
+  "class": "boost_converter_module",
+  "label": 0,
+  "b1_max": 0.12552952766418457,
+  "b1_top": [
+   0.1255,
+   0.1239,
+   0.1191
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "boost_converter_module/NG/BrokenWire/S0007/boost_converter_module__0007_NG_BrokenWire_C3_20240529111230946.png",
+  "class": "boost_converter_module",
+  "label": 1,
+  "b1_max": 0.22774502635002136,
+  "b1_top": [
+   0.2277,
+   0.2228,
+   0.206
+  ],
+  "vlm": [
+   1.0,
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "image_path": "boost_converter_module/OK/S0002/boost_converter_module_0002_OK_C3_20240529095937102.png",
+  "class": "boost_converter_module",
+  "label": 0,
+  "b1_max": 0.14427107572555542,
+  "b1_top": [
+   0.1443,
+   0.1208,
+   0.1201
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "boost_converter_module/NG/BrokenWire/S0003/boost_converter_module__0003_NG_BrokenWire_C5_20240529111143785.png",
+  "class": "boost_converter_module",
+  "label": 1,
+  "b1_max": 0.23922210931777954,
+  "b1_top": [
+   0.2392,
+   0.1627,
+   0.1594
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "boost_converter_module/NG/BrokenWire/S0014/boost_converter_module__0014_NG_BrokenWire_C5_20240529111344659.png",
+  "class": "boost_converter_module",
+  "label": 1,
+  "b1_max": 0.15783476829528809,
+  "b1_top": [
+   0.1578,
+   0.1527,
+   0.1118
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "boost_converter_module/NG/MetallicContaminant/S0034/boost_converter_module__0034_NG_MetallicContaminant_C5_20240624182109446.png",
+  "class": "boost_converter_module",
+  "label": 1,
+  "b1_max": 0.21314004063606262,
+  "b1_top": [
+   0.2131,
+   0.1576,
+   0.1257
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "boost_converter_module/NG/Discoloration/S0014/boost_converter_module__0014_NG_Discoloration_C1_20240529102047362.png",
+  "class": "boost_converter_module",
+  "label": 1,
+  "b1_max": 0.18931743502616882,
+  "b1_top": [
+   0.1893,
+   0.1704,
+   0.1623
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "boost_converter_module/OK/S0002/boost_converter_module_0002_OK_C1_20240529095939566.png",
+  "class": "boost_converter_module",
+  "label": 0,
+  "b1_max": 0.12232023477554321,
+  "b1_top": [
+   0.1223,
+   0.1145,
+   0.1045
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "boost_converter_module/NG/Damage/S0003/boost_converter_module__0003_NG_Damage_C4_20240529105859810.png",
+  "class": "boost_converter_module",
+  "label": 1,
+  "b1_max": 0.15744543075561523,
+  "b1_top": [
+   0.1574,
+   0.1445,
+   0.1049
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "boost_converter_module/NG/BrokenWire/S0047/boost_converter_module__0047_NG_BrokenWire_C5_20240529112020130.png",
+  "class": "boost_converter_module",
+  "label": 0,
+  "b1_max": 0.15731802582740784,
+  "b1_top": [
+   0.1573,
+   0.1444,
+   0.1231
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "boost_converter_module/OK/S0038/boost_converter_module_0038_OK_C4_20240529100646243.png",
+  "class": "boost_converter_module",
+  "label": 0,
+  "b1_max": 0.14307206869125366,
+  "b1_top": [
+   0.1431,
+   0.1333,
+   0.1259
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "boost_converter_module/NG/Discoloration/S0032/boost_converter_module__0032_NG_Discoloration_C1_20240529102624326.png",
+  "class": "boost_converter_module",
+  "label": 1,
+  "b1_max": 0.24470549821853638,
+  "b1_top": [
+   0.2447,
+   0.2349,
+   0.2342
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "boost_converter_module/NG/MetallicContaminant/S0036/boost_converter_module__0036_NG_MetallicContaminant_C1_20240529105246909.png",
+  "class": "boost_converter_module",
+  "label": 1,
+  "b1_max": 0.22711870074272156,
+  "b1_top": [
+   0.2271,
+   0.2072,
+   0.2065
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "boost_converter_module/OK/S0007/boost_converter_module_0007_OK_C3_20240529100037714.png",
+  "class": "boost_converter_module",
+  "label": 0,
+  "b1_max": 0.13874098658561707,
+  "b1_top": [
+   0.1387,
+   0.1305,
+   0.118
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "boost_converter_module/OK/S0033/boost_converter_module_0033_OK_C2_20240529100548946.png",
+  "class": "boost_converter_module",
+  "label": 0,
+  "b1_max": 0.12293320894241333,
+  "b1_top": [
+   0.1229,
+   0.1221,
+   0.1192
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "boost_converter_module/NG/MetallicContaminant/S0031/boost_converter_module__0031_NG_MetallicContaminant_C5_20240529105152484.png",
+  "class": "boost_converter_module",
+  "label": 0,
+  "b1_max": 0.12949499487876892,
+  "b1_top": [
+   0.1295,
+   0.1173,
+   0.1039
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "boost_converter_module/NG/Damage/S0022/boost_converter_module__0022_NG_Damage_C3_20240529110216775.png",
+  "class": "boost_converter_module",
+  "label": 1,
+  "b1_max": 0.17248713970184326,
+  "b1_top": [
+   0.1725,
+   0.1586,
+   0.1404
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "boost_converter_module/OK/S0038/boost_converter_module_0038_OK_C5_20240529100646273.png",
+  "class": "boost_converter_module",
+  "label": 0,
+  "b1_max": 0.14378511905670166,
+  "b1_top": [
+   0.1438,
+   0.122,
+   0.1137
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "boost_converter_module/NG/Damage/S0005/boost_converter_module__0005_NG_Damage_C3_20240529105919574.png",
+  "class": "boost_converter_module",
+  "label": 1,
+  "b1_max": 0.10281917452812195,
+  "b1_top": [
+   0.1028,
+   0.0882,
+   0.0866
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "boost_converter_module/OK/S0045/boost_converter_module_0045_OK_C3_20240529100824398.png",
+  "class": "boost_converter_module",
+  "label": 0,
+  "b1_max": 0.14373207092285156,
+  "b1_top": [
+   0.1437,
+   0.1013,
+   0.1009
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "boost_converter_module/OK/S0032/boost_converter_module_0032_OK_C1_20240529100540002.png",
+  "class": "boost_converter_module",
+  "label": 0,
+  "b1_max": 0.13066211342811584,
+  "b1_top": [
+   0.1307,
+   0.1225,
+   0.1217
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "boost_converter_module/NG/Discoloration/S0011/boost_converter_module__0011_NG_Discoloration_C5_20240529101958284.png",
+  "class": "boost_converter_module",
+  "label": 1,
+  "b1_max": 0.1462375819683075,
+  "b1_top": [
+   0.1462,
+   0.1403,
+   0.1339
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "boost_converter_module/NG/MetallicContaminant/S0038/boost_converter_module__0038_NG_MetallicContaminant_C5_20240529105305841.png",
+  "class": "boost_converter_module",
+  "label": 1,
+  "b1_max": 0.1884090006351471,
+  "b1_top": [
+   0.1884,
+   0.1804,
+   0.1684
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "boost_converter_module/NG/Damage/S0039/boost_converter_module__0039_NG_Damage_C2_20240529110510564.png",
+  "class": "boost_converter_module",
+  "label": 1,
+  "b1_max": 0.14014515280723572,
+  "b1_top": [
+   0.1401,
+   0.125,
+   0.1041
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "boost_converter_module/NG/Damage/S0014/boost_converter_module__0014_NG_Damage_C1_20240529110058742.png",
+  "class": "boost_converter_module",
+  "label": 1,
+  "b1_max": 0.2289504110813141,
+  "b1_top": [
+   0.229,
+   0.2178,
+   0.2018
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "boost_converter_module/OK/S0048/boost_converter_module_0048_OK_C1_20240529101302756.png",
+  "class": "boost_converter_module",
+  "label": 0,
+  "b1_max": 0.19155123829841614,
+  "b1_top": [
+   0.1916,
+   0.1748,
+   0.1668
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "boost_converter_module/OK/S0014/boost_converter_module_0014_OK_C2_20240529100207335.png",
+  "class": "boost_converter_module",
+  "label": 0,
+  "b1_max": 0.11990737915039062,
+  "b1_top": [
+   0.1199,
+   0.1159,
+   0.1157
+  ],
+  "vlm": [
+   0.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "boost_converter_module/NG/Damage/S0021/boost_converter_module__0021_NG_Damage_C3_20240529110206846.png",
+  "class": "boost_converter_module",
+  "label": 1,
+  "b1_max": 0.10400637984275818,
+  "b1_top": [
+   0.104,
+   0.0952,
+   0.0937
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "boost_converter_module/NG/Discoloration/S0045/boost_converter_module__0045_NG_Discoloration_C4_20240529102915118.png",
+  "class": "boost_converter_module",
+  "label": 1,
+  "b1_max": 0.19744715094566345,
+  "b1_top": [
+   0.1974,
+   0.1916,
+   0.1858
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "boost_converter_module/OK/S0035/boost_converter_module_0035_OK_C3_20240529100611969.png",
+  "class": "boost_converter_module",
+  "label": 0,
+  "b1_max": 0.16331389546394348,
+  "b1_top": [
+   0.1633,
+   0.1528,
+   0.1337
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "boost_converter_module/NG/MetallicContaminant/S0020/boost_converter_module__0020_NG_MetallicContaminant_C1_20240529104944938.png",
+  "class": "boost_converter_module",
+  "label": 1,
+  "b1_max": 0.1792711615562439,
+  "b1_top": [
+   0.1793,
+   0.1555,
+   0.1262
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "boost_converter_module/NG/Damage/S0019/boost_converter_module__0019_NG_Damage_C4_20240529110146973.png",
+  "class": "boost_converter_module",
+  "label": 1,
+  "b1_max": 0.14160558581352234,
+  "b1_top": [
+   0.1416,
+   0.1388,
+   0.1245
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "jam_jar_model/NG/CharacterOmission/S0044/jam_jar_model__0044_NG_CharacterOmission_C2_20240726135935328.png",
+  "class": "jam_jar_model",
+  "label": 1,
+  "b1_max": 0.10863861441612244,
+  "b1_top": [
+   0.1086,
+   0.0984,
+   0.0941
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "jam_jar_model/NG/Scratch/S0002/jam_jar_model__0002_NG_Scratch_C2_20240726140436482.png",
+  "class": "jam_jar_model",
+  "label": 1,
+  "b1_max": 0.14201050996780396,
+  "b1_top": [
+   0.142,
+   0.0995,
+   0.0971
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "jam_jar_model/NG/Abrasion/S0036/jam_jar_model__0036_NG_Abrasion_C5_20240726145613624.png",
+  "class": "jam_jar_model",
+  "label": 1,
+  "b1_max": 0.15747830271720886,
+  "b1_top": [
+   0.1575,
+   0.1227,
+   0.1067
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "jam_jar_model/OK/S0026/jam_jar_model_0026_OK_C2_20240726133457233.png",
+  "class": "jam_jar_model",
+  "label": 0,
+  "b1_max": 0.10483121871948242,
+  "b1_top": [
+   0.1048,
+   0.0977,
+   0.0918
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "jam_jar_model/NG/CharacterOmission/S0047/jam_jar_model__0047_NG_CharacterOmission_C3_20240726140016951.png",
+  "class": "jam_jar_model",
+  "label": 1,
+  "b1_max": 0.12975409626960754,
+  "b1_top": [
+   0.1298,
+   0.0889,
+   0.087
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "jam_jar_model/NG/CharacterOmission/S0001/jam_jar_model__0001_NG_CharacterOmission_C2_20240726134855656.png",
+  "class": "jam_jar_model",
+  "label": 1,
+  "b1_max": 0.14519426226615906,
+  "b1_top": [
+   0.1452,
+   0.1423,
+   0.1036
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "jam_jar_model/NG/Scratch/S0017/jam_jar_model__0017_NG_Scratch_C3_20240726141019536.png",
+  "class": "jam_jar_model",
+  "label": 1,
+  "b1_max": 0.18645992875099182,
+  "b1_top": [
+   0.1865,
+   0.1847,
+   0.183
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "jam_jar_model/NG/Discoloration/S0017/jam_jar_model__0017_NG_Discoloration_C4_20240726142715967.png",
+  "class": "jam_jar_model",
+  "label": 1,
+  "b1_max": 0.15307176113128662,
+  "b1_top": [
+   0.1531,
+   0.1365,
+   0.1063
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "jam_jar_model/OK/S0038/jam_jar_model_0038_OK_C4_20240726133927789.png",
+  "class": "jam_jar_model",
+  "label": 0,
+  "b1_max": 0.11074239015579224,
+  "b1_top": [
+   0.1107,
+   0.0936,
+   0.0908
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "jam_jar_model/NG/Scratch/S0022/jam_jar_model__0022_NG_Scratch_C2_20240726141123516.png",
+  "class": "jam_jar_model",
+  "label": 1,
+  "b1_max": 0.18361449241638184,
+  "b1_top": [
+   0.1836,
+   0.1688,
+   0.1256
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "jam_jar_model/OK/S0040/jam_jar_model_0040_OK_C4_20240726133953483.png",
+  "class": "jam_jar_model",
+  "label": 0,
+  "b1_max": 0.14107248187065125,
+  "b1_top": [
+   0.1411,
+   0.1068,
+   0.1026
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "jam_jar_model/NG/Scratch/S0011/jam_jar_model__0011_NG_Scratch_C5_20240726140641243.png",
+  "class": "jam_jar_model",
+  "label": 1,
+  "b1_max": 0.12152555584907532,
+  "b1_top": [
+   0.1215,
+   0.101,
+   0.0909
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "jam_jar_model/NG/Abrasion/S0014/jam_jar_model__0014_NG_Abrasion_C2_20240726144843338.png",
+  "class": "jam_jar_model",
+  "label": 1,
+  "b1_max": 0.2133708894252777,
+  "b1_top": [
+   0.2134,
+   0.2131,
+   0.2131
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "jam_jar_model/OK/S0033/jam_jar_model_0033_OK_C4_20240726133822810.png",
+  "class": "jam_jar_model",
+  "label": 0,
+  "b1_max": 0.1141473650932312,
+  "b1_top": [
+   0.1141,
+   0.1002,
+   0.0983
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "jam_jar_model/NG/Scratch/S0043/jam_jar_model__0043_NG_Scratch_C3_20240726141705863.png",
+  "class": "jam_jar_model",
+  "label": 1,
+  "b1_max": 0.15710467100143433,
+  "b1_top": [
+   0.1571,
+   0.1455,
+   0.1379
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "jam_jar_model/NG/CharacterOmission/S0014/jam_jar_model__0014_NG_CharacterOmission_C3_20240726135212269.png",
+  "class": "jam_jar_model",
+  "label": 1,
+  "b1_max": 0.1118806004524231,
+  "b1_top": [
+   0.1119,
+   0.1041,
+   0.1007
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "jam_jar_model/NG/CharacterOmission/S0033/jam_jar_model__0033_NG_CharacterOmission_C4_20240726135704413.png",
+  "class": "jam_jar_model",
+  "label": 1,
+  "b1_max": 0.10988271236419678,
+  "b1_top": [
+   0.1099,
+   0.1024,
+   0.1019
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "jam_jar_model/NG/Discoloration/S0049/jam_jar_model__0049_NG_Discoloration_C4_20240726144159072.png",
+  "class": "jam_jar_model",
+  "label": 1,
+  "b1_max": 0.17678269743919373,
+  "b1_top": [
+   0.1768,
+   0.1495,
+   0.1453
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "jam_jar_model/NG/Discoloration/S0024/jam_jar_model__0024_NG_Discoloration_C1_20240726142908022.png",
+  "class": "jam_jar_model",
+  "label": 1,
+  "b1_max": 0.27394574880599976,
+  "b1_top": [
+   0.2739,
+   0.2704,
+   0.2639
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "jam_jar_model/NG/Scratch/S0043/jam_jar_model__0043_NG_Scratch_C5_20240726141705909.png",
+  "class": "jam_jar_model",
+  "label": 1,
+  "b1_max": 0.14757388830184937,
+  "b1_top": [
+   0.1476,
+   0.1286,
+   0.1119
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "jam_jar_model/NG/Scratch/S0025/jam_jar_model__0025_NG_Scratch_C4_20240726141206707.png",
+  "class": "jam_jar_model",
+  "label": 1,
+  "b1_max": 0.1473870873451233,
+  "b1_top": [
+   0.1474,
+   0.1146,
+   0.0895
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "jam_jar_model/NG/Abrasion/S0025/jam_jar_model__0025_NG_Abrasion_C4_20240726145324703.png",
+  "class": "jam_jar_model",
+  "label": 0,
+  "b1_max": 0.128340482711792,
+  "b1_top": [
+   0.1283,
+   0.1019,
+   0.0997
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "jam_jar_model/NG/Scratch/S0020/jam_jar_model__0020_NG_Scratch_C3_20240726141057254.png",
+  "class": "jam_jar_model",
+  "label": 1,
+  "b1_max": 0.1547025442123413,
+  "b1_top": [
+   0.1547,
+   0.1429,
+   0.1364
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "jam_jar_model/NG/Scratch/S0005/jam_jar_model__0005_NG_Scratch_C1_20240726140524584.png",
+  "class": "jam_jar_model",
+  "label": 1,
+  "b1_max": 0.3024013042449951,
+  "b1_top": [
+   0.3024,
+   0.302,
+   0.2975
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "jam_jar_model/OK/S0038/jam_jar_model_0038_OK_C2_20240726133927743.png",
+  "class": "jam_jar_model",
+  "label": 0,
+  "b1_max": 0.10943788290023804,
+  "b1_top": [
+   0.1094,
+   0.1017,
+   0.0959
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "jam_jar_model/NG/Abrasion/S0004/jam_jar_model__0004_NG_Abrasion_C2_20240726144601428.png",
+  "class": "jam_jar_model",
+  "label": 1,
+  "b1_max": 0.15578144788742065,
+  "b1_top": [
+   0.1558,
+   0.1185,
+   0.1109
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "jam_jar_model/OK/S0011/jam_jar_model_0011_OK_C5_20240726132530397.png",
+  "class": "jam_jar_model",
+  "label": 0,
+  "b1_max": 0.11892545223236084,
+  "b1_top": [
+   0.1189,
+   0.1159,
+   0.1057
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "jam_jar_model/NG/CharacterOmission/S0022/jam_jar_model__0022_NG_CharacterOmission_C4_20240726135437372.png",
+  "class": "jam_jar_model",
+  "label": 1,
+  "b1_max": 0.17475664615631104,
+  "b1_top": [
+   0.1748,
+   0.1187,
+   0.1176
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "jam_jar_model/NG/CharacterOmission/S0014/jam_jar_model__0014_NG_CharacterOmission_C1_20240726135214845.png",
+  "class": "jam_jar_model",
+  "label": 1,
+  "b1_max": 0.2773814797401428,
+  "b1_top": [
+   0.2774,
+   0.2727,
+   0.2663
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "jam_jar_model/OK/S0001/jam_jar_model_0001_OK_C4_20240726113445861.png",
+  "class": "jam_jar_model",
+  "label": 0,
+  "b1_max": 0.1255873739719391,
+  "b1_top": [
+   0.1256,
+   0.1162,
+   0.0921
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "jam_jar_model/OK/S0038/jam_jar_model_0038_OK_C1_20240726133930352.png",
+  "class": "jam_jar_model",
+  "label": 0,
+  "b1_max": 0.27354979515075684,
+  "b1_top": [
+   0.2735,
+   0.2697,
+   0.2691
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "jam_jar_model/NG/Discoloration/S0046/jam_jar_model__0046_NG_Discoloration_C2_20240726144052094.png",
+  "class": "jam_jar_model",
+  "label": 1,
+  "b1_max": 0.1528502106666565,
+  "b1_top": [
+   0.1529,
+   0.1457,
+   0.1365
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "jam_jar_model/NG/Discoloration/S0041/jam_jar_model__0041_NG_Discoloration_C4_20240726143942441.png",
+  "class": "jam_jar_model",
+  "label": 1,
+  "b1_max": 0.13418567180633545,
+  "b1_top": [
+   0.1342,
+   0.1136,
+   0.1113
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "jam_jar_model/OK/S0015/jam_jar_model_0015_OK_C2_20240726133126275.png",
+  "class": "jam_jar_model",
+  "label": 0,
+  "b1_max": 0.12536203861236572,
+  "b1_top": [
+   0.1254,
+   0.1142,
+   0.0965
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "jam_jar_model/OK/S0028/jam_jar_model_0028_OK_C4_20240726133716540.png",
+  "class": "jam_jar_model",
+  "label": 0,
+  "b1_max": 0.0880649983882904,
+  "b1_top": [
+   0.0881,
+   0.085,
+   0.0828
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "jam_jar_model/NG/Abrasion/S0008/jam_jar_model__0008_NG_Abrasion_C4_20240726144713434.png",
+  "class": "jam_jar_model",
+  "label": 1,
+  "b1_max": 0.15258410573005676,
+  "b1_top": [
+   0.1526,
+   0.1525,
+   0.1435
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "jam_jar_model/NG/CharacterOmission/S0008/jam_jar_model__0008_NG_CharacterOmission_C3_20240726135051837.png",
+  "class": "jam_jar_model",
+  "label": 1,
+  "b1_max": 0.11402234435081482,
+  "b1_top": [
+   0.114,
+   0.1038,
+   0.1022
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "jam_jar_model/OK/S0036/jam_jar_model_0036_OK_C3_20240726133901158.png",
+  "class": "jam_jar_model",
+  "label": 0,
+  "b1_max": 0.14210587739944458,
+  "b1_top": [
+   0.1421,
+   0.1365,
+   0.1312
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "jam_jar_model/NG/CharacterOmission/S0015/jam_jar_model__0015_NG_CharacterOmission_C3_20240726135225646.png",
+  "class": "jam_jar_model",
+  "label": 1,
+  "b1_max": 0.12134671211242676,
+  "b1_top": [
+   0.1213,
+   0.118,
+   0.0999
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "jam_jar_model/OK/S0048/jam_jar_model_0048_OK_C1_20240726134141597.png",
+  "class": "jam_jar_model",
+  "label": 0,
+  "b1_max": 0.2756650149822235,
+  "b1_top": [
+   0.2757,
+   0.2746,
+   0.2731
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "jam_jar_model/NG/Scratch/S0040/jam_jar_model__0040_NG_Scratch_C4_20240726141627469.png",
+  "class": "jam_jar_model",
+  "label": 1,
+  "b1_max": 0.14902085065841675,
+  "b1_top": [
+   0.149,
+   0.1453,
+   0.1421
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "jam_jar_model/NG/Abrasion/S0038/jam_jar_model__0038_NG_Abrasion_C4_20240726145640870.png",
+  "class": "jam_jar_model",
+  "label": 1,
+  "b1_max": 0.20971280336380005,
+  "b1_top": [
+   0.2097,
+   0.2085,
+   0.1588
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "jam_jar_model/OK/S0036/jam_jar_model_0036_OK_C2_20240726133901112.png",
+  "class": "jam_jar_model",
+  "label": 0,
+  "b1_max": 0.11520227789878845,
+  "b1_top": [
+   0.1152,
+   0.1075,
+   0.0887
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "jam_jar_model/OK/S0031/jam_jar_model_0031_OK_C1_20240726133757394.png",
+  "class": "jam_jar_model",
+  "label": 0,
+  "b1_max": 0.27331167459487915,
+  "b1_top": [
+   0.2733,
+   0.2666,
+   0.2633
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "jam_jar_model/NG/CharacterOmission/S0023/jam_jar_model__0023_NG_CharacterOmission_C1_20240726135453958.png",
+  "class": "jam_jar_model",
+  "label": 0,
+  "b1_max": 0.26003381609916687,
+  "b1_top": [
+   0.26,
+   0.254,
+   0.2528
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "jam_jar_model/NG/CharacterOmission/S0029/jam_jar_model__0029_NG_CharacterOmission_C1_20240726135611718.png",
+  "class": "jam_jar_model",
+  "label": 1,
+  "b1_max": 0.28245699405670166,
+  "b1_top": [
+   0.2825,
+   0.2806,
+   0.2755
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "mobile_charging_connector/NG/GelatinousContaminant/S0012/mobile_charging_connector__0012_NG_GelatinousContaminant_C2_20240801142300223.png",
+  "class": "mobile_charging_connector",
+  "label": 1,
+  "b1_max": 0.2652650475502014,
+  "b1_top": [
+   0.2653,
+   0.2579,
+   0.2509
+  ],
+  "vlm": [
+   1.0,
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "image_path": "mobile_charging_connector/NG/GelatinousContaminant/S0047/mobile_charging_connector__0047_NG_GelatinousContaminant_C2_20240801143153188.png",
+  "class": "mobile_charging_connector",
+  "label": 1,
+  "b1_max": 0.22956249117851257,
+  "b1_top": [
+   0.2296,
+   0.2233,
+   0.2226
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "mobile_charging_connector/NG/Deformation/S0006/mobile_charging_connector__0006_NG_Deformation_C3_20240801140320574.png",
+  "class": "mobile_charging_connector",
+  "label": 1,
+  "b1_max": 0.11059454083442688,
+  "b1_top": [
+   0.1106,
+   0.1106,
+   0.0877
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "mobile_charging_connector/NG/Deformation/S0001/mobile_charging_connector__0001_NG_Deformation_C2_20240801140202921.png",
+  "class": "mobile_charging_connector",
+  "label": 1,
+  "b1_max": 0.15479713678359985,
+  "b1_top": [
+   0.1548,
+   0.139,
+   0.139
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "mobile_charging_connector/NG/GelatinousContaminant/S0013/mobile_charging_connector__0013_NG_GelatinousContaminant_C1_20240801142317211.png",
+  "class": "mobile_charging_connector",
+  "label": 1,
+  "b1_max": 0.23909378051757812,
+  "b1_top": [
+   0.2391,
+   0.2373,
+   0.2367
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "mobile_charging_connector/NG/Deformation/S0016/mobile_charging_connector__0016_NG_Deformation_C3_20240801140612443.png",
+  "class": "mobile_charging_connector",
+  "label": 1,
+  "b1_max": 0.11489754915237427,
+  "b1_top": [
+   0.1149,
+   0.0984,
+   0.0926
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "mobile_charging_connector/NG/GelatinousContaminant/S0013/mobile_charging_connector__0013_NG_GelatinousContaminant_C2_20240801142314719.png",
+  "class": "mobile_charging_connector",
+  "label": 1,
+  "b1_max": 0.197153240442276,
+  "b1_top": [
+   0.1972,
+   0.1956,
+   0.1949
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "mobile_charging_connector/OK/S0040/mobile_charging_connector_0040_OK_C4_20240801135327346.png",
+  "class": "mobile_charging_connector",
+  "label": 0,
+  "b1_max": 0.16780203580856323,
+  "b1_top": [
+   0.1678,
+   0.1664,
+   0.1637
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "mobile_charging_connector/NG/Deformation/S0048/mobile_charging_connector__0048_NG_Deformation_C5_20240801141435662.png",
+  "class": "mobile_charging_connector",
+  "label": 1,
+  "b1_max": 0.12281131744384766,
+  "b1_top": [
+   0.1228,
+   0.0851,
+   0.081
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "mobile_charging_connector/NG/Scratch/S0027/mobile_charging_connector__0027_NG_Scratch_C4_20240801144436789.png",
+  "class": "mobile_charging_connector",
+  "label": 1,
+  "b1_max": 0.1697906255722046,
+  "b1_top": [
+   0.1698,
+   0.1605,
+   0.1578
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "mobile_charging_connector/NG/Scratch/S0003/mobile_charging_connector__0003_NG_Scratch_C1_20240801143845615.png",
+  "class": "mobile_charging_connector",
+  "label": 1,
+  "b1_max": 0.09860742092132568,
+  "b1_top": [
+   0.0986,
+   0.0901,
+   0.0743
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "mobile_charging_connector/NG/MetallicContaminant/S0016/mobile_charging_connector__0016_NG_MetallicContaminant_C4_20240801145846625.png",
+  "class": "mobile_charging_connector",
+  "label": 1,
+  "b1_max": 0.1661422848701477,
+  "b1_top": [
+   0.1661,
+   0.1615,
+   0.1578
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "mobile_charging_connector/OK/S0013/mobile_charging_connector_0013_OK_C4_20240801134431218.png",
+  "class": "mobile_charging_connector",
+  "label": 0,
+  "b1_max": 0.17270249128341675,
+  "b1_top": [
+   0.1727,
+   0.1651,
+   0.1611
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "mobile_charging_connector/NG/Scratch/S0007/mobile_charging_connector__0007_NG_Scratch_C5_20240801143944384.png",
+  "class": "mobile_charging_connector",
+  "label": 1,
+  "b1_max": 0.10682135820388794,
+  "b1_top": [
+   0.1068,
+   0.0981,
+   0.0921
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "mobile_charging_connector/NG/Scratch/S0008/mobile_charging_connector__0008_NG_Scratch_C4_20240801143956987.png",
+  "class": "mobile_charging_connector",
+  "label": 1,
+  "b1_max": 0.16083753108978271,
+  "b1_top": [
+   0.1608,
+   0.1561,
+   0.1546
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "mobile_charging_connector/OK/S0017/mobile_charging_connector_0017_OK_C4_20240801134525560.png",
+  "class": "mobile_charging_connector",
+  "label": 0,
+  "b1_max": 0.1618611216545105,
+  "b1_top": [
+   0.1619,
+   0.1611,
+   0.1568
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "mobile_charging_connector/NG/Deformation/S0021/mobile_charging_connector__0021_NG_Deformation_C4_20240801140738517.png",
+  "class": "mobile_charging_connector",
+  "label": 1,
+  "b1_max": 0.17370885610580444,
+  "b1_top": [
+   0.1737,
+   0.1691,
+   0.1633
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "mobile_charging_connector/OK/S0015/mobile_charging_connector_0015_OK_C4_20240801134500428.png",
+  "class": "mobile_charging_connector",
+  "label": 0,
+  "b1_max": 0.1606680154800415,
+  "b1_top": [
+   0.1607,
+   0.1541,
+   0.1516
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "mobile_charging_connector/NG/Scratch/S0045/mobile_charging_connector__0045_NG_Scratch_C2_20240801144851112.png",
+  "class": "mobile_charging_connector",
+  "label": 1,
+  "b1_max": 0.16304385662078857,
+  "b1_top": [
+   0.163,
+   0.1559,
+   0.1465
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "mobile_charging_connector/NG/Deformation/S0012/mobile_charging_connector__0012_NG_Deformation_C1_20240801140458379.png",
+  "class": "mobile_charging_connector",
+  "label": 1,
+  "b1_max": 0.08997932076454163,
+  "b1_top": [
+   0.09,
+   0.0873,
+   0.0734
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "mobile_charging_connector/OK/S0020/mobile_charging_connector_0020_OK_C2_20240801134608112.png",
+  "class": "mobile_charging_connector",
+  "label": 0,
+  "b1_max": 0.1637575626373291,
+  "b1_top": [
+   0.1638,
+   0.1545,
+   0.149
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "mobile_charging_connector/NG/Scratch/S0022/mobile_charging_connector__0022_NG_Scratch_C5_20240801144323749.png",
+  "class": "mobile_charging_connector",
+  "label": 1,
+  "b1_max": 0.09508717060089111,
+  "b1_top": [
+   0.0951,
+   0.0883,
+   0.0737
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "mobile_charging_connector/NG/Deformation/S0007/mobile_charging_connector__0007_NG_Deformation_C2_20240801140341084.png",
+  "class": "mobile_charging_connector",
+  "label": 1,
+  "b1_max": 0.15146872401237488,
+  "b1_top": [
+   0.1515,
+   0.1502,
+   0.1451
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "mobile_charging_connector/NG/GelatinousContaminant/S0050/mobile_charging_connector__0050_NG_GelatinousContaminant_C2_20240801143234482.png",
+  "class": "mobile_charging_connector",
+  "label": 1,
+  "b1_max": 0.21332669258117676,
+  "b1_top": [
+   0.2133,
+   0.2054,
+   0.2016
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "mobile_charging_connector/OK/S0047/mobile_charging_connector_0047_OK_C2_20240801135619643.png",
+  "class": "mobile_charging_connector",
+  "label": 0,
+  "b1_max": 0.15771260857582092,
+  "b1_top": [
+   0.1577,
+   0.1569,
+   0.1446
+  ],
+  "vlm": [
+   1.0,
+   0.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "mobile_charging_connector/OK/S0033/mobile_charging_connector_0033_OK_C2_20240801135009563.png",
+  "class": "mobile_charging_connector",
+  "label": 0,
+  "b1_max": 0.15085220336914062,
+  "b1_top": [
+   0.1509,
+   0.1467,
+   0.1431
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "mobile_charging_connector/OK/S0032/mobile_charging_connector_0032_OK_C3_20240801134952874.png",
+  "class": "mobile_charging_connector",
+  "label": 0,
+  "b1_max": 0.10733622312545776,
+  "b1_top": [
+   0.1073,
+   0.0957,
+   0.0877
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "mobile_charging_connector/NG/Scratch/S0049/mobile_charging_connector__0049_NG_Scratch_C4_20240801144949786.png",
+  "class": "mobile_charging_connector",
+  "label": 1,
+  "b1_max": 0.15546512603759766,
+  "b1_top": [
+   0.1555,
+   0.1547,
+   0.1445
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "mobile_charging_connector/NG/Deformation/S0010/mobile_charging_connector__0010_NG_Deformation_C1_20240801140430710.png",
+  "class": "mobile_charging_connector",
+  "label": 1,
+  "b1_max": 0.12637543678283691,
+  "b1_top": [
+   0.1264,
+   0.1155,
+   0.1002
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "mobile_charging_connector/NG/MetallicContaminant/S0042/mobile_charging_connector__0042_NG_MetallicContaminant_C2_20240801150636523.png",
+  "class": "mobile_charging_connector",
+  "label": 1,
+  "b1_max": 0.17517977952957153,
+  "b1_top": [
+   0.1752,
+   0.1455,
+   0.1452
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "mobile_charging_connector/NG/Deformation/S0003/mobile_charging_connector__0003_NG_Deformation_C5_20240801140236782.png",
+  "class": "mobile_charging_connector",
+  "label": 1,
+  "b1_max": 0.13579833507537842,
+  "b1_top": [
+   0.1358,
+   0.1117,
+   0.1083
+  ],
+  "vlm": [
+   1.0,
+   0.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "mobile_charging_connector/OK/S0028/mobile_charging_connector_0028_OK_C5_20240801134829293.png",
+  "class": "mobile_charging_connector",
+  "label": 0,
+  "b1_max": 0.0814613401889801,
+  "b1_top": [
+   0.0815,
+   0.0788,
+   0.0778
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "mobile_charging_connector/NG/Deformation/S0036/mobile_charging_connector__0036_NG_Deformation_C1_20240801141139567.png",
+  "class": "mobile_charging_connector",
+  "label": 1,
+  "b1_max": 0.1230938732624054,
+  "b1_top": [
+   0.1231,
+   0.0832,
+   0.0716
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "mobile_charging_connector/NG/Scratch/S0032/mobile_charging_connector__0032_NG_Scratch_C2_20240801144547691.png",
+  "class": "mobile_charging_connector",
+  "label": 1,
+  "b1_max": 0.17065343260765076,
+  "b1_top": [
+   0.1707,
+   0.1704,
+   0.1636
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "mobile_charging_connector/OK/S0044/mobile_charging_connector_0044_OK_C4_20240801135505961.png",
+  "class": "mobile_charging_connector",
+  "label": 0,
+  "b1_max": 0.17034855484962463,
+  "b1_top": [
+   0.1703,
+   0.1642,
+   0.1601
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "mobile_charging_connector/NG/Deformation/S0047/mobile_charging_connector__0047_NG_Deformation_C2_20240801141422385.png",
+  "class": "mobile_charging_connector",
+  "label": 1,
+  "b1_max": 0.15401983261108398,
+  "b1_top": [
+   0.154,
+   0.1492,
+   0.1466
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "mobile_charging_connector/OK/S0041/mobile_charging_connector_0041_OK_C4_20240801135349911.png",
+  "class": "mobile_charging_connector",
+  "label": 0,
+  "b1_max": 0.1704811155796051,
+  "b1_top": [
+   0.1705,
+   0.1643,
+   0.1598
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "mobile_charging_connector/NG/MetallicContaminant/S0035/mobile_charging_connector__0035_NG_MetallicContaminant_C3_20240801150351764.png",
+  "class": "mobile_charging_connector",
+  "label": 1,
+  "b1_max": 0.15882793068885803,
+  "b1_top": [
+   0.1588,
+   0.1455,
+   0.1348
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "mobile_charging_connector/NG/MetallicContaminant/S0011/mobile_charging_connector__0011_NG_MetallicContaminant_C4_20240801145730183.png",
+  "class": "mobile_charging_connector",
+  "label": 1,
+  "b1_max": 0.18690350651741028,
+  "b1_top": [
+   0.1869,
+   0.1836,
+   0.1755
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "mobile_charging_connector/OK/S0025/mobile_charging_connector_0025_OK_C3_20240801134720349.png",
+  "class": "mobile_charging_connector",
+  "label": 0,
+  "b1_max": 0.09138864278793335,
+  "b1_top": [
+   0.0914,
+   0.084,
+   0.0826
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "mobile_charging_connector/OK/S0019/mobile_charging_connector_0019_OK_C3_20240801134553541.png",
+  "class": "mobile_charging_connector",
+  "label": 0,
+  "b1_max": 0.09259918332099915,
+  "b1_top": [
+   0.0926,
+   0.088,
+   0.078
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "mobile_charging_connector/OK/S0024/mobile_charging_connector_0024_OK_C2_20240801134706982.png",
+  "class": "mobile_charging_connector",
+  "label": 0,
+  "b1_max": 0.14654380083084106,
+  "b1_top": [
+   0.1465,
+   0.1368,
+   0.1344
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "mobile_charging_connector/NG/GelatinousContaminant/S0010/mobile_charging_connector__0010_NG_GelatinousContaminant_C4_20240801142227458.png",
+  "class": "mobile_charging_connector",
+  "label": 1,
+  "b1_max": 0.2673848271369934,
+  "b1_top": [
+   0.2674,
+   0.266,
+   0.2617
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "mobile_charging_connector/OK/S0038/mobile_charging_connector_0038_OK_C2_20240801135200819.png",
+  "class": "mobile_charging_connector",
+  "label": 0,
+  "b1_max": 0.16056165099143982,
+  "b1_top": [
+   0.1606,
+   0.1538,
+   0.1515
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "mobile_charging_connector/OK/S0022/mobile_charging_connector_0022_OK_C4_20240801134635672.png",
+  "class": "mobile_charging_connector",
+  "label": 0,
+  "b1_max": 0.15853121876716614,
+  "b1_top": [
+   0.1585,
+   0.1522,
+   0.1479
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "mobile_charging_connector/NG/MetallicContaminant/S0012/mobile_charging_connector__0012_NG_MetallicContaminant_C4_20240801145746579.png",
+  "class": "mobile_charging_connector",
+  "label": 1,
+  "b1_max": 0.2743220031261444,
+  "b1_top": [
+   0.2743,
+   0.2584,
+   0.2233
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "side_press_switch/NG/Damage/S0021/side_press_switch__0021_NG_Damage_C4_20240808101100999.png",
+  "class": "side_press_switch",
+  "label": 1,
+  "b1_max": 0.13716107606887817,
+  "b1_top": [
+   0.1372,
+   0.0975,
+   0.0942
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "side_press_switch/NG/Discoloration/S0029/side_press_switch__0029_NG_Discoloration_C1_20240808095440778.png",
+  "class": "side_press_switch",
+  "label": 1,
+  "b1_max": 0.24220246076583862,
+  "b1_top": [
+   0.2422,
+   0.2319,
+   0.2272
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "side_press_switch/OK/S0031/side_press_switch_0031_OK_C5_20240807195801124.png",
+  "class": "side_press_switch",
+  "label": 0,
+  "b1_max": 0.23832333087921143,
+  "b1_top": [
+   0.2383,
+   0.2379,
+   0.2251
+  ],
+  "vlm": [
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "image_path": "side_press_switch/OK/S0038/side_press_switch_0038_OK_C2_20240807200258042.png",
+  "class": "side_press_switch",
+  "label": 0,
+  "b1_max": 0.12274938821792603,
+  "b1_top": [
+   0.1227,
+   0.109,
+   0.1026
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "side_press_switch/OK/S0033/side_press_switch_0033_OK_C2_20240807195847267.png",
+  "class": "side_press_switch",
+  "label": 0,
+  "b1_max": 0.10697335004806519,
+  "b1_top": [
+   0.107,
+   0.1022,
+   0.0997
+  ],
+  "vlm": [
+   1.0,
+   0.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "side_press_switch/NG/Damage/S0006/side_press_switch__0006_NG_Damage_C3_20240808100613359.png",
+  "class": "side_press_switch",
+  "label": 1,
+  "b1_max": 0.252886027097702,
+  "b1_top": [
+   0.2529,
+   0.2394,
+   0.2323
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "side_press_switch/NG/GelatinousContaminant/S0002/side_press_switch__0002_NG_GelatinousContaminant_C4_20240807204032589.png",
+  "class": "side_press_switch",
+  "label": 1,
+  "b1_max": 0.19546398520469666,
+  "b1_top": [
+   0.1955,
+   0.1833,
+   0.167
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "side_press_switch/NG/Discoloration/S0003/side_press_switch__0003_NG_Discoloration_C1_20240808094639351.png",
+  "class": "side_press_switch",
+  "label": 1,
+  "b1_max": 0.24301129579544067,
+  "b1_top": [
+   0.243,
+   0.2344,
+   0.2132
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   0.0
+  ]
+ },
+ {
+  "image_path": "side_press_switch/NG/GelatinousContaminant/S0009/side_press_switch__0009_NG_GelatinousContaminant_C1_20240808092628929.png",
+  "class": "side_press_switch",
+  "label": 1,
+  "b1_max": 0.22124704718589783,
+  "b1_top": [
+   0.2212,
+   0.2172,
+   0.2124
+  ],
+  "vlm": [
+   0.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "side_press_switch/NG/Deformation/S0015/side_press_switch__0015_NG_Deformation_C1_20240808102636960.png",
+  "class": "side_press_switch",
+  "label": 1,
+  "b1_max": 0.25684985518455505,
+  "b1_top": [
+   0.2568,
+   0.2495,
+   0.2379
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "side_press_switch/OK/S0019/side_press_switch_0019_OK_C3_20240807195123459.png",
+  "class": "side_press_switch",
+  "label": 0,
+  "b1_max": 0.23510921001434326,
+  "b1_top": [
+   0.2351,
+   0.2255,
+   0.214
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "side_press_switch/NG/Damage/S0010/side_press_switch__0010_NG_Damage_C1_20240808100747626.png",
+  "class": "side_press_switch",
+  "label": 1,
+  "b1_max": 0.2461560070514679,
+  "b1_top": [
+   0.2462,
+   0.2453,
+   0.2294
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "side_press_switch/OK/S0025/side_press_switch_0025_OK_C3_20240807195509351.png",
+  "class": "side_press_switch",
+  "label": 0,
+  "b1_max": 0.2560051679611206,
+  "b1_top": [
+   0.256,
+   0.2431,
+   0.2335
+  ],
+  "vlm": [
+   1.0,
+   0.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "side_press_switch/NG/Damage/S0047/side_press_switch__0047_NG_Damage_C2_20240808101851933.png",
+  "class": "side_press_switch",
+  "label": 1,
+  "b1_max": 0.12118065357208252,
+  "b1_top": [
+   0.1212,
+   0.1186,
+   0.1057
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "side_press_switch/OK/S0013/side_press_switch_0013_OK_C4_20240807192627471.png",
+  "class": "side_press_switch",
+  "label": 0,
+  "b1_max": 0.08007964491844177,
+  "b1_top": [
+   0.0801,
+   0.0681,
+   0.0676
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "side_press_switch/OK/S0046/side_press_switch_0046_OK_C1_20240807202046057.png",
+  "class": "side_press_switch",
+  "label": 0,
+  "b1_max": 0.2550172507762909,
+  "b1_top": [
+   0.255,
+   0.2436,
+   0.2257
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "side_press_switch/NG/Deformation/S0010/side_press_switch__0010_NG_Deformation_C1_20240808102516214.png",
+  "class": "side_press_switch",
+  "label": 1,
+  "b1_max": 0.21636423468589783,
+  "b1_top": [
+   0.2164,
+   0.2154,
+   0.2126
+  ],
+  "vlm": [
+   0.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "side_press_switch/NG/Discoloration/S0047/side_press_switch__0047_NG_Discoloration_C1_20240808100010562.png",
+  "class": "side_press_switch",
+  "label": 1,
+  "b1_max": 0.2616773247718811,
+  "b1_top": [
+   0.2617,
+   0.2506,
+   0.2488
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "side_press_switch/NG/Deformation/S0014/side_press_switch__0014_NG_Deformation_C3_20240808102616328.png",
+  "class": "side_press_switch",
+  "label": 1,
+  "b1_max": 0.2758389115333557,
+  "b1_top": [
+   0.2758,
+   0.2702,
+   0.2575
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "side_press_switch/OK/S0047/side_press_switch_0047_OK_C2_20240807202105714.png",
+  "class": "side_press_switch",
+  "label": 0,
+  "b1_max": 0.11645153164863586,
+  "b1_top": [
+   0.1165,
+   0.109,
+   0.1047
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "side_press_switch/NG/GelatinousContaminant/S0039/side_press_switch__0039_NG_GelatinousContaminant_C2_20240808093956881.png",
+  "class": "side_press_switch",
+  "label": 1,
+  "b1_max": 0.19312649965286255,
+  "b1_top": [
+   0.1931,
+   0.1899,
+   0.1853
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "side_press_switch/NG/GelatinousContaminant/S0033/side_press_switch__0033_NG_GelatinousContaminant_C5_20240808093759530.png",
+  "class": "side_press_switch",
+  "label": 1,
+  "b1_max": 0.2535291910171509,
+  "b1_top": [
+   0.2535,
+   0.2333,
+   0.2319
+  ],
+  "vlm": [
+   1.0,
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "image_path": "side_press_switch/OK/S0022/side_press_switch_0022_OK_C4_20240807195239541.png",
+  "class": "side_press_switch",
+  "label": 0,
+  "b1_max": 0.11568659543991089,
+  "b1_top": [
+   0.1157,
+   0.091,
+   0.087
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "side_press_switch/NG/Deformation/S0027/side_press_switch__0027_NG_Deformation_C1_20240808103017218.png",
+  "class": "side_press_switch",
+  "label": 1,
+  "b1_max": 0.27226924896240234,
+  "b1_top": [
+   0.2723,
+   0.2503,
+   0.2469
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   0.0
+  ]
+ },
+ {
+  "image_path": "side_press_switch/OK/S0024/side_press_switch_0024_OK_C2_20240807195350626.png",
+  "class": "side_press_switch",
+  "label": 0,
+  "b1_max": 0.1158285140991211,
+  "b1_top": [
+   0.1158,
+   0.104,
+   0.0983
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   0.0
+  ]
+ },
+ {
+  "image_path": "side_press_switch/NG/Discoloration/S0045/side_press_switch__0045_NG_Discoloration_C2_20240808095939248.png",
+  "class": "side_press_switch",
+  "label": 1,
+  "b1_max": 0.12752997875213623,
+  "b1_top": [
+   0.1275,
+   0.1244,
+   0.1132
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "side_press_switch/OK/S0041/side_press_switch_0041_OK_C4_20240807201826889.png",
+  "class": "side_press_switch",
+  "label": 0,
+  "b1_max": 0.09557661414146423,
+  "b1_top": [
+   0.0956,
+   0.0934,
+   0.0889
+  ],
+  "vlm": [
+   1.0,
+   0.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "side_press_switch/NG/Discoloration/S0044/side_press_switch__0044_NG_Discoloration_C4_20240808095924122.png",
+  "class": "side_press_switch",
+  "label": 1,
+  "b1_max": 0.21256676316261292,
+  "b1_top": [
+   0.2126,
+   0.1979,
+   0.1628
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "side_press_switch/OK/S0028/side_press_switch_0028_OK_C5_20240807195629146.png",
+  "class": "side_press_switch",
+  "label": 0,
+  "b1_max": 0.24669641256332397,
+  "b1_top": [
+   0.2467,
+   0.2451,
+   0.2405
+  ],
+  "vlm": [
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "image_path": "side_press_switch/NG/Discoloration/S0018/side_press_switch__0018_NG_Discoloration_C2_20240808095111832.png",
+  "class": "side_press_switch",
+  "label": 1,
+  "b1_max": 0.13696378469467163,
+  "b1_top": [
+   0.137,
+   0.1298,
+   0.1258
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "side_press_switch/OK/S0031/side_press_switch_0031_OK_C3_20240807195801088.png",
+  "class": "side_press_switch",
+  "label": 0,
+  "b1_max": 0.2475128471851349,
+  "b1_top": [
+   0.2475,
+   0.2377,
+   0.2364
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "side_press_switch/NG/Deformation/S0038/side_press_switch__0038_NG_Deformation_C1_20240808103428222.png",
+  "class": "side_press_switch",
+  "label": 1,
+  "b1_max": 0.26427173614501953,
+  "b1_top": [
+   0.2643,
+   0.2529,
+   0.2478
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "side_press_switch/NG/Damage/S0007/side_press_switch__0007_NG_Damage_C2_20240808100631539.png",
+  "class": "side_press_switch",
+  "label": 1,
+  "b1_max": 0.17815780639648438,
+  "b1_top": [
+   0.1782,
+   0.1631,
+   0.1474
+  ],
+  "vlm": [
+   0.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "side_press_switch/NG/GelatinousContaminant/S0025/side_press_switch__0025_NG_GelatinousContaminant_C1_20240808093359628.png",
+  "class": "side_press_switch",
+  "label": 1,
+  "b1_max": 0.25793468952178955,
+  "b1_top": [
+   0.2579,
+   0.2367,
+   0.2319
+  ],
+  "vlm": [
+   0.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "side_press_switch/OK/S0032/side_press_switch_0032_OK_C3_20240807195829331.png",
+  "class": "side_press_switch",
+  "label": 0,
+  "b1_max": 0.24391484260559082,
+  "b1_top": [
+   0.2439,
+   0.2418,
+   0.2308
+  ],
+  "vlm": [
+   1.0,
+   0.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "side_press_switch/NG/Deformation/S0009/side_press_switch__0009_NG_Deformation_C5_20240808102456860.png",
+  "class": "side_press_switch",
+  "label": 1,
+  "b1_max": 0.25012820959091187,
+  "b1_top": [
+   0.2501,
+   0.2457,
+   0.2326
+  ],
+  "vlm": [
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ {
+  "image_path": "side_press_switch/NG/Deformation/S0004/side_press_switch__0004_NG_Deformation_C2_20240808102313767.png",
+  "class": "side_press_switch",
+  "label": 1,
+  "b1_max": 0.12942475080490112,
+  "b1_top": [
+   0.1294,
+   0.1195,
+   0.1113
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "side_press_switch/NG/Discoloration/S0005/side_press_switch__0005_NG_Discoloration_C4_20240808094711001.png",
+  "class": "side_press_switch",
+  "label": 1,
+  "b1_max": 0.17363083362579346,
+  "b1_top": [
+   0.1736,
+   0.1375,
+   0.1262
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "side_press_switch/NG/GelatinousContaminant/S0009/side_press_switch__0009_NG_GelatinousContaminant_C4_20240808092626513.png",
+  "class": "side_press_switch",
+  "label": 1,
+  "b1_max": 0.1827273666858673,
+  "b1_top": [
+   0.1827,
+   0.1778,
+   0.1654
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "side_press_switch/NG/Discoloration/S0030/side_press_switch__0030_NG_Discoloration_C1_20240808095503550.png",
+  "class": "side_press_switch",
+  "label": 1,
+  "b1_max": 0.2537035644054413,
+  "b1_top": [
+   0.2537,
+   0.2412,
+   0.2268
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "side_press_switch/NG/Deformation/S0023/side_press_switch__0023_NG_Deformation_C4_20240808102910482.png",
+  "class": "side_press_switch",
+  "label": 1,
+  "b1_max": 0.14594870805740356,
+  "b1_top": [
+   0.1459,
+   0.1385,
+   0.1339
+  ],
+  "vlm": [
+   0.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "side_press_switch/NG/Damage/S0003/side_press_switch__0003_NG_Damage_C5_20240808100444836.png",
+  "class": "side_press_switch",
+  "label": 1,
+  "b1_max": 0.24834418296813965,
+  "b1_top": [
+   0.2483,
+   0.2443,
+   0.2398
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   0.0
+  ]
+ },
+ {
+  "image_path": "side_press_switch/OK/S0017/side_press_switch_0017_OK_C4_20240807195033130.png",
+  "class": "side_press_switch",
+  "label": 0,
+  "b1_max": 0.11572232842445374,
+  "b1_top": [
+   0.1157,
+   0.113,
+   0.1013
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "side_press_switch/OK/S0032/side_press_switch_0032_OK_C1_20240807195831761.png",
+  "class": "side_press_switch",
+  "label": 0,
+  "b1_max": 0.2295941412448883,
+  "b1_top": [
+   0.2296,
+   0.2273,
+   0.224
+  ],
+  "vlm": [
+   0.0,
+   0.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "side_press_switch/NG/Deformation/S0003/side_press_switch__0003_NG_Deformation_C3_20240808102258140.png",
+  "class": "side_press_switch",
+  "label": 1,
+  "b1_max": 0.25970321893692017,
+  "b1_top": [
+   0.2597,
+   0.2497,
+   0.2434
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "image_path": "side_press_switch/NG/Discoloration/S0007/side_press_switch__0007_NG_Discoloration_C3_20240808094739880.png",
+  "class": "side_press_switch",
+  "label": 1,
+  "b1_max": 0.25642406940460205,
+  "b1_top": [
+   0.2564,
+   0.2468,
+   0.2404
+  ],
+  "vlm": [
+   1.0,
+   1.0,
+   0.0
+  ]
+ }
+]
