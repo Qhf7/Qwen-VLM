@@ -110,6 +110,7 @@ def main() -> None:
     ap.add_argument("--batch", type=int, default=2)
     ap.add_argument("--lr", type=float, default=1e-3)
     ap.add_argument("--ckpt", default="artifacts/align_dino/proj.pt")
+    ap.add_argument("--lora", default="", help="阶段二产出的 LoRA 目录（可选）")
     ap.add_argument("--limit", type=int, default=0)
     args = ap.parse_args()
 
@@ -169,6 +170,10 @@ def main() -> None:
             print(f"预测: {al.generate(proj, f, r['conversations'][0]['value'])}\n", flush=True)
 
     else:   # evalq：在 Protocol C 测试类上评 yes/no 与缺陷类型
+        if args.lora:
+            from peft import PeftModel
+            al.lm = PeftModel.from_pretrained(al.lm, str(ROOT / args.lora)).eval()
+            print(f"[evalq] 已加载 LoRA: {args.lora}")
         import pandas as pd
         from .common import MANIFEST_PIXEL, load_config, resolve_splits, with_defaults
         proj.load_state_dict(torch.load(ROOT / args.ckpt, map_location="cuda")); proj.eval()
