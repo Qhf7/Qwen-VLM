@@ -47,3 +47,14 @@ python -m seg_cross_part.train_seg --protocol protocol_b_seen_category \
 python -m seg_cross_part.evaluate_pixel --run artifacts/seg_cross_part/b_a0_fix_s20261021 --split test
 python -m seg_cross_part.bootstrap_pixel --stats artifacts/seg_cross_part/b_a0_fix_s20261021/stats_test.npz
 ```
+
+## 设计文档
+
+| 文档 | 内容 |
+|---|---|
+| [`docs/项目说明.md`](docs/项目说明.md) | 任务、数据、协议、模型臂、评测标准 v1.0 |
+| [`docs/实验进度与版本记录.md`](docs/实验进度与版本记录.md) | 30 个实验节点的完整记录与结论 |
+| [`docs/Anomaly-VL_v2框架设计.md`](docs/Anomaly-VL_v2框架设计.md) | **新框架 v2**：AnomalyGPT 骨架 + AdaCLIP PEFT + DINOv3 主干 |
+| [`docs/AnomalyVL_v2框架图.png`](docs/AnomalyVL_v2框架图.png) | v2 架构图（VLM 位置/作用/输入输出） |
+| [`docs/VLM框架图.png`](docs/VLM框架图.png) | v1 架构与 VLM 能力边界 |
+| [`docs/结果图表.png`](docs/结果图表.png) | 主要实验结果 |
