@@ -40,7 +40,7 @@ Dual Anchors 说这个假设有两个毛病：
 
 ## ② 架构
 
-![](figures/fig-02.png)
+![](../../DualAnchor/figures/fig-02.png)
 
 **图 2 怎么读**，三大块 + 一个放大镜：
 

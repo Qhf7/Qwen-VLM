@@ -1,0 +1,58 @@
+{
+ "arxiv_id": "2308.15366",
+ "version": "v4",
+ "title": "AnomalyGPT: Detecting Industrial Anomalies Using Large Vision-Language Models",
+ "authors": [
+  "Zhaopeng Gu",
+  "Bingke Zhu",
+  "Guibo Zhu",
+  "Yingying Chen",
+  "Ming Tang",
+  "Jinqiao Wang"
+ ],
+ "published": "2023-08-29",
+ "updated": "2023-12-28",
+ "abstract": "Large Vision-Language Models (LVLMs) such as MiniGPT-4 and LLaVA have demonstrated the capability of understanding images and achieved remarkable performance in various visual tasks. Despite their strong abilities in recognizing common objects due to extensive training datasets, they lack specific domain knowledge and have a weaker understanding of localized details within objects, which hinders their effectiveness in the Industrial Anomaly Detection (IAD) task. On the other hand, most existing IAD methods only provide anomaly scores and necessitate the manual setting of thresholds to distinguish between normal and abnormal samples, which restricts their practical implementation. In this paper, we explore the utilization of LVLM to address the IAD problem and propose AnomalyGPT, a novel IAD approach based on LVLM. We generate training data by simulating anomalous images and producing corresponding textual descriptions for each image. We also employ an image decoder to provide fine-grained semantic and design a prompt learner to fine-tune the LVLM using prompt embeddings. Our AnomalyGPT eliminates the need for manual threshold adjustments, thus directly assesses the presence and locations of anomalies. Additionally, AnomalyGPT supports multi-turn dialogues and exhibits impressive few-shot in-context learning capabilities. With only one normal shot, AnomalyGPT achieves the state-of-the-art performance with an accuracy of 86.1%, an image-level AUC of 94.1%, and a pixel-level AUC of 95.3% on the MVTec-AD dataset. Code is available at https://github.com/CASIA-IVA-Lab/AnomalyGPT.",
+ "comment": "Accepted by AAAI 2024; Project page: https://anomalygpt.github.io",
+ "journal_ref": "",
+ "categories": [
+  "cs.CV"
+ ],
+ "abs_url": "https://arxiv.org/abs/2308.15366",
+ "pdf_pages": 19,
+ "has_latex": true,
+ "main_tex": "source/main.tex",
+ "links": {
+  "code": [
+   {
+    "url": "https://github.com/CASIA-IVA-Lab/AnomalyGPT",
+    "score": 15,
+    "from": [
+     "摘要",
+     "首页链接",
+     "正文提到"
+    ]
+   },
+   {
+    "url": "https://github.com/casia-iva-lab/anomalygpt",
+    "score": 6,
+    "from": [
+     "HF Papers"
+    ]
+   }
+  ],
+  "project": [
+   {
+    "url": "https://anomalygpt.github.io",
+    "score": 5,
+    "from": [
+     "arXiv 备注"
+    ]
+   }
+  ]
+ },
+ "official_code": "https://github.com/CASIA-IVA-Lab/AnomalyGPT",
+ "official_code_from": "摘要、首页链接、正文提到",
+ "code_dir": "/Users/qiaohongfei/Desktop/实习/阿里云天池比赛vlm/AnomalyGPT/code",
+ "fetched": "2026-10-22"
+}

@@ -1,0 +1,51 @@
+{
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "steps": 16,
+  "batch_size": 2,
+  "max_tgt_len": 128,
+  "lr": 0.001,
+  "adamw_betas": [
+    0.9,
+    0.95
+  ],
+  "weight_decay": 0.001,
+  "reference_mode": "none",
+  "geometry": "square224",
+  "init_checkpoint": "/root/autodl-tmp/AnomalyGPT/ckpt/train_visa/pytorch_model.pt",
+  "init_sha256": "a7e858586d9118c3322ff8ca3b60a8c7c521859ec8c1825e733df6666acab7d6",
+  "cache_manifest_sha256": "1829ec402bf90028c258c7f66fb9e317a574389af13515d8e0e57a81889c4d72",
+  "models": [
+    "Qwen3-VL-8B language frozen",
+    "Qwen3-VL-8B language qkvo LoRA r8",
+    "Vicuna-7B-v1.1 frozen"
+  ],
+  "purpose": "same cache/order/bridge initialization and 16-step budget; language tokenizer and model version differ",
+  "pretrained_scope": "released train_visa decoder and PromptLearner; complete pretraining source provenance unavailable",
+  "runs": [
+    {
+      "seed": 42,
+      "bridge_init": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/matched_inputs/seed42/bridge_init.pt",
+      "bridge_init_sha256": "f42b5068b4fd06f3372ea70bd12b3001bf029989e96e8c21eee8d712265ad5f2",
+      "sample_order": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/matched_inputs/seed42/sample_order.json",
+      "sample_order_sha256": "faaf3ac0d18b008de1c811365fe537bbe0b5f5da9a957323b96302a44bc5da4e"
+    },
+    {
+      "seed": 43,
+      "bridge_init": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/matched_inputs/seed43/bridge_init.pt",
+      "bridge_init_sha256": "7feb83143fe2acc6cd63d5546dd98a38cfd19b4aff36cdd39178f6312035fced",
+      "sample_order": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/matched_inputs/seed43/sample_order.json",
+      "sample_order_sha256": "ae32ab562ad80ca0e2337d9d44cd9f5fcf27bfa5f55cf1dcbee8a89eea9f5945"
+    },
+    {
+      "seed": 44,
+      "bridge_init": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/matched_inputs/seed44/bridge_init.pt",
+      "bridge_init_sha256": "b51a4226316a8adefd34da15495b3dde708e549132f14139d23def32845f8e34",
+      "sample_order": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/matched_inputs/seed44/sample_order.json",
+      "sample_order_sha256": "847af31f016c0b36cb43722764731b2545575b62ab78be66cc2d0191554dbcf6"
+    }
+  ]
+}

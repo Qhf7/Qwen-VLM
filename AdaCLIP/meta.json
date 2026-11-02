@@ -1,0 +1,101 @@
+{
+ "arxiv_id": "2407.15795",
+ "version": "v1",
+ "title": "AdaCLIP: Adapting CLIP with Hybrid Learnable Prompts for Zero-Shot Anomaly Detection",
+ "authors": [
+  "Yunkang Cao",
+  "Jiangning Zhang",
+  "Luca Frittoli",
+  "Yuqi Cheng",
+  "Weiming Shen",
+  "Giacomo Boracchi"
+ ],
+ "published": "2024-07-22",
+ "updated": "2024-07-22",
+ "abstract": "Zero-shot anomaly detection (ZSAD) targets the identification of anomalies within images from arbitrary novel categories. This study introduces AdaCLIP for the ZSAD task, leveraging a pre-trained vision-language model (VLM), CLIP. AdaCLIP incorporates learnable prompts into CLIP and optimizes them through training on auxiliary annotated anomaly detection data. Two types of learnable prompts are proposed: static and dynamic. Static prompts are shared across all images, serving to preliminarily adapt CLIP for ZSAD. In contrast, dynamic prompts are generated for each test image, providing CLIP with dynamic adaptation capabilities. The combination of static and dynamic prompts is referred to as hybrid prompts, and yields enhanced ZSAD performance. Extensive experiments conducted across 14 real-world anomaly detection datasets from industrial and medical domains indicate that AdaCLIP outperforms other ZSAD methods and can generalize better to different categories and even domains. Finally, our analysis highlights the importance of diverse auxiliary data and optimized prompts for enhanced generalization capacity. Code is available at https://github.com/caoyunkang/AdaCLIP.",
+ "comment": "Accepted by ECCV 2024",
+ "journal_ref": "European Conference on Computer Vision, 2024",
+ "categories": [
+  "cs.CV"
+ ],
+ "abs_url": "https://arxiv.org/abs/2407.15795",
+ "pdf_pages": 41,
+ "has_latex": true,
+ "main_tex": "source/main.tex",
+ "links": {
+  "code": [
+   {
+    "url": "https://github.com/caoyunkang/AdaCLIP",
+    "score": 18,
+    "from": [
+     "摘要",
+     "首页链接",
+     "首页文字",
+     "正文提到"
+    ]
+   },
+   {
+    "url": "https://github.com/caoyunkang/adaclip",
+    "score": 6,
+    "from": [
+     "HF Papers"
+    ]
+   },
+   {
+    "url": "https://github.com/mlfoundations/open",
+    "score": 2,
+    "from": [
+     "正文提到"
+    ]
+   }
+  ],
+  "other": [
+   {
+    "url": "https://orcid.org/0000-0001-7619-6618",
+    "score": 4,
+    "from": [
+     "首页链接"
+    ]
+   },
+   {
+    "url": "https://orcid.org/0000-0001-8891-6766",
+    "score": 4,
+    "from": [
+     "首页链接"
+    ]
+   },
+   {
+    "url": "https://orcid.org/0000-0002-8205-4007",
+    "score": 4,
+    "from": [
+     "首页链接"
+    ]
+   },
+   {
+    "url": "https://orcid.org/0000-0003-1994-7301",
+    "score": 4,
+    "from": [
+     "首页链接"
+    ]
+   },
+   {
+    "url": "https://orcid.org/0000-0001-5204-7992",
+    "score": 4,
+    "from": [
+     "首页链接"
+    ]
+   },
+   {
+    "url": "https://orcid.org/0000-0002-1650-3054",
+    "score": 4,
+    "from": [
+     "首页链接"
+    ]
+   }
+  ]
+ },
+ "official_code": "https://github.com/caoyunkang/AdaCLIP",
+ "official_code_from": "摘要、首页链接、首页文字、正文提到",
+ "code_dir": null,
+ "fetched": "2026-10-22"
+}

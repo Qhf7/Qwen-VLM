@@ -1,0 +1,42 @@
+{
+  "corrected_synthetic_eval.py": {
+    "bytes": 14455,
+    "sha256": "419ae6a0cf0098589847fa2f0b3cf1c10b22384f4f5ca2694463e74a61f6fea3"
+  },
+  "diagnose_layer_metrics.py": {
+    "bytes": 16291,
+    "sha256": "aacef7daf5f703a3619db3e97342fa6321b7219ba4c007420edc2c125e05155c"
+  },
+  "evaluate_models.py": {
+    "bytes": 26886,
+    "sha256": "41d81f8cff7c42157a5bce8c088c22503eb4a52f1c8e7bbfdf692d08b63d58d2"
+  },
+  "evaluate_pre_histogram.py": {
+    "bytes": 26665,
+    "sha256": "4c7ef9f07b677f9d9072661390faf828b5b8e828cb2a07999438ba0620caafc4"
+  },
+  "exact_bf16_ranking.py": {
+    "bytes": 8937,
+    "sha256": "3ca199a34e0391c4e4a96e127d620c87ef7e470225863095bc1b28d52ff8e0f7"
+  },
+  "prepare_matched.py": {
+    "bytes": 3286,
+    "sha256": "eabf663e4ee759bcbf0a63bd72f6205e47c48d7bc7daa88d5964da247f7d382e"
+  },
+  "prepare_real_cache.py": {
+    "bytes": 7176,
+    "sha256": "099fef84269a852205be8e8d00e3cdc268d8bde9bf1c202cca0403fbe71cf4f8"
+  },
+  "run_followup.py": {
+    "bytes": 6283,
+    "sha256": "e3168314d498f2f9358b79c827a31d0a99b45131f5a77e20566b1e2ab10a039c"
+  },
+  "train_qwen_matched.py": {
+    "bytes": 16479,
+    "sha256": "29136939ab4befaf2e72265fa39df72fdb9c57bbd8b9626e8ed02132b362de6c"
+  },
+  "train_vicuna_matched.py": {
+    "bytes": 25440,
+    "sha256": "de77b0e17388949873ceb59ae0c40a682760ef026fc1da3ccf6ad19806285c9d"
+  }
+}

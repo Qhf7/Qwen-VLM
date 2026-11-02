@@ -1,0 +1,365 @@
+{
+  "num_sources": 2005,
+  "generation": {
+    "macro_f1": 0.4436311835769041,
+    "accuracy": 0.4683291770573566,
+    "anomaly_recall": 0.17592592592592593,
+    "normal_recall": 0.8097297297297297,
+    "normal_fpr": 0.1643243243243243,
+    "invalid_rate": 0.085785536159601,
+    "n_normal": 925,
+    "n_anomaly": 1080
+  },
+  "candidate_classification": {
+    "macro_f1": 0.4553116416512938,
+    "accuracy": 0.4952618453865337,
+    "anomaly_recall": 0.20833333333333334,
+    "normal_recall": 0.8302702702702702,
+    "normal_fpr": 0.16972972972972972,
+    "invalid_rate": 0.0,
+    "n_normal": 925,
+    "n_anomaly": 1080
+  },
+  "map_image": {
+    "auroc": 0.7416596596596596,
+    "ap": 0.7862967889854493
+  },
+  "answer_image": {
+    "auroc": 0.5206871871871872,
+    "ap": 0.5549948035588024
+  },
+  "per_class": {
+    "candle": {
+      "num_sources": 186,
+      "generation": {
+        "macro_f1": 0.32608695652173914,
+        "accuracy": 0.4838709677419355,
+        "anomaly_recall": 1.0,
+        "normal_recall": 0.0,
+        "normal_fpr": 1.0,
+        "invalid_rate": 0.0,
+        "n_normal": 96,
+        "n_anomaly": 90
+      },
+      "pixel": {
+        "auroc": 0.9033302609474879,
+        "ap": 0.1698021229118868
+      },
+      "map_image": {
+        "auroc": 0.7700231481481482,
+        "ap": 0.7805319889981975
+      },
+      "answer_image": {
+        "auroc": 0.5298611111111111,
+        "ap": 0.5522985761886098
+      }
+    },
+    "capsules": {
+      "num_sources": 147,
+      "generation": {
+        "macro_f1": 0.35398230088495575,
+        "accuracy": 0.54421768707483,
+        "anomaly_recall": 0.8888888888888888,
+        "normal_recall": 0.0,
+        "normal_fpr": 0.9824561403508771,
+        "invalid_rate": 0.07482993197278912,
+        "n_normal": 57,
+        "n_anomaly": 90
+      },
+      "pixel": {
+        "auroc": 0.9192593764789075,
+        "ap": 0.24840762071881672
+      },
+      "map_image": {
+        "auroc": 0.6745614035087719,
+        "ap": 0.8132336822600189
+      },
+      "answer_image": {
+        "auroc": 0.493859649122807,
+        "ap": 0.6262257261395123
+      }
+    },
+    "cashew": {
+      "num_sources": 134,
+      "generation": {
+        "macro_f1": 0.2716049382716049,
+        "accuracy": 0.3283582089552239,
+        "anomaly_recall": 0.0,
+        "normal_recall": 1.0,
+        "normal_fpr": 0.0,
+        "invalid_rate": 0.11940298507462686,
+        "n_normal": 44,
+        "n_anomaly": 90
+      },
+      "pixel": {
+        "auroc": 0.8927898446129128,
+        "ap": 0.270434551137275
+      },
+      "map_image": {
+        "auroc": 0.8866161616161615,
+        "ap": 0.9428960359111757
+      },
+      "answer_image": {
+        "auroc": 0.5741161616161616,
+        "ap": 0.7357199505487539
+      }
+    },
+    "chewinggum": {
+      "num_sources": 137,
+      "generation": {
+        "macro_f1": 0.42836538461538465,
+        "accuracy": 0.44525547445255476,
+        "anomaly_recall": 0.15555555555555556,
+        "normal_recall": 1.0,
+        "normal_fpr": 0.0,
+        "invalid_rate": 0.072992700729927,
+        "n_normal": 47,
+        "n_anomaly": 90
+      },
+      "pixel": {
+        "auroc": 0.9773575574731926,
+        "ap": 0.5547908041401852
+      },
+      "map_image": {
+        "auroc": 0.9429078014184397,
+        "ap": 0.9746039565147545
+      },
+      "answer_image": {
+        "auroc": 0.7385342789598108,
+        "ap": 0.8386248880949682
+      }
+    },
+    "fryum": {
+      "num_sources": 138,
+      "generation": {
+        "macro_f1": 0.3096774193548387,
+        "accuracy": 0.34782608695652173,
+        "anomaly_recall": 0.0,
+        "normal_recall": 1.0,
+        "normal_fpr": 0.0,
+        "invalid_rate": 0.2246376811594203,
+        "n_normal": 48,
+        "n_anomaly": 90
+      },
+      "pixel": {
+        "auroc": 0.8915084035048617,
+        "ap": 0.25430256697350195
+      },
+      "map_image": {
+        "auroc": 0.8908564814814814,
+        "ap": 0.9461504772393694
+      },
+      "answer_image": {
+        "auroc": 0.711226851851852,
+        "ap": 0.806318794873782
+      }
+    },
+    "macaroni1": {
+      "num_sources": 187,
+      "generation": {
+        "macro_f1": 0.34519572953736655,
+        "accuracy": 0.5187165775401069,
+        "anomaly_recall": 0.0,
+        "normal_recall": 1.0,
+        "normal_fpr": 0.0,
+        "invalid_rate": 0.016042780748663103,
+        "n_normal": 97,
+        "n_anomaly": 90
+      },
+      "pixel": {
+        "auroc": 0.9674814058610546,
+        "ap": 0.06608209177067248
+      },
+      "map_image": {
+        "auroc": 0.7941008018327605,
+        "ap": 0.8240568027945105
+      },
+      "answer_image": {
+        "auroc": 0.5143184421534936,
+        "ap": 0.5084367636097039
+      }
+    },
+    "macaroni2": {
+      "num_sources": 188,
+      "generation": {
+        "macro_f1": 0.3462897526501767,
+        "accuracy": 0.5212765957446809,
+        "anomaly_recall": 0.0,
+        "normal_recall": 1.0,
+        "normal_fpr": 0.0,
+        "invalid_rate": 0.015957446808510637,
+        "n_normal": 98,
+        "n_anomaly": 90
+      },
+      "pixel": {
+        "auroc": 0.9054227657968084,
+        "ap": 0.023831558185902466
+      },
+      "map_image": {
+        "auroc": 0.6498866213151927,
+        "ap": 0.6468848912588856
+      },
+      "answer_image": {
+        "auroc": 0.5166099773242631,
+        "ap": 0.49267502809796443
+      }
+    },
+    "pcb1": {
+      "num_sources": 188,
+      "generation": {
+        "macro_f1": 0.33941605839416056,
+        "accuracy": 0.4946808510638298,
+        "anomaly_recall": 0.0,
+        "normal_recall": 0.9489795918367347,
+        "normal_fpr": 0.0,
+        "invalid_rate": 0.06382978723404255,
+        "n_normal": 98,
+        "n_anomaly": 90
+      },
+      "pixel": {
+        "auroc": 0.8438512379750658,
+        "ap": 0.09556585257008066
+      },
+      "map_image": {
+        "auroc": 0.7228458049886621,
+        "ap": 0.7113816285231327
+      },
+      "answer_image": {
+        "auroc": 0.5976190476190477,
+        "ap": 0.5646179393214622
+      }
+    },
+    "pcb2": {
+      "num_sources": 187,
+      "generation": {
+        "macro_f1": 0.34765625,
+        "accuracy": 0.47593582887700536,
+        "anomaly_recall": 0.0,
+        "normal_recall": 0.9175257731958762,
+        "normal_fpr": 0.0,
+        "invalid_rate": 0.1497326203208556,
+        "n_normal": 97,
+        "n_anomaly": 90
+      },
+      "pixel": {
+        "auroc": 0.9155519871278419,
+        "ap": 0.05078311451881498
+      },
+      "map_image": {
+        "auroc": 0.6761741122565865,
+        "ap": 0.6852626633298726
+      },
+      "answer_image": {
+        "auroc": 0.563516609392898,
+        "ap": 0.5297303938143865
+      }
+    },
+    "pcb3": {
+      "num_sources": 189,
+      "generation": {
+        "macro_f1": 0.34306569343065696,
+        "accuracy": 0.4973544973544973,
+        "anomaly_recall": 0.0,
+        "normal_recall": 0.9494949494949495,
+        "normal_fpr": 0.0,
+        "invalid_rate": 0.07407407407407407,
+        "n_normal": 99,
+        "n_anomaly": 90
+      },
+      "pixel": {
+        "auroc": 0.876406047345133,
+        "ap": 0.048313170327068874
+      },
+      "map_image": {
+        "auroc": 0.6071829405162739,
+        "ap": 0.5915483465614346
+      },
+      "answer_image": {
+        "auroc": 0.5779461279461279,
+        "ap": 0.5442754265698215
+      }
+    },
+    "pcb4": {
+      "num_sources": 187,
+      "generation": {
+        "macro_f1": 0.42470472440944884,
+        "accuracy": 0.5240641711229946,
+        "anomaly_recall": 0.06666666666666667,
+        "normal_recall": 0.9484536082474226,
+        "normal_fpr": 0.0,
+        "invalid_rate": 0.12834224598930483,
+        "n_normal": 97,
+        "n_anomaly": 90
+      },
+      "pixel": {
+        "auroc": 0.8769313906101889,
+        "ap": 0.08044943694176804
+      },
+      "map_image": {
+        "auroc": 0.8171248568155784,
+        "ap": 0.8265757616338605
+      },
+      "answer_image": {
+        "auroc": 0.7197021764032073,
+        "ap": 0.6598436145446753
+      }
+    },
+    "pipe_fryum": {
+      "num_sources": 137,
+      "generation": {
+        "macro_f1": 0.2865853658536585,
+        "accuracy": 0.34306569343065696,
+        "anomaly_recall": 0.0,
+        "normal_recall": 1.0,
+        "normal_fpr": 0.0,
+        "invalid_rate": 0.145985401459854,
+        "n_normal": 47,
+        "n_anomaly": 90
+      },
+      "pixel": {
+        "auroc": 0.9577565730370587,
+        "ap": 0.4194738735174792
+      },
+      "map_image": {
+        "auroc": 0.9014184397163122,
+        "ap": 0.9565623640077654
+      },
+      "answer_image": {
+        "auroc": 0.5359338061465722,
+        "ap": 0.706234261809842
+      }
+    }
+  },
+  "category_macro": {
+    "pixel": {
+      "auroc": 0.9106372375642096,
+      "ap": 0.19018639697612105
+    },
+    "map_image": {
+      "auroc": 0.7778082144678642,
+      "ap": 0.8083073832527482
+    },
+    "answer_image": {
+      "auroc": 0.5894370199706128,
+      "ap": 0.6304167803011235
+    },
+    "generation": {
+      "macro_f1": 0.34355254782699923,
+      "anomaly_recall": 0.17592592592592593,
+      "normal_fpr": 0.1652046783625731
+    }
+  },
+  "definitions": {
+    "pixel": "Four-level maps are averaged before scoring; per-class pixel metrics pool normal and anomaly images; category_macro weights products equally.",
+    "generation_macro_f1": "Normal/anomalous label macro F1 over all sources; invalid answers remain false negatives for their GT class.",
+    "candidate": "Sum continuation conditional log probabilities using the same segmented tokenization as training; log_odds=Yes-No.",
+    "map_image_score": "Maximum of the averaged 224x224 map, without per-image rescaling.",
+    "pixel_metric_algorithm": "Exact BF16 score histogram with simultaneous ties; matches sklearn AUROC and noninterpolated AP."
+  },
+  "seconds": 149.09360790252686,
+  "peak_allocated_gb": 8.145338368,
+  "checkpoint": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/matched_runs/qwen_frozen_43/pytorch_model.pt",
+  "lora_adapter": null,
+  "backend": "qwen",
+  "seed": 43
+}

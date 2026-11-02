@@ -1,0 +1,490 @@
+{
+  "created_at_utc": "2026-10-26T06:11:32.331892+00:00",
+  "root": "/Users/qiaohongfei/Desktop/实习/阿里云天池比赛vlm/AnomalyGPT/code",
+  "scope": "metadata",
+  "hash_weights": false,
+  "git": {
+    "commit": "f21c51b93de1094440172051e48f114fb630a389",
+    "status_porcelain": "M code/datasets/visa.py\n M code/dsconfig/openllama_peft_stage_1.json\n M code/model/agent.py\n M code/model/openllama.py\n M code/test_visa.py\n M code/train_visa.py\n?? ckpt/\n?? pretrained_ckpt/SOURCES.md\n?? pretrained_ckpt/imagebind_ckpt/imagebind_huge.pth\n?? pretrained_ckpt/pandagpt_ckpt/7b/\n?? pretrained_ckpt/vicuna_ckpt/7b_v0/"
+  },
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 12008,
+      "kind": "metadata",
+      "sha256": "b3434af772a297c3c3b5a54941449a1db495737f5987b1dc26f1afe04ff29fb6"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 488,
+      "kind": "metadata",
+      "sha256": "cffcf231260a7128868d619cf8d786a7764cbba06a03765b6ab9349cfc682530"
+    },
+    {
+      "path": "ckpt/train_mvtec/pytorch_model.pt",
+      "bytes": 225330109,
+      "kind": "tensor_or_checkpoint",
+      "sha256": null,
+      "hash_status": "not_requested"
+    },
+    {
+      "path": "ckpt/train_supervised/pytorch_model.pt",
+      "bytes": 225330109,
+      "kind": "tensor_or_checkpoint",
+      "sha256": null,
+      "hash_status": "not_requested"
+    },
+    {
+      "path": "ckpt/train_visa/pytorch_model.pt",
+      "bytes": 225330109,
+      "kind": "tensor_or_checkpoint",
+      "sha256": null,
+      "hash_status": "not_requested"
+    },
+    {
+      "path": "code/header.py",
+      "bytes": 1028,
+      "kind": "metadata",
+      "sha256": "41ba3ba5bc53c1de97ae670bb3a1dddcac21b2c63709ba7ef0d91495910a7af9"
+    },
+    {
+      "path": "code/test_mvtec.py",
+      "bytes": 8406,
+      "kind": "metadata",
+      "sha256": "eb4897797fb6c6c673b49107a3e764960323a3a5d3e6cd2deefcaaf15874dd40"
+    },
+    {
+      "path": "code/test_visa.py",
+      "bytes": 7816,
+      "kind": "metadata",
+      "sha256": "4410ba4236571abf5982d1339df7b3289ec793547a1bf234a47444106d69254a"
+    },
+    {
+      "path": "code/train_all_supervised_cn.py",
+      "bytes": 4334,
+      "kind": "metadata",
+      "sha256": "b06ded99c40c4787a165943ecd2dca576b0bd8fc3a2726c5823f6dd1f9915d81"
+    },
+    {
+      "path": "code/train_mvtec.py",
+      "bytes": 4193,
+      "kind": "metadata",
+      "sha256": "0151f753730e6567f3b7e9f252f5b61b27c053255b0fdfe77b1672420fc6c25c"
+    },
+    {
+      "path": "code/train_visa.py",
+      "bytes": 4676,
+      "kind": "metadata",
+      "sha256": "6bea9db9cbe4940eb1becf8d7568453179347cfff363772fc54012bb9361c07e"
+    },
+    {
+      "path": "code/web_demo.py",
+      "bytes": 7827,
+      "kind": "metadata",
+      "sha256": "5c09554d1e73530c55b8d77b8bb923784c05ebfe2845fcdd42fc1486eb870276"
+    },
+    {
+      "path": "code/config/__init__.py",
+      "bytes": 1271,
+      "kind": "metadata",
+      "sha256": "6090b59e94c4a9b7c87b6fd20d14281e3134d1fb96ffc914536a8ecb1b0f46c5"
+    },
+    {
+      "path": "code/config/base.yaml",
+      "bytes": 474,
+      "kind": "metadata",
+      "sha256": "3e422e1ff9e62f318d9485608f8817fc28f285e3acded65e420e6a2f26561977"
+    },
+    {
+      "path": "code/config/openllama_peft.yaml",
+      "bytes": 377,
+      "kind": "metadata",
+      "sha256": "36f62e6fbe5e102bcca38fa7a6ea8df132ed0f460fcacb61be0092c11dc8e917"
+    },
+    {
+      "path": "code/datasets/__init__.py",
+      "bytes": 4236,
+      "kind": "metadata",
+      "sha256": "74dca186e49deba0b5fbb6b02e965c73eeaa811302e3c66a1b52058b65de4d85"
+    },
+    {
+      "path": "code/datasets/all_supervised_with_cn.py",
+      "bytes": 49722,
+      "kind": "metadata",
+      "sha256": "b32a22d7d98d241f26b9433d13f8ae17d6bd59c91ad98ea4d463c3ac4d4d0f8b"
+    },
+    {
+      "path": "code/datasets/mvtec.py",
+      "bytes": 11066,
+      "kind": "metadata",
+      "sha256": "1277a3c61c1550a454c158ca7704f7aa770fbf3c4794971ba371088cc3b17802"
+    },
+    {
+      "path": "code/datasets/perlin.py",
+      "bytes": 4453,
+      "kind": "metadata",
+      "sha256": "6febd7b06f5aa3f625fce3671a48b9b785f8dde7460fb76df5fbc73c0f57e0fe"
+    },
+    {
+      "path": "code/datasets/samplers.py",
+      "bytes": 6794,
+      "kind": "metadata",
+      "sha256": "578ff269dd4898700c6a17ea84869177cf88966d57ea2fac38322ec46266a077"
+    },
+    {
+      "path": "code/datasets/self_sup_tasks.py",
+      "bytes": 17430,
+      "kind": "metadata",
+      "sha256": "4c2ea41ae6ccd27b68241a4af7d31dcc4fb537ea5ca6d495d046197412f6f4b5"
+    },
+    {
+      "path": "code/datasets/sft_dataset.py",
+      "bytes": 3410,
+      "kind": "metadata",
+      "sha256": "312f520b6ee123903bcc33c930e3f42c1c6b4793fe8ba64fe4621e7cbb98bd61"
+    },
+    {
+      "path": "code/datasets/visa.py",
+      "bytes": 8881,
+      "kind": "metadata",
+      "sha256": "8afa9ea75acab9b84a1a58f6df462e34f7f934681222047e66a19a027a91e412"
+    },
+    {
+      "path": "code/dsconfig/openllama_peft_stage_1.json",
+      "bytes": 1049,
+      "kind": "metadata",
+      "sha256": "2bdf7f92813ab57ac309d52677e33b59c66ed084890ed8055691ff3e0d29e152"
+    },
+    {
+      "path": "code/model/AnomalyGPT_models.py",
+      "bytes": 2636,
+      "kind": "metadata",
+      "sha256": "798397f04bf189781b2c445f516dbd548b63d3ac3b70ef236f613edef1209f30"
+    },
+    {
+      "path": "code/model/__init__.py",
+      "bytes": 411,
+      "kind": "metadata",
+      "sha256": "1086ddc067426bbdd5e4685352672df81767ae8d6c30a6a625789ec22579dd79"
+    },
+    {
+      "path": "code/model/agent.py",
+      "bytes": 3390,
+      "kind": "metadata",
+      "sha256": "675e5390788b671aeb8a7a4400d57dcb50e386452afd8d846eb1e20fb1823920"
+    },
+    {
+      "path": "code/model/modeling_llama.py",
+      "bytes": 33326,
+      "kind": "metadata",
+      "sha256": "a4d9707fb97dcea7bd370941f62a3d8db252562a68b75392b3c6c66b0f9acd84"
+    },
+    {
+      "path": "code/model/openllama.py",
+      "bytes": 36174,
+      "kind": "metadata",
+      "sha256": "b91f1af7d73ce9e62759cf92fc2c9ce524d4b564a3be87bf5783119fddfb2287"
+    },
+    {
+      "path": "code/model/ImageBind/CODE_OF_CONDUCT.md",
+      "bytes": 3534,
+      "kind": "metadata",
+      "sha256": "454afaf08540bead14c3cf9051293585f8c646f3f0c7d379fe2826bda86cb584"
+    },
+    {
+      "path": "code/model/ImageBind/CONTRIBUTING.md",
+      "bytes": 1255,
+      "kind": "metadata",
+      "sha256": "57e1a0a71ea6bf117d9c7fc82cd95dcee897b696d0808d935dd8ca1a226e8737"
+    },
+    {
+      "path": "code/model/ImageBind/README.md",
+      "bytes": 4716,
+      "kind": "metadata",
+      "sha256": "2c4994eb0b29714f369b6dde84830dcbdbb23185b7dcb07801d825e859843d0d"
+    },
+    {
+      "path": "code/model/ImageBind/__init__.py",
+      "bytes": 85,
+      "kind": "metadata",
+      "sha256": "8426c3ef2aa09b2452e66be3734570d3433ee2bdd729cb4e73180cdefea5dba4"
+    },
+    {
+      "path": "code/model/ImageBind/data.py",
+      "bytes": 13416,
+      "kind": "metadata",
+      "sha256": "07f9b7901d9f228a9476958ae79ce177982161e01dda03ad91f7026200d3b7c8"
+    },
+    {
+      "path": "code/model/ImageBind/model_card.md",
+      "bytes": 4570,
+      "kind": "metadata",
+      "sha256": "f12228a8e0b409afb265ff3b3aa5d2f64b9f69806005b751f6786bcff9be0dba"
+    },
+    {
+      "path": "code/model/ImageBind/requirements.txt",
+      "bytes": 260,
+      "kind": "metadata",
+      "sha256": "e6d5e4dd0f99f60d7da87617c7a3a45abeeae93d0fa06b4f4210c31c86aaa840"
+    },
+    {
+      "path": "code/model/ImageBind/models/__init__.py",
+      "bytes": 0,
+      "kind": "metadata",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "code/model/ImageBind/models/helpers.py",
+      "bytes": 3988,
+      "kind": "metadata",
+      "sha256": "ea157fc6f95a806305c680fe56bb8aaf0b6fc5dfb83e80ccd80af2e802d78bb0"
+    },
+    {
+      "path": "code/model/ImageBind/models/imagebind_model.py",
+      "bytes": 17603,
+      "kind": "metadata",
+      "sha256": "65f1ca944b157f53b898075f450a01173e0761dd98524d251c9fcb219368cc5b"
+    },
+    {
+      "path": "code/model/ImageBind/models/multimodal_preprocessors.py",
+      "bytes": 23136,
+      "kind": "metadata",
+      "sha256": "fab69ddfe599b8ca471086b24db2c9c171622fa61478a10d73ef1641e4764930"
+    },
+    {
+      "path": "code/model/ImageBind/models/transformer.py",
+      "bytes": 9956,
+      "kind": "metadata",
+      "sha256": "1f005158baca13d10dbe15fdc710050961f5c3983a7b6ad5160da4426d8eec25"
+    },
+    {
+      "path": "code/scripts/train_all_supervised_cn.sh",
+      "bytes": 578,
+      "kind": "metadata",
+      "sha256": "7ebc71e5c4dc81702e708e91b9338ad4dfa60b66fee2ea263a2af497a739d8d5"
+    },
+    {
+      "path": "code/scripts/train_mvtec.sh",
+      "bytes": 556,
+      "kind": "metadata",
+      "sha256": "e4c322b989d04b845817d42f97ba8530351d4663347e5ceeb26241762e9930f4"
+    },
+    {
+      "path": "code/scripts/train_visa.sh",
+      "bytes": 553,
+      "kind": "metadata",
+      "sha256": "4596bbcffcd0f262bef8176f3530a5fbde081bb42e3ca6d25efbcf3005bcc883"
+    },
+    {
+      "path": "code/utils/__init__.py",
+      "bytes": 0,
+      "kind": "metadata",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "code/utils/build.py",
+      "bytes": 364,
+      "kind": "metadata",
+      "sha256": "a0ad14bd96604a3e8d630ea2f1dd98fc3a666e037b2d56239947c0c801e4f2ec"
+    },
+    {
+      "path": "code/utils/config.py",
+      "bytes": 2360,
+      "kind": "metadata",
+      "sha256": "a718798663c866aa817aed958566f5320d56a733f38d6fff65057be3f408b927"
+    },
+    {
+      "path": "code/utils/data_transform.py",
+      "bytes": 11418,
+      "kind": "metadata",
+      "sha256": "863a0b27f7e1a4029b968f84f59d82122195424fd88df9a29bfda85f221b4ec4"
+    },
+    {
+      "path": "code/utils/io.py",
+      "bytes": 1280,
+      "kind": "metadata",
+      "sha256": "b15d29f319b4c29bd7b3d4a973e151f2303c918235e756296c389d414f05b491"
+    },
+    {
+      "path": "code/utils/logger.py",
+      "bytes": 4922,
+      "kind": "metadata",
+      "sha256": "d5ce96284512f59bfe386c857c9e3587fbd9afd605d4140f3383bfe7d0a03f69"
+    },
+    {
+      "path": "code/utils/loss.py",
+      "bytes": 4295,
+      "kind": "metadata",
+      "sha256": "80679a2a9cf7eb382cae4083dd401bb0d4dea6bb6a1e3e8501e71abecf0c8071"
+    },
+    {
+      "path": "code/utils/registry.py",
+      "bytes": 10818,
+      "kind": "metadata",
+      "sha256": "27573c4851a6db807956d371bd8d1f01f0fee5fd0b92c53496355db1480d285b"
+    },
+    {
+      "path": "code/utils/utils.py",
+      "bytes": 7393,
+      "kind": "metadata",
+      "sha256": "7a810be358125a52f49ea18b7b0bb97200b355bbbbde0c8e6eedaa9db6debe38"
+    },
+    {
+      "path": "data/empty.txt",
+      "bytes": 0,
+      "kind": "metadata",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "pretrained_ckpt/README.md",
+      "bytes": 3203,
+      "kind": "metadata",
+      "sha256": "1850ccb1ec898056c9f8f162bf414c033ebfe74e3793ee1b0580a180c645bf7a"
+    },
+    {
+      "path": "pretrained_ckpt/SOURCES.md",
+      "bytes": 3151,
+      "kind": "metadata",
+      "sha256": "3336f8c644d5c440edabb7315b9011898173a616f43236c313939e21248945bb"
+    },
+    {
+      "path": "pretrained_ckpt/imagebind_ckpt/empty.txt",
+      "bytes": 0,
+      "kind": "metadata",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "pretrained_ckpt/imagebind_ckpt/imagebind_huge.pth",
+      "bytes": 4803584173,
+      "kind": "tensor_or_checkpoint",
+      "sha256": null,
+      "hash_status": "not_requested"
+    },
+    {
+      "path": "pretrained_ckpt/pandagpt_ckpt/empty.txt",
+      "bytes": 0,
+      "kind": "metadata",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "pretrained_ckpt/pandagpt_ckpt/7b/pytorch_model.pt",
+      "bytes": 75557949,
+      "kind": "tensor_or_checkpoint",
+      "sha256": null,
+      "hash_status": "not_requested"
+    },
+    {
+      "path": "pretrained_ckpt/vicuna_ckpt/empty.txt",
+      "bytes": 0,
+      "kind": "metadata",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "pretrained_ckpt/vicuna_ckpt/7b_v0/config.json",
+      "bytes": 539,
+      "kind": "metadata",
+      "sha256": "24c06a2d82c8f7a3a3425353ac7e0590244b9e60daf308d6cb92bdbd802052c3"
+    },
+    {
+      "path": "pretrained_ckpt/vicuna_ckpt/7b_v0/generation_config.json",
+      "bytes": 137,
+      "kind": "metadata",
+      "sha256": "9b5540cf00c5acd212f843e4a24b2cba5856bd9badfd5c7c4248791eba87c839"
+    },
+    {
+      "path": "pretrained_ckpt/vicuna_ckpt/7b_v0/pytorch_model-00001-of-00002.bin",
+      "bytes": 9976642750,
+      "kind": "tensor_or_checkpoint",
+      "sha256": null,
+      "hash_status": "not_requested"
+    },
+    {
+      "path": "pretrained_ckpt/vicuna_ckpt/7b_v0/pytorch_model-00002-of-00002.bin",
+      "bytes": 3500323731,
+      "kind": "tensor_or_checkpoint",
+      "sha256": null,
+      "hash_status": "not_requested"
+    },
+    {
+      "path": "pretrained_ckpt/vicuna_ckpt/7b_v0/pytorch_model.bin.index.json",
+      "bytes": 26788,
+      "kind": "metadata",
+      "sha256": "9a301ecda65be9c9e68dc92d7b399a44cef2775d9bcf7c584aad99c5d02edb4d"
+    },
+    {
+      "path": "pretrained_ckpt/vicuna_ckpt/7b_v0/special_tokens_map.json",
+      "bytes": 411,
+      "kind": "metadata",
+      "sha256": "ff3b4a612c4e447acb02d40071bddd989fe0da87eb5b7fe0dbadfc4f74de7531"
+    },
+    {
+      "path": "pretrained_ckpt/vicuna_ckpt/7b_v0/tokenizer_config.json",
+      "bytes": 700,
+      "kind": "metadata",
+      "sha256": "380608719f3af6ef2b343e2ed53bf55556678609337e88a14f58cc49177b9e18"
+    }
+  ],
+  "run_metadata": [],
+  "split_audit": {
+    "candidates": [],
+    "overlap_status": "not_checked: select exactly one train and test CSV"
+  },
+  "checkpoint_inventory": [
+    {
+      "path": "ckpt/train_mvtec/pytorch_model.pt",
+      "bytes": 225330109,
+      "kind": "tensor_or_checkpoint",
+      "sha256": null,
+      "hash_status": "not_requested"
+    },
+    {
+      "path": "ckpt/train_supervised/pytorch_model.pt",
+      "bytes": 225330109,
+      "kind": "tensor_or_checkpoint",
+      "sha256": null,
+      "hash_status": "not_requested"
+    },
+    {
+      "path": "ckpt/train_visa/pytorch_model.pt",
+      "bytes": 225330109,
+      "kind": "tensor_or_checkpoint",
+      "sha256": null,
+      "hash_status": "not_requested"
+    },
+    {
+      "path": "pretrained_ckpt/imagebind_ckpt/imagebind_huge.pth",
+      "bytes": 4803584173,
+      "kind": "tensor_or_checkpoint",
+      "sha256": null,
+      "hash_status": "not_requested"
+    },
+    {
+      "path": "pretrained_ckpt/pandagpt_ckpt/7b/pytorch_model.pt",
+      "bytes": 75557949,
+      "kind": "tensor_or_checkpoint",
+      "sha256": null,
+      "hash_status": "not_requested"
+    },
+    {
+      "path": "pretrained_ckpt/vicuna_ckpt/7b_v0/pytorch_model-00001-of-00002.bin",
+      "bytes": 9976642750,
+      "kind": "tensor_or_checkpoint",
+      "sha256": null,
+      "hash_status": "not_requested"
+    },
+    {
+      "path": "pretrained_ckpt/vicuna_ckpt/7b_v0/pytorch_model-00002-of-00002.bin",
+      "bytes": 3500323731,
+      "kind": "tensor_or_checkpoint",
+      "sha256": null,
+      "hash_status": "not_requested"
+    }
+  ],
+  "limitations": [
+    "No tensor file is deserialized and no training or inference is run.",
+    "Path overlap concerns these CSVs only; initial checkpoints need their own data provenance.",
+    "Path isolation does not prove byte, near-duplicate, or physical-object isolation.",
+    "Repeated sources may be intentional normal/synthetic variants; inspect the variant protocol.",
+    "Initialization fields are reported when recorded; missing metadata is not proof of random initialization."
+  ]
+}

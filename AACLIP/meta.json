@@ -1,0 +1,55 @@
+{
+ "arxiv_id": "2503.06661",
+ "version": "v1",
+ "title": "AA-CLIP: Enhancing Zero-shot Anomaly Detection via Anomaly-Aware CLIP",
+ "authors": [
+  "Wenxin Ma",
+  "Xu Zhang",
+  "Qingsong Yao",
+  "Fenghe Tang",
+  "Chenxu Wu",
+  "Yingtai Li",
+  "Rui Yan",
+  "Zihang Jiang",
+  "S. Kevin Zhou"
+ ],
+ "published": "2025-03-09",
+ "updated": "2025-03-09",
+ "abstract": "Anomaly detection (AD) identifies outliers for applications like defect and lesion detection. While CLIP shows promise for zero-shot AD tasks due to its strong generalization capabilities, its inherent Anomaly-Unawareness leads to limited discrimination between normal and abnormal features. To address this problem, we propose Anomaly-Aware CLIP (AA-CLIP), which enhances CLIP's anomaly discrimination ability in both text and visual spaces while preserving its generalization capability. AA-CLIP is achieved through a straightforward yet effective two-stage approach: it first creates anomaly-aware text anchors to differentiate normal and abnormal semantics clearly, then aligns patch-level visual features with these anchors for precise anomaly localization. This two-stage strategy, with the help of residual adapters, gradually adapts CLIP in a controlled manner, achieving effective AD while maintaining CLIP's class knowledge. Extensive experiments validate AA-CLIP as a resource-efficient solution for zero-shot AD tasks, achieving state-of-the-art results in industrial and medical applications. The code is available at https://github.com/Mwxinnn/AA-CLIP.",
+ "comment": "8 pages, 7 figures",
+ "journal_ref": "CVPR 2025",
+ "categories": [
+  "cs.CV",
+  "cs.AI"
+ ],
+ "abs_url": "https://arxiv.org/abs/2503.06661",
+ "pdf_pages": 11,
+ "has_latex": true,
+ "main_tex": "source/main.tex",
+ "links": {
+  "code": [
+   {
+    "url": "https://github.com/Mwxinnn/AA-CLIP",
+    "score": 15,
+    "from": [
+     "摘要",
+     "首页链接",
+     "正文提到"
+    ]
+   }
+  ],
+  "other": [
+   {
+    "url": "https://github",
+    "score": 3,
+    "from": [
+     "首页文字"
+    ]
+   }
+  ]
+ },
+ "official_code": "https://github.com/Mwxinnn/AA-CLIP",
+ "official_code_from": "摘要、首页链接、正文提到",
+ "code_dir": "/Users/qiaohongfei/Desktop/实习/阿里云天池比赛vlm/AACLIP/code",
+ "fetched": "2026-10-22"
+}

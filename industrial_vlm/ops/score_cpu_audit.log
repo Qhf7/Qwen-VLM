@@ -1,0 +1,30 @@
+test_actual_multiple_value_tokens (__main__.BoundariesTest.test_actual_multiple_value_tokens) ... ok
+test_merged_prefix_value_token_rejected (__main__.BoundariesTest.test_merged_prefix_value_token_rejected) ... ok
+test_slow_tokenizer_rejected (__main__.BoundariesTest.test_slow_tokenizer_rejected) ... ok
+test_unreliable_offsets_rejected (__main__.BoundariesTest.test_unreliable_offsets_rejected) ... ok
+test_all_ties (__main__.MetricsTest.test_all_ties) ... ok
+test_duplicate_or_nonfinite_sources_rejected (__main__.MetricsTest.test_duplicate_or_nonfinite_sources_rejected) ... ok
+test_log_softmax_and_extremes (__main__.MetricsTest.test_log_softmax_and_extremes) ... ok
+test_normal_only_threshold_and_boundary_ties (__main__.MetricsTest.test_normal_only_threshold_and_boundary_ties) ... ok
+test_one_class (__main__.MetricsTest.test_one_class) ... ok
+test_partial_ties (__main__.MetricsTest.test_partial_ties) ... ok
+test_perfect_and_reversed_rankings (__main__.MetricsTest.test_perfect_and_reversed_rankings) ... ok
+test_small_calibration_has_zero_allowed_false_positives (__main__.MetricsTest.test_small_calibration_has_zero_allowed_false_positives) ... ok
+test_native_full_candidate_tokens_and_no_labels (__main__.NativeProcessorTest.test_native_full_candidate_tokens_and_no_labels) ... [transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+NATIVE_CPU_AUDIT {'log_likelihood_true': -11.929455757141113, 'log_likelihood_false': -11.929455757141113, 'anomaly_score': 0.5, 'log_normalized_true': -0.6931471805599453, 'log_normalized_false': -0.6931471805599453, 'anomaly_log_odds': 0.0, 'value_token_ids': {'true': [1866], 'false': [3849]}, 'n_value_tokens': {'true': 1, 'false': 1}, 'prompt_tokens': 331, 'candidate_input_tokens': {'true': 341, 'false': 341}, 'common_json_prefix_token_ids': [4913, 285, 12008, 316, 29443, 788], 'common_suffix_token_ids': [92, 151645, 198], 'token_boundary_audit': 'native full token IDs == prompt IDs + offset-verified continuation IDs'}
+{"schema_version": "industrial-vlm-boolean-score-v1", "kind": "validation_normal_threshold", "created_at": "2026-10-23T12:36:14.237718+00:00", "source_scores": "/tmp/tmptf7kepq6", "source_scores_sha256": "497934c9be8fddfb14fbe0bc01b6ab2d6f7c248aef55bbe45d38f57e6bda4a86", "source_data_sha256": "fixture", "source_subset_sha256": "fixture", "calibration_source_ids": ["anomaly_fixture", "normal_fixture"], "score_model_contract": {"fixture_only": true}, "threshold_log_odds": -2.0, "comparison": "anomaly_log_odds > threshold", "target_empirical_fpr": 0.05, "n_calibration_normals": 1, "allowed_calibration_false_positives": 0, "actual_calibration_false_positives": 0, "empirical_calibration_fpr": 0.0, "selection": "normal-only descending order statistic; strict > excludes boundary ties", "limitation": "Empirical validation FPR only; no guarantee of future or cross-domain FPR.", "confidence_calibrated": false, "calibration_set_metrics_not_independent_test": {"threshold_log_odds": -2.0, "comparison": "anomaly_log_odds > threshold", "tp": 1, "fp": 0, "tn": 1, "fn": 0, "recall": 1.0, "fpr": 0.0, "precision": 1.0, "anomaly_f1": 1.0, "macro_f1": 1.0}}
+ok
+test_calibration_metadata_and_score_integrity (__main__.OfflineArtifactTest.test_calibration_metadata_and_score_integrity) ... ok
+test_completed_resume_rejects_internally_consistent_tampering (__main__.OfflineArtifactTest.test_completed_resume_rejects_internally_consistent_tampering) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 6.675s
+
+OK

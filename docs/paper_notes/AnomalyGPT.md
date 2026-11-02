@@ -27,7 +27,7 @@
 
 ## ① 动机
 
-![](figures/fig-01.png)
+![](../../AnomalyGPT/figures/fig-01.png)
 
 **图 1 怎么读**，上下两组（正常药片 / 裂开的药片），每组三列：
 
@@ -67,7 +67,7 @@
 
 ## ② 架构
 
-![](figures/fig-02.png)
+![](../../AnomalyGPT/figures/fig-02.png)
 
 **图 2 怎么读**：五块 + 一条并行支路。
 

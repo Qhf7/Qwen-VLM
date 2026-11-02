@@ -1,0 +1,21 @@
+{
+  "status": "complete",
+  "optimizer_steps": 1,
+  "microsteps": 1,
+  "last_train_loss": 1.213648796081543,
+  "total_target_tokens": 13,
+  "total_input_tokens": 583,
+  "train_wall_seconds_including_validation": 1.2195203676819801,
+  "trainable_parameters": 15335424,
+  "peak_allocated_gib": 8.135012149810791,
+  "peak_reserved_gib": 8.3828125,
+  "adapter": "/root/autodl-tmp/industrial_vlm/runs/real_data_smoke/adapter",
+  "reload_check": {
+    "passed": true,
+    "max_absolute_logit_difference": 0.0,
+    "same_top1": true,
+    "rtol": 0.001,
+    "atol": 0.001,
+    "scope": "first-sample prompt final-token logits; fresh base + saved adapter"
+  }
+}

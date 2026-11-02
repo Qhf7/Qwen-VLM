@@ -14,6 +14,54 @@ third_party/
 *.zip
 *.tgz
 *.tar.gz
+*.safetensors
+*.bin
+*.ckpt
+*.npy
+*.npz
+*.partial
+*.log
+
+# 本地运行环境和认证文件
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+
+# 数据、权重、历史快照（保留已跟踪的冻结协议）
+/data/sim/
+/industrial_vlm/prepared/
+/industrial_vlm/pipeline_state.json
+/industrial_vlm/experiments/*/logs/
+/AnomalyGPT/data/
+/AnomalyGPT/figs_concepts/
+/AnomalyGPT/followup_20261026/progress_results/
+/AnomalyGPT/followup_20261026/restart_results/
+/AnomalyGPT/followup_20261026/main_complete_results/
+/AnomalyGPT/followup_20261026/local_archives/
+/AnomalyGPT/followup_20261026/server_snapshot/runs/
+/AnomalyGPT/followup_20261026/final_results/logs/
+/AnomalyGPT/followup_20261026/final_results/safe_jobs/
+/AnomalyGPT/followup_20261026/*.manifest.json
+/AnomalyGPT/followup_20261026/real_sources.json
+/AnomalyGPT/followup_20261026/final_results/_archive_manifest.json
+
+# 论文原文和独立克隆的上游仓库；来源见 THIRD_PARTY.md
+/*/paper.txt
+/*/paper.pdf
+/*/source/
+/*/figures/
+/*/code/
+/AdaCLIP/AdaCLIP.pdf
+/AnomalyGPT/AnomalyGPT_中文全文翻译.md
+/kelip-paper-reading-main/
+/*.docx
+/*.pdf
 
 # 运行产物（只保留冻结的数据地基）
 artifacts/seg_cross_part/*

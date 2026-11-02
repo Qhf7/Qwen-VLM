@@ -28,7 +28,7 @@
 
 ## ① 动机
 
-![](figures/fig-teaser.png)
+![](../../AdaCLIP/figures/fig-teaser.png)
 
 **先说这张图是什么。** 左边一张表把三种范式并排放：
 
@@ -70,7 +70,7 @@
 
 ## ② 架构
 
-![](figures/fig-framework.png)
+![](../../AdaCLIP/figures/fig-framework.png)
 
 **图 2 怎么读**：左边是主流程（图像塔在上、文本塔在下），右边两个放大镜——上「Prompting Layer」、下「HSF」。
 红块 = 可学习，蓝雪花 = 冻结。整体骨架和 WinCLIP 一样：**图像出 patch 特征、文本出 2 个嵌入、两者点积**。
@@ -209,7 +209,7 @@ L_dice(p, g)  = 1 − (2·Σ p·g + 1) / (Σ p + Σ g + 1)
 
 ## ④ 数据
 
-![](figures/tab-datasets.png)
+![](../../AdaCLIP/figures/tab-datasets.png)
 
 **一条训练样本长什么样**（AdaCLIP 是监督训练，所以真的有「训练样本」）：
 

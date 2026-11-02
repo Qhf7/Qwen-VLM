@@ -1,0 +1,244 @@
+{
+  "sampling_audit": {
+    "category_label_quotas": {
+      "candle|0": 32,
+      "candle|1": 32,
+      "capsules|0": 32,
+      "capsules|1": 32,
+      "cashew|0": 32,
+      "cashew|1": 32,
+      "chewinggum|0": 32,
+      "chewinggum|1": 32,
+      "fryum|0": 32,
+      "fryum|1": 32,
+      "macaroni1|0": 32,
+      "macaroni1|1": 32,
+      "macaroni2|0": 32,
+      "macaroni2|1": 32,
+      "pcb1|0": 32,
+      "pcb1|1": 32,
+      "pcb2|0": 32,
+      "pcb2|1": 32,
+      "pcb3|0": 32,
+      "pcb3|1": 32,
+      "pcb4|0": 32,
+      "pcb4|1": 32,
+      "pipe_fryum|0": 32,
+      "pipe_fryum|1": 32
+    },
+    "area_thresholds": {
+      "candle": {
+        "q1": 0.0009501824350275253,
+        "q2": 0.0022144251696325696,
+        "computed_from": "train_anomalies_only"
+      },
+      "capsules": {
+        "q1": 0.0008546666666666667,
+        "q2": 0.008518666666666667,
+        "computed_from": "train_anomalies_only"
+      },
+      "cashew": {
+        "q1": 0.0009170858296222728,
+        "q2": 0.002227303794359188,
+        "computed_from": "train_anomalies_only"
+      },
+      "chewinggum": {
+        "q1": 0.0025573930453838957,
+        "q2": 0.009727024786117429,
+        "computed_from": "train_anomalies_only"
+      },
+      "fryum": {
+        "q1": 0.00042666666666666667,
+        "q2": 0.004246666666666667,
+        "computed_from": "train_anomalies_only"
+      },
+      "macaroni1": {
+        "q1": 0.0004406666666666667,
+        "q2": 0.0007513333333333333,
+        "computed_from": "train_anomalies_only"
+      },
+      "macaroni2": {
+        "q1": 0.0003553333333333333,
+        "q2": 0.0006026666666666667,
+        "computed_from": "train_anomalies_only"
+      },
+      "pcb1": {
+        "q1": 0.0017666480283302713,
+        "q2": 0.0024888835636499187,
+        "computed_from": "train_anomalies_only"
+      },
+      "pcb2": {
+        "q1": 0.00237572223553532,
+        "q2": 0.003579226242777645,
+        "computed_from": "train_anomalies_only"
+      },
+      "pcb3": {
+        "q1": 0.0019906370038412294,
+        "q2": 0.0035498026034997865,
+        "computed_from": "train_anomalies_only"
+      },
+      "pcb4": {
+        "q1": 0.005258025442359822,
+        "q2": 0.01811394100446095,
+        "computed_from": "train_anomalies_only"
+      },
+      "pipe_fryum": {
+        "q1": 0.000901213171577123,
+        "q2": 0.0024516731102519665,
+        "computed_from": "train_anomalies_only"
+      }
+    },
+    "normal_source_ids_equal": true,
+    "category_label_sequence_equal": true,
+    "presentation_order": "42:shared_order",
+    "quality_random_overlap": 557
+  },
+  "observed": {
+    "quality_region": {
+      "n_anomaly": 384,
+      "per_category_training_quantile_bins": {
+        "candle": {
+          "large": 11,
+          "medium": 11,
+          "small": 10
+        },
+        "capsules": {
+          "large": 11,
+          "medium": 11,
+          "small": 10
+        },
+        "cashew": {
+          "large": 11,
+          "medium": 11,
+          "small": 10
+        },
+        "chewinggum": {
+          "large": 11,
+          "medium": 11,
+          "small": 10
+        },
+        "fryum": {
+          "large": 11,
+          "medium": 11,
+          "small": 10
+        },
+        "macaroni1": {
+          "large": 11,
+          "medium": 11,
+          "small": 10
+        },
+        "macaroni2": {
+          "large": 11,
+          "medium": 11,
+          "small": 10
+        },
+        "pcb1": {
+          "large": 11,
+          "medium": 11,
+          "small": 10
+        },
+        "pcb2": {
+          "large": 11,
+          "medium": 11,
+          "small": 10
+        },
+        "pcb3": {
+          "large": 11,
+          "medium": 11,
+          "small": 10
+        },
+        "pcb4": {
+          "large": 11,
+          "medium": 11,
+          "small": 10
+        },
+        "pipe_fryum": {
+          "large": 11,
+          "medium": 11,
+          "small": 10
+        }
+      },
+      "area_fraction": {
+        "minimum": 3.600691332735885e-05,
+        "p10": 0.0003045333333333334,
+        "median": 0.002013655892634453,
+        "p90": 0.016703199999999998,
+        "maximum": 0.2591301159845354
+      }
+    },
+    "random_region": {
+      "n_anomaly": 384,
+      "per_category_training_quantile_bins": {
+        "candle": {
+          "large": 11,
+          "medium": 12,
+          "small": 9
+        },
+        "capsules": {
+          "large": 10,
+          "medium": 10,
+          "small": 12
+        },
+        "cashew": {
+          "large": 11,
+          "medium": 14,
+          "small": 7
+        },
+        "chewinggum": {
+          "large": 10,
+          "medium": 12,
+          "small": 10
+        },
+        "fryum": {
+          "large": 12,
+          "medium": 13,
+          "small": 7
+        },
+        "macaroni1": {
+          "large": 11,
+          "medium": 9,
+          "small": 12
+        },
+        "macaroni2": {
+          "large": 10,
+          "medium": 12,
+          "small": 10
+        },
+        "pcb1": {
+          "large": 9,
+          "medium": 12,
+          "small": 11
+        },
+        "pcb2": {
+          "large": 12,
+          "medium": 9,
+          "small": 11
+        },
+        "pcb3": {
+          "large": 10,
+          "medium": 13,
+          "small": 9
+        },
+        "pcb4": {
+          "large": 10,
+          "medium": 10,
+          "small": 12
+        },
+        "pipe_fryum": {
+          "large": 10,
+          "medium": 10,
+          "small": 12
+        }
+      },
+      "area_fraction": {
+        "minimum": 2.9338966414884993e-05,
+        "p10": 0.00034040000000000003,
+        "median": 0.00196670385678742,
+        "p90": 0.016677916420140444,
+        "maximum": 0.23869484068790828
+      }
+    }
+  },
+  "interpretation": "Bins use per-category training anomaly quantiles. Near-equal-mass bins imply a modest coverage intervention; this is not label cleaning.",
+  "bin_edges": "small <= train q1; q1 < medium <= train q2; large > train q2"
+}

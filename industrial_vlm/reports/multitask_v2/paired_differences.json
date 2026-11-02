@@ -1,0 +1,418 @@
+{
+  "schema_version": "industrial-vlm-multitask-v2-paired-v1",
+  "created_at": "2026-10-23T13:30:31.139759+00:00",
+  "status": "complete",
+  "scope": "validation_development_comparison",
+  "n_resamples": 2000,
+  "seed": 17,
+  "method": "paired source_id cluster bootstrap, percentile95% intervals with linear interpolation",
+  "difference_direction": "left minus right; JSON stores fractions, Markdown reports percentage points",
+  "comparisons": [
+    {
+      "branch": "common_decision_RD_minus_RR",
+      "left": "region_decision_decision",
+      "right": "region_region_decision",
+      "left_directory": "/root/autodl-tmp/industrial_vlm/evaluations/multitask_v2/region_decision_decision",
+      "right_directory": "/root/autodl-tmp/industrial_vlm/evaluations/multitask_v2/region_region_decision",
+      "n_rows": 120,
+      "n_sources": 120,
+      "n_resamples": 2000,
+      "seed": 17,
+      "comparison_conditions": {
+        "model": "/root/autodl-tmp/industrial_vlm/models/Qwen3-VL-8B-Instruct",
+        "max_pixels": 524288,
+        "max_length": 2048,
+        "max_new_tokens": 128,
+        "generation": {
+          "do_sample": false,
+          "num_beams": 1
+        },
+        "quantization": "shared modeling.load_model NF4 policy for base and adapter",
+        "base_config_sha256": "5cd452860dc1e9c29dd71cc3cef7f39b338b7a40793f7a260655c2d3568f3661",
+        "limit": null
+      },
+      "left_adapter": "/root/autodl-tmp/industrial_vlm/runs/multitask_v2/region_decision/adapter",
+      "right_adapter": "/root/autodl-tmp/industrial_vlm/runs/multitask_v2/region_region/adapter",
+      "left_adapter_files_sha256": {
+        "adapter_config.json": "5171e99146e7d7ccc8620f3e8cc3f21be0e56cb315a56337c9e27869b067bab1",
+        "adapter_model.safetensors": "f0b6d096a201b931877391b8481ed7d1db2cd27e6b26318c3a263e284d9b3273",
+        "processor_config.json": "d815ae0fa05fabad4de3060b509658cba5002c8a5adb1888716b0329795d063d",
+        "tokenizer.json": "be75606093db2094d7cd20f3c2f385c212750648bd6ea4fb2bf507a6a4c55506",
+        "tokenizer_config.json": "e6d7af673babfe9895d640d345936c925e11b8802f0d2dc446f5417dc237856f",
+        "training_state.json": "4d26f097428f4624cbf7adb53280919f27587bcfc6c7a64a2f72b42eea789c14"
+      },
+      "right_adapter_files_sha256": {
+        "adapter_config.json": "90c49e809ca814873b07432370adf4e4f2bb3271939f0e5d1685ae7006bf7d5d",
+        "adapter_model.safetensors": "feb95ac96966b1bb0989979ced2274a5b3530ff31b41718baeb21f6d38ee26f4",
+        "processor_config.json": "d815ae0fa05fabad4de3060b509658cba5002c8a5adb1888716b0329795d063d",
+        "tokenizer.json": "be75606093db2094d7cd20f3c2f385c212750648bd6ea4fb2bf507a6a4c55506",
+        "tokenizer_config.json": "e6d7af673babfe9895d640d345936c925e11b8802f0d2dc446f5417dc237856f",
+        "training_state.json": "4d26f097428f4624cbf7adb53280919f27587bcfc6c7a64a2f72b42eea789c14"
+      },
+      "metrics": {
+        "macro_f1": {
+          "left": 0.841391304347826,
+          "right": 0.8222222222222222,
+          "difference": 0.019169082125603865,
+          "ci95_low": -0.032901991619392314,
+          "ci95_high": 0.07327273500510624,
+          "n_defined_resamples": 2000,
+          "preferred_direction": "positive"
+        },
+        "balanced_accuracy": {
+          "left": 0.8416666666666667,
+          "right": 0.825,
+          "difference": 0.01666666666666672,
+          "ci95_low": -0.03417616004445678,
+          "ci95_high": 0.06666666666666665,
+          "n_defined_resamples": 2000,
+          "preferred_direction": "positive"
+        },
+        "fpr": {
+          "left": 0.11666666666666667,
+          "right": 0.05,
+          "difference": 0.06666666666666667,
+          "ci95_low": 0.015140374331550804,
+          "ci95_high": 0.13846153846153847,
+          "n_defined_resamples": 2000,
+          "preferred_direction": "negative"
+        },
+        "fnr": {
+          "left": 0.2,
+          "right": 0.3,
+          "difference": -0.09999999999999998,
+          "ci95_low": -0.17857142857142858,
+          "ci95_high": -0.03076923076923077,
+          "n_defined_resamples": 2000,
+          "preferred_direction": "negative"
+        },
+        "union_box_recall_iou_0.5": {
+          "left": null,
+          "right": null,
+          "difference": null,
+          "ci95_low": null,
+          "ci95_high": null,
+          "n_defined_resamples": 0,
+          "preferred_direction": "positive"
+        }
+      }
+    },
+    {
+      "branch": "common_decision_RD_minus_DD",
+      "left": "region_decision_decision",
+      "right": "decision_decision_decision",
+      "left_directory": "/root/autodl-tmp/industrial_vlm/evaluations/multitask_v2/region_decision_decision",
+      "right_directory": "/root/autodl-tmp/industrial_vlm/evaluations/multitask_v2/decision_decision_decision",
+      "n_rows": 120,
+      "n_sources": 120,
+      "n_resamples": 2000,
+      "seed": 17,
+      "comparison_conditions": {
+        "model": "/root/autodl-tmp/industrial_vlm/models/Qwen3-VL-8B-Instruct",
+        "max_pixels": 524288,
+        "max_length": 2048,
+        "max_new_tokens": 128,
+        "generation": {
+          "do_sample": false,
+          "num_beams": 1
+        },
+        "quantization": "shared modeling.load_model NF4 policy for base and adapter",
+        "base_config_sha256": "5cd452860dc1e9c29dd71cc3cef7f39b338b7a40793f7a260655c2d3568f3661",
+        "limit": null
+      },
+      "left_adapter": "/root/autodl-tmp/industrial_vlm/runs/multitask_v2/region_decision/adapter",
+      "right_adapter": "/root/autodl-tmp/industrial_vlm/runs/multitask_v2/decision_decision/adapter",
+      "left_adapter_files_sha256": {
+        "adapter_config.json": "5171e99146e7d7ccc8620f3e8cc3f21be0e56cb315a56337c9e27869b067bab1",
+        "adapter_model.safetensors": "f0b6d096a201b931877391b8481ed7d1db2cd27e6b26318c3a263e284d9b3273",
+        "processor_config.json": "d815ae0fa05fabad4de3060b509658cba5002c8a5adb1888716b0329795d063d",
+        "tokenizer.json": "be75606093db2094d7cd20f3c2f385c212750648bd6ea4fb2bf507a6a4c55506",
+        "tokenizer_config.json": "e6d7af673babfe9895d640d345936c925e11b8802f0d2dc446f5417dc237856f",
+        "training_state.json": "4d26f097428f4624cbf7adb53280919f27587bcfc6c7a64a2f72b42eea789c14"
+      },
+      "right_adapter_files_sha256": {
+        "adapter_config.json": "3911ae0d2add4799e1e49bc9009907e5da288b3e67cff196aa28746a3309be9a",
+        "adapter_model.safetensors": "c67ab8c8aa1defb19e0e3bd53d214e3ddfce1a75a7892b16aaf235f3e27c3122",
+        "processor_config.json": "d815ae0fa05fabad4de3060b509658cba5002c8a5adb1888716b0329795d063d",
+        "tokenizer.json": "be75606093db2094d7cd20f3c2f385c212750648bd6ea4fb2bf507a6a4c55506",
+        "tokenizer_config.json": "e6d7af673babfe9895d640d345936c925e11b8802f0d2dc446f5417dc237856f",
+        "training_state.json": "4d26f097428f4624cbf7adb53280919f27587bcfc6c7a64a2f72b42eea789c14"
+      },
+      "metrics": {
+        "macro_f1": {
+          "left": 0.841391304347826,
+          "right": 0.858323494687131,
+          "difference": -0.01693219033930493,
+          "ci95_low": -0.06463550878580768,
+          "ci95_high": 0.02540990431862491,
+          "n_defined_resamples": 2000,
+          "preferred_direction": "positive"
+        },
+        "balanced_accuracy": {
+          "left": 0.8416666666666667,
+          "right": 0.8583333333333334,
+          "difference": -0.01666666666666672,
+          "ci95_low": -0.06139114956300039,
+          "ci95_high": 0.02643651946104015,
+          "n_defined_resamples": 2000,
+          "preferred_direction": "positive"
+        },
+        "fpr": {
+          "left": 0.11666666666666667,
+          "right": 0.13333333333333333,
+          "difference": -0.016666666666666663,
+          "ci95_low": -0.07352941176470587,
+          "ci95_high": 0.03848039215686264,
+          "n_defined_resamples": 2000,
+          "preferred_direction": "negative"
+        },
+        "fnr": {
+          "left": 0.2,
+          "right": 0.15,
+          "difference": 0.05000000000000002,
+          "ci95_low": -0.018181818181818174,
+          "ci95_high": 0.125,
+          "n_defined_resamples": 2000,
+          "preferred_direction": "negative"
+        },
+        "union_box_recall_iou_0.5": {
+          "left": null,
+          "right": null,
+          "difference": null,
+          "ci95_low": null,
+          "ci95_high": null,
+          "n_defined_resamples": 0,
+          "preferred_direction": "positive"
+        }
+      }
+    },
+    {
+      "branch": "common_decision_RR_minus_DD",
+      "left": "region_region_decision",
+      "right": "decision_decision_decision",
+      "left_directory": "/root/autodl-tmp/industrial_vlm/evaluations/multitask_v2/region_region_decision",
+      "right_directory": "/root/autodl-tmp/industrial_vlm/evaluations/multitask_v2/decision_decision_decision",
+      "n_rows": 120,
+      "n_sources": 120,
+      "n_resamples": 2000,
+      "seed": 17,
+      "comparison_conditions": {
+        "model": "/root/autodl-tmp/industrial_vlm/models/Qwen3-VL-8B-Instruct",
+        "max_pixels": 524288,
+        "max_length": 2048,
+        "max_new_tokens": 128,
+        "generation": {
+          "do_sample": false,
+          "num_beams": 1
+        },
+        "quantization": "shared modeling.load_model NF4 policy for base and adapter",
+        "base_config_sha256": "5cd452860dc1e9c29dd71cc3cef7f39b338b7a40793f7a260655c2d3568f3661",
+        "limit": null
+      },
+      "left_adapter": "/root/autodl-tmp/industrial_vlm/runs/multitask_v2/region_region/adapter",
+      "right_adapter": "/root/autodl-tmp/industrial_vlm/runs/multitask_v2/decision_decision/adapter",
+      "left_adapter_files_sha256": {
+        "adapter_config.json": "90c49e809ca814873b07432370adf4e4f2bb3271939f0e5d1685ae7006bf7d5d",
+        "adapter_model.safetensors": "feb95ac96966b1bb0989979ced2274a5b3530ff31b41718baeb21f6d38ee26f4",
+        "processor_config.json": "d815ae0fa05fabad4de3060b509658cba5002c8a5adb1888716b0329795d063d",
+        "tokenizer.json": "be75606093db2094d7cd20f3c2f385c212750648bd6ea4fb2bf507a6a4c55506",
+        "tokenizer_config.json": "e6d7af673babfe9895d640d345936c925e11b8802f0d2dc446f5417dc237856f",
+        "training_state.json": "4d26f097428f4624cbf7adb53280919f27587bcfc6c7a64a2f72b42eea789c14"
+      },
+      "right_adapter_files_sha256": {
+        "adapter_config.json": "3911ae0d2add4799e1e49bc9009907e5da288b3e67cff196aa28746a3309be9a",
+        "adapter_model.safetensors": "c67ab8c8aa1defb19e0e3bd53d214e3ddfce1a75a7892b16aaf235f3e27c3122",
+        "processor_config.json": "d815ae0fa05fabad4de3060b509658cba5002c8a5adb1888716b0329795d063d",
+        "tokenizer.json": "be75606093db2094d7cd20f3c2f385c212750648bd6ea4fb2bf507a6a4c55506",
+        "tokenizer_config.json": "e6d7af673babfe9895d640d345936c925e11b8802f0d2dc446f5417dc237856f",
+        "training_state.json": "4d26f097428f4624cbf7adb53280919f27587bcfc6c7a64a2f72b42eea789c14"
+      },
+      "metrics": {
+        "macro_f1": {
+          "left": 0.8222222222222222,
+          "right": 0.858323494687131,
+          "difference": -0.036101272464908796,
+          "ci95_low": -0.10269128208933832,
+          "ci95_high": 0.028125371629836804,
+          "n_defined_resamples": 2000,
+          "preferred_direction": "positive"
+        },
+        "balanced_accuracy": {
+          "left": 0.825,
+          "right": 0.8583333333333334,
+          "difference": -0.03333333333333344,
+          "ci95_low": -0.09651026392961881,
+          "ci95_high": 0.02737894013769256,
+          "n_defined_resamples": 2000,
+          "preferred_direction": "positive"
+        },
+        "fpr": {
+          "left": 0.05,
+          "right": 0.13333333333333333,
+          "difference": -0.08333333333333333,
+          "ci95_low": -0.1694915254237288,
+          "ci95_high": 0.0,
+          "n_defined_resamples": 2000,
+          "preferred_direction": "negative"
+        },
+        "fnr": {
+          "left": 0.3,
+          "right": 0.15,
+          "difference": 0.15,
+          "ci95_low": 0.06557377049180327,
+          "ci95_high": 0.24562122519413282,
+          "n_defined_resamples": 2000,
+          "preferred_direction": "negative"
+        },
+        "union_box_recall_iou_0.5": {
+          "left": null,
+          "right": null,
+          "difference": null,
+          "ci95_low": null,
+          "ci95_high": null,
+          "n_defined_resamples": 0,
+          "preferred_direction": "positive"
+        }
+      }
+    },
+    {
+      "branch": "common_region_RD_minus_RR",
+      "left": "region_decision_region",
+      "right": "region_region_region",
+      "left_directory": "/root/autodl-tmp/industrial_vlm/evaluations/multitask_v2/region_decision_region",
+      "right_directory": "/root/autodl-tmp/industrial_vlm/evaluations/multitask_v2/region_region_region",
+      "n_rows": 120,
+      "n_sources": 120,
+      "n_resamples": 2000,
+      "seed": 17,
+      "comparison_conditions": {
+        "model": "/root/autodl-tmp/industrial_vlm/models/Qwen3-VL-8B-Instruct",
+        "max_pixels": 524288,
+        "max_length": 2048,
+        "max_new_tokens": 128,
+        "generation": {
+          "do_sample": false,
+          "num_beams": 1
+        },
+        "quantization": "shared modeling.load_model NF4 policy for base and adapter",
+        "base_config_sha256": "5cd452860dc1e9c29dd71cc3cef7f39b338b7a40793f7a260655c2d3568f3661",
+        "limit": null
+      },
+      "left_adapter": "/root/autodl-tmp/industrial_vlm/runs/multitask_v2/region_decision/adapter",
+      "right_adapter": "/root/autodl-tmp/industrial_vlm/runs/multitask_v2/region_region/adapter",
+      "left_adapter_files_sha256": {
+        "adapter_config.json": "5171e99146e7d7ccc8620f3e8cc3f21be0e56cb315a56337c9e27869b067bab1",
+        "adapter_model.safetensors": "f0b6d096a201b931877391b8481ed7d1db2cd27e6b26318c3a263e284d9b3273",
+        "processor_config.json": "d815ae0fa05fabad4de3060b509658cba5002c8a5adb1888716b0329795d063d",
+        "tokenizer.json": "be75606093db2094d7cd20f3c2f385c212750648bd6ea4fb2bf507a6a4c55506",
+        "tokenizer_config.json": "e6d7af673babfe9895d640d345936c925e11b8802f0d2dc446f5417dc237856f",
+        "training_state.json": "4d26f097428f4624cbf7adb53280919f27587bcfc6c7a64a2f72b42eea789c14"
+      },
+      "right_adapter_files_sha256": {
+        "adapter_config.json": "90c49e809ca814873b07432370adf4e4f2bb3271939f0e5d1685ae7006bf7d5d",
+        "adapter_model.safetensors": "feb95ac96966b1bb0989979ced2274a5b3530ff31b41718baeb21f6d38ee26f4",
+        "processor_config.json": "d815ae0fa05fabad4de3060b509658cba5002c8a5adb1888716b0329795d063d",
+        "tokenizer.json": "be75606093db2094d7cd20f3c2f385c212750648bd6ea4fb2bf507a6a4c55506",
+        "tokenizer_config.json": "e6d7af673babfe9895d640d345936c925e11b8802f0d2dc446f5417dc237856f",
+        "training_state.json": "4d26f097428f4624cbf7adb53280919f27587bcfc6c7a64a2f72b42eea789c14"
+      },
+      "metrics": {
+        "macro_f1": {
+          "left": 0.8,
+          "right": 0.8325892857142857,
+          "difference": -0.032589285714285654,
+          "ci95_low": -0.08383307917985339,
+          "ci95_high": 0.01999848072593407,
+          "n_defined_resamples": 2000,
+          "preferred_direction": "positive"
+        },
+        "balanced_accuracy": {
+          "left": 0.8,
+          "right": 0.8333333333333334,
+          "difference": -0.033333333333333326,
+          "ci95_low": -0.08373750908814233,
+          "ci95_high": 0.018911482748688955,
+          "n_defined_resamples": 2000,
+          "preferred_direction": "positive"
+        },
+        "fpr": {
+          "left": 0.2,
+          "right": 0.1,
+          "difference": 0.1,
+          "ci95_low": 0.016393442622950824,
+          "ci95_high": 0.19672752111276698,
+          "n_defined_resamples": 2000,
+          "preferred_direction": "negative"
+        },
+        "fnr": {
+          "left": 0.2,
+          "right": 0.23333333333333334,
+          "difference": -0.033333333333333326,
+          "ci95_low": -0.0869755911517925,
+          "ci95_high": 0.0,
+          "n_defined_resamples": 2000,
+          "preferred_direction": "negative"
+        },
+        "union_box_recall_iou_0.5": {
+          "left": 0.4666666666666667,
+          "right": 0.4666666666666667,
+          "difference": 0.0,
+          "ci95_low": -0.06666666666666665,
+          "ci95_high": 0.06454257006874654,
+          "n_defined_resamples": 2000,
+          "preferred_direction": "positive"
+        }
+      }
+    }
+  ],
+  "artifact_sha256": {
+    "prepared/multitask_v2/plan.json": "a2b88fe01f509c07e27b34137c57c0ae847840ca9a71e01a5ec3f05732207875",
+    "ops/analyze_multitask_v2.py": "d98d6daf4cbd21dee1c21c5be6a7d50307c583ce55cd0f45d235bcc706ba234d",
+    "src/industrial_vlm/compare.py": "b986cbd27254d6cfdd5680e7313fc5081beaf32897cf6826ba2cfb7636140bc4",
+    "src/industrial_vlm/metrics.py": "4a9c7904499c1e12f915810bafdf283ca1129b67bc85706ce413ab90e7e094cc",
+    "prepared/multitask_v2/val_region_120.jsonl": "3f7f0f44422a057f7bc8478776a889982dac08b62d39e19f9a3b34a8ca35eda1",
+    "prepared/multitask_v2/val_decision_120.jsonl": "cffb9a3bce5da68d6e026b06ee068ca9c266e033f9622d8d01986daa0c0e64f9",
+    "runs/multitask_v2/region_region/summary.json": "d34718c794062068a0e1c73be13235e4627a7df1c3a3ae6cbfe6c32e40d4991a",
+    "runs/multitask_v2/region_region/run_config.json": "d549c1adf6e3b41f9415d3f7a52515d1e7966b7e0c2f0c205d19e90ce29aa4ab",
+    "runs/multitask_v2/region_region/parameter_audit.json": "0de25f4fa8013fb2ecbc6e38df2e0e2f5078256ef184f76cb0630ab1dee966b6",
+    "runs/multitask_v2/region_region/exposures.jsonl": "6b83accf2bb4bf41ddeb93c20690e1c32c79fb6ed4d82bac3ad2862bf62cebe4",
+    "prepared/multitask_v2/train_region_region.jsonl": "04c679da569102ec36444cfd76f82c9047869df1ed223152186c29ff01601398",
+    "runs/multitask_v2/decision_decision/summary.json": "3642f51e73a5f3a1e0934124a093abf275f7e18d8475be676d1eed2b3dea6dae",
+    "runs/multitask_v2/decision_decision/run_config.json": "d090d2393a7c15e6c9e8b17d8153bff16f1c9321cf3e48144e1d439ef919373e",
+    "runs/multitask_v2/decision_decision/parameter_audit.json": "0de25f4fa8013fb2ecbc6e38df2e0e2f5078256ef184f76cb0630ab1dee966b6",
+    "runs/multitask_v2/decision_decision/exposures.jsonl": "9fdc915eb87fb1dfb65745c03fd57b8669b100bd145b29c73062270798964e37",
+    "prepared/multitask_v2/train_decision_decision.jsonl": "214778943ccb8be292c533708d12f42944ae8c8f23364560d2e221798e610da4",
+    "runs/multitask_v2/region_decision/summary.json": "87996062a9dded263d458993a290814cdcbbd401ff1b66e17b1e142b831e757f",
+    "runs/multitask_v2/region_decision/run_config.json": "d57fd5279cdad2fb729fe2ed4f764678bf641bd9402dc8f4630d939ba2f144a4",
+    "runs/multitask_v2/region_decision/parameter_audit.json": "0de25f4fa8013fb2ecbc6e38df2e0e2f5078256ef184f76cb0630ab1dee966b6",
+    "runs/multitask_v2/region_decision/exposures.jsonl": "e7cc3aa942b90cd55d5447ee326cafed8ef5f84964e7155718955b371d5549b2",
+    "prepared/multitask_v2/train_region_decision.jsonl": "c3b59ab50f5af35351b4d0a8cdd239f0d43503ea8822056b8dfdce54342ccb01",
+    "evaluations/multitask_v2/region_region_region/meta.json": "995264b59f58aa7a6c5617553720d5fbb8605429aa87f07970ce49e7a5629fbc",
+    "evaluations/multitask_v2/region_region_region/metrics.json": "fd312048a9f63e825cbffa6c788c11ceac113d822e2661f378222618cf407095",
+    "evaluations/multitask_v2/region_region_region/predictions.jsonl": "d7bd437ab77a071c252024fda5d2e53b1771dfb8bef1574007652e841d32c059",
+    "evaluations/multitask_v2/region_region_decision/meta.json": "9cde3649a593e7058cccdc8c7e2055ba79dff9f4caf706fbf554da4508d7e104",
+    "evaluations/multitask_v2/region_region_decision/metrics.json": "e32236ab6e4037e26762d24016bf8a391a4c33b179e97354a35284dc03f99ba2",
+    "evaluations/multitask_v2/region_region_decision/predictions.jsonl": "19d6f2ec3421b8f92c2977d7107f7cf43ea601c913bfed417fb70bc0372e04c2",
+    "evaluations/multitask_v2/decision_decision_decision/meta.json": "8555eec392819c4d991428550023fe270e75e25c425adb3e0f71eeabc88fe8cd",
+    "evaluations/multitask_v2/decision_decision_decision/metrics.json": "0426e630437ff1a542241942102ac30829b1fba0f50f18eada2e04ac3caab438",
+    "evaluations/multitask_v2/decision_decision_decision/predictions.jsonl": "cd4b4a46e7b5691e158c37c482929d572d7b8f4dc390fcec35a5203cf9881f32",
+    "evaluations/multitask_v2/region_decision_region/meta.json": "a1a82eda03c71f14b997f5656719da5c834d6894426b5f58ff0bd5ed0e518828",
+    "evaluations/multitask_v2/region_decision_region/metrics.json": "f7b661689bb7e8c062b82a00006ac158eb92b4535a998f32c9cd0bdf542c88f4",
+    "evaluations/multitask_v2/region_decision_region/predictions.jsonl": "699b4befeb61599ce75109889eb557ee13fc2afee1b4f5897bc22e943cfb5ae5",
+    "evaluations/multitask_v2/region_decision_decision/meta.json": "84f3769c95b7c6a0ed50a16d31a4cdc3300b1e390a4dc7d15f0518d7bd851abf",
+    "evaluations/multitask_v2/region_decision_decision/metrics.json": "efb74a361cd9b79c8b623319b89009a149a985c13b86d378eb60d2c6a796ee67",
+    "evaluations/multitask_v2/region_decision_decision/predictions.jsonl": "690b30c7aed56866b939c98f763bcfa6bb68528b8b1306063601576669e2fb2a",
+    "experiments/multitask_v2/training_source_manifest.json": "d77b132b2dd62d6c40db3ed35e56e763848eed3b63103a7c46c20f6a6de812fd",
+    "experiments/multitask_v2/input_hashes.json": "1ddaf0bcaf7522ad436bd08300163b8c47e4a867e86bce9caf05e305ba126a43"
+  },
+  "limitations": [
+    "本轮结果来自同一批固定120来源的验证集，用于开发比较；冻结确认集未由本脚本读取或评估。",
+    "三臂来源及曝光序列、更新数和初始化匹配；输入token、监督token、任务难度及计算耗时不相等。",
+    "混合臂按监督token归一CE，两个任务的曝光数各半不意味着梯度权重各半。",
+    "RD与RR/DD的比较反映固定曝光预算下的任务分配取舍，不能孤立解释为纯坐标信号的因果作用。",
+    "固定最终192更新；不同目标任务的验证CE不可用作三臂共同性能排名；旧96更新结果仅为历史参考。",
+    "配对bootstrap区间仅描述当前模型在验证来源重采样下的差异，不包含训练seed变化；四组多指标比较未做多重校正。",
+    "Macro F1平均正常/异常两个标签；框指标为包围矩形的端到端召回，分母包含漏检与格式错误。",
+    "格式有效性沿用现有parser，允许JSON围栏、浮点坐标和多框，不等于严格整数单框合规。"
+  ]
+}
