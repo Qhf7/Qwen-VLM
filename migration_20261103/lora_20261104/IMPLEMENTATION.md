@@ -17,7 +17,7 @@ seed42两组固定训练样本预检各40步、160次曝光。它们只是工程
 - 零初始化adapter前后全部probe logits最大误差0。
 - C的LoRA A首步梯度为0符合B矩阵零初始化；第二步A梯度非零，B梯度持续非零。
 - 冻结原参数的版本计数不变且没有梯度；C的桥接张量SHA保持不变。
-- 对可训练参数主动加扰动后再加载best，评分精确恢复。正式训练另保留final，并安排独立进程核验非零的已训练final adapter，避免只验证零初始化best。
+- 对可训练参数主动加扰动后再加载best，评分精确恢复。正式训练另保留final；三个C final均已通过独立进程核验，已训练LoRA B矩阵非零、32张既有val图的分数和原始生成精确恢复，关闭adapter精确还原A。另核验C预检final和B42 final；具体覆盖见 `verify_status.json`。
 - 同时导出PEFT的 `best_adapter`，核对导出张量与参与评分的adapter逐元素一致。若best选择step0，该导出对应起点，不能当作新增训练取得收益的产物。
 
 ## 如何阅读配对结果
@@ -37,3 +37,25 @@ best按val AUROC选择，允许step0；同时报告固定500步final。三seed�
 精确加载使用 `FrozenLanguageBridge` → 原seed bridge → `configure_arm`（先将adapter转FP32）→ `load_delta`。C的 `.pt` 绑定原bridge、基座与cache身份；仅加载adapter不能替代桥接。标准PEFT导出便于互操作，精确复现以本项目加载代码和独立进程核验为准。
 
 固定Yes/No答案模板支持异常判别领域适配，不能据此证明模型具有更强的复杂缺陷解释或推理能力。只有真实完成并核验后，才在简历补充LoRA/SFT实现；性能提升数字以配对结果为准。
+
+本轮已完成结果：C best三seed平均AUROC0.936983、AP0.951534、生成Macro-F1 0.861732，FPR均值0.019380；固定500步final AUROC0.936452。与起点及继续训练对照的差值和限制见 [ANALYSIS.md](ANALYSIS.md)。从18份保存预测重新计算的整体/逐类别指标均一致，见 `prediction_metrics_audit.json`。
+
+## 复用入口
+
+按上级README准备运行根目录和依赖后，将本目录训练及核验脚本放在与 `migration_language.py` 同一运行根目录。GPU训练需要自行准备原seed bridge、teacher cache及 `base_manifest.json` 对应的Qwen底座。例如单独复现C（输出目录必须新建）：
+
+```bash
+python migration_lora_train.py --arm C --seed 42 \
+  --bridge /absolute/path/lm_qwen_s42/best.pt \
+  --cache /absolute/path/teacher_cache.pt \
+  --base-manifest /absolute/path/base_manifest.json \
+  --out /absolute/path/new_lora_root/arm_C_s42
+```
+
+在相同运行根目录下，对已完成结果独立加载：
+
+```bash
+python verify_lora_checkpoint.py --root /absolute/path/lora_root --arm C --seed 42 --mode final
+```
+
+run身份中的服务器路径需映射到实际资产位置，并重新建立新实验身份；不能直接篡改旧run及SHA记录后声称复现。标准PEFT `best_adapter` 只含语言adapter，仍需与原seed桥接、底座及lm_head组合加载；`.pt` 的严格加载顺序见上文。无GPU时，可在仓库环境安装NumPy/scikit-learn后运行 `python migration_20261103/lora_20261104/audit_saved_predictions.py` 复算保存的指标。

@@ -1,4 +1,38 @@
 {
-  "state": "waiting_for_training",
-  "checks": []
+  "state": "complete",
+  "checks": [
+    {
+      "arm": "C",
+      "seed": 42,
+      "preflight": true,
+      "state": "passed"
+    },
+    {
+      "arm": "B",
+      "seed": 42,
+      "preflight": false,
+      "state": "passed"
+    },
+    {
+      "arm": "C",
+      "seed": 42,
+      "preflight": false,
+      "state": "passed"
+    },
+    {
+      "arm": "C",
+      "seed": 43,
+      "preflight": false,
+      "state": "passed"
+    },
+    {
+      "arm": "C",
+      "seed": 44,
+      "preflight": false,
+      "state": "passed"
+    }
+  ],
+  "arm": "C",
+  "seed": 44,
+  "preflight": false
 }

@@ -1,0 +1,178 @@
+{
+  "arm": "C",
+  "seed": 42,
+  "checkpoint": "final",
+  "step": 500,
+  "preflight": false,
+  "n": 32,
+  "split": "val",
+  "test_queries": 0,
+  "fresh_process_max_abs_score_error": 0.0,
+  "generated_exact_match": true,
+  "selected_images": [
+    {
+      "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Normal/0377.JPG",
+      "category": "candle",
+      "label": 0
+    },
+    {
+      "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Normal/0417.JPG",
+      "category": "candle",
+      "label": 0
+    },
+    {
+      "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Normal/0159.JPG",
+      "category": "candle",
+      "label": 0
+    },
+    {
+      "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Normal/0402.JPG",
+      "category": "candle",
+      "label": 0
+    },
+    {
+      "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Normal/0294.JPG",
+      "category": "candle",
+      "label": 0
+    },
+    {
+      "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Normal/0705.JPG",
+      "category": "candle",
+      "label": 0
+    },
+    {
+      "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Normal/0800.JPG",
+      "category": "candle",
+      "label": 0
+    },
+    {
+      "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Normal/0923.JPG",
+      "category": "candle",
+      "label": 0
+    },
+    {
+      "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Anomaly/010.JPG",
+      "category": "candle",
+      "label": 1
+    },
+    {
+      "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Anomaly/016.JPG",
+      "category": "candle",
+      "label": 1
+    },
+    {
+      "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Anomaly/021.JPG",
+      "category": "candle",
+      "label": 1
+    },
+    {
+      "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Anomaly/025.JPG",
+      "category": "candle",
+      "label": 1
+    },
+    {
+      "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Anomaly/035.JPG",
+      "category": "candle",
+      "label": 1
+    },
+    {
+      "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Anomaly/036.JPG",
+      "category": "candle",
+      "label": 1
+    },
+    {
+      "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Anomaly/042.JPG",
+      "category": "candle",
+      "label": 1
+    },
+    {
+      "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Anomaly/046.JPG",
+      "category": "candle",
+      "label": 1
+    },
+    {
+      "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Anomaly/052.JPG",
+      "category": "candle",
+      "label": 1
+    },
+    {
+      "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Anomaly/053.JPG",
+      "category": "candle",
+      "label": 1
+    },
+    {
+      "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Anomaly/061.JPG",
+      "category": "candle",
+      "label": 1
+    },
+    {
+      "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Anomaly/065.JPG",
+      "category": "candle",
+      "label": 1
+    },
+    {
+      "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Anomaly/085.JPG",
+      "category": "candle",
+      "label": 1
+    },
+    {
+      "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Anomaly/096.JPG",
+      "category": "candle",
+      "label": 1
+    },
+    {
+      "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Anomaly/099.JPG",
+      "category": "candle",
+      "label": 1
+    },
+    {
+      "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/capsules/Data/Images/Normal/062.JPG",
+      "category": "capsules",
+      "label": 0
+    },
+    {
+      "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/capsules/Data/Images/Normal/174.JPG",
+      "category": "capsules",
+      "label": 0
+    },
+    {
+      "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/capsules/Data/Images/Normal/187.JPG",
+      "category": "capsules",
+      "label": 0
+    },
+    {
+      "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/capsules/Data/Images/Normal/490.JPG",
+      "category": "capsules",
+      "label": 0
+    },
+    {
+      "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/capsules/Data/Images/Anomaly/002.JPG",
+      "category": "capsules",
+      "label": 1
+    },
+    {
+      "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/capsules/Data/Images/Anomaly/005.JPG",
+      "category": "capsules",
+      "label": 1
+    },
+    {
+      "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/capsules/Data/Images/Anomaly/011.JPG",
+      "category": "capsules",
+      "label": 1
+    },
+    {
+      "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/capsules/Data/Images/Anomaly/015.JPG",
+      "category": "capsules",
+      "label": 1
+    },
+    {
+      "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/capsules/Data/Images/Anomaly/029.JPG",
+      "category": "capsules",
+      "label": 1
+    }
+  ],
+  "original_eval_batch_size": 8,
+  "verifier_sha256": "3afe14739979b94eb2336d94153f88bb581d690f9b74a22ba0e73d31b3ce7390",
+  "trained_lora_B_nonzero": true,
+  "disabled_adapter_max_abs_score_error": 0.0
+}

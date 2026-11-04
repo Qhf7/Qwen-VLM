@@ -2,7 +2,7 @@
 
 更新：2026-11-04，Asia/Shanghai。本文区分已经完成并有实验产物支持的工作，以及尚未实施的 LoRA 计划。没有在本次整理中启动训练或新增测试集查询。
 
-后续执行记录：用户随后授权实施 B/C 方案，实际代码、固定协议和运行结果见 [lora_20261104](lora_20261104/PROTOCOL.md)。下文保留方案提出时的事实状态；LoRA 是否取得收益以该目录完成后的配对结果为准。
+后续执行记录：用户随后授权实施B/C方案，目前六次正式训练与独立重载检查均已完成。结果见 [LoRA三seed分析](lora_20261104/ANALYSIS.md) 和 [固定协议](lora_20261104/PROTOCOL.md)。下文第1—6节保留方案提出时的事实状态；已实现LoRA的新简历条目见第7节。
 
 ## 1. 当前项目定位
 
@@ -114,3 +114,13 @@ val仍属于已经用于多轮选型的开发集；旧test456也不能重新称�
 - Hu et al., LoRA: Low-Rank Adaptation of Large Language Models, arXiv:2106.09685。
 - Hugging Face PEFT官方LoRA配置、初始化、Custom models及adapter保存文档（本次查阅main文档；落地时以服务器安装版本API为准）。
 - Dettmers et al., QLoRA: Efficient Finetuning of Quantized LLMs, arXiv:2305.14314；PEFT官方Quantization文档。
+
+## 7. LoRA完成后的项目更新
+
+B/C均完成seed42/43/44各500updates。C冻结桥接，仅更新Qwen语言q/v LoRA的3,833,856个参数；候选r8、alpha16、学习率1e-4，BF16基座与FP32 adapter，未使用量化或梯度检查点。三seed的AUROC/AP均高于自身起点；按val AUROC选择时，均值AUROC 0.925779→0.936983，生成Macro-F1 0.845672→0.861732。异常召回均值0.719551→0.764423，同时FPR由0升至0.019380。固定500步终点AUROC均值0.936452。D联合训练尚未实施。
+
+技术栈现在可以增加 **PEFT、LoRA、参数高效领域SFT**。可在原简历第一条之后增加：
+
+- 在Qwen3-VL-8B语言迁移基线上实现q/v LoRA领域SFT，冻结视觉前端及桥接、仅更新383万参数；设计已有起点/桥接延续/语言LoRA三seed配对对照，将自定义监督开发验证Image AUROC由92.58%提高至93.70%、生成Macro-F1由84.57%提高至86.17%，并分析召回与误报取舍；完成梯度与冻结审计、PEFT导出、独立进程重载和关闭adapter恢复起点核验。
+
+面试时可说明：主要接入难点包括自定义inputs_embeds与冻结桥接下的梯度流、PEFT旧版本adapter精度继承、仅保存增量权重时绑定bridge/base/cache身份，以及区分额外训练预算与语言低秩适配的收益。约16.37GiB为本轮实测峰值allocated；没有测得吞吐加速。仍不能写成复杂推理增强、无监督官方成绩、未见测试泛化或已完成大模型预训练。
