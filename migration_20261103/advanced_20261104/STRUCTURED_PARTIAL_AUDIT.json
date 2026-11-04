@@ -116,7 +116,18 @@
           "original_batch_composition_preserved": true
         },
         "final": {
-          "state": "not_yet_synced"
+          "state": "passed",
+          "mode": "final",
+          "step": 500,
+          "n": 104,
+          "categories": 12,
+          "labels": [
+            0,
+            1
+          ],
+          "verifier_source_sha256": "bf95e035e567c0cfce88e33aec0af9890de4ae233aa1f67af528a362f0df51c6",
+          "policy_sha256": "1d2a486e2e6671f8d7b072f3cb25411507b3839e3c86971aefcc44e8b5772f1c",
+          "original_batch_composition_preserved": true
         }
       },
       "original_C_step": 100,

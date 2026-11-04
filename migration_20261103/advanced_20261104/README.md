@@ -17,3 +17,7 @@
 D/Cpair/R正式9组已全部完成，18份best/final预测逐份重算通过；每组两个checkpoint独立进程回载与关闭adapter参考检查全部通过。详见RESULTS.md及verification_status.json。S已通过40步预检并进入三seed正式运行，工具与外部评估仍等待上游门禁。
 
 S42/S43已完成500步和best/final各104图独立精确重载，S44执行中。S42分类改善但框IoU与严格有效率下降；不能将分类提升表述为定位增强。后续三seed、工具及外评仍以实际完成门禁为准。
+
+S三seed正式完成：九份initial/best/final报告复算，六份best/final fresh各104图精确通过。结构化汇总见[RESULTS](structured_summary/RESULTS.md)，分类与定位的边界见[分析](STRUCTURED_ANALYSIS.md)。tool_preflight八图×五臂及后验审计通过，tool_val380执行中；外部模型查询仍为0。
+
+工具完整380×5臂与后验审计/预测重算已完成。模型380次均直接answer，crop0，与重复原图控制逐条一致；该配置未展示自主裁剪。详见[结果](TOOL_RESULTS.md)与[分析](TOOL_ANALYSIS.md)。外部21组矩阵已经冻结并执行，最终以external_summary为准。

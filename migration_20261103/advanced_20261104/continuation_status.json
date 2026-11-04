@@ -1,5 +1,5 @@
 {
-  "state": "running",
+  "state": "complete",
   "jobs": [
     {
       "name": "structured_targets",
@@ -32,27 +32,48 @@
     {
       "name": "arm_S_s43_verify_final",
       "state": "complete"
+    },
+    {
+      "name": "arm_S_s44",
+      "state": "complete"
+    },
+    {
+      "name": "arm_S_s44_verify_best",
+      "state": "complete"
+    },
+    {
+      "name": "arm_S_s44_verify_final",
+      "state": "complete"
+    },
+    {
+      "name": "tool_preflight",
+      "state": "complete"
+    },
+    {
+      "name": "tool_preflight_audit",
+      "state": "complete"
+    },
+    {
+      "name": "tool_val",
+      "state": "complete"
+    },
+    {
+      "name": "tool_val_audit",
+      "state": "complete"
     }
   ],
   "test_queries": 0,
   "external_queries": 0,
-  "stage": "arm_S_s44",
+  "stage": "complete",
   "command": [
     "/root/autodl-tmp/conda-envs/qwen3vl2/bin/python",
-    "-u",
-    "structured_train.py",
-    "--cache",
-    "/root/autodl-tmp/AnomalyGPT/runs/migration_20261103/teacher_cache.pt",
-    "--targets",
-    "/root/autodl-tmp/AnomalyGPT/runs/migration_20261103/advanced_20261104/structured_targets.jsonl",
-    "--source-c",
-    "/root/autodl-tmp/AnomalyGPT/runs/migration_20261103/lora_20261104/arm_C_s44",
-    "--base-manifest",
-    "/root/autodl-tmp/AnomalyGPT/runs/migration_20261103/lora_20261104/base_manifest.json",
+    "tool_audit.py",
+    "--run",
+    "/root/autodl-tmp/AnomalyGPT/runs/migration_20261103/advanced_20261104/tool_val",
     "--out",
-    "/root/autodl-tmp/AnomalyGPT/runs/migration_20261103/advanced_20261104/arm_S_s44",
-    "--seed",
-    "44"
+    "/root/autodl-tmp/AnomalyGPT/runs/migration_20261103/advanced_20261104/tool_val/audit.json",
+    "--with-masks"
   ],
-  "pid": 13649
+  "pid": 15185,
+  "finished": 1793776368.2941287
 }

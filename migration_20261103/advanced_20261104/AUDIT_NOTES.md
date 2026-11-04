@@ -39,3 +39,11 @@ Executed test_advanced_contracts.py successfully against migration_advanced_trai
 Verified all B/C/D/R trainable whitelists, FP32 trainables, exact optimizer tensor coverage without duplicate tensors, target module count, and per-group LR. Two optimizer updates verify bridge and adapter gradient groups, LoRA_A nonzero after LoRA_B updates, and unchanged frozen tensors. D adapter+bridge disk checkpoint restores every trained tensor and identical outputs in both the mutated existing model and a fresh model construction; wrong identity is rejected. A 2000-exposure schedule is seed reproducible and consists solely of same-category training normal/anomaly pairs.
 
 Result artifact: cpu_contract_audit.json (records exact source SHA and local torch2.10.0/transformers4.43.1/PEFT0.11.1). Remote runtime versions differ, so this supplements rather than replaces the real Qwen engineering preflight and fresh-process audits.
+
+## 2026-11-04 追加验收
+
+- D/Cpair/R共9次正式训练、18份best/final预测重算通过；每个运行独立新进程一次加载基座后分别回载final/best，各28张完整原批次，精确分数/生成/关闭adapter参考通过。
+- S42/43/44均完成500步/2000曝光；initial/best/final九份380图报告重算通过；best/final六次fresh各104图、12类双标签，adapter tensor、分数和生成精确一致。跨seed/跨期图像、index和完整target身份一致，详见STRUCTURED_FULL_AUDIT.json。
+- 服务器summarize_structured从原cache重算teacher-map95分位框基线通过。本地只有结果时清楚标记stored-only；服务器汇总记录recomputed_from_original_cache_and_initial_logits。
+- native ROI8图×5臂预检真实GPU执行及后验mask审计通过；预检中planner全为answer，真实crop0。工程通过不等于展示自主裁剪，完整val380按原prompt继续。
+- 外部评估尚未查询时补齐生成policy的SHA/源码/预算/VisA val8一致性证据校验，未修改训练源、模型提示、阈值、数据或checkpoint选择；部署事件保留external_policy_audit_deployment.json。

@@ -180,7 +180,17 @@ def recompute(run, audit, by_condition):
                     'mean_defect_fraction_all_anomalies': mean([r['defect_fraction_inside_crop'] for r in g_rows]),
                     'crop_hit_rate_all_anomalies': mean([int(r['crop_hits_any_gt']) for r in g_rows]),
                     'mean_defect_fraction_called_anomalies_only': mean([r['defect_fraction_inside_crop'] for r in called])}
-        require(geometry == audit['posthoc_gt_geometry']['results'][condition], 'Geometry aggregate recomputation differs')
+        saved_geometry = audit['posthoc_gt_geometry']['results'][condition]
+        require(set(geometry) == set(saved_geometry), 'Geometry aggregate schema differs')
+        for key in ('n_anomaly', 'n_anomaly_with_crop'):
+            require(type(saved_geometry[key]) is int and geometry[key] == saved_geometry[key],
+                    'Geometry aggregate integer denominator differs: ' + key)
+        for key in ('mean_defect_fraction_all_anomalies', 'crop_hit_rate_all_anomalies',
+                    'mean_defect_fraction_called_anomalies_only'):
+            actual, saved = geometry[key], saved_geometry[key]
+            require((actual is None and saved is None)
+                    or (finite(actual) and finite(saved) and math.isclose(actual, saved, rel_tol=0, abs_tol=1e-12)),
+                    'Geometry aggregate floating value differs: ' + key)
         arms[condition] = {'metrics': metrics, 'n': n, 'actual_calls': sum(executed),
             'actual_call_rate': mean(executed), 'invalid_planner_rate': mean([int(r['planner_invalid']) for r in rows]),
             'rejected_request_rate': mean([int(r['request_rejected']) for r in rows]),
