@@ -1,4 +1,6 @@
-# External saved-result audit — partial snapshot
+# External saved-result audit — historical partial snapshot
+
+This file preserves the original 4/21 intermediate snapshot. The final 21/21 audit is in [FINAL_EVIDENCE_AUDIT.md](FINAL_EVIDENCE_AUDIT.md); final conclusions are in [FINAL_REPORT.md](FINAL_REPORT.md).
 
 Audit scope: read-only CPU recomputation of the downloaded saved external
 artifacts. No SSH, GPU/model invocation, data staging, RGB/mask access, checkpoint

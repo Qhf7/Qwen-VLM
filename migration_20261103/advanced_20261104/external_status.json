@@ -1,5 +1,5 @@
 {
-  "state": "running",
+  "state": "complete",
   "jobs": [
     {
       "name": "external_cache",
@@ -80,25 +80,33 @@
     {
       "name": "external_S_s43",
       "state": "complete"
+    },
+    {
+      "name": "external_Cstructured_s44",
+      "state": "complete"
+    },
+    {
+      "name": "external_S_s44",
+      "state": "complete"
+    },
+    {
+      "name": "external_summary",
+      "state": "complete"
     }
   ],
-  "stage": "external_Cstructured_s44",
+  "stage": "complete",
   "command": [
     "/root/autodl-tmp/conda-envs/qwen3vl2/bin/python",
-    "-u",
-    "structured_external.py",
-    "--run",
-    "/root/autodl-tmp/AnomalyGPT/runs/migration_20261103/advanced_20261104/arm_S_s44",
-    "--external-cache",
-    "/root/autodl-tmp/AnomalyGPT/runs/migration_20261103/advanced_20261104/external_teacher_cache.pt",
+    "summarize_external.py",
+    "--advanced-root",
+    "/root/autodl-tmp/AnomalyGPT/runs/migration_20261103/advanced_20261104",
+    "--historical-root",
+    "/root/autodl-tmp/AnomalyGPT/runs/migration_20261103/lora_20261104",
     "--manifest",
     "/root/autodl-tmp/AnomalyGPT/runs/migration_20261103/advanced_20261104/external_manifest.jsonl",
-    "--protocol",
-    "/root/autodl-tmp/AnomalyGPT/runs/migration_20261103/advanced_20261104/external_protocol.json",
-    "--data-root",
-    "/root/autodl-tmp/AnomalyGPT/datasets/MVTec_AD_residual_v1",
+    "--include-structured",
     "--out",
-    "/root/autodl-tmp/AnomalyGPT/runs/migration_20261103/advanced_20261104/arm_S_s44/external_mvtec_residual_v1_initial_c",
-    "--initial-c"
-  ]
+    "/root/autodl-tmp/AnomalyGPT/runs/migration_20261103/advanced_20261104/external_summary.json"
+  ],
+  "finished": 1793787360.446524
 }

@@ -1,5 +1,8 @@
 # 本轮迁移结论与后续主线
 
+> 后续进阶实验已完成D/Cpair/R、S、原生工具五臂及21/21外部审计。见[2026-11-04进阶最终报告](advanced_20261104/FINAL_REPORT.md)。本文保留原五路线及学生ROI实验的时间语境。
+
+
 更新：2026-11-04（Asia/Shanghai）。原五路线矩阵已完成；其后又完成Qwen学生定位图→native Qwen ROI回答的完整val380匹配集成，以及无需teacher/cache/类别输入的任意单图入口。续篇完整结果见[STUDENT_ROI_RESULTS.md](student_roi_20261104/STUDENT_ROI_RESULTS.md)，命令和真实GPU验证见[单图使用说明](student_roi_20261104/INFERENCE_USAGE.md)。原all_summary.json只表示第一阶段预定矩阵，续篇另以student_roi_20261104/summary.json/status.json记录。
 
 **当前同时保留两条明确路线。** 追求现有检测表现及较充分重复证据时，以“ImageBind＋BigDec＋Qwen语言骨干”为基线；追求推理时完整移除ImageBind/BigDec时，以“Qwen pre448 GT SpatialHead→预测ROI→native Qwen”为已跑通基线。后一条AUROC0.836161，与同协议teacher ROI0.837265接近，但生成F1为0.743272，低于teacher0.765826；单seed开发集结果不能证明性能等价。两个路线使用不同输入接口和预算，不直接排总榜。

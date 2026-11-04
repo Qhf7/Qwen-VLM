@@ -1,0 +1,34 @@
+{
+  "state": "pending",
+  "audit_source_sha256": "316b92c820b2f3633b85460e77ee00dfbaf518f7a9bb6a178bbc144a91d9b93a",
+  "scope": "Final saved evidence consistency audit; foundation-model inference is not rerun.",
+  "cpu_only": true,
+  "only_saved_json_jsonl_checksums_and_local_sources": true,
+  "model_queries": 0,
+  "rgb_reads": 0,
+  "mask_reads": 0,
+  "tensor_cache_or_weight_reads": 0,
+  "root": "/Users/qiaohongfei/Desktop/实习/阿里云天池比赛vlm/migration_20261103/advanced_20261104",
+  "checks": {},
+  "pending": [
+    {
+      "section": "external",
+      "model": "S",
+      "seed": 44,
+      "reason": "summary_missing",
+      "path": "/Users/qiaohongfei/Desktop/实习/阿里云天池比赛vlm/migration_20261103/advanced_20261104/arm_S_s44/external_mvtec_residual_v1/summary.json"
+    },
+    {
+      "section": "summary",
+      "path": "/Users/qiaohongfei/Desktop/实习/阿里云天池比赛vlm/migration_20261103/advanced_20261104/external_summary.json",
+      "reason": "required_complete_summary_pending"
+    }
+  ],
+  "summary_sha256": {
+    "summary.json": "b9fcfc80126984b8437a76a072e7d222c58a5995e25d93022289cc831dbe686e",
+    "verification_status.json": "9a0fde63651e8bb0ee5f381eeca0a272e496bf1c257a6bd4c2619729dac33ea3",
+    "structured_summary/summary.json": "7cb58cc0c706cb6801a0bdf9c561a9fce3b46bffb70bdc6e524ffbb320bb2e44",
+    "tool_summary.json": "9b498aa4eea6823f0782461c6a1dcef2eeb4d85d96c36eccc48303cf00cc6b1e",
+    "external_summary.json": "509e1f61e6eca244be7727a0692bf6a6a44eca2232a7e6c74398ebcefb7b51e7"
+  }
+}
