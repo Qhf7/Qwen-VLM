@@ -11,6 +11,7 @@ import torch
 from migration_language import FrozenLanguageBridge
 from migration_advanced_train import configure_arm, load_bridge, load_delta, sha256_file
 from migration_metrics import evaluate_predictions
+from advanced_generation import attach_generation, freeze_generation_policy
 from dec_big import atomic_json as _atomic_json
 
 def atomic_json(value, path):
@@ -51,6 +52,13 @@ def main():
             raise AssertionError('Selected checkpoint does not match completed validation selection')
         sidecar = json.loads(cache_path.with_suffix('.json').read_text())
         assert sha256_file(cache_path) == sidecar['cache_sha256']
+        visa_cache = torch.load(cfg['cache'], map_location='cpu')
+        assert sha256_file(cfg['cache']) == identity['cache_sha256']
+        attach_generation(model)
+        policy = freeze_generation_policy(model, visa_cache, 32, cfg['eval_batch_size'], context=('A' if args.baseline_a else run.name)+'_external_frozen')
+        atomic_json(policy, results_dir/'generation_policy.json')
+        del visa_cache
+        torch.cuda.empty_cache()
         cache = torch.load(cache_path, map_location='cpu')
         assert cache['decoder_sha256'] == identity['decoder_sha256']
         assert cache['pipeline_version'] == identity['pipeline_version']

@@ -8,7 +8,7 @@ def sha(p):
   for chunk in iter(lambda:f.read(1<<20),b''):h.update(chunk)
  return h.hexdigest()
 def main():
- ap=argparse.ArgumentParser();ap.add_argument('--manifest',type=Path,required=True);ap.add_argument('--out',type=Path,required=True);ap.add_argument('--zip-inventory',type=Path);ap.add_argument('--workers',type=int,default=8);args=ap.parse_args()
+ ap=argparse.ArgumentParser();ap.add_argument('--manifest',type=Path,required=True);ap.add_argument('--out',type=Path,required=True);ap.add_argument('--zip-inventory',type=Path);ap.add_argument('--workers',type=int,default=8);ap.add_argument('--base-url',default='https://huggingface.co/datasets/foersben/mvtec-ad/resolve/main/');args=ap.parse_args()
  records=[json.loads(x) for x in args.manifest.read_text().splitlines() if x];files={r[k]:r[h] for r in records for k,h in [('path','image_sha256'),('mask_path','mask_sha256')] if r.get(k)}
  args.out.mkdir(parents=True,exist_ok=True);began=time.time();recovered=0;failed=[];zipdata=None
  if args.zip_inventory:
@@ -25,7 +25,7 @@ def main():
  def fetch(pair):
   name,expected=pair;target=args.out/name
   if target.exists() and sha(target)==expected:return 'existing'
-  url='https://huggingface.co/datasets/foersben/mvtec-ad/resolve/main/'+name
+  url=args.base_url.rstrip('/')+'/'+name
   temporary=target.with_suffix(target.suffix+'.partial');target.parent.mkdir(parents=True,exist_ok=True)
   for attempt in range(4):
    try:

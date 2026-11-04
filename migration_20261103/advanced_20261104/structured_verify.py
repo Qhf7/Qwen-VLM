@@ -9,6 +9,7 @@ import torch
 from peft import set_peft_model_state_dict
 from migration_advanced_train import adapter_state, bridge_digest
 from dec_big import atomic_json
+from advanced_generation import force_generation_policy
 
 
 def choose_batches(records, batch_size, n):
@@ -56,6 +57,11 @@ def main():
     references=json.loads((run/reference_name).read_text())
     chunks=choose_batches(references,cfg['eval_batch_size'],args.n)
     errors=[];n=0;labels=set();categories=set()
+    generation_path=run/(args.mode+'_generation_policy.json')
+    if generation_path.exists():
+        policy=json.loads(generation_path.read_text());force_generation_policy(model,policy)
+    else:
+        policy=dict(selected='historical_scalar',note='Pre-generation-optimization run without policy file')
     model.eval()
     with torch.no_grad():
         for chunk in chunks:
@@ -72,7 +78,8 @@ def main():
     result=dict(state='complete',mode=args.mode,step=state['step'],n=n,categories=sorted(categories),labels=sorted(labels),
                 original_batch_composition_preserved=True,fresh_reload_max_abs_score_error=max(errors),
                 generated_exact_match=True,adapter_tensor_exact_match=True,adapter_B_nonzero=True,
-                bridge_unchanged=True,source_sha256=sha256_file(__file__),test_queries=0,external_queries=0)
+                bridge_unchanged=True,source_sha256=sha256_file(__file__),test_queries=0,external_queries=0,
+                generation_policy=policy['selected'],generation_policy_sha256=sha256_file(generation_path) if generation_path.exists() else None)
     atomic_json(result,str(run/('fresh_'+args.mode+'_reload.json')));print(json.dumps(result))
 
 

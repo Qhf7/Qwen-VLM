@@ -27,3 +27,9 @@ See external_mvtec/protocol.json and manifest.jsonl (SHA256 4cf2709614c8fd6aabe1
 ## Structured and ROI stage boundaries
 
 Structured stage starts from original C best42/43/44, uses only VisA training masks as output supervision, fixed bridge and continued language LoRA. Define exact output schema and invalid-output penalties before formal training. Teacher-map box baseline and all-anomaly denominators required. Bounded tool stage must record actual LM tool requests, returned crop observations, final answer, invalid schema rate, call rate, latency, memory; no GT at inference. Fixed crop with matched visual budget is a required control. Native Qwen vision, if needed by ROI implementation, is a distinct complete-system comparison, not an attribution to the compressed bridge route.
+
+## Execution refinements before S/external queries
+
+All2758 external image/mask files are SHA-verified on the server; the existing archive was truncated, so intact entries were recovered and895 missing files were downloaded through a mirror then checked against the same frozen hashes. Neither source identity nor the manifest changed. No external model query was made by staging.
+
+Optional batched greedy decoding is a new isolated module, leaving historical generation intact. For every structured checkpoint condition (initial/final/best), compare full tokens and stopping IDs with scalar decoding on fixed VisA val8; only exact agreement enables the batch candidate. Any difference or candidate exception selects scalar and records it. Verifiers force the stored policy. This is an engineering implementation gate, not external validation tuning or proof of exact equality on all images.

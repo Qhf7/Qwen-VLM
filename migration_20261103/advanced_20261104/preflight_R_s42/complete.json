@@ -1,0 +1,40 @@
+{
+  "arm": "R",
+  "seed": 42,
+  "steps": 40,
+  "best_step": 0,
+  "initial_val_auroc": 1.0,
+  "best_val_auroc": 1.0,
+  "final_val_auroc": 0.875,
+  "paired_A_max_abs_score_error": null,
+  "reload_max_abs_score_error": 0.0,
+  "zero_adapter_max_abs_logit_error": 0.0,
+  "gradient_audit": [
+    {
+      "step": 1,
+      "norms": {
+        "lora_A": 0.0,
+        "lora_B": 0.7242031819187105
+      }
+    },
+    {
+      "step": 2,
+      "norms": {
+        "lora_A": 0.07820885762339458,
+        "lora_B": 1.7969157774932683
+      }
+    }
+  ],
+  "frozen_parameter_versions_unchanged": true,
+  "frozen_bridge_unchanged": true,
+  "trainable_parameters": 3833856,
+  "peak_memory_bytes": 18328732160,
+  "train_peak_memory_bytes": 18328732160,
+  "train_seconds": 9.424600601196289,
+  "exposures_per_second": 16.976846740825366,
+  "elapsed_seconds": 36.97919225692749,
+  "first5_mean_loss": 0.052912148740142585,
+  "last5_mean_loss": 3.855146569549106e-05,
+  "preflight": true,
+  "test_queries": 0
+}

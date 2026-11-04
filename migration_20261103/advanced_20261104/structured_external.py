@@ -21,6 +21,7 @@ from peft import set_peft_model_state_dict
 from migration_advanced_train import adapter_state, bridge_digest
 from migration_metrics import evaluate_predictions
 from visa_pipeline import PIPELINE_VERSION
+from advanced_generation import force_generation_policy
 
 EXPECTED_MANIFEST_SHA256 = '4cf2709614c8fd6aabe1268ef3c9f8687a07a0849d3d0f0341d1756570f9497a'
 EXPECTED_COUNTS = {'n': 1575, 'normal': 392, 'anomaly': 1183, 'categories': 15}
@@ -110,6 +111,8 @@ def posthoc_targets(records, data_root, inference_marker, prediction_path):
 def load_and_validate_sources(run_dir, initial_c):
     spec=json.loads((run_dir/'run.json').read_text());identity=spec['identity'];cfg=spec['config']
     assert identity['schema']==SCHEMA and not cfg['preflight']
+    for filename,expected_sha in spec['source_sha256'].items():
+        assert sha256_file(Path(__file__).parent/filename)==expected_sha,('Training source changed',filename)
     complete=json.loads((run_dir/'complete.json').read_text())
     assert complete['state']=='complete' and not complete['preflight'] and complete['steps']==500
     assert complete['seed']==identity['seed'] and complete['test_queries']==complete['external_queries']==0
@@ -165,7 +168,9 @@ def main():
     manifest_sha=sha256_file(args.manifest)
     assert manifest_sha==EXPECTED_MANIFEST_SHA256
     protocol=json.loads(args.protocol.read_text())
+    assert protocol['protocol']=='visa_to_mvtec_residual_official_test_v1'
     assert protocol['manifest_sha256']==manifest_sha and protocol['retained_n']==1575
+    assert protocol['n_normal']==392 and protocol['n_anomaly']==1183
     records=[json.loads(x) for x in args.manifest.read_text().splitlines() if x]
     validate_manifest(records)
     spec,source,base,state,checkpoint=load_and_validate_sources(run,args.initial_c)
@@ -185,6 +190,12 @@ def main():
     current=adapter_state(model)
     assert current.keys()==state['adapter'].keys() and all(torch.equal(current[k],v) for k,v in state['adapter'].items())
     assert any(torch.count_nonzero(v).item() for k,v in current.items() if 'lora_B' in k)
+    generation_path=run/('initial_generation_policy.json' if args.initial_c else 'best_generation_policy.json')
+    if generation_path.exists():
+        policy=json.loads(generation_path.read_text());force_generation_policy(model,policy)
+        assert policy['max_new_tokens']==80 and policy['batch_size']==cfg['eval_batch_size']
+    else:
+        policy=dict(selected='historical_scalar',note='Pre-generation-optimization run without policy file')
     out.mkdir(parents=True,exist_ok=False)
     frozen=dict(run=str(run),seed=identity['seed'],condition='initial_C_structured_prompt' if args.initial_c else 'S_best',
                 checkpoint_step=state['step'],checkpoint_sha256=sha256_file(checkpoint),
@@ -194,6 +205,7 @@ def main():
                 decoder_sha256=decoder_sha,manifest_sha256=manifest_sha,protocol_sha256=sha256_file(args.protocol),
                 external_cache_sha256=external_cache_sha,prompt_category='industrial_component',
                 max_new_tokens=80,batch_size=cfg['eval_batch_size'],schema=SCHEMA,
+                generation_policy=policy['selected'],generation_policy_sha256=sha256_file(generation_path) if generation_path.exists() else None,
                 evaluator_sha256=sha256_file(__file__),model_source_sha256=sha256_file(Path(__file__).parent/'structured_model.py'),
                 mask_reads_at_start=0,selection='Frozen before external model queries; no external selection')
     atomic_json(frozen,out/'frozen_config.json')
