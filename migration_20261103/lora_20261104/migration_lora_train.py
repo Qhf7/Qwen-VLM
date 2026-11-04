@@ -237,7 +237,29 @@ def main():
         if args.arm == 'C':
             assert bridge_digest(model) == initial_bridge_hash, 'Frozen bridge changed'
 
-    initial, records = evaluate(val_ids, generate=True)
+    # A is already fully evaluated by the paired Phase-1 run. Validate all
+    # scores bit-for-bit, audit eight generations, then reuse its raw texts.
+    # This changes no model computation or reported predictions.
+    def audit_and_reuse_texts(records, reference):
+        assert [r['path'] for r in reference] == [r['path'] for r in records]
+        assert all(a['score'] == b['score'] for a, b in zip(reference, records))
+        lookup = {x['path']: x['generated'] for x in reference}
+        model.eval()
+        with torch.no_grad():
+            check = model.generate(pack(val_ids[:8]), max_new_tokens=32)
+        assert check == [lookup[items[i]['path']] for i in val_ids[:8]]
+        model.train()
+        updated = [dict(r, generated=lookup[r['path']]) for r in records]
+        return evaluate_predictions([items[i] for i in val_ids],
+                                    [r['score'] for r in updated],
+                                    [r['generated'] for r in updated]), updated
+
+    if args.preflight:
+        initial, records = evaluate(val_ids, generate=True)
+    else:
+        initial, records = evaluate(val_ids)
+        previous_A = json.load(open(Path(args.bridge).parent / 'val_generated_predictions.json'))
+        initial, records = audit_and_reuse_texts(records, previous_A)
     atomic_json(initial, str(out / 'initial_val.json'))
     atomic_json(records, str(out / 'initial_val_predictions.json'))
     if not args.preflight:
@@ -318,7 +340,13 @@ def main():
     with torch.no_grad():
         params[0].add_(0.001)
     selected = load_delta(model, out / 'best.pt', identity)
-    metrics, records = evaluate(val_ids, generate=True)
+    if not args.preflight and selected['step'] in (0, args.steps):
+        metrics, records = evaluate(val_ids)
+        reuse = json.load(open(out / ('initial_val_predictions.json' if selected['step'] == 0
+                                      else 'final_val_predictions.json')))
+        metrics, records = audit_and_reuse_texts(records, reuse)
+    else:
+        metrics, records = evaluate(val_ids, generate=True)
     previous = json.load(open(out / 'best_val_predictions.json'))
     reload_error = max(abs(a['score'] - b['score']) for a, b in zip(previous, records))
     assert reload_error == 0., ('Save/reload score mismatch', reload_error)

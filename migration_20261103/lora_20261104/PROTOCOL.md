@@ -11,4 +11,6 @@
 7. B存best/final桥接权重，C存best/final adapter与标准PEFT best_adapter。绑定source bridge、基座文件、cache、采样与源码SHA。未保存optimizer状态，失败后使用新目录重跑，不能称断点精确恢复。
 8. D（联合训练）在B/C三seed结果分析后决定。多轮使用的val380仍是开发验证；固定模板不能证明复杂解释/推理能力提高。
 
+运行优化：首个B42完整重复起点/best生成。后续起点在全部380连续分数与同seed历史结果精确一致、8例自由生成逐字符串一致后复用已保存的380条原始答案；best为step0或final时也在完整分数与8例生成核验后复用对应答案。final始终重新生成全部380图，best为中间步时重新生成全部380图。这只省去同一checkpoint的重复生成，不改变评分、生成或选择规则；每run记录真实执行源码SHA。
+
 运行入口为 `migration_lora_runner.py`。它持有既有GPU文件锁，串行执行B42/C42工程预检，再B42/C42/B43/C43/B44/C44，任何检查失败即停止。
