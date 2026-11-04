@@ -1,0 +1,20 @@
+{
+  "status": "complete",
+  "n": 380,
+  "jsonl_csv_manifest_order_exact": true,
+  "heads": {
+    "pre_gt": {
+      "counts_exact": true,
+      "integer_ratio_mean": 0.7754474081146406,
+      "historical_float32_ratio_mean": 0.7754474094030089,
+      "delta": -1.2883683009334845e-09
+    },
+    "pre_kd": {
+      "counts_exact": true,
+      "integer_ratio_mean": 0.7585841635350031,
+      "historical_float32_ratio_mean": 0.7585841643874749,
+      "delta": -8.524717598490383e-10
+    }
+  },
+  "mean_note": "New diagnostic divides integer pixel counts in Python float64; earlier map metrics divided numpy float32 sums. Preserve both; count-based conclusions unchanged."
+}

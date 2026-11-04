@@ -1,0 +1,26 @@
+{
+  "pipeline_version": "visa-square-binary-sklearn-v1",
+  "training_protocol": "supervised_custom_60_20_20",
+  "decoder_kind": "upsample",
+  "freeze_decoder": true,
+  "train_n": 9985,
+  "val_pool_n": 380,
+  "val_n": 300,
+  "test_n": 456,
+  "parameters": 111614904,
+  "selection": "fixed validation image AUROC",
+  "config": {
+    "steps": 1500,
+    "accum": 4,
+    "lr": 0.0005,
+    "seed": 42,
+    "out": "runs/vic_fixed_s42",
+    "eval": false,
+    "ckpt": "",
+    "decoder_kind": "upsample",
+    "freeze_decoder": true,
+    "decoder_init": "runs/dec_big_fixed_s42/best.pt",
+    "val_every": 300,
+    "val_limit": 300
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "migration_dense_infer.py": {
+    "sha256": "9cd9411b5353be646a36c86be9c0f6608aae36aaf07e359046101b6ca9175de1",
+    "bytes": 22473
+  },
+  "migration_student_roi.py": {
+    "sha256": "563eae5654166b0aec3ded2cd517ad517df63cf66759aacfe32bafb62df3b600",
+    "bytes": 21558
+  },
+  "migration_student_map_metrics.py": {
+    "sha256": "d6fd323fc72150dc2d25204c1970da4f90f59b587d59669fcf1fc4585688d81f",
+    "bytes": 3420
+  },
+  "migration_infer_student_roi.py": {
+    "sha256": "f500c9c7cbf27c2ce28e923babf7e9c50eeed90401f331c101a25b6137b91ee4",
+    "bytes": 17020
+  },
+  "migration_summarize_student_roi.py": {
+    "sha256": "b1f308f26b8c5b6a60e1aa3c69791112067d94e103e88f8ecbb7d241d30d1933",
+    "bytes": 34377
+  },
+  "migration_plot_student_roi.py": {
+    "sha256": "fd4b945fc4b34a266c49a82918b25f5ee65dabae9e2886246aaa93e378a2c5d0",
+    "bytes": 2917
+  },
+  "migration_verify_student_demo.py": {
+    "sha256": "e51585ea3ad8608882f8ecfe915725e1830fd4049b85c484e9de26715816755b",
+    "bytes": 6791
+  },
+  "migration_student_failure_analysis.py": {
+    "sha256": "35e36dd0084457063e505534e9180984f4ae3ac6be2ef7eeee78ba312751918b",
+    "bytes": 34328
+  }
+}

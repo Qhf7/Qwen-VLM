@@ -8,6 +8,12 @@
 | AnomalyGPT 语言迁移 | [followup_20261026](AnomalyGPT/followup_20261026/) | 保留 ImageBind/decoder/PromptLearner，比较冻结 Qwen、Qwen LoRA、Vicuna，三随机种子控制实验 | [最终实验结论](docs/strict_qwen_followup_20261026/最终实验结论.md) |
 | 跨零件分割 | [seg_cross_part](seg_cross_part/) | Real-IAD 分组划分、DINOv2 分割、CLIP 语义对照、像素指标与 bootstrap | [项目说明](docs/项目说明.md)、[实验台账](docs/实验进度与版本记录.md) |
 
+## 修正视觉管线后的迁移实验（2026-11-04）
+
+[本轮迁移目录](migration_20261103/README.md)包含修正 mask、几何和特征布局后的源码、三 seed 配对实验、原生视觉适配、定位蒸馏、学生 ROI 推理及失败分析。固定 ImageBind/BigDec，训练桥接层并冻结语言骨干时，自定义监督开发验证 val380 的 Image AUROC 为 Vicuna **0.889684±0.013285**、Qwen **0.925779±0.032698**（均值±样本标准差）；生成 Macro-F1 为 **0.816122→0.845672**。
+
+这与下文 2026-10-26 的历史小预算迁移实验采用不同管线和预算。当前语言 LoRA 延续实验将先比较 B（桥接继续训练）和 C（仅语言 LoRA）；协议与状态见[项目总结与方案](migration_20261103/PROJECT_EXPERIENCE_AND_LORA_PLAN.md)。新增 LoRA 结果在完成后单独报告。
+
 ## 原生 Qwen3-VL 的当前结果
 
 底座为 Qwen3-VL-8B-Instruct，保留原生视觉输入路径，冻结视觉模块与底座参数，仅对语言注意力 q/k/v/o 投影注入 LoRA（r=16、alpha=32、dropout=0.05）。可训练参数为 **15,335,424**。
@@ -31,6 +37,7 @@ AnomalyGPT 迁移实验使用另一套视觉路径和预算。2,005 张 VisA 诊
 
 ## 阅读入口
 
+- [项目精读：从问题到代码、从样本到结论](docs/项目精读/00_导读与项目地图.md)：按 kelip 六站方法，分章解释三条路线、真实样本、张量形状、训练损失、指标及关键函数。
 - [工作总结与简历详解](docs/工业异常检测多模态项目_工作总结与简历详解.md)：工作过程、结果口径、项目经历写法。
 - [Qwen LoRA 实现步骤](docs/Qwen_LoRA_项目实现步骤详解.md)：数据、加载、注入、训练、梯度审计、保存与推理。
 - [数据与监督协议](industrial_vlm/DATA_PROTOCOL.md)、[项目卡](industrial_vlm/PROJECT_CARD_ZH.md)。

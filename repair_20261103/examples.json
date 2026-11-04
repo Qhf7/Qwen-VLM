@@ -1,0 +1,39 @@
+{
+  "selection": "median foreground area among test anomalies for three predefined categories plus first normal candle",
+  "pipeline_version": "visa-square-binary-sklearn-v1",
+  "checkpoint_step": 1200,
+  "examples": [
+    {
+      "image": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Anomaly/038.JPG",
+      "class": "candle",
+      "label": 1,
+      "foreground_pixels": 72,
+      "probability_min": 5.2290815772158116e-23,
+      "probability_max": 1.988463736779522e-06
+    },
+    {
+      "image": "/root/autodl-tmp/industrial_vlm/datasets/VisA/capsules/Data/Images/Anomaly/019.JPG",
+      "class": "capsules",
+      "label": 1,
+      "foreground_pixels": 70,
+      "probability_min": 9.985711833939862e-22,
+      "probability_max": 0.9999960660934448
+    },
+    {
+      "image": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb3/Data/Images/Anomaly/080.JPG",
+      "class": "pcb3",
+      "label": 1,
+      "foreground_pixels": 181,
+      "probability_min": 1.137619951426816e-27,
+      "probability_max": 7.94497555034468e-06
+    },
+    {
+      "image": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Normal/0484.JPG",
+      "class": "candle",
+      "label": 0,
+      "foreground_pixels": 0,
+      "probability_min": 3.83331747653898e-23,
+      "probability_max": 1.3548442439059727e-06
+    }
+  ]
+}

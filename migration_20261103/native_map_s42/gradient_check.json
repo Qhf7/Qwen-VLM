@@ -1,0 +1,6 @@
+{
+  "base_prompt_gradient_norm": 0.004011743236333132,
+  "adaptive_gradient_norm_sum": 1.8064716394874267,
+  "frozen_qwen_gradients": 0,
+  "labels_positions_checked": true
+}

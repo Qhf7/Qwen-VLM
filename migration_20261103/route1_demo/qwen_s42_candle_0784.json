@@ -1,0 +1,110 @@
+{
+  "demo_version": "imagebind-bigdec-frozen-language-single-image-v1",
+  "pipeline_version": "visa-square-binary-sklearn-v1",
+  "backend": "qwen",
+  "image": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Normal/0784.JPG",
+  "image_sha256": "1e1983fd2ce9c43f6434f947a30235e2809f410d2cab8d6b638bbf2201808b1b",
+  "category": "candle",
+  "input_geometry": "RGB direct bicubic square224, no crop",
+  "score": -1.75,
+  "score_definition": "first-answer logit(Yes)-logit(No); score>0 isYes, elseNo",
+  "score_decision": "No",
+  "generated_answer": "No, there is no anomaly in the image.",
+  "generated_decision": "No",
+  "generated_invalid": false,
+  "score_generation_agree": true,
+  "generation": {
+    "method": "greedy",
+    "max_new_tokens": 32,
+    "EOS_omitted": true
+  },
+  "teacher": {
+    "seconds": 25.358094714581966,
+    "imagebind_dtype": "torch.float16",
+    "decoder_dtype": "torch.float32",
+    "cls_dtype": "torch.float32",
+    "map_dtype": "torch.float32",
+    "cls_shape": [
+      1,
+      1024
+    ],
+    "map_shape": [
+      224,
+      224
+    ],
+    "cls_norm": 1.0003360509872437,
+    "map_min": 3.110206234501967e-23,
+    "map_max": 1.0314804512745468e-06,
+    "map_mean": 7.375038774126708e-11,
+    "map_p99": 9.444458548557577e-10,
+    "imagebind_layers": [
+      7,
+      15,
+      23,
+      31
+    ],
+    "feature_layout": "four [257,1,1280] -> transpose/remove CLS -> [1,256,1280]",
+    "source_sha256": {
+      "imagebind_model.py": "65f1ca944b157f53b898075f450a01173e0761dd98524d251c9fcb219368cc5b",
+      "dec_big.py": "682ca37f80329c949c46b8296a2ba175dd20928e8f577d81de4d6cb4a6e7d898"
+    },
+    "gpu_allocated_bytes_before_language_load": 8519680
+  },
+  "loaded_bridge": {
+    "loaded_state_sha256": {
+      "prompt_learner": "336f48a17850f6cd5273290a839627df540cefdac7ad9dbeab248ac715a6e09e",
+      "cls_proj": "5d8933f3999f564f0aee948a804581b344d1782297cd6ec3ecf7856067dfb679"
+    },
+    "loaded_base_prompt_norm_mean": 64.18324279785156,
+    "weights_source": "selected checkpoint strict state load",
+    "yes_id": 9454,
+    "no_id": 2753,
+    "training_eos_id": 151645,
+    "generation_stop_ids": [
+      151643,
+      151645
+    ],
+    "frozen_language_dtype": "torch.bfloat16",
+    "bridge_dtype": "torch.float32"
+  },
+  "provenance": {
+    "bridge_checkpoint": "/root/autodl-tmp/AnomalyGPT/runs/migration_20261103/lm_qwen_s42/best.pt",
+    "bridge_checkpoint_sha256": "6bcb98c3f01060de1a29751b4e244da8e9cfad71f761b2af04fe2be9cd1cb18c",
+    "selected_step": 1500,
+    "selected_val_auroc": 0.9586594364937387,
+    "decoder": "/root/autodl-tmp/AnomalyGPT/runs/dec_big_fixed_s42/best.pt",
+    "decoder_sha256": "cddfa2df9ad63659f65aa3a798566e52d608ace43a1b37704484db5bbfc5617d",
+    "imagebind": "/root/autodl-tmp/AnomalyGPT/pretrained_ckpt/imagebind_ckpt/imagebind_huge.pth",
+    "imagebind_sha256": "d6f6c22bedcc90708448d5d2fbb7b2db9c73f505dc89bd0b2e09b23af1b62157",
+    "model": "/root/autodl-tmp/industrial_vlm/models/Qwen3-VL-8B-Instruct",
+    "model_configuration_sha256": {
+      "config.json": "5cd452860dc1e9c29dd71cc3cef7f39b338b7a40793f7a260655c2d3568f3661",
+      "tokenizer_config.json": "c2da771801886ad9ae98181793ffd3dfb7f1af30f6f7c6a4e15d7dbba52e2399"
+    },
+    "training_cache_sha256": "90b003550655617f93837e4c0336819b8c6dc0d341d215e9cd3949930eee59f4",
+    "training_cache_manifest_sha256": "349942973b9207c575be98790d074226845c4631b9f3c5a410adfd1165cd22e2",
+    "current_source_sha256": {
+      "migration_infer_language.py": "10ae0660320c97ffa4eaee55e7f80926f39139ac12036f5959021715809422df",
+      "migration_language.py": "027a9f9b01f7543642e7b1f71a7bf4b7ad600175370706da6800ee2ff6e1caef",
+      "visa_pipeline.py": "f86d40a9aa18aca36ae7e9d62c4c5f88c3758e094f44b229454a59c3a4947eb9"
+    }
+  },
+  "artifacts": {
+    "probability_npy": "/root/autodl-tmp/AnomalyGPT/runs/migration_20261103/route1_demo/qwen_s42_candle_0784.map.npy",
+    "probability_npy_sha256": "f914d32698262ffcf771cbc368bf60c835c8a57b6f3d5d0ebd3bb78e4bb1fd55",
+    "shape": [
+      224,
+      224
+    ],
+    "dtype": "float32",
+    "probability_scale": [
+      0.0,
+      1.0
+    ],
+    "heatmap_png": "/root/autodl-tmp/AnomalyGPT/runs/migration_20261103/route1_demo/qwen_s42_candle_0784.map.heatmap.png",
+    "heatmap_scale": "fixed probability0 blue to1 red"
+  },
+  "language_load_and_inference_seconds": 10.697465240955353,
+  "elapsed_seconds": 43.4778920263052,
+  "peak_gpu_allocated_bytes": 19729848320
+}

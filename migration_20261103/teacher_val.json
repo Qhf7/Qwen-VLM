@@ -1,0 +1,372 @@
+{
+  "pixel": {
+    "pipeline_version": "visa-square-binary-sklearn-v1",
+    "pixel_auroc_macro": 0.975933659150618,
+    "pixel_ap_macro": 0.43552204340635586,
+    "pixel_auroc_weighted": 0.9744531394398496,
+    "image_auroc_from_map99": 0.8143168604651163,
+    "foreground_ratio": 0.005529798267991407,
+    "n_categories": 12,
+    "n_categories_total": 12,
+    "n_images": 380,
+    "n_anomaly_images": 208,
+    "counts": {
+      "pixels": 19066880,
+      "foreground_pixels": 105436,
+      "background_pixels": 18961444,
+      "normal_images": 172,
+      "anomaly_images": 208,
+      "undefined_pixel_auc_categories": 0
+    },
+    "per_category": {
+      "candle": {
+        "pixel_auroc": 0.9854924655359986,
+        "pixel_ap": 0.49859586448602744,
+        "foreground_pixels": 1613,
+        "n_pixels": 1555456,
+        "n_images": 31
+      },
+      "capsules": {
+        "pixel_auroc": 0.9939459794266701,
+        "pixel_ap": 0.6253957919429883,
+        "foreground_pixels": 4403,
+        "n_pixels": 1455104,
+        "n_images": 29
+      },
+      "cashew": {
+        "pixel_auroc": 0.9940256618700547,
+        "pixel_ap": 0.4833308330174808,
+        "foreground_pixels": 1299,
+        "n_pixels": 1304576,
+        "n_images": 26
+      },
+      "chewinggum": {
+        "pixel_auroc": 0.9964970764023692,
+        "pixel_ap": 0.7916253252595693,
+        "foreground_pixels": 6123,
+        "n_pixels": 1003520,
+        "n_images": 20
+      },
+      "fryum": {
+        "pixel_auroc": 0.9676887723189073,
+        "pixel_ap": 0.39656298706373855,
+        "foreground_pixels": 31418,
+        "n_pixels": 1705984,
+        "n_images": 34
+      },
+      "macaroni1": {
+        "pixel_auroc": 0.9929398376719895,
+        "pixel_ap": 0.1470271140309591,
+        "foreground_pixels": 727,
+        "n_pixels": 2007040,
+        "n_images": 40
+      },
+      "macaroni2": {
+        "pixel_auroc": 0.9810384215022243,
+        "pixel_ap": 0.05753035530255417,
+        "foreground_pixels": 413,
+        "n_pixels": 1906688,
+        "n_images": 38
+      },
+      "pcb1": {
+        "pixel_auroc": 0.9955763829035831,
+        "pixel_ap": 0.6634538204114424,
+        "foreground_pixels": 4816,
+        "n_pixels": 1455104,
+        "n_images": 29
+      },
+      "pcb2": {
+        "pixel_auroc": 0.9707771228171296,
+        "pixel_ap": 0.35481751603832634,
+        "foreground_pixels": 2167,
+        "n_pixels": 1705984,
+        "n_images": 34
+      },
+      "pcb3": {
+        "pixel_auroc": 0.8716938231673514,
+        "pixel_ap": 0.24874436854875315,
+        "foreground_pixels": 4384,
+        "n_pixels": 1756160,
+        "n_images": 35
+      },
+      "pcb4": {
+        "pixel_auroc": 0.9824025337687425,
+        "pixel_ap": 0.49516299705989675,
+        "foreground_pixels": 19664,
+        "n_pixels": 1856512,
+        "n_images": 37
+      },
+      "pipe_fryum": {
+        "pixel_auroc": 0.979125832422398,
+        "pixel_ap": 0.46401754771453557,
+        "foreground_pixels": 28409,
+        "n_pixels": 1354752,
+        "n_images": 27
+      }
+    }
+  },
+  "image_p99": {
+    "overall": {
+      "scores": {
+        "n": 380,
+        "n_normal": 172,
+        "n_anomaly": 208,
+        "accuracy": 0.5473684210526316,
+        "macro_f1": 0.35374149659863946,
+        "recall": 1.0,
+        "fpr": 1.0,
+        "invalid_rate": 0.0,
+        "n_invalid": 0,
+        "n_invalid_normal": 0,
+        "n_invalid_anomaly": 0,
+        "image_auroc": 0.8143168604651163,
+        "image_ap": 0.881319023957092,
+        "threshold": 0.0
+      }
+    },
+    "per_category": {
+      "candle": {
+        "scores": {
+          "n": 31,
+          "n_normal": 16,
+          "n_anomaly": 15,
+          "accuracy": 0.4838709677419355,
+          "macro_f1": 0.32608695652173914,
+          "recall": 1.0,
+          "fpr": 1.0,
+          "invalid_rate": 0.0,
+          "n_invalid": 0,
+          "n_invalid_normal": 0,
+          "n_invalid_anomaly": 0,
+          "image_auroc": 0.9791666666666667,
+          "image_ap": 0.9833333333333332,
+          "threshold": 0.0
+        }
+      },
+      "capsules": {
+        "scores": {
+          "n": 29,
+          "n_normal": 12,
+          "n_anomaly": 17,
+          "accuracy": 0.5862068965517241,
+          "macro_f1": 0.3695652173913043,
+          "recall": 1.0,
+          "fpr": 1.0,
+          "invalid_rate": 0.0,
+          "n_invalid": 0,
+          "n_invalid_normal": 0,
+          "n_invalid_anomaly": 0,
+          "image_auroc": 0.8725490196078431,
+          "image_ap": 0.9140544650029538,
+          "threshold": 0.0
+        }
+      },
+      "cashew": {
+        "scores": {
+          "n": 26,
+          "n_normal": 14,
+          "n_anomaly": 12,
+          "accuracy": 0.46153846153846156,
+          "macro_f1": 0.3157894736842105,
+          "recall": 1.0,
+          "fpr": 1.0,
+          "invalid_rate": 0.0,
+          "n_invalid": 0,
+          "n_invalid_normal": 0,
+          "n_invalid_anomaly": 0,
+          "image_auroc": 0.7678571428571428,
+          "image_ap": 0.8496822986954566,
+          "threshold": 0.0
+        }
+      },
+      "chewinggum": {
+        "scores": {
+          "n": 20,
+          "n_normal": 9,
+          "n_anomaly": 11,
+          "accuracy": 0.55,
+          "macro_f1": 0.3548387096774194,
+          "recall": 1.0,
+          "fpr": 1.0,
+          "invalid_rate": 0.0,
+          "n_invalid": 0,
+          "n_invalid_normal": 0,
+          "n_invalid_anomaly": 0,
+          "image_auroc": 1.0,
+          "image_ap": 1.0,
+          "threshold": 0.0
+        }
+      },
+      "fryum": {
+        "scores": {
+          "n": 34,
+          "n_normal": 15,
+          "n_anomaly": 19,
+          "accuracy": 0.5588235294117647,
+          "macro_f1": 0.3584905660377358,
+          "recall": 1.0,
+          "fpr": 1.0,
+          "invalid_rate": 0.0,
+          "n_invalid": 0,
+          "n_invalid_normal": 0,
+          "n_invalid_anomaly": 0,
+          "image_auroc": 0.7508771929824561,
+          "image_ap": 0.8535623517826558,
+          "threshold": 0.0
+        }
+      },
+      "macaroni1": {
+        "scores": {
+          "n": 40,
+          "n_normal": 17,
+          "n_anomaly": 23,
+          "accuracy": 0.575,
+          "macro_f1": 0.36507936507936506,
+          "recall": 1.0,
+          "fpr": 1.0,
+          "invalid_rate": 0.0,
+          "n_invalid": 0,
+          "n_invalid_normal": 0,
+          "n_invalid_anomaly": 0,
+          "image_auroc": 0.9462915601023016,
+          "image_ap": 0.9550133687349329,
+          "threshold": 0.0
+        }
+      },
+      "macaroni2": {
+        "scores": {
+          "n": 38,
+          "n_normal": 22,
+          "n_anomaly": 16,
+          "accuracy": 0.42105263157894735,
+          "macro_f1": 0.2962962962962963,
+          "recall": 1.0,
+          "fpr": 1.0,
+          "invalid_rate": 0.0,
+          "n_invalid": 0,
+          "n_invalid_normal": 0,
+          "n_invalid_anomaly": 0,
+          "image_auroc": 0.8267045454545454,
+          "image_ap": 0.8057467867699724,
+          "threshold": 0.0
+        }
+      },
+      "pcb1": {
+        "scores": {
+          "n": 29,
+          "n_normal": 12,
+          "n_anomaly": 17,
+          "accuracy": 0.5862068965517241,
+          "macro_f1": 0.3695652173913043,
+          "recall": 1.0,
+          "fpr": 1.0,
+          "invalid_rate": 0.0,
+          "n_invalid": 0,
+          "n_invalid_normal": 0,
+          "n_invalid_anomaly": 0,
+          "image_auroc": 0.9852941176470589,
+          "image_ap": 0.9911764705882353,
+          "threshold": 0.0
+        }
+      },
+      "pcb2": {
+        "scores": {
+          "n": 34,
+          "n_normal": 18,
+          "n_anomaly": 16,
+          "accuracy": 0.47058823529411764,
+          "macro_f1": 0.32,
+          "recall": 1.0,
+          "fpr": 1.0,
+          "invalid_rate": 0.0,
+          "n_invalid": 0,
+          "n_invalid_normal": 0,
+          "n_invalid_anomaly": 0,
+          "image_auroc": 0.9826388888888888,
+          "image_ap": 0.9851190476190477,
+          "threshold": 0.0
+        }
+      },
+      "pcb3": {
+        "scores": {
+          "n": 35,
+          "n_normal": 18,
+          "n_anomaly": 17,
+          "accuracy": 0.4857142857142857,
+          "macro_f1": 0.3269230769230769,
+          "recall": 1.0,
+          "fpr": 1.0,
+          "invalid_rate": 0.0,
+          "n_invalid": 0,
+          "n_invalid_normal": 0,
+          "n_invalid_anomaly": 0,
+          "image_auroc": 0.7712418300653594,
+          "image_ap": 0.8280247171641868,
+          "threshold": 0.0
+        }
+      },
+      "pcb4": {
+        "scores": {
+          "n": 37,
+          "n_normal": 12,
+          "n_anomaly": 25,
+          "accuracy": 0.6756756756756757,
+          "macro_f1": 0.4032258064516129,
+          "recall": 1.0,
+          "fpr": 1.0,
+          "invalid_rate": 0.0,
+          "n_invalid": 0,
+          "n_invalid_normal": 0,
+          "n_invalid_anomaly": 0,
+          "image_auroc": 1.0,
+          "image_ap": 1.0000000000000002,
+          "threshold": 0.0
+        }
+      },
+      "pipe_fryum": {
+        "scores": {
+          "n": 27,
+          "n_normal": 7,
+          "n_anomaly": 20,
+          "accuracy": 0.7407407407407407,
+          "macro_f1": 0.425531914893617,
+          "recall": 1.0,
+          "fpr": 1.0,
+          "invalid_rate": 0.0,
+          "n_invalid": 0,
+          "n_invalid_normal": 0,
+          "n_invalid_anomaly": 0,
+          "image_auroc": 1.0,
+          "image_ap": 1.0,
+          "threshold": 0.0
+        }
+      }
+    },
+    "category_macro": {
+      "scores": {
+        "image_auroc": 0.9068850803560219,
+        "image_ap": 0.9304760699742313,
+        "accuracy": 0.5496181933999481,
+        "macro_f1": 0.3526160500289735,
+        "recall": 1.0,
+        "fpr": 1.0,
+        "invalid_rate": 0.0
+      }
+    },
+    "category_macro_counts": {
+      "scores": {
+        "image_auroc": 12,
+        "image_ap": 12,
+        "accuracy": 12,
+        "macro_f1": 12,
+        "recall": 12,
+        "fpr": 12,
+        "invalid_rate": 12
+      }
+    },
+    "generated_rule": "initial Yes/No; invalid is wrong and a false negative for its true class"
+  },
+  "decoder_sha256": "cddfa2df9ad63659f65aa3a798566e52d608ace43a1b37704484db5bbfc5617d",
+  "split": "val",
+  "n": 380
+}

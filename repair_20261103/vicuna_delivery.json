@@ -1,0 +1,144 @@
+{
+  "time": "2026-11-03T17:54:30.474452",
+  "pipeline_version": "visa-square-binary-sklearn-v1",
+  "training_protocol": "supervised_custom_60_20_20",
+  "seed": 42,
+  "steps_completed": 1500,
+  "selected_step": 1500,
+  "selected_val_auroc": 0.9301777777777778,
+  "frozen_decoder_verified_identical": true,
+  "pixel_metrics": {
+    "pipeline_version": "visa-square-binary-sklearn-v1",
+    "pixel_auroc_macro": 0.9768022869405598,
+    "pixel_ap_macro": 0.3938683425537479,
+    "pixel_auroc_weighted": 0.9730154569878553,
+    "image_auroc_from_map99": 0.817052590266876,
+    "foreground_ratio": 0.0048038798167293235,
+    "n_categories": 12,
+    "n_categories_total": 12,
+    "n_images": 456,
+    "n_anomaly_images": 260,
+    "counts": {
+      "pixels": 22880256,
+      "foreground_pixels": 109914,
+      "background_pixels": 22770342,
+      "normal_images": 196,
+      "anomaly_images": 260,
+      "undefined_pixel_auc_categories": 0
+    },
+    "per_category": {
+      "candle": {
+        "pixel_auroc": 0.983479665354077,
+        "pixel_ap": 0.3560924429926597,
+        "foreground_pixels": 1372,
+        "n_pixels": 1655808,
+        "n_images": 33
+      },
+      "capsules": {
+        "pixel_auroc": 0.996826536404332,
+        "pixel_ap": 0.6628892324251547,
+        "foreground_pixels": 6330,
+        "n_pixels": 2207744,
+        "n_images": 44
+      },
+      "cashew": {
+        "pixel_auroc": 0.9811152058951852,
+        "pixel_ap": 0.25191421638401235,
+        "foreground_pixels": 1567,
+        "n_pixels": 1455104,
+        "n_images": 29
+      },
+      "chewinggum": {
+        "pixel_auroc": 0.9931638605831369,
+        "pixel_ap": 0.794352070713171,
+        "foreground_pixels": 7805,
+        "n_pixels": 1404928,
+        "n_images": 28
+      },
+      "fryum": {
+        "pixel_auroc": 0.96641135233362,
+        "pixel_ap": 0.4339172291628521,
+        "foreground_pixels": 44001,
+        "n_pixels": 1705984,
+        "n_images": 34
+      },
+      "macaroni1": {
+        "pixel_auroc": 0.9965977729969392,
+        "pixel_ap": 0.2049218164870102,
+        "foreground_pixels": 717,
+        "n_pixels": 2057216,
+        "n_images": 41
+      },
+      "macaroni2": {
+        "pixel_auroc": 0.9811687490497253,
+        "pixel_ap": 0.09791945104783302,
+        "foreground_pixels": 679,
+        "n_pixels": 2508800,
+        "n_images": 50
+      },
+      "pcb1": {
+        "pixel_auroc": 0.9894937074256673,
+        "pixel_ap": 0.5829753867541851,
+        "foreground_pixels": 9322,
+        "n_pixels": 2157568,
+        "n_images": 43
+      },
+      "pcb2": {
+        "pixel_auroc": 0.9493289967812036,
+        "pixel_ap": 0.22978047516605013,
+        "foreground_pixels": 5232,
+        "n_pixels": 2207744,
+        "n_images": 44
+      },
+      "pcb3": {
+        "pixel_auroc": 0.9115740635527486,
+        "pixel_ap": 0.221264208461542,
+        "foreground_pixels": 7248,
+        "n_pixels": 1856512,
+        "n_images": 37
+      },
+      "pcb4": {
+        "pixel_auroc": 0.9783927164883782,
+        "pixel_ap": 0.3659411831284004,
+        "foreground_pixels": 12194,
+        "n_pixels": 2308096,
+        "n_images": 46
+      },
+      "pipe_fryum": {
+        "pixel_auroc": 0.9940748164217047,
+        "pixel_ap": 0.524452397922104,
+        "foreground_pixels": 13447,
+        "n_pixels": 1354752,
+        "n_images": 27
+      }
+    },
+    "loss": 0.47097237251306834,
+    "split": "test",
+    "checkpoint": "/root/autodl-tmp/AnomalyGPT/runs/dec_big_fixed_s42/best.pt",
+    "step": 1200,
+    "protocol": "supervised_custom_60_20_20"
+  },
+  "image_metrics": {
+    "real": {
+      "auroc": 0.9093504709576138,
+      "acc": 0.8289473684210527,
+      "f1_macro": 0.828944077871612,
+      "recall": 0.7230769230769231,
+      "fpr": 0.030612244897959183
+    },
+    "zero": {
+      "auroc": 0.5244113029827315,
+      "acc": 0.4298245614035088,
+      "f1_macro": 0.3006134969325153,
+      "recall": 0.0,
+      "fpr": 0.0
+    },
+    "random": {
+      "auroc": 0.5593799058084772,
+      "acc": 0.5021929824561403,
+      "f1_macro": 0.48758211349111663,
+      "recall": 0.2923076923076923,
+      "fpr": 0.2193877551020408
+    }
+  }
+}

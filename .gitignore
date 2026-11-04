@@ -77,3 +77,11 @@ __pycache__/
 ._*
 .vscode/
 .idea/
+
+# 当前迁移实验的可审阅源码快照
+!/migration_20261103/code/
+!/migration_20261103/code/**
+!/repair_20261103/code/
+!/repair_20261103/code/**
+# 对话原始记录可能包含服务器认证信息
+session*.jsonl

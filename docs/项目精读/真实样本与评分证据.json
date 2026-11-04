@@ -1,0 +1,137 @@
+{
+  "note": "从已有本地元数据抽取，未运行模型。该样本仅作验证案例，不加入训练。",
+  "source": {
+    "source_id": "visa_02118dfcc70533cacff3d1f94e7545584a0162a8d5af70a71a95e9a44c1ec23b",
+    "image_relative": "cashew/Data/Images/Anomaly/050.JPG",
+    "category": "cashew",
+    "is_anomalous": true,
+    "width": 1274,
+    "height": 1176,
+    "mask_values": [
+      0,
+      8
+    ],
+    "mask_area_pixels": 1013,
+    "mask_area_fraction": 0.0006761338758423306,
+    "boxes": [
+      [
+        705,
+        573,
+        749,
+        608
+      ]
+    ],
+    "split": "val",
+    "official_split": "test"
+  },
+  "candidate_scores": {
+    "base": {
+      "log_likelihood_true": -15.273258209228516,
+      "log_likelihood_false": -11.273258209228516,
+      "anomaly_log_odds": -4.0,
+      "anomaly_score": 0.017986209962091562,
+      "value_token_ids": {
+        "true": [
+          1866
+        ],
+        "false": [
+          3849
+        ]
+      },
+      "prompt_tokens": 514,
+      "candidate_input_tokens": {
+        "true": 524,
+        "false": 524
+      },
+      "validation_pairwise_auc_audit": {
+        "positive": 60,
+        "negative": 60,
+        "wins": 2947,
+        "ties": 38,
+        "pairs": 3600,
+        "auroc": 0.8238888888888889
+      }
+    },
+    "region_region": {
+      "log_likelihood_true": -0.974152684211731,
+      "log_likelihood_false": -0.47415268421173096,
+      "anomaly_log_odds": -0.5,
+      "anomaly_score": 0.3775406687981454,
+      "value_token_ids": {
+        "true": [
+          1866
+        ],
+        "false": [
+          3849
+        ]
+      },
+      "prompt_tokens": 514,
+      "candidate_input_tokens": {
+        "true": 524,
+        "false": 524
+      },
+      "validation_pairwise_auc_audit": {
+        "positive": 60,
+        "negative": 60,
+        "wins": 3287,
+        "ties": 13,
+        "pairs": 3600,
+        "auroc": 0.9148611111111111
+      }
+    },
+    "decision_decision": {
+      "log_likelihood_true": -0.04871654510498047,
+      "log_likelihood_false": -3.0487165451049805,
+      "anomaly_log_odds": 3.0,
+      "anomaly_score": 0.9525741268224333,
+      "value_token_ids": {
+        "true": [
+          1866
+        ],
+        "false": [
+          3849
+        ]
+      },
+      "prompt_tokens": 514,
+      "candidate_input_tokens": {
+        "true": 524,
+        "false": 524
+      },
+      "validation_pairwise_auc_audit": {
+        "positive": 60,
+        "negative": 60,
+        "wins": 3397,
+        "ties": 14,
+        "pairs": 3600,
+        "auroc": 0.9455555555555556
+      }
+    },
+    "region_decision": {
+      "log_likelihood_true": -0.17987073957920074,
+      "log_likelihood_false": -1.8048707246780396,
+      "anomaly_log_odds": 1.6249999850988388,
+      "anomaly_score": 0.8354835350552604,
+      "value_token_ids": {
+        "true": [
+          1866
+        ],
+        "false": [
+          3849
+        ]
+      },
+      "prompt_tokens": 514,
+      "candidate_input_tokens": {
+        "true": 524,
+        "false": 524
+      },
+      "validation_pairwise_auc_audit": {
+        "positive": 60,
+        "negative": 60,
+        "wins": 3308,
+        "ties": 9,
+        "pairs": 3600,
+        "auroc": 0.9201388888888888
+      }
+    }
+  }
+}

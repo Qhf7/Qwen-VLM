@@ -1,0 +1,10 @@
+{
+  "steps": 1200,
+  "best_validation_pixel_ap": 0.3902435145472958,
+  "test_set_used": false,
+  "selected_best_step": 1000,
+  "reload_max_abs_metric_error": 0.0,
+  "matched_run_key": "c34220a5c52c0bafa165bfd4e6ed3e240d326d38c329c9faad6087033fbcf1ca",
+  "elapsed_seconds": 227.16395020484924,
+  "peak_gpu_allocated_bytes": 1572403712
+}

@@ -1,0 +1,29 @@
+{
+  "stage": "roi_full",
+  "started_at": "2026-11-03 23:34:22 +0800",
+  "state": "complete",
+  "jobs": [
+    {
+      "name": "roi_full",
+      "command": [
+        "/root/autodl-tmp/conda-envs/qwen3vl2/bin/python",
+        "-u",
+        "migration_roi_eval.py",
+        "--run",
+        "--limit",
+        "0",
+        "--with-reference",
+        "--parity-report",
+        "/root/autodl-tmp/AnomalyGPT/runs/migration_20261103/native_parity/report.json",
+        "--out",
+        "/root/autodl-tmp/AnomalyGPT/runs/migration_20261103/roi_full"
+      ],
+      "state": "complete",
+      "started_at": "2026-11-03 23:34:22 +0800",
+      "returncode": 0,
+      "seconds": 1371.0797846317291
+    }
+  ],
+  "current_job": "roi_full",
+  "completed_at": "2026-11-03 23:57:13 +0800"
+}

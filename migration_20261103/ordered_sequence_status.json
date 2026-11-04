@@ -1,0 +1,377 @@
+{
+  "state": "complete",
+  "started_at": "2026-11-03 22:50:56 +0800",
+  "script_sha256": "ad3b3177551da1aa2c7bc4522b62a694d3c2d235793a25c327c297e24ffcb70d",
+  "smoke_tag": "_v3",
+  "smoke_result_audit": {
+    "kind": "native_smoke",
+    "directory": "/root/autodl-tmp/AnomalyGPT/runs/migration_20261103/native_smoke_s42_v3",
+    "n": 24,
+    "generated_n": 8,
+    "selected_step": 4,
+    "baseline": false,
+    "result_sha256": "2c9d527e8758a08d962116c68914a3db18c3907108686ad2763abeca2f65bd7a",
+    "complete_sha256": "9a10d17071f8d74d291dc36c3baf38f235abf402cd4a01791de556ce128d2cf2"
+  },
+  "teacher_subset_audit": {
+    "manifest": "/root/autodl-tmp/AnomalyGPT/runs/migration_20261103/teacher_train_subset/manifest.json",
+    "sha256": "d3aaf18bdd8997e990e0934150d63f68a5ab9934e69f8840ca4718cc9a338612",
+    "n_images": 2799
+  },
+  "wait_existing": {
+    "identity": {
+      "pid": 31430,
+      "starttime_ticks": "5695274773"
+    },
+    "stage": "native_main",
+    "status_started_at": "2026-11-03 22:30:02 +0800"
+  },
+  "stages": [
+    {
+      "stage": "native_main",
+      "state": "complete",
+      "reused_existing_complete": true,
+      "waited_for_existing_pid": 31430,
+      "result_audits": [
+        {
+          "kind": "native",
+          "directory": "/root/autodl-tmp/AnomalyGPT/runs/migration_20261103/native_baseline",
+          "n": 380,
+          "generated_n": 380,
+          "selected_step": 0,
+          "baseline": true,
+          "result_sha256": "7128c6d73b48c6a27aa805148123fc32cbaf76c5411057eb86bea820b0ee3b99",
+          "complete_sha256": "629f34ed959770a5d4f4377249542256730675010cc12fd164405c3d07bec01e"
+        },
+        {
+          "kind": "native",
+          "directory": "/root/autodl-tmp/AnomalyGPT/runs/migration_20261103/native_map_s42",
+          "n": 380,
+          "generated_n": 380,
+          "selected_step": 500,
+          "baseline": false,
+          "result_sha256": "10976b4bf694c02561de2ef7922d94eab05af795ac5579d262568ef81378cc9a",
+          "complete_sha256": "56c3de56ff0055309e299a90cbfed2ffb034401976929d883a5064951f573488"
+        }
+      ]
+    },
+    {
+      "stage": "visual_probe",
+      "state": "complete",
+      "elapsed_seconds": 363.533682346344,
+      "result_audits": [
+        {
+          "kind": "normal_memory",
+          "path": "/root/autodl-tmp/AnomalyGPT/runs/migration_20261103/visual_probe/val.json",
+          "cells": 12,
+          "result_sha256": "fece1c62f5ff4535e60c1f24018d00b94c3442c74669757154924e129faa5694"
+        }
+      ]
+    },
+    {
+      "stage": "dense_gt",
+      "state": "complete",
+      "elapsed_seconds": 1388.3434076309204,
+      "result_audits": [
+        {
+          "kind": "dense",
+          "directory": "/root/autodl-tmp/AnomalyGPT/runs/migration_20261103/dense_imagebind_gt_s42",
+          "feature": "imagebind",
+          "size": 224,
+          "distill_weight": 0,
+          "matched_run_key": "c34220a5c52c0bafa165bfd4e6ed3e240d326d38c329c9faad6087033fbcf1ca",
+          "plan_sha256": "c057c9cf45a2fc1048ca042742da08d145a705ac83dc66b47507a96fd717821b",
+          "compatibility": {
+            "features": "imagebind",
+            "size": 224,
+            "head_config": {
+              "in_channels": 1280,
+              "width": 256,
+              "normalization": "per_patch_layernorm_no_affine",
+              "spatial_sizes": [
+                56,
+                112,
+                224
+              ]
+            },
+            "source_sha256": "c92a57fd5910063a61aad088708e135445be44c808e6dede6f7882fcf4383d74",
+            "source_files_sha256": {
+              "__init__.py": "8426c3ef2aa09b2452e66be3734570d3433ee2bdd729cb4e73180cdefea5dba4",
+              "models/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "models/helpers.py": "ea157fc6f95a806305c680fe56bb8aaf0b6fc5dfb83e80ccd80af2e802d78bb0",
+              "models/imagebind_model.py": "65f1ca944b157f53b898075f450a01173e0761dd98524d251c9fcb219368cc5b",
+              "models/multimodal_preprocessors.py": "fab69ddfe599b8ca471086b24db2c9c171622fa61478a10d73ef1641e4764930",
+              "models/transformer.py": "1f005158baca13d10dbe15fdc710050961f5c3983a7b6ad5160da4426d8eec25"
+            },
+            "checkpoint_sha256": "d6f6c22bedcc90708448d5d2fbb7b2db9c73f505dc89bd0b2e09b23af1b62157",
+            "vision_config": {
+              "input_hw": [
+                224,
+                224
+              ],
+              "patch_size": 14,
+              "grid_hw": [
+                16,
+                16
+              ],
+              "hidden_size": 1280,
+              "depth": 32,
+              "out_layers": [
+                31
+              ]
+            },
+            "feature_stage": "visual block31 output before post_transformer_layer",
+            "encoder_dtype": "torch.float16",
+            "cache_dtype": "torch.float16",
+            "preprocessing": "RGB direct bicubic square224; ImageBind mean/std",
+            "preprocessing_source_sha256": "f86d40a9aa18aca36ae7e9d62c4c5f88c3758e094f44b229454a59c3a4947eb9",
+            "visa_pipeline_version": "visa-square-binary-sklearn-v1"
+          },
+          "result_sha256": "a9f9d7134aee173ea95ba06ff968efcf5c2db464fbc45926e9c7aafc3bbb5de6"
+        },
+        {
+          "kind": "dense",
+          "directory": "/root/autodl-tmp/AnomalyGPT/runs/migration_20261103/dense_pre_224_gt_s42",
+          "feature": "pre",
+          "size": 224,
+          "distill_weight": 0,
+          "matched_run_key": "f19ae923db40ccc41e781598fc6971c62f84e760769d8a577f01806ec35db9a2",
+          "plan_sha256": "c057c9cf45a2fc1048ca042742da08d145a705ac83dc66b47507a96fd717821b",
+          "compatibility": {
+            "features": "pre",
+            "size": 224,
+            "head_config": {
+              "in_channels": 1152,
+              "width": 256,
+              "normalization": "per_patch_layernorm_no_affine",
+              "spatial_sizes": [
+                56,
+                112,
+                224
+              ]
+            },
+            "source_sha256": "dd63ed3b124232735b3dca1bfa28f9d6b0d3f7182afcb75dde8f3e724b2b22da",
+            "processor_sha256": "09bfa9b17df7c3f0c6159bc34008ee50f21d2472cd5bae7e5c21ba1ca13a423c",
+            "configuration_sha256": {
+              "config.json": "5cd452860dc1e9c29dd71cc3cef7f39b338b7a40793f7a260655c2d3568f3661",
+              "preprocessor_config.json": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516"
+            },
+            "geometry_policy": "RGB direct bicubic square resize; processor do_resize=False; actual patch grid must equal requested size",
+            "extractor_source_sha256": "af80a1b9d9fd585cacb25b1e7a63c483f73a15bb1811ac3ed3492fb19c33aea6",
+            "visa_pipeline_version": "visa-square-binary-sklearn-v1"
+          },
+          "result_sha256": "11590bf0f3dddc1cfe62b196240d28eb7287e1bed0272acd65c8dd9a2bbebc9c"
+        },
+        {
+          "kind": "dense",
+          "directory": "/root/autodl-tmp/AnomalyGPT/runs/migration_20261103/dense_post_224_gt_s42",
+          "feature": "post",
+          "size": 224,
+          "distill_weight": 0,
+          "matched_run_key": "10a330378f60df33e8057c50b2d80a9d060a66d541646ee3bb7b2143341fd21f",
+          "plan_sha256": "c057c9cf45a2fc1048ca042742da08d145a705ac83dc66b47507a96fd717821b",
+          "compatibility": {
+            "features": "post",
+            "size": 224,
+            "head_config": {
+              "in_channels": 4096,
+              "width": 256,
+              "normalization": "per_patch_layernorm_no_affine",
+              "spatial_sizes": [
+                56,
+                112,
+                224
+              ]
+            },
+            "source_sha256": "dd63ed3b124232735b3dca1bfa28f9d6b0d3f7182afcb75dde8f3e724b2b22da",
+            "processor_sha256": "09bfa9b17df7c3f0c6159bc34008ee50f21d2472cd5bae7e5c21ba1ca13a423c",
+            "configuration_sha256": {
+              "config.json": "5cd452860dc1e9c29dd71cc3cef7f39b338b7a40793f7a260655c2d3568f3661",
+              "preprocessor_config.json": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516"
+            },
+            "geometry_policy": "RGB direct bicubic square resize; processor do_resize=False; actual patch grid must equal requested size",
+            "extractor_source_sha256": "af80a1b9d9fd585cacb25b1e7a63c483f73a15bb1811ac3ed3492fb19c33aea6",
+            "visa_pipeline_version": "visa-square-binary-sklearn-v1"
+          },
+          "result_sha256": "3ac694edc720e3f260e21e9f3247dba53799f786fdd6c918f909e0a32929b0bc"
+        },
+        {
+          "kind": "dense",
+          "directory": "/root/autodl-tmp/AnomalyGPT/runs/migration_20261103/dense_pre_gt_s42",
+          "feature": "pre",
+          "size": 448,
+          "distill_weight": 0,
+          "matched_run_key": "e79f550e88f58e8a51829608f716fb0049e057cea8beadbb73f6b5ccb827dacf",
+          "plan_sha256": "c057c9cf45a2fc1048ca042742da08d145a705ac83dc66b47507a96fd717821b",
+          "compatibility": {
+            "features": "pre",
+            "size": 448,
+            "head_config": {
+              "in_channels": 1152,
+              "width": 256,
+              "normalization": "per_patch_layernorm_no_affine",
+              "spatial_sizes": [
+                56,
+                112,
+                224
+              ]
+            },
+            "source_sha256": "dd63ed3b124232735b3dca1bfa28f9d6b0d3f7182afcb75dde8f3e724b2b22da",
+            "processor_sha256": "09bfa9b17df7c3f0c6159bc34008ee50f21d2472cd5bae7e5c21ba1ca13a423c",
+            "configuration_sha256": {
+              "config.json": "5cd452860dc1e9c29dd71cc3cef7f39b338b7a40793f7a260655c2d3568f3661",
+              "preprocessor_config.json": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516"
+            },
+            "geometry_policy": "RGB direct bicubic square resize; processor do_resize=False; actual patch grid must equal requested size",
+            "extractor_source_sha256": "af80a1b9d9fd585cacb25b1e7a63c483f73a15bb1811ac3ed3492fb19c33aea6",
+            "visa_pipeline_version": "visa-square-binary-sklearn-v1"
+          },
+          "result_sha256": "7e816c777d4ca19b36efaf4be7fd16d7a4e99c92a513d4b0ececb84334c710e9"
+        },
+        {
+          "kind": "dense",
+          "directory": "/root/autodl-tmp/AnomalyGPT/runs/migration_20261103/dense_post_gt_s42",
+          "feature": "post",
+          "size": 448,
+          "distill_weight": 0,
+          "matched_run_key": "6074c2f308100ca8b327c7bdf6e3ea6763a29e8f95a07e317ace8fb647f346ff",
+          "plan_sha256": "c057c9cf45a2fc1048ca042742da08d145a705ac83dc66b47507a96fd717821b",
+          "compatibility": {
+            "features": "post",
+            "size": 448,
+            "head_config": {
+              "in_channels": 4096,
+              "width": 256,
+              "normalization": "per_patch_layernorm_no_affine",
+              "spatial_sizes": [
+                56,
+                112,
+                224
+              ]
+            },
+            "source_sha256": "dd63ed3b124232735b3dca1bfa28f9d6b0d3f7182afcb75dde8f3e724b2b22da",
+            "processor_sha256": "09bfa9b17df7c3f0c6159bc34008ee50f21d2472cd5bae7e5c21ba1ca13a423c",
+            "configuration_sha256": {
+              "config.json": "5cd452860dc1e9c29dd71cc3cef7f39b338b7a40793f7a260655c2d3568f3661",
+              "preprocessor_config.json": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516"
+            },
+            "geometry_policy": "RGB direct bicubic square resize; processor do_resize=False; actual patch grid must equal requested size",
+            "extractor_source_sha256": "af80a1b9d9fd585cacb25b1e7a63c483f73a15bb1811ac3ed3492fb19c33aea6",
+            "visa_pipeline_version": "visa-square-binary-sklearn-v1"
+          },
+          "result_sha256": "e91f9904b14761269bd42669b873a996173649d5f32cb2ae79d7f57837a6991b"
+        }
+      ]
+    },
+    {
+      "stage": "roi_pilot",
+      "state": "complete",
+      "elapsed_seconds": 203.56992650032043,
+      "result_audits": [
+        {
+          "kind": "ROI_three_image_preflight",
+          "path": "/root/autodl-tmp/AnomalyGPT/runs/migration_20261103/roi_preflight/run.json",
+          "passed": true,
+          "result_sha256": "d322a2b590aaeb3a7a96973033138382893eb27ad4ef3fd36c93962afa1cc2f3"
+        },
+        {
+          "kind": "ROI",
+          "directory": "/root/autodl-tmp/AnomalyGPT/runs/migration_20261103/roi_pilot",
+          "n": 48,
+          "conditions": 5,
+          "result_sha256": "d32b3ccd849de3f8625491ad1e469506585e118abb9a6a0a77ca87c26c16155a"
+        }
+      ]
+    },
+    {
+      "stage": "roi_full",
+      "state": "complete",
+      "elapsed_seconds": 1371.1319904327393,
+      "result_audits": [
+        {
+          "kind": "ROI",
+          "directory": "/root/autodl-tmp/AnomalyGPT/runs/migration_20261103/roi_full",
+          "n": 380,
+          "conditions": 5,
+          "result_sha256": "10e02b111c120ddc5b1cff5a0826b957ff37b4980dfb06d5e80b66be24250495"
+        }
+      ]
+    },
+    {
+      "stage": "dense_kd",
+      "state": "complete",
+      "elapsed_seconds": 621.2741546630859,
+      "result_audits": [
+        {
+          "kind": "dense",
+          "directory": "/root/autodl-tmp/AnomalyGPT/runs/migration_20261103/dense_pre_kd_s42",
+          "feature": "pre",
+          "size": 448,
+          "distill_weight": 0.5,
+          "matched_run_key": "e79f550e88f58e8a51829608f716fb0049e057cea8beadbb73f6b5ccb827dacf",
+          "plan_sha256": "c057c9cf45a2fc1048ca042742da08d145a705ac83dc66b47507a96fd717821b",
+          "compatibility": {
+            "features": "pre",
+            "size": 448,
+            "head_config": {
+              "in_channels": 1152,
+              "width": 256,
+              "normalization": "per_patch_layernorm_no_affine",
+              "spatial_sizes": [
+                56,
+                112,
+                224
+              ]
+            },
+            "source_sha256": "dd63ed3b124232735b3dca1bfa28f9d6b0d3f7182afcb75dde8f3e724b2b22da",
+            "processor_sha256": "09bfa9b17df7c3f0c6159bc34008ee50f21d2472cd5bae7e5c21ba1ca13a423c",
+            "configuration_sha256": {
+              "config.json": "5cd452860dc1e9c29dd71cc3cef7f39b338b7a40793f7a260655c2d3568f3661",
+              "preprocessor_config.json": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516"
+            },
+            "geometry_policy": "RGB direct bicubic square resize; processor do_resize=False; actual patch grid must equal requested size",
+            "extractor_source_sha256": "af80a1b9d9fd585cacb25b1e7a63c483f73a15bb1811ac3ed3492fb19c33aea6",
+            "visa_pipeline_version": "visa-square-binary-sklearn-v1"
+          },
+          "result_sha256": "b540a778df5ea687debb64b0d0dcb33251cc98a465c4d5502b069017ad8af248"
+        },
+        {
+          "kind": "dense",
+          "directory": "/root/autodl-tmp/AnomalyGPT/runs/migration_20261103/dense_post_kd_s42",
+          "feature": "post",
+          "size": 448,
+          "distill_weight": 0.5,
+          "matched_run_key": "6074c2f308100ca8b327c7bdf6e3ea6763a29e8f95a07e317ace8fb647f346ff",
+          "plan_sha256": "c057c9cf45a2fc1048ca042742da08d145a705ac83dc66b47507a96fd717821b",
+          "compatibility": {
+            "features": "post",
+            "size": 448,
+            "head_config": {
+              "in_channels": 4096,
+              "width": 256,
+              "normalization": "per_patch_layernorm_no_affine",
+              "spatial_sizes": [
+                56,
+                112,
+                224
+              ]
+            },
+            "source_sha256": "dd63ed3b124232735b3dca1bfa28f9d6b0d3f7182afcb75dde8f3e724b2b22da",
+            "processor_sha256": "09bfa9b17df7c3f0c6159bc34008ee50f21d2472cd5bae7e5c21ba1ca13a423c",
+            "configuration_sha256": {
+              "config.json": "5cd452860dc1e9c29dd71cc3cef7f39b338b7a40793f7a260655c2d3568f3661",
+              "preprocessor_config.json": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516"
+            },
+            "geometry_policy": "RGB direct bicubic square resize; processor do_resize=False; actual patch grid must equal requested size",
+            "extractor_source_sha256": "af80a1b9d9fd585cacb25b1e7a63c483f73a15bb1811ac3ed3492fb19c33aea6",
+            "visa_pipeline_version": "visa-square-binary-sklearn-v1"
+          },
+          "result_sha256": "5a76f590f772d97ee1997aa32b8efe6ca2eecbb0c5cb823082f468b033f637f0"
+        }
+      ]
+    }
+  ],
+  "protocol": "validation only; supervised custom60/20/20; no new test inference",
+  "current_stage": "dense_kd",
+  "completed_at": "2026-11-04 00:07:35 +0800"
+}
