@@ -83,5 +83,7 @@ __pycache__/
 !/migration_20261103/code/**
 !/repair_20261103/code/
 !/repair_20261103/code/**
+__pycache__/
+*.py[cod]
 # 对话原始记录可能包含服务器认证信息
 session*.jsonl
