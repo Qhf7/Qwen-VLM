@@ -13,3 +13,7 @@
 历史 B/C 源码与结果未改写；新训练器为 migration_advanced_train.py。运行中目录/日志在服务器，轻量结果同步本目录。外部1575图manifest已固定；在全部checkpoint和prompt冻结前不打开其模型结果。
 
 当前这里只报告实际完成的审计与运行，不将已实现或排队的阶段视为训练完成。汇总以 RESULTS.md / summary.json 的状态和独立回载报告为准。
+
+D/Cpair/R正式9组已全部完成，18份best/final预测逐份重算通过；每组两个checkpoint独立进程回载与关闭adapter参考检查全部通过。详见RESULTS.md及verification_status.json。S已通过40步预检并进入三seed正式运行，工具与外部评估仍等待上游门禁。
+
+S42/S43已完成500步和best/final各104图独立精确重载，S44执行中。S42分类改善但框IoU与严格有效率下降；不能将分类提升表述为定位增强。后续三seed、工具及外评仍以实际完成门禁为准。

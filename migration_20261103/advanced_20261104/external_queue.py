@@ -81,7 +81,9 @@ def freeze_sources(repo, root, manifest, protocol, decoder):
                 checkpoint=str(checkpoint), checkpoint_step=step, checkpoint_sha256=sha256(checkpoint),
                 run_sha256=sha256(run / 'run.json'), complete_sha256=sha256(run / 'complete.json'),
                 original_bridge_path=cid['bridge_path'], original_bridge_sha256=cid['bridge_sha256'],
-                base_manifest_sha256=cid['base_manifest_sha256'])
+                base_manifest_sha256=cid['base_manifest_sha256'],
+                generation_max_new_tokens=80 if model in ('Cstructured', 'S') else 32,
+                generation_batch_size=spec['config']['eval_batch_size'])
             require(sha256(cid['bridge_path']) == cid['bridge_sha256'], 'Original source bridge changed')
     filenames = ('evaluate_external_checkpoint.py', 'structured_external.py', 'migration_language.py',
                  'structured_model.py', 'structured_geometry.py', 'migration_metrics.py',
@@ -92,7 +94,10 @@ def freeze_sources(repo, root, manifest, protocol, decoder):
         run = root / ('arm_S_s%d' % seed)
         for name in ('initial_generation_policy.json', 'best_generation_policy.json'):
             path = run / name
-            policies[str(path)] = sha256(path) if path.exists() else None
+            require(path.is_file(), 'Structured generation policy missing: ' + str(path))
+            policy = read(path)
+            validate_generation_policy(policy, 80, read(run/'run.json')['config']['eval_batch_size'], sources['advanced_generation.py'])
+            policies[str(path)] = sha256(path)
     return dict(state='all_selection_frozen_before_external_model_queries', models=models,
                 manifest_sha256=sha256(manifest), protocol_sha256=sha256(protocol),
                 decoder_sha256=sha256(decoder), source_sha256=sources, structured_generation_policy_sha256=policies,
@@ -100,6 +105,26 @@ def freeze_sources(repo, root, manifest, protocol, decoder):
                              structured='industrial_component; bbox1000 grid3 max80'),
                 prompt_source_sha256={name: sources[name] for name in ('migration_language.py', 'structured_model.py')})
 
+
+
+def validate_generation_policy(policy, maximum, batch_size, source_sha):
+    require(policy.get('version') == 'exact-gated-leftpad-greedy-v1'
+            and policy.get('selected') in ('scalar', 'batched')
+            and policy.get('max_new_tokens') == maximum and policy.get('batch_size') == batch_size
+            and policy.get('source_sha256') == source_sha
+            and policy.get('gate_split') == 'VisA_existing_val_only'
+            and policy.get('scalar_parent_exact') is True,
+            'Generation policy version/source/budget/parity gate differs')
+    require(len(policy.get('gate_indices', [])) == len(policy.get('gate_paths', [])) == 8
+            and len(set(policy['gate_indices'])) == len(set(policy['gate_paths'])) == 8
+            and len(policy.get('gate_labels', [])) == len(policy.get('gate_categories', [])) == 8
+            and set(policy['gate_labels']) == {0, 1} and len(set(policy['gate_categories'])) == 4,
+            'Generation policy must use the fixed eight VisA validation gate samples')
+    if policy['selected'] == 'batched':
+        require(policy.get('exact_token_ids_and_stop_ids') is True and policy.get('failure') is None
+                and policy.get('scalar_token_ids') == policy.get('batched_token_ids')
+                and policy.get('scalar_stop_ids') == policy.get('batched_stop_ids'),
+                'Batched generation lacks exact token/EOS agreement')
 
 def validate_cache(cache, frozen):
     sidecar = read(cache.with_suffix('.json'))
@@ -139,6 +164,16 @@ def validate_result(output, model, seed, frozen, cache_sha, records):
     require(summary['metrics']['overall']['scores']['n'] == summary['metrics']['overall']['generated']['n'] == 1575,
             'External metric denominator incomplete')
     if structured:
+        policy_path = Path(expected['run']) / ('initial_generation_policy.json' if model == 'Cstructured' else 'best_generation_policy.json')
+        policy_sha = sha256(policy_path)
+        require(policy_sha == frozen['structured_generation_policy_sha256'][str(policy_path)]
+                and summary.get('generation_policy_sha256') == policy_sha,
+                'Structured policy differs from immutable pre-external freeze')
+        policy = read(policy_path)
+        validate_generation_policy(policy, expected['generation_max_new_tokens'], expected['generation_batch_size'],
+                                   frozen['source_sha256']['advanced_generation.py'])
+        require(summary.get('generation_policy') == policy['selected']
+                and summary.get('batch_size') == policy['batch_size'], 'Structured summary policy differs')
         condition = 'initial_C_structured_prompt' if model == 'Cstructured' else 'S_best'
         require(summary.get('condition') == condition and summary.get('schema') == 'visa-yesno-bbox1000-grid3-v1'
                 and summary.get('max_new_tokens') == 80 and summary.get('predictions_sha256') == digest
@@ -151,6 +186,16 @@ def validate_result(output, model, seed, frozen, cache_sha, records):
                 and inference.get('mask_reads') == 0 and inference.get('predictions_sha256') == digest,
                 'Structured predictions were not frozen before posterior masks')
     else:
+        policy_path = output / 'generation_policy.json'
+        policy = read(policy_path)
+        validate_generation_policy(policy, expected['generation_max_new_tokens'], expected['generation_batch_size'],
+                                   frozen['source_sha256']['advanced_generation.py'])
+        require(summary.get('generation_policy_sha256') == sha256(policy_path)
+                and summary.get('generation_policy') == policy['selected']
+                and summary.get('generation_policy_source_sha256') == policy['source_sha256']
+                and summary.get('generation_policy_gate_split') == policy['gate_split']
+                and summary.get('max_new_tokens') == policy['max_new_tokens']
+                and summary.get('batch_size') == policy['batch_size'], 'Basic summary policy evidence differs')
         require(summary.get('arm') == ('C' if model == 'Cpair' else model) and summary.get('mask_opened') is False,
                 'Basic external arm/mask contract failed')
 

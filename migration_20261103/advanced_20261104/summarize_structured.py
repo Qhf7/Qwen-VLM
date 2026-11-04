@@ -14,6 +14,7 @@ from structured_geometry import SCHEMA,sha256_file,localization_metrics,parse_st
 from migration_metrics import evaluate_predictions
 
 
+EXPECTED_SEEDS=(42,43,44)
 COST_KEYS=('train_seconds','exposures_per_second','peak_memory_bytes','elapsed_seconds')
 
 
@@ -196,6 +197,7 @@ def summarize_run(run):
 
 def write_markdown(result,path):
     lines=['# Structured localization continuation: VisA development validation','',
+           'Report state: '+result['state']+'. Expected seeds:42/43/44; included seeds:'+','.join(map(str,result['seeds']))+'.','',
            'All classification and localization results are recomputed from raw predictions. Each run uses the same380 validation images (172normal/208anomaly); seeds are training repeats, not independent test sets. Best checkpoints are selected and reported on that development validation set.','',
            '| Condition | AUROC mean±sample SD | AP | generated macro F1 | recall | FPR | format valid | anomaly mean box IoU | IoU≥.5 |',
            '|---|---:|---:|---:|---:|---:|---:|---:|---:|']
@@ -238,22 +240,28 @@ def main():
     ap=argparse.ArgumentParser();ap.add_argument('--root',type=Path,required=True)
     ap.add_argument('--seeds',type=int,nargs='+',default=[42,43,44]);ap.add_argument('--out',type=Path)
     args=ap.parse_args();assert len(set(args.seeds))==len(args.seeds)
+    if not set(args.seeds).issubset(EXPECTED_SEEDS):
+        ap.error('Structured protocol expects seeds42/43/44; subsets are partial reports')
     runs=[summarize_run(args.root/('arm_S_s%d'%seed)) for seed in args.seeds]
     assert [r['seed'] for r in runs]==args.seeds
     for key in ('schema','cache_sha256','targets_sha256','base_manifest_sha256'):
         assert len({r['identity'][key] for r in runs})==1,('Cross-seed protocol mismatch',key)
-    result=dict(schema=SCHEMA,state='complete',seeds=args.seeds,runs=runs,
+    fresh_reload_all_passed=all(r['fresh_reload'][mode]['state']=='complete' for r in runs for mode in ('best','final'))
+    all_seeds_present=set(args.seeds)==set(EXPECTED_SEEDS)
+    report_state=('partial' if not all_seeds_present else
+                  'complete' if fresh_reload_all_passed else 'training_complete_awaiting_fresh_reload')
+    result=dict(schema=SCHEMA,state=report_state,expected_seeds=list(EXPECTED_SEEDS),seeds=args.seeds,runs=runs,
                 aggregate={mode:aggregate([r['modes'][mode]['flat'] for r in runs]) for mode in ('initial','best','final')},
                 aggregate_paired_differences={label:aggregate([r['paired_differences'][label] for r in runs]) for label in ('best_minus_initial','final_minus_initial')},
                 aggregate_cost=aggregate([{k:v for k,v in r['cost'].items() if isinstance(v,(int,float))} for r in runs]),
                 aggregate_teacher_baseline={condition:aggregate([{k:v for k,v in r['teacher_baseline'][condition].items() if isinstance(v,(int,float))} for r in runs]) for condition in ('unconditional_box','initial_score_gated')},
-                fresh_reload_all_passed=all(r['fresh_reload'][mode]['state']=='complete' for r in runs for mode in ('best','final')),
+                fresh_reload_all_passed=fresh_reload_all_passed,
                 scope='VisA val380 only; no external results opened; original C frozen per seed',
                 interpretation='Additional mask supervision, prompt/answer tokens and continuation compute differ from original C; no equal-token or LoRA-only causal attribution.',
                 summarizer_sha256=sha256_file(__file__))
     out=args.out or args.root/'structured_summary';out.mkdir(parents=True,exist_ok=True)
     atomic_json(result,out/'summary.json');write_markdown(result,out/'RESULTS.md')
-    print(json.dumps(dict(state='complete',seeds=args.seeds,summary=str(out/'summary.json'),report=str(out/'RESULTS.md'))))
+    print(json.dumps(dict(state=result['state'],expected_seeds=list(EXPECTED_SEEDS),seeds=args.seeds,summary=str(out/'summary.json'),report=str(out/'RESULTS.md'))))
 
 
 if __name__=='__main__':main()

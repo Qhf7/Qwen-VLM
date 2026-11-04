@@ -1,0 +1,22 @@
+{
+  "schema": "native-crop-tool-recomputed-summary-v1",
+  "state": "partial",
+  "stages": {
+    "tool_preflight": {
+      "state": "pending",
+      "expected_n": 8,
+      "path": "migration_20261103/advanced_20261104/tool_preflight"
+    },
+    "tool_val": {
+      "state": "pending",
+      "expected_n": 380,
+      "path": "migration_20261103/advanced_20261104/tool_val"
+    }
+  },
+  "preflight": null,
+  "validation": null,
+  "external_queries": 0,
+  "model_loaded": false,
+  "gt_masks_opened_by_summarizer": false,
+  "summarizer_sha256": "20f52cfa83cd3632435e02f47030363f4d19678283b889117c76f30cc5703e39"
+}

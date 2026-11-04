@@ -74,18 +74,27 @@ def validate_prior(root):
     checks = verification.get('checks', [])
     require(len(checks) == 9 and {check.get('run') for check in checks} == set(FORMAL_PRIOR),
             'Prior verification must contain the nine expected formal runs')
-    require(all(check.get('state') == 'passed' and check.get('n', 0) > 0 for check in checks),
+    require(all(check.get('state') == 'passed' and check.get('n', 0) > 0
+                and check.get('both_modes_verified') is True for check in checks),
             'A prior fresh-process check did not pass')
     for name in FORMAL_PRIOR:
-        result = read(root / name / 'fresh_final_reload.json')
-        require(result.get('state') == 'complete' and result.get('checkpoint') == 'final'
-                and result.get('seed') == int(name.rsplit('s', 1)[1])
-                and result.get('arm') == ('D' if name.startswith('arm_D_') else 'R' if name.startswith('R_') else 'C')
-                and result.get('step') == 500 and result.get('n', 0) > 0
-                and result.get('fresh_reload_max_abs_score_error') == 0
-                and result.get('adapter_disabled_max_abs_score_error') == 0
-                and result.get('generated_exact_match') is True and result.get('adapter_B_nonzero') is True,
-                'Prior fresh reload marker failed: ' + name)
+        complete = read(root / name / 'complete.json')
+        for mode in ('final', 'best'):
+            result = read(root / name / ('fresh_' + mode + '_reload.json'))
+            expected_step = 500 if mode == 'final' else complete['best_step']
+            require(result.get('state') == 'complete' and result.get('checkpoint') == mode
+                    and result.get('seed') == int(name.rsplit('s', 1)[1])
+                    and result.get('arm') == ('D' if name.startswith('arm_D_') else 'R' if name.startswith('R_') else 'C')
+                    and result.get('step') == expected_step and result.get('n', 0) > 0
+                    and result.get('both_modes_verified') is True
+                    and result.get('original_batch_composition_preserved') is True
+                    and result.get('fresh_reload_max_abs_score_error') == 0
+                    and result.get('adapter_disabled_max_abs_score_error') == 0
+                    and result.get('generated_exact_match') is True
+                    and (result.get('adapter_B_nonzero') is True or (mode == 'best' and expected_step == 0))
+                    and result.get('checkpoint_sha256') == sha256(root / name / (mode + '.pt')),
+                    'Prior fresh reload marker failed: ' + name + ' ' + mode)
+
 
 
 def validate_targets(targets, cache):

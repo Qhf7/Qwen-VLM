@@ -56,7 +56,11 @@ def main():
         assert sha256_file(cfg['cache']) == identity['cache_sha256']
         attach_generation(model)
         policy = freeze_generation_policy(model, visa_cache, 32, cfg['eval_batch_size'], context=('A' if args.baseline_a else run.name)+'_external_frozen')
-        atomic_json(policy, results_dir/'generation_policy.json')
+        policy_path = results_dir/'generation_policy.json'
+        atomic_json(policy, policy_path)
+        policy_sha = sha256_file(policy_path)
+        assert policy['max_new_tokens'] == 32 and policy['batch_size'] == cfg['eval_batch_size']
+        assert policy['gate_split'] == 'VisA_existing_val_only' and policy['scalar_parent_exact']
         del visa_cache
         torch.cuda.empty_cache()
         cache = torch.load(cache_path, map_location='cpu')
@@ -105,6 +109,10 @@ def main():
                        peak_memory_bytes=torch.cuda.max_memory_allocated(),
                        checkpoint_sha256=sha256_file(identity['bridge_path'] if args.baseline_a else run/'best.pt'),
                        evaluator_sha256=sha256_file(__file__),
+                       generation_policy=policy['selected'], generation_policy_sha256=policy_sha,
+                       generation_policy_source_sha256=policy['source_sha256'],
+                       generation_policy_gate_split=policy['gate_split'],
+                       max_new_tokens=32, batch_size=cfg['eval_batch_size'],
                        elapsed_seconds=time.time()-started, mask_opened=False, historical_visa_test_queries=0,
                        external_queries=len(items),
                        limitation='Public cross-dataset benchmark transfer audit; foundation pretraining exposure unknown.')

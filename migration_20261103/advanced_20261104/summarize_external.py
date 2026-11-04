@@ -124,6 +124,62 @@ def category_values(metrics):
     return result
 
 
+
+def validate_saved_policy(advanced, run, output, model, seed, cfg, summary):
+    """Verify the saved implementation decision without re-running generation."""
+    frozen_path = advanced / 'external_selection_freeze.json'
+    frozen = read(frozen_path)
+    expected = frozen['models'][model + '_s%d' % seed]
+    require(frozen.get('manifest_sha256') == summary['manifest_sha256']
+            and expected['checkpoint_sha256'] == summary['checkpoint_sha256']
+            and expected['checkpoint_step'] == summary['checkpoint_step'],
+            'Summary checkpoint/manifest differs from pre-external freeze')
+    structured = model in STRUCTURED
+    maximum = 80 if structured else 32
+    policy_name = ('initial_generation_policy.json' if model == 'Cstructured' else 'best_generation_policy.json')
+    path = run / policy_name if structured else output / 'generation_policy.json'
+    policy = read(path)
+    source_sha = frozen['source_sha256']['advanced_generation.py']
+    require(policy.get('version') == 'exact-gated-leftpad-greedy-v1'
+            and policy.get('selected') in ('scalar', 'batched')
+            and policy.get('max_new_tokens') == maximum
+            and policy.get('batch_size') == cfg['eval_batch_size']
+            and policy.get('source_sha256') == source_sha
+            and policy.get('gate_split') == 'VisA_existing_val_only'
+            and policy.get('scalar_parent_exact') is True, 'Generation policy source/budget/gate differs')
+    require(len(policy.get('gate_indices', [])) == len(policy.get('gate_paths', [])) == 8
+            and len(set(policy['gate_indices'])) == len(set(policy['gate_paths'])) == 8
+            and len(policy.get('gate_labels', [])) == len(policy.get('gate_categories', [])) == 8
+            and set(policy['gate_labels']) == {0, 1} and len(set(policy['gate_categories'])) == 4,
+            'Generation policy is not the fixed val8 engineering gate')
+    if policy['selected'] == 'batched':
+        require(policy.get('exact_token_ids_and_stop_ids') is True and policy.get('failure') is None
+                and policy.get('scalar_token_ids') == policy.get('batched_token_ids')
+                and policy.get('scalar_stop_ids') == policy.get('batched_stop_ids'),
+                'Batched policy lacks exact saved tokens/EOS')
+    digest = sha256(path)
+    require(summary.get('generation_policy_sha256') == digest
+            and summary.get('generation_policy') == policy['selected']
+            and summary.get('max_new_tokens') == maximum
+            and summary.get('batch_size') == policy['batch_size'], 'Summary generation policy evidence differs')
+    require(expected.get('generation_max_new_tokens') == maximum
+            and expected.get('generation_batch_size') == policy['batch_size'],
+            'Generation budget differs from pre-external freeze')
+    evaluator = 'structured_external.py' if structured else 'evaluate_external_checkpoint.py'
+    require(summary.get('evaluator_sha256') == frozen['source_sha256'][evaluator],
+            'Evaluator differs from pre-external freeze')
+    if structured:
+        frozen_key = str(Path(expected['run']) / policy_name)
+        require(frozen['structured_generation_policy_sha256'].get(frozen_key) == digest,
+                'Structured initial/best policy differs from pre-external freeze')
+    else:
+        require(summary.get('generation_policy_source_sha256') == source_sha
+                and summary.get('generation_policy_gate_split') == policy['gate_split'],
+                'Basic summary generation source/split differs')
+    return dict(selected=policy['selected'], sha256=digest, source_sha256=source_sha,
+                max_new_tokens=maximum, batch_size=policy['batch_size'], gate_split=policy['gate_split'],
+                frozen_selection_sha256=sha256(frozen_path))
+
 def load_result(advanced, historical, model, seed, manifest, manifest_sha):
     run, output = run_paths(advanced, historical, model, seed)
     summary_path, prediction_path = output / 'summary.json', output / 'predictions.jsonl'
@@ -192,6 +248,7 @@ def load_result(advanced, historical, model, seed, manifest, manifest_sha):
     checkpoint_step = identity['bridge_step'] if model == 'A' else identity['source_c_step'] if model == 'Cstructured' else complete['best_step']
     require(summary['checkpoint_step'] == checkpoint_step, 'External checkpoint differs from validation-selected checkpoint')
     require(complete.get('reload_max_abs_score_error') == 0, 'Source training reload gate failed')
+    generation_policy = validate_saved_policy(advanced, run, output, model, seed, cfg, summary)
     checkpoint_sha = summary.get('checkpoint_sha256')
     require(isinstance(checkpoint_sha, str) and len(checkpoint_sha) == 64, 'Missing checkpoint SHA')
     if model == 'A':
@@ -240,7 +297,7 @@ def load_result(advanced, historical, model, seed, manifest, manifest_sha):
                   manifest_sha256=manifest_sha, external_cache_sha256=cache_sha,
                   base_manifest_sha256=base_identity, source_order_sha256=source_order_sha,
                   summary_sha256=sha256(summary_path), predictions_sha256=digest,
-                  evaluator_sha256=summary.get('evaluator_sha256'), metrics=metrics,
+                  evaluator_sha256=summary.get('evaluator_sha256'), generation_policy=generation_policy, metrics=metrics,
                   flat_metrics=numeric_metrics(metrics), category_metrics=category_values(metrics))
     return result, None
 

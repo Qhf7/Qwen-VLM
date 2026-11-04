@@ -1,0 +1,4546 @@
+{
+  "scope": "S43 VisA development validation raw-only posthoc diagnostic; no training/protocol changes; not external or three-seed result",
+  "modes": {
+    "initial": {
+      "n": 380,
+      "n_anomaly": 208,
+      "invalid_count": 75,
+      "invalid_reasons": {
+        "location_bbox_internal_inconsistency": 75
+      },
+      "invalid_gt_labels": {
+        "1": 75
+      },
+      "anomaly_outcomes": {
+        "No_decision": 74,
+        "valid_box_0<IoU<.5": 20,
+        "invalid_structure": 75,
+        "valid_box_no_overlap": 39
+      },
+      "n_generated_yes_on_anomaly": 134,
+      "n_valid_positive_on_anomaly": 59,
+      "n_geometric_positive_on_anomaly": 134,
+      "strictly_scored_mean_iou_all": 0.006250116928158637,
+      "diagnostic_ignore_location_consistency_iou_all": 0.013202364802562193,
+      "diagnostic_ignore_location_consistency_iou_at_05": 0.0,
+      "geometric_positive_iou": {
+        "n": 134,
+        "mean": 0.020493222977111463,
+        "median": 0.0,
+        "q25": 0.0,
+        "q75": 0.007429120446244855
+      },
+      "strict_valid_positive_iou": {
+        "n": 59,
+        "mean": 0.02203431052638977,
+        "median": 0.0,
+        "q25": 0.0,
+        "q75": 0.0014352277546103803
+      },
+      "pred_area_fraction_geometry": {
+        "n": 134,
+        "mean": 0.2658417537313433,
+        "median": 0.0143,
+        "q25": 0.0081,
+        "q75": 0.24462499999999998
+      },
+      "gt_area_fraction_matched_geometry": {
+        "n": 134,
+        "mean": 0.03709597761194029,
+        "median": 0.010984,
+        "q25": 0.003192,
+        "q75": 0.0482985
+      },
+      "pred_gt_area_ratio_geometry": {
+        "n": 134,
+        "mean": 165.09907175102163,
+        "median": 2.9713831438327842,
+        "q25": 0.6171920115781813,
+        "q75": 21.314831104855735
+      },
+      "center_l2_normalized_geometry": {
+        "n": 134,
+        "mean": 0.3559803617106544,
+        "median": 0.3223772450939029,
+        "q25": 0.21041861466039108,
+        "q75": 0.5169326741618298
+      },
+      "area_under_quarter_gt": 21,
+      "area_over_four_gt": 63,
+      "all_anomaly_gt_area_fraction": {
+        "n": 208,
+        "mean": 0.02775800961538462,
+        "median": 0.008373499999999999,
+        "q25": 0.00233275,
+        "q75": 0.02363775
+      },
+      "per_category": {
+        "candle": {
+          "n": 15,
+          "no": 4,
+          "invalid": 9,
+          "valid_positive": 2,
+          "strict_mean_iou": 0.0007110461561572313
+        },
+        "capsules": {
+          "n": 17,
+          "no": 8,
+          "invalid": 6,
+          "valid_positive": 3,
+          "strict_mean_iou": 0.008344130603783364
+        },
+        "cashew": {
+          "n": 12,
+          "no": 6,
+          "invalid": 1,
+          "valid_positive": 5,
+          "strict_mean_iou": 0.0
+        },
+        "chewinggum": {
+          "n": 11,
+          "no": 0,
+          "invalid": 3,
+          "valid_positive": 8,
+          "strict_mean_iou": 0.016585062434520733
+        },
+        "fryum": {
+          "n": 19,
+          "no": 8,
+          "invalid": 7,
+          "valid_positive": 4,
+          "strict_mean_iou": 0.0
+        },
+        "macaroni1": {
+          "n": 23,
+          "no": 15,
+          "invalid": 4,
+          "valid_positive": 4,
+          "strict_mean_iou": 6.393269931866371e-05
+        },
+        "macaroni2": {
+          "n": 16,
+          "no": 10,
+          "invalid": 1,
+          "valid_positive": 5,
+          "strict_mean_iou": 0.001103038696783827
+        },
+        "pcb1": {
+          "n": 17,
+          "no": 7,
+          "invalid": 5,
+          "valid_positive": 5,
+          "strict_mean_iou": 0.0
+        },
+        "pcb2": {
+          "n": 16,
+          "no": 3,
+          "invalid": 8,
+          "valid_positive": 5,
+          "strict_mean_iou": 0.0
+        },
+        "pcb3": {
+          "n": 17,
+          "no": 8,
+          "invalid": 5,
+          "valid_positive": 4,
+          "strict_mean_iou": 0.00045769639352527053
+        },
+        "pcb4": {
+          "n": 25,
+          "no": 2,
+          "invalid": 18,
+          "valid_positive": 5,
+          "strict_mean_iou": 0.01055441637470248
+        },
+        "pipe_fryum": {
+          "n": 20,
+          "no": 3,
+          "invalid": 8,
+          "valid_positive": 9,
+          "strict_mean_iou": 0.03371562011901153
+        }
+      },
+      "source_prediction_sha256": "46e6bb7be2280e46cc5b18b956a3b284bfaa6ff05731139617873fc89f6a5964"
+    },
+    "best": {
+      "n": 380,
+      "n_anomaly": 208,
+      "invalid_count": 13,
+      "invalid_reasons": {
+        "location_bbox_internal_inconsistency": 13
+      },
+      "invalid_gt_labels": {
+        "1": 13
+      },
+      "anomaly_outcomes": {
+        "No_decision": 75,
+        "valid_box_no_overlap": 52,
+        "invalid_structure": 13,
+        "valid_box_0<IoU<.5": 59,
+        "valid_box_IoU>=.5": 9
+      },
+      "n_generated_yes_on_anomaly": 133,
+      "n_valid_positive_on_anomaly": 120,
+      "n_geometric_positive_on_anomaly": 133,
+      "strictly_scored_mean_iou_all": 0.07592087307036355,
+      "diagnostic_ignore_location_consistency_iou_all": 0.07936208846845728,
+      "diagnostic_ignore_location_consistency_iou_at_05": 0.04326923076923077,
+      "geometric_positive_iou": {
+        "n": 133,
+        "mean": 0.12411514587548203,
+        "median": 0.018170221026650765,
+        "q25": 0.0,
+        "q75": 0.22603179398104445
+      },
+      "strict_valid_positive_iou": {
+        "n": 120,
+        "mean": 0.13159617998863016,
+        "median": 0.020045113268608413,
+        "q25": 0.0,
+        "q75": 0.23119723524822972
+      },
+      "pred_area_fraction_geometry": {
+        "n": 133,
+        "mean": 0.04854786466165413,
+        "median": 0.0093,
+        "q25": 0.002,
+        "q75": 0.0805
+      },
+      "gt_area_fraction_matched_geometry": {
+        "n": 133,
+        "mean": 0.03735865413533834,
+        "median": 0.011368,
+        "q25": 0.003198,
+        "q75": 0.048832
+      },
+      "pred_gt_area_ratio_geometry": {
+        "n": 133,
+        "mean": 4.4235083307571825,
+        "median": 0.993103448275862,
+        "q25": 0.30547409579667645,
+        "q75": 2.617260787992495
+      },
+      "center_l2_normalized_geometry": {
+        "n": 133,
+        "mean": 0.12392286601711633,
+        "median": 0.11591807451816995,
+        "q25": 0.06854560525664646,
+        "q75": 0.15700716544158103
+      },
+      "area_under_quarter_gt": 29,
+      "area_over_four_gt": 26,
+      "all_anomaly_gt_area_fraction": {
+        "n": 208,
+        "mean": 0.02775800961538462,
+        "median": 0.008373499999999999,
+        "q25": 0.00233275,
+        "q75": 0.02363775
+      },
+      "per_category": {
+        "candle": {
+          "n": 15,
+          "no": 5,
+          "invalid": 1,
+          "valid_positive": 9,
+          "strict_mean_iou": 0.0
+        },
+        "capsules": {
+          "n": 17,
+          "no": 8,
+          "invalid": 0,
+          "valid_positive": 9,
+          "strict_mean_iou": 0.0601405534640514
+        },
+        "cashew": {
+          "n": 12,
+          "no": 6,
+          "invalid": 0,
+          "valid_positive": 6,
+          "strict_mean_iou": 0.0059563636363636355
+        },
+        "chewinggum": {
+          "n": 11,
+          "no": 0,
+          "invalid": 0,
+          "valid_positive": 11,
+          "strict_mean_iou": 0.20378873277047865
+        },
+        "fryum": {
+          "n": 19,
+          "no": 8,
+          "invalid": 2,
+          "valid_positive": 9,
+          "strict_mean_iou": 0.10633102082522311
+        },
+        "macaroni1": {
+          "n": 23,
+          "no": 15,
+          "invalid": 3,
+          "valid_positive": 5,
+          "strict_mean_iou": 0.0
+        },
+        "macaroni2": {
+          "n": 16,
+          "no": 10,
+          "invalid": 2,
+          "valid_positive": 4,
+          "strict_mean_iou": 0.0
+        },
+        "pcb1": {
+          "n": 17,
+          "no": 7,
+          "invalid": 2,
+          "valid_positive": 8,
+          "strict_mean_iou": 0.047917866921749534
+        },
+        "pcb2": {
+          "n": 16,
+          "no": 3,
+          "invalid": 0,
+          "valid_positive": 13,
+          "strict_mean_iou": 0.025131604686666326
+        },
+        "pcb3": {
+          "n": 17,
+          "no": 8,
+          "invalid": 1,
+          "valid_positive": 8,
+          "strict_mean_iou": 0.03237958431819168
+        },
+        "pcb4": {
+          "n": 25,
+          "no": 2,
+          "invalid": 1,
+          "valid_positive": 22,
+          "strict_mean_iou": 0.28573040750580686
+        },
+        "pipe_fryum": {
+          "n": 20,
+          "no": 3,
+          "invalid": 1,
+          "valid_positive": 16,
+          "strict_mean_iou": 0.07626439181225207
+        }
+      },
+      "source_prediction_sha256": "03eb8398d130d89c0ac4d71e6163ee5142ba013470e8ee441d5df95f7e3fb07c"
+    },
+    "final": {
+      "n": 380,
+      "n_anomaly": 208,
+      "invalid_count": 13,
+      "invalid_reasons": {
+        "location_bbox_internal_inconsistency": 13
+      },
+      "invalid_gt_labels": {
+        "1": 13
+      },
+      "anomaly_outcomes": {
+        "No_decision": 75,
+        "valid_box_no_overlap": 52,
+        "invalid_structure": 13,
+        "valid_box_0<IoU<.5": 59,
+        "valid_box_IoU>=.5": 9
+      },
+      "n_generated_yes_on_anomaly": 133,
+      "n_valid_positive_on_anomaly": 120,
+      "n_geometric_positive_on_anomaly": 133,
+      "strictly_scored_mean_iou_all": 0.07592087307036355,
+      "diagnostic_ignore_location_consistency_iou_all": 0.07936208846845728,
+      "diagnostic_ignore_location_consistency_iou_at_05": 0.04326923076923077,
+      "geometric_positive_iou": {
+        "n": 133,
+        "mean": 0.12411514587548203,
+        "median": 0.018170221026650765,
+        "q25": 0.0,
+        "q75": 0.22603179398104445
+      },
+      "strict_valid_positive_iou": {
+        "n": 120,
+        "mean": 0.13159617998863016,
+        "median": 0.020045113268608413,
+        "q25": 0.0,
+        "q75": 0.23119723524822972
+      },
+      "pred_area_fraction_geometry": {
+        "n": 133,
+        "mean": 0.04854786466165413,
+        "median": 0.0093,
+        "q25": 0.002,
+        "q75": 0.0805
+      },
+      "gt_area_fraction_matched_geometry": {
+        "n": 133,
+        "mean": 0.03735865413533834,
+        "median": 0.011368,
+        "q25": 0.003198,
+        "q75": 0.048832
+      },
+      "pred_gt_area_ratio_geometry": {
+        "n": 133,
+        "mean": 4.4235083307571825,
+        "median": 0.993103448275862,
+        "q25": 0.30547409579667645,
+        "q75": 2.617260787992495
+      },
+      "center_l2_normalized_geometry": {
+        "n": 133,
+        "mean": 0.12392286601711633,
+        "median": 0.11591807451816995,
+        "q25": 0.06854560525664646,
+        "q75": 0.15700716544158103
+      },
+      "area_under_quarter_gt": 29,
+      "area_over_four_gt": 26,
+      "all_anomaly_gt_area_fraction": {
+        "n": 208,
+        "mean": 0.02775800961538462,
+        "median": 0.008373499999999999,
+        "q25": 0.00233275,
+        "q75": 0.02363775
+      },
+      "per_category": {
+        "candle": {
+          "n": 15,
+          "no": 5,
+          "invalid": 1,
+          "valid_positive": 9,
+          "strict_mean_iou": 0.0
+        },
+        "capsules": {
+          "n": 17,
+          "no": 8,
+          "invalid": 0,
+          "valid_positive": 9,
+          "strict_mean_iou": 0.0601405534640514
+        },
+        "cashew": {
+          "n": 12,
+          "no": 6,
+          "invalid": 0,
+          "valid_positive": 6,
+          "strict_mean_iou": 0.0059563636363636355
+        },
+        "chewinggum": {
+          "n": 11,
+          "no": 0,
+          "invalid": 0,
+          "valid_positive": 11,
+          "strict_mean_iou": 0.20378873277047865
+        },
+        "fryum": {
+          "n": 19,
+          "no": 8,
+          "invalid": 2,
+          "valid_positive": 9,
+          "strict_mean_iou": 0.10633102082522311
+        },
+        "macaroni1": {
+          "n": 23,
+          "no": 15,
+          "invalid": 3,
+          "valid_positive": 5,
+          "strict_mean_iou": 0.0
+        },
+        "macaroni2": {
+          "n": 16,
+          "no": 10,
+          "invalid": 2,
+          "valid_positive": 4,
+          "strict_mean_iou": 0.0
+        },
+        "pcb1": {
+          "n": 17,
+          "no": 7,
+          "invalid": 2,
+          "valid_positive": 8,
+          "strict_mean_iou": 0.047917866921749534
+        },
+        "pcb2": {
+          "n": 16,
+          "no": 3,
+          "invalid": 0,
+          "valid_positive": 13,
+          "strict_mean_iou": 0.025131604686666326
+        },
+        "pcb3": {
+          "n": 17,
+          "no": 8,
+          "invalid": 1,
+          "valid_positive": 8,
+          "strict_mean_iou": 0.03237958431819168
+        },
+        "pcb4": {
+          "n": 25,
+          "no": 2,
+          "invalid": 1,
+          "valid_positive": 22,
+          "strict_mean_iou": 0.28573040750580686
+        },
+        "pipe_fryum": {
+          "n": 20,
+          "no": 3,
+          "invalid": 1,
+          "valid_positive": 16,
+          "strict_mean_iou": 0.07626439181225207
+        }
+      },
+      "source_prediction_sha256": "03eb8398d130d89c0ac4d71e6163ee5142ba013470e8ee441d5df95f7e3fb07c"
+    }
+  },
+  "paired": {
+    "best_minus_initial": {
+      "n_common_strict_valid_positive": 52,
+      "common_iou_difference": {
+        "n": 52,
+        "mean": 0.08813485676322734,
+        "median": 0.013376082678303498,
+        "q25": 0.0,
+        "q75": 0.1879988155544952
+      },
+      "all208_iou_difference": {
+        "n": 208,
+        "mean": 0.0696707561422049,
+        "median": 0.0,
+        "q25": 0.0,
+        "q75": 0.027954897284632442
+      },
+      "anomaly_yesno_transitions": {
+        "0->0": 74,
+        "1->0": 1,
+        "1->1": 133
+      },
+      "common_iou_improves": 27,
+      "common_iou_worsens": 9,
+      "common_iou_unchanged": 16
+    },
+    "final_minus_initial": {
+      "n_common_strict_valid_positive": 52,
+      "common_iou_difference": {
+        "n": 52,
+        "mean": 0.08813485676322734,
+        "median": 0.013376082678303498,
+        "q25": 0.0,
+        "q75": 0.1879988155544952
+      },
+      "all208_iou_difference": {
+        "n": 208,
+        "mean": 0.0696707561422049,
+        "median": 0.0,
+        "q25": 0.0,
+        "q75": 0.027954897284632442
+      },
+      "anomaly_yesno_transitions": {
+        "0->0": 74,
+        "1->0": 1,
+        "1->1": 133
+      },
+      "common_iou_improves": 27,
+      "common_iou_worsens": 9,
+      "common_iou_unchanged": 16
+    }
+  },
+  "invalid_records": {
+    "initial": [
+      {
+        "index": 10003,
+        "category": "candle",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Anomaly/021.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [326, 10, 429, 1000],\"location\":\"middle_left\"}",
+        "target_bbox": [
+          563,
+          677,
+          599,
+          769
+        ],
+        "target_location": "bottom_center",
+        "pred_bbox": [
+          326,
+          10,
+          429,
+          1000
+        ],
+        "pred_location": "middle_left",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.10197,
+        "gt_area_fraction": 0.003312,
+        "pred_gt_area_ratio": 30.78804347826087,
+        "center_l2_normalized": 0.29822181342081605,
+        "pred_center_gt_box": false,
+        "box_location": "middle_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10004,
+        "category": "candle",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Anomaly/025.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [488, 120, 588, 220], \"location\": \"middle_right\"}",
+        "target_bbox": [
+          727,
+          562,
+          792,
+          594
+        ],
+        "target_location": "middle_right",
+        "pred_bbox": [
+          488,
+          120,
+          588,
+          220
+        ],
+        "pred_location": "middle_right",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.01,
+        "gt_area_fraction": 0.00208,
+        "pred_gt_area_ratio": 4.8076923076923075,
+        "center_l2_normalized": 0.46424804792265956,
+        "pred_center_gt_box": false,
+        "box_location": "top_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10005,
+        "category": "candle",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Anomaly/035.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [385, 10, 585, 1000],\"location\":\"middle_right\"}",
+        "target_bbox": [
+          249,
+          834,
+          271,
+          917
+        ],
+        "target_location": "bottom_left",
+        "pred_bbox": [
+          385,
+          10,
+          585,
+          1000
+        ],
+        "pred_location": "middle_right",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.198,
+        "gt_area_fraction": 0.001826,
+        "pred_gt_area_ratio": 108.43373493975903,
+        "center_l2_normalized": 0.43346885701281934,
+        "pred_center_gt_box": false,
+        "box_location": "middle_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10007,
+        "category": "candle",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Anomaly/042.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [48, 10, 175, 1000],\"location\":\"bottom_left\"}",
+        "target_bbox": [
+          646,
+          230,
+          659,
+          245
+        ],
+        "target_location": "top_center",
+        "pred_bbox": [
+          48,
+          10,
+          175,
+          1000
+        ],
+        "pred_location": "bottom_left",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.12573,
+        "gt_area_fraction": 0.000195,
+        "pred_gt_area_ratio": 644.7692307692307,
+        "center_l2_normalized": 0.6035207121549351,
+        "pred_center_gt_box": false,
+        "box_location": "middle_left",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10010,
+        "category": "candle",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Anomaly/053.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [26, 10, 1000, 990],\"location\":\"bottom_right\"}",
+        "target_bbox": [
+          176,
+          145,
+          363,
+          847
+        ],
+        "target_location": "middle_left",
+        "pred_bbox": [
+          26,
+          10,
+          1000,
+          990
+        ],
+        "pred_location": "bottom_right",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.13752881029208397,
+        "pred_area_fraction": 0.95452,
+        "gt_area_fraction": 0.131274,
+        "pred_gt_area_ratio": 7.271203741791977,
+        "center_l2_normalized": 0.2435328519933194,
+        "pred_center_gt_box": false,
+        "box_location": "middle_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10011,
+        "category": "candle",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Anomaly/061.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [488, 120, 588, 280], \"location\": \"middle_right\"}",
+        "target_bbox": [
+          788,
+          797,
+          880,
+          885
+        ],
+        "target_location": "bottom_right",
+        "pred_bbox": [
+          488,
+          120,
+          588,
+          280
+        ],
+        "pred_location": "middle_right",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.016,
+        "gt_area_fraction": 0.008096,
+        "pred_gt_area_ratio": 1.976284584980237,
+        "center_l2_normalized": 0.7060431998114562,
+        "pred_center_gt_box": false,
+        "box_location": "top_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10013,
+        "category": "candle",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Anomaly/085.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [488, 120, 576, 220], \"location\": \"middle_right\"}",
+        "target_bbox": [
+          775,
+          773,
+          844,
+          898
+        ],
+        "target_location": "bottom_right",
+        "pred_bbox": [
+          488,
+          120,
+          576,
+          220
+        ],
+        "pred_location": "middle_right",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.0088,
+        "gt_area_fraction": 0.008625,
+        "pred_gt_area_ratio": 1.0202898550724637,
+        "center_l2_normalized": 0.72103848718359,
+        "pred_center_gt_box": false,
+        "box_location": "top_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10014,
+        "category": "candle",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Anomaly/096.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [385, 10, 508, 1000],\"location\":\"middle_right\"}",
+        "target_bbox": [
+          239,
+          590,
+          328,
+          661
+        ],
+        "target_location": "middle_left",
+        "pred_bbox": [
+          385,
+          10,
+          508,
+          1000
+        ],
+        "pred_location": "middle_right",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.12177,
+        "gt_area_fraction": 0.006319,
+        "pred_gt_area_ratio": 19.27045418578889,
+        "center_l2_normalized": 0.20270483467347297,
+        "pred_center_gt_box": false,
+        "box_location": "middle_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10015,
+        "category": "candle",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Anomaly/099.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [385, 10, 508, 1000],\"location\":\"middle_right\"}",
+        "target_bbox": [
+          242,
+          563,
+          370,
+          643
+        ],
+        "target_location": "middle_left",
+        "pred_bbox": [
+          385,
+          10,
+          508,
+          1000
+        ],
+        "pred_location": "middle_right",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.12177,
+        "gt_area_fraction": 0.01024,
+        "pred_gt_area_ratio": 11.8916015625,
+        "center_l2_normalized": 0.1713016345514543,
+        "pred_center_gt_box": false,
+        "box_location": "middle_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10028,
+        "category": "capsules",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/capsules/Data/Images/Anomaly/002.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [26, 10, 1000, 984],\"location\":\"bottom_right\"}",
+        "target_bbox": [
+          395,
+          515,
+          432,
+          562
+        ],
+        "target_location": "middle_center",
+        "pred_bbox": [
+          26,
+          10,
+          1000,
+          984
+        ],
+        "pred_location": "bottom_right",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.001833081051908133,
+        "pred_area_fraction": 0.948676,
+        "gt_area_fraction": 0.001739,
+        "pred_gt_area_ratio": 545.529614721104,
+        "center_l2_normalized": 0.10780769916847312,
+        "pred_center_gt_box": false,
+        "box_location": "middle_center",
+        "grid_from_box_matches_gt": true
+      },
+      {
+        "index": 10031,
+        "category": "capsules",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/capsules/Data/Images/Anomaly/015.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [10, 10, 1000, 1000],\"location\":\"bottom_right\"}",
+        "target_bbox": [
+          266,
+          474,
+          299,
+          523
+        ],
+        "target_location": "middle_left",
+        "pred_bbox": [
+          10,
+          10,
+          1000,
+          1000
+        ],
+        "pred_location": "bottom_right",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.00164983164983165,
+        "pred_area_fraction": 0.9801,
+        "gt_area_fraction": 0.001617,
+        "pred_gt_area_ratio": 606.1224489795918,
+        "center_l2_normalized": 0.2225949235719449,
+        "pred_center_gt_box": false,
+        "box_location": "middle_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10034,
+        "category": "capsules",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/capsules/Data/Images/Anomaly/049.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [273, 111, 386, 205], \"location\": \"top_right\"}",
+        "target_bbox": [
+          637,
+          388,
+          742,
+          568
+        ],
+        "target_location": "middle_right",
+        "pred_bbox": [
+          273,
+          111,
+          386,
+          205
+        ],
+        "pred_location": "top_right",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.010622,
+        "gt_area_fraction": 0.0189,
+        "pred_gt_area_ratio": 0.562010582010582,
+        "center_l2_normalized": 0.4816637831516918,
+        "pred_center_gt_box": false,
+        "box_location": "top_left",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10036,
+        "category": "capsules",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/capsules/Data/Images/Anomaly/054.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [273, 119, 355, 229], \"location\": \"top_right\"}",
+        "target_bbox": [
+          448,
+          386,
+          577,
+          534
+        ],
+        "target_location": "middle_center",
+        "pred_bbox": [
+          273,
+          119,
+          355,
+          229
+        ],
+        "pred_location": "top_right",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.00902,
+        "gt_area_fraction": 0.019092,
+        "pred_gt_area_ratio": 0.4724491933794259,
+        "center_l2_normalized": 0.34813539032968194,
+        "pred_center_gt_box": false,
+        "box_location": "top_left",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10039,
+        "category": "capsules",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/capsules/Data/Images/Anomaly/061.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [333, 100, 666, 200], \"location\": \"middle_center\"}",
+        "target_bbox": [
+          141,
+          195,
+          223,
+          337
+        ],
+        "target_location": "top_left",
+        "pred_bbox": [
+          333,
+          100,
+          666,
+          200
+        ],
+        "pred_location": "middle_center",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.0333,
+        "gt_area_fraction": 0.011644,
+        "pred_gt_area_ratio": 2.859841978701477,
+        "center_l2_normalized": 0.3380269959633402,
+        "pred_center_gt_box": false,
+        "box_location": "top_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10040,
+        "category": "capsules",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/capsules/Data/Images/Anomaly/071.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [375, 100, 625, 200], \"location\": \"middle_center\"}",
+        "target_bbox": [
+          184,
+          169,
+          292,
+          395
+        ],
+        "target_location": "top_left",
+        "pred_bbox": [
+          375,
+          100,
+          625,
+          200
+        ],
+        "pred_location": "middle_center",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.025,
+        "gt_area_fraction": 0.024408,
+        "pred_gt_area_ratio": 1.0242543428384137,
+        "center_l2_normalized": 0.2933734821008879,
+        "pred_center_gt_box": false,
+        "box_location": "top_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10063,
+        "category": "cashew",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/cashew/Data/Images/Anomaly/036.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [10, 10, 1000, 990],\"location\":\"bottom_right\"}",
+        "target_bbox": [
+          343,
+          423,
+          460,
+          549
+        ],
+        "target_location": "middle_center",
+        "pred_bbox": [
+          10,
+          10,
+          1000,
+          990
+        ],
+        "pred_location": "bottom_right",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.015194805194805195,
+        "pred_area_fraction": 0.9702,
+        "gt_area_fraction": 0.014742,
+        "pred_gt_area_ratio": 65.8119658119658,
+        "center_l2_normalized": 0.10444256795004611,
+        "pred_center_gt_box": false,
+        "box_location": "middle_center",
+        "grid_from_box_matches_gt": true
+      },
+      {
+        "index": 10082,
+        "category": "chewinggum",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/chewinggum/Data/Images/Anomaly/024.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [273, 320, 355, 400], \"location\": \"middle_right\"}",
+        "target_bbox": [
+          555,
+          653,
+          675,
+          755
+        ],
+        "target_location": "bottom_center",
+        "pred_bbox": [
+          273,
+          320,
+          355,
+          400
+        ],
+        "pred_location": "middle_right",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.00656,
+        "gt_area_fraction": 0.01224,
+        "pred_gt_area_ratio": 0.5359477124183006,
+        "center_l2_normalized": 0.4570962699475899,
+        "pred_center_gt_box": false,
+        "box_location": "middle_left",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10089,
+        "category": "chewinggum",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/chewinggum/Data/Images/Anomaly/085.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [385, 10, 485, 1000],\"location\":\"middle_right\"}",
+        "target_bbox": [
+          698,
+          525,
+          796,
+          777
+        ],
+        "target_location": "middle_right",
+        "pred_bbox": [
+          385,
+          10,
+          485,
+          1000
+        ],
+        "pred_location": "middle_right",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.099,
+        "gt_area_fraction": 0.024696,
+        "pred_gt_area_ratio": 4.0087463556851315,
+        "center_l2_normalized": 0.34447060832529675,
+        "pred_center_gt_box": false,
+        "box_location": "middle_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10090,
+        "category": "chewinggum",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/chewinggum/Data/Images/Anomaly/087.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [329, 10, 429, 100], \"location\": \"top_right\"}",
+        "target_bbox": [
+          511,
+          554,
+          577,
+          611
+        ],
+        "target_location": "middle_center",
+        "pred_bbox": [
+          329,
+          10,
+          429,
+          100
+        ],
+        "pred_location": "top_right",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.009,
+        "gt_area_fraction": 0.003762,
+        "pred_gt_area_ratio": 2.3923444976076556,
+        "center_l2_normalized": 0.5527035824019959,
+        "pred_center_gt_box": false,
+        "box_location": "top_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10106,
+        "category": "fryum",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/fryum/Data/Images/Anomaly/007.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [26, 10, 1000, 984],\"location\":\"bottom_right\"}",
+        "target_bbox": [
+          462,
+          222,
+          701,
+          463
+        ],
+        "target_location": "middle_center",
+        "pred_bbox": [
+          26,
+          10,
+          1000,
+          984
+        ],
+        "pred_location": "bottom_right",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.06071514405339652,
+        "pred_area_fraction": 0.948676,
+        "gt_area_fraction": 0.057599,
+        "pred_gt_area_ratio": 16.470355388114378,
+        "center_l2_normalized": 0.1690044378115557,
+        "pred_center_gt_box": false,
+        "box_location": "middle_center",
+        "grid_from_box_matches_gt": true
+      },
+      {
+        "index": 10109,
+        "category": "fryum",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/fryum/Data/Images/Anomaly/019.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [10, 10, 1000, 1000],\"location\":\"bottom_right\"}",
+        "target_bbox": [
+          282,
+          431,
+          308,
+          554
+        ],
+        "target_location": "middle_left",
+        "pred_bbox": [
+          10,
+          10,
+          1000,
+          1000
+        ],
+        "pred_location": "bottom_right",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.003262932353841445,
+        "pred_area_fraction": 0.9801,
+        "gt_area_fraction": 0.003198,
+        "pred_gt_area_ratio": 306.47279549718576,
+        "center_l2_normalized": 0.21037169486411425,
+        "pred_center_gt_box": false,
+        "box_location": "middle_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10111,
+        "category": "fryum",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/fryum/Data/Images/Anomaly/024.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [26, 10, 1000, 984],\"location\":\"bottom_right\"}",
+        "target_bbox": [
+          470,
+          468,
+          480,
+          496
+        ],
+        "target_location": "middle_center",
+        "pred_bbox": [
+          26,
+          10,
+          1000,
+          984
+        ],
+        "pred_location": "bottom_right",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.00029514818547111976,
+        "pred_area_fraction": 0.948676,
+        "gt_area_fraction": 0.00028,
+        "pred_gt_area_ratio": 3388.1285714285714,
+        "center_l2_normalized": 0.04085339643163099,
+        "pred_center_gt_box": false,
+        "box_location": "middle_center",
+        "grid_from_box_matches_gt": true
+      },
+      {
+        "index": 10117,
+        "category": "fryum",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/fryum/Data/Images/Anomaly/043.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [26, 10, 1000, 984],\"location\":\"bottom_right\"}",
+        "target_bbox": [
+          343,
+          222,
+          750,
+          832
+        ],
+        "target_location": "middle_center",
+        "pred_bbox": [
+          26,
+          10,
+          1000,
+          984
+        ],
+        "pred_location": "bottom_right",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.2617015714532675,
+        "pred_area_fraction": 0.948676,
+        "gt_area_fraction": 0.24827,
+        "pred_gt_area_ratio": 3.8211463326217423,
+        "center_l2_normalized": 0.0449694340635948,
+        "pred_center_gt_box": true,
+        "box_location": "middle_center",
+        "grid_from_box_matches_gt": true
+      },
+      {
+        "index": 10119,
+        "category": "fryum",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/fryum/Data/Images/Anomaly/057.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [26, 10, 1000, 984],\"location\":\"bottom_right\"}",
+        "target_bbox": [
+          280,
+          207,
+          674,
+          776
+        ],
+        "target_location": "middle_center",
+        "pred_bbox": [
+          26,
+          10,
+          1000,
+          984
+        ],
+        "pred_location": "bottom_right",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.2363146111001016,
+        "pred_area_fraction": 0.948676,
+        "gt_area_fraction": 0.224186,
+        "pred_gt_area_ratio": 4.231646936026335,
+        "center_l2_normalized": 0.03641771546926029,
+        "pred_center_gt_box": true,
+        "box_location": "middle_center",
+        "grid_from_box_matches_gt": true
+      },
+      {
+        "index": 10120,
+        "category": "fryum",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/fryum/Data/Images/Anomaly/058.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [333, 108, 412, 202], \"location\": \"middle_left\"}",
+        "target_bbox": [
+          294,
+          151,
+          729,
+          821
+        ],
+        "target_location": "middle_center",
+        "pred_bbox": [
+          333,
+          108,
+          412,
+          202
+        ],
+        "pred_location": "middle_left",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.013664714241623622,
+        "pred_area_fraction": 0.007426,
+        "gt_area_fraction": 0.29145,
+        "pred_gt_area_ratio": 0.025479499056441927,
+        "center_l2_normalized": 0.35900139275495857,
+        "pred_center_gt_box": true,
+        "box_location": "top_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10122,
+        "category": "fryum",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/fryum/Data/Images/Anomaly/084.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [26, 10, 1000, 984],\"location\":\"bottom_right\"}",
+        "target_bbox": [
+          379,
+          408,
+          556,
+          572
+        ],
+        "target_location": "middle_center",
+        "pred_bbox": [
+          26,
+          10,
+          1000,
+          984
+        ],
+        "pred_location": "bottom_right",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.030598434028055944,
+        "pred_area_fraction": 0.948676,
+        "gt_area_fraction": 0.029028,
+        "pred_gt_area_ratio": 32.68141105139865,
+        "center_l2_normalized": 0.046035312532880665,
+        "pred_center_gt_box": true,
+        "box_location": "middle_center",
+        "grid_from_box_matches_gt": true
+      },
+      {
+        "index": 10147,
+        "category": "macaroni1",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni1/Data/Images/Anomaly/034.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [273, 227, 355, 325], \"location\": \"middle_left\"}",
+        "target_bbox": [
+          615,
+          712,
+          629,
+          733
+        ],
+        "target_location": "bottom_center",
+        "pred_bbox": [
+          273,
+          227,
+          355,
+          325
+        ],
+        "pred_location": "middle_left",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.008036,
+        "gt_area_fraction": 0.000294,
+        "pred_gt_area_ratio": 27.333333333333332,
+        "center_l2_normalized": 0.542426262269813,
+        "pred_center_gt_box": false,
+        "box_location": "top_left",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10149,
+        "category": "macaroni1",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni1/Data/Images/Anomaly/048.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [385, 220, 500, 380], \"location\": \"middle_right\"}",
+        "target_bbox": [
+          704,
+          683,
+          722,
+          712
+        ],
+        "target_location": "bottom_right",
+        "pred_bbox": [
+          385,
+          220,
+          500,
+          380
+        ],
+        "pred_location": "middle_right",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.0184,
+        "gt_area_fraction": 0.000522,
+        "pred_gt_area_ratio": 35.24904214559387,
+        "center_l2_normalized": 0.4808081738073927,
+        "pred_center_gt_box": false,
+        "box_location": "top_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10153,
+        "category": "macaroni1",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni1/Data/Images/Anomaly/058.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [48, 10, 184, 1000],\"location\":\"bottom_left\"}",
+        "target_bbox": [
+          724,
+          656,
+          758,
+          718
+        ],
+        "target_location": "bottom_right",
+        "pred_bbox": [
+          48,
+          10,
+          184,
+          1000
+        ],
+        "pred_location": "bottom_left",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.13464,
+        "gt_area_fraction": 0.002108,
+        "pred_gt_area_ratio": 63.87096774193548,
+        "center_l2_normalized": 0.6509600602187511,
+        "pred_center_gt_box": false,
+        "box_location": "middle_left",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10154,
+        "category": "macaroni1",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni1/Data/Images/Anomaly/068.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [10, 10, 1000, 990],\"location\":\"bottom_right\"}",
+        "target_bbox": [
+          670,
+          330,
+          716,
+          356
+        ],
+        "target_location": "middle_right",
+        "pred_bbox": [
+          10,
+          10,
+          1000,
+          990
+        ],
+        "pred_location": "bottom_right",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0012327355184498041,
+        "pred_area_fraction": 0.9702,
+        "gt_area_fraction": 0.001196,
+        "pred_gt_area_ratio": 811.2040133779265,
+        "center_l2_normalized": 0.2449346851713738,
+        "pred_center_gt_box": false,
+        "box_location": "middle_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10202,
+        "category": "macaroni2",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni2/Data/Images/Anomaly/089.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [488, 10, 600, 1000],\"location\":\"middle_right\"}",
+        "target_bbox": [
+          751,
+          233,
+          802,
+          363
+        ],
+        "target_location": "top_right",
+        "pred_bbox": [
+          488,
+          10,
+          600,
+          1000
+        ],
+        "pred_location": "middle_right",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.11088,
+        "gt_area_fraction": 0.00663,
+        "pred_gt_area_ratio": 16.72398190045249,
+        "center_l2_normalized": 0.3112960809261819,
+        "pred_center_gt_box": false,
+        "box_location": "middle_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10215,
+        "category": "pcb1",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb1/Data/Images/Anomaly/005.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [321, 321, 400, 400],\"location\":\"middle_left\"}",
+        "target_bbox": [
+          514,
+          700,
+          600,
+          809
+        ],
+        "target_location": "bottom_center",
+        "pred_bbox": [
+          321,
+          321,
+          400,
+          400
+        ],
+        "pred_location": "middle_left",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.006241,
+        "gt_area_fraction": 0.009374,
+        "pred_gt_area_ratio": 0.6657776829528483,
+        "center_l2_normalized": 0.44028201189692046,
+        "pred_center_gt_box": false,
+        "box_location": "middle_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10218,
+        "category": "pcb1",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb1/Data/Images/Anomaly/015.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [220, 220, 300, 300],\"location\":\"middle_left\"}",
+        "target_bbox": [
+          458,
+          646,
+          533,
+          681
+        ],
+        "target_location": "middle_center",
+        "pred_bbox": [
+          220,
+          220,
+          300,
+          300
+        ],
+        "pred_location": "middle_left",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.0064,
+        "gt_area_fraction": 0.002625,
+        "pred_gt_area_ratio": 2.4380952380952383,
+        "center_l2_normalized": 0.4671964255000246,
+        "pred_center_gt_box": false,
+        "box_location": "top_left",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10221,
+        "category": "pcb1",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb1/Data/Images/Anomaly/032.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [375, 220, 450, 300],\"location\":\"middle_right\"}",
+        "target_bbox": [
+          481,
+          761,
+          534,
+          832
+        ],
+        "target_location": "bottom_center",
+        "pred_bbox": [
+          375,
+          220,
+          450,
+          300
+        ],
+        "pred_location": "middle_right",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.006,
+        "gt_area_fraction": 0.003763,
+        "pred_gt_area_ratio": 1.5944724953494551,
+        "center_l2_normalized": 0.5448460791820017,
+        "pred_center_gt_box": false,
+        "box_location": "top_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10223,
+        "category": "pcb1",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb1/Data/Images/Anomaly/050.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [478, 300, 522, 348], \"location\": \"middle_center\"}",
+        "target_bbox": [
+          188,
+          339,
+          439,
+          666
+        ],
+        "target_location": "middle_left",
+        "pred_bbox": [
+          478,
+          300,
+          522,
+          348
+        ],
+        "pred_location": "middle_center",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.002112,
+        "gt_area_fraction": 0.082077,
+        "pred_gt_area_ratio": 0.025731934646734164,
+        "center_l2_normalized": 0.2581559606129597,
+        "pred_center_gt_box": false,
+        "box_location": "top_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10228,
+        "category": "pcb1",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb1/Data/Images/Anomaly/084.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [26, 10, 1000, 984],\"location\":\"bottom_right\"}",
+        "target_bbox": [
+          209,
+          159,
+          567,
+          378
+        ],
+        "target_location": "top_center",
+        "pred_bbox": [
+          26,
+          10,
+          1000,
+          984
+        ],
+        "pred_location": "bottom_right",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.08264360013323832,
+        "pred_area_fraction": 0.948676,
+        "gt_area_fraction": 0.078402,
+        "pred_gt_area_ratio": 12.100150506364633,
+        "center_l2_normalized": 0.26045585038543484,
+        "pred_center_gt_box": false,
+        "box_location": "middle_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10251,
+        "category": "pcb2",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb2/Data/Images/Anomaly/006.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [10, 10, 1000, 990],\"location\":\"bottom_right\"}",
+        "target_bbox": [
+          369,
+          206,
+          543,
+          686
+        ],
+        "target_location": "middle_center",
+        "pred_bbox": [
+          10,
+          10,
+          1000,
+          990
+        ],
+        "pred_location": "bottom_right",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.08608534322820037,
+        "pred_area_fraction": 0.9702,
+        "gt_area_fraction": 0.08352,
+        "pred_gt_area_ratio": 11.616379310344827,
+        "center_l2_normalized": 0.07291776189653656,
+        "pred_center_gt_box": true,
+        "box_location": "middle_center",
+        "grid_from_box_matches_gt": true
+      },
+      {
+        "index": 10252,
+        "category": "pcb2",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb2/Data/Images/Anomaly/023.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [478, 200, 522, 240], \"location\": \"middle_center\"}",
+        "target_bbox": [
+          136,
+          547,
+          250,
+          631
+        ],
+        "target_location": "middle_left",
+        "pred_bbox": [
+          478,
+          200,
+          522,
+          240
+        ],
+        "pred_location": "middle_center",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.00176,
+        "gt_area_fraction": 0.009576,
+        "pred_gt_area_ratio": 0.18379281537176273,
+        "center_l2_normalized": 0.4800104165536411,
+        "pred_center_gt_box": false,
+        "box_location": "top_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10254,
+        "category": "pcb2",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb2/Data/Images/Anomaly/029.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [488, 200, 552, 264], \"location\": \"middle_center\"}",
+        "target_bbox": [
+          180,
+          405,
+          247,
+          528
+        ],
+        "target_location": "middle_left",
+        "pred_bbox": [
+          488,
+          200,
+          552,
+          264
+        ],
+        "pred_location": "middle_center",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.004096,
+        "gt_area_fraction": 0.008241,
+        "pred_gt_area_ratio": 0.497027059822837,
+        "center_l2_normalized": 0.3859177373482592,
+        "pred_center_gt_box": false,
+        "box_location": "top_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10260,
+        "category": "pcb2",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb2/Data/Images/Anomaly/062.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [10, 10, 1000, 1000],\"location\":\"bottom_right\"}",
+        "target_bbox": [
+          205,
+          555,
+          254,
+          609
+        ],
+        "target_location": "middle_left",
+        "pred_bbox": [
+          10,
+          10,
+          1000,
+          1000
+        ],
+        "pred_location": "bottom_right",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.002699724517906336,
+        "pred_area_fraction": 0.9801,
+        "gt_area_fraction": 0.002646,
+        "pred_gt_area_ratio": 370.40816326530614,
+        "center_l2_normalized": 0.2860581234644456,
+        "pred_center_gt_box": false,
+        "box_location": "middle_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10261,
+        "category": "pcb2",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb2/Data/Images/Anomaly/063.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [222, 222, 300, 300],\"location\":\"middle_left\"}",
+        "target_bbox": [
+          574,
+          614,
+          669,
+          704
+        ],
+        "target_location": "middle_center",
+        "pred_bbox": [
+          222,
+          222,
+          300,
+          300
+        ],
+        "pred_location": "middle_left",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.006084,
+        "gt_area_fraction": 0.00855,
+        "pred_gt_area_ratio": 0.7115789473684211,
+        "center_l2_normalized": 0.536995577262979,
+        "pred_center_gt_box": false,
+        "box_location": "top_left",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10262,
+        "category": "pcb2",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb2/Data/Images/Anomaly/065.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [220, 220, 320, 320],\"location\":\"middle_left\"}",
+        "target_bbox": [
+          641,
+          583,
+          698,
+          675
+        ],
+        "target_location": "middle_right",
+        "pred_bbox": [
+          220,
+          220,
+          320,
+          320
+        ],
+        "pred_location": "middle_left",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.01,
+        "gt_area_fraction": 0.005244,
+        "pred_gt_area_ratio": 1.9069412662090008,
+        "center_l2_normalized": 0.5371045056597459,
+        "pred_center_gt_box": false,
+        "box_location": "top_left",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10263,
+        "category": "pcb2",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb2/Data/Images/Anomaly/070.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [23, 10, 1000, 984],\"location\":\"bottom_right\"}",
+        "target_bbox": [
+          383,
+          633,
+          421,
+          707
+        ],
+        "target_location": "bottom_center",
+        "pred_bbox": [
+          23,
+          10,
+          1000,
+          984
+        ],
+        "pred_location": "bottom_right",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.002955029329611874,
+        "pred_area_fraction": 0.951598,
+        "gt_area_fraction": 0.002812,
+        "pred_gt_area_ratio": 338.40611664295875,
+        "center_l2_normalized": 0.2047419107071144,
+        "pred_center_gt_box": false,
+        "box_location": "middle_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10264,
+        "category": "pcb2",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb2/Data/Images/Anomaly/089.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [10, 10, 1000, 1000],\"location\":\"bottom_right\"}",
+        "target_bbox": [
+          128,
+          614,
+          262,
+          710
+        ],
+        "target_location": "middle_left",
+        "pred_bbox": [
+          10,
+          10,
+          1000,
+          1000
+        ],
+        "pred_location": "bottom_right",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.013125191307009489,
+        "pred_area_fraction": 0.9801,
+        "gt_area_fraction": 0.012864,
+        "pred_gt_area_ratio": 76.1893656716418,
+        "center_l2_normalized": 0.3474895681887443,
+        "pred_center_gt_box": false,
+        "box_location": "middle_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10284,
+        "category": "pcb3",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb3/Data/Images/Anomaly/003.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [10, 10, 1000, 1000],\"location\":\"bottom_right\"}",
+        "target_bbox": [
+          272,
+          414,
+          347,
+          588
+        ],
+        "target_location": "middle_left",
+        "pred_bbox": [
+          10,
+          10,
+          1000,
+          1000
+        ],
+        "pred_location": "bottom_right",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.013314967860422406,
+        "pred_area_fraction": 0.9801,
+        "gt_area_fraction": 0.01305,
+        "pred_gt_area_ratio": 75.10344827586206,
+        "center_l2_normalized": 0.1955409164343872,
+        "pred_center_gt_box": false,
+        "box_location": "middle_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10285,
+        "category": "pcb3",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb3/Data/Images/Anomaly/005.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [273, 273, 345, 345],\"location\":\"middle_left\"}",
+        "target_bbox": [
+          546,
+          347,
+          707,
+          492
+        ],
+        "target_location": "middle_center",
+        "pred_bbox": [
+          273,
+          273,
+          345,
+          345
+        ],
+        "pred_location": "middle_left",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.005184,
+        "gt_area_fraction": 0.023345,
+        "pred_gt_area_ratio": 0.22206039837224245,
+        "center_l2_normalized": 0.33617926765343514,
+        "pred_center_gt_box": false,
+        "box_location": "top_left",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10286,
+        "category": "pcb3",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb3/Data/Images/Anomaly/007.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [10, 10, 1000, 1000],\"location\":\"bottom_right\"}",
+        "target_bbox": [
+          195,
+          464,
+          283,
+          581
+        ],
+        "target_location": "middle_left",
+        "pred_bbox": [
+          10,
+          10,
+          1000,
+          1000
+        ],
+        "pred_location": "bottom_right",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.010505050505050505,
+        "pred_area_fraction": 0.9801,
+        "gt_area_fraction": 0.010296,
+        "pred_gt_area_ratio": 95.1923076923077,
+        "center_l2_normalized": 0.2665750363406146,
+        "pred_center_gt_box": false,
+        "box_location": "middle_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10287,
+        "category": "pcb3",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb3/Data/Images/Anomaly/024.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [222, 222, 333, 333], \"location\": \"middle_left\"}",
+        "target_bbox": [
+          568,
+          429,
+          627,
+          634
+        ],
+        "target_location": "middle_center",
+        "pred_bbox": [
+          222,
+          222,
+          333,
+          333
+        ],
+        "pred_location": "middle_left",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.012321,
+        "gt_area_fraction": 0.012095,
+        "pred_gt_area_ratio": 1.018685407193055,
+        "center_l2_normalized": 0.40855354606220223,
+        "pred_center_gt_box": false,
+        "box_location": "top_left",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10294,
+        "category": "pcb3",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb3/Data/Images/Anomaly/060.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [222, 222, 333, 333], \"location\": \"middle_left\"}",
+        "target_bbox": [
+          523,
+          548,
+          680,
+          668
+        ],
+        "target_location": "middle_center",
+        "pred_bbox": [
+          222,
+          222,
+          333,
+          333
+        ],
+        "pred_location": "middle_left",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.012321,
+        "gt_area_fraction": 0.01884,
+        "pred_gt_area_ratio": 0.6539808917197453,
+        "center_l2_normalized": 0.4628242106891125,
+        "pred_center_gt_box": false,
+        "box_location": "top_left",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10313,
+        "category": "pcb4",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Anomaly/000.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [305, 205, 375, 275], \"location\": \"middle_left\"}",
+        "target_bbox": [
+          192,
+          240,
+          714,
+          674
+        ],
+        "target_location": "middle_center",
+        "pred_bbox": [
+          305,
+          205,
+          375,
+          275
+        ],
+        "pred_location": "middle_left",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.01069878339548817,
+        "pred_area_fraction": 0.0049,
+        "gt_area_fraction": 0.226548,
+        "pred_gt_area_ratio": 0.021628970461006057,
+        "center_l2_normalized": 0.24465894629054544,
+        "pred_center_gt_box": true,
+        "box_location": "top_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10314,
+        "category": "pcb4",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Anomaly/003.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [26, 10, 1000, 984],\"location\":\"bottom_right\"}",
+        "target_bbox": [
+          240,
+          276,
+          582,
+          551
+        ],
+        "target_location": "middle_center",
+        "pred_bbox": [
+          26,
+          10,
+          1000,
+          984
+        ],
+        "pred_location": "bottom_right",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.09913816729842433,
+        "pred_area_fraction": 0.948676,
+        "gt_area_fraction": 0.09405,
+        "pred_gt_area_ratio": 10.086932482721956,
+        "center_l2_normalized": 0.1318190046996259,
+        "pred_center_gt_box": true,
+        "box_location": "middle_center",
+        "grid_from_box_matches_gt": true
+      },
+      {
+        "index": 10315,
+        "category": "pcb4",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Anomaly/004.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [488, 205, 550, 263], \"location\": \"middle_right\"}",
+        "target_bbox": [
+          235,
+          333,
+          550,
+          565
+        ],
+        "target_location": "middle_center",
+        "pred_bbox": [
+          488,
+          205,
+          550,
+          263
+        ],
+        "pred_location": "middle_right",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.003596,
+        "gt_area_fraction": 0.07308,
+        "pred_gt_area_ratio": 0.049206349206349205,
+        "center_l2_normalized": 0.24945390355735067,
+        "pred_center_gt_box": false,
+        "box_location": "top_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10316,
+        "category": "pcb4",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Anomaly/008.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [321, 22, 425, 127], \"location\": \"top_right\"}",
+        "target_bbox": [
+          530,
+          530,
+          603,
+          645
+        ],
+        "target_location": "middle_center",
+        "pred_bbox": [
+          321,
+          22,
+          425,
+          127
+        ],
+        "pred_location": "top_right",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.01092,
+        "gt_area_fraction": 0.008395,
+        "pred_gt_area_ratio": 1.300774270399047,
+        "center_l2_normalized": 0.5482802659224568,
+        "pred_center_gt_box": false,
+        "box_location": "top_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10317,
+        "category": "pcb4",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Anomaly/010.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [478, 273, 522, 328],\"location\": \"middle_center\"}",
+        "target_bbox": [
+          230,
+          298,
+          590,
+          521
+        ],
+        "target_location": "middle_center",
+        "pred_bbox": [
+          478,
+          273,
+          522,
+          328
+        ],
+        "pred_location": "middle_center",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0162202015237159,
+        "pred_area_fraction": 0.00242,
+        "gt_area_fraction": 0.08028,
+        "pred_gt_area_ratio": 0.03014449427005481,
+        "center_l2_normalized": 0.14135416513141735,
+        "pred_center_gt_box": true,
+        "box_location": "top_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10318,
+        "category": "pcb4",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Anomaly/012.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [300, 100, 700, 300],\"location\":\"middle_center\"}",
+        "target_bbox": [
+          229,
+          357,
+          300,
+          427
+        ],
+        "target_location": "middle_left",
+        "pred_bbox": [
+          300,
+          100,
+          700,
+          300
+        ],
+        "pred_location": "middle_center",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.08,
+        "gt_area_fraction": 0.00497,
+        "pred_gt_area_ratio": 16.096579476861166,
+        "center_l2_normalized": 0.30384905792185696,
+        "pred_center_gt_box": false,
+        "box_location": "top_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10320,
+        "category": "pcb4",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Anomaly/018.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [328, 26, 400, 100],\"location\":\"middle_left\"}",
+        "target_bbox": [
+          620,
+          453,
+          718,
+          584
+        ],
+        "target_location": "middle_right",
+        "pred_bbox": [
+          328,
+          26,
+          400,
+          100
+        ],
+        "pred_location": "middle_left",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.005328,
+        "gt_area_fraction": 0.012838,
+        "pred_gt_area_ratio": 0.41501791556317186,
+        "center_l2_normalized": 0.548183591509268,
+        "pred_center_gt_box": false,
+        "box_location": "top_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10321,
+        "category": "pcb4",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Anomaly/025.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [33, 10, 967, 990],\"location\":\"bottom_center\"}",
+        "target_bbox": [
+          335,
+          240,
+          444,
+          319
+        ],
+        "target_location": "top_center",
+        "pred_bbox": [
+          33,
+          10,
+          967,
+          990
+        ],
+        "pred_location": "bottom_center",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.009407638858541276,
+        "pred_area_fraction": 0.91532,
+        "gt_area_fraction": 0.008611,
+        "pred_gt_area_ratio": 106.29659737545,
+        "center_l2_normalized": 0.24663839928121492,
+        "pred_center_gt_box": false,
+        "box_location": "middle_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10322,
+        "category": "pcb4",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Anomaly/026.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [305, 205, 400, 305],\"location\":\"middle_left\"}",
+        "target_bbox": [
+          374,
+          359,
+          565,
+          687
+        ],
+        "target_location": "middle_center",
+        "pred_bbox": [
+          305,
+          205,
+          400,
+          305
+        ],
+        "pred_location": "middle_left",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.0095,
+        "gt_area_fraction": 0.062648,
+        "pred_gt_area_ratio": 0.15164091431490231,
+        "center_l2_normalized": 0.2924260590303128,
+        "pred_center_gt_box": false,
+        "box_location": "top_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10323,
+        "category": "pcb4",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Anomaly/036.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [26, 13, 1000, 987],\"location\":\"bottom_right\"}",
+        "target_bbox": [
+          351,
+          240,
+          575,
+          458
+        ],
+        "target_location": "middle_center",
+        "pred_bbox": [
+          26,
+          13,
+          1000,
+          987
+        ],
+        "pred_location": "bottom_right",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.051473843546163286,
+        "pred_area_fraction": 0.948676,
+        "gt_area_fraction": 0.048832,
+        "pred_gt_area_ratio": 19.427342726081257,
+        "center_l2_normalized": 0.1590628806478746,
+        "pred_center_gt_box": false,
+        "box_location": "middle_center",
+        "grid_from_box_matches_gt": true
+      },
+      {
+        "index": 10324,
+        "category": "pcb4",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Anomaly/037.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [27, 10, 1000, 984],\"location\":\"bottom_right\"}",
+        "target_bbox": [
+          278,
+          228,
+          422,
+          357
+        ],
+        "target_location": "top_center",
+        "pred_bbox": [
+          27,
+          10,
+          1000,
+          984
+        ],
+        "pred_location": "bottom_right",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.019601098235521294,
+        "pred_area_fraction": 0.947702,
+        "gt_area_fraction": 0.018576,
+        "pred_gt_area_ratio": 51.01754952627046,
+        "center_l2_normalized": 0.2618253234505784,
+        "pred_center_gt_box": false,
+        "box_location": "middle_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10329,
+        "category": "pcb4",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Anomaly/052.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [372, 205, 420, 255], \"location\": \"middle_center\"}",
+        "target_bbox": [
+          215,
+          311,
+          674,
+          541
+        ],
+        "target_location": "middle_center",
+        "pred_bbox": [
+          372,
+          205,
+          420,
+          255
+        ],
+        "pred_location": "middle_center",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.0024,
+        "gt_area_fraction": 0.10557,
+        "pred_gt_area_ratio": 0.022733731173628872,
+        "center_l2_normalized": 0.20191149051007473,
+        "pred_center_gt_box": false,
+        "box_location": "top_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10330,
+        "category": "pcb4",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Anomaly/053.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [372, 208, 424, 256], \"location\": \"middle_center\"}",
+        "target_bbox": [
+          171,
+          281,
+          509,
+          577
+        ],
+        "target_location": "middle_center",
+        "pred_bbox": [
+          372,
+          208,
+          424,
+          256
+        ],
+        "pred_location": "middle_center",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.002496,
+        "gt_area_fraction": 0.100048,
+        "pred_gt_area_ratio": 0.02494802494802495,
+        "center_l2_normalized": 0.20536065835500236,
+        "pred_center_gt_box": false,
+        "box_location": "top_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10331,
+        "category": "pcb4",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Anomaly/068.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [305, 20, 400, 100],\"location\":\"middle_left\"}",
+        "target_bbox": [
+          212,
+          371,
+          540,
+          605
+        ],
+        "target_location": "middle_center",
+        "pred_bbox": [
+          305,
+          20,
+          400,
+          100
+        ],
+        "pred_location": "middle_left",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.0076,
+        "gt_area_fraction": 0.076752,
+        "pred_gt_area_ratio": 0.09902022097144049,
+        "center_l2_normalized": 0.4286446663613115,
+        "pred_center_gt_box": false,
+        "box_location": "top_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10333,
+        "category": "pcb4",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Anomaly/081.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [488, 205, 550, 263], \"location\": \"middle_right\"}",
+        "target_bbox": [
+          197,
+          359,
+          537,
+          688
+        ],
+        "target_location": "middle_center",
+        "pred_bbox": [
+          488,
+          205,
+          550,
+          263
+        ],
+        "pred_location": "middle_right",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.003596,
+        "gt_area_fraction": 0.11186,
+        "pred_gt_area_ratio": 0.03214732701591275,
+        "center_l2_normalized": 0.3269774457053575,
+        "pred_center_gt_box": false,
+        "box_location": "top_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10334,
+        "category": "pcb4",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Anomaly/082.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [308, 280, 400, 400],\"location\":\"middle_left\"}",
+        "target_bbox": [
+          217,
+          329,
+          637,
+          554
+        ],
+        "target_location": "middle_center",
+        "pred_bbox": [
+          308,
+          280,
+          400,
+          400
+        ],
+        "pred_location": "middle_left",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.06597446670976083,
+        "pred_area_fraction": 0.01104,
+        "gt_area_fraction": 0.0945,
+        "pred_gt_area_ratio": 0.11682539682539683,
+        "center_l2_normalized": 0.1250249975004999,
+        "pred_center_gt_box": true,
+        "box_location": "middle_center",
+        "grid_from_box_matches_gt": true
+      },
+      {
+        "index": 10335,
+        "category": "pcb4",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Anomaly/087.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [385, 205, 445, 275],\"location\":\"middle_right\"}",
+        "target_bbox": [
+          200,
+          307,
+          760,
+          579
+        ],
+        "target_location": "middle_center",
+        "pred_bbox": [
+          385,
+          205,
+          445,
+          275
+        ],
+        "pred_location": "middle_right",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.0042,
+        "gt_area_fraction": 0.15232,
+        "pred_gt_area_ratio": 0.027573529411764705,
+        "center_l2_normalized": 0.21315252754776332,
+        "pred_center_gt_box": false,
+        "box_location": "top_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10337,
+        "category": "pcb4",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Anomaly/098.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [372, 205, 420, 255],\"location\":\"middle_center\"}",
+        "target_bbox": [
+          211,
+          317,
+          672,
+          559
+        ],
+        "target_location": "middle_center",
+        "pred_bbox": [
+          372,
+          205,
+          420,
+          255
+        ],
+        "pred_location": "middle_center",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.0024,
+        "gt_area_fraction": 0.111562,
+        "pred_gt_area_ratio": 0.021512701457485524,
+        "center_l2_normalized": 0.2129184116040696,
+        "pred_center_gt_box": false,
+        "box_location": "top_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10345,
+        "category": "pipe_fryum",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pipe_fryum/Data/Images/Anomaly/000.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [273, 273, 355, 375], \"location\": \"middle_left\"}",
+        "target_bbox": [
+          600,
+          480,
+          637,
+          551
+        ],
+        "target_location": "middle_center",
+        "pred_bbox": [
+          273,
+          273,
+          355,
+          375
+        ],
+        "pred_location": "middle_left",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.008364,
+        "gt_area_fraction": 0.002627,
+        "pred_gt_area_ratio": 3.1838599162542827,
+        "center_l2_normalized": 0.35971169010750814,
+        "pred_center_gt_box": false,
+        "box_location": "top_left",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10346,
+        "category": "pipe_fryum",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pipe_fryum/Data/Images/Anomaly/003.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [283, 283, 385, 400],\"location\":\"middle_left\"}",
+        "target_bbox": [
+          489,
+          542,
+          568,
+          591
+        ],
+        "target_location": "middle_center",
+        "pred_bbox": [
+          283,
+          283,
+          385,
+          400
+        ],
+        "pred_location": "middle_left",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.011934,
+        "gt_area_fraction": 0.003871,
+        "pred_gt_area_ratio": 3.082924308964092,
+        "center_l2_normalized": 0.2974142733629306,
+        "pred_center_gt_box": false,
+        "box_location": "middle_center",
+        "grid_from_box_matches_gt": true
+      },
+      {
+        "index": 10348,
+        "category": "pipe_fryum",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pipe_fryum/Data/Images/Anomaly/024.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [23, 10, 1000, 984],\"location\":\"bottom_right\"}",
+        "target_bbox": [
+          316,
+          545,
+          337,
+          627
+        ],
+        "target_location": "middle_left",
+        "pred_bbox": [
+          23,
+          10,
+          1000,
+          984
+        ],
+        "pred_location": "bottom_right",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0018095876620169442,
+        "pred_area_fraction": 0.951598,
+        "gt_area_fraction": 0.001722,
+        "pred_gt_area_ratio": 552.6120789779326,
+        "center_l2_normalized": 0.2052949098248663,
+        "pred_center_gt_box": false,
+        "box_location": "middle_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10350,
+        "category": "pipe_fryum",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pipe_fryum/Data/Images/Anomaly/027.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [385, 283, 485, 425], \"location\": \"middle_right\"}",
+        "target_bbox": [
+          684,
+          548,
+          721,
+          624
+        ],
+        "target_location": "middle_right",
+        "pred_bbox": [
+          385,
+          283,
+          485,
+          425
+        ],
+        "pred_location": "middle_right",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.0142,
+        "gt_area_fraction": 0.002812,
+        "pred_gt_area_ratio": 5.049786628733997,
+        "center_l2_normalized": 0.35409073695876314,
+        "pred_center_gt_box": false,
+        "box_location": "middle_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10352,
+        "category": "pipe_fryum",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pipe_fryum/Data/Images/Anomaly/038.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [385, 300, 485, 400], \"location\": \"middle_right\"}",
+        "target_bbox": [
+          326,
+          488,
+          688,
+          617
+        ],
+        "target_location": "middle_center",
+        "pred_bbox": [
+          385,
+          300,
+          485,
+          400
+        ],
+        "pred_location": "middle_right",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.01,
+        "gt_area_fraction": 0.046698,
+        "pred_gt_area_ratio": 0.21414193327337358,
+        "center_l2_normalized": 0.21491917085267195,
+        "pred_center_gt_box": false,
+        "box_location": "middle_center",
+        "grid_from_box_matches_gt": true
+      },
+      {
+        "index": 10355,
+        "category": "pipe_fryum",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pipe_fryum/Data/Images/Anomaly/050.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [283, 10, 385, 1000],\"location\":\"middle_left\"}",
+        "target_bbox": [
+          362,
+          537,
+          387,
+          565
+        ],
+        "target_location": "middle_center",
+        "pred_bbox": [
+          283,
+          10,
+          385,
+          1000
+        ],
+        "pred_location": "middle_left",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.006373965715190625,
+        "pred_area_fraction": 0.10098,
+        "gt_area_fraction": 0.0007,
+        "pred_gt_area_ratio": 144.25714285714287,
+        "center_l2_normalized": 0.06128825336065631,
+        "pred_center_gt_box": false,
+        "box_location": "middle_center",
+        "grid_from_box_matches_gt": true
+      },
+      {
+        "index": 10356,
+        "category": "pipe_fryum",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pipe_fryum/Data/Images/Anomaly/055.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [329, 274, 425, 400], \"location\": \"middle_right\"}",
+        "target_bbox": [
+          653,
+          499,
+          671,
+          531
+        ],
+        "target_location": "middle_center",
+        "pred_bbox": [
+          329,
+          274,
+          425,
+          400
+        ],
+        "pred_location": "middle_right",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.012096,
+        "gt_area_fraction": 0.000576,
+        "pred_gt_area_ratio": 21.0,
+        "center_l2_normalized": 0.3360193446812252,
+        "pred_center_gt_box": false,
+        "box_location": "middle_center",
+        "grid_from_box_matches_gt": true
+      },
+      {
+        "index": 10362,
+        "category": "pipe_fryum",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pipe_fryum/Data/Images/Anomaly/093.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\": [26, 10, 1000, 984],\"location\":\"bottom_right\"}",
+        "target_bbox": [
+          245,
+          312,
+          780,
+          649
+        ],
+        "target_location": "middle_center",
+        "pred_bbox": [
+          26,
+          10,
+          1000,
+          984
+        ],
+        "pred_location": "bottom_right",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.1900490789268412,
+        "pred_area_fraction": 0.948676,
+        "gt_area_fraction": 0.180295,
+        "pred_gt_area_ratio": 5.261798718766466,
+        "center_l2_normalized": 0.01650757401921918,
+        "pred_center_gt_box": true,
+        "box_location": "middle_center",
+        "grid_from_box_matches_gt": true
+      }
+    ],
+    "best": [
+      {
+        "index": 10010,
+        "category": "candle",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Anomaly/053.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\":[220,300,252,345],\"location\":\"middle_left\"}",
+        "target_bbox": [
+          176,
+          145,
+          363,
+          847
+        ],
+        "target_location": "middle_left",
+        "pred_bbox": [
+          220,
+          300,
+          252,
+          345
+        ],
+        "pred_location": "middle_left",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.010969422734128617,
+        "pred_area_fraction": 0.00144,
+        "gt_area_fraction": 0.131274,
+        "pred_gt_area_ratio": 0.010969422734128617,
+        "center_l2_normalized": 0.17670455568547178,
+        "pred_center_gt_box": true,
+        "box_location": "top_left",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10106,
+        "category": "fryum",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/fryum/Data/Images/Anomaly/007.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\":[600,300,650,360],\"location\":\"middle_center\"}",
+        "target_bbox": [
+          462,
+          222,
+          701,
+          463
+        ],
+        "target_location": "middle_center",
+        "pred_bbox": [
+          600,
+          300,
+          650,
+          360
+        ],
+        "pred_location": "middle_center",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.05208423757356898,
+        "pred_area_fraction": 0.003,
+        "gt_area_fraction": 0.057599,
+        "pred_gt_area_ratio": 0.05208423757356898,
+        "center_l2_normalized": 0.04526035793053342,
+        "pred_center_gt_box": true,
+        "box_location": "top_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10119,
+        "category": "fryum",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/fryum/Data/Images/Anomaly/057.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\":[600,300,650,360],\"location\":\"middle_center\"}",
+        "target_bbox": [
+          280,
+          207,
+          674,
+          776
+        ],
+        "target_location": "middle_center",
+        "pred_bbox": [
+          600,
+          300,
+          650,
+          360
+        ],
+        "pred_location": "middle_center",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.013381745514884962,
+        "pred_area_fraction": 0.003,
+        "gt_area_fraction": 0.224186,
+        "pred_gt_area_ratio": 0.013381745514884962,
+        "center_l2_normalized": 0.21905764081629292,
+        "pred_center_gt_box": true,
+        "box_location": "top_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10146,
+        "category": "macaroni1",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni1/Data/Images/Anomaly/025.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\":[600,300,630,345],\"location\":\"middle_center\"}",
+        "target_bbox": [
+          702,
+          346,
+          726,
+          367
+        ],
+        "target_location": "middle_right",
+        "pred_bbox": [
+          600,
+          300,
+          630,
+          345
+        ],
+        "pred_location": "middle_center",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.00135,
+        "gt_area_fraction": 0.000504,
+        "pred_gt_area_ratio": 2.6785714285714284,
+        "center_l2_normalized": 0.10467568963231147,
+        "pred_center_gt_box": false,
+        "box_location": "top_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10151,
+        "category": "macaroni1",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni1/Data/Images/Anomaly/053.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\":[200,300,236,350],\"location\":\"middle_left\"}",
+        "target_bbox": [
+          229,
+          204,
+          271,
+          237
+        ],
+        "target_location": "top_left",
+        "pred_bbox": [
+          200,
+          300,
+          236,
+          350
+        ],
+        "pred_location": "middle_left",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.0018,
+        "gt_area_fraction": 0.001386,
+        "pred_gt_area_ratio": 1.2987012987012987,
+        "center_l2_normalized": 0.109289752493086,
+        "pred_center_gt_box": false,
+        "box_location": "top_left",
+        "grid_from_box_matches_gt": true
+      },
+      {
+        "index": 10154,
+        "category": "macaroni1",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni1/Data/Images/Anomaly/068.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\":[600,300,630,345],\"location\":\"middle_center\"}",
+        "target_bbox": [
+          670,
+          330,
+          716,
+          356
+        ],
+        "target_location": "middle_right",
+        "pred_bbox": [
+          600,
+          300,
+          630,
+          345
+        ],
+        "pred_location": "middle_center",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.00135,
+        "gt_area_fraction": 0.001196,
+        "pred_gt_area_ratio": 1.12876254180602,
+        "center_l2_normalized": 0.08064893055707559,
+        "pred_center_gt_box": false,
+        "box_location": "top_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10192,
+        "category": "macaroni2",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni2/Data/Images/Anomaly/039.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\":[200,300,220,325],\"location\":\"middle_left\"}",
+        "target_bbox": [
+          188,
+          428,
+          203,
+          444
+        ],
+        "target_location": "middle_left",
+        "pred_bbox": [
+          200,
+          300,
+          220,
+          325
+        ],
+        "pred_location": "middle_left",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.0005,
+        "gt_area_fraction": 0.00024,
+        "pred_gt_area_ratio": 2.0833333333333335,
+        "center_l2_normalized": 0.12434830115445888,
+        "pred_center_gt_box": false,
+        "box_location": "top_left",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10200,
+        "category": "macaroni2",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni2/Data/Images/Anomaly/083.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\":[200,300,226,330],\"location\":\"middle_left\"}",
+        "target_bbox": [
+          173,
+          167,
+          240,
+          406
+        ],
+        "target_location": "top_left",
+        "pred_bbox": [
+          200,
+          300,
+          226,
+          330
+        ],
+        "pred_location": "middle_left",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.04871042278149004,
+        "pred_area_fraction": 0.00078,
+        "gt_area_fraction": 0.016013,
+        "pred_gt_area_ratio": 0.04871042278149004,
+        "center_l2_normalized": 0.02923183196448693,
+        "pred_center_gt_box": true,
+        "box_location": "top_left",
+        "grid_from_box_matches_gt": true
+      },
+      {
+        "index": 10222,
+        "category": "pcb1",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb1/Data/Images/Anomaly/036.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\":[420,626,500,700],\"location\":\"bottom_center\"}",
+        "target_bbox": [
+          452,
+          647,
+          511,
+          703
+        ],
+        "target_location": "bottom_center",
+        "pred_bbox": [
+          420,
+          626,
+          500,
+          700
+        ],
+        "pred_location": "bottom_center",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.38083832335329343,
+        "pred_area_fraction": 0.00592,
+        "gt_area_fraction": 0.003304,
+        "pred_gt_area_ratio": 1.791767554479419,
+        "center_l2_normalized": 0.02462214450449026,
+        "pred_center_gt_box": true,
+        "box_location": "middle_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10225,
+        "category": "pcb1",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb1/Data/Images/Anomaly/073.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\":[260,300,320,360],\"location\":\"middle_left\"}",
+        "target_bbox": [
+          405,
+          297,
+          564,
+          780
+        ],
+        "target_location": "middle_center",
+        "pred_bbox": [
+          260,
+          300,
+          320,
+          360
+        ],
+        "pred_location": "middle_left",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.0036,
+        "gt_area_fraction": 0.076797,
+        "pred_gt_area_ratio": 0.046876831126215865,
+        "center_l2_normalized": 0.2851359324953626,
+        "pred_center_gt_box": false,
+        "box_location": "top_left",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10284,
+        "category": "pcb3",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb3/Data/Images/Anomaly/003.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\":[320,400,372,460],\"location\":\"middle_left\"}",
+        "target_bbox": [
+          272,
+          414,
+          347,
+          588
+        ],
+        "target_location": "middle_left",
+        "pred_bbox": [
+          320,
+          400,
+          372,
+          460
+        ],
+        "pred_location": "middle_left",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.08319935691318328,
+        "pred_area_fraction": 0.00312,
+        "gt_area_fraction": 0.01305,
+        "pred_gt_area_ratio": 0.23908045977011494,
+        "center_l2_normalized": 0.07983263743607623,
+        "pred_center_gt_box": true,
+        "box_location": "middle_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10323,
+        "category": "pcb4",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Anomaly/036.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\":[220,226,400,400],\"location\":\"middle_left\"}",
+        "target_bbox": [
+          351,
+          240,
+          575,
+          458
+        ],
+        "target_location": "middle_center",
+        "pred_bbox": [
+          220,
+          226,
+          400,
+          400
+        ],
+        "pred_location": "middle_left",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.10841907290629495,
+        "pred_area_fraction": 0.03132,
+        "gt_area_fraction": 0.048832,
+        "pred_gt_area_ratio": 0.6413826998689384,
+        "center_l2_normalized": 0.15717824276915685,
+        "pred_center_gt_box": false,
+        "box_location": "top_left",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10362,
+        "category": "pipe_fryum",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pipe_fryum/Data/Images/Anomaly/093.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\":[320,400,372,463],\"location\":\"middle_left\"}",
+        "target_bbox": [
+          245,
+          312,
+          780,
+          649
+        ],
+        "target_location": "middle_center",
+        "pred_bbox": [
+          320,
+          400,
+          372,
+          463
+        ],
+        "pred_location": "middle_left",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.018170221026650765,
+        "pred_area_fraction": 0.003276,
+        "gt_area_fraction": 0.180295,
+        "pred_gt_area_ratio": 0.018170221026650765,
+        "center_l2_normalized": 0.17356050818086471,
+        "pred_center_gt_box": true,
+        "box_location": "middle_center",
+        "grid_from_box_matches_gt": true
+      }
+    ],
+    "final": [
+      {
+        "index": 10010,
+        "category": "candle",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Anomaly/053.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\":[220,300,252,345],\"location\":\"middle_left\"}",
+        "target_bbox": [
+          176,
+          145,
+          363,
+          847
+        ],
+        "target_location": "middle_left",
+        "pred_bbox": [
+          220,
+          300,
+          252,
+          345
+        ],
+        "pred_location": "middle_left",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.010969422734128617,
+        "pred_area_fraction": 0.00144,
+        "gt_area_fraction": 0.131274,
+        "pred_gt_area_ratio": 0.010969422734128617,
+        "center_l2_normalized": 0.17670455568547178,
+        "pred_center_gt_box": true,
+        "box_location": "top_left",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10106,
+        "category": "fryum",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/fryum/Data/Images/Anomaly/007.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\":[600,300,650,360],\"location\":\"middle_center\"}",
+        "target_bbox": [
+          462,
+          222,
+          701,
+          463
+        ],
+        "target_location": "middle_center",
+        "pred_bbox": [
+          600,
+          300,
+          650,
+          360
+        ],
+        "pred_location": "middle_center",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.05208423757356898,
+        "pred_area_fraction": 0.003,
+        "gt_area_fraction": 0.057599,
+        "pred_gt_area_ratio": 0.05208423757356898,
+        "center_l2_normalized": 0.04526035793053342,
+        "pred_center_gt_box": true,
+        "box_location": "top_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10119,
+        "category": "fryum",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/fryum/Data/Images/Anomaly/057.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\":[600,300,650,360],\"location\":\"middle_center\"}",
+        "target_bbox": [
+          280,
+          207,
+          674,
+          776
+        ],
+        "target_location": "middle_center",
+        "pred_bbox": [
+          600,
+          300,
+          650,
+          360
+        ],
+        "pred_location": "middle_center",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.013381745514884962,
+        "pred_area_fraction": 0.003,
+        "gt_area_fraction": 0.224186,
+        "pred_gt_area_ratio": 0.013381745514884962,
+        "center_l2_normalized": 0.21905764081629292,
+        "pred_center_gt_box": true,
+        "box_location": "top_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10146,
+        "category": "macaroni1",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni1/Data/Images/Anomaly/025.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\":[600,300,630,345],\"location\":\"middle_center\"}",
+        "target_bbox": [
+          702,
+          346,
+          726,
+          367
+        ],
+        "target_location": "middle_right",
+        "pred_bbox": [
+          600,
+          300,
+          630,
+          345
+        ],
+        "pred_location": "middle_center",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.00135,
+        "gt_area_fraction": 0.000504,
+        "pred_gt_area_ratio": 2.6785714285714284,
+        "center_l2_normalized": 0.10467568963231147,
+        "pred_center_gt_box": false,
+        "box_location": "top_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10151,
+        "category": "macaroni1",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni1/Data/Images/Anomaly/053.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\":[200,300,236,350],\"location\":\"middle_left\"}",
+        "target_bbox": [
+          229,
+          204,
+          271,
+          237
+        ],
+        "target_location": "top_left",
+        "pred_bbox": [
+          200,
+          300,
+          236,
+          350
+        ],
+        "pred_location": "middle_left",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.0018,
+        "gt_area_fraction": 0.001386,
+        "pred_gt_area_ratio": 1.2987012987012987,
+        "center_l2_normalized": 0.109289752493086,
+        "pred_center_gt_box": false,
+        "box_location": "top_left",
+        "grid_from_box_matches_gt": true
+      },
+      {
+        "index": 10154,
+        "category": "macaroni1",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni1/Data/Images/Anomaly/068.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\":[600,300,630,345],\"location\":\"middle_center\"}",
+        "target_bbox": [
+          670,
+          330,
+          716,
+          356
+        ],
+        "target_location": "middle_right",
+        "pred_bbox": [
+          600,
+          300,
+          630,
+          345
+        ],
+        "pred_location": "middle_center",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.00135,
+        "gt_area_fraction": 0.001196,
+        "pred_gt_area_ratio": 1.12876254180602,
+        "center_l2_normalized": 0.08064893055707559,
+        "pred_center_gt_box": false,
+        "box_location": "top_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10192,
+        "category": "macaroni2",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni2/Data/Images/Anomaly/039.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\":[200,300,220,325],\"location\":\"middle_left\"}",
+        "target_bbox": [
+          188,
+          428,
+          203,
+          444
+        ],
+        "target_location": "middle_left",
+        "pred_bbox": [
+          200,
+          300,
+          220,
+          325
+        ],
+        "pred_location": "middle_left",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.0005,
+        "gt_area_fraction": 0.00024,
+        "pred_gt_area_ratio": 2.0833333333333335,
+        "center_l2_normalized": 0.12434830115445888,
+        "pred_center_gt_box": false,
+        "box_location": "top_left",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10200,
+        "category": "macaroni2",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni2/Data/Images/Anomaly/083.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\":[200,300,226,330],\"location\":\"middle_left\"}",
+        "target_bbox": [
+          173,
+          167,
+          240,
+          406
+        ],
+        "target_location": "top_left",
+        "pred_bbox": [
+          200,
+          300,
+          226,
+          330
+        ],
+        "pred_location": "middle_left",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.04871042278149004,
+        "pred_area_fraction": 0.00078,
+        "gt_area_fraction": 0.016013,
+        "pred_gt_area_ratio": 0.04871042278149004,
+        "center_l2_normalized": 0.02923183196448693,
+        "pred_center_gt_box": true,
+        "box_location": "top_left",
+        "grid_from_box_matches_gt": true
+      },
+      {
+        "index": 10222,
+        "category": "pcb1",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb1/Data/Images/Anomaly/036.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\":[420,626,500,700],\"location\":\"bottom_center\"}",
+        "target_bbox": [
+          452,
+          647,
+          511,
+          703
+        ],
+        "target_location": "bottom_center",
+        "pred_bbox": [
+          420,
+          626,
+          500,
+          700
+        ],
+        "pred_location": "bottom_center",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.38083832335329343,
+        "pred_area_fraction": 0.00592,
+        "gt_area_fraction": 0.003304,
+        "pred_gt_area_ratio": 1.791767554479419,
+        "center_l2_normalized": 0.02462214450449026,
+        "pred_center_gt_box": true,
+        "box_location": "middle_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10225,
+        "category": "pcb1",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb1/Data/Images/Anomaly/073.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\":[260,300,320,360],\"location\":\"middle_left\"}",
+        "target_bbox": [
+          405,
+          297,
+          564,
+          780
+        ],
+        "target_location": "middle_center",
+        "pred_bbox": [
+          260,
+          300,
+          320,
+          360
+        ],
+        "pred_location": "middle_left",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.0036,
+        "gt_area_fraction": 0.076797,
+        "pred_gt_area_ratio": 0.046876831126215865,
+        "center_l2_normalized": 0.2851359324953626,
+        "pred_center_gt_box": false,
+        "box_location": "top_left",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10284,
+        "category": "pcb3",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb3/Data/Images/Anomaly/003.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\":[320,400,372,460],\"location\":\"middle_left\"}",
+        "target_bbox": [
+          272,
+          414,
+          347,
+          588
+        ],
+        "target_location": "middle_left",
+        "pred_bbox": [
+          320,
+          400,
+          372,
+          460
+        ],
+        "pred_location": "middle_left",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.08319935691318328,
+        "pred_area_fraction": 0.00312,
+        "gt_area_fraction": 0.01305,
+        "pred_gt_area_ratio": 0.23908045977011494,
+        "center_l2_normalized": 0.07983263743607623,
+        "pred_center_gt_box": true,
+        "box_location": "middle_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10323,
+        "category": "pcb4",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Anomaly/036.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\":[220,226,400,400],\"location\":\"middle_left\"}",
+        "target_bbox": [
+          351,
+          240,
+          575,
+          458
+        ],
+        "target_location": "middle_center",
+        "pred_bbox": [
+          220,
+          226,
+          400,
+          400
+        ],
+        "pred_location": "middle_left",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.10841907290629495,
+        "pred_area_fraction": 0.03132,
+        "gt_area_fraction": 0.048832,
+        "pred_gt_area_ratio": 0.6413826998689384,
+        "center_l2_normalized": 0.15717824276915685,
+        "pred_center_gt_box": false,
+        "box_location": "top_left",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10362,
+        "category": "pipe_fryum",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pipe_fryum/Data/Images/Anomaly/093.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "location_bbox_internal_inconsistency"
+        ],
+        "generated": "Yes\n{\"bbox\":[320,400,372,463],\"location\":\"middle_left\"}",
+        "target_bbox": [
+          245,
+          312,
+          780,
+          649
+        ],
+        "target_location": "middle_center",
+        "pred_bbox": [
+          320,
+          400,
+          372,
+          463
+        ],
+        "pred_location": "middle_left",
+        "strict_valid": false,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.018170221026650765,
+        "pred_area_fraction": 0.003276,
+        "gt_area_fraction": 0.180295,
+        "pred_gt_area_ratio": 0.018170221026650765,
+        "center_l2_normalized": 0.17356050818086471,
+        "pred_center_gt_box": true,
+        "box_location": "middle_center",
+        "grid_from_box_matches_gt": true
+      }
+    ]
+  },
+  "examples": {
+    "best_zero_overlap": [
+      {
+        "index": 10003,
+        "category": "candle",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Anomaly/021.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "valid"
+        ],
+        "generated": "Yes\n{\"bbox\":[500,600,525,630],\"location\":\"middle_center\"}",
+        "target_bbox": [
+          563,
+          677,
+          599,
+          769
+        ],
+        "target_location": "bottom_center",
+        "pred_bbox": [
+          500,
+          600,
+          525,
+          630
+        ],
+        "pred_location": "middle_center",
+        "strict_valid": true,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.00075,
+        "gt_area_fraction": 0.003312,
+        "pred_gt_area_ratio": 0.22644927536231885,
+        "center_l2_normalized": 0.1278915556242866,
+        "pred_center_gt_box": false,
+        "box_location": "middle_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10004,
+        "category": "candle",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Anomaly/025.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "valid"
+        ],
+        "generated": "Yes\n{\"bbox\":[600,500,630,536],\"location\":\"middle_center\"}",
+        "target_bbox": [
+          727,
+          562,
+          792,
+          594
+        ],
+        "target_location": "middle_right",
+        "pred_bbox": [
+          600,
+          500,
+          630,
+          536
+        ],
+        "pred_location": "middle_center",
+        "strict_valid": true,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.00108,
+        "gt_area_fraction": 0.00208,
+        "pred_gt_area_ratio": 0.5192307692307693,
+        "center_l2_normalized": 0.15646165664468722,
+        "pred_center_gt_box": false,
+        "box_location": "middle_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10005,
+        "category": "candle",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Anomaly/035.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "valid"
+        ],
+        "generated": "Yes\n{\"bbox\":[700,300,725,330],\"location\":\"top_right\"}",
+        "target_bbox": [
+          249,
+          834,
+          271,
+          917
+        ],
+        "target_location": "bottom_left",
+        "pred_bbox": [
+          700,
+          300,
+          725,
+          330
+        ],
+        "pred_location": "top_right",
+        "strict_valid": true,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.00075,
+        "gt_area_fraction": 0.001826,
+        "pred_gt_area_ratio": 0.41073384446878425,
+        "center_l2_normalized": 0.7203585912585482,
+        "pred_center_gt_box": false,
+        "box_location": "top_right",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10007,
+        "category": "candle",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Anomaly/042.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "valid"
+        ],
+        "generated": "Yes\n{\"bbox\":[700,166,736,220],\"location\":\"top_right\"}",
+        "target_bbox": [
+          646,
+          230,
+          659,
+          245
+        ],
+        "target_location": "top_center",
+        "pred_bbox": [
+          700,
+          166,
+          736,
+          220
+        ],
+        "pred_location": "top_right",
+        "strict_valid": true,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.001944,
+        "gt_area_fraction": 0.000195,
+        "pred_gt_area_ratio": 9.96923076923077,
+        "center_l2_normalized": 0.0791864887465027,
+        "pred_center_gt_box": false,
+        "box_location": "top_right",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10011,
+        "category": "candle",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Anomaly/061.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "valid"
+        ],
+        "generated": "Yes\n{\"bbox\":[620,500,660,566],\"location\":\"middle_center\"}",
+        "target_bbox": [
+          788,
+          797,
+          880,
+          885
+        ],
+        "target_location": "bottom_right",
+        "pred_bbox": [
+          620,
+          500,
+          660,
+          566
+        ],
+        "pred_location": "middle_center",
+        "strict_valid": true,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.00264,
+        "gt_area_fraction": 0.008096,
+        "pred_gt_area_ratio": 0.32608695652173914,
+        "center_l2_normalized": 0.3640054944640259,
+        "pred_center_gt_box": false,
+        "box_location": "middle_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10012,
+        "category": "candle",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Anomaly/065.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "valid"
+        ],
+        "generated": "Yes\n{\"bbox\":[220,360,300,450],\"location\":\"middle_left\"}",
+        "target_bbox": [
+          185,
+          556,
+          275,
+          650
+        ],
+        "target_location": "middle_left",
+        "pred_bbox": [
+          220,
+          360,
+          300,
+          450
+        ],
+        "pred_location": "middle_left",
+        "strict_valid": true,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.0072,
+        "gt_area_fraction": 0.00846,
+        "pred_gt_area_ratio": 0.851063829787234,
+        "center_l2_normalized": 0.20025983121934363,
+        "pred_center_gt_box": false,
+        "box_location": "middle_left",
+        "grid_from_box_matches_gt": true
+      },
+      {
+        "index": 10013,
+        "category": "candle",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Anomaly/085.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "valid"
+        ],
+        "generated": "Yes\n{\"bbox\":[600,500,650,600],\"location\":\"middle_center\"}",
+        "target_bbox": [
+          775,
+          773,
+          844,
+          898
+        ],
+        "target_location": "bottom_right",
+        "pred_bbox": [
+          600,
+          500,
+          650,
+          600
+        ],
+        "pred_location": "middle_center",
+        "strict_valid": true,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.005,
+        "gt_area_fraction": 0.008625,
+        "pred_gt_area_ratio": 0.5797101449275363,
+        "center_l2_normalized": 0.33992719808806116,
+        "pred_center_gt_box": false,
+        "box_location": "middle_center",
+        "grid_from_box_matches_gt": false
+      },
+      {
+        "index": 10014,
+        "category": "candle",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Anomaly/096.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "valid"
+        ],
+        "generated": "Yes\n{\"bbox\":[263,500,320,566],\"location\":\"middle_left\"}",
+        "target_bbox": [
+          239,
+          590,
+          328,
+          661
+        ],
+        "target_location": "middle_left",
+        "pred_bbox": [
+          263,
+          500,
+          320,
+          566
+        ],
+        "pred_location": "middle_left",
+        "strict_valid": true,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.0,
+        "pred_area_fraction": 0.003762,
+        "gt_area_fraction": 0.006319,
+        "pred_gt_area_ratio": 0.5953473650894129,
+        "center_l2_normalized": 0.0928453014427763,
+        "pred_center_gt_box": false,
+        "box_location": "middle_left",
+        "grid_from_box_matches_gt": true
+      }
+    ],
+    "best_highest_iou": [
+      {
+        "index": 10337,
+        "category": "pcb4",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Anomaly/098.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "valid"
+        ],
+        "generated": "Yes\n{\"bbox\":[200,300,700,600],\"location\":\"middle_center\"}",
+        "target_bbox": [
+          211,
+          317,
+          672,
+          559
+        ],
+        "target_location": "middle_center",
+        "pred_bbox": [
+          200,
+          300,
+          700,
+          600
+        ],
+        "pred_location": "middle_center",
+        "strict_valid": true,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.7437466666666667,
+        "pred_area_fraction": 0.15,
+        "gt_area_fraction": 0.111562,
+        "pred_gt_area_ratio": 1.3445438410928452,
+        "center_l2_normalized": 0.014705441169852743,
+        "pred_center_gt_box": true,
+        "box_location": "middle_center",
+        "grid_from_box_matches_gt": true
+      },
+      {
+        "index": 10335,
+        "category": "pcb4",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Anomaly/087.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "valid"
+        ],
+        "generated": "Yes\n{\"bbox\":[220,300,770,675],\"location\":\"middle_center\"}",
+        "target_bbox": [
+          200,
+          307,
+          760,
+          579
+        ],
+        "target_location": "middle_center",
+        "pred_bbox": [
+          220,
+          300,
+          770,
+          675
+        ],
+        "pred_location": "middle_center",
+        "strict_valid": true,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.6938447730171478,
+        "pred_area_fraction": 0.20625,
+        "gt_area_fraction": 0.15232,
+        "pred_gt_area_ratio": 1.3540572478991597,
+        "center_l2_normalized": 0.046960089437734255,
+        "pred_center_gt_box": true,
+        "box_location": "middle_center",
+        "grid_from_box_matches_gt": true
+      },
+      {
+        "index": 10313,
+        "category": "pcb4",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Anomaly/000.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "valid"
+        ],
+        "generated": "Yes\n{\"bbox\":[220,320,778,680],\"location\":\"middle_center\"}",
+        "target_bbox": [
+          192,
+          240,
+          714,
+          674
+        ],
+        "target_location": "middle_center",
+        "pred_bbox": [
+          220,
+          320,
+          778,
+          680
+        ],
+        "pred_location": "middle_center",
+        "strict_valid": true,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.6924356172194241,
+        "pred_area_fraction": 0.20088,
+        "gt_area_fraction": 0.226548,
+        "pred_gt_area_ratio": 0.8866995073891626,
+        "center_l2_normalized": 0.06296824596572466,
+        "pred_center_gt_box": true,
+        "box_location": "middle_center",
+        "grid_from_box_matches_gt": true
+      },
+      {
+        "index": 10118,
+        "category": "fryum",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/fryum/Data/Images/Anomaly/045.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "valid"
+        ],
+        "generated": "Yes\n{\"bbox\":[202,176,776,700],\"location\":\"middle_center\"}",
+        "target_bbox": [
+          324,
+          142,
+          719,
+          741
+        ],
+        "target_location": "middle_center",
+        "pred_bbox": [
+          202,
+          176,
+          776,
+          700
+        ],
+        "pred_location": "middle_center",
+        "strict_valid": true,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.626450888465834,
+        "pred_area_fraction": 0.300776,
+        "gt_area_fraction": 0.236605,
+        "pred_gt_area_ratio": 1.271215739312356,
+        "center_l2_normalized": 0.03268791825736231,
+        "pred_center_gt_box": true,
+        "box_location": "middle_center",
+        "grid_from_box_matches_gt": true
+      },
+      {
+        "index": 10353,
+        "category": "pipe_fryum",
+        "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pipe_fryum/Data/Images/Anomaly/045.JPG",
+        "label": 1,
+        "decision": 1,
+        "status": [
+          "valid"
+        ],
+        "generated": "Yes\n{\"bbox\":[320,400,672,666],\"location\":\"middle_center\"}",
+        "target_bbox": [
+          306,
+          458,
+          703,
+          632
+        ],
+        "target_location": "middle_center",
+        "pred_bbox": [
+          320,
+          400,
+          672,
+          666
+        ],
+        "pred_location": "middle_center",
+        "strict_valid": true,
+        "valid_yes_bbox_geometry": true,
+        "geometric_iou": 0.6036545701839112,
+        "pred_area_fraction": 0.093632,
+        "gt_area_fraction": 0.069078,
+        "pred_gt_area_ratio": 1.3554532557398882,
+        "center_l2_normalized": 0.014705441169852743,
+        "pred_center_gt_box": true,
+        "box_location": "middle_center",
+        "grid_from_box_matches_gt": true
+      }
+    ]
+  }
+}

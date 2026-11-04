@@ -1,4 +1,4 @@
-"""Wait for D/pairwise training, then reload all nine formal checkpoints."""
+"""Wait for D/pairwise training, then reload best/final for all nine formal runs."""
 import json
 from pathlib import Path
 import subprocess
@@ -32,14 +32,19 @@ def main():
         verification.update(state='running', run=run.name)
         save()
         cmd = [sys.executable, '-u', 'verify_advanced_checkpoint.py', '--root', root_arg,
-               '--run', str(run), '--mode', 'final']
+               '--run', str(run), '--mode', 'both']
         code = subprocess.call(cmd)
         if code:
             verification.update(state='failed', run=run.name, exit_code=code)
             save()
             raise RuntimeError('Fresh reload failed for ' + run.name)
         result = json.loads((run/'fresh_final_reload.json').read_text())
-        verification['checks'].append(dict(run=run.name, state='passed', n=result['n']))
+        best = json.loads((run/'fresh_best_reload.json').read_text())
+        assert result['both_modes_verified'] and best['both_modes_verified']
+        assert result['checkpoint'] == 'final' and best['checkpoint'] == 'best'
+        verification['checks'].append(dict(run=run.name, state='passed', n=result['n'],
+                                           both_modes_verified=True, modes=['final', 'best'],
+                                           best_n=best['n'], best_step=best['step']))
         save()
     verification.update(state='complete')
     save()

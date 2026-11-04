@@ -57,7 +57,9 @@ def main():
   for mode in ('best','final'):
    group=[p for p in pairs if p['contrast']==contrast and p['mode']==mode]
    if len(group)==3:paired[contrast+'_'+mode]={k:dict(**stats([p['delta'][k] for p in group]),positive_seeds=sum(p['delta'][k]>0 for p in group)) for k in KEYS}
- result=dict(state='complete' if len(rows)==18 else 'partial',completed_runs=len(rows)//2,expected_runs=9,rows=rows,aggregate=aggregate,paired_deltas=pairs,paired_aggregate=paired,prediction_recomputations=recomputed,external_results_opened=False)
+ verification=json.loads((args.root/'verification_status.json').read_text()) if (args.root/'verification_status.json').exists() else dict(state='missing',checks=[])
+ fresh_complete=verification.get('state')=='complete' and len(verification.get('checks',[]))==9 and all(x.get('both_modes_verified') for x in verification['checks'])
+ result=dict(state='complete' if len(rows)==18 and fresh_complete else 'training_complete_awaiting_fresh_reload' if len(rows)==18 else 'partial',independent_verification=verification,completed_runs=len(rows)//2,expected_runs=9,rows=rows,aggregate=aggregate,paired_deltas=pairs,paired_aggregate=paired,prediction_recomputations=recomputed,external_results_opened=False)
  (args.root/'summary.json').write_text(json.dumps(result,ensure_ascii=False,indent=2,allow_nan=False)+'\n')
  lines=['# D 与配对排序实验结果','','状态：'+result['state']+'，仅纳入完成500步并通过工程门槛的正式运行。VisA val380同时用于选点和报告，属于开发验证。best允许step0；final固定500。外部结果未用于本表。','','| Arm | Seed | Model | Step | AUROC | AP | Gen F1 | Recall | FPR | Invalid |','|---|---:|---|---:|---:|---:|---:|---:|---:|---:|']
  for r in rows:lines.append('| {arm} | {seed} | {mode} | {step} | {auroc:.6f} | {ap:.6f} | {gen_f1:.6f} | {recall:.6f} | {fpr:.6f} | {invalid:.6f} |'.format(**r))
