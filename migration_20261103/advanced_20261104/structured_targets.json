@@ -1,0 +1,19 @@
+{
+  "schema": "visa-yesno-bbox1000-grid3-v1",
+  "manifest_sha256": "7d72a953cdc57abf2139383ae807d513913ff009baf8ad8e64f61ba4cc9d8c37",
+  "cache_sha256": "90b003550655617f93837e4c0336819b8c6dc0d341d215e9cd3949930eee59f4",
+  "records": 10365,
+  "counts": {
+    "train_0": 9253,
+    "train_1": 732,
+    "val_0": 172,
+    "val_1": 208
+  },
+  "mask_reads_by_split": {
+    "train": 732,
+    "val": 208
+  },
+  "test_mask_reads": 0,
+  "rule": "full-resolution binary mask union box, outward-rounded normalized 0..1000; grid by box center; no masks passed as model input",
+  "source_sha256": "ecc39579c6f137468b67565091c668c3ae93c3e3c00ee9c2937dd277230bb3df"
+}

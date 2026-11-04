@@ -50,7 +50,7 @@ DESCRIPTIONS = {
     "chewinggum": "a chewinggum", "fryum": "a fryum",
     "macaroni1": "a macaroni", "macaroni2": "a macaroni",
     "pcb1": "a pcb", "pcb2": "a pcb", "pcb3": "a pcb", "pcb4": "a pcb",
-    "pipe_fryum": "a pipe fryum",
+    "pipe_fryum": "a pipe fryum", "industrial_component": "an industrial component",
 }
 VICUNA_SYSTEM = (
     "A chat between a curious user and an artificial intelligence assistant. "

@@ -1,0 +1,2662 @@
+[
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Normal/0377.JPG",
+    "category": "candle",
+    "label": 0,
+    "split": "val",
+    "score": -1.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Normal/0417.JPG",
+    "category": "candle",
+    "label": 0,
+    "split": "val",
+    "score": -1.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Normal/0159.JPG",
+    "category": "candle",
+    "label": 0,
+    "split": "val",
+    "score": -1.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Normal/0402.JPG",
+    "category": "candle",
+    "label": 0,
+    "split": "val",
+    "score": -1.375
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Normal/0294.JPG",
+    "category": "candle",
+    "label": 0,
+    "split": "val",
+    "score": -1.375
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Normal/0705.JPG",
+    "category": "candle",
+    "label": 0,
+    "split": "val",
+    "score": -1.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Normal/0800.JPG",
+    "category": "candle",
+    "label": 0,
+    "split": "val",
+    "score": -1.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Normal/0923.JPG",
+    "category": "candle",
+    "label": 0,
+    "split": "val",
+    "score": -1.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Normal/0755.JPG",
+    "category": "candle",
+    "label": 0,
+    "split": "val",
+    "score": -1.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Normal/0457.JPG",
+    "category": "candle",
+    "label": 0,
+    "split": "val",
+    "score": -1.625
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Normal/0811.JPG",
+    "category": "candle",
+    "label": 0,
+    "split": "val",
+    "score": -1.625
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Normal/0784.JPG",
+    "category": "candle",
+    "label": 0,
+    "split": "val",
+    "score": -1.625
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Normal/0196.JPG",
+    "category": "candle",
+    "label": 0,
+    "split": "val",
+    "score": -1.625
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Normal/0488.JPG",
+    "category": "candle",
+    "label": 0,
+    "split": "val",
+    "score": -1.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Normal/0615.JPG",
+    "category": "candle",
+    "label": 0,
+    "split": "val",
+    "score": -1.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Normal/0490.JPG",
+    "category": "candle",
+    "label": 0,
+    "split": "val",
+    "score": -1.625
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Anomaly/010.JPG",
+    "category": "candle",
+    "label": 1,
+    "split": "val",
+    "score": 3.0
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Anomaly/016.JPG",
+    "category": "candle",
+    "label": 1,
+    "split": "val",
+    "score": 5.125
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Anomaly/021.JPG",
+    "category": "candle",
+    "label": 1,
+    "split": "val",
+    "score": 4.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Anomaly/025.JPG",
+    "category": "candle",
+    "label": 1,
+    "split": "val",
+    "score": 3.375
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Anomaly/035.JPG",
+    "category": "candle",
+    "label": 1,
+    "split": "val",
+    "score": 3.25
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Anomaly/036.JPG",
+    "category": "candle",
+    "label": 1,
+    "split": "val",
+    "score": -1.625
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Anomaly/042.JPG",
+    "category": "candle",
+    "label": 1,
+    "split": "val",
+    "score": 6.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Anomaly/046.JPG",
+    "category": "candle",
+    "label": 1,
+    "split": "val",
+    "score": -1.375
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Anomaly/052.JPG",
+    "category": "candle",
+    "label": 1,
+    "split": "val",
+    "score": -1.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Anomaly/053.JPG",
+    "category": "candle",
+    "label": 1,
+    "split": "val",
+    "score": 3.625
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Anomaly/061.JPG",
+    "category": "candle",
+    "label": 1,
+    "split": "val",
+    "score": 8.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Anomaly/065.JPG",
+    "category": "candle",
+    "label": 1,
+    "split": "val",
+    "score": 5.375
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Anomaly/085.JPG",
+    "category": "candle",
+    "label": 1,
+    "split": "val",
+    "score": 9.375
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Anomaly/096.JPG",
+    "category": "candle",
+    "label": 1,
+    "split": "val",
+    "score": 7.25
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Anomaly/099.JPG",
+    "category": "candle",
+    "label": 1,
+    "split": "val",
+    "score": 5.375
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/capsules/Data/Images/Normal/062.JPG",
+    "category": "capsules",
+    "label": 0,
+    "split": "val",
+    "score": -0.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/capsules/Data/Images/Normal/240.JPG",
+    "category": "capsules",
+    "label": 0,
+    "split": "val",
+    "score": -0.25
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/capsules/Data/Images/Normal/152.JPG",
+    "category": "capsules",
+    "label": 0,
+    "split": "val",
+    "score": -0.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/capsules/Data/Images/Normal/237.JPG",
+    "category": "capsules",
+    "label": 0,
+    "split": "val",
+    "score": -0.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/capsules/Data/Images/Normal/026.JPG",
+    "category": "capsules",
+    "label": 0,
+    "split": "val",
+    "score": -0.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/capsules/Data/Images/Normal/046.JPG",
+    "category": "capsules",
+    "label": 0,
+    "split": "val",
+    "score": -0.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/capsules/Data/Images/Normal/427.JPG",
+    "category": "capsules",
+    "label": 0,
+    "split": "val",
+    "score": -0.25
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/capsules/Data/Images/Normal/100.JPG",
+    "category": "capsules",
+    "label": 0,
+    "split": "val",
+    "score": -0.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/capsules/Data/Images/Normal/520.JPG",
+    "category": "capsules",
+    "label": 0,
+    "split": "val",
+    "score": -0.25
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/capsules/Data/Images/Normal/174.JPG",
+    "category": "capsules",
+    "label": 0,
+    "split": "val",
+    "score": -0.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/capsules/Data/Images/Normal/187.JPG",
+    "category": "capsules",
+    "label": 0,
+    "split": "val",
+    "score": -0.25
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/capsules/Data/Images/Normal/490.JPG",
+    "category": "capsules",
+    "label": 0,
+    "split": "val",
+    "score": -0.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/capsules/Data/Images/Anomaly/002.JPG",
+    "category": "capsules",
+    "label": 1,
+    "split": "val",
+    "score": 4.875
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/capsules/Data/Images/Anomaly/005.JPG",
+    "category": "capsules",
+    "label": 1,
+    "split": "val",
+    "score": -0.25
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/capsules/Data/Images/Anomaly/011.JPG",
+    "category": "capsules",
+    "label": 1,
+    "split": "val",
+    "score": -0.25
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/capsules/Data/Images/Anomaly/015.JPG",
+    "category": "capsules",
+    "label": 1,
+    "split": "val",
+    "score": 2.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/capsules/Data/Images/Anomaly/029.JPG",
+    "category": "capsules",
+    "label": 1,
+    "split": "val",
+    "score": -0.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/capsules/Data/Images/Anomaly/038.JPG",
+    "category": "capsules",
+    "label": 1,
+    "split": "val",
+    "score": 0.25
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/capsules/Data/Images/Anomaly/049.JPG",
+    "category": "capsules",
+    "label": 1,
+    "split": "val",
+    "score": 12.25
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/capsules/Data/Images/Anomaly/053.JPG",
+    "category": "capsules",
+    "label": 1,
+    "split": "val",
+    "score": 7.125
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/capsules/Data/Images/Anomaly/054.JPG",
+    "category": "capsules",
+    "label": 1,
+    "split": "val",
+    "score": 9.625
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/capsules/Data/Images/Anomaly/055.JPG",
+    "category": "capsules",
+    "label": 1,
+    "split": "val",
+    "score": 8.875
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/capsules/Data/Images/Anomaly/056.JPG",
+    "category": "capsules",
+    "label": 1,
+    "split": "val",
+    "score": 8.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/capsules/Data/Images/Anomaly/061.JPG",
+    "category": "capsules",
+    "label": 1,
+    "split": "val",
+    "score": 8.875
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/capsules/Data/Images/Anomaly/071.JPG",
+    "category": "capsules",
+    "label": 1,
+    "split": "val",
+    "score": 10.25
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/capsules/Data/Images/Anomaly/082.JPG",
+    "category": "capsules",
+    "label": 1,
+    "split": "val",
+    "score": 1.125
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/capsules/Data/Images/Anomaly/093.JPG",
+    "category": "capsules",
+    "label": 1,
+    "split": "val",
+    "score": -0.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/capsules/Data/Images/Anomaly/094.JPG",
+    "category": "capsules",
+    "label": 1,
+    "split": "val",
+    "score": -0.25
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/capsules/Data/Images/Anomaly/095.JPG",
+    "category": "capsules",
+    "label": 1,
+    "split": "val",
+    "score": -0.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/cashew/Data/Images/Normal/166.JPG",
+    "category": "cashew",
+    "label": 0,
+    "split": "val",
+    "score": -0.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/cashew/Data/Images/Normal/013.JPG",
+    "category": "cashew",
+    "label": 0,
+    "split": "val",
+    "score": -0.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/cashew/Data/Images/Normal/461.JPG",
+    "category": "cashew",
+    "label": 0,
+    "split": "val",
+    "score": -0.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/cashew/Data/Images/Normal/377.JPG",
+    "category": "cashew",
+    "label": 0,
+    "split": "val",
+    "score": -0.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/cashew/Data/Images/Normal/006.JPG",
+    "category": "cashew",
+    "label": 0,
+    "split": "val",
+    "score": -0.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/cashew/Data/Images/Normal/148.JPG",
+    "category": "cashew",
+    "label": 0,
+    "split": "val",
+    "score": -0.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/cashew/Data/Images/Normal/228.JPG",
+    "category": "cashew",
+    "label": 0,
+    "split": "val",
+    "score": -0.875
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/cashew/Data/Images/Normal/012.JPG",
+    "category": "cashew",
+    "label": 0,
+    "split": "val",
+    "score": -0.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/cashew/Data/Images/Normal/367.JPG",
+    "category": "cashew",
+    "label": 0,
+    "split": "val",
+    "score": -0.25
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/cashew/Data/Images/Normal/089.JPG",
+    "category": "cashew",
+    "label": 0,
+    "split": "val",
+    "score": -0.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/cashew/Data/Images/Normal/239.JPG",
+    "category": "cashew",
+    "label": 0,
+    "split": "val",
+    "score": -0.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/cashew/Data/Images/Normal/342.JPG",
+    "category": "cashew",
+    "label": 0,
+    "split": "val",
+    "score": -0.25
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/cashew/Data/Images/Normal/098.JPG",
+    "category": "cashew",
+    "label": 0,
+    "split": "val",
+    "score": -0.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/cashew/Data/Images/Normal/084.JPG",
+    "category": "cashew",
+    "label": 0,
+    "split": "val",
+    "score": -0.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/cashew/Data/Images/Anomaly/000.JPG",
+    "category": "cashew",
+    "label": 1,
+    "split": "val",
+    "score": 4.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/cashew/Data/Images/Anomaly/007.JPG",
+    "category": "cashew",
+    "label": 1,
+    "split": "val",
+    "score": 5.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/cashew/Data/Images/Anomaly/020.JPG",
+    "category": "cashew",
+    "label": 1,
+    "split": "val",
+    "score": 7.125
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/cashew/Data/Images/Anomaly/027.JPG",
+    "category": "cashew",
+    "label": 1,
+    "split": "val",
+    "score": 5.0
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/cashew/Data/Images/Anomaly/036.JPG",
+    "category": "cashew",
+    "label": 1,
+    "split": "val",
+    "score": 6.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/cashew/Data/Images/Anomaly/037.JPG",
+    "category": "cashew",
+    "label": 1,
+    "split": "val",
+    "score": 6.875
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/cashew/Data/Images/Anomaly/056.JPG",
+    "category": "cashew",
+    "label": 1,
+    "split": "val",
+    "score": -0.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/cashew/Data/Images/Anomaly/063.JPG",
+    "category": "cashew",
+    "label": 1,
+    "split": "val",
+    "score": 0.0
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/cashew/Data/Images/Anomaly/066.JPG",
+    "category": "cashew",
+    "label": 1,
+    "split": "val",
+    "score": -0.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/cashew/Data/Images/Anomaly/071.JPG",
+    "category": "cashew",
+    "label": 1,
+    "split": "val",
+    "score": 0.0
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/cashew/Data/Images/Anomaly/079.JPG",
+    "category": "cashew",
+    "label": 1,
+    "split": "val",
+    "score": 0.0
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/cashew/Data/Images/Anomaly/088.JPG",
+    "category": "cashew",
+    "label": 1,
+    "split": "val",
+    "score": -0.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/chewinggum/Data/Images/Normal/400.JPG",
+    "category": "chewinggum",
+    "label": 0,
+    "split": "val",
+    "score": -2.0
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/chewinggum/Data/Images/Normal/461.JPG",
+    "category": "chewinggum",
+    "label": 0,
+    "split": "val",
+    "score": -1.875
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/chewinggum/Data/Images/Normal/377.JPG",
+    "category": "chewinggum",
+    "label": 0,
+    "split": "val",
+    "score": -1.875
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/chewinggum/Data/Images/Normal/143.JPG",
+    "category": "chewinggum",
+    "label": 0,
+    "split": "val",
+    "score": -2.125
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/chewinggum/Data/Images/Normal/089.JPG",
+    "category": "chewinggum",
+    "label": 0,
+    "split": "val",
+    "score": -2.125
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/chewinggum/Data/Images/Normal/398.JPG",
+    "category": "chewinggum",
+    "label": 0,
+    "split": "val",
+    "score": -2.0
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/chewinggum/Data/Images/Normal/482.JPG",
+    "category": "chewinggum",
+    "label": 0,
+    "split": "val",
+    "score": -1.875
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/chewinggum/Data/Images/Normal/093.JPG",
+    "category": "chewinggum",
+    "label": 0,
+    "split": "val",
+    "score": -1.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/chewinggum/Data/Images/Normal/487.JPG",
+    "category": "chewinggum",
+    "label": 0,
+    "split": "val",
+    "score": -2.125
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/chewinggum/Data/Images/Anomaly/000.JPG",
+    "category": "chewinggum",
+    "label": 1,
+    "split": "val",
+    "score": 8.125
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/chewinggum/Data/Images/Anomaly/019.JPG",
+    "category": "chewinggum",
+    "label": 1,
+    "split": "val",
+    "score": 9.375
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/chewinggum/Data/Images/Anomaly/024.JPG",
+    "category": "chewinggum",
+    "label": 1,
+    "split": "val",
+    "score": 9.375
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/chewinggum/Data/Images/Anomaly/040.JPG",
+    "category": "chewinggum",
+    "label": 1,
+    "split": "val",
+    "score": 9.0
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/chewinggum/Data/Images/Anomaly/047.JPG",
+    "category": "chewinggum",
+    "label": 1,
+    "split": "val",
+    "score": 8.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/chewinggum/Data/Images/Anomaly/052.JPG",
+    "category": "chewinggum",
+    "label": 1,
+    "split": "val",
+    "score": 9.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/chewinggum/Data/Images/Anomaly/063.JPG",
+    "category": "chewinggum",
+    "label": 1,
+    "split": "val",
+    "score": 9.25
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/chewinggum/Data/Images/Anomaly/064.JPG",
+    "category": "chewinggum",
+    "label": 1,
+    "split": "val",
+    "score": 8.875
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/chewinggum/Data/Images/Anomaly/078.JPG",
+    "category": "chewinggum",
+    "label": 1,
+    "split": "val",
+    "score": 5.375
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/chewinggum/Data/Images/Anomaly/085.JPG",
+    "category": "chewinggum",
+    "label": 1,
+    "split": "val",
+    "score": 6.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/chewinggum/Data/Images/Anomaly/087.JPG",
+    "category": "chewinggum",
+    "label": 1,
+    "split": "val",
+    "score": 4.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/fryum/Data/Images/Normal/352.JPG",
+    "category": "fryum",
+    "label": 0,
+    "split": "val",
+    "score": -0.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/fryum/Data/Images/Normal/337.JPG",
+    "category": "fryum",
+    "label": 0,
+    "split": "val",
+    "score": -0.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/fryum/Data/Images/Normal/213.JPG",
+    "category": "fryum",
+    "label": 0,
+    "split": "val",
+    "score": -0.625
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/fryum/Data/Images/Normal/166.JPG",
+    "category": "fryum",
+    "label": 0,
+    "split": "val",
+    "score": -0.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/fryum/Data/Images/Normal/006.JPG",
+    "category": "fryum",
+    "label": 0,
+    "split": "val",
+    "score": -0.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/fryum/Data/Images/Normal/148.JPG",
+    "category": "fryum",
+    "label": 0,
+    "split": "val",
+    "score": -0.625
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/fryum/Data/Images/Normal/405.JPG",
+    "category": "fryum",
+    "label": 0,
+    "split": "val",
+    "score": -0.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/fryum/Data/Images/Normal/324.JPG",
+    "category": "fryum",
+    "label": 0,
+    "split": "val",
+    "score": -0.625
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/fryum/Data/Images/Normal/143.JPG",
+    "category": "fryum",
+    "label": 0,
+    "split": "val",
+    "score": -0.625
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/fryum/Data/Images/Normal/181.JPG",
+    "category": "fryum",
+    "label": 0,
+    "split": "val",
+    "score": -0.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/fryum/Data/Images/Normal/367.JPG",
+    "category": "fryum",
+    "label": 0,
+    "split": "val",
+    "score": -0.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/fryum/Data/Images/Normal/398.JPG",
+    "category": "fryum",
+    "label": 0,
+    "split": "val",
+    "score": -0.625
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/fryum/Data/Images/Normal/482.JPG",
+    "category": "fryum",
+    "label": 0,
+    "split": "val",
+    "score": -0.875
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/fryum/Data/Images/Normal/244.JPG",
+    "category": "fryum",
+    "label": 0,
+    "split": "val",
+    "score": -0.625
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/fryum/Data/Images/Normal/272.JPG",
+    "category": "fryum",
+    "label": 0,
+    "split": "val",
+    "score": -0.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/fryum/Data/Images/Anomaly/007.JPG",
+    "category": "fryum",
+    "label": 1,
+    "split": "val",
+    "score": 7.625
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/fryum/Data/Images/Anomaly/009.JPG",
+    "category": "fryum",
+    "label": 1,
+    "split": "val",
+    "score": 10.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/fryum/Data/Images/Anomaly/010.JPG",
+    "category": "fryum",
+    "label": 1,
+    "split": "val",
+    "score": -0.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/fryum/Data/Images/Anomaly/019.JPG",
+    "category": "fryum",
+    "label": 1,
+    "split": "val",
+    "score": 6.375
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/fryum/Data/Images/Anomaly/023.JPG",
+    "category": "fryum",
+    "label": 1,
+    "split": "val",
+    "score": 4.125
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/fryum/Data/Images/Anomaly/024.JPG",
+    "category": "fryum",
+    "label": 1,
+    "split": "val",
+    "score": 4.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/fryum/Data/Images/Anomaly/028.JPG",
+    "category": "fryum",
+    "label": 1,
+    "split": "val",
+    "score": -0.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/fryum/Data/Images/Anomaly/031.JPG",
+    "category": "fryum",
+    "label": 1,
+    "split": "val",
+    "score": -0.625
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/fryum/Data/Images/Anomaly/034.JPG",
+    "category": "fryum",
+    "label": 1,
+    "split": "val",
+    "score": -0.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/fryum/Data/Images/Anomaly/036.JPG",
+    "category": "fryum",
+    "label": 1,
+    "split": "val",
+    "score": -0.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/fryum/Data/Images/Anomaly/039.JPG",
+    "category": "fryum",
+    "label": 1,
+    "split": "val",
+    "score": -0.625
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/fryum/Data/Images/Anomaly/043.JPG",
+    "category": "fryum",
+    "label": 1,
+    "split": "val",
+    "score": 5.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/fryum/Data/Images/Anomaly/045.JPG",
+    "category": "fryum",
+    "label": 1,
+    "split": "val",
+    "score": 9.0
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/fryum/Data/Images/Anomaly/057.JPG",
+    "category": "fryum",
+    "label": 1,
+    "split": "val",
+    "score": 7.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/fryum/Data/Images/Anomaly/058.JPG",
+    "category": "fryum",
+    "label": 1,
+    "split": "val",
+    "score": 9.125
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/fryum/Data/Images/Anomaly/083.JPG",
+    "category": "fryum",
+    "label": 1,
+    "split": "val",
+    "score": 6.375
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/fryum/Data/Images/Anomaly/084.JPG",
+    "category": "fryum",
+    "label": 1,
+    "split": "val",
+    "score": 4.25
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/fryum/Data/Images/Anomaly/091.JPG",
+    "category": "fryum",
+    "label": 1,
+    "split": "val",
+    "score": -0.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/fryum/Data/Images/Anomaly/099.JPG",
+    "category": "fryum",
+    "label": 1,
+    "split": "val",
+    "score": -0.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni1/Data/Images/Normal/0484.JPG",
+    "category": "macaroni1",
+    "label": 0,
+    "split": "val",
+    "score": -0.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni1/Data/Images/Normal/0659.JPG",
+    "category": "macaroni1",
+    "label": 0,
+    "split": "val",
+    "score": -0.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni1/Data/Images/Normal/0469.JPG",
+    "category": "macaroni1",
+    "label": 0,
+    "split": "val",
+    "score": -0.875
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni1/Data/Images/Normal/0170.JPG",
+    "category": "macaroni1",
+    "label": 0,
+    "split": "val",
+    "score": -0.875
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni1/Data/Images/Normal/0685.JPG",
+    "category": "macaroni1",
+    "label": 0,
+    "split": "val",
+    "score": -0.875
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni1/Data/Images/Normal/0423.JPG",
+    "category": "macaroni1",
+    "label": 0,
+    "split": "val",
+    "score": -0.875
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni1/Data/Images/Normal/0764.JPG",
+    "category": "macaroni1",
+    "label": 0,
+    "split": "val",
+    "score": -0.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni1/Data/Images/Normal/0552.JPG",
+    "category": "macaroni1",
+    "label": 0,
+    "split": "val",
+    "score": -0.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni1/Data/Images/Normal/0923.JPG",
+    "category": "macaroni1",
+    "label": 0,
+    "split": "val",
+    "score": -0.625
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni1/Data/Images/Normal/0013.JPG",
+    "category": "macaroni1",
+    "label": 0,
+    "split": "val",
+    "score": -0.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni1/Data/Images/Normal/0871.JPG",
+    "category": "macaroni1",
+    "label": 0,
+    "split": "val",
+    "score": -0.875
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni1/Data/Images/Normal/0261.JPG",
+    "category": "macaroni1",
+    "label": 0,
+    "split": "val",
+    "score": -0.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni1/Data/Images/Normal/0286.JPG",
+    "category": "macaroni1",
+    "label": 0,
+    "split": "val",
+    "score": -0.875
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni1/Data/Images/Normal/0619.JPG",
+    "category": "macaroni1",
+    "label": 0,
+    "split": "val",
+    "score": -0.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni1/Data/Images/Normal/0735.JPG",
+    "category": "macaroni1",
+    "label": 0,
+    "split": "val",
+    "score": -0.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni1/Data/Images/Normal/0569.JPG",
+    "category": "macaroni1",
+    "label": 0,
+    "split": "val",
+    "score": -0.875
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni1/Data/Images/Normal/0615.JPG",
+    "category": "macaroni1",
+    "label": 0,
+    "split": "val",
+    "score": -0.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni1/Data/Images/Anomaly/000.JPG",
+    "category": "macaroni1",
+    "label": 1,
+    "split": "val",
+    "score": -0.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni1/Data/Images/Anomaly/006.JPG",
+    "category": "macaroni1",
+    "label": 1,
+    "split": "val",
+    "score": -0.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni1/Data/Images/Anomaly/011.JPG",
+    "category": "macaroni1",
+    "label": 1,
+    "split": "val",
+    "score": -0.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni1/Data/Images/Anomaly/016.JPG",
+    "category": "macaroni1",
+    "label": 1,
+    "split": "val",
+    "score": -0.875
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni1/Data/Images/Anomaly/025.JPG",
+    "category": "macaroni1",
+    "label": 1,
+    "split": "val",
+    "score": 4.875
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni1/Data/Images/Anomaly/034.JPG",
+    "category": "macaroni1",
+    "label": 1,
+    "split": "val",
+    "score": 2.625
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni1/Data/Images/Anomaly/041.JPG",
+    "category": "macaroni1",
+    "label": 1,
+    "split": "val",
+    "score": 5.25
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni1/Data/Images/Anomaly/048.JPG",
+    "category": "macaroni1",
+    "label": 1,
+    "split": "val",
+    "score": 3.125
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni1/Data/Images/Anomaly/050.JPG",
+    "category": "macaroni1",
+    "label": 1,
+    "split": "val",
+    "score": 2.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni1/Data/Images/Anomaly/053.JPG",
+    "category": "macaroni1",
+    "label": 1,
+    "split": "val",
+    "score": 6.375
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni1/Data/Images/Anomaly/055.JPG",
+    "category": "macaroni1",
+    "label": 1,
+    "split": "val",
+    "score": -0.875
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni1/Data/Images/Anomaly/058.JPG",
+    "category": "macaroni1",
+    "label": 1,
+    "split": "val",
+    "score": 4.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni1/Data/Images/Anomaly/068.JPG",
+    "category": "macaroni1",
+    "label": 1,
+    "split": "val",
+    "score": 6.0
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni1/Data/Images/Anomaly/069.JPG",
+    "category": "macaroni1",
+    "label": 1,
+    "split": "val",
+    "score": -0.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni1/Data/Images/Anomaly/072.JPG",
+    "category": "macaroni1",
+    "label": 1,
+    "split": "val",
+    "score": -0.625
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni1/Data/Images/Anomaly/074.JPG",
+    "category": "macaroni1",
+    "label": 1,
+    "split": "val",
+    "score": -0.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni1/Data/Images/Anomaly/075.JPG",
+    "category": "macaroni1",
+    "label": 1,
+    "split": "val",
+    "score": -0.625
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni1/Data/Images/Anomaly/080.JPG",
+    "category": "macaroni1",
+    "label": 1,
+    "split": "val",
+    "score": -0.625
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni1/Data/Images/Anomaly/083.JPG",
+    "category": "macaroni1",
+    "label": 1,
+    "split": "val",
+    "score": -0.625
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni1/Data/Images/Anomaly/086.JPG",
+    "category": "macaroni1",
+    "label": 1,
+    "split": "val",
+    "score": -0.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni1/Data/Images/Anomaly/088.JPG",
+    "category": "macaroni1",
+    "label": 1,
+    "split": "val",
+    "score": -0.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni1/Data/Images/Anomaly/093.JPG",
+    "category": "macaroni1",
+    "label": 1,
+    "split": "val",
+    "score": -0.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni1/Data/Images/Anomaly/096.JPG",
+    "category": "macaroni1",
+    "label": 1,
+    "split": "val",
+    "score": -0.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni2/Data/Images/Normal/0690.JPG",
+    "category": "macaroni2",
+    "label": 0,
+    "split": "val",
+    "score": -0.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni2/Data/Images/Normal/0514.JPG",
+    "category": "macaroni2",
+    "label": 0,
+    "split": "val",
+    "score": -0.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni2/Data/Images/Normal/0172.JPG",
+    "category": "macaroni2",
+    "label": 0,
+    "split": "val",
+    "score": -0.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni2/Data/Images/Normal/0996.JPG",
+    "category": "macaroni2",
+    "label": 0,
+    "split": "val",
+    "score": -0.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni2/Data/Images/Normal/0685.JPG",
+    "category": "macaroni2",
+    "label": 0,
+    "split": "val",
+    "score": -0.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni2/Data/Images/Normal/0417.JPG",
+    "category": "macaroni2",
+    "label": 0,
+    "split": "val",
+    "score": -0.625
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni2/Data/Images/Normal/0751.JPG",
+    "category": "macaroni2",
+    "label": 0,
+    "split": "val",
+    "score": -0.625
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni2/Data/Images/Normal/0215.JPG",
+    "category": "macaroni2",
+    "label": 0,
+    "split": "val",
+    "score": -0.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni2/Data/Images/Normal/0159.JPG",
+    "category": "macaroni2",
+    "label": 0,
+    "split": "val",
+    "score": -0.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni2/Data/Images/Normal/0518.JPG",
+    "category": "macaroni2",
+    "label": 0,
+    "split": "val",
+    "score": -0.625
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni2/Data/Images/Normal/0026.JPG",
+    "category": "macaroni2",
+    "label": 0,
+    "split": "val",
+    "score": -0.625
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni2/Data/Images/Normal/0900.JPG",
+    "category": "macaroni2",
+    "label": 0,
+    "split": "val",
+    "score": -0.375
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni2/Data/Images/Normal/0016.JPG",
+    "category": "macaroni2",
+    "label": 0,
+    "split": "val",
+    "score": -0.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni2/Data/Images/Normal/0804.JPG",
+    "category": "macaroni2",
+    "label": 0,
+    "split": "val",
+    "score": -0.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni2/Data/Images/Normal/0027.JPG",
+    "category": "macaroni2",
+    "label": 0,
+    "split": "val",
+    "score": -0.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni2/Data/Images/Normal/0800.JPG",
+    "category": "macaroni2",
+    "label": 0,
+    "split": "val",
+    "score": -0.625
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni2/Data/Images/Normal/0768.JPG",
+    "category": "macaroni2",
+    "label": 0,
+    "split": "val",
+    "score": -0.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni2/Data/Images/Normal/0811.JPG",
+    "category": "macaroni2",
+    "label": 0,
+    "split": "val",
+    "score": -0.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni2/Data/Images/Normal/0688.JPG",
+    "category": "macaroni2",
+    "label": 0,
+    "split": "val",
+    "score": -0.625
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni2/Data/Images/Normal/0178.JPG",
+    "category": "macaroni2",
+    "label": 0,
+    "split": "val",
+    "score": -0.625
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni2/Data/Images/Normal/0892.JPG",
+    "category": "macaroni2",
+    "label": 0,
+    "split": "val",
+    "score": -0.625
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni2/Data/Images/Normal/0974.JPG",
+    "category": "macaroni2",
+    "label": 0,
+    "split": "val",
+    "score": -0.625
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni2/Data/Images/Anomaly/005.JPG",
+    "category": "macaroni2",
+    "label": 1,
+    "split": "val",
+    "score": 4.375
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni2/Data/Images/Anomaly/015.JPG",
+    "category": "macaroni2",
+    "label": 1,
+    "split": "val",
+    "score": 2.0
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni2/Data/Images/Anomaly/023.JPG",
+    "category": "macaroni2",
+    "label": 1,
+    "split": "val",
+    "score": -0.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni2/Data/Images/Anomaly/035.JPG",
+    "category": "macaroni2",
+    "label": 1,
+    "split": "val",
+    "score": 4.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni2/Data/Images/Anomaly/038.JPG",
+    "category": "macaroni2",
+    "label": 1,
+    "split": "val",
+    "score": 6.625
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni2/Data/Images/Anomaly/039.JPG",
+    "category": "macaroni2",
+    "label": 1,
+    "split": "val",
+    "score": 1.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni2/Data/Images/Anomaly/045.JPG",
+    "category": "macaroni2",
+    "label": 1,
+    "split": "val",
+    "score": -0.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni2/Data/Images/Anomaly/055.JPG",
+    "category": "macaroni2",
+    "label": 1,
+    "split": "val",
+    "score": -0.625
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni2/Data/Images/Anomaly/058.JPG",
+    "category": "macaroni2",
+    "label": 1,
+    "split": "val",
+    "score": -0.625
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni2/Data/Images/Anomaly/062.JPG",
+    "category": "macaroni2",
+    "label": 1,
+    "split": "val",
+    "score": -0.625
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni2/Data/Images/Anomaly/065.JPG",
+    "category": "macaroni2",
+    "label": 1,
+    "split": "val",
+    "score": -0.625
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni2/Data/Images/Anomaly/072.JPG",
+    "category": "macaroni2",
+    "label": 1,
+    "split": "val",
+    "score": -0.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni2/Data/Images/Anomaly/082.JPG",
+    "category": "macaroni2",
+    "label": 1,
+    "split": "val",
+    "score": -0.625
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni2/Data/Images/Anomaly/083.JPG",
+    "category": "macaroni2",
+    "label": 1,
+    "split": "val",
+    "score": 2.25
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni2/Data/Images/Anomaly/086.JPG",
+    "category": "macaroni2",
+    "label": 1,
+    "split": "val",
+    "score": -0.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni2/Data/Images/Anomaly/089.JPG",
+    "category": "macaroni2",
+    "label": 1,
+    "split": "val",
+    "score": 11.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb1/Data/Images/Normal/0690.JPG",
+    "category": "pcb1",
+    "label": 0,
+    "split": "val",
+    "score": -0.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb1/Data/Images/Normal/0685.JPG",
+    "category": "pcb1",
+    "label": 0,
+    "split": "val",
+    "score": -0.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb1/Data/Images/Normal/0751.JPG",
+    "category": "pcb1",
+    "label": 0,
+    "split": "val",
+    "score": -0.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb1/Data/Images/Normal/0957.JPG",
+    "category": "pcb1",
+    "label": 0,
+    "split": "val",
+    "score": -3.25
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb1/Data/Images/Normal/0294.JPG",
+    "category": "pcb1",
+    "label": 0,
+    "split": "val",
+    "score": -3.25
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb1/Data/Images/Normal/0046.JPG",
+    "category": "pcb1",
+    "label": 0,
+    "split": "val",
+    "score": -3.0
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb1/Data/Images/Normal/0427.JPG",
+    "category": "pcb1",
+    "label": 0,
+    "split": "val",
+    "score": -3.0
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb1/Data/Images/Normal/0952.JPG",
+    "category": "pcb1",
+    "label": 0,
+    "split": "val",
+    "score": -3.25
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb1/Data/Images/Normal/0811.JPG",
+    "category": "pcb1",
+    "label": 0,
+    "split": "val",
+    "score": -0.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb1/Data/Images/Normal/0286.JPG",
+    "category": "pcb1",
+    "label": 0,
+    "split": "val",
+    "score": -3.0
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb1/Data/Images/Normal/0178.JPG",
+    "category": "pcb1",
+    "label": 0,
+    "split": "val",
+    "score": -3.25
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb1/Data/Images/Normal/0168.JPG",
+    "category": "pcb1",
+    "label": 0,
+    "split": "val",
+    "score": -2.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb1/Data/Images/Anomaly/005.JPG",
+    "category": "pcb1",
+    "label": 1,
+    "split": "val",
+    "score": 9.125
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb1/Data/Images/Anomaly/007.JPG",
+    "category": "pcb1",
+    "label": 1,
+    "split": "val",
+    "score": 3.625
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb1/Data/Images/Anomaly/012.JPG",
+    "category": "pcb1",
+    "label": 1,
+    "split": "val",
+    "score": -0.25
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb1/Data/Images/Anomaly/015.JPG",
+    "category": "pcb1",
+    "label": 1,
+    "split": "val",
+    "score": 5.25
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb1/Data/Images/Anomaly/023.JPG",
+    "category": "pcb1",
+    "label": 1,
+    "split": "val",
+    "score": -0.25
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb1/Data/Images/Anomaly/026.JPG",
+    "category": "pcb1",
+    "label": 1,
+    "split": "val",
+    "score": 4.875
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb1/Data/Images/Anomaly/032.JPG",
+    "category": "pcb1",
+    "label": 1,
+    "split": "val",
+    "score": 4.875
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb1/Data/Images/Anomaly/036.JPG",
+    "category": "pcb1",
+    "label": 1,
+    "split": "val",
+    "score": 5.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb1/Data/Images/Anomaly/050.JPG",
+    "category": "pcb1",
+    "label": 1,
+    "split": "val",
+    "score": 10.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb1/Data/Images/Anomaly/058.JPG",
+    "category": "pcb1",
+    "label": 1,
+    "split": "val",
+    "score": -0.25
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb1/Data/Images/Anomaly/073.JPG",
+    "category": "pcb1",
+    "label": 1,
+    "split": "val",
+    "score": 7.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb1/Data/Images/Anomaly/077.JPG",
+    "category": "pcb1",
+    "label": 1,
+    "split": "val",
+    "score": 6.25
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb1/Data/Images/Anomaly/083.JPG",
+    "category": "pcb1",
+    "label": 1,
+    "split": "val",
+    "score": -2.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb1/Data/Images/Anomaly/084.JPG",
+    "category": "pcb1",
+    "label": 1,
+    "split": "val",
+    "score": 8.25
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb1/Data/Images/Anomaly/094.JPG",
+    "category": "pcb1",
+    "label": 1,
+    "split": "val",
+    "score": -0.25
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb1/Data/Images/Anomaly/095.JPG",
+    "category": "pcb1",
+    "label": 1,
+    "split": "val",
+    "score": -1.0
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb1/Data/Images/Anomaly/099.JPG",
+    "category": "pcb1",
+    "label": 1,
+    "split": "val",
+    "score": -1.0
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb2/Data/Images/Normal/0214.JPG",
+    "category": "pcb2",
+    "label": 0,
+    "split": "val",
+    "score": -2.0
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb2/Data/Images/Normal/0986.JPG",
+    "category": "pcb2",
+    "label": 0,
+    "split": "val",
+    "score": -1.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb2/Data/Images/Normal/0659.JPG",
+    "category": "pcb2",
+    "label": 0,
+    "split": "val",
+    "score": -1.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb2/Data/Images/Normal/0725.JPG",
+    "category": "pcb2",
+    "label": 0,
+    "split": "val",
+    "score": -1.625
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb2/Data/Images/Normal/0685.JPG",
+    "category": "pcb2",
+    "label": 0,
+    "split": "val",
+    "score": -1.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb2/Data/Images/Normal/0423.JPG",
+    "category": "pcb2",
+    "label": 0,
+    "split": "val",
+    "score": -1.25
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb2/Data/Images/Normal/0764.JPG",
+    "category": "pcb2",
+    "label": 0,
+    "split": "val",
+    "score": -1.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb2/Data/Images/Normal/0011.JPG",
+    "category": "pcb2",
+    "label": 0,
+    "split": "val",
+    "score": -1.25
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb2/Data/Images/Normal/0215.JPG",
+    "category": "pcb2",
+    "label": 0,
+    "split": "val",
+    "score": -1.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb2/Data/Images/Normal/0159.JPG",
+    "category": "pcb2",
+    "label": 0,
+    "split": "val",
+    "score": -2.0
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb2/Data/Images/Normal/0518.JPG",
+    "category": "pcb2",
+    "label": 0,
+    "split": "val",
+    "score": -1.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb2/Data/Images/Normal/0016.JPG",
+    "category": "pcb2",
+    "label": 0,
+    "split": "val",
+    "score": -1.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb2/Data/Images/Normal/0333.JPG",
+    "category": "pcb2",
+    "label": 0,
+    "split": "val",
+    "score": -1.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb2/Data/Images/Normal/0755.JPG",
+    "category": "pcb2",
+    "label": 0,
+    "split": "val",
+    "score": -1.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb2/Data/Images/Normal/0174.JPG",
+    "category": "pcb2",
+    "label": 0,
+    "split": "val",
+    "score": -1.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb2/Data/Images/Normal/0648.JPG",
+    "category": "pcb2",
+    "label": 0,
+    "split": "val",
+    "score": -1.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb2/Data/Images/Normal/0784.JPG",
+    "category": "pcb2",
+    "label": 0,
+    "split": "val",
+    "score": -1.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb2/Data/Images/Normal/0490.JPG",
+    "category": "pcb2",
+    "label": 0,
+    "split": "val",
+    "score": -2.0
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb2/Data/Images/Anomaly/004.JPG",
+    "category": "pcb2",
+    "label": 1,
+    "split": "val",
+    "score": 11.375
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb2/Data/Images/Anomaly/006.JPG",
+    "category": "pcb2",
+    "label": 1,
+    "split": "val",
+    "score": 7.125
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb2/Data/Images/Anomaly/023.JPG",
+    "category": "pcb2",
+    "label": 1,
+    "split": "val",
+    "score": 3.875
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb2/Data/Images/Anomaly/027.JPG",
+    "category": "pcb2",
+    "label": 1,
+    "split": "val",
+    "score": 7.625
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb2/Data/Images/Anomaly/029.JPG",
+    "category": "pcb2",
+    "label": 1,
+    "split": "val",
+    "score": 4.625
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb2/Data/Images/Anomaly/031.JPG",
+    "category": "pcb2",
+    "label": 1,
+    "split": "val",
+    "score": -1.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb2/Data/Images/Anomaly/035.JPG",
+    "category": "pcb2",
+    "label": 1,
+    "split": "val",
+    "score": 2.125
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb2/Data/Images/Anomaly/039.JPG",
+    "category": "pcb2",
+    "label": 1,
+    "split": "val",
+    "score": 5.125
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb2/Data/Images/Anomaly/054.JPG",
+    "category": "pcb2",
+    "label": 1,
+    "split": "val",
+    "score": 0.125
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb2/Data/Images/Anomaly/060.JPG",
+    "category": "pcb2",
+    "label": 1,
+    "split": "val",
+    "score": -1.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb2/Data/Images/Anomaly/062.JPG",
+    "category": "pcb2",
+    "label": 1,
+    "split": "val",
+    "score": 2.125
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb2/Data/Images/Anomaly/063.JPG",
+    "category": "pcb2",
+    "label": 1,
+    "split": "val",
+    "score": 2.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb2/Data/Images/Anomaly/065.JPG",
+    "category": "pcb2",
+    "label": 1,
+    "split": "val",
+    "score": 5.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb2/Data/Images/Anomaly/070.JPG",
+    "category": "pcb2",
+    "label": 1,
+    "split": "val",
+    "score": 6.25
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb2/Data/Images/Anomaly/089.JPG",
+    "category": "pcb2",
+    "label": 1,
+    "split": "val",
+    "score": 3.0
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb2/Data/Images/Anomaly/096.JPG",
+    "category": "pcb2",
+    "label": 1,
+    "split": "val",
+    "score": 4.375
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb3/Data/Images/Normal/0107.JPG",
+    "category": "pcb3",
+    "label": 0,
+    "split": "val",
+    "score": -0.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb3/Data/Images/Normal/0303.JPG",
+    "category": "pcb3",
+    "label": 0,
+    "split": "val",
+    "score": -0.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb3/Data/Images/Normal/0394.JPG",
+    "category": "pcb3",
+    "label": 0,
+    "split": "val",
+    "score": -0.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb3/Data/Images/Normal/0483.JPG",
+    "category": "pcb3",
+    "label": 0,
+    "split": "val",
+    "score": -1.0
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb3/Data/Images/Normal/0400.JPG",
+    "category": "pcb3",
+    "label": 0,
+    "split": "val",
+    "score": -0.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb3/Data/Images/Normal/0940.JPG",
+    "category": "pcb3",
+    "label": 0,
+    "split": "val",
+    "score": -0.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb3/Data/Images/Normal/0402.JPG",
+    "category": "pcb3",
+    "label": 0,
+    "split": "val",
+    "score": -0.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb3/Data/Images/Normal/0755.JPG",
+    "category": "pcb3",
+    "label": 0,
+    "split": "val",
+    "score": -0.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb3/Data/Images/Normal/0768.JPG",
+    "category": "pcb3",
+    "label": 0,
+    "split": "val",
+    "score": -0.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb3/Data/Images/Normal/0952.JPG",
+    "category": "pcb3",
+    "label": 0,
+    "split": "val",
+    "score": -0.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb3/Data/Images/Normal/0648.JPG",
+    "category": "pcb3",
+    "label": 0,
+    "split": "val",
+    "score": -1.0
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb3/Data/Images/Normal/0779.JPG",
+    "category": "pcb3",
+    "label": 0,
+    "split": "val",
+    "score": -1.0
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb3/Data/Images/Normal/0619.JPG",
+    "category": "pcb3",
+    "label": 0,
+    "split": "val",
+    "score": -1.0
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb3/Data/Images/Normal/0178.JPG",
+    "category": "pcb3",
+    "label": 0,
+    "split": "val",
+    "score": -0.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb3/Data/Images/Normal/0684.JPG",
+    "category": "pcb3",
+    "label": 0,
+    "split": "val",
+    "score": -0.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb3/Data/Images/Normal/0739.JPG",
+    "category": "pcb3",
+    "label": 0,
+    "split": "val",
+    "score": -1.0
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb3/Data/Images/Normal/0545.JPG",
+    "category": "pcb3",
+    "label": 0,
+    "split": "val",
+    "score": -1.0
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb3/Data/Images/Normal/0490.JPG",
+    "category": "pcb3",
+    "label": 0,
+    "split": "val",
+    "score": -1.0
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb3/Data/Images/Anomaly/003.JPG",
+    "category": "pcb3",
+    "label": 1,
+    "split": "val",
+    "score": 3.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb3/Data/Images/Anomaly/005.JPG",
+    "category": "pcb3",
+    "label": 1,
+    "split": "val",
+    "score": 12.25
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb3/Data/Images/Anomaly/007.JPG",
+    "category": "pcb3",
+    "label": 1,
+    "split": "val",
+    "score": 3.125
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb3/Data/Images/Anomaly/024.JPG",
+    "category": "pcb3",
+    "label": 1,
+    "split": "val",
+    "score": 5.625
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb3/Data/Images/Anomaly/028.JPG",
+    "category": "pcb3",
+    "label": 1,
+    "split": "val",
+    "score": 4.0
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb3/Data/Images/Anomaly/037.JPG",
+    "category": "pcb3",
+    "label": 1,
+    "split": "val",
+    "score": 4.625
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb3/Data/Images/Anomaly/038.JPG",
+    "category": "pcb3",
+    "label": 1,
+    "split": "val",
+    "score": -0.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb3/Data/Images/Anomaly/043.JPG",
+    "category": "pcb3",
+    "label": 1,
+    "split": "val",
+    "score": -0.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb3/Data/Images/Anomaly/044.JPG",
+    "category": "pcb3",
+    "label": 1,
+    "split": "val",
+    "score": -0.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb3/Data/Images/Anomaly/051.JPG",
+    "category": "pcb3",
+    "label": 1,
+    "split": "val",
+    "score": 4.125
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb3/Data/Images/Anomaly/060.JPG",
+    "category": "pcb3",
+    "label": 1,
+    "split": "val",
+    "score": 5.625
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb3/Data/Images/Anomaly/062.JPG",
+    "category": "pcb3",
+    "label": 1,
+    "split": "val",
+    "score": -0.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb3/Data/Images/Anomaly/070.JPG",
+    "category": "pcb3",
+    "label": 1,
+    "split": "val",
+    "score": 1.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb3/Data/Images/Anomaly/086.JPG",
+    "category": "pcb3",
+    "label": 1,
+    "split": "val",
+    "score": -0.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb3/Data/Images/Anomaly/090.JPG",
+    "category": "pcb3",
+    "label": 1,
+    "split": "val",
+    "score": -0.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb3/Data/Images/Anomaly/092.JPG",
+    "category": "pcb3",
+    "label": 1,
+    "split": "val",
+    "score": -0.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb3/Data/Images/Anomaly/098.JPG",
+    "category": "pcb3",
+    "label": 1,
+    "split": "val",
+    "score": -0.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Normal/0303.JPG",
+    "category": "pcb4",
+    "label": 0,
+    "split": "val",
+    "score": -2.0
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Normal/0172.JPG",
+    "category": "pcb4",
+    "label": 0,
+    "split": "val",
+    "score": -2.0
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Normal/0869.JPG",
+    "category": "pcb4",
+    "label": 0,
+    "split": "val",
+    "score": -2.0
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Normal/0215.JPG",
+    "category": "pcb4",
+    "label": 0,
+    "split": "val",
+    "score": -2.0
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Normal/0518.JPG",
+    "category": "pcb4",
+    "label": 0,
+    "split": "val",
+    "score": -2.125
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Normal/0294.JPG",
+    "category": "pcb4",
+    "label": 0,
+    "split": "val",
+    "score": -2.125
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Normal/0208.JPG",
+    "category": "pcb4",
+    "label": 0,
+    "split": "val",
+    "score": -2.125
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Normal/0297.JPG",
+    "category": "pcb4",
+    "label": 0,
+    "split": "val",
+    "score": -2.125
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Normal/0648.JPG",
+    "category": "pcb4",
+    "label": 0,
+    "split": "val",
+    "score": -2.25
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Normal/0797.JPG",
+    "category": "pcb4",
+    "label": 0,
+    "split": "val",
+    "score": -2.25
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Normal/0739.JPG",
+    "category": "pcb4",
+    "label": 0,
+    "split": "val",
+    "score": -2.25
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Normal/0490.JPG",
+    "category": "pcb4",
+    "label": 0,
+    "split": "val",
+    "score": -2.25
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Anomaly/000.JPG",
+    "category": "pcb4",
+    "label": 1,
+    "split": "val",
+    "score": 9.0
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Anomaly/003.JPG",
+    "category": "pcb4",
+    "label": 1,
+    "split": "val",
+    "score": 7.125
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Anomaly/004.JPG",
+    "category": "pcb4",
+    "label": 1,
+    "split": "val",
+    "score": 9.125
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Anomaly/008.JPG",
+    "category": "pcb4",
+    "label": 1,
+    "split": "val",
+    "score": 5.0
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Anomaly/010.JPG",
+    "category": "pcb4",
+    "label": 1,
+    "split": "val",
+    "score": 8.875
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Anomaly/012.JPG",
+    "category": "pcb4",
+    "label": 1,
+    "split": "val",
+    "score": 5.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Anomaly/015.JPG",
+    "category": "pcb4",
+    "label": 1,
+    "split": "val",
+    "score": 7.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Anomaly/018.JPG",
+    "category": "pcb4",
+    "label": 1,
+    "split": "val",
+    "score": 5.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Anomaly/025.JPG",
+    "category": "pcb4",
+    "label": 1,
+    "split": "val",
+    "score": 5.0
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Anomaly/026.JPG",
+    "category": "pcb4",
+    "label": 1,
+    "split": "val",
+    "score": 8.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Anomaly/036.JPG",
+    "category": "pcb4",
+    "label": 1,
+    "split": "val",
+    "score": 7.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Anomaly/037.JPG",
+    "category": "pcb4",
+    "label": 1,
+    "split": "val",
+    "score": 10.25
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Anomaly/039.JPG",
+    "category": "pcb4",
+    "label": 1,
+    "split": "val",
+    "score": 3.25
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Anomaly/040.JPG",
+    "category": "pcb4",
+    "label": 1,
+    "split": "val",
+    "score": 3.25
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Anomaly/047.JPG",
+    "category": "pcb4",
+    "label": 1,
+    "split": "val",
+    "score": 6.125
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Anomaly/048.JPG",
+    "category": "pcb4",
+    "label": 1,
+    "split": "val",
+    "score": -1.875
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Anomaly/052.JPG",
+    "category": "pcb4",
+    "label": 1,
+    "split": "val",
+    "score": 8.375
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Anomaly/053.JPG",
+    "category": "pcb4",
+    "label": 1,
+    "split": "val",
+    "score": 6.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Anomaly/068.JPG",
+    "category": "pcb4",
+    "label": 1,
+    "split": "val",
+    "score": 10.0
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Anomaly/077.JPG",
+    "category": "pcb4",
+    "label": 1,
+    "split": "val",
+    "score": 10.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Anomaly/081.JPG",
+    "category": "pcb4",
+    "label": 1,
+    "split": "val",
+    "score": 8.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Anomaly/082.JPG",
+    "category": "pcb4",
+    "label": 1,
+    "split": "val",
+    "score": 6.125
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Anomaly/087.JPG",
+    "category": "pcb4",
+    "label": 1,
+    "split": "val",
+    "score": 6.0
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Anomaly/095.JPG",
+    "category": "pcb4",
+    "label": 1,
+    "split": "val",
+    "score": -1.875
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Anomaly/098.JPG",
+    "category": "pcb4",
+    "label": 1,
+    "split": "val",
+    "score": 8.625
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pipe_fryum/Data/Images/Normal/104.JPG",
+    "category": "pipe_fryum",
+    "label": 0,
+    "split": "val",
+    "score": -3.625
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pipe_fryum/Data/Images/Normal/050.JPG",
+    "category": "pipe_fryum",
+    "label": 0,
+    "split": "val",
+    "score": -3.0
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pipe_fryum/Data/Images/Normal/400.JPG",
+    "category": "pipe_fryum",
+    "label": 0,
+    "split": "val",
+    "score": -2.875
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pipe_fryum/Data/Images/Normal/461.JPG",
+    "category": "pipe_fryum",
+    "label": 0,
+    "split": "val",
+    "score": -3.5
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pipe_fryum/Data/Images/Normal/435.JPG",
+    "category": "pipe_fryum",
+    "label": 0,
+    "split": "val",
+    "score": -3.375
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pipe_fryum/Data/Images/Normal/098.JPG",
+    "category": "pipe_fryum",
+    "label": 0,
+    "split": "val",
+    "score": -3.125
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pipe_fryum/Data/Images/Normal/487.JPG",
+    "category": "pipe_fryum",
+    "label": 0,
+    "split": "val",
+    "score": -3.0
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pipe_fryum/Data/Images/Anomaly/000.JPG",
+    "category": "pipe_fryum",
+    "label": 1,
+    "split": "val",
+    "score": 5.0
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pipe_fryum/Data/Images/Anomaly/003.JPG",
+    "category": "pipe_fryum",
+    "label": 1,
+    "split": "val",
+    "score": 5.125
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pipe_fryum/Data/Images/Anomaly/013.JPG",
+    "category": "pipe_fryum",
+    "label": 1,
+    "split": "val",
+    "score": 4.625
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pipe_fryum/Data/Images/Anomaly/024.JPG",
+    "category": "pipe_fryum",
+    "label": 1,
+    "split": "val",
+    "score": 4.0
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pipe_fryum/Data/Images/Anomaly/025.JPG",
+    "category": "pipe_fryum",
+    "label": 1,
+    "split": "val",
+    "score": 0.125
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pipe_fryum/Data/Images/Anomaly/027.JPG",
+    "category": "pipe_fryum",
+    "label": 1,
+    "split": "val",
+    "score": 2.875
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pipe_fryum/Data/Images/Anomaly/035.JPG",
+    "category": "pipe_fryum",
+    "label": 1,
+    "split": "val",
+    "score": -0.375
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pipe_fryum/Data/Images/Anomaly/038.JPG",
+    "category": "pipe_fryum",
+    "label": 1,
+    "split": "val",
+    "score": 2.875
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pipe_fryum/Data/Images/Anomaly/045.JPG",
+    "category": "pipe_fryum",
+    "label": 1,
+    "split": "val",
+    "score": 7.875
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pipe_fryum/Data/Images/Anomaly/047.JPG",
+    "category": "pipe_fryum",
+    "label": 1,
+    "split": "val",
+    "score": 5.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pipe_fryum/Data/Images/Anomaly/050.JPG",
+    "category": "pipe_fryum",
+    "label": 1,
+    "split": "val",
+    "score": 5.375
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pipe_fryum/Data/Images/Anomaly/055.JPG",
+    "category": "pipe_fryum",
+    "label": 1,
+    "split": "val",
+    "score": 3.625
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pipe_fryum/Data/Images/Anomaly/061.JPG",
+    "category": "pipe_fryum",
+    "label": 1,
+    "split": "val",
+    "score": 3.625
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pipe_fryum/Data/Images/Anomaly/069.JPG",
+    "category": "pipe_fryum",
+    "label": 1,
+    "split": "val",
+    "score": 4.0
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pipe_fryum/Data/Images/Anomaly/077.JPG",
+    "category": "pipe_fryum",
+    "label": 1,
+    "split": "val",
+    "score": 4.75
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pipe_fryum/Data/Images/Anomaly/086.JPG",
+    "category": "pipe_fryum",
+    "label": 1,
+    "split": "val",
+    "score": 5.25
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pipe_fryum/Data/Images/Anomaly/092.JPG",
+    "category": "pipe_fryum",
+    "label": 1,
+    "split": "val",
+    "score": 2.0
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pipe_fryum/Data/Images/Anomaly/093.JPG",
+    "category": "pipe_fryum",
+    "label": 1,
+    "split": "val",
+    "score": 4.125
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pipe_fryum/Data/Images/Anomaly/096.JPG",
+    "category": "pipe_fryum",
+    "label": 1,
+    "split": "val",
+    "score": 6.875
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pipe_fryum/Data/Images/Anomaly/097.JPG",
+    "category": "pipe_fryum",
+    "label": 1,
+    "split": "val",
+    "score": -1.0
+  }
+]
