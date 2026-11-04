@@ -1,23 +1,16 @@
 # Qwen→AnomalyGPT 进阶实验（2026-11-04）
 
-用户授权按顺序执行：外部协议冻结 → D 联合桥接/LoRA → 同采样 CE/排序损失 → mask监督结构化定位 → 模型自主选择 ROI 工具。
+按固定顺序执行：外部协议冻结 → 桥接/LoRA联合适配D → 匹配采样CE/排序目标Cpair/R → mask监督结构化回答S → 原生Qwen ROI工具 → 冻结外部评估。
 
-- [冻结协议](PROTOCOL.md)：可比条件、损失权重训练集校准、外部边界。
-- [CPU及数据审计](AUDIT_NOTES.md)：真实代码契约回归，内容哈希排重。
-- [结构化定位](STRUCTURED_PROTOCOL.md)：继续原 C best，输出 Yes/No + bbox/位置，train mask只做输出监督。
-- [ROI工具](TOOL_PROTOCOL.md)：原生Qwen独立路线，真实JSON请求及裁剪返回，五臂控制与成本。
-- advanced_runner.py：共享GPU锁下串行D与Cpair/R三seed；verify_advanced_queue.py随后新进程回载。
-- continue_stages.py：前序训练/回载完成后串行S预检/三seed/回载，再工具预检/全val及后验审计。
-- summarize_advanced.py：仅纳入已完成正式运行，逐份原始预测重算，best/final与配对差并列。
+当前已完成D/Cpair/R正式9组、S三seed及原生工具val380五臂；外部21组矩阵正在执行。所有完成结果均保留不利指标；排队或执行中的组不计入完成。
 
-历史 B/C 源码与结果未改写；新训练器为 migration_advanced_train.py。运行中目录/日志在服务器，轻量结果同步本目录。外部1575图manifest已固定；在全部checkpoint和prompt冻结前不打开其模型结果。
+| 阶段 | 状态与核心结果 | 证据 |
+|---|---|---|
+| D/Cpair/R | 9组×500步，18份best/final预测复算；9组双模式独立回载通过。D-C AUROC均值+0.3275pp；R-Cpair +1.2015pp，同时FPR+3.6822pp | [结果](RESULTS.md)、[分析](ANALYSIS.md)、[fresh](verification_status.json) |
+| S | 3seed×500步，9份initial/best/final报告复算，6份fresh各104图。相同结构化提示下IoU .030993→.068755，仍低于teacher .101963；相对原C生成F1下降2.067pp | [结果](structured_summary/RESULTS.md)、[分析](STRUCTURED_ANALYSIS.md)、[全审计](STRUCTURED_FULL_AUDIT.json) |
+| 原生ROI工具 | 8图预检、380图×5臂及后验审计完成；模型380次全选answer、crop0，逐图等同重复原图控制，未展示自主裁剪 | [结果](TOOL_RESULTS.md)、[分析](TOOL_ANALYSIS.md)、[汇总](tool_summary.json) |
+| 外部1575图 | 全部权重/提示/源码先冻结；21组矩阵运行中，只有完整组参与重算，不用外部反馈调参 | [冻结](external_selection_freeze.json)、[进度](external_status.json)、[当前汇总](EXTERNAL_RESULTS.md) |
 
-当前这里只报告实际完成的审计与运行，不将已实现或排队的阶段视为训练完成。汇总以 RESULTS.md / summary.json 的状态和独立回载报告为准。
+协议与实现：[PROTOCOL.md](PROTOCOL.md)、[STRUCTURED_PROTOCOL.md](STRUCTURED_PROTOCOL.md)、[TOOL_PROTOCOL.md](TOOL_PROTOCOL.md)、[审计记录](AUDIT_NOTES.md)。历史B/C源文件保留，新增训练器为migration_advanced_train.py；原生工具与压缩桥接LoRA为独立视觉路线。
 
-D/Cpair/R正式9组已全部完成，18份best/final预测逐份重算通过；每组两个checkpoint独立进程回载与关闭adapter参考检查全部通过。详见RESULTS.md及verification_status.json。S已通过40步预检并进入三seed正式运行，工具与外部评估仍等待上游门禁。
-
-S42/S43已完成500步和best/final各104图独立精确重载，S44执行中。S42分类改善但框IoU与严格有效率下降；不能将分类提升表述为定位增强。后续三seed、工具及外评仍以实际完成门禁为准。
-
-S三seed正式完成：九份initial/best/final报告复算，六份best/final fresh各104图精确通过。结构化汇总见[RESULTS](structured_summary/RESULTS.md)，分类与定位的边界见[分析](STRUCTURED_ANALYSIS.md)。tool_preflight八图×五臂及后验审计通过，tool_val380执行中；外部模型查询仍为0。
-
-工具完整380×5臂与后验审计/预测重算已完成。模型380次均直接answer，crop0，与重复原图控制逐条一致；该配置未展示自主裁剪。详见[结果](TOOL_RESULTS.md)与[分析](TOOL_ANALYSIS.md)。外部21组矩阵已经冻结并执行，最终以external_summary为准。
+[项目进度与简历表述](PROJECT_PROGRESS.md)记录可支持的技术贡献及边界。[figures](figures/)包含已验收开发结果的配对图、定位控制图和来源SHA。VisA val380同时用于选点和报告；这些是开发验证结果，不能当作独立泛化或复杂推理证明。

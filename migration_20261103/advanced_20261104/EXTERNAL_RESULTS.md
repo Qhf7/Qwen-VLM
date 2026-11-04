@@ -9,8 +9,8 @@ State: **partial**. Each included run is recomputed from all1575 saved raw predi
 | D | 3/3 | 0.714118±0.053733 | 0.860675 | 0.651824 | 0.939138 | 0.668367 | 0.824338 |
 | Cpair | 3/3 | 0.709581±0.044448 | 0.858676 | 0.653811 | 0.935193 | 0.659014 | 0.821618 |
 | R | 3/3 | 0.703438±0.030671 | 0.856832 | 0.636020 | 0.958580 | 0.715986 | 0.826927 |
-| Cstructured | 0/3 | — | — | — | — | — | — |
-| S | 0/3 | — | — | — | — | — | — |
+| Cstructured | 2/3 | 0.716769±0.011576 | 0.864289 | 0.676252 | 0.913779 | 0.594388 | 0.801328 |
+| S | 2/3 | 0.728121±0.019588 | 0.869712 | 0.665464 | 0.923922 | 0.627551 | 0.820376 |
 
 Differences are computed within the same seed before aggregation. Partial seed groups remain explicitly partial.
 
@@ -21,8 +21,8 @@ Differences are computed within the same seed before aggregation. Partial seed g
 | D_minus_A | 3/3 | 0.005284 | 0.002822 | -0.020162 | 0.015779 | 0.056122 |
 | R_minus_Cpair | 3/3 | -0.006143 | -0.001844 | -0.017791 | 0.023387 | 0.056973 |
 | Cpair_minus_C | 3/3 | -0.001782 | -0.001282 | -0.004037 | -0.000282 | 0.008503 |
-| Cstructured_minus_C | 0/3 | — | — | — | — | — |
-| S_minus_Cstructured | 0/3 | — | — | — | — | — |
+| Cstructured_minus_C | 2/3 | -0.018679 | -0.014771 | 0.027342 | -0.015638 | -0.061224 |
+| S_minus_Cstructured | 2/3 | 0.011352 | 0.005424 | -0.010789 | 0.010144 | 0.033163 |
 
 Checkpoint steps, source hashes, training parameters, inference costs, per-category seed means/differences and localization denominators are in the JSON artifact.
 
@@ -32,9 +32,5 @@ This is a public cross-dataset audit. VisA validation selects checkpoints; MVTec
 
 Unavailable or rejected runs:
 
-- Cstructured seed42: partial — No completed summary; raw partial rows are not counted
-- Cstructured seed43: missing — No completed summary; raw partial rows are not counted
-- Cstructured seed44: missing — No completed summary; raw partial rows are not counted
-- S seed42: missing — No completed summary; raw partial rows are not counted
-- S seed43: missing — No completed summary; raw partial rows are not counted
+- Cstructured seed44: partial — No completed summary; raw partial rows are not counted
 - S seed44: missing — No completed summary; raw partial rows are not counted

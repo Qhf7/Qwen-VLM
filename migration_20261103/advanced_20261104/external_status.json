@@ -64,15 +64,31 @@
     {
       "name": "external_R_s44",
       "state": "complete"
+    },
+    {
+      "name": "external_Cstructured_s42",
+      "state": "complete"
+    },
+    {
+      "name": "external_S_s42",
+      "state": "complete"
+    },
+    {
+      "name": "external_Cstructured_s43",
+      "state": "complete"
+    },
+    {
+      "name": "external_S_s43",
+      "state": "complete"
     }
   ],
-  "stage": "external_Cstructured_s42",
+  "stage": "external_Cstructured_s44",
   "command": [
     "/root/autodl-tmp/conda-envs/qwen3vl2/bin/python",
     "-u",
     "structured_external.py",
     "--run",
-    "/root/autodl-tmp/AnomalyGPT/runs/migration_20261103/advanced_20261104/arm_S_s42",
+    "/root/autodl-tmp/AnomalyGPT/runs/migration_20261103/advanced_20261104/arm_S_s44",
     "--external-cache",
     "/root/autodl-tmp/AnomalyGPT/runs/migration_20261103/advanced_20261104/external_teacher_cache.pt",
     "--manifest",
@@ -82,7 +98,7 @@
     "--data-root",
     "/root/autodl-tmp/AnomalyGPT/datasets/MVTec_AD_residual_v1",
     "--out",
-    "/root/autodl-tmp/AnomalyGPT/runs/migration_20261103/advanced_20261104/arm_S_s42/external_mvtec_residual_v1_initial_c",
+    "/root/autodl-tmp/AnomalyGPT/runs/migration_20261103/advanced_20261104/arm_S_s44/external_mvtec_residual_v1_initial_c",
     "--initial-c"
   ]
 }

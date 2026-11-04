@@ -11,6 +11,8 @@
 - [项目经历与下一阶段 LoRA 方案](PROJECT_EXPERIENCE_AND_LORA_PLAN.md)。
 - [已完成语言LoRA三seed配对实验](lora_20261104/ANALYSIS.md)：B为桥接继续训练、C为冻结桥接的q/v LoRA；C best平均AUROC0.936983、生成Macro-F1 0.861732，同时报告召回/FPR、固定500步终点及独立重载核验。
 
+- [进阶实验与冻结外评](advanced_20261104/README.md)：D联合适配、匹配排序、mask监督空间回答和五臂原生ROI工具已完成；外部21组评估以其独立状态文件为准。
+
 数据为自定义有监督 train9985/val380，包含真实异常训练；这些属于开发验证结果。历史 test456 已参与开发，不能称为未见盲测。
 
 ## 源码和环境
