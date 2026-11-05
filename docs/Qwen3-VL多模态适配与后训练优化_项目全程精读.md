@@ -31,7 +31,7 @@
 
 输入一张工业产品图像，输出异常判断，并探索像素热图、异常框和位置回答。围绕 Qwen3-VL-8B，项目实现了跨模态桥接、语言 LoRA/QLoRA、成对排序和结构化 SFT，最终用冻结外部评测检查同域收益能否迁移。
 
-仓库：[Qhf7/VLM_Ali](https://github.com/Qhf7/VLM_Ali)。主要底座为 Qwen3-VL-8B-Instruct；对照包含 Vicuna-7B；视觉模块涉及 ImageBind、Qwen 原生视觉和前期 DINOv2。项目实现、必要上游快照与研究来源的边界见 [THIRD_PARTY.md](../THIRD_PARTY.md)。GitHub 中的源码和轻量结果不等于完整模型交付，数据、底座、历史桥接权重和缓存需另外准备。
+仓库：[Qhf7/Qwen-VLM](https://github.com/Qhf7/Qwen-VLM)。主要底座为 Qwen3-VL-8B-Instruct；对照包含 Vicuna-7B；视觉模块涉及 ImageBind、Qwen 原生视觉和前期 DINOv2。项目实现、必要上游快照与研究来源的边界见 [THIRD_PARTY.md](../THIRD_PARTY.md)。GitHub 中的源码和轻量结果不等于完整模型交付，数据、底座、历史桥接权重和缓存需另外准备。
 
 ### 0.2 先记住项目的分支关系
 
@@ -1286,7 +1286,7 @@ D/Cpair/R共9正式训练、best/final18份raw，共6840行；fresh每run每端�
 <a id="appendix-code"></a>
 ## 附录 A：项目代码、目录与交付文件索引
 
-> 整理日期：2026-11-05（Asia/Shanghai）。本附录面向 `Qwen-VLM/` 项目交付包，说明代码、实验记录与文档之间的关系。目录名中的日期表示历史实验批次。
+> 整理日期：2026-11-05（Asia/Shanghai）。本附录面向 `Qwen-VLM` 仓库根目录中的项目文件，说明代码、实验记录与文档之间的关系。目录名中的日期表示历史实验批次。
 
 ### A.1 交付范围与索引
 
@@ -1298,10 +1298,10 @@ D/Cpair/R共9正式训练、best/final18份raw，共6840行；fresh每run每端�
 | [DELIVERY_MANIFEST.tsv](../DELIVERY_MANIFEST.tsv) | 核对实际交付路径；包内容更新后以重新生成的清单为准。 |
 | 本文 A.6 | 按阶段查找项目脚本、上下游和关键符号；历史运行以其绑定的源码身份为准。 |
 
-### A.2 项目包目录
+### A.2 仓库根目录
 
 ```text
-Qwen-VLM/
+Qwen-VLM/                                  仓库根目录
 ├── README.md / DELIVERY_MANIFEST.tsv  包入口与文件清单
 ├── THIRD_PARTY.md                            上游来源和许可
 ├── docs/                                    项目说明、精读、演进、图和面试资料

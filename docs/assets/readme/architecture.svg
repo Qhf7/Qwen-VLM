@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="620" viewBox="0 0 1280 620"><defs><linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#F4F8FE"/><stop offset="1" stop-color="#ECF7F6"/></linearGradient><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10" fill="#8FA4BD"/></marker></defs><rect width="1280" height="620" rx="24" fill="url(#bg)"/>
+<text x="45" y="58" fill="#142840" font-family="Arial, sans-serif" font-size="34" font-weight="700" text-anchor="start">Qwen-VLM</text>
+<text x="45" y="88" fill="#5A6E83" font-family="Arial, sans-serif" font-size="17" font-weight="400" text-anchor="start">Industrial anomaly adaptation &amp; parameter-efficient post-training</text>
+<rect x="1010" y="34" width="225" height="42" rx="21" fill="#E1EFED"/>
+<text x="1122" y="61" fill="#087F83" font-family="Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">8B backbone · audited evidence</text>
+<text x="45" y="139" fill="#3675DA" font-family="Arial, sans-serif" font-size="12" font-weight="700" text-anchor="start">01  LANGUAGE-BACKBONE MIGRATION</text>
+<rect x="45" y="160" width="160" height="115" rx="15" fill="white" stroke="#DDE5EF"/>
+<rect x="45" y="178" width="4" height="79" rx="2" fill="#3675DA"/>
+<text x="64" y="190" fill="#142840" font-family="Arial, sans-serif" font-size="17" font-weight="700" text-anchor="start">Image</text>
+<text x="64" y="215" fill="#5A6E83" font-family="Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">Industrial input</text>
+<text x="64" y="234" fill="#5A6E83" font-family="Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">No GT mask at inference</text>
+<rect x="250" y="160" width="225" height="115" rx="15" fill="white" stroke="#DDE5EF"/>
+<rect x="250" y="178" width="4" height="79" rx="2" fill="#3675DA"/>
+<text x="269" y="190" fill="#142840" font-family="Arial, sans-serif" font-size="17" font-weight="700" text-anchor="start">Shared visual front end</text>
+<text x="269" y="215" fill="#5A6E83" font-family="Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">Frozen ImageBind</text>
+<text x="269" y="234" fill="#5A6E83" font-family="Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">BigDec anomaly map</text>
+<rect x="520" y="160" width="225" height="115" rx="15" fill="white" stroke="#DDE5EF"/>
+<rect x="520" y="178" width="4" height="79" rx="2" fill="#3675DA"/>
+<text x="539" y="190" fill="#142840" font-family="Arial, sans-serif" font-size="17" font-weight="700" text-anchor="start">Multimodal bridge</text>
+<text x="539" y="215" fill="#5A6E83" font-family="Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">CLS projection</text>
+<text x="539" y="234" fill="#5A6E83" font-family="Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">Map → prompt tokens</text>
+<rect x="790" y="160" width="215" height="115" rx="15" fill="white" stroke="#DDE5EF"/>
+<rect x="790" y="178" width="4" height="79" rx="2" fill="#087F83"/>
+<text x="809" y="190" fill="#142840" font-family="Arial, sans-serif" font-size="17" font-weight="700" text-anchor="start">Qwen language model</text>
+<text x="809" y="215" fill="#5A6E83" font-family="Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">Base frozen; optional q/v LoRA</text>
+<text x="809" y="234" fill="#5A6E83" font-family="Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">A / C / D / Cpair / R / S</text>
+<rect x="1050" y="160" width="185" height="115" rx="15" fill="white" stroke="#DDE5EF"/>
+<rect x="1050" y="178" width="4" height="79" rx="2" fill="#087F83"/>
+<text x="1069" y="190" fill="#142840" font-family="Arial, sans-serif" font-size="17" font-weight="700" text-anchor="start">Outputs</text>
+<text x="1069" y="215" fill="#5A6E83" font-family="Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">Decision / score</text>
+<text x="1069" y="234" fill="#5A6E83" font-family="Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">Structured bbox</text>
+<path d="M205 217 L242 217" fill="none" stroke="#8FA4BD" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M475 217 L512 217" fill="none" stroke="#8FA4BD" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M745 217 L782 217" fill="none" stroke="#8FA4BD" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M1005 217 L1042 217" fill="none" stroke="#8FA4BD" stroke-width="2.2" marker-end="url(#arrow)"/>
+<text x="250" y="300" fill="#5A6E83" font-family="Arial, sans-serif" font-size="13" font-weight="400" text-anchor="start">Vicuna ↔ Qwen: matched visual input, bridge initialization, data order and training budget.</text>
+<text x="45" y="351" fill="#087F83" font-family="Arial, sans-serif" font-size="12" font-weight="700" text-anchor="start">02  NATIVE QWEN VISUAL PATHWAY  ·  SEPARATE EXPERIMENT</text>
+<rect x="45" y="372" width="160" height="104" rx="15" fill="white" stroke="#DDE5EF"/>
+<rect x="45" y="390" width="4" height="68" rx="2" fill="#087F83"/>
+<text x="64" y="402" fill="#142840" font-family="Arial, sans-serif" font-size="17" font-weight="700" text-anchor="start">Image</text>
+<text x="64" y="427" fill="#5A6E83" font-family="Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">Native processor</text>
+<rect x="250" y="372" width="355" height="104" rx="15" fill="white" stroke="#DDE5EF"/>
+<rect x="250" y="390" width="4" height="68" rx="2" fill="#087F83"/>
+<text x="269" y="402" fill="#142840" font-family="Arial, sans-serif" font-size="17" font-weight="700" text-anchor="start">Qwen3-VL visual pathway</text>
+<text x="269" y="427" fill="#5A6E83" font-family="Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">Frozen vision encoder, merger and base</text>
+<text x="269" y="446" fill="#5A6E83" font-family="Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">NF4 language base + q/k/v/o LoRA</text>
+<rect x="650" y="372" width="355" height="104" rx="15" fill="white" stroke="#DDE5EF"/>
+<rect x="650" y="390" width="4" height="68" rx="2" fill="#087F83"/>
+<text x="669" y="402" fill="#142840" font-family="Arial, sans-serif" font-size="17" font-weight="700" text-anchor="start">Fixed-exposure task ablation</text>
+<text x="669" y="427" fill="#5A6E83" font-family="Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">RR: region × 2   |   DD: decision × 2</text>
+<text x="669" y="446" fill="#5A6E83" font-family="Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">RD: region + decision</text>
+<rect x="1050" y="372" width="185" height="104" rx="15" fill="white" stroke="#DDE5EF"/>
+<rect x="1050" y="390" width="4" height="68" rx="2" fill="#087F83"/>
+<text x="1069" y="402" fill="#142840" font-family="Arial, sans-serif" font-size="17" font-weight="700" text-anchor="start">Evaluation</text>
+<text x="1069" y="427" fill="#5A6E83" font-family="Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">Generated answers</text>
+<text x="1069" y="446" fill="#5A6E83" font-family="Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start">Likelihood scores</text>
+<path d="M205 424 L242 424" fill="none" stroke="#8FA4BD" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M605 424 L642 424" fill="none" stroke="#8FA4BD" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M1005 424 L1042 424" fill="none" stroke="#8FA4BD" stroke-width="2.2" marker-end="url(#arrow)"/>
+<rect x="45" y="518" width="1190" height="63" rx="14" fill="#142840"/>
+<text x="66" y="544" fill="#94B6DF" font-family="Arial, sans-serif" font-size="11" font-weight="700" text-anchor="start">EVIDENCE CHAIN</text>
+<text x="66" y="565" fill="white" font-family="Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start">Pipeline repair  →  paired seeds  →  LoRA / ranking / structured targets  →  reload audits  →  frozen external evaluation</text>
+</svg>

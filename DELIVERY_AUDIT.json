@@ -1,0 +1,129 @@
+{
+  "schema_version": 2,
+  "date": "2026-11-05",
+  "repository": "https://github.com/Qhf7/Qwen-VLM",
+  "layout": "Project files are directly at the repository root; no enclosing Qwen-VLM subdirectory.",
+  "scope": {
+    "total_delivered_files_including_audit_and_manifest": 2675,
+    "manifest_excludes": "DELIVERY_MANIFEST.tsv only",
+    "payload_files_excluding_audit_and_manifest": 2673,
+    "payload_bytes_excluding_audit_and_manifest": 546126092
+  },
+  "root_migration": {
+    "previous_verified_commit": "4e09d3d9f526414380c3e991d014d4ae0565feec",
+    "previous_package_files": 2663,
+    "all_previous_package_files_present": true,
+    "unchanged_previous_package_files": 2654,
+    "adapted_current_documents": [
+      {
+        "path": "ASSETS.md",
+        "previous_package_sha256": "0f0e17a7da39d9d3060109dcc8e642611605188439928d51b222be71165f3f90",
+        "root_sha256": "4ee59772dd2aacf8a0c7bdaf64697dcc1a4c3fd3b8dfb5e696fc95c9acaa19fb"
+      },
+      {
+        "path": "README.md",
+        "previous_package_sha256": "46488ea526febf76df9bde4d4c13cda7dc71e008dff9c930f0856ee348ed8fc9",
+        "root_sha256": "bad0b638fb3f044f11cc76bad975640554dde90fdbf9c297f62a30c6be178eca"
+      },
+      {
+        "path": "THIRD_PARTY.md",
+        "previous_package_sha256": "6a8e50fdeb4985713ebd4d4513512843ae4ef1ca04fd76d50e9f442846737711",
+        "root_sha256": "db717606203e069407399d88e0a8408196890d05d2ca67b19e858bdf49093b85"
+      },
+      {
+        "path": "docs/Qwen3-VL多模态适配与后训练优化_项目全程精读.md",
+        "previous_package_sha256": "14df94e0d9f19e4df8d6335a4275bac6fc11a36e8874f6b4b280e88ca77b9ece",
+        "root_sha256": "5e25ac124a4faa043e58cba8327c3ade408f357a895545080b9292de90c11757"
+      },
+      {
+        "path": "docs/仓库同步说明.md",
+        "previous_package_sha256": "cea08633ac54cdf5b87fe4b75a576fea4d5211b8ddfc376c979840c4418f5e52",
+        "root_sha256": "683c0d24cbb982fc2629c1d006529d8955707c853032b3bb2f3d08aac8c1dc06"
+      },
+      {
+        "path": "docs/大模型基座算法岗位_项目经历.md",
+        "previous_package_sha256": "58439707461ce98247296e499191e74a6b659b2a0d2279b4a1654d746e4b1053",
+        "root_sha256": "45ae598af9fec89685fc04f0a1758c088038f14daa9544b095baf4fc1138c5cc"
+      },
+      {
+        "path": "docs/大模型基座算法岗位_项目经历_整合版.md",
+        "previous_package_sha256": "f85e8b6f264bc85289bd7efda3324d7e53fc06c690c6d7e39ff9aa10697839e2",
+        "root_sha256": "29447fef18f4b1b3a07e94778852a02bab111285da2ef6251c39587b7db6577e"
+      },
+      {
+        "path": "docs/项目源码与配置清单.tsv",
+        "previous_package_sha256": "119b7adaa99b58204b92079800836536b69326be83af7f3a04c176c2d4e91e12",
+        "root_sha256": "47ab8e338b1ba51c37168d552a681a122a27dc79148b7cec18908b0e7ac75bbe"
+      },
+      {
+        "path": "docs/项目精读附录_代码与文件索引.md",
+        "previous_package_sha256": "e25ec421e300d272a6c773684a0908157d2bcdb1659e3af2afa59890aab4268a",
+        "root_sha256": "ba4c610be0e675a4b3e9ba4252ba64330284c9be0a2b5aa4f2423bc312284bc4"
+      }
+    ],
+    "original_local_unrelated_assets_preserved": true,
+    "conflicting_local_documents_backed_up": true,
+    "nested_upstream_git_metadata_preserved_locally": true
+  },
+  "source_config_inventory": {
+    "entries": 509,
+    "all_sha256_match_delivered_files": true,
+    "new_source": "docs/assets/readme/render_figures.py",
+    "all_preexisting_experiment_code_and_metadata_byte_identical": true
+  },
+  "readme_visualizations": {
+    "files": [
+      "docs/assets/readme/architecture.svg",
+      "docs/assets/readme/development_external.png",
+      "docs/assets/readme/development_external.svg",
+      "docs/assets/readme/evidence.json",
+      "docs/assets/readme/language_transfer.png",
+      "docs/assets/readme/language_transfer.svg",
+      "docs/assets/readme/native_qlora.png",
+      "docs/assets/readme/native_qlora.svg",
+      "docs/assets/readme/render_figures.py",
+      "docs/assets/readme/structured_output.png",
+      "docs/assets/readme/structured_output.svg"
+    ],
+    "charts": 5,
+    "source_report_sha256_verified": true,
+    "figures_visually_reviewed": true,
+    "uncertainty": "Language chart error bars are sample SD across three training seeds, not confidence intervals.",
+    "protocols": "Main transfer and independent native QLoRA have different data and budgets; development and external metrics are labeled separately.",
+    "no_new_training_or_inference": true,
+    "total_asset_bytes": 646095
+  },
+  "markdown_link_check": {
+    "markdown_files_scanned": 176,
+    "local_targets_checked": 1434,
+    "unresolved_local_paths": [],
+    "scope": "Inline/reference/image links outside fenced code; URL fragments and external URLs not validated."
+  },
+  "security_and_assets": {
+    "original_raw_sessions_not_delivered": true,
+    "model_tensor_weights_not_delivered": true,
+    "full_raw_datasets_not_delivered": true,
+    "prior_secret_review": {
+      "independent_utf8_text_files_scanned": 2541,
+      "patterns": [
+        "API tokens and credentials",
+        "private-key blocks",
+        "URL credentials",
+        "password/SSH assignments",
+        "JSON key/password literals; tokenizer vocabulary hits reviewed"
+      ],
+      "finding": "No hardcoded credential values found in reviewed package. Tokenizer vocabulary and audit filter-list matches were not credentials.",
+      "prohibited_asset_paths_found": [],
+      "raw_sessions_included": false,
+      "model_tensor_weights_included": false,
+      "raw_image_datasets_included": false
+    },
+    "current_change_scope": "Existing reviewed files relocated; current Markdown documentation, charts, figure code and delivery metadata updated. No credentials added."
+  },
+  "verification_limits": [
+    "No new training, inference or external evaluation was run.",
+    "Historical run/source manifests and model hashes retain their original bytes; they do not imply weight or dataset availability.",
+    "Only published project files are listed in the manifest; unrelated local assets remain outside Git tracking.",
+    "Repository rename preserves existing commit history."
+  ]
+}

@@ -1,6 +1,6 @@
 # 代码、模型与数据来源
 
-> 整理日期：2026-11-05。本文件说明 `Qwen-VLM/` 交付包中项目实现与上游组件的边界。阅读入口见 [README](README.md)，未随包提供的资产见 [ASSETS.md](ASSETS.md)，实际纳入的文件以 [DELIVERY_MANIFEST.tsv](DELIVERY_MANIFEST.tsv) 为准。
+> 整理日期：2026-11-05。本文件说明 `Qwen-VLM` 仓库根目录中项目实现与上游组件的边界。阅读入口见 [README](README.md)，未随包提供的资产见 [ASSETS.md](ASSETS.md)，实际纳入的文件以 [DELIVERY_MANIFEST.tsv](DELIVERY_MANIFEST.tsv) 为准。
 
 ## 项目实现与第三方组件的边界
 

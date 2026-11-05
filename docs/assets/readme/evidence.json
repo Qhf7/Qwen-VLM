@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "created_for": "README visualization; no new training or inference",
+  "source_path_base": "repository root",
+  "sources": [
+    {
+      "path": "migration_20261103/PHASE1_RESULTS.md",
+      "sha256": "8ea243190c91b1a366b429f9ccbe5ca5a66aebe49acc6c123d69be891ba409b1"
+    },
+    {
+      "path": "migration_20261103/lora_20261104/RESULTS.md",
+      "sha256": "d80b022217322898f91ef45da7caa734475c9146f9b448ecf12bb1f0a94a77de"
+    },
+    {
+      "path": "migration_20261103/advanced_20261104/FINAL_REPORT.md",
+      "sha256": "23808f7442cdf962b820e52cd5bcef02d0649773cfd2a3acfbd78242c7ed4f26"
+    },
+    {
+      "path": "industrial_vlm/reports/multitask_v2/scoring_matrix.md",
+      "sha256": "173400304df18b7b160597100330aac8e66c9ede5e5b1b6a17d6234ce7f8d7da"
+    },
+    {
+      "path": "industrial_vlm/reports/multitask_v2/实验报告.md",
+      "sha256": "561bf132023bfff74b13c7aa379c0554ad7a6d90ea46827777cad2ceb83ff06d"
+    }
+  ],
+  "language_transfer": {
+    "metric": "global image AUROC",
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "dataset": "custom supervised VisA development val380",
+    "checkpoint_selection": "development validation AUROC",
+    "models": [
+      "Vicuna + trained bridge",
+      "Qwen + trained bridge (A)",
+      "Qwen + language LoRA (C)"
+    ],
+    "mean": [
+      0.889684,
+      0.925779,
+      0.936983
+    ],
+    "sample_sd_ddof1": [
+      0.013285,
+      0.032698,
+      0.030098
+    ],
+    "sources": [
+      "migration_20261103/PHASE1_RESULTS.md",
+      "migration_20261103/lora_20261104/RESULTS.md"
+    ],
+    "notes": [
+      "Shared ImageBind/BigDec front end; A trains a new bridge with frozen LLM.",
+      "C continues from the matched-seed A with frozen bridge and q/v LoRA.",
+      "Error bars show training-seed sample SD, not confidence intervals."
+    ]
+  },
+  "development_vs_external": {
+    "metric": "global image AUROC",
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "arms": [
+      "A",
+      "C",
+      "D",
+      "Cpair",
+      "R",
+      "S"
+    ],
+    "development_val380": [
+      0.925779,
+      0.936983,
+      0.940258,
+      0.935334,
+      0.947348,
+      0.939489
+    ],
+    "external_mvtec1575": [
+      0.708834,
+      0.711363,
+      0.714118,
+      0.709581,
+      0.703438,
+      0.717814
+    ],
+    "external_total_predictions_all_7_arms_3_seeds": 33075,
+    "external_generated_fpr_range": [
+      0.612245,
+      0.715986
+    ],
+    "sources": [
+      "migration_20261103/advanced_20261104/FINAL_REPORT.md"
+    ],
+    "notes": [
+      "Same selected checkpoints evaluated on external data; no external tuning.",
+      "R must be compared with Cpair, not historical C.",
+      "S uses a structured prompt schema; cross-schema differences are not isolated LoRA effects.",
+      "A/C/D/Cpair/R are separate branches from matched A; S continues from C.",
+      "The plot shows six arms; the seven-arm external audit additionally includes Cstructured."
+    ]
+  },
+  "structured_output": {
+    "dataset": "external MVTec1575",
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "arms": [
+      "Cstructured",
+      "S"
+    ],
+    "strict_structure_validity": [
+      0.64127,
+      0.919577
+    ],
+    "all_anomaly_box_iou": [
+      0.071108,
+      0.069815
+    ],
+    "anomaly_denominator": 1183,
+    "sources": [
+      "migration_20261103/advanced_20261104/FINAL_REPORT.md"
+    ],
+    "notes": [
+      "Means across seeds, identical structured schema and 80-token budget.",
+      "No, invalid and missing-box outputs contribute zero IoU in the full anomaly denominator.",
+      "Strict validity includes consistency between the location phrase and its own box center.",
+      "S adds training exposure and targets; this is not a pure mask-supervision causal estimate."
+    ]
+  },
+  "native_qlora": {
+    "dataset": "independent native Qwen branch, VisA development val120",
+    "seed": 42,
+    "arms": [
+      "NF4 base",
+      "RR",
+      "DD",
+      "RD"
+    ],
+    "auroc": [
+      0.8239,
+      0.9149,
+      0.9456,
+      0.9201
+    ],
+    "ap": [
+      0.8558,
+      0.9301,
+      0.9526,
+      0.9354
+    ],
+    "train_sources": 768,
+    "image_exposures": 1536,
+    "optimizer_updates": 192,
+    "sources": [
+      "industrial_vlm/reports/multitask_v2/scoring_matrix.md",
+      "industrial_vlm/reports/multitask_v2/实验报告.md"
+    ],
+    "precision_note": "Values are the published report percentages rounded to 2 decimal places.",
+    "notes": [
+      "The NF4 base has no task fine-tuning; each RR/DD/RD arm has the same exposure budget.",
+      "RR = two region tasks; DD = two decision tasks; RD = one of each.",
+      "This protocol is different from the AnomalyGPT migration; no direct between-branch subtraction."
+    ]
+  }
+}

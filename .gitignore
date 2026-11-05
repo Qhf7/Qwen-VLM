@@ -1,15 +1,29 @@
-# 仓库只发布本项目交付目录；其余本地原资料保留。
+# 当前仓库仅发布已核验的项目目录；原工作区其他资料保留在本地。
 /*
 !/.gitignore
 !/README.md
-!/Qwen-VLM/
+!/ASSETS.md
+!/THIRD_PARTY.md
+!/DELIVERY_MANIFEST.tsv
+!/DELIVERY_AUDIT.json
+!/requirements-adaclip.txt
+!/requirements-s0.txt
+!/md2docx.py
+!/docs/
+!/industrial_vlm/
+!/seg_cross_part/
+!/AnomalyGPT/
+!/repair_20261103/
+!/migration_20261103/
+!/artifacts/
+!/data/
 
-# 环境、系统缓存和认证材料
+# 本地环境、缓存与认证材料
 **/__pycache__/
 *.py[cod]
 .DS_Store
 ._*
-.venv/
+.venv*/
 venv/
 .env
 .env.*
@@ -21,10 +35,10 @@ id_ed25519*
 .ipynb_checkpoints/
 .vscode/
 .idea/
-
-# 原始对话、权重、tensor cache、运行日志和重复归档
 session*.jsonl
 dsh-session*.zip
+
+# 大型资产和运行产物
 *.pt
 *.pth
 *.safetensors
@@ -38,10 +52,27 @@ dsh-session*.zip
 *.tgz
 *.tar
 *.tar.gz
+/data/sim/
+/AnomalyGPT/data/images/
+/AnomalyGPT/data/mvtec_anomaly_detection/
+/AnomalyGPT/data/pandagpt4_visual_instruction_data.json
+/industrial_vlm/models/
+/industrial_vlm/datasets/
+/industrial_vlm/downloads/
+/industrial_vlm/logs/
 
-# 原始图片数据集与独立论文阅读库；不忽略源码的 models/datasets 子目录。
-/Qwen-VLM/data/sim/
-/Qwen-VLM/AnomalyGPT/data/images/
-/Qwen-VLM/AnomalyGPT/data/mvtec_anomaly_detection/
-/Qwen-VLM/AnomalyGPT/data/pandagpt4_visual_instruction_data.json
-/Qwen-VLM/docs/paper_notes/
+# 本地保留的独立论文资料不属于本项目发布范围
+/docs/paper_notes/
+/docs/论文与代码阅读索引_20261023.md
+/docs/阅读核对_20261023/*
+!/docs/阅读核对_20261023/AnomalyGPT与本项目.md
+/AnomalyGPT/paper.*
+/AnomalyGPT/source/
+/AnomalyGPT/figures/
+/AnomalyGPT/meta.json
+/AnomalyGPT/outline.md
+/AnomalyGPT/精读笔记.md
+/AnomalyGPT/*中文全文翻译*
+/AnomalyGPT/*.docx
+/AnomalyGPT/*.pdf
+/AnomalyGPT/local_archives/
