@@ -1,9 +1,0 @@
-{
-  "custom_prefix_tokens": 19,
-  "tail_tokens": 5,
-  "sequence_length": 24,
-  "loss": 5.517124176025391,
-  "nonzero_grad_tensors": 144,
-  "grad_tensors": 288,
-  "peak_vram_gb": 8.145338368
-}

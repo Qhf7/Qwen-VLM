@@ -1,6 +1,0 @@
-{
-  "steps": 1200,
-  "best_val_pixel_auroc": 0.9759336305288376,
-  "elapsed_seconds": 301.5726647377014,
-  "pipeline_version": "visa-square-binary-sklearn-v1"
-}

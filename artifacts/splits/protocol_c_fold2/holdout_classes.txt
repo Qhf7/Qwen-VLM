@@ -1,6 +1,0 @@
-accurate_detection_switch
-battery_socket_connector
-ceramic_wave_filter
-lilypad_led
-nylon_ball_head
-slide_switch

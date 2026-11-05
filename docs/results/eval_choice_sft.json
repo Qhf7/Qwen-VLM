@@ -1,7 +1,0 @@
-{
- "adapter": "artifacts/sft_choice/final",
- "pair_acc": 0.7222222222222222,
- "pair_n": 180,
- "type2_acc": 0.40555555555555556,
- "type2_n": 180
-}

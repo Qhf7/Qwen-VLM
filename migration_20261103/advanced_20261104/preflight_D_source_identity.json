@@ -1,6 +1,0 @@
-{
-  "actual_runtime_name": "migration_lora_train.py",
-  "archived_source": "preflight_D_source.py",
-  "sha256": "46d9409e9168bec8e775027d25107194f6416320d6f3fbace8e8f10dce6fa6a9",
-  "role": "exact source executed by original D preflight and train-only rank calibration; formal runs use migration_advanced_train.py"
-}
