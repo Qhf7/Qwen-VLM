@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "created_at_utc": "2026-10-26T08:03:04.743173+00:00",
+  "source_root": "/Users/qiaohongfei/Desktop/实习/阿里云天池比赛vlm/docs/strict_qwen_followup_20261026",
+  "source_sha256": "5bd93a944baf40a3431ab255688a65921daf05b307ed4b95ba99a3e2ed69d5d2",
+  "effective_pipeline_state": null,
+  "scope": "Metadata, source snapshots, logs, predictions and reports; no tensor weights, feature caches or pixel arrays",
+  "completion_rule": "Snapshot state and experiment audits determine completeness; an archive alone does not",
+  "large_artifacts": "Retained at source paths; authoritative recorded hashes remain in included run/audit JSON files",
+  "files": [
+    {
+      "path": "connectivity_status.json",
+      "bytes": 708,
+      "sha256": "be9a18e43016f18bbdd1d468cfcda51ffcc60df631c6f31173f47382dbd23531"
+    },
+    {
+      "path": "historical_frozen42_metrics.json",
+      "bytes": 9857,
+      "sha256": "4ffd60969ece7a425088f1c0eb3db93c71f37028d7527c076344a414d9e70cd6"
+    },
+    {
+      "path": "local_code_inventory.json",
+      "bytes": 15749,
+      "sha256": "8f724ae99448eb64462c1cea2312f80a33a2efa6d1bd93530d5e1f1b218e4db2"
+    },
+    {
+      "path": "local_qa_inventory.json",
+      "bytes": 2415,
+      "sha256": "aaa7a5a072db1f4c10704064f9036f69c8102e475bd1d4c1d487d0c8635c6abe"
+    },
+    {
+      "path": "旧8图敏感性_进度快照.json",
+      "bytes": 71736,
+      "sha256": "7ffc025ae638d8c8153810ed691c0567611d6479c99ff6467b3418d030a4dda6"
+    },
+    {
+      "path": "旧8图敏感性_进度快照.md",
+      "bytes": 1769,
+      "sha256": "0fc374216b14000c245cd5bc63d8349530112ed3692a14f0d56c4fce3bf64b3d"
+    },
+    {
+      "path": "服务器审计与指标修订.md",
+      "bytes": 6170,
+      "sha256": "0ee0d9db03a7ef1c1e36500d662ccf1f51d1a94a4a6d84d64fabeb4fee2b233b"
+    },
+    {
+      "path": "本地交付索引.json",
+      "bytes": 2351,
+      "sha256": "cc32c85784b1a75b5abeed5bed1f8fc0a84bfc3743bd72bc0d9376d4bad32850"
+    },
+    {
+      "path": "本地审计.md",
+      "bytes": 6310,
+      "sha256": "00c78112c25886b401540bf1cb93e1fb26ed2e032428b55a650f7f21a1de4840"
+    },
+    {
+      "path": "评测设计.md",
+      "bytes": 10225,
+      "sha256": "3c6ffc411b29d72c0e069c88ecb60b5d330b0ef408f4468f0880d0587a79945e"
+    },
+    {
+      "path": "阶段结论与续跑.md",
+      "bytes": 7935,
+      "sha256": "e46a8f5034273ece190a54ac498b40cfb4f07744bd9dd363a7584c9ed6dd95a8"
+    }
+  ],
+  "large_files_retained_at_source": [],
+  "skipped_counts": {},
+  "included_file_count": 11
+}

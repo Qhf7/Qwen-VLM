@@ -1,0 +1,6962 @@
+{
+  "root": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026",
+  "expected_sources": 2005,
+  "num_runs": 16,
+  "complete_runs": [
+    "historical_frozen42",
+    "historical_frozen43",
+    "historical_frozen44",
+    "historical_lora42",
+    "historical_lora43",
+    "historical_lora44",
+    "matched_qwen_frozen42",
+    "matched_qwen_frozen43",
+    "matched_qwen_frozen44",
+    "matched_qwen_lora42",
+    "matched_qwen_lora43",
+    "matched_qwen_lora44",
+    "matched_vicuna42",
+    "matched_vicuna43",
+    "matched_vicuna44",
+    "shared_initial_qwen42"
+  ],
+  "partial_runs": [],
+  "runs": {
+    "historical_frozen42": {
+      "name": "historical_frozen42",
+      "predictions": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/real_evaluations/historical_frozen42/predictions.jsonl",
+      "status": "complete_2005",
+      "expected_sources": 2005,
+      "num_records": 2005,
+      "unique_source_keys": 2005,
+      "records_without_source_key": 0,
+      "duplicate_source_keys": {},
+      "jsonl_parse_errors": [],
+      "completion_metadata": {
+        "run.json": {
+          "completed": true,
+          "completed_num_sources": 2005,
+          "num_sources": 2005
+        },
+        "metrics.json": {
+          "num_sources": 2005,
+          "backend": "qwen",
+          "seed": 42
+        }
+      },
+      "answer_counts": {
+        "yes": 12,
+        "no": 1859,
+        "invalid": 134
+      },
+      "answer_fractions": {
+        "yes": 0.0059850374064837905,
+        "no": 0.9271820448877806,
+        "invalid": 0.06683291770573566
+      },
+      "top_normalized_answers": [
+        {
+          "answer": "no, there is no anomaly in the image.",
+          "count": 1410,
+          "fraction": 0.7032418952618454
+        },
+        {
+          "answer": "",
+          "count": 134,
+          "fraction": 0.06683291770573566
+        },
+        {
+          "answer": "no, there is no anomaly in the image. the pcb appears to be intact, with no visible damage, flaws, defects, scratches, holes, or broken",
+          "count": 83,
+          "fraction": 0.04139650872817955
+        },
+        {
+          "answer": "no, there is no anomaly in the image. the four macaronis appear to be intact, with no visible damage, flaws, defects, scratches, holes",
+          "count": 58,
+          "fraction": 0.02892768079800499
+        },
+        {
+          "answer": "no, there is no anomaly in the image. the macaronis appear to be intact, with no visible damage, flaws, defects, scratches, holes,",
+          "count": 54,
+          "fraction": 0.026932668329177057
+        },
+        {
+          "answer": "no, there is no anomaly in the image. the cashew appears to be intact, with no visible damage, flaw, defect, scratch, hole, or",
+          "count": 35,
+          "fraction": 0.017456359102244388
+        },
+        {
+          "answer": "no, there is no anomaly in the image. the image shows four macaronis, and they appear to be intact, without any visible damage, flaws,",
+          "count": 24,
+          "fraction": 0.011970074812967581
+        },
+        {
+          "answer": "no, there is no anomaly in the image. the image appears to be a clean, undamaged pcb (printed circuit board) with no visible scratches,",
+          "count": 21,
+          "fraction": 0.010473815461346634
+        },
+        {
+          "answer": "no, there is no anomaly in the image. the pipe fryum appears to be intact, with no visible damage, flaws, defects, scratches, holes,",
+          "count": 21,
+          "fraction": 0.010473815461346634
+        },
+        {
+          "answer": "no, there is no anomaly in the image. all the capsules appear to be intact, without any visible damage, flaws, defects, scratches, holes, or",
+          "count": 14,
+          "fraction": 0.006982543640897756
+        }
+      ],
+      "stored_vs_reparsed_prediction_disagreements": 0,
+      "confusion": {
+        "num_sources": 2005,
+        "counts": {
+          "gt_normal": {
+            "no": 897,
+            "yes": 0,
+            "invalid": 28
+          },
+          "gt_anomaly": {
+            "no": 962,
+            "yes": 12,
+            "invalid": 106
+          }
+        },
+        "unknown_gt": 0
+      },
+      "per_class_confusion": {
+        "candle": {
+          "num_sources": 186,
+          "counts": {
+            "gt_normal": {
+              "no": 96,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 79,
+              "yes": 10,
+              "invalid": 1
+            }
+          },
+          "unknown_gt": 0
+        },
+        "capsules": {
+          "num_sources": 147,
+          "counts": {
+            "gt_normal": {
+              "no": 56,
+              "yes": 0,
+              "invalid": 1
+            },
+            "gt_anomaly": {
+              "no": 88,
+              "yes": 0,
+              "invalid": 2
+            }
+          },
+          "unknown_gt": 0
+        },
+        "cashew": {
+          "num_sources": 134,
+          "counts": {
+            "gt_normal": {
+              "no": 43,
+              "yes": 0,
+              "invalid": 1
+            },
+            "gt_anomaly": {
+              "no": 80,
+              "yes": 0,
+              "invalid": 10
+            }
+          },
+          "unknown_gt": 0
+        },
+        "chewinggum": {
+          "num_sources": 137,
+          "counts": {
+            "gt_normal": {
+              "no": 47,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 80,
+              "yes": 2,
+              "invalid": 8
+            }
+          },
+          "unknown_gt": 0
+        },
+        "fryum": {
+          "num_sources": 138,
+          "counts": {
+            "gt_normal": {
+              "no": 48,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 71,
+              "yes": 0,
+              "invalid": 19
+            }
+          },
+          "unknown_gt": 0
+        },
+        "macaroni1": {
+          "num_sources": 187,
+          "counts": {
+            "gt_normal": {
+              "no": 97,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 88,
+              "yes": 0,
+              "invalid": 2
+            }
+          },
+          "unknown_gt": 0
+        },
+        "macaroni2": {
+          "num_sources": 188,
+          "counts": {
+            "gt_normal": {
+              "no": 81,
+              "yes": 0,
+              "invalid": 17
+            },
+            "gt_anomaly": {
+              "no": 66,
+              "yes": 0,
+              "invalid": 24
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb1": {
+          "num_sources": 188,
+          "counts": {
+            "gt_normal": {
+              "no": 95,
+              "yes": 0,
+              "invalid": 3
+            },
+            "gt_anomaly": {
+              "no": 87,
+              "yes": 0,
+              "invalid": 3
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb2": {
+          "num_sources": 187,
+          "counts": {
+            "gt_normal": {
+              "no": 94,
+              "yes": 0,
+              "invalid": 3
+            },
+            "gt_anomaly": {
+              "no": 84,
+              "yes": 0,
+              "invalid": 6
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb3": {
+          "num_sources": 189,
+          "counts": {
+            "gt_normal": {
+              "no": 99,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 83,
+              "yes": 0,
+              "invalid": 7
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb4": {
+          "num_sources": 187,
+          "counts": {
+            "gt_normal": {
+              "no": 94,
+              "yes": 0,
+              "invalid": 3
+            },
+            "gt_anomaly": {
+              "no": 78,
+              "yes": 0,
+              "invalid": 12
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pipe_fryum": {
+          "num_sources": 137,
+          "counts": {
+            "gt_normal": {
+              "no": 47,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 78,
+              "yes": 0,
+              "invalid": 12
+            }
+          },
+          "unknown_gt": 0
+        }
+      },
+      "raw_generated_token_length": {
+        "count": 2005,
+        "min": 1.0,
+        "mean": 15.160099750623441,
+        "q25": 11.0,
+        "q50": 11.0,
+        "q75": 11.0,
+        "q90": 32.0,
+        "q95": 32.0,
+        "max": 32.0
+      },
+      "missing_token_id_records": 0,
+      "termination_counts": {
+        "eos": 141,
+        "max_new_tokens": 461,
+        "training_turn_delimiter_text": 1403
+      },
+      "raw_token_lengths_by_termination": {
+        "eos": {
+          "count": 141,
+          "min": 1.0,
+          "mean": 1.49645390070922,
+          "q25": 1.0,
+          "q50": 1.0,
+          "q75": 1.0,
+          "q90": 1.0,
+          "q95": 1.0,
+          "max": 11.0
+        },
+        "max_new_tokens": {
+          "count": 461,
+          "min": 32.0,
+          "mean": 32.0,
+          "q25": 32.0,
+          "q50": 32.0,
+          "q75": 32.0,
+          "q90": 32.0,
+          "q95": 32.0,
+          "max": 32.0
+        },
+        "training_turn_delimiter_text": {
+          "count": 1403,
+          "min": 11.0,
+          "mean": 11.0,
+          "q25": 11.0,
+          "q50": 11.0,
+          "q75": 11.0,
+          "q90": 11.0,
+          "q95": 11.0,
+          "max": 11.0
+        }
+      },
+      "map_score_quantiles": {
+        "count": 2005,
+        "min": 1.2665987014770508e-07,
+        "mean": 0.10459338523995623,
+        "q25": 0.00023174285888671875,
+        "q50": 0.004150390625,
+        "q75": 0.171875,
+        "q90": 0.34375,
+        "q95": 0.4996093749999999,
+        "max": 0.75
+      },
+      "map_answer_log_odds_correlation": {
+        "count": 2005,
+        "spearman": 0.4589255559272976,
+        "backend": "scipy.stats.spearmanr"
+      },
+      "per_class_map_answer_spearman": {
+        "candle": {
+          "count": 186,
+          "spearman": 0.26674498491805765,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "capsules": {
+          "count": 147,
+          "spearman": 0.607614249205625,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "cashew": {
+          "count": 134,
+          "spearman": 0.7615238668433987,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "chewinggum": {
+          "count": 137,
+          "spearman": 0.7281182684981301,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "fryum": {
+          "count": 138,
+          "spearman": 0.7423014539002583,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "macaroni1": {
+          "count": 187,
+          "spearman": 0.6184912926041282,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "macaroni2": {
+          "count": 188,
+          "spearman": 0.38486873045921033,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb1": {
+          "count": 188,
+          "spearman": 0.7523991470876294,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb2": {
+          "count": 187,
+          "spearman": 0.5715427787969952,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb3": {
+          "count": 189,
+          "spearman": 0.5186090057655632,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb4": {
+          "count": 187,
+          "spearman": 0.6068711050870838,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pipe_fryum": {
+          "count": 137,
+          "spearman": 0.6874116224276977,
+          "backend": "scipy.stats.spearmanr"
+        }
+      },
+      "high_map_quartile_no_answers": {
+        "threshold_q75": 0.171875,
+        "selection": "map_score >= q75; boundary ties retained",
+        "selected_sources": 503,
+        "no_answer_sources": 362,
+        "no_answer_gt_normal": 82,
+        "no_answer_gt_anomaly": 280,
+        "no_answer_gt_unknown": 0,
+        "per_class": {
+          "candle": 3,
+          "capsules": 31,
+          "cashew": 22,
+          "chewinggum": 33,
+          "fryum": 29,
+          "macaroni1": 25,
+          "macaroni2": 103,
+          "pcb1": 31,
+          "pcb2": 21,
+          "pcb3": 16,
+          "pcb4": 18,
+          "pipe_fryum": 30
+        }
+      },
+      "official_anomaly_zero_foreground_224": {
+        "count": 0,
+        "per_class": {},
+        "source_paths": []
+      }
+    },
+    "historical_frozen43": {
+      "name": "historical_frozen43",
+      "predictions": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/real_evaluations/historical_frozen43/predictions.jsonl",
+      "status": "complete_2005",
+      "expected_sources": 2005,
+      "num_records": 2005,
+      "unique_source_keys": 2005,
+      "records_without_source_key": 0,
+      "duplicate_source_keys": {},
+      "jsonl_parse_errors": [],
+      "completion_metadata": {
+        "run.json": {
+          "completed": true,
+          "completed_num_sources": 2005,
+          "num_sources": 2005
+        },
+        "metrics.json": {
+          "num_sources": 2005,
+          "backend": "qwen",
+          "seed": 43
+        }
+      },
+      "answer_counts": {
+        "yes": 13,
+        "no": 1992,
+        "invalid": 0
+      },
+      "answer_fractions": {
+        "yes": 0.006483790523690773,
+        "no": 0.9935162094763093,
+        "invalid": 0.0
+      },
+      "top_normalized_answers": [
+        {
+          "answer": "no, there is no anomaly in the image. the macaronis appear to be intact, with no visible damage, flaws, defects, scratches, holes,",
+          "count": 367,
+          "fraction": 0.18304239401496258
+        },
+        {
+          "answer": "no, there is no anomaly in the image. the pcb (printed circuit board) appears to be intact, with no visible damage, flaws, defects,",
+          "count": 292,
+          "fraction": 0.1456359102244389
+        },
+        {
+          "answer": "no, there are no visible anomalies in the image. the pcb appears to be intact, with no visible scratches, holes, broken parts, or other defects.",
+          "count": 291,
+          "fraction": 0.1451371571072319
+        },
+        {
+          "answer": "no, there are no anomalies in the image. all the capsules appear to be intact, without any visible damage, flaws, defects, scratches, holes, or",
+          "count": 144,
+          "fraction": 0.07182044887780549
+        },
+        {
+          "answer": "no, there is no anomaly in the image. the cashew appears to be intact, with no visible damage, flaw, defect, scratch, hole, or",
+          "count": 120,
+          "fraction": 0.059850374064837904
+        },
+        {
+          "answer": "no, there are no anomalies in the image. all four candles are round, intact, and show no signs of damage, flaws, defects, scratches, holes",
+          "count": 117,
+          "fraction": 0.058354114713216956
+        },
+        {
+          "answer": "no, there are no visible anomalies in the image. the pcb appears to be intact, with no visible damage, flaws, defects, scratches, holes, or",
+          "count": 113,
+          "fraction": 0.056359102244389024
+        },
+        {
+          "answer": "no, there is no anomaly in the image. the pipe fryum appears to be intact, with no visible damage, flaws, defects, scratches, holes,",
+          "count": 98,
+          "fraction": 0.04887780548628429
+        },
+        {
+          "answer": "no, there is no anomaly in the image. the fryum appears to be intact, with no visible damage, flaw, defect, scratch, hole, or",
+          "count": 97,
+          "fraction": 0.04837905236907731
+        },
+        {
+          "answer": "no, there is no anomaly in the image. the chewing gum is white, intact, and shows no signs of damage, flaw, defect, scratch, hole",
+          "count": 81,
+          "fraction": 0.04039900249376559
+        }
+      ],
+      "stored_vs_reparsed_prediction_disagreements": 0,
+      "confusion": {
+        "num_sources": 2005,
+        "counts": {
+          "gt_normal": {
+            "no": 924,
+            "yes": 1,
+            "invalid": 0
+          },
+          "gt_anomaly": {
+            "no": 1068,
+            "yes": 12,
+            "invalid": 0
+          }
+        },
+        "unknown_gt": 0
+      },
+      "per_class_confusion": {
+        "candle": {
+          "num_sources": 186,
+          "counts": {
+            "gt_normal": {
+              "no": 95,
+              "yes": 1,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 79,
+              "yes": 11,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "capsules": {
+          "num_sources": 147,
+          "counts": {
+            "gt_normal": {
+              "no": 57,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "cashew": {
+          "num_sources": 134,
+          "counts": {
+            "gt_normal": {
+              "no": 44,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "chewinggum": {
+          "num_sources": 137,
+          "counts": {
+            "gt_normal": {
+              "no": 47,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 89,
+              "yes": 1,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "fryum": {
+          "num_sources": 138,
+          "counts": {
+            "gt_normal": {
+              "no": 48,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "macaroni1": {
+          "num_sources": 187,
+          "counts": {
+            "gt_normal": {
+              "no": 97,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "macaroni2": {
+          "num_sources": 188,
+          "counts": {
+            "gt_normal": {
+              "no": 98,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb1": {
+          "num_sources": 188,
+          "counts": {
+            "gt_normal": {
+              "no": 98,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb2": {
+          "num_sources": 187,
+          "counts": {
+            "gt_normal": {
+              "no": 97,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb3": {
+          "num_sources": 189,
+          "counts": {
+            "gt_normal": {
+              "no": 99,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb4": {
+          "num_sources": 187,
+          "counts": {
+            "gt_normal": {
+              "no": 97,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pipe_fryum": {
+          "num_sources": 137,
+          "counts": {
+            "gt_normal": {
+              "no": 47,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        }
+      },
+      "raw_generated_token_length": {
+        "count": 2005,
+        "min": 32.0,
+        "mean": 32.0,
+        "q25": 32.0,
+        "q50": 32.0,
+        "q75": 32.0,
+        "q90": 32.0,
+        "q95": 32.0,
+        "max": 32.0
+      },
+      "missing_token_id_records": 0,
+      "termination_counts": {
+        "max_new_tokens": 2005
+      },
+      "raw_token_lengths_by_termination": {
+        "max_new_tokens": {
+          "count": 2005,
+          "min": 32.0,
+          "mean": 32.0,
+          "q25": 32.0,
+          "q50": 32.0,
+          "q75": 32.0,
+          "q90": 32.0,
+          "q95": 32.0,
+          "max": 32.0
+        }
+      },
+      "map_score_quantiles": {
+        "count": 2005,
+        "min": 9.639188647270203e-08,
+        "mean": 0.12454101557766745,
+        "q25": 0.0001468658447265625,
+        "q50": 0.0098876953125,
+        "q75": 0.2412109375,
+        "q90": 0.3863281250000008,
+        "q95": 0.5,
+        "max": 0.75
+      },
+      "map_answer_log_odds_correlation": {
+        "count": 2005,
+        "spearman": 0.45190768229273226,
+        "backend": "scipy.stats.spearmanr"
+      },
+      "per_class_map_answer_spearman": {
+        "candle": {
+          "count": 186,
+          "spearman": 0.35446817238302786,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "capsules": {
+          "count": 147,
+          "spearman": 0.4845122426073349,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "cashew": {
+          "count": 134,
+          "spearman": 0.6025351166385452,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "chewinggum": {
+          "count": 137,
+          "spearman": 0.7816313117125361,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "fryum": {
+          "count": 138,
+          "spearman": 0.7497730130944533,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "macaroni1": {
+          "count": 187,
+          "spearman": 0.3208370328776456,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "macaroni2": {
+          "count": 188,
+          "spearman": 0.18113832410090672,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb1": {
+          "count": 188,
+          "spearman": 0.5137505874472501,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb2": {
+          "count": 187,
+          "spearman": 0.3975859574459104,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb3": {
+          "count": 189,
+          "spearman": 0.7940377443659284,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb4": {
+          "count": 187,
+          "spearman": 0.7322687421686724,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pipe_fryum": {
+          "count": 137,
+          "spearman": 0.6930792813889175,
+          "backend": "scipy.stats.spearmanr"
+        }
+      },
+      "high_map_quartile_no_answers": {
+        "threshold_q75": 0.2412109375,
+        "selection": "map_score >= q75; boundary ties retained",
+        "selected_sources": 503,
+        "no_answer_sources": 491,
+        "no_answer_gt_normal": 97,
+        "no_answer_gt_anomaly": 394,
+        "no_answer_gt_unknown": 0,
+        "per_class": {
+          "candle": 4,
+          "capsules": 33,
+          "cashew": 26,
+          "chewinggum": 45,
+          "fryum": 47,
+          "macaroni1": 16,
+          "macaroni2": 6,
+          "pcb1": 30,
+          "pcb2": 126,
+          "pcb3": 49,
+          "pcb4": 69,
+          "pipe_fryum": 40
+        }
+      },
+      "official_anomaly_zero_foreground_224": {
+        "count": 0,
+        "per_class": {},
+        "source_paths": []
+      }
+    },
+    "historical_frozen44": {
+      "name": "historical_frozen44",
+      "predictions": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/real_evaluations/historical_frozen44/predictions.jsonl",
+      "status": "complete_2005",
+      "expected_sources": 2005,
+      "num_records": 2005,
+      "unique_source_keys": 2005,
+      "records_without_source_key": 0,
+      "duplicate_source_keys": {},
+      "jsonl_parse_errors": [],
+      "completion_metadata": {
+        "run.json": {
+          "completed": true,
+          "completed_num_sources": 2005,
+          "num_sources": 2005
+        },
+        "metrics.json": {
+          "num_sources": 2005,
+          "backend": "qwen",
+          "seed": 44
+        }
+      },
+      "answer_counts": {
+        "yes": 242,
+        "no": 1763,
+        "invalid": 0
+      },
+      "answer_fractions": {
+        "yes": 0.12069825436408978,
+        "no": 0.8793017456359102,
+        "invalid": 0.0
+      },
+      "top_normalized_answers": [
+        {
+          "answer": "no, there is no anomaly in the image. the image appears to be a clean, undamaged pcb (printed circuit board) with no visible scratches,",
+          "count": 350,
+          "fraction": 0.1745635910224439
+        },
+        {
+          "answer": "no, there is no anomaly in the image.",
+          "count": 182,
+          "fraction": 0.09077306733167083
+        },
+        {
+          "answer": "no, there is no anomaly in the image. the pcb appears to be intact, with no visible damage, flaws, defects, scratches, holes, or broken",
+          "count": 167,
+          "fraction": 0.08329177057356608
+        },
+        {
+          "answer": "no, there is no anomaly in the image. the image shows a clean, undamaged pcb (printed circuit board) with no visible scratches, holes,",
+          "count": 161,
+          "fraction": 0.08029925187032419
+        },
+        {
+          "answer": "no, there is no anomaly in the image. the four macaronis appear to be intact, with no visible damage, flaws, defects, scratches, holes",
+          "count": 151,
+          "fraction": 0.07531172069825437
+        },
+        {
+          "answer": "no, there is no anomaly in the image. the pipe fryum appears to be intact, with no visible damage, flaw, defect, scratch, hole,",
+          "count": 136,
+          "fraction": 0.06783042394014963
+        },
+        {
+          "answer": "no, there is no anomaly in the image. the cashew appears to be intact, with no visible damage, flaw, defect, scratch, hole, or",
+          "count": 134,
+          "fraction": 0.06683291770573566
+        },
+        {
+          "answer": "no, there is no anomaly in the image. the fryum appears to be intact, with no visible damage, flaw, defect, scratch, hole, or",
+          "count": 132,
+          "fraction": 0.0658354114713217
+        },
+        {
+          "answer": "yes, there is an anomaly in the image. the candle on the far right is not round. it appears to be slightly misshapen, with a",
+          "count": 96,
+          "fraction": 0.047880299251870324
+        },
+        {
+          "answer": "no, there is no anomaly in the image. all the capsules appear to be intact, without any visible damage, flaws, scratches, holes, or broken parts",
+          "count": 90,
+          "fraction": 0.04488778054862843
+        }
+      ],
+      "stored_vs_reparsed_prediction_disagreements": 0,
+      "confusion": {
+        "num_sources": 2005,
+        "counts": {
+          "gt_normal": {
+            "no": 811,
+            "yes": 114,
+            "invalid": 0
+          },
+          "gt_anomaly": {
+            "no": 952,
+            "yes": 128,
+            "invalid": 0
+          }
+        },
+        "unknown_gt": 0
+      },
+      "per_class_confusion": {
+        "candle": {
+          "num_sources": 186,
+          "counts": {
+            "gt_normal": {
+              "no": 0,
+              "yes": 96,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 0,
+              "yes": 90,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "capsules": {
+          "num_sources": 147,
+          "counts": {
+            "gt_normal": {
+              "no": 39,
+              "yes": 18,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 52,
+              "yes": 38,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "cashew": {
+          "num_sources": 134,
+          "counts": {
+            "gt_normal": {
+              "no": 44,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "chewinggum": {
+          "num_sources": 137,
+          "counts": {
+            "gt_normal": {
+              "no": 47,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "fryum": {
+          "num_sources": 138,
+          "counts": {
+            "gt_normal": {
+              "no": 48,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "macaroni1": {
+          "num_sources": 187,
+          "counts": {
+            "gt_normal": {
+              "no": 97,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "macaroni2": {
+          "num_sources": 188,
+          "counts": {
+            "gt_normal": {
+              "no": 98,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb1": {
+          "num_sources": 188,
+          "counts": {
+            "gt_normal": {
+              "no": 98,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb2": {
+          "num_sources": 187,
+          "counts": {
+            "gt_normal": {
+              "no": 97,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb3": {
+          "num_sources": 189,
+          "counts": {
+            "gt_normal": {
+              "no": 99,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb4": {
+          "num_sources": 187,
+          "counts": {
+            "gt_normal": {
+              "no": 97,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pipe_fryum": {
+          "num_sources": 137,
+          "counts": {
+            "gt_normal": {
+              "no": 47,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        }
+      },
+      "raw_generated_token_length": {
+        "count": 2005,
+        "min": 11.0,
+        "mean": 30.093765586034912,
+        "q25": 32.0,
+        "q50": 32.0,
+        "q75": 32.0,
+        "q90": 32.0,
+        "q95": 32.0,
+        "max": 32.0
+      },
+      "missing_token_id_records": 0,
+      "termination_counts": {
+        "eos": 180,
+        "max_new_tokens": 1823,
+        "training_turn_delimiter_text": 2
+      },
+      "raw_token_lengths_by_termination": {
+        "eos": {
+          "count": 180,
+          "min": 11.0,
+          "mean": 11.0,
+          "q25": 11.0,
+          "q50": 11.0,
+          "q75": 11.0,
+          "q90": 11.0,
+          "q95": 11.0,
+          "max": 11.0
+        },
+        "max_new_tokens": {
+          "count": 1823,
+          "min": 32.0,
+          "mean": 32.0,
+          "q25": 32.0,
+          "q50": 32.0,
+          "q75": 32.0,
+          "q90": 32.0,
+          "q95": 32.0,
+          "max": 32.0
+        },
+        "training_turn_delimiter_text": {
+          "count": 2,
+          "min": 11.0,
+          "mean": 11.0,
+          "q25": 11.0,
+          "q50": 11.0,
+          "q75": 11.0,
+          "q90": 11.0,
+          "q95": 11.0,
+          "max": 11.0
+        }
+      },
+      "map_score_quantiles": {
+        "count": 2005,
+        "min": 5.098991096019745e-08,
+        "mean": 0.06584602227501868,
+        "q25": 2.8252601623535156e-05,
+        "q50": 0.00052642822265625,
+        "q75": 0.03076171875,
+        "q90": 0.2490234375,
+        "q95": 0.390625,
+        "max": 0.75
+      },
+      "map_answer_log_odds_correlation": {
+        "count": 2005,
+        "spearman": -0.18685499575033118,
+        "backend": "scipy.stats.spearmanr"
+      },
+      "per_class_map_answer_spearman": {
+        "candle": {
+          "count": 186,
+          "spearman": 0.1502736286594624,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "capsules": {
+          "count": 147,
+          "spearman": 0.11496450022253417,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "cashew": {
+          "count": 134,
+          "spearman": 0.02435964493189862,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "chewinggum": {
+          "count": 137,
+          "spearman": 0.04739218543682575,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "fryum": {
+          "count": 138,
+          "spearman": -0.19242605214302222,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "macaroni1": {
+          "count": 187,
+          "spearman": 0.051432208962356944,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "macaroni2": {
+          "count": 188,
+          "spearman": -0.027791117549530515,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb1": {
+          "count": 188,
+          "spearman": 0.25039056242021424,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb2": {
+          "count": 187,
+          "spearman": 0.08470924153823815,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb3": {
+          "count": 189,
+          "spearman": 0.019656524634260906,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb4": {
+          "count": 187,
+          "spearman": 0.19171992697726142,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pipe_fryum": {
+          "count": 137,
+          "spearman": 0.06808880193293793,
+          "backend": "scipy.stats.spearmanr"
+        }
+      },
+      "high_map_quartile_no_answers": {
+        "threshold_q75": 0.03076171875,
+        "selection": "map_score >= q75; boundary ties retained",
+        "selected_sources": 502,
+        "no_answer_sources": 471,
+        "no_answer_gt_normal": 56,
+        "no_answer_gt_anomaly": 415,
+        "no_answer_gt_unknown": 0,
+        "per_class": {
+          "capsules": 21,
+          "cashew": 23,
+          "chewinggum": 56,
+          "fryum": 50,
+          "macaroni1": 28,
+          "macaroni2": 18,
+          "pcb1": 46,
+          "pcb2": 55,
+          "pcb3": 53,
+          "pcb4": 68,
+          "pipe_fryum": 53
+        }
+      },
+      "official_anomaly_zero_foreground_224": {
+        "count": 0,
+        "per_class": {},
+        "source_paths": []
+      }
+    },
+    "historical_lora42": {
+      "name": "historical_lora42",
+      "predictions": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/real_evaluations/historical_lora42/predictions.jsonl",
+      "status": "complete_2005",
+      "expected_sources": 2005,
+      "num_records": 2005,
+      "unique_source_keys": 2005,
+      "records_without_source_key": 0,
+      "duplicate_source_keys": {},
+      "jsonl_parse_errors": [],
+      "completion_metadata": {
+        "run.json": {
+          "completed": true,
+          "completed_num_sources": 2005,
+          "num_sources": 2005
+        },
+        "metrics.json": {
+          "num_sources": 2005,
+          "backend": "qwen",
+          "seed": 42
+        }
+      },
+      "answer_counts": {
+        "yes": 195,
+        "no": 1810,
+        "invalid": 0
+      },
+      "answer_fractions": {
+        "yes": 0.09725685785536159,
+        "no": 0.9027431421446384,
+        "invalid": 0.0
+      },
+      "top_normalized_answers": [
+        {
+          "answer": "no, there is no anomaly in the image.",
+          "count": 1810,
+          "fraction": 0.9027431421446384
+        },
+        {
+          "answer": "yes, there are 2 anomalies in the image, they are at the top of the image.",
+          "count": 195,
+          "fraction": 0.09725685785536159
+        }
+      ],
+      "stored_vs_reparsed_prediction_disagreements": 0,
+      "confusion": {
+        "num_sources": 2005,
+        "counts": {
+          "gt_normal": {
+            "no": 871,
+            "yes": 54,
+            "invalid": 0
+          },
+          "gt_anomaly": {
+            "no": 939,
+            "yes": 141,
+            "invalid": 0
+          }
+        },
+        "unknown_gt": 0
+      },
+      "per_class_confusion": {
+        "candle": {
+          "num_sources": 186,
+          "counts": {
+            "gt_normal": {
+              "no": 96,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 88,
+              "yes": 2,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "capsules": {
+          "num_sources": 147,
+          "counts": {
+            "gt_normal": {
+              "no": 57,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 73,
+              "yes": 17,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "cashew": {
+          "num_sources": 134,
+          "counts": {
+            "gt_normal": {
+              "no": 44,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 80,
+              "yes": 10,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "chewinggum": {
+          "num_sources": 137,
+          "counts": {
+            "gt_normal": {
+              "no": 47,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 81,
+              "yes": 9,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "fryum": {
+          "num_sources": 138,
+          "counts": {
+            "gt_normal": {
+              "no": 48,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 68,
+              "yes": 22,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "macaroni1": {
+          "num_sources": 187,
+          "counts": {
+            "gt_normal": {
+              "no": 97,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 87,
+              "yes": 3,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "macaroni2": {
+          "num_sources": 188,
+          "counts": {
+            "gt_normal": {
+              "no": 97,
+              "yes": 1,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 88,
+              "yes": 2,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb1": {
+          "num_sources": 188,
+          "counts": {
+            "gt_normal": {
+              "no": 59,
+              "yes": 39,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 85,
+              "yes": 5,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb2": {
+          "num_sources": 187,
+          "counts": {
+            "gt_normal": {
+              "no": 90,
+              "yes": 7,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 72,
+              "yes": 18,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb3": {
+          "num_sources": 189,
+          "counts": {
+            "gt_normal": {
+              "no": 95,
+              "yes": 4,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 80,
+              "yes": 10,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb4": {
+          "num_sources": 187,
+          "counts": {
+            "gt_normal": {
+              "no": 94,
+              "yes": 3,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 69,
+              "yes": 21,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pipe_fryum": {
+          "num_sources": 137,
+          "counts": {
+            "gt_normal": {
+              "no": 47,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 68,
+              "yes": 22,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        }
+      },
+      "raw_generated_token_length": {
+        "count": 2005,
+        "min": 11.0,
+        "mean": 11.972568578553616,
+        "q25": 11.0,
+        "q50": 11.0,
+        "q75": 11.0,
+        "q90": 11.0,
+        "q95": 21.0,
+        "max": 21.0
+      },
+      "missing_token_id_records": 0,
+      "termination_counts": {
+        "training_turn_delimiter_text": 2005
+      },
+      "raw_token_lengths_by_termination": {
+        "training_turn_delimiter_text": {
+          "count": 2005,
+          "min": 11.0,
+          "mean": 11.972568578553616,
+          "q25": 11.0,
+          "q50": 11.0,
+          "q75": 11.0,
+          "q90": 11.0,
+          "q95": 21.0,
+          "max": 21.0
+        }
+      },
+      "map_score_quantiles": {
+        "count": 2005,
+        "min": 3.958120942115784e-08,
+        "mean": 0.07559480337214719,
+        "q25": 2.6702880859375e-05,
+        "q50": 0.0014190673828125,
+        "q75": 0.08544921875,
+        "q90": 0.25,
+        "q95": 0.38164062499999973,
+        "max": 0.75
+      },
+      "map_answer_log_odds_correlation": {
+        "count": 2005,
+        "spearman": 0.18107104449995945,
+        "backend": "scipy.stats.spearmanr"
+      },
+      "per_class_map_answer_spearman": {
+        "candle": {
+          "count": 186,
+          "spearman": 0.21333452656774476,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "capsules": {
+          "count": 147,
+          "spearman": 0.399791589928533,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "cashew": {
+          "count": 134,
+          "spearman": 0.4125575411973334,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "chewinggum": {
+          "count": 137,
+          "spearman": 0.5103638946037796,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "fryum": {
+          "count": 138,
+          "spearman": 0.47150567381932346,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "macaroni1": {
+          "count": 187,
+          "spearman": 0.209809390801625,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "macaroni2": {
+          "count": 188,
+          "spearman": 0.05652561727343064,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb1": {
+          "count": 188,
+          "spearman": 0.5811193403881036,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb2": {
+          "count": 187,
+          "spearman": 0.5028540049628321,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb3": {
+          "count": 189,
+          "spearman": 0.240636784909597,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb4": {
+          "count": 187,
+          "spearman": 0.46912252964500845,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pipe_fryum": {
+          "count": 137,
+          "spearman": 0.50161093220544,
+          "backend": "scipy.stats.spearmanr"
+        }
+      },
+      "high_map_quartile_no_answers": {
+        "threshold_q75": 0.08544921875,
+        "selection": "map_score >= q75; boundary ties retained",
+        "selected_sources": 504,
+        "no_answer_sources": 309,
+        "no_answer_gt_normal": 69,
+        "no_answer_gt_anomaly": 240,
+        "no_answer_gt_unknown": 0,
+        "per_class": {
+          "candle": 12,
+          "capsules": 13,
+          "cashew": 15,
+          "chewinggum": 24,
+          "fryum": 19,
+          "macaroni1": 9,
+          "macaroni2": 7,
+          "pcb1": 69,
+          "pcb2": 50,
+          "pcb3": 20,
+          "pcb4": 51,
+          "pipe_fryum": 20
+        }
+      },
+      "official_anomaly_zero_foreground_224": {
+        "count": 0,
+        "per_class": {},
+        "source_paths": []
+      }
+    },
+    "historical_lora43": {
+      "name": "historical_lora43",
+      "predictions": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/real_evaluations/historical_lora43/predictions.jsonl",
+      "status": "complete_2005",
+      "expected_sources": 2005,
+      "num_records": 2005,
+      "unique_source_keys": 2005,
+      "records_without_source_key": 0,
+      "duplicate_source_keys": {},
+      "jsonl_parse_errors": [],
+      "completion_metadata": {
+        "run.json": {
+          "completed": true,
+          "completed_num_sources": 2005,
+          "num_sources": 2005
+        },
+        "metrics.json": {
+          "num_sources": 2005,
+          "backend": "qwen",
+          "seed": 43
+        }
+      },
+      "answer_counts": {
+        "yes": 81,
+        "no": 1924,
+        "invalid": 0
+      },
+      "answer_fractions": {
+        "yes": 0.04039900249376559,
+        "no": 0.9596009975062344,
+        "invalid": 0.0
+      },
+      "top_normalized_answers": [
+        {
+          "answer": "no, there is no anomaly in the image.",
+          "count": 1821,
+          "fraction": 0.9082294264339152
+        },
+        {
+          "answer": "no, the image is at the bottom of the image, it's at the bottom of the image.",
+          "count": 32,
+          "fraction": 0.01596009975062344
+        },
+        {
+          "answer": "no, there is no anomaly in the image, it's at the bottom of the image.",
+          "count": 23,
+          "fraction": 0.011471321695760598
+        },
+        {
+          "answer": "yes, there are 2 anomalies in the image, they are at the bottom of the image, they are at the bottom of the image.",
+          "count": 19,
+          "fraction": 0.009476309226932668
+        },
+        {
+          "answer": "no, the image is at the bottom of the image, it's at the bottom of the image, it's at the bottom of the image.",
+          "count": 18,
+          "fraction": 0.008977556109725686
+        },
+        {
+          "answer": "yes, the image shows 2 anomalies at the bottom of the image, they are at the bottom of the image, they are at the bottom of the image",
+          "count": 14,
+          "fraction": 0.006982543640897756
+        },
+        {
+          "answer": "yes, the image shows 2 anomalies at the bottom of the image, they are at the bottom of the image.",
+          "count": 12,
+          "fraction": 0.0059850374064837905
+        },
+        {
+          "answer": "yes, there is an anomaly in the image, at the bottom of the image.",
+          "count": 10,
+          "fraction": 0.004987531172069825
+        },
+        {
+          "answer": "no, the image is at the bottom of the image, it's at the bottom of the image, it's at the bottom of the image, it's",
+          "count": 9,
+          "fraction": 0.004488778054862843
+        },
+        {
+          "answer": "no, there is no anomaly in the image, it appears at the bottom of the image.",
+          "count": 8,
+          "fraction": 0.00399002493765586
+        }
+      ],
+      "stored_vs_reparsed_prediction_disagreements": 0,
+      "confusion": {
+        "num_sources": 2005,
+        "counts": {
+          "gt_normal": {
+            "no": 924,
+            "yes": 1,
+            "invalid": 0
+          },
+          "gt_anomaly": {
+            "no": 1000,
+            "yes": 80,
+            "invalid": 0
+          }
+        },
+        "unknown_gt": 0
+      },
+      "per_class_confusion": {
+        "candle": {
+          "num_sources": 186,
+          "counts": {
+            "gt_normal": {
+              "no": 96,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 88,
+              "yes": 2,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "capsules": {
+          "num_sources": 147,
+          "counts": {
+            "gt_normal": {
+              "no": 57,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 75,
+              "yes": 15,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "cashew": {
+          "num_sources": 134,
+          "counts": {
+            "gt_normal": {
+              "no": 44,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 79,
+              "yes": 11,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "chewinggum": {
+          "num_sources": 137,
+          "counts": {
+            "gt_normal": {
+              "no": 47,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 70,
+              "yes": 20,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "fryum": {
+          "num_sources": 138,
+          "counts": {
+            "gt_normal": {
+              "no": 48,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 80,
+              "yes": 10,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "macaroni1": {
+          "num_sources": 187,
+          "counts": {
+            "gt_normal": {
+              "no": 97,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 89,
+              "yes": 1,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "macaroni2": {
+          "num_sources": 188,
+          "counts": {
+            "gt_normal": {
+              "no": 97,
+              "yes": 1,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 86,
+              "yes": 4,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb1": {
+          "num_sources": 188,
+          "counts": {
+            "gt_normal": {
+              "no": 98,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb2": {
+          "num_sources": 187,
+          "counts": {
+            "gt_normal": {
+              "no": 97,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 88,
+              "yes": 2,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb3": {
+          "num_sources": 189,
+          "counts": {
+            "gt_normal": {
+              "no": 99,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb4": {
+          "num_sources": 187,
+          "counts": {
+            "gt_normal": {
+              "no": 97,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 88,
+              "yes": 2,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pipe_fryum": {
+          "num_sources": 137,
+          "counts": {
+            "gt_normal": {
+              "no": 47,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 77,
+              "yes": 13,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        }
+      },
+      "raw_generated_token_length": {
+        "count": 2005,
+        "min": 11.0,
+        "mean": 12.28279301745636,
+        "q25": 11.0,
+        "q50": 11.0,
+        "q75": 11.0,
+        "q90": 11.0,
+        "q95": 22.0,
+        "max": 32.0
+      },
+      "missing_token_id_records": 0,
+      "termination_counts": {
+        "max_new_tokens": 27,
+        "training_turn_delimiter_text": 1978
+      },
+      "raw_token_lengths_by_termination": {
+        "max_new_tokens": {
+          "count": 27,
+          "min": 32.0,
+          "mean": 32.0,
+          "q25": 32.0,
+          "q50": 32.0,
+          "q75": 32.0,
+          "q90": 32.0,
+          "q95": 32.0,
+          "max": 32.0
+        },
+        "training_turn_delimiter_text": {
+          "count": 1978,
+          "min": 11.0,
+          "mean": 12.013650151668353,
+          "q25": 11.0,
+          "q50": 11.0,
+          "q75": 11.0,
+          "q90": 11.0,
+          "q95": 22.0,
+          "max": 31.0
+        }
+      },
+      "map_score_quantiles": {
+        "count": 2005,
+        "min": 3.096647560596466e-08,
+        "mean": 0.04176207990733967,
+        "q25": 5.841255187988281e-06,
+        "q50": 7.104873657226562e-05,
+        "q75": 0.0024871826171875,
+        "q90": 0.15585937500000013,
+        "q95": 0.2648437499999998,
+        "max": 0.75
+      },
+      "map_answer_log_odds_correlation": {
+        "count": 2005,
+        "spearman": 0.15425128341148706,
+        "backend": "scipy.stats.spearmanr"
+      },
+      "per_class_map_answer_spearman": {
+        "candle": {
+          "count": 186,
+          "spearman": 0.12989218241172637,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "capsules": {
+          "count": 147,
+          "spearman": 0.4169394268173574,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "cashew": {
+          "count": 134,
+          "spearman": 0.28609905732515334,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "chewinggum": {
+          "count": 137,
+          "spearman": 0.5994917655697227,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "fryum": {
+          "count": 138,
+          "spearman": 0.4983415012703182,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "macaroni1": {
+          "count": 187,
+          "spearman": 0.1665318058385551,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "macaroni2": {
+          "count": 188,
+          "spearman": 0.12096076460826723,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb1": {
+          "count": 188,
+          "spearman": 0.21494417197261573,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb2": {
+          "count": 187,
+          "spearman": 0.28469165375510563,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb3": {
+          "count": 189,
+          "spearman": 0.14598258497473607,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb4": {
+          "count": 187,
+          "spearman": 0.3035124119728121,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pipe_fryum": {
+          "count": 137,
+          "spearman": 0.5379036963126841,
+          "backend": "scipy.stats.spearmanr"
+        }
+      },
+      "high_map_quartile_no_answers": {
+        "threshold_q75": 0.0024871826171875,
+        "selection": "map_score >= q75; boundary ties retained",
+        "selected_sources": 503,
+        "no_answer_sources": 422,
+        "no_answer_gt_normal": 65,
+        "no_answer_gt_anomaly": 357,
+        "no_answer_gt_unknown": 0,
+        "per_class": {
+          "candle": 13,
+          "capsules": 25,
+          "cashew": 30,
+          "chewinggum": 38,
+          "fryum": 41,
+          "macaroni1": 23,
+          "macaroni2": 12,
+          "pcb1": 46,
+          "pcb2": 50,
+          "pcb3": 44,
+          "pcb4": 66,
+          "pipe_fryum": 34
+        }
+      },
+      "official_anomaly_zero_foreground_224": {
+        "count": 0,
+        "per_class": {},
+        "source_paths": []
+      }
+    },
+    "historical_lora44": {
+      "name": "historical_lora44",
+      "predictions": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/real_evaluations/historical_lora44/predictions.jsonl",
+      "status": "complete_2005",
+      "expected_sources": 2005,
+      "num_records": 2005,
+      "unique_source_keys": 2005,
+      "records_without_source_key": 0,
+      "duplicate_source_keys": {},
+      "jsonl_parse_errors": [],
+      "completion_metadata": {
+        "run.json": {
+          "completed": true,
+          "completed_num_sources": 2005,
+          "num_sources": 2005
+        },
+        "metrics.json": {
+          "num_sources": 2005,
+          "backend": "qwen",
+          "seed": 44
+        }
+      },
+      "answer_counts": {
+        "yes": 0,
+        "no": 2005,
+        "invalid": 0
+      },
+      "answer_fractions": {
+        "yes": 0.0,
+        "no": 1.0,
+        "invalid": 0.0
+      },
+      "top_normalized_answers": [
+        {
+          "answer": "no, there is no anomaly in the image.",
+          "count": 2005,
+          "fraction": 1.0
+        }
+      ],
+      "stored_vs_reparsed_prediction_disagreements": 0,
+      "confusion": {
+        "num_sources": 2005,
+        "counts": {
+          "gt_normal": {
+            "no": 925,
+            "yes": 0,
+            "invalid": 0
+          },
+          "gt_anomaly": {
+            "no": 1080,
+            "yes": 0,
+            "invalid": 0
+          }
+        },
+        "unknown_gt": 0
+      },
+      "per_class_confusion": {
+        "candle": {
+          "num_sources": 186,
+          "counts": {
+            "gt_normal": {
+              "no": 96,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "capsules": {
+          "num_sources": 147,
+          "counts": {
+            "gt_normal": {
+              "no": 57,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "cashew": {
+          "num_sources": 134,
+          "counts": {
+            "gt_normal": {
+              "no": 44,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "chewinggum": {
+          "num_sources": 137,
+          "counts": {
+            "gt_normal": {
+              "no": 47,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "fryum": {
+          "num_sources": 138,
+          "counts": {
+            "gt_normal": {
+              "no": 48,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "macaroni1": {
+          "num_sources": 187,
+          "counts": {
+            "gt_normal": {
+              "no": 97,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "macaroni2": {
+          "num_sources": 188,
+          "counts": {
+            "gt_normal": {
+              "no": 98,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb1": {
+          "num_sources": 188,
+          "counts": {
+            "gt_normal": {
+              "no": 98,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb2": {
+          "num_sources": 187,
+          "counts": {
+            "gt_normal": {
+              "no": 97,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb3": {
+          "num_sources": 189,
+          "counts": {
+            "gt_normal": {
+              "no": 99,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb4": {
+          "num_sources": 187,
+          "counts": {
+            "gt_normal": {
+              "no": 97,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pipe_fryum": {
+          "num_sources": 137,
+          "counts": {
+            "gt_normal": {
+              "no": 47,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        }
+      },
+      "raw_generated_token_length": {
+        "count": 2005,
+        "min": 11.0,
+        "mean": 11.0,
+        "q25": 11.0,
+        "q50": 11.0,
+        "q75": 11.0,
+        "q90": 11.0,
+        "q95": 11.0,
+        "max": 11.0
+      },
+      "missing_token_id_records": 0,
+      "termination_counts": {
+        "training_turn_delimiter_text": 2005
+      },
+      "raw_token_lengths_by_termination": {
+        "training_turn_delimiter_text": {
+          "count": 2005,
+          "min": 11.0,
+          "mean": 11.0,
+          "q25": 11.0,
+          "q50": 11.0,
+          "q75": 11.0,
+          "q90": 11.0,
+          "q95": 11.0,
+          "max": 11.0
+        }
+      },
+      "map_score_quantiles": {
+        "count": 2005,
+        "min": 3.841705620288849e-08,
+        "mean": 0.08339645619378738,
+        "q25": 4.887580871582031e-05,
+        "q50": 0.001556396484375,
+        "q75": 0.109375,
+        "q90": 0.251953125,
+        "q95": 0.46757812499999973,
+        "max": 0.75
+      },
+      "map_answer_log_odds_correlation": {
+        "count": 2005,
+        "spearman": 0.23888266581106324,
+        "backend": "scipy.stats.spearmanr"
+      },
+      "per_class_map_answer_spearman": {
+        "candle": {
+          "count": 186,
+          "spearman": -0.006335861285370114,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "capsules": {
+          "count": 147,
+          "spearman": -0.07093755184370795,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "cashew": {
+          "count": 134,
+          "spearman": 0.17222342758660816,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "chewinggum": {
+          "count": 137,
+          "spearman": 0.24482006140295343,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "fryum": {
+          "count": 138,
+          "spearman": -0.031093246514536155,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "macaroni1": {
+          "count": 187,
+          "spearman": 0.1249894703494823,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "macaroni2": {
+          "count": 188,
+          "spearman": 0.022002218178181775,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb1": {
+          "count": 188,
+          "spearman": 0.06448415056018636,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb2": {
+          "count": 187,
+          "spearman": -0.22570589205673894,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb3": {
+          "count": 189,
+          "spearman": -0.16027204694942024,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb4": {
+          "count": 187,
+          "spearman": -0.03711021785732218,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pipe_fryum": {
+          "count": 137,
+          "spearman": 0.16837373105317044,
+          "backend": "scipy.stats.spearmanr"
+        }
+      },
+      "high_map_quartile_no_answers": {
+        "threshold_q75": 0.109375,
+        "selection": "map_score >= q75; boundary ties retained",
+        "selected_sources": 502,
+        "no_answer_sources": 502,
+        "no_answer_gt_normal": 84,
+        "no_answer_gt_anomaly": 418,
+        "no_answer_gt_unknown": 0,
+        "per_class": {
+          "candle": 15,
+          "capsules": 33,
+          "cashew": 30,
+          "chewinggum": 49,
+          "fryum": 42,
+          "macaroni1": 20,
+          "macaroni2": 9,
+          "pcb1": 47,
+          "pcb2": 103,
+          "pcb3": 43,
+          "pcb4": 69,
+          "pipe_fryum": 42
+        }
+      },
+      "official_anomaly_zero_foreground_224": {
+        "count": 0,
+        "per_class": {},
+        "source_paths": []
+      }
+    },
+    "matched_qwen_frozen42": {
+      "name": "matched_qwen_frozen42",
+      "predictions": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/real_evaluations/matched_qwen_frozen42/predictions.jsonl",
+      "status": "complete_2005",
+      "expected_sources": 2005,
+      "num_records": 2005,
+      "unique_source_keys": 2005,
+      "records_without_source_key": 0,
+      "duplicate_source_keys": {},
+      "jsonl_parse_errors": [],
+      "completion_metadata": {
+        "run.json": {
+          "completed": true,
+          "completed_num_sources": 2005,
+          "num_sources": 2005
+        },
+        "metrics.json": {
+          "num_sources": 2005,
+          "backend": "qwen",
+          "seed": 42
+        }
+      },
+      "answer_counts": {
+        "yes": 175,
+        "no": 1369,
+        "invalid": 461
+      },
+      "answer_fractions": {
+        "yes": 0.08728179551122195,
+        "no": 0.6827930174563591,
+        "invalid": 0.22992518703241896
+      },
+      "top_normalized_answers": [
+        {
+          "answer": "",
+          "count": 451,
+          "fraction": 0.22493765586034914
+        },
+        {
+          "answer": "no, there is no anomaly in the image. the four macaronis appear to be intact, with no visible damage, flaws, defects, scratches, holes",
+          "count": 363,
+          "fraction": 0.18104738154613467
+        },
+        {
+          "answer": "no, there is no anomaly in the image. the pcb (printed circuit board) appears to be intact, with no visible damage, flaws, defects,",
+          "count": 294,
+          "fraction": 0.14663341645885286
+        },
+        {
+          "answer": "no, there is no anomaly in the image. all the small green capsules appear to be intact, without any visible damage, flaws, scratches, holes, or",
+          "count": 125,
+          "fraction": 0.06234413965087282
+        },
+        {
+          "answer": "no, there is no anomaly in the image. the chewing gum appears to be white, intact, and free from any damage, flaws, scratches, holes,",
+          "count": 117,
+          "fraction": 0.058354114713216956
+        },
+        {
+          "answer": "no, there is no anomaly in the image. the cashew appears to be intact, undamaged, and free from any visible flaws, scratches, holes,",
+          "count": 116,
+          "fraction": 0.05785536159600998
+        },
+        {
+          "answer": "no, there is no anomaly in the image. the pipe appears to be intact, with no visible damage, flaws, scratches, holes, or broken parts.",
+          "count": 94,
+          "fraction": 0.04688279301745636
+        },
+        {
+          "answer": "yes, there is an anomaly in the image. the image contains **five candles**, not four as stated. this is a **counting anomaly** —",
+          "count": 74,
+          "fraction": 0.03690773067331671
+        },
+        {
+          "answer": "yes, there is an anomaly in the image. the image contains **five candles**, not four as stated in the description. this is a direct contradiction —",
+          "count": 53,
+          "fraction": 0.026433915211970076
+        },
+        {
+          "answer": "no, there is no anomaly in the image. the image appears to be a clean, undamaged photo of a fryum (a type of fried food)",
+          "count": 52,
+          "fraction": 0.02593516209476309
+        }
+      ],
+      "stored_vs_reparsed_prediction_disagreements": 0,
+      "confusion": {
+        "num_sources": 2005,
+        "counts": {
+          "gt_normal": {
+            "no": 560,
+            "yes": 87,
+            "invalid": 278
+          },
+          "gt_anomaly": {
+            "no": 809,
+            "yes": 88,
+            "invalid": 183
+          }
+        },
+        "unknown_gt": 0
+      },
+      "per_class_confusion": {
+        "candle": {
+          "num_sources": 186,
+          "counts": {
+            "gt_normal": {
+              "no": 0,
+              "yes": 87,
+              "invalid": 9
+            },
+            "gt_anomaly": {
+              "no": 0,
+              "yes": 88,
+              "invalid": 2
+            }
+          },
+          "unknown_gt": 0
+        },
+        "capsules": {
+          "num_sources": 147,
+          "counts": {
+            "gt_normal": {
+              "no": 57,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 88,
+              "yes": 0,
+              "invalid": 2
+            }
+          },
+          "unknown_gt": 0
+        },
+        "cashew": {
+          "num_sources": 134,
+          "counts": {
+            "gt_normal": {
+              "no": 44,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "chewinggum": {
+          "num_sources": 137,
+          "counts": {
+            "gt_normal": {
+              "no": 47,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "fryum": {
+          "num_sources": 138,
+          "counts": {
+            "gt_normal": {
+              "no": 48,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "macaroni1": {
+          "num_sources": 187,
+          "counts": {
+            "gt_normal": {
+              "no": 97,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 89,
+              "yes": 0,
+              "invalid": 1
+            }
+          },
+          "unknown_gt": 0
+        },
+        "macaroni2": {
+          "num_sources": 188,
+          "counts": {
+            "gt_normal": {
+              "no": 98,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb1": {
+          "num_sources": 188,
+          "counts": {
+            "gt_normal": {
+              "no": 2,
+              "yes": 0,
+              "invalid": 96
+            },
+            "gt_anomaly": {
+              "no": 6,
+              "yes": 0,
+              "invalid": 84
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb2": {
+          "num_sources": 187,
+          "counts": {
+            "gt_normal": {
+              "no": 33,
+              "yes": 0,
+              "invalid": 64
+            },
+            "gt_anomaly": {
+              "no": 54,
+              "yes": 0,
+              "invalid": 36
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb3": {
+          "num_sources": 189,
+          "counts": {
+            "gt_normal": {
+              "no": 67,
+              "yes": 0,
+              "invalid": 32
+            },
+            "gt_anomaly": {
+              "no": 80,
+              "yes": 0,
+              "invalid": 10
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb4": {
+          "num_sources": 187,
+          "counts": {
+            "gt_normal": {
+              "no": 20,
+              "yes": 0,
+              "invalid": 77
+            },
+            "gt_anomaly": {
+              "no": 42,
+              "yes": 0,
+              "invalid": 48
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pipe_fryum": {
+          "num_sources": 137,
+          "counts": {
+            "gt_normal": {
+              "no": 47,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        }
+      },
+      "raw_generated_token_length": {
+        "count": 2005,
+        "min": 1.0,
+        "mean": 25.026932668329177,
+        "q25": 32.0,
+        "q50": 32.0,
+        "q75": 32.0,
+        "q90": 32.0,
+        "q95": 32.0,
+        "max": 32.0
+      },
+      "missing_token_id_records": 0,
+      "termination_counts": {
+        "eos": 451,
+        "max_new_tokens": 1554
+      },
+      "raw_token_lengths_by_termination": {
+        "eos": {
+          "count": 451,
+          "min": 1.0,
+          "mean": 1.0,
+          "q25": 1.0,
+          "q50": 1.0,
+          "q75": 1.0,
+          "q90": 1.0,
+          "q95": 1.0,
+          "max": 1.0
+        },
+        "max_new_tokens": {
+          "count": 1554,
+          "min": 32.0,
+          "mean": 32.0,
+          "q25": 32.0,
+          "q50": 32.0,
+          "q75": 32.0,
+          "q90": 32.0,
+          "q95": 32.0,
+          "max": 32.0
+        }
+      },
+      "map_score_quantiles": {
+        "count": 2005,
+        "min": 2.6891939342021942e-08,
+        "mean": 0.05058734921333229,
+        "q25": 8.106231689453125e-06,
+        "q50": 0.00022411346435546875,
+        "q75": 0.0108642578125,
+        "q90": 0.21738281250000013,
+        "q95": 0.2734375,
+        "max": 0.75
+      },
+      "map_answer_log_odds_correlation": {
+        "count": 2005,
+        "spearman": -0.0618922652564167,
+        "backend": "scipy.stats.spearmanr"
+      },
+      "per_class_map_answer_spearman": {
+        "candle": {
+          "count": 186,
+          "spearman": 0.2479477001382214,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "capsules": {
+          "count": 147,
+          "spearman": 0.11487055114708851,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "cashew": {
+          "count": 134,
+          "spearman": -0.5074853376722537,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "chewinggum": {
+          "count": 137,
+          "spearman": -0.6231854658184548,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "fryum": {
+          "count": 138,
+          "spearman": 0.4568529513365061,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "macaroni1": {
+          "count": 187,
+          "spearman": -0.2685351294116561,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "macaroni2": {
+          "count": 188,
+          "spearman": -0.24162531841189244,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb1": {
+          "count": 188,
+          "spearman": -0.2459069130303504,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb2": {
+          "count": 187,
+          "spearman": -0.06160929676755651,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb3": {
+          "count": 189,
+          "spearman": 0.04210007127811342,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb4": {
+          "count": 187,
+          "spearman": -0.0037839955523687515,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pipe_fryum": {
+          "count": 137,
+          "spearman": -0.6798735711999779,
+          "backend": "scipy.stats.spearmanr"
+        }
+      },
+      "high_map_quartile_no_answers": {
+        "threshold_q75": 0.0108642578125,
+        "selection": "map_score >= q75; boundary ties retained",
+        "selected_sources": 503,
+        "no_answer_sources": 363,
+        "no_answer_gt_normal": 29,
+        "no_answer_gt_anomaly": 334,
+        "no_answer_gt_unknown": 0,
+        "per_class": {
+          "capsules": 47,
+          "cashew": 39,
+          "chewinggum": 54,
+          "fryum": 44,
+          "macaroni1": 22,
+          "macaroni2": 15,
+          "pcb1": 8,
+          "pcb2": 35,
+          "pcb3": 23,
+          "pcb4": 30,
+          "pipe_fryum": 46
+        }
+      },
+      "official_anomaly_zero_foreground_224": {
+        "count": 0,
+        "per_class": {},
+        "source_paths": []
+      }
+    },
+    "matched_qwen_frozen43": {
+      "name": "matched_qwen_frozen43",
+      "predictions": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/real_evaluations/matched_qwen_frozen43/predictions.jsonl",
+      "status": "complete_2005",
+      "expected_sources": 2005,
+      "num_records": 2005,
+      "unique_source_keys": 2005,
+      "records_without_source_key": 0,
+      "duplicate_source_keys": {},
+      "jsonl_parse_errors": [],
+      "completion_metadata": {
+        "run.json": {
+          "completed": true,
+          "completed_num_sources": 2005,
+          "num_sources": 2005
+        },
+        "metrics.json": {
+          "num_sources": 2005,
+          "backend": "qwen",
+          "seed": 43
+        }
+      },
+      "answer_counts": {
+        "yes": 342,
+        "no": 1491,
+        "invalid": 172
+      },
+      "answer_fractions": {
+        "yes": 0.17057356608478802,
+        "no": 0.7436408977556109,
+        "invalid": 0.085785536159601
+      },
+      "top_normalized_answers": [
+        {
+          "answer": "no, there is no anomaly in the image. the pcb appears to be intact, with no visible damage, flaws, defects, scratches, holes, or broken",
+          "count": 345,
+          "fraction": 0.17206982543640897
+        },
+        {
+          "answer": "no, there is no anomaly in the image. the pcb appears to be intact, with no visible damage, flaws, scratches, holes, or broken parts.",
+          "count": 322,
+          "fraction": 0.16059850374064838
+        },
+        {
+          "answer": "no, there is no anomaly in the image. the image shows four macaroni pieces, and they appear to be intact, without any visible damage, flaws",
+          "count": 198,
+          "fraction": 0.09875311720698254
+        },
+        {
+          "answer": "",
+          "count": 172,
+          "fraction": 0.085785536159601
+        },
+        {
+          "answer": "yes, there is an anomaly in the image. the candle on the far right is not round; it has a noticeable indentation or dent on its surface, which",
+          "count": 123,
+          "fraction": 0.06134663341645885
+        },
+        {
+          "answer": "no, there is no anomaly in the image. the cashew appears to be intact, with no visible damage, flaw, defect, scratch, hole, or",
+          "count": 118,
+          "fraction": 0.05885286783042394
+        },
+        {
+          "answer": "no, there is no anomaly in the image. the pipe fryum appears to be intact, with no visible damage, flaw, defect, scratch, hole,",
+          "count": 113,
+          "fraction": 0.056359102244389024
+        },
+        {
+          "answer": "no, there is no anomaly in the image. the image shows four macaronis, which appear to be intact, without any visible damage, flaw, defect",
+          "count": 96,
+          "fraction": 0.047880299251870324
+        },
+        {
+          "answer": "no, there is no anomaly in the image. the chewing gum appears to be intact, white, and free of any damage, flaws, scratches, holes,",
+          "count": 68,
+          "fraction": 0.03391521197007481
+        },
+        {
+          "answer": "yes, there is an anomaly in the image. the small green capsules are not all intact. some of them have visible defects, such as scratches, cracks,",
+          "count": 60,
+          "fraction": 0.029925187032418952
+        }
+      ],
+      "stored_vs_reparsed_prediction_disagreements": 0,
+      "confusion": {
+        "num_sources": 2005,
+        "counts": {
+          "gt_normal": {
+            "no": 749,
+            "yes": 152,
+            "invalid": 24
+          },
+          "gt_anomaly": {
+            "no": 742,
+            "yes": 190,
+            "invalid": 148
+          }
+        },
+        "unknown_gt": 0
+      },
+      "per_class_confusion": {
+        "candle": {
+          "num_sources": 186,
+          "counts": {
+            "gt_normal": {
+              "no": 0,
+              "yes": 96,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 0,
+              "yes": 90,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "capsules": {
+          "num_sources": 147,
+          "counts": {
+            "gt_normal": {
+              "no": 0,
+              "yes": 56,
+              "invalid": 1
+            },
+            "gt_anomaly": {
+              "no": 0,
+              "yes": 80,
+              "invalid": 10
+            }
+          },
+          "unknown_gt": 0
+        },
+        "cashew": {
+          "num_sources": 134,
+          "counts": {
+            "gt_normal": {
+              "no": 44,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 74,
+              "yes": 0,
+              "invalid": 16
+            }
+          },
+          "unknown_gt": 0
+        },
+        "chewinggum": {
+          "num_sources": 137,
+          "counts": {
+            "gt_normal": {
+              "no": 47,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 66,
+              "yes": 14,
+              "invalid": 10
+            }
+          },
+          "unknown_gt": 0
+        },
+        "fryum": {
+          "num_sources": 138,
+          "counts": {
+            "gt_normal": {
+              "no": 48,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 59,
+              "yes": 0,
+              "invalid": 31
+            }
+          },
+          "unknown_gt": 0
+        },
+        "macaroni1": {
+          "num_sources": 187,
+          "counts": {
+            "gt_normal": {
+              "no": 97,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 87,
+              "yes": 0,
+              "invalid": 3
+            }
+          },
+          "unknown_gt": 0
+        },
+        "macaroni2": {
+          "num_sources": 188,
+          "counts": {
+            "gt_normal": {
+              "no": 98,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 87,
+              "yes": 0,
+              "invalid": 3
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb1": {
+          "num_sources": 188,
+          "counts": {
+            "gt_normal": {
+              "no": 93,
+              "yes": 0,
+              "invalid": 5
+            },
+            "gt_anomaly": {
+              "no": 83,
+              "yes": 0,
+              "invalid": 7
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb2": {
+          "num_sources": 187,
+          "counts": {
+            "gt_normal": {
+              "no": 89,
+              "yes": 0,
+              "invalid": 8
+            },
+            "gt_anomaly": {
+              "no": 70,
+              "yes": 0,
+              "invalid": 20
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb3": {
+          "num_sources": 189,
+          "counts": {
+            "gt_normal": {
+              "no": 94,
+              "yes": 0,
+              "invalid": 5
+            },
+            "gt_anomaly": {
+              "no": 81,
+              "yes": 0,
+              "invalid": 9
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb4": {
+          "num_sources": 187,
+          "counts": {
+            "gt_normal": {
+              "no": 92,
+              "yes": 0,
+              "invalid": 5
+            },
+            "gt_anomaly": {
+              "no": 65,
+              "yes": 6,
+              "invalid": 19
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pipe_fryum": {
+          "num_sources": 137,
+          "counts": {
+            "gt_normal": {
+              "no": 47,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 70,
+              "yes": 0,
+              "invalid": 20
+            }
+          },
+          "unknown_gt": 0
+        }
+      },
+      "raw_generated_token_length": {
+        "count": 2005,
+        "min": 1.0,
+        "mean": 29.3286783042394,
+        "q25": 32.0,
+        "q50": 32.0,
+        "q75": 32.0,
+        "q90": 32.0,
+        "q95": 32.0,
+        "max": 32.0
+      },
+      "missing_token_id_records": 0,
+      "termination_counts": {
+        "eos": 178,
+        "max_new_tokens": 1827
+      },
+      "raw_token_lengths_by_termination": {
+        "eos": {
+          "count": 178,
+          "min": 1.0,
+          "mean": 1.9101123595505618,
+          "q25": 1.0,
+          "q50": 1.0,
+          "q75": 1.0,
+          "q90": 1.0,
+          "q95": 1.0,
+          "max": 30.0
+        },
+        "max_new_tokens": {
+          "count": 1827,
+          "min": 32.0,
+          "mean": 32.0,
+          "q25": 32.0,
+          "q50": 32.0,
+          "q75": 32.0,
+          "q90": 32.0,
+          "q95": 32.0,
+          "max": 32.0
+        }
+      },
+      "map_score_quantiles": {
+        "count": 2005,
+        "min": 5.2619725465774536e-08,
+        "mean": 0.08338294292769936,
+        "q25": 9.012222290039062e-05,
+        "q50": 0.0021514892578125,
+        "q75": 0.1044921875,
+        "q90": 0.25,
+        "q95": 0.46640624999999947,
+        "max": 0.75
+      },
+      "map_answer_log_odds_correlation": {
+        "count": 2005,
+        "spearman": 0.20716184016871986,
+        "backend": "scipy.stats.spearmanr"
+      },
+      "per_class_map_answer_spearman": {
+        "candle": {
+          "count": 186,
+          "spearman": 0.11522156453656666,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "capsules": {
+          "count": 147,
+          "spearman": 0.4303280879485942,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "cashew": {
+          "count": 134,
+          "spearman": 0.2151935778036738,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "chewinggum": {
+          "count": 137,
+          "spearman": 0.535228537034264,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "fryum": {
+          "count": 138,
+          "spearman": 0.5472577510709581,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "macaroni1": {
+          "count": 187,
+          "spearman": 0.0497993363278596,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "macaroni2": {
+          "count": 188,
+          "spearman": 0.07439662380629483,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb1": {
+          "count": 188,
+          "spearman": 0.5976352806652073,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb2": {
+          "count": 187,
+          "spearman": 0.6261171452461224,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb3": {
+          "count": 189,
+          "spearman": 0.549862988793715,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb4": {
+          "count": 187,
+          "spearman": 0.7070460168653006,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pipe_fryum": {
+          "count": 137,
+          "spearman": 0.24285964477858402,
+          "backend": "scipy.stats.spearmanr"
+        }
+      },
+      "high_map_quartile_no_answers": {
+        "threshold_q75": 0.1044921875,
+        "selection": "map_score >= q75; boundary ties retained",
+        "selected_sources": 503,
+        "no_answer_sources": 262,
+        "no_answer_gt_normal": 54,
+        "no_answer_gt_anomaly": 208,
+        "no_answer_gt_unknown": 0,
+        "per_class": {
+          "cashew": 15,
+          "chewinggum": 22,
+          "fryum": 16,
+          "macaroni1": 18,
+          "macaroni2": 13,
+          "pcb1": 27,
+          "pcb2": 65,
+          "pcb3": 32,
+          "pcb4": 32,
+          "pipe_fryum": 22
+        }
+      },
+      "official_anomaly_zero_foreground_224": {
+        "count": 0,
+        "per_class": {},
+        "source_paths": []
+      }
+    },
+    "matched_qwen_frozen44": {
+      "name": "matched_qwen_frozen44",
+      "predictions": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/real_evaluations/matched_qwen_frozen44/predictions.jsonl",
+      "status": "complete_2005",
+      "expected_sources": 2005,
+      "num_records": 2005,
+      "unique_source_keys": 2005,
+      "records_without_source_key": 0,
+      "duplicate_source_keys": {},
+      "jsonl_parse_errors": [],
+      "completion_metadata": {
+        "run.json": {
+          "completed": true,
+          "completed_num_sources": 2005,
+          "num_sources": 2005
+        },
+        "metrics.json": {
+          "num_sources": 2005,
+          "backend": "qwen",
+          "seed": 44
+        }
+      },
+      "answer_counts": {
+        "yes": 816,
+        "no": 1187,
+        "invalid": 2
+      },
+      "answer_fractions": {
+        "yes": 0.40698254364089775,
+        "no": 0.5920199501246883,
+        "invalid": 0.000997506234413965
+      },
+      "top_normalized_answers": [
+        {
+          "answer": "no, there is no anomaly in the image.",
+          "count": 652,
+          "fraction": 0.32518703241895264
+        },
+        {
+          "answer": "yes, there is an anomaly in the image. the pcb (printed circuit board) has a visible crack on the top right corner, which is a physical",
+          "count": 173,
+          "fraction": 0.08628428927680798
+        },
+        {
+          "answer": "yes, there is an anomaly in the image. the image shows a pcb (printed circuit board) with a visible crack on the top right corner. this",
+          "count": 149,
+          "fraction": 0.0743142144638404
+        },
+        {
+          "answer": "no, there is no anomaly in the image. the cashew appears to be intact, with no visible damage, flaw, defect, scratch, hole, or",
+          "count": 121,
+          "fraction": 0.06034912718204489
+        },
+        {
+          "answer": "yes, there is an anomaly in the image. the fourth candle is not round, it is more like a triangle shape.",
+          "count": 101,
+          "fraction": 0.050374064837905234
+        },
+        {
+          "answer": "no, there is no anomaly in the image. the fryum appears to be intact, with no visible damage, flaw, defect, scratch, hole, or",
+          "count": 98,
+          "fraction": 0.04887780548628429
+        },
+        {
+          "answer": "yes, there is an anomaly in the image. the image shows a pcb (printed circuit board) with a visible crack or break in the middle of the",
+          "count": 93,
+          "fraction": 0.04638403990024938
+        },
+        {
+          "answer": "no, there is no anomaly in the image. the pcb (printed circuit board) appears to be intact, with no visible damage, flaws, defects,",
+          "count": 64,
+          "fraction": 0.03192019950124688
+        },
+        {
+          "answer": "yes, there is an anomaly in the image. the candle on the far right is not round, it is more like a triangle.",
+          "count": 60,
+          "fraction": 0.029925187032418952
+        },
+        {
+          "answer": "no, there is no anomaly in the image. the chewing gum appears to be intact, white, and without any visible damage, flaw, defect, scratch,",
+          "count": 52,
+          "fraction": 0.02593516209476309
+        }
+      ],
+      "stored_vs_reparsed_prediction_disagreements": 0,
+      "confusion": {
+        "num_sources": 2005,
+        "counts": {
+          "gt_normal": {
+            "no": 518,
+            "yes": 407,
+            "invalid": 0
+          },
+          "gt_anomaly": {
+            "no": 669,
+            "yes": 409,
+            "invalid": 2
+          }
+        },
+        "unknown_gt": 0
+      },
+      "per_class_confusion": {
+        "candle": {
+          "num_sources": 186,
+          "counts": {
+            "gt_normal": {
+              "no": 0,
+              "yes": 96,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 0,
+              "yes": 90,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "capsules": {
+          "num_sources": 147,
+          "counts": {
+            "gt_normal": {
+              "no": 56,
+              "yes": 1,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 79,
+              "yes": 11,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "cashew": {
+          "num_sources": 134,
+          "counts": {
+            "gt_normal": {
+              "no": 44,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "chewinggum": {
+          "num_sources": 137,
+          "counts": {
+            "gt_normal": {
+              "no": 24,
+              "yes": 23,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 33,
+              "yes": 57,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "fryum": {
+          "num_sources": 138,
+          "counts": {
+            "gt_normal": {
+              "no": 48,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "macaroni1": {
+          "num_sources": 187,
+          "counts": {
+            "gt_normal": {
+              "no": 97,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "macaroni2": {
+          "num_sources": 188,
+          "counts": {
+            "gt_normal": {
+              "no": 98,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb1": {
+          "num_sources": 188,
+          "counts": {
+            "gt_normal": {
+              "no": 3,
+              "yes": 95,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 17,
+              "yes": 73,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb2": {
+          "num_sources": 187,
+          "counts": {
+            "gt_normal": {
+              "no": 18,
+              "yes": 79,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 22,
+              "yes": 68,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb3": {
+          "num_sources": 189,
+          "counts": {
+            "gt_normal": {
+              "no": 6,
+              "yes": 93,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 17,
+              "yes": 73,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb4": {
+          "num_sources": 187,
+          "counts": {
+            "gt_normal": {
+              "no": 96,
+              "yes": 1,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 83,
+              "yes": 5,
+              "invalid": 2
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pipe_fryum": {
+          "num_sources": 137,
+          "counts": {
+            "gt_normal": {
+              "no": 28,
+              "yes": 19,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 58,
+              "yes": 32,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        }
+      },
+      "raw_generated_token_length": {
+        "count": 2005,
+        "min": 1.0,
+        "mean": 24.66284289276808,
+        "q25": 11.0,
+        "q50": 32.0,
+        "q75": 32.0,
+        "q90": 32.0,
+        "q95": 32.0,
+        "max": 32.0
+      },
+      "missing_token_id_records": 0,
+      "termination_counts": {
+        "eos": 831,
+        "max_new_tokens": 1174
+      },
+      "raw_token_lengths_by_termination": {
+        "eos": {
+          "count": 831,
+          "min": 1.0,
+          "mean": 14.297232250300842,
+          "q25": 11.0,
+          "q50": 11.0,
+          "q75": 11.0,
+          "q90": 26.0,
+          "q95": 28.0,
+          "max": 31.0
+        },
+        "max_new_tokens": {
+          "count": 1174,
+          "min": 32.0,
+          "mean": 32.0,
+          "q25": 32.0,
+          "q50": 32.0,
+          "q75": 32.0,
+          "q90": 32.0,
+          "q95": 32.0,
+          "max": 32.0
+        }
+      },
+      "map_score_quantiles": {
+        "count": 2005,
+        "min": 1.9837170839309692e-07,
+        "mean": 0.08045583335715265,
+        "q25": 0.00012302398681640625,
+        "q50": 0.0017852783203125,
+        "q75": 0.0693359375,
+        "q90": 0.26289062500000027,
+        "q95": 0.48046875,
+        "max": 0.75
+      },
+      "map_answer_log_odds_correlation": {
+        "count": 2005,
+        "spearman": -0.11685612691744335,
+        "backend": "scipy.stats.spearmanr"
+      },
+      "per_class_map_answer_spearman": {
+        "candle": {
+          "count": 186,
+          "spearman": 0.044682999827768216,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "capsules": {
+          "count": 147,
+          "spearman": -0.24069683551497034,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "cashew": {
+          "count": 134,
+          "spearman": -0.24354546017350373,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "chewinggum": {
+          "count": 137,
+          "spearman": 0.5373965174269654,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "fryum": {
+          "count": 138,
+          "spearman": 0.6562128574014188,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "macaroni1": {
+          "count": 187,
+          "spearman": -0.2050477478747041,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "macaroni2": {
+          "count": 188,
+          "spearman": -0.11425042452251434,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb1": {
+          "count": 188,
+          "spearman": -0.17766854981428956,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb2": {
+          "count": 187,
+          "spearman": -0.21432948540325444,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb3": {
+          "count": 189,
+          "spearman": -0.448029394181056,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb4": {
+          "count": 187,
+          "spearman": 0.08966647738701564,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pipe_fryum": {
+          "count": 137,
+          "spearman": -0.3709121453366939,
+          "backend": "scipy.stats.spearmanr"
+        }
+      },
+      "high_map_quartile_no_answers": {
+        "threshold_q75": 0.0693359375,
+        "selection": "map_score >= q75; boundary ties retained",
+        "selected_sources": 504,
+        "no_answer_sources": 344,
+        "no_answer_gt_normal": 34,
+        "no_answer_gt_anomaly": 310,
+        "no_answer_gt_unknown": 0,
+        "per_class": {
+          "capsules": 29,
+          "cashew": 46,
+          "chewinggum": 8,
+          "fryum": 54,
+          "macaroni1": 30,
+          "macaroni2": 17,
+          "pcb1": 18,
+          "pcb2": 25,
+          "pcb3": 18,
+          "pcb4": 59,
+          "pipe_fryum": 40
+        }
+      },
+      "official_anomaly_zero_foreground_224": {
+        "count": 0,
+        "per_class": {},
+        "source_paths": []
+      }
+    },
+    "matched_qwen_lora42": {
+      "name": "matched_qwen_lora42",
+      "predictions": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/real_evaluations/matched_qwen_lora42/predictions.jsonl",
+      "status": "complete_2005",
+      "expected_sources": 2005,
+      "num_records": 2005,
+      "unique_source_keys": 2005,
+      "records_without_source_key": 0,
+      "duplicate_source_keys": {},
+      "jsonl_parse_errors": [],
+      "completion_metadata": {
+        "run.json": {
+          "completed": true,
+          "completed_num_sources": 2005,
+          "num_sources": 2005
+        },
+        "metrics.json": {
+          "num_sources": 2005,
+          "backend": "qwen",
+          "seed": 42
+        }
+      },
+      "answer_counts": {
+        "yes": 4,
+        "no": 2001,
+        "invalid": 0
+      },
+      "answer_fractions": {
+        "yes": 0.00199501246882793,
+        "no": 0.9980049875311721,
+        "invalid": 0.0
+      },
+      "top_normalized_answers": [
+        {
+          "answer": "no, there is no anomaly in the image.",
+          "count": 2001,
+          "fraction": 0.9980049875311721
+        },
+        {
+          "answer": "yes, there are 2 anomalies in the image, they are at the bottom and bottom right of the image.",
+          "count": 4,
+          "fraction": 0.00199501246882793
+        }
+      ],
+      "stored_vs_reparsed_prediction_disagreements": 0,
+      "confusion": {
+        "num_sources": 2005,
+        "counts": {
+          "gt_normal": {
+            "no": 925,
+            "yes": 0,
+            "invalid": 0
+          },
+          "gt_anomaly": {
+            "no": 1076,
+            "yes": 4,
+            "invalid": 0
+          }
+        },
+        "unknown_gt": 0
+      },
+      "per_class_confusion": {
+        "candle": {
+          "num_sources": 186,
+          "counts": {
+            "gt_normal": {
+              "no": 96,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "capsules": {
+          "num_sources": 147,
+          "counts": {
+            "gt_normal": {
+              "no": 57,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "cashew": {
+          "num_sources": 134,
+          "counts": {
+            "gt_normal": {
+              "no": 44,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "chewinggum": {
+          "num_sources": 137,
+          "counts": {
+            "gt_normal": {
+              "no": 47,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "fryum": {
+          "num_sources": 138,
+          "counts": {
+            "gt_normal": {
+              "no": 48,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 89,
+              "yes": 1,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "macaroni1": {
+          "num_sources": 187,
+          "counts": {
+            "gt_normal": {
+              "no": 97,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "macaroni2": {
+          "num_sources": 188,
+          "counts": {
+            "gt_normal": {
+              "no": 98,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb1": {
+          "num_sources": 188,
+          "counts": {
+            "gt_normal": {
+              "no": 98,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb2": {
+          "num_sources": 187,
+          "counts": {
+            "gt_normal": {
+              "no": 97,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 89,
+              "yes": 1,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb3": {
+          "num_sources": 189,
+          "counts": {
+            "gt_normal": {
+              "no": 99,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb4": {
+          "num_sources": 187,
+          "counts": {
+            "gt_normal": {
+              "no": 97,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pipe_fryum": {
+          "num_sources": 137,
+          "counts": {
+            "gt_normal": {
+              "no": 47,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 88,
+              "yes": 2,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        }
+      },
+      "raw_generated_token_length": {
+        "count": 2005,
+        "min": 11.0,
+        "mean": 11.025935162094763,
+        "q25": 11.0,
+        "q50": 11.0,
+        "q75": 11.0,
+        "q90": 11.0,
+        "q95": 11.0,
+        "max": 24.0
+      },
+      "missing_token_id_records": 0,
+      "termination_counts": {
+        "training_turn_delimiter_text": 2005
+      },
+      "raw_token_lengths_by_termination": {
+        "training_turn_delimiter_text": {
+          "count": 2005,
+          "min": 11.0,
+          "mean": 11.025935162094763,
+          "q25": 11.0,
+          "q50": 11.0,
+          "q75": 11.0,
+          "q90": 11.0,
+          "q95": 11.0,
+          "max": 24.0
+        }
+      },
+      "map_score_quantiles": {
+        "count": 2005,
+        "min": 2.561137080192566e-08,
+        "mean": 0.041166791436901114,
+        "q25": 5.543231964111328e-06,
+        "q50": 0.00010585784912109375,
+        "q75": 0.0038604736328125,
+        "q90": 0.17304687500000027,
+        "q95": 0.25,
+        "max": 0.75
+      },
+      "map_answer_log_odds_correlation": {
+        "count": 2005,
+        "spearman": 0.14877939875681484,
+        "backend": "scipy.stats.spearmanr"
+      },
+      "per_class_map_answer_spearman": {
+        "candle": {
+          "count": 186,
+          "spearman": 0.19673094362033405,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "capsules": {
+          "count": 147,
+          "spearman": 0.13985901704898449,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "cashew": {
+          "count": 134,
+          "spearman": 0.18498271736905825,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "chewinggum": {
+          "count": 137,
+          "spearman": 0.19997059669103676,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "fryum": {
+          "count": 138,
+          "spearman": 0.08942768293323927,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "macaroni1": {
+          "count": 187,
+          "spearman": 0.17091857218452253,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "macaroni2": {
+          "count": 188,
+          "spearman": 0.057211744680175834,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb1": {
+          "count": 188,
+          "spearman": 0.0905505306349501,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb2": {
+          "count": 187,
+          "spearman": 0.1784925812756352,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb3": {
+          "count": 189,
+          "spearman": 0.1287602577963744,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb4": {
+          "count": 187,
+          "spearman": 0.08166603276442039,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pipe_fryum": {
+          "count": 137,
+          "spearman": 0.23978586963689263,
+          "backend": "scipy.stats.spearmanr"
+        }
+      },
+      "high_map_quartile_no_answers": {
+        "threshold_q75": 0.0038604736328125,
+        "selection": "map_score >= q75; boundary ties retained",
+        "selected_sources": 504,
+        "no_answer_sources": 500,
+        "no_answer_gt_normal": 77,
+        "no_answer_gt_anomaly": 423,
+        "no_answer_gt_unknown": 0,
+        "per_class": {
+          "candle": 17,
+          "capsules": 44,
+          "cashew": 42,
+          "chewinggum": 56,
+          "fryum": 43,
+          "macaroni1": 18,
+          "macaroni2": 12,
+          "pcb1": 86,
+          "pcb2": 48,
+          "pcb3": 25,
+          "pcb4": 62,
+          "pipe_fryum": 47
+        }
+      },
+      "official_anomaly_zero_foreground_224": {
+        "count": 0,
+        "per_class": {},
+        "source_paths": []
+      }
+    },
+    "matched_qwen_lora43": {
+      "name": "matched_qwen_lora43",
+      "predictions": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/real_evaluations/matched_qwen_lora43/predictions.jsonl",
+      "status": "complete_2005",
+      "expected_sources": 2005,
+      "num_records": 2005,
+      "unique_source_keys": 2005,
+      "records_without_source_key": 0,
+      "duplicate_source_keys": {},
+      "jsonl_parse_errors": [],
+      "completion_metadata": {
+        "run.json": {
+          "completed": true,
+          "completed_num_sources": 2005,
+          "num_sources": 2005
+        },
+        "metrics.json": {
+          "num_sources": 2005,
+          "backend": "qwen",
+          "seed": 43
+        }
+      },
+      "answer_counts": {
+        "yes": 2005,
+        "no": 0,
+        "invalid": 0
+      },
+      "answer_fractions": {
+        "yes": 1.0,
+        "no": 0.0,
+        "invalid": 0.0
+      },
+      "top_normalized_answers": [
+        {
+          "answer": "yes, there is an anomaly in the image, at the top right of the image.",
+          "count": 1223,
+          "fraction": 0.6099750623441397
+        },
+        {
+          "answer": "yes, there is an anomaly in the image, at the bottom right of the image.",
+          "count": 782,
+          "fraction": 0.3900249376558603
+        }
+      ],
+      "stored_vs_reparsed_prediction_disagreements": 0,
+      "confusion": {
+        "num_sources": 2005,
+        "counts": {
+          "gt_normal": {
+            "no": 0,
+            "yes": 925,
+            "invalid": 0
+          },
+          "gt_anomaly": {
+            "no": 0,
+            "yes": 1080,
+            "invalid": 0
+          }
+        },
+        "unknown_gt": 0
+      },
+      "per_class_confusion": {
+        "candle": {
+          "num_sources": 186,
+          "counts": {
+            "gt_normal": {
+              "no": 0,
+              "yes": 96,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 0,
+              "yes": 90,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "capsules": {
+          "num_sources": 147,
+          "counts": {
+            "gt_normal": {
+              "no": 0,
+              "yes": 57,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 0,
+              "yes": 90,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "cashew": {
+          "num_sources": 134,
+          "counts": {
+            "gt_normal": {
+              "no": 0,
+              "yes": 44,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 0,
+              "yes": 90,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "chewinggum": {
+          "num_sources": 137,
+          "counts": {
+            "gt_normal": {
+              "no": 0,
+              "yes": 47,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 0,
+              "yes": 90,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "fryum": {
+          "num_sources": 138,
+          "counts": {
+            "gt_normal": {
+              "no": 0,
+              "yes": 48,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 0,
+              "yes": 90,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "macaroni1": {
+          "num_sources": 187,
+          "counts": {
+            "gt_normal": {
+              "no": 0,
+              "yes": 97,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 0,
+              "yes": 90,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "macaroni2": {
+          "num_sources": 188,
+          "counts": {
+            "gt_normal": {
+              "no": 0,
+              "yes": 98,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 0,
+              "yes": 90,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb1": {
+          "num_sources": 188,
+          "counts": {
+            "gt_normal": {
+              "no": 0,
+              "yes": 98,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 0,
+              "yes": 90,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb2": {
+          "num_sources": 187,
+          "counts": {
+            "gt_normal": {
+              "no": 0,
+              "yes": 97,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 0,
+              "yes": 90,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb3": {
+          "num_sources": 189,
+          "counts": {
+            "gt_normal": {
+              "no": 0,
+              "yes": 99,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 0,
+              "yes": 90,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb4": {
+          "num_sources": 187,
+          "counts": {
+            "gt_normal": {
+              "no": 0,
+              "yes": 97,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 0,
+              "yes": 90,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pipe_fryum": {
+          "num_sources": 137,
+          "counts": {
+            "gt_normal": {
+              "no": 0,
+              "yes": 47,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 0,
+              "yes": 90,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        }
+      },
+      "raw_generated_token_length": {
+        "count": 2005,
+        "min": 19.0,
+        "mean": 19.0,
+        "q25": 19.0,
+        "q50": 19.0,
+        "q75": 19.0,
+        "q90": 19.0,
+        "q95": 19.0,
+        "max": 19.0
+      },
+      "missing_token_id_records": 0,
+      "termination_counts": {
+        "training_turn_delimiter_text": 2005
+      },
+      "raw_token_lengths_by_termination": {
+        "training_turn_delimiter_text": {
+          "count": 2005,
+          "min": 19.0,
+          "mean": 19.0,
+          "q25": 19.0,
+          "q50": 19.0,
+          "q75": 19.0,
+          "q90": 19.0,
+          "q95": 19.0,
+          "max": 19.0
+        }
+      },
+      "map_score_quantiles": {
+        "count": 2005,
+        "min": 2.7241185307502747e-08,
+        "mean": 0.056196575264964355,
+        "q25": 2.2530555725097656e-05,
+        "q50": 0.00031280517578125,
+        "q75": 0.01373291015625,
+        "q90": 0.23828125,
+        "q95": 0.3687499999999999,
+        "max": 0.75
+      },
+      "map_answer_log_odds_correlation": {
+        "count": 2005,
+        "spearman": 0.12487584658773955,
+        "backend": "scipy.stats.spearmanr"
+      },
+      "per_class_map_answer_spearman": {
+        "candle": {
+          "count": 186,
+          "spearman": 0.013866751988785337,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "capsules": {
+          "count": 147,
+          "spearman": 0.20519684108000655,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "cashew": {
+          "count": 134,
+          "spearman": 0.3174953502567638,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "chewinggum": {
+          "count": 137,
+          "spearman": 0.1568221595765603,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "fryum": {
+          "count": 138,
+          "spearman": 0.2578999084462212,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "macaroni1": {
+          "count": 187,
+          "spearman": -0.04132459604750041,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "macaroni2": {
+          "count": 188,
+          "spearman": 0.14575854672328262,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb1": {
+          "count": 188,
+          "spearman": 0.09546373361626147,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb2": {
+          "count": 187,
+          "spearman": 0.25350530108998215,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb3": {
+          "count": 189,
+          "spearman": 0.11973249600344069,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb4": {
+          "count": 187,
+          "spearman": 0.18493781116746644,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pipe_fryum": {
+          "count": 137,
+          "spearman": 0.08411835951483936,
+          "backend": "scipy.stats.spearmanr"
+        }
+      },
+      "high_map_quartile_no_answers": {
+        "threshold_q75": 0.01373291015625,
+        "selection": "map_score >= q75; boundary ties retained",
+        "selected_sources": 502,
+        "no_answer_sources": 0,
+        "no_answer_gt_normal": 0,
+        "no_answer_gt_anomaly": 0,
+        "no_answer_gt_unknown": 0,
+        "per_class": {}
+      },
+      "official_anomaly_zero_foreground_224": {
+        "count": 0,
+        "per_class": {},
+        "source_paths": []
+      }
+    },
+    "matched_qwen_lora44": {
+      "name": "matched_qwen_lora44",
+      "predictions": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/real_evaluations/matched_qwen_lora44/predictions.jsonl",
+      "status": "complete_2005",
+      "expected_sources": 2005,
+      "num_records": 2005,
+      "unique_source_keys": 2005,
+      "records_without_source_key": 0,
+      "duplicate_source_keys": {},
+      "jsonl_parse_errors": [],
+      "completion_metadata": {
+        "run.json": {
+          "completed": true,
+          "completed_num_sources": 2005,
+          "num_sources": 2005
+        },
+        "metrics.json": {
+          "num_sources": 2005,
+          "backend": "qwen",
+          "seed": 44
+        }
+      },
+      "answer_counts": {
+        "yes": 281,
+        "no": 1724,
+        "invalid": 0
+      },
+      "answer_fractions": {
+        "yes": 0.1401496259351621,
+        "no": 0.8598503740648379,
+        "invalid": 0.0
+      },
+      "top_normalized_answers": [
+        {
+          "answer": "no, there is no anomaly in the image.",
+          "count": 1724,
+          "fraction": 0.8598503740648379
+        },
+        {
+          "answer": "yes, there are 2 anomalies in the image, they are at the top of the image.",
+          "count": 186,
+          "fraction": 0.09276807980049875
+        },
+        {
+          "answer": "yes, there is an anomaly in the image, they are at the top of the image.",
+          "count": 95,
+          "fraction": 0.04738154613466334
+        }
+      ],
+      "stored_vs_reparsed_prediction_disagreements": 0,
+      "confusion": {
+        "num_sources": 2005,
+        "counts": {
+          "gt_normal": {
+            "no": 916,
+            "yes": 9,
+            "invalid": 0
+          },
+          "gt_anomaly": {
+            "no": 808,
+            "yes": 272,
+            "invalid": 0
+          }
+        },
+        "unknown_gt": 0
+      },
+      "per_class_confusion": {
+        "candle": {
+          "num_sources": 186,
+          "counts": {
+            "gt_normal": {
+              "no": 96,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 80,
+              "yes": 10,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "capsules": {
+          "num_sources": 147,
+          "counts": {
+            "gt_normal": {
+              "no": 57,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 60,
+              "yes": 30,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "cashew": {
+          "num_sources": 134,
+          "counts": {
+            "gt_normal": {
+              "no": 44,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 68,
+              "yes": 22,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "chewinggum": {
+          "num_sources": 137,
+          "counts": {
+            "gt_normal": {
+              "no": 47,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 53,
+              "yes": 37,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "fryum": {
+          "num_sources": 138,
+          "counts": {
+            "gt_normal": {
+              "no": 48,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 39,
+              "yes": 51,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "macaroni1": {
+          "num_sources": 187,
+          "counts": {
+            "gt_normal": {
+              "no": 97,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 67,
+              "yes": 23,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "macaroni2": {
+          "num_sources": 188,
+          "counts": {
+            "gt_normal": {
+              "no": 97,
+              "yes": 1,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 80,
+              "yes": 10,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb1": {
+          "num_sources": 188,
+          "counts": {
+            "gt_normal": {
+              "no": 96,
+              "yes": 2,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 78,
+              "yes": 12,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb2": {
+          "num_sources": 187,
+          "counts": {
+            "gt_normal": {
+              "no": 94,
+              "yes": 3,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 75,
+              "yes": 15,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb3": {
+          "num_sources": 189,
+          "counts": {
+            "gt_normal": {
+              "no": 98,
+              "yes": 1,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 80,
+              "yes": 10,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb4": {
+          "num_sources": 187,
+          "counts": {
+            "gt_normal": {
+              "no": 95,
+              "yes": 2,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 72,
+              "yes": 18,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pipe_fryum": {
+          "num_sources": 137,
+          "counts": {
+            "gt_normal": {
+              "no": 47,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 56,
+              "yes": 34,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        }
+      },
+      "raw_generated_token_length": {
+        "count": 2005,
+        "min": 11.0,
+        "mean": 12.354114713216958,
+        "q25": 11.0,
+        "q50": 11.0,
+        "q75": 11.0,
+        "q90": 20.0,
+        "q95": 21.0,
+        "max": 21.0
+      },
+      "missing_token_id_records": 0,
+      "termination_counts": {
+        "training_turn_delimiter_text": 2005
+      },
+      "raw_token_lengths_by_termination": {
+        "training_turn_delimiter_text": {
+          "count": 2005,
+          "min": 11.0,
+          "mean": 12.354114713216958,
+          "q25": 11.0,
+          "q50": 11.0,
+          "q75": 11.0,
+          "q90": 20.0,
+          "q95": 21.0,
+          "max": 21.0
+        }
+      },
+      "map_score_quantiles": {
+        "count": 2005,
+        "min": 4.819594323635101e-08,
+        "mean": 0.07025523258877124,
+        "q25": 3.528594970703125e-05,
+        "q50": 0.000438690185546875,
+        "q75": 0.026123046875,
+        "q90": 0.251953125,
+        "q95": 0.4800781249999999,
+        "max": 0.75
+      },
+      "map_answer_log_odds_correlation": {
+        "count": 2005,
+        "spearman": 0.32895525986213225,
+        "backend": "scipy.stats.spearmanr"
+      },
+      "per_class_map_answer_spearman": {
+        "candle": {
+          "count": 186,
+          "spearman": 0.0958254382345645,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "capsules": {
+          "count": 147,
+          "spearman": 0.543481362203273,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "cashew": {
+          "count": 134,
+          "spearman": 0.6015456208331001,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "chewinggum": {
+          "count": 137,
+          "spearman": 0.6966092466959916,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "fryum": {
+          "count": 138,
+          "spearman": 0.7420854883328171,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "macaroni1": {
+          "count": 187,
+          "spearman": 0.3962672163919208,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "macaroni2": {
+          "count": 188,
+          "spearman": 0.16918890693674724,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb1": {
+          "count": 188,
+          "spearman": 0.3946689604249301,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb2": {
+          "count": 187,
+          "spearman": 0.304095067087492,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb3": {
+          "count": 189,
+          "spearman": 0.26278172509745723,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb4": {
+          "count": 187,
+          "spearman": 0.40190891662191197,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pipe_fryum": {
+          "count": 137,
+          "spearman": 0.6497818563953275,
+          "backend": "scipy.stats.spearmanr"
+        }
+      },
+      "high_map_quartile_no_answers": {
+        "threshold_q75": 0.026123046875,
+        "selection": "map_score >= q75; boundary ties retained",
+        "selected_sources": 503,
+        "no_answer_sources": 222,
+        "no_answer_gt_normal": 31,
+        "no_answer_gt_anomaly": 191,
+        "no_answer_gt_unknown": 0,
+        "per_class": {
+          "candle": 11,
+          "capsules": 12,
+          "cashew": 24,
+          "chewinggum": 19,
+          "fryum": 17,
+          "macaroni1": 16,
+          "macaroni2": 17,
+          "pcb1": 27,
+          "pcb2": 18,
+          "pcb3": 14,
+          "pcb4": 28,
+          "pipe_fryum": 19
+        }
+      },
+      "official_anomaly_zero_foreground_224": {
+        "count": 0,
+        "per_class": {},
+        "source_paths": []
+      }
+    },
+    "matched_vicuna42": {
+      "name": "matched_vicuna42",
+      "predictions": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/real_evaluations/matched_vicuna42/predictions.jsonl",
+      "status": "complete_2005",
+      "expected_sources": 2005,
+      "num_records": 2005,
+      "unique_source_keys": 2005,
+      "records_without_source_key": 0,
+      "duplicate_source_keys": {},
+      "jsonl_parse_errors": [],
+      "completion_metadata": {
+        "run.json": {
+          "completed": true,
+          "completed_num_sources": 2005,
+          "num_sources": 2005
+        },
+        "metrics.json": {
+          "num_sources": 2005,
+          "backend": "vicuna",
+          "seed": 42
+        }
+      },
+      "answer_counts": {
+        "yes": 11,
+        "no": 1994,
+        "invalid": 0
+      },
+      "answer_fractions": {
+        "yes": 0.005486284289276808,
+        "no": 0.9945137157107232,
+        "invalid": 0.0
+      },
+      "top_normalized_answers": [
+        {
+          "answer": "no, there is no anomaly in the image.",
+          "count": 1993,
+          "fraction": 0.9940149625935162
+        },
+        {
+          "answer": "yes, there is an anomaly in the image, at the center of the image.",
+          "count": 3,
+          "fraction": 0.0014962593516209476
+        },
+        {
+          "answer": "yes, there is an anomaly in the image, at the bottom of the image.",
+          "count": 2,
+          "fraction": 0.000997506234413965
+        },
+        {
+          "answer": "yes, there are 2 anomalies in the image, they are at the bottom and left of the image. ``` import cv2 import",
+          "count": 1,
+          "fraction": 0.0004987531172069825
+        },
+        {
+          "answer": "yes, there is an anomaly in the image, at the bottom left of the image.",
+          "count": 1,
+          "fraction": 0.0004987531172069825
+        },
+        {
+          "answer": "no, there is no anomaly in the image. ---",
+          "count": 1,
+          "fraction": 0.0004987531172069825
+        },
+        {
+          "answer": "yes, there is an anomaly at the right of the image. please confirm if the anomaly is present or not.",
+          "count": 1,
+          "fraction": 0.0004987531172069825
+        },
+        {
+          "answer": "yes, there is an anomaly in the image, at the left of the image.",
+          "count": 1,
+          "fraction": 0.0004987531172069825
+        },
+        {
+          "answer": "yes, there is an anomaly in the image at the left.",
+          "count": 1,
+          "fraction": 0.0004987531172069825
+        },
+        {
+          "answer": "yes, there is an anomaly in the image, it is at the left of the image.",
+          "count": 1,
+          "fraction": 0.0004987531172069825
+        }
+      ],
+      "stored_vs_reparsed_prediction_disagreements": 0,
+      "confusion": {
+        "num_sources": 2005,
+        "counts": {
+          "gt_normal": {
+            "no": 924,
+            "yes": 1,
+            "invalid": 0
+          },
+          "gt_anomaly": {
+            "no": 1070,
+            "yes": 10,
+            "invalid": 0
+          }
+        },
+        "unknown_gt": 0
+      },
+      "per_class_confusion": {
+        "candle": {
+          "num_sources": 186,
+          "counts": {
+            "gt_normal": {
+              "no": 96,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 88,
+              "yes": 2,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "capsules": {
+          "num_sources": 147,
+          "counts": {
+            "gt_normal": {
+              "no": 57,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "cashew": {
+          "num_sources": 134,
+          "counts": {
+            "gt_normal": {
+              "no": 44,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "chewinggum": {
+          "num_sources": 137,
+          "counts": {
+            "gt_normal": {
+              "no": 47,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 87,
+              "yes": 3,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "fryum": {
+          "num_sources": 138,
+          "counts": {
+            "gt_normal": {
+              "no": 48,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "macaroni1": {
+          "num_sources": 187,
+          "counts": {
+            "gt_normal": {
+              "no": 97,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "macaroni2": {
+          "num_sources": 188,
+          "counts": {
+            "gt_normal": {
+              "no": 98,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb1": {
+          "num_sources": 188,
+          "counts": {
+            "gt_normal": {
+              "no": 98,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 88,
+              "yes": 2,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb2": {
+          "num_sources": 187,
+          "counts": {
+            "gt_normal": {
+              "no": 96,
+              "yes": 1,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb3": {
+          "num_sources": 189,
+          "counts": {
+            "gt_normal": {
+              "no": 99,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb4": {
+          "num_sources": 187,
+          "counts": {
+            "gt_normal": {
+              "no": 97,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 89,
+              "yes": 1,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pipe_fryum": {
+          "num_sources": 137,
+          "counts": {
+            "gt_normal": {
+              "no": 47,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 88,
+              "yes": 2,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        }
+      },
+      "raw_generated_token_length": {
+        "count": 2005,
+        "min": 12.0,
+        "mean": 14.119700748129675,
+        "q25": 14.0,
+        "q50": 14.0,
+        "q75": 14.0,
+        "q90": 14.0,
+        "q95": 15.0,
+        "max": 32.0
+      },
+      "missing_token_id_records": 0,
+      "termination_counts": {
+        "eos": 7,
+        "max_new_tokens": 1,
+        "training_turn_delimiter": 1,
+        "training_turn_delimiter_text": 1996
+      },
+      "raw_token_lengths_by_termination": {
+        "eos": {
+          "count": 7,
+          "min": 12.0,
+          "mean": 14.285714285714286,
+          "q25": 12.0,
+          "q50": 12.0,
+          "q75": 12.0,
+          "q90": 18.400000000000006,
+          "q95": 23.19999999999999,
+          "max": 28.0
+        },
+        "max_new_tokens": {
+          "count": 1,
+          "min": 32.0,
+          "mean": 32.0,
+          "q25": 32.0,
+          "q50": 32.0,
+          "q75": 32.0,
+          "q90": 32.0,
+          "q95": 32.0,
+          "max": 32.0
+        },
+        "training_turn_delimiter": {
+          "count": 1,
+          "min": 16.0,
+          "mean": 16.0,
+          "q25": 16.0,
+          "q50": 16.0,
+          "q75": 16.0,
+          "q90": 16.0,
+          "q95": 16.0,
+          "max": 16.0
+        },
+        "training_turn_delimiter_text": {
+          "count": 1996,
+          "min": 14.0,
+          "mean": 14.109218436873748,
+          "q25": 14.0,
+          "q50": 14.0,
+          "q75": 14.0,
+          "q90": 14.0,
+          "q95": 15.0,
+          "max": 23.0
+        }
+      },
+      "map_score_quantiles": {
+        "count": 2005,
+        "min": 2.9685907065868378e-08,
+        "mean": 0.05126858443065902,
+        "q25": 8.881092071533203e-06,
+        "q50": 0.0003204345703125,
+        "q75": 0.01416015625,
+        "q90": 0.2265625,
+        "q95": 0.263671875,
+        "max": 0.75
+      },
+      "map_answer_log_odds_correlation": {
+        "count": 2005,
+        "spearman": 0.4121143029646291,
+        "backend": "scipy.stats.spearmanr"
+      },
+      "per_class_map_answer_spearman": {
+        "candle": {
+          "count": 186,
+          "spearman": 0.01271039259533742,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "capsules": {
+          "count": 147,
+          "spearman": 0.4358589526957175,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "cashew": {
+          "count": 134,
+          "spearman": 0.07890927096754972,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "chewinggum": {
+          "count": 137,
+          "spearman": 0.6853325959076542,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "fryum": {
+          "count": 138,
+          "spearman": 0.49479865954073654,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "macaroni1": {
+          "count": 187,
+          "spearman": -0.022317422136796532,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "macaroni2": {
+          "count": 188,
+          "spearman": -0.03046351822127907,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb1": {
+          "count": 188,
+          "spearman": 0.34089652116018054,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb2": {
+          "count": 187,
+          "spearman": 0.2968687946269877,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb3": {
+          "count": 189,
+          "spearman": 0.1451675420603372,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb4": {
+          "count": 187,
+          "spearman": 0.4355262470823597,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pipe_fryum": {
+          "count": 137,
+          "spearman": 0.4334189835490569,
+          "backend": "scipy.stats.spearmanr"
+        }
+      },
+      "high_map_quartile_no_answers": {
+        "threshold_q75": 0.01416015625,
+        "selection": "map_score >= q75; boundary ties retained",
+        "selected_sources": 502,
+        "no_answer_sources": 491,
+        "no_answer_gt_normal": 92,
+        "no_answer_gt_anomaly": 399,
+        "no_answer_gt_unknown": 0,
+        "per_class": {
+          "candle": 13,
+          "capsules": 42,
+          "cashew": 37,
+          "chewinggum": 55,
+          "fryum": 45,
+          "macaroni1": 17,
+          "macaroni2": 11,
+          "pcb1": 64,
+          "pcb2": 55,
+          "pcb3": 36,
+          "pcb4": 72,
+          "pipe_fryum": 44
+        }
+      },
+      "official_anomaly_zero_foreground_224": {
+        "count": 0,
+        "per_class": {},
+        "source_paths": []
+      }
+    },
+    "matched_vicuna43": {
+      "name": "matched_vicuna43",
+      "predictions": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/real_evaluations/matched_vicuna43/predictions.jsonl",
+      "status": "complete_2005",
+      "expected_sources": 2005,
+      "num_records": 2005,
+      "unique_source_keys": 2005,
+      "records_without_source_key": 0,
+      "duplicate_source_keys": {},
+      "jsonl_parse_errors": [],
+      "completion_metadata": {
+        "run.json": {
+          "completed": true,
+          "completed_num_sources": 2005,
+          "num_sources": 2005
+        },
+        "metrics.json": {
+          "num_sources": 2005,
+          "backend": "vicuna",
+          "seed": 43
+        }
+      },
+      "answer_counts": {
+        "yes": 73,
+        "no": 1746,
+        "invalid": 186
+      },
+      "answer_fractions": {
+        "yes": 0.03640897755610972,
+        "no": 0.8708229426433916,
+        "invalid": 0.09276807980049875
+      },
+      "top_normalized_answers": [
+        {
+          "answer": "no, there is no anomaly in the image.",
+          "count": 1742,
+          "fraction": 0.8688279301745636
+        },
+        {
+          "answer": "<img> </img>",
+          "count": 61,
+          "fraction": 0.030423940149625937
+        },
+        {
+          "answer": "<img> </img> </img> </img> </img> </img> </img> </img> </",
+          "count": 20,
+          "fraction": 0.00997506234413965
+        },
+        {
+          "answer": "<atty>",
+          "count": 19,
+          "fraction": 0.009476309226932668
+        },
+        {
+          "answer": "yes, there is an anomaly in the image, at the left of the image.",
+          "count": 17,
+          "fraction": 0.008478802992518703
+        },
+        {
+          "answer": "<img> </img> 1. 2. 3. 4. 5. 6. 7. 8. 9",
+          "count": 16,
+          "fraction": 0.00798004987531172
+        },
+        {
+          "answer": "<img> </img> 1. <p> 2. <p> 3. <p> 4. <p> 5",
+          "count": 16,
+          "fraction": 0.00798004987531172
+        },
+        {
+          "answer": "<attribution>",
+          "count": 11,
+          "fraction": 0.005486284289276808
+        },
+        {
+          "answer": "<pic>",
+          "count": 10,
+          "fraction": 0.004987531172069825
+        },
+        {
+          "answer": "yes, there is an anomaly in the image, at the center of the image.",
+          "count": 9,
+          "fraction": 0.004488778054862843
+        }
+      ],
+      "stored_vs_reparsed_prediction_disagreements": 0,
+      "confusion": {
+        "num_sources": 2005,
+        "counts": {
+          "gt_normal": {
+            "no": 825,
+            "yes": 3,
+            "invalid": 97
+          },
+          "gt_anomaly": {
+            "no": 921,
+            "yes": 70,
+            "invalid": 89
+          }
+        },
+        "unknown_gt": 0
+      },
+      "per_class_confusion": {
+        "candle": {
+          "num_sources": 186,
+          "counts": {
+            "gt_normal": {
+              "no": 96,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 84,
+              "yes": 6,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "capsules": {
+          "num_sources": 147,
+          "counts": {
+            "gt_normal": {
+              "no": 57,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 74,
+              "yes": 16,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "cashew": {
+          "num_sources": 134,
+          "counts": {
+            "gt_normal": {
+              "no": 44,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 87,
+              "yes": 3,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "chewinggum": {
+          "num_sources": 137,
+          "counts": {
+            "gt_normal": {
+              "no": 47,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 80,
+              "yes": 10,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "fryum": {
+          "num_sources": 138,
+          "counts": {
+            "gt_normal": {
+              "no": 48,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 85,
+              "yes": 5,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "macaroni1": {
+          "num_sources": 187,
+          "counts": {
+            "gt_normal": {
+              "no": 97,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 86,
+              "yes": 4,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "macaroni2": {
+          "num_sources": 188,
+          "counts": {
+            "gt_normal": {
+              "no": 97,
+              "yes": 1,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 88,
+              "yes": 2,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb1": {
+          "num_sources": 188,
+          "counts": {
+            "gt_normal": {
+              "no": 97,
+              "yes": 1,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 87,
+              "yes": 3,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb2": {
+          "num_sources": 187,
+          "counts": {
+            "gt_normal": {
+              "no": 0,
+              "yes": 0,
+              "invalid": 97
+            },
+            "gt_anomaly": {
+              "no": 0,
+              "yes": 1,
+              "invalid": 89
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb3": {
+          "num_sources": 189,
+          "counts": {
+            "gt_normal": {
+              "no": 99,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 87,
+              "yes": 3,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb4": {
+          "num_sources": 187,
+          "counts": {
+            "gt_normal": {
+              "no": 96,
+              "yes": 1,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 80,
+              "yes": 10,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pipe_fryum": {
+          "num_sources": 137,
+          "counts": {
+            "gt_normal": {
+              "no": 47,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 83,
+              "yes": 7,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        }
+      },
+      "raw_generated_token_length": {
+        "count": 2005,
+        "min": 6.0,
+        "mean": 14.864339152119701,
+        "q25": 14.0,
+        "q50": 14.0,
+        "q75": 14.0,
+        "q90": 14.0,
+        "q95": 25.0,
+        "max": 32.0
+      },
+      "missing_token_id_records": 0,
+      "termination_counts": {
+        "max_new_tokens": 81,
+        "training_turn_delimiter": 1,
+        "training_turn_delimiter_text": 1923
+      },
+      "raw_token_lengths_by_termination": {
+        "max_new_tokens": {
+          "count": 81,
+          "min": 32.0,
+          "mean": 32.0,
+          "q25": 32.0,
+          "q50": 32.0,
+          "q75": 32.0,
+          "q90": 32.0,
+          "q95": 32.0,
+          "max": 32.0
+        },
+        "training_turn_delimiter": {
+          "count": 1,
+          "min": 10.0,
+          "mean": 10.0,
+          "q25": 10.0,
+          "q50": 10.0,
+          "q75": 10.0,
+          "q90": 10.0,
+          "q95": 10.0,
+          "max": 10.0
+        },
+        "training_turn_delimiter_text": {
+          "count": 1923,
+          "min": 6.0,
+          "mean": 14.145085803432137,
+          "q25": 14.0,
+          "q50": 14.0,
+          "q75": 14.0,
+          "q90": 14.0,
+          "q95": 14.0,
+          "max": 28.0
+        }
+      },
+      "map_score_quantiles": {
+        "count": 2005,
+        "min": 4.353933036327362e-08,
+        "mean": 0.05799793722944106,
+        "q25": 2.9921531677246094e-05,
+        "q50": 0.00043487548828125,
+        "q75": 0.0150146484375,
+        "q90": 0.2412109375,
+        "q95": 0.37656249999999947,
+        "max": 0.75
+      },
+      "map_answer_log_odds_correlation": {
+        "count": 2005,
+        "spearman": 0.3992405158610616,
+        "backend": "scipy.stats.spearmanr"
+      },
+      "per_class_map_answer_spearman": {
+        "candle": {
+          "count": 186,
+          "spearman": 0.28190739574373525,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "capsules": {
+          "count": 147,
+          "spearman": 0.674662298527932,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "cashew": {
+          "count": 134,
+          "spearman": 0.3571165946864946,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "chewinggum": {
+          "count": 137,
+          "spearman": 0.6174083618710614,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "fryum": {
+          "count": 138,
+          "spearman": 0.6211443264636358,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "macaroni1": {
+          "count": 187,
+          "spearman": 0.0590846956233306,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "macaroni2": {
+          "count": 188,
+          "spearman": 0.2635111620921516,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb1": {
+          "count": 188,
+          "spearman": 0.3383295416183285,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb2": {
+          "count": 187,
+          "spearman": 0.00596147700147933,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb3": {
+          "count": 189,
+          "spearman": 0.26178180616302643,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb4": {
+          "count": 187,
+          "spearman": 0.34417400738879433,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pipe_fryum": {
+          "count": 137,
+          "spearman": 0.3448617890596187,
+          "backend": "scipy.stats.spearmanr"
+        }
+      },
+      "high_map_quartile_no_answers": {
+        "threshold_q75": 0.0150146484375,
+        "selection": "map_score >= q75; boundary ties retained",
+        "selected_sources": 502,
+        "no_answer_sources": 390,
+        "no_answer_gt_normal": 56,
+        "no_answer_gt_anomaly": 334,
+        "no_answer_gt_unknown": 0,
+        "per_class": {
+          "candle": 10,
+          "capsules": 49,
+          "cashew": 40,
+          "chewinggum": 41,
+          "fryum": 47,
+          "macaroni1": 21,
+          "macaroni2": 15,
+          "pcb1": 36,
+          "pcb3": 40,
+          "pcb4": 54,
+          "pipe_fryum": 37
+        }
+      },
+      "official_anomaly_zero_foreground_224": {
+        "count": 0,
+        "per_class": {},
+        "source_paths": []
+      }
+    },
+    "matched_vicuna44": {
+      "name": "matched_vicuna44",
+      "predictions": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/real_evaluations/matched_vicuna44/predictions.jsonl",
+      "status": "complete_2005",
+      "expected_sources": 2005,
+      "num_records": 2005,
+      "unique_source_keys": 2005,
+      "records_without_source_key": 0,
+      "duplicate_source_keys": {},
+      "jsonl_parse_errors": [],
+      "completion_metadata": {
+        "run.json": {
+          "completed": true,
+          "completed_num_sources": 2005,
+          "num_sources": 2005
+        },
+        "metrics.json": {
+          "num_sources": 2005,
+          "backend": "vicuna",
+          "seed": 44
+        }
+      },
+      "answer_counts": {
+        "yes": 48,
+        "no": 1883,
+        "invalid": 74
+      },
+      "answer_fractions": {
+        "yes": 0.023940149625935162,
+        "no": 0.9391521197007481,
+        "invalid": 0.03690773067331671
+      },
+      "top_normalized_answers": [
+        {
+          "answer": "no, there is no anomaly in the image.",
+          "count": 1883,
+          "fraction": 0.9391521197007481
+        },
+        {
+          "answer": "<https://www.w3.org/tr/svg/>",
+          "count": 42,
+          "fraction": 0.020947630922693267
+        },
+        {
+          "answer": "<https://www.w3.org/tr/2019/rec-html5-20191026/>",
+          "count": 10,
+          "fraction": 0.004987531172069825
+        },
+        {
+          "answer": "<https://www.w3.org/tr/2019/rec-html5-20191217/",
+          "count": 6,
+          "fraction": 0.0029925187032418953
+        },
+        {
+          "answer": "yes, there are 2 anomalies in the image, they are at the bottom and center of the image.",
+          "count": 6,
+          "fraction": 0.0029925187032418953
+        },
+        {
+          "answer": "yes, there are 2 anomalies in the image, they are at the bottom and left of the image.",
+          "count": 5,
+          "fraction": 0.0024937655860349127
+        },
+        {
+          "answer": "yes, there is an anomaly in the image, at the left of the image.",
+          "count": 5,
+          "fraction": 0.0024937655860349127
+        },
+        {
+          "answer": "<https://www.example.com/anomaly>",
+          "count": 4,
+          "fraction": 0.00199501246882793
+        },
+        {
+          "answer": "<sentiment analysis>positive</sentimentanalysis>",
+          "count": 4,
+          "fraction": 0.00199501246882793
+        },
+        {
+          "answer": "yes, there is an anomaly in the image, at the top of the image.",
+          "count": 4,
+          "fraction": 0.00199501246882793
+        }
+      ],
+      "stored_vs_reparsed_prediction_disagreements": 0,
+      "confusion": {
+        "num_sources": 2005,
+        "counts": {
+          "gt_normal": {
+            "no": 893,
+            "yes": 2,
+            "invalid": 30
+          },
+          "gt_anomaly": {
+            "no": 990,
+            "yes": 46,
+            "invalid": 44
+          }
+        },
+        "unknown_gt": 0
+      },
+      "per_class_confusion": {
+        "candle": {
+          "num_sources": 186,
+          "counts": {
+            "gt_normal": {
+              "no": 66,
+              "yes": 0,
+              "invalid": 30
+            },
+            "gt_anomaly": {
+              "no": 42,
+              "yes": 4,
+              "invalid": 44
+            }
+          },
+          "unknown_gt": 0
+        },
+        "capsules": {
+          "num_sources": 147,
+          "counts": {
+            "gt_normal": {
+              "no": 57,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 81,
+              "yes": 9,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "cashew": {
+          "num_sources": 134,
+          "counts": {
+            "gt_normal": {
+              "no": 44,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 89,
+              "yes": 1,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "chewinggum": {
+          "num_sources": 137,
+          "counts": {
+            "gt_normal": {
+              "no": 47,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 84,
+              "yes": 6,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "fryum": {
+          "num_sources": 138,
+          "counts": {
+            "gt_normal": {
+              "no": 48,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 78,
+              "yes": 12,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "macaroni1": {
+          "num_sources": 187,
+          "counts": {
+            "gt_normal": {
+              "no": 97,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 88,
+              "yes": 2,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "macaroni2": {
+          "num_sources": 188,
+          "counts": {
+            "gt_normal": {
+              "no": 97,
+              "yes": 1,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 89,
+              "yes": 1,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb1": {
+          "num_sources": 188,
+          "counts": {
+            "gt_normal": {
+              "no": 98,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 86,
+              "yes": 4,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb2": {
+          "num_sources": 187,
+          "counts": {
+            "gt_normal": {
+              "no": 96,
+              "yes": 1,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 89,
+              "yes": 1,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb3": {
+          "num_sources": 189,
+          "counts": {
+            "gt_normal": {
+              "no": 99,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb4": {
+          "num_sources": 187,
+          "counts": {
+            "gt_normal": {
+              "no": 97,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 87,
+              "yes": 3,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pipe_fryum": {
+          "num_sources": 137,
+          "counts": {
+            "gt_normal": {
+              "no": 47,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 87,
+              "yes": 3,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        }
+      },
+      "raw_generated_token_length": {
+        "count": 2005,
+        "min": 7.0,
+        "mean": 14.64638403990025,
+        "q25": 14.0,
+        "q50": 14.0,
+        "q75": 14.0,
+        "q90": 15.0,
+        "q95": 19.0,
+        "max": 32.0
+      },
+      "missing_token_id_records": 0,
+      "termination_counts": {
+        "eos": 7,
+        "max_new_tokens": 18,
+        "training_turn_delimiter_text": 1980
+      },
+      "raw_token_lengths_by_termination": {
+        "eos": {
+          "count": 7,
+          "min": 12.0,
+          "mean": 13.142857142857142,
+          "q25": 12.0,
+          "q50": 14.0,
+          "q75": 14.0,
+          "q90": 14.0,
+          "q95": 14.0,
+          "max": 14.0
+        },
+        "max_new_tokens": {
+          "count": 18,
+          "min": 32.0,
+          "mean": 32.0,
+          "q25": 32.0,
+          "q50": 32.0,
+          "q75": 32.0,
+          "q90": 32.0,
+          "q95": 32.0,
+          "max": 32.0
+        },
+        "training_turn_delimiter_text": {
+          "count": 1980,
+          "min": 7.0,
+          "mean": 14.493939393939394,
+          "q25": 14.0,
+          "q50": 14.0,
+          "q75": 14.0,
+          "q90": 15.0,
+          "q95": 15.0,
+          "max": 32.0
+        }
+      },
+      "map_score_quantiles": {
+        "count": 2005,
+        "min": 3.4924596548080444e-08,
+        "mean": 0.07096085464488947,
+        "q25": 3.3855438232421875e-05,
+        "q50": 0.0004520416259765625,
+        "q75": 0.0234375,
+        "q90": 0.251953125,
+        "q95": 0.482421875,
+        "max": 0.75
+      },
+      "map_answer_log_odds_correlation": {
+        "count": 2005,
+        "spearman": 0.28043855972283405,
+        "backend": "scipy.stats.spearmanr"
+      },
+      "per_class_map_answer_spearman": {
+        "candle": {
+          "count": 186,
+          "spearman": 0.29727138923952495,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "capsules": {
+          "count": 147,
+          "spearman": 0.5111737721352592,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "cashew": {
+          "count": 134,
+          "spearman": 0.328220258983904,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "chewinggum": {
+          "count": 137,
+          "spearman": 0.539744524326584,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "fryum": {
+          "count": 138,
+          "spearman": 0.7274714961610025,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "macaroni1": {
+          "count": 187,
+          "spearman": 0.31591870618659296,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "macaroni2": {
+          "count": 188,
+          "spearman": 0.1085275391239928,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb1": {
+          "count": 188,
+          "spearman": 0.3164602536102243,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb2": {
+          "count": 187,
+          "spearman": 0.2987154500916145,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb3": {
+          "count": 189,
+          "spearman": 0.24289856150132824,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb4": {
+          "count": 187,
+          "spearman": 0.1886897838754586,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pipe_fryum": {
+          "count": 137,
+          "spearman": 0.5199290073206719,
+          "backend": "scipy.stats.spearmanr"
+        }
+      },
+      "high_map_quartile_no_answers": {
+        "threshold_q75": 0.0234375,
+        "selection": "map_score >= q75; boundary ties retained",
+        "selected_sources": 502,
+        "no_answer_sources": 446,
+        "no_answer_gt_normal": 33,
+        "no_answer_gt_anomaly": 413,
+        "no_answer_gt_unknown": 0,
+        "per_class": {
+          "candle": 8,
+          "capsules": 34,
+          "cashew": 47,
+          "chewinggum": 51,
+          "fryum": 56,
+          "macaroni1": 36,
+          "macaroni2": 18,
+          "pcb1": 41,
+          "pcb2": 34,
+          "pcb3": 28,
+          "pcb4": 42,
+          "pipe_fryum": 51
+        }
+      },
+      "official_anomaly_zero_foreground_224": {
+        "count": 0,
+        "per_class": {},
+        "source_paths": []
+      }
+    },
+    "shared_initial_qwen42": {
+      "name": "shared_initial_qwen42",
+      "predictions": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/real_evaluations/shared_initial_qwen42/predictions.jsonl",
+      "status": "complete_2005",
+      "expected_sources": 2005,
+      "num_records": 2005,
+      "unique_source_keys": 2005,
+      "records_without_source_key": 0,
+      "duplicate_source_keys": {},
+      "jsonl_parse_errors": [],
+      "completion_metadata": {
+        "run.json": {
+          "completed": true,
+          "completed_num_sources": 2005,
+          "num_sources": 2005
+        },
+        "metrics.json": {
+          "num_sources": 2005,
+          "backend": "qwen",
+          "seed": 42
+        }
+      },
+      "answer_counts": {
+        "yes": 180,
+        "no": 1004,
+        "invalid": 821
+      },
+      "answer_fractions": {
+        "yes": 0.08977556109725686,
+        "no": 0.5007481296758105,
+        "invalid": 0.4094763092269327
+      },
+      "top_normalized_answers": [
+        {
+          "answer": "",
+          "count": 451,
+          "fraction": 0.22493765586034914
+        },
+        {
+          "answer": "no, there is no anomaly in the image. the four macaronis appear intact, with no visible damage, flaws, defects, scratches, holes, or",
+          "count": 347,
+          "fraction": 0.17306733167082294
+        },
+        {
+          "answer": "upon careful examination of the provided image, which appears to be a photo of a printed circuit board (pcb) intended for anomaly detection, i can confirm the",
+          "count": 190,
+          "fraction": 0.09476309226932668
+        },
+        {
+          "answer": "no, there is no anomaly in the image. the pipe fryum appears to be intact, with no visible damage, flaws, defects, scratches, holes,",
+          "count": 121,
+          "fraction": 0.06034912718204489
+        },
+        {
+          "answer": "no, there is no anomaly in the image. the cashew appears intact, with no visible damage, flaw, defect, scratch, hole, or broken part",
+          "count": 107,
+          "fraction": 0.05336658354114713
+        },
+        {
+          "answer": "no, there is no anomaly in the image. the object appears to be intact, with no visible damage, flaws, defects, scratches, holes, or broken",
+          "count": 90,
+          "fraction": 0.04488778054862843
+        },
+        {
+          "answer": "upon reviewing the image, there are no visible anomalies. all the small green capsules appear intact, with no signs of damage, flaws, defects, scratches, holes",
+          "count": 64,
+          "fraction": 0.03192019950124688
+        },
+        {
+          "answer": "no, there is no anomaly in the image. the chewing gum appears to be white, intact, and free from any damage, flaws, defects, scratches,",
+          "count": 53,
+          "fraction": 0.026433915211970076
+        },
+        {
+          "answer": "yes, there is an anomaly in the image. the image shows four candles, but **one of them is not round** — it appears **elongated or",
+          "count": 48,
+          "fraction": 0.023940149625935162
+        },
+        {
+          "answer": "yes, there is an anomaly in the image. the image shows four candles, but **one of them is not round** — it appears to be **rect",
+          "count": 44,
+          "fraction": 0.021945137157107233
+        }
+      ],
+      "stored_vs_reparsed_prediction_disagreements": 0,
+      "confusion": {
+        "num_sources": 2005,
+        "counts": {
+          "gt_normal": {
+            "no": 383,
+            "yes": 96,
+            "invalid": 446
+          },
+          "gt_anomaly": {
+            "no": 621,
+            "yes": 84,
+            "invalid": 375
+          }
+        },
+        "unknown_gt": 0
+      },
+      "per_class_confusion": {
+        "candle": {
+          "num_sources": 186,
+          "counts": {
+            "gt_normal": {
+              "no": 0,
+              "yes": 96,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 6,
+              "yes": 84,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "capsules": {
+          "num_sources": 147,
+          "counts": {
+            "gt_normal": {
+              "no": 0,
+              "yes": 0,
+              "invalid": 57
+            },
+            "gt_anomaly": {
+              "no": 33,
+              "yes": 0,
+              "invalid": 57
+            }
+          },
+          "unknown_gt": 0
+        },
+        "cashew": {
+          "num_sources": 134,
+          "counts": {
+            "gt_normal": {
+              "no": 44,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "chewinggum": {
+          "num_sources": 137,
+          "counts": {
+            "gt_normal": {
+              "no": 47,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "fryum": {
+          "num_sources": 138,
+          "counts": {
+            "gt_normal": {
+              "no": 48,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "macaroni1": {
+          "num_sources": 187,
+          "counts": {
+            "gt_normal": {
+              "no": 92,
+              "yes": 0,
+              "invalid": 5
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "macaroni2": {
+          "num_sources": 188,
+          "counts": {
+            "gt_normal": {
+              "no": 98,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 90,
+              "yes": 0,
+              "invalid": 0
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb1": {
+          "num_sources": 188,
+          "counts": {
+            "gt_normal": {
+              "no": 1,
+              "yes": 0,
+              "invalid": 97
+            },
+            "gt_anomaly": {
+              "no": 7,
+              "yes": 0,
+              "invalid": 83
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb2": {
+          "num_sources": 187,
+          "counts": {
+            "gt_normal": {
+              "no": 3,
+              "yes": 0,
+              "invalid": 94
+            },
+            "gt_anomaly": {
+              "no": 11,
+              "yes": 0,
+              "invalid": 79
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb3": {
+          "num_sources": 189,
+          "counts": {
+            "gt_normal": {
+              "no": 1,
+              "yes": 0,
+              "invalid": 98
+            },
+            "gt_anomaly": {
+              "no": 8,
+              "yes": 0,
+              "invalid": 82
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pcb4": {
+          "num_sources": 187,
+          "counts": {
+            "gt_normal": {
+              "no": 2,
+              "yes": 0,
+              "invalid": 95
+            },
+            "gt_anomaly": {
+              "no": 19,
+              "yes": 0,
+              "invalid": 71
+            }
+          },
+          "unknown_gt": 0
+        },
+        "pipe_fryum": {
+          "num_sources": 137,
+          "counts": {
+            "gt_normal": {
+              "no": 47,
+              "yes": 0,
+              "invalid": 0
+            },
+            "gt_anomaly": {
+              "no": 87,
+              "yes": 0,
+              "invalid": 3
+            }
+          },
+          "unknown_gt": 0
+        }
+      },
+      "raw_generated_token_length": {
+        "count": 2005,
+        "min": 1.0,
+        "mean": 25.026932668329177,
+        "q25": 32.0,
+        "q50": 32.0,
+        "q75": 32.0,
+        "q90": 32.0,
+        "q95": 32.0,
+        "max": 32.0
+      },
+      "missing_token_id_records": 0,
+      "termination_counts": {
+        "eos": 451,
+        "max_new_tokens": 1554
+      },
+      "raw_token_lengths_by_termination": {
+        "eos": {
+          "count": 451,
+          "min": 1.0,
+          "mean": 1.0,
+          "q25": 1.0,
+          "q50": 1.0,
+          "q75": 1.0,
+          "q90": 1.0,
+          "q95": 1.0,
+          "max": 1.0
+        },
+        "max_new_tokens": {
+          "count": 1554,
+          "min": 32.0,
+          "mean": 32.0,
+          "q25": 32.0,
+          "q50": 32.0,
+          "q75": 32.0,
+          "q90": 32.0,
+          "q95": 32.0,
+          "max": 32.0
+        }
+      },
+      "map_score_quantiles": {
+        "count": 2005,
+        "min": 4.353933036327362e-08,
+        "mean": 0.05283990333058832,
+        "q25": 7.361173629760742e-06,
+        "q50": 6.67572021484375e-05,
+        "q75": 0.0029296875,
+        "q90": 0.234375,
+        "q95": 0.3695312499999992,
+        "max": 0.75
+      },
+      "map_answer_log_odds_correlation": {
+        "count": 2005,
+        "spearman": -0.3044911891827406,
+        "backend": "scipy.stats.spearmanr"
+      },
+      "per_class_map_answer_spearman": {
+        "candle": {
+          "count": 186,
+          "spearman": -0.23370195145366163,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "capsules": {
+          "count": 147,
+          "spearman": -0.5717290252078163,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "cashew": {
+          "count": 134,
+          "spearman": -0.509833177472205,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "chewinggum": {
+          "count": 137,
+          "spearman": -0.6546269346727529,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "fryum": {
+          "count": 138,
+          "spearman": -0.7022232522591882,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "macaroni1": {
+          "count": 187,
+          "spearman": -0.4804281616351758,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "macaroni2": {
+          "count": 188,
+          "spearman": -0.21435760340034174,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb1": {
+          "count": 188,
+          "spearman": -0.06894927819642438,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb2": {
+          "count": 187,
+          "spearman": -0.4183777009019575,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb3": {
+          "count": 189,
+          "spearman": -0.22019438391564625,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pcb4": {
+          "count": 187,
+          "spearman": -0.10996363984318962,
+          "backend": "scipy.stats.spearmanr"
+        },
+        "pipe_fryum": {
+          "count": 137,
+          "spearman": -0.6115043168131838,
+          "backend": "scipy.stats.spearmanr"
+        }
+      },
+      "high_map_quartile_no_answers": {
+        "threshold_q75": 0.0029296875,
+        "selection": "map_score >= q75; boundary ties retained",
+        "selected_sources": 503,
+        "no_answer_sources": 371,
+        "no_answer_gt_normal": 13,
+        "no_answer_gt_anomaly": 358,
+        "no_answer_gt_unknown": 0,
+        "per_class": {
+          "candle": 6,
+          "capsules": 33,
+          "cashew": 48,
+          "chewinggum": 64,
+          "fryum": 60,
+          "macaroni1": 30,
+          "macaroni2": 23,
+          "pcb1": 8,
+          "pcb2": 14,
+          "pcb3": 9,
+          "pcb4": 21,
+          "pipe_fryum": 55
+        }
+      },
+      "official_anomaly_zero_foreground_224": {
+        "count": 0,
+        "per_class": {},
+        "source_paths": []
+      }
+    }
+  },
+  "paired_flips": [
+    {
+      "name": "historical_frozen42_to_lora42",
+      "left": "historical_frozen42",
+      "right": "historical_lora42",
+      "status": "paired_full_sets",
+      "left_records": 2005,
+      "right_records": 2005,
+      "common_sources": 2005,
+      "left_only": 0,
+      "right_only": 0,
+      "gt_disagreement_keys": [],
+      "prediction_changed_sources": 302,
+      "incorrect_to_correct": 162,
+      "correct_to_incorrect": 59,
+      "transitions": {
+        "invalid->no": 99,
+        "invalid->yes": 35,
+        "no->no": 1701,
+        "no->yes": 158,
+        "yes->no": 10,
+        "yes->yes": 2
+      },
+      "transitions_by_gt": {
+        "anomaly": {
+          "invalid->no": 76,
+          "invalid->yes": 30,
+          "no->no": 853,
+          "no->yes": 109,
+          "yes->no": 10,
+          "yes->yes": 2
+        },
+        "normal": {
+          "invalid->no": 23,
+          "invalid->yes": 5,
+          "no->no": 848,
+          "no->yes": 49
+        }
+      }
+    },
+    {
+      "name": "matched_frozen42_to_lora42",
+      "left": "matched_qwen_frozen42",
+      "right": "matched_qwen_lora42",
+      "status": "paired_full_sets",
+      "left_records": 2005,
+      "right_records": 2005,
+      "common_sources": 2005,
+      "left_only": 0,
+      "right_only": 0,
+      "gt_disagreement_keys": [],
+      "prediction_changed_sources": 639,
+      "incorrect_to_correct": 369,
+      "correct_to_incorrect": 88,
+      "transitions": {
+        "invalid->no": 460,
+        "invalid->yes": 1,
+        "no->no": 1366,
+        "no->yes": 3,
+        "yes->no": 175
+      },
+      "transitions_by_gt": {
+        "anomaly": {
+          "invalid->no": 182,
+          "invalid->yes": 1,
+          "no->no": 806,
+          "no->yes": 3,
+          "yes->no": 88
+        },
+        "normal": {
+          "invalid->no": 278,
+          "no->no": 560,
+          "yes->no": 87
+        }
+      }
+    }
+  ],
+  "definitions": {
+    "answer_normalization": "Unicode NFKC, casefold, collapse whitespace; no content substitution",
+    "complete": "Expected record count and unique source keys, with no malformed JSONL lines; finalization metadata reported separately",
+    "correlation": "Spearman correlation of finite map maxima and Yes-No continuation log-odds, average ranks for ties",
+    "faithfulness": "No conclusion about explanation faithfulness is inferred from these output statistics."
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "started_at": 1792996126.23746,
+  "completed": [
+    {
+      "name": "synthetic_initial",
+      "completed_at": 1792996133.4117577
+    },
+    {
+      "name": "synthetic_frozen42",
+      "completed_at": 1792996140.6335833
+    },
+    {
+      "name": "synthetic_lora42",
+      "completed_at": 1792996147.6955464
+    },
+    {
+      "name": "synthetic_frozen43",
+      "completed_at": 1792996155.0399709
+    },
+    {
+      "name": "synthetic_lora43",
+      "completed_at": 1792996162.467677
+    },
+    {
+      "name": "synthetic_frozen44",
+      "completed_at": 1792996170.4120896
+    },
+    {
+      "name": "synthetic_lora44",
+      "completed_at": 1792996177.361564
+    }
+  ],
+  "running": "historical_frozen42",
+  "failed": null
+}

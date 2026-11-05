@@ -1,0 +1,7 @@
+{
+  "optimizer_step": 96,
+  "base_model": "/root/autodl-tmp/industrial_vlm/models/Qwen3-VL-8B-Instruct",
+  "seed": 42,
+  "note": "Adapter-only checkpoint. Optimizer/scheduler state is not saved; not an exact resume checkpoint.",
+  "coordinate_format": "xyxy integer normalized0-1000"
+}

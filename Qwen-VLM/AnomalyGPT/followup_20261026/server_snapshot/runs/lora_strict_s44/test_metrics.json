@@ -1,0 +1,11 @@
+{
+  "num_variants": 48,
+  "mean_combined_loss": 1.748343989873926,
+  "mean_batch_token_acc": 0.8668585007401012,
+  "pixel_auroc": 0.805058722920026,
+  "pixel_ap": 0.5869893218597704,
+  "seconds": 8.833237886428833,
+  "cache": "../cache_balanced_test24",
+  "bridge_checkpoint": "../runs/lora_strict_s44/pytorch_model.pt",
+  "lora_adapter": "../runs/lora_strict_s44/lora_adapter"
+}

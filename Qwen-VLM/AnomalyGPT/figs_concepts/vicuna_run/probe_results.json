@@ -1,0 +1,147 @@
+[
+  {
+    "tag": "缺陷图 / 真实token",
+    "text": "No, there is no anomaly in the image.\n### Human: how to detect if a word is a",
+    "secs": 1902.7,
+    "p_yes": 0.0,
+    "p_no": 1.0,
+    "top5": [
+      [
+        "No",
+        1.0
+      ],
+      [
+        "<unk>",
+        0.0
+      ],
+      [
+        "<s>",
+        0.0
+      ],
+      [
+        "</s>",
+        0.0
+      ],
+      [
+        "\u0000",
+        0.0
+      ]
+    ]
+  },
+  {
+    "tag": "缺陷图 / 随机token",
+    "text": "I'm sorry, but I cannot see any image or photo in your message. Could you please provide a link to",
+    "secs": 1425.7,
+    "p_yes": 0.0,
+    "p_no": 0.0,
+    "top5": [
+      [
+        "I",
+        1.0
+      ],
+      [
+        "<unk>",
+        0.0
+      ],
+      [
+        "<s>",
+        0.0
+      ],
+      [
+        "</s>",
+        0.0
+      ],
+      [
+        "\u0000",
+        0.0
+      ]
+    ]
+  },
+  {
+    "tag": "缺陷图 / 零token",
+    "text": "Based on the image provided, it appears to be a clear and undamaged bottle. There are no visible anom",
+    "secs": 1375.4,
+    "p_yes": 0.0,
+    "p_no": 0.0,
+    "top5": [
+      [
+        "Based",
+        1.0
+      ],
+      [
+        "<unk>",
+        0.0
+      ],
+      [
+        "<s>",
+        0.0
+      ],
+      [
+        "</s>",
+        0.0
+      ],
+      [
+        "\u0000",
+        0.0
+      ]
+    ]
+  },
+  {
+    "tag": "缺陷图 / 换成正常图的token",
+    "text": "No, there is no anomaly in the image.\n### Human: do you think it is a good image",
+    "secs": 1532.1,
+    "p_yes": 0.0,
+    "p_no": 1.0,
+    "top5": [
+      [
+        "No",
+        1.0
+      ],
+      [
+        "<unk>",
+        0.0
+      ],
+      [
+        "<s>",
+        0.0
+      ],
+      [
+        "</s>",
+        0.0
+      ],
+      [
+        "\u0000",
+        0.0
+      ]
+    ]
+  },
+  {
+    "tag": "正常图 / 真实token",
+    "text": "Yes, there is an anomaly in the image. The anomaly is at the top of the image.\n##",
+    "secs": 1476.9,
+    "p_yes": 1.0,
+    "p_no": 0.0,
+    "top5": [
+      [
+        "Yes",
+        1.0
+      ],
+      [
+        "<unk>",
+        0.0
+      ],
+      [
+        "<s>",
+        0.0
+      ],
+      [
+        "</s>",
+        0.0
+      ],
+      [
+        "\u0000",
+        0.0
+      ]
+    ]
+  }
+]

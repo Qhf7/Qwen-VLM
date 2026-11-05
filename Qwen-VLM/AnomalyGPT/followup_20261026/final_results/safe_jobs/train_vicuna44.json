@@ -1,0 +1,70 @@
+{
+  "task": "train_vicuna44",
+  "status": "completed",
+  "command": [
+    "/root/autodl-tmp/conda-envs/qwen3vl2/bin/python",
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/train_vicuna_matched.py",
+    "--cache",
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/cache_balanced_train48",
+    "--code-dir",
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/code",
+    "--sample-order",
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/matched_inputs/seed44/sample_order.json",
+    "--save-path",
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/matched_runs/vicuna_44",
+    "--seed",
+    "44",
+    "--max-steps",
+    "16",
+    "--batch-size",
+    "2",
+    "--max-tgt-len",
+    "128",
+    "--lr",
+    "0.001",
+    "--vicuna-ckpt",
+    "/tmp/strict_vicuna_v11_safetensors_20261026",
+    "--init-ckpt",
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/matched_inputs/seed44/bridge_init.pt",
+    "--projection-init-checkpoint",
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/matched_inputs/seed44/bridge_init.pt"
+  ],
+  "source_sha256": {
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/code/model/AnomalyGPT_models.py": "798397f04bf189781b2c445f516dbd548b63d3ac3b70ef236f613edef1209f30",
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/code/utils/loss.py": "80679a2a9cf7eb382cae4083dd401bb0d4dea6bb6a1e3e8501e71abecf0c8071",
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/train_vicuna_matched.py": "de77b0e17388949873ceb59ae0c40a682760ef026fc1da3ccf6ad19806285c9d"
+  },
+  "runtime_sources": {
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/code/model/AnomalyGPT_models.py": {
+      "sha256": "798397f04bf189781b2c445f516dbd548b63d3ac3b70ef236f613edef1209f30",
+      "archive": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/safe_runtime/train_vicuna44/20261026T112302.910812Z/00/AnomalyGPT_models.py"
+    },
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/code/utils/loss.py": {
+      "sha256": "80679a2a9cf7eb382cae4083dd401bb0d4dea6bb6a1e3e8501e71abecf0c8071",
+      "archive": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/safe_runtime/train_vicuna44/20261026T112302.910812Z/01/loss.py"
+    },
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/train_vicuna_matched.py": {
+      "sha256": "de77b0e17388949873ceb59ae0c40a682760ef026fc1da3ccf6ad19806285c9d",
+      "archive": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/safe_runtime/train_vicuna44/20261026T112302.910812Z/02/train_vicuna_matched.py"
+    }
+  },
+  "started_at": 1793013782.911819,
+  "completed_at": 1793013811.8782203,
+  "validation": {
+    "kind": "train",
+    "artifacts": {
+      "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/matched_runs/vicuna_44/pytorch_model.pt": "0774a4311ac0b0553ffc6e86023cef13d760968b71ab3d464ed637cae3ef74b1",
+      "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/matched_runs/vicuna_44/run.json": "bdb2b682e1bbf455824b29812a500bb070a507b3e5c6a882fe3d662220b939d4",
+      "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/matched_runs/vicuna_44/history.jsonl": "46ec7596a43051bf1f26c4f9bedd69d67f5e4992becdd8ec2c00ae60ece2f366",
+      "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/matched_runs/vicuna_44/sample_order.json": "847af31f016c0b36cb43722764731b2545575b62ab78be66cc2d0191554dbcf6",
+      "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/matched_runs/vicuna_44/token_budget.json": "e9027df031278f002c99a9de538cde834673778bc4d32d9f62e727dbe3515e72"
+    },
+    "recorded_source_trace": {
+      "runner": {
+        "sha256": "de77b0e17388949873ceb59ae0c40a682760ef026fc1da3ccf6ad19806285c9d",
+        "traceable_file": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/train_vicuna_matched.py"
+      }
+    },
+    "actual_initial_bridge_fingerprint": "9218c817b4684532f5447e9434bd84fed2763395b62ad34943bfb358cad7322e"
+  }
+}

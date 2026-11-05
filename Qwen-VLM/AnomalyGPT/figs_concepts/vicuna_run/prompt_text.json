@@ -1,0 +1,4 @@
+{
+  "desc": "This is a photo of a bottle for anomaly detection, which should be round, without any damage, flaw, defect, scratch, hole or broken part.",
+  "question": "Is there any anomaly in the image?"
+}

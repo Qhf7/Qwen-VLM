@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "source_id": "visa_01bf2a4362be34e9fd556da20d9e542cfeb140532c321ba6e5972232bcb17bde",
+  "input_fields": [
+    "image",
+    "prompt"
+  ],
+  "same_raw_text_as_heldout_evaluation": true,
+  "parsed": {
+    "is_anomalous": true,
+    "boxes": [
+      [
+        683.0,
+        259.0,
+        723.0,
+        300.0
+      ]
+    ]
+  },
+  "scope": "Standalone CLI parity on one already-evaluated image; not a new test estimate."
+}

@@ -1,0 +1,89 @@
+{
+  "num_sources": 4,
+  "generation": {
+    "macro_f1": 0.5,
+    "accuracy": 1.0,
+    "anomaly_recall": null,
+    "normal_recall": 1.0,
+    "normal_fpr": 0.0,
+    "invalid_rate": 0.0,
+    "n_normal": 4,
+    "n_anomaly": 0
+  },
+  "candidate_classification": {
+    "macro_f1": 0.5,
+    "accuracy": 1.0,
+    "anomaly_recall": null,
+    "normal_recall": 1.0,
+    "normal_fpr": 0.0,
+    "invalid_rate": 0.0,
+    "n_normal": 4,
+    "n_anomaly": 0
+  },
+  "map_image": {
+    "auroc": null,
+    "ap": null
+  },
+  "answer_image": {
+    "auroc": null,
+    "ap": null
+  },
+  "per_class": {
+    "candle": {
+      "num_sources": 4,
+      "generation": {
+        "macro_f1": 0.5,
+        "accuracy": 1.0,
+        "anomaly_recall": null,
+        "normal_recall": 1.0,
+        "normal_fpr": 0.0,
+        "invalid_rate": 0.0,
+        "n_normal": 4,
+        "n_anomaly": 0
+      },
+      "pixel": {
+        "auroc": null,
+        "ap": null
+      },
+      "map_image": {
+        "auroc": null,
+        "ap": null
+      },
+      "answer_image": {
+        "auroc": null,
+        "ap": null
+      }
+    }
+  },
+  "category_macro": {
+    "pixel": {
+      "auroc": null,
+      "ap": null
+    },
+    "map_image": {
+      "auroc": null,
+      "ap": null
+    },
+    "answer_image": {
+      "auroc": null,
+      "ap": null
+    },
+    "generation": {
+      "macro_f1": 0.5,
+      "anomaly_recall": null,
+      "normal_fpr": 0.0
+    }
+  },
+  "definitions": {
+    "pixel": "Four-level maps are averaged before scoring; per-class pixel metrics pool normal and anomaly images; category_macro weights products equally.",
+    "generation_macro_f1": "Normal/anomalous label macro F1 over all sources; invalid answers remain false negatives for their GT class.",
+    "candidate": "Sum continuation conditional log probabilities using the same segmented tokenization as training; log_odds=Yes-No.",
+    "map_image_score": "Maximum of the averaged 224x224 map, without per-image rescaling."
+  },
+  "seconds": 2.2901368141174316,
+  "peak_allocated_gb": 9.036692992,
+  "checkpoint": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/runs/balanced_strict_16/pytorch_model.pt",
+  "lora_adapter": null,
+  "backend": "qwen",
+  "seed": 42
+}

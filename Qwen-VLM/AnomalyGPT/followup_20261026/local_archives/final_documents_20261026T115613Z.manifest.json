@@ -1,0 +1,105 @@
+{
+  "schema_version": "1.0",
+  "created_at_utc": "2026-10-26T11:56:14.570957+00:00",
+  "source_root": "/Users/qiaohongfei/Desktop/实习/阿里云天池比赛vlm/docs/strict_qwen_followup_20261026",
+  "source_sha256": "10bc271ed79e606cfd38091c586c6881930c16353db312780ab790aa0e2a95e2",
+  "effective_pipeline_state": null,
+  "scope": "Metadata, source snapshots, logs, predictions and reports; no tensor weights, feature caches or pixel arrays",
+  "completion_rule": "Snapshot state and experiment audits determine completeness; an archive alone does not",
+  "large_artifacts": "Retained at source paths; authoritative recorded hashes remain in included run/audit JSON files",
+  "files": [
+    {
+      "path": "connectivity_status.json",
+      "bytes": 660,
+      "sha256": "b14db03a975b34f4044a512ab17c57300eaede0ec23d35e3e1d3f49a10d64bc7"
+    },
+    {
+      "path": "figures/caption.md",
+      "bytes": 2684,
+      "sha256": "0bcdcd4569f5fa4f1f264cc0f79b5cbe68d0449eb93c684a2f38f55f0f8d0bf5"
+    },
+    {
+      "path": "figures/historical_qwen_three_seed.pdf",
+      "bytes": 32242,
+      "sha256": "3c70ae4459e3fa5e5f8f1916f46340c647775dd90dfd407cfce43b5b2f430743"
+    },
+    {
+      "path": "figures/historical_qwen_three_seed.png",
+      "bytes": 201775,
+      "sha256": "430d5e7b24bc4c2dc91c2047fa0abfa02ce7b15c76d2334316ee0220a61a49cd"
+    },
+    {
+      "path": "figures/matched_three_seed.pdf",
+      "bytes": 34016,
+      "sha256": "a79c6a2f69276b7bcf6172a0bf82e5114d344aaaaf86883258628a9f3b170cf2"
+    },
+    {
+      "path": "figures/matched_three_seed.png",
+      "bytes": 205600,
+      "sha256": "a460fcd0e124541e00ff55f858d4bdf72a75f31239809f5c47f551125e33ef19"
+    },
+    {
+      "path": "figures/plot_manifest.json",
+      "bytes": 7911,
+      "sha256": "309977c8c5e710b3f27957fc84c36f0211636e1864a944bdb58516f1f49b6b05"
+    },
+    {
+      "path": "historical_frozen42_metrics.json",
+      "bytes": 9857,
+      "sha256": "4ffd60969ece7a425088f1c0eb3db93c71f37028d7527c076344a414d9e70cd6"
+    },
+    {
+      "path": "local_code_inventory.json",
+      "bytes": 15749,
+      "sha256": "8f724ae99448eb64462c1cea2312f80a33a2efa6d1bd93530d5e1f1b218e4db2"
+    },
+    {
+      "path": "local_qa_inventory.json",
+      "bytes": 2415,
+      "sha256": "aaa7a5a072db1f4c10704064f9036f69c8102e475bd1d4c1d487d0c8635c6abe"
+    },
+    {
+      "path": "旧8图敏感性_进度快照.json",
+      "bytes": 71736,
+      "sha256": "7ffc025ae638d8c8153810ed691c0567611d6479c99ff6467b3418d030a4dda6"
+    },
+    {
+      "path": "旧8图敏感性_进度快照.md",
+      "bytes": 1769,
+      "sha256": "0fc374216b14000c245cd5bc63d8349530112ed3692a14f0d56c4fce3bf64b3d"
+    },
+    {
+      "path": "最终实验结论.md",
+      "bytes": 6646,
+      "sha256": "76b00b04515e72ecd871fea4398dcfa4873272911b3787b19e9c2b1b3942da3e"
+    },
+    {
+      "path": "服务器审计与指标修订.md",
+      "bytes": 6210,
+      "sha256": "5600ff881ab9081de0450ac6383cc1a6ed9fd7bb2fa1617ac8e4d71a4c01bc97"
+    },
+    {
+      "path": "本地交付索引.json",
+      "bytes": 3757,
+      "sha256": "f2e1509034118606c27d9ebfecf0f7bb49ca93ddab2a64668e2b274e6bd6fd87"
+    },
+    {
+      "path": "本地审计.md",
+      "bytes": 6310,
+      "sha256": "00c78112c25886b401540bf1cb93e1fb26ed2e032428b55a650f7f21a1de4840"
+    },
+    {
+      "path": "评测设计.md",
+      "bytes": 10225,
+      "sha256": "3c6ffc411b29d72c0e069c88ecb60b5d330b0ef408f4468f0880d0587a79945e"
+    },
+    {
+      "path": "阶段结论与续跑.md",
+      "bytes": 8133,
+      "sha256": "7afae564b09dcec99041b23d830fab9472bc7a2e2b53f4ee6e279bbf8e08c494"
+    }
+  ],
+  "large_files_retained_at_source": [],
+  "skipped_counts": {},
+  "included_file_count": 18
+}

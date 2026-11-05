@@ -1,0 +1,10 @@
+{
+  "num_variants": 48,
+  "mean_combined_loss": 2.633414347966512,
+  "mean_batch_token_acc": 0.7414474934288106,
+  "pixel_auroc": 0.8087700682098014,
+  "pixel_ap": 0.5705371987924732,
+  "seconds": 8.60861611366272,
+  "cache": "../cache_balanced_test24",
+  "checkpoint": "../runs/balanced_strict_16/pytorch_model.pt"
+}

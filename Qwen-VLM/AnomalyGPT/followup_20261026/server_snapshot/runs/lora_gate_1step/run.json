@@ -1,0 +1,22 @@
+{
+  "args": {
+    "cache": "../cache_visa32",
+    "lora_r": 8,
+    "lora_alpha": 16,
+    "lora_dropout": 0.05,
+    "variant_filter": "all",
+    "pixel_weight": 1.0,
+    "imagebind_ckpt": "../pretrained_ckpt/imagebind_ckpt/imagebind_huge.pth",
+    "qwen_ckpt": "/root/autodl-tmp/industrial_vlm/models/Qwen3-VL-8B-Instruct",
+    "init_ckpt": "../ckpt/train_visa/pytorch_model.pt",
+    "save_path": "../runs/lora_gate_1step",
+    "max_steps": 1,
+    "batch_size": 2,
+    "lr": 0.001,
+    "max_tgt_len": 64,
+    "seed": 42
+  },
+  "steps": 1,
+  "num_files": 64,
+  "trainable_parameters": 124529592
+}

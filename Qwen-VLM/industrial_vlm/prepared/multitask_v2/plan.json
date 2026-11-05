@@ -1,0 +1,84 @@
+{
+  "schema_version": "industrial-vlm-multitask-v2-plan-v1",
+  "protocol_date": "2026-10-23",
+  "status": "frozen_before_v2_training_and_before_confirmation_predictions",
+  "purpose": "Compare repeated region, repeated decision, and paired multitask SFT with matched source exposures",
+  "arms": [
+    "region_region",
+    "decision_decision",
+    "region_decision"
+  ],
+  "unique_training_sources_per_arm": 768,
+  "source_exposures_per_arm": 1536,
+  "optimizer_updates_per_arm": 192,
+  "gradient_accumulation_steps": 8,
+  "seed": 42,
+  "source_order": "One shared random.Random(42), sequential shuffle of a fresh original 768-source list for each of two epochs; identical exposure sequence in all arms",
+  "mixed_task_assignment": "Within each category/label group of 32, fixed seeded shuffle assigns 16 region and 16 decision in epoch1; epoch2 reverses every source task",
+  "training_initialization": "Every arm starts from the same fresh quantized base plus freshly initialized LoRA; no adapter field and no previous checkpoint initialization",
+  "model_selection": "Fixed final update192; validation CE is diagnostic only, never checkpoint selection by test/confirmation results",
+  "validation": {
+    "sources": "Existing fixed 120 validation sources, paired region and decision prompts, original order preserved",
+    "ce_audit": "steps64/128/192, fixed first24; region_region and region_decision use region prompts, decision_decision uses decision prompts",
+    "ce_comparability": "Different target tasks have different lengths and difficulty; CE across task prompts is not a common decision metric",
+    "generation_protocol": "Five main evaluations on the same fixed120 validation sources using final192 adapters: region_region under region and decision prompts, region_decision under region and decision prompts, decision_decision under decision prompt",
+    "main_evaluations": [
+      {
+        "arm": "region_region",
+        "prompt": "region"
+      },
+      {
+        "arm": "region_region",
+        "prompt": "decision"
+      },
+      {
+        "arm": "region_decision",
+        "prompt": "region"
+      },
+      {
+        "arm": "region_decision",
+        "prompt": "decision"
+      },
+      {
+        "arm": "decision_decision",
+        "prompt": "decision"
+      }
+    ],
+    "primary_comparison": "Test region_decision versus region_region for common decision-prompt performance, within-adapter prompt decision consistency, and region-prompt localization tradeoff; no improvement is assumed",
+    "decision_decision_region_prompt": "Not a main comparison; the decision-only target arm is evaluated primarily with its decision prompt"
+  },
+  "confirmation": {
+    "sources": 240,
+    "per_category_per_label": 10,
+    "seed": 20261023,
+    "selection": "Metadata-only category/label sampling from original test split after excluding every previous evaluated source/hash and all train/val sources/hashes",
+    "run_this_round": false,
+    "policy": "Do not generate/read confirmation outputs this round. Use only after protocol/model selection is frozen in a later final evaluation"
+  },
+  "fairness": {
+    "matched": [
+      "source identity/order/exposure count",
+      "updates",
+      "gradient accumulation",
+      "base model and fresh initialization",
+      "seed",
+      "LoRA configuration",
+      "image pixel and text length limits",
+      "optimizer and schedule"
+    ],
+    "not_matched": [
+      "supervised target token count",
+      "input prompt token count",
+      "task difficulty"
+    ],
+    "loss": "Existing assistant-only CE is normalized by actual supervised tokens per accumulated update; region answers can therefore contribute more tokens than decision answers in the mixed arm",
+    "report": "Record actual supervised/input token counts, GPU memory, wall time; double-budget v2 versus96-update v1 is descriptive and not a causal multitask control"
+  },
+  "limits": [
+    "single training seed",
+    "supervised source split",
+    "source SHA256 isolation does not prove physical-part or near-duplicate independence",
+    "public benchmark pretraining contamination is unknown",
+    "union rectangle localization, not instance/pixel segmentation"
+  ]
+}

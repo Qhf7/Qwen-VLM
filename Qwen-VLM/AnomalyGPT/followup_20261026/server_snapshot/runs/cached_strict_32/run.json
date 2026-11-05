@@ -1,0 +1,15 @@
+{
+  "args": {
+    "cache": "../cache_visa32",
+    "imagebind_ckpt": "../pretrained_ckpt/imagebind_ckpt/imagebind_huge.pth",
+    "qwen_ckpt": "/root/autodl-tmp/industrial_vlm/models/Qwen3-VL-8B-Instruct",
+    "init_ckpt": "../ckpt/train_visa/pytorch_model.pt",
+    "save_path": "../runs/cached_strict_32",
+    "max_steps": 16,
+    "batch_size": 2,
+    "lr": 0.001,
+    "max_tgt_len": 64,
+    "seed": 42
+  },
+  "steps": 16
+}

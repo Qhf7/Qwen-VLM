@@ -1,0 +1,530 @@
+{
+  "qwen": {
+    "records": [
+      {
+        "file": "00003_0.pt",
+        "class": "candle",
+        "total_tokens": 55,
+        "full_supervision": 11,
+        "supervision64": 11,
+        "supervision128": 11
+      },
+      {
+        "file": "00016_1.pt",
+        "class": "fryum",
+        "total_tokens": 63,
+        "full_supervision": 19,
+        "supervision64": 19,
+        "supervision128": 19
+      },
+      {
+        "file": "00005_0.pt",
+        "class": "capsules",
+        "total_tokens": 56,
+        "full_supervision": 11,
+        "supervision64": 11,
+        "supervision128": 11
+      },
+      {
+        "file": "00039_1.pt",
+        "class": "pcb3",
+        "total_tokens": 57,
+        "full_supervision": 18,
+        "supervision64": 18,
+        "supervision128": 18
+      },
+      {
+        "file": "00033_0.pt",
+        "class": "pcb2",
+        "total_tokens": 50,
+        "full_supervision": 11,
+        "supervision64": 11,
+        "supervision128": 11
+      },
+      {
+        "file": "00014_1.pt",
+        "class": "chewinggum",
+        "total_tokens": 66,
+        "full_supervision": 23,
+        "supervision64": 21,
+        "supervision128": 23
+      },
+      {
+        "file": "00038_0.pt",
+        "class": "pcb3",
+        "total_tokens": 50,
+        "full_supervision": 11,
+        "supervision64": 11,
+        "supervision128": 11
+      },
+      {
+        "file": "00030_1.pt",
+        "class": "pcb1",
+        "total_tokens": 62,
+        "full_supervision": 23,
+        "supervision64": 23,
+        "supervision128": 23
+      },
+      {
+        "file": "00019_0.pt",
+        "class": "fryum",
+        "total_tokens": 55,
+        "full_supervision": 11,
+        "supervision64": 11,
+        "supervision128": 11
+      },
+      {
+        "file": "00047_1.pt",
+        "class": "pipe_fryum",
+        "total_tokens": 60,
+        "full_supervision": 18,
+        "supervision64": 18,
+        "supervision128": 18
+      },
+      {
+        "file": "00023_0.pt",
+        "class": "macaroni1",
+        "total_tokens": 54,
+        "full_supervision": 11,
+        "supervision64": 11,
+        "supervision128": 11
+      },
+      {
+        "file": "00025_0.pt",
+        "class": "macaroni2",
+        "total_tokens": 54,
+        "full_supervision": 11,
+        "supervision64": 11,
+        "supervision128": 11
+      },
+      {
+        "file": "00037_0.pt",
+        "class": "pcb3",
+        "total_tokens": 50,
+        "full_supervision": 11,
+        "supervision64": 11,
+        "supervision128": 11
+      },
+      {
+        "file": "00036_0.pt",
+        "class": "pcb3",
+        "total_tokens": 50,
+        "full_supervision": 11,
+        "supervision64": 11,
+        "supervision128": 11
+      },
+      {
+        "file": "00011_1.pt",
+        "class": "cashew",
+        "total_tokens": 60,
+        "full_supervision": 19,
+        "supervision64": 19,
+        "supervision128": 19
+      },
+      {
+        "file": "00001_0.pt",
+        "class": "candle",
+        "total_tokens": 55,
+        "full_supervision": 11,
+        "supervision64": 11,
+        "supervision128": 11
+      },
+      {
+        "file": "00025_1.pt",
+        "class": "macaroni2",
+        "total_tokens": 66,
+        "full_supervision": 23,
+        "supervision64": 21,
+        "supervision128": 23
+      },
+      {
+        "file": "00032_1.pt",
+        "class": "pcb2",
+        "total_tokens": 57,
+        "full_supervision": 18,
+        "supervision64": 18,
+        "supervision128": 18
+      },
+      {
+        "file": "00000_1.pt",
+        "class": "candle",
+        "total_tokens": 62,
+        "full_supervision": 18,
+        "supervision64": 18,
+        "supervision128": 18
+      },
+      {
+        "file": "00005_1.pt",
+        "class": "capsules",
+        "total_tokens": 69,
+        "full_supervision": 24,
+        "supervision64": 19,
+        "supervision128": 24
+      },
+      {
+        "file": "00009_0.pt",
+        "class": "cashew",
+        "total_tokens": 52,
+        "full_supervision": 11,
+        "supervision64": 11,
+        "supervision128": 11
+      },
+      {
+        "file": "00023_1.pt",
+        "class": "macaroni1",
+        "total_tokens": 64,
+        "full_supervision": 21,
+        "supervision64": 21,
+        "supervision128": 21
+      },
+      {
+        "file": "00010_0.pt",
+        "class": "cashew",
+        "total_tokens": 52,
+        "full_supervision": 11,
+        "supervision64": 11,
+        "supervision128": 11
+      },
+      {
+        "file": "00010_1.pt",
+        "class": "cashew",
+        "total_tokens": 64,
+        "full_supervision": 23,
+        "supervision64": 23,
+        "supervision128": 23
+      },
+      {
+        "file": "00029_1.pt",
+        "class": "pcb1",
+        "total_tokens": 57,
+        "full_supervision": 18,
+        "supervision64": 18,
+        "supervision128": 18
+      },
+      {
+        "file": "00008_0.pt",
+        "class": "cashew",
+        "total_tokens": 52,
+        "full_supervision": 11,
+        "supervision64": 11,
+        "supervision128": 11
+      },
+      {
+        "file": "00013_1.pt",
+        "class": "chewinggum",
+        "total_tokens": 66,
+        "full_supervision": 23,
+        "supervision64": 21,
+        "supervision128": 23
+      },
+      {
+        "file": "00045_0.pt",
+        "class": "pipe_fryum",
+        "total_tokens": 53,
+        "full_supervision": 11,
+        "supervision64": 11,
+        "supervision128": 11
+      },
+      {
+        "file": "00012_1.pt",
+        "class": "chewinggum",
+        "total_tokens": 65,
+        "full_supervision": 22,
+        "supervision64": 21,
+        "supervision128": 22
+      },
+      {
+        "file": "00037_1.pt",
+        "class": "pcb3",
+        "total_tokens": 57,
+        "full_supervision": 18,
+        "supervision64": 18,
+        "supervision128": 18
+      },
+      {
+        "file": "00002_0.pt",
+        "class": "candle",
+        "total_tokens": 55,
+        "full_supervision": 11,
+        "supervision64": 11,
+        "supervision128": 11
+      },
+      {
+        "file": "00028_0.pt",
+        "class": "pcb1",
+        "total_tokens": 50,
+        "full_supervision": 11,
+        "supervision64": 11,
+        "supervision128": 11
+      }
+    ],
+    "zero64": 0,
+    "zero128": 0,
+    "truncated64": 5,
+    "truncated128": 0
+  },
+  "vicuna": {
+    "records": [
+      {
+        "file": "00003_0.pt",
+        "class": "candle",
+        "total_tokens": 66,
+        "full_supervision": 14,
+        "supervision64": 12,
+        "supervision128": 14
+      },
+      {
+        "file": "00016_1.pt",
+        "class": "fryum",
+        "total_tokens": 73,
+        "full_supervision": 22,
+        "supervision64": 13,
+        "supervision128": 22
+      },
+      {
+        "file": "00005_0.pt",
+        "class": "capsules",
+        "total_tokens": 67,
+        "full_supervision": 14,
+        "supervision64": 11,
+        "supervision128": 14
+      },
+      {
+        "file": "00039_1.pt",
+        "class": "pcb3",
+        "total_tokens": 67,
+        "full_supervision": 21,
+        "supervision64": 18,
+        "supervision128": 21
+      },
+      {
+        "file": "00033_0.pt",
+        "class": "pcb2",
+        "total_tokens": 60,
+        "full_supervision": 14,
+        "supervision64": 14,
+        "supervision128": 14
+      },
+      {
+        "file": "00014_1.pt",
+        "class": "chewinggum",
+        "total_tokens": 77,
+        "full_supervision": 27,
+        "supervision64": 14,
+        "supervision128": 27
+      },
+      {
+        "file": "00038_0.pt",
+        "class": "pcb3",
+        "total_tokens": 60,
+        "full_supervision": 14,
+        "supervision64": 14,
+        "supervision128": 14
+      },
+      {
+        "file": "00030_1.pt",
+        "class": "pcb1",
+        "total_tokens": 73,
+        "full_supervision": 27,
+        "supervision64": 18,
+        "supervision128": 27
+      },
+      {
+        "file": "00019_0.pt",
+        "class": "fryum",
+        "total_tokens": 65,
+        "full_supervision": 14,
+        "supervision64": 13,
+        "supervision128": 14
+      },
+      {
+        "file": "00047_1.pt",
+        "class": "pipe_fryum",
+        "total_tokens": 70,
+        "full_supervision": 21,
+        "supervision64": 15,
+        "supervision128": 21
+      },
+      {
+        "file": "00023_0.pt",
+        "class": "macaroni1",
+        "total_tokens": 63,
+        "full_supervision": 14,
+        "supervision64": 14,
+        "supervision128": 14
+      },
+      {
+        "file": "00025_0.pt",
+        "class": "macaroni2",
+        "total_tokens": 63,
+        "full_supervision": 14,
+        "supervision64": 14,
+        "supervision128": 14
+      },
+      {
+        "file": "00037_0.pt",
+        "class": "pcb3",
+        "total_tokens": 60,
+        "full_supervision": 14,
+        "supervision64": 14,
+        "supervision128": 14
+      },
+      {
+        "file": "00036_0.pt",
+        "class": "pcb3",
+        "total_tokens": 60,
+        "full_supervision": 14,
+        "supervision64": 14,
+        "supervision128": 14
+      },
+      {
+        "file": "00011_1.pt",
+        "class": "cashew",
+        "total_tokens": 69,
+        "full_supervision": 22,
+        "supervision64": 17,
+        "supervision128": 22
+      },
+      {
+        "file": "00001_0.pt",
+        "class": "candle",
+        "total_tokens": 66,
+        "full_supervision": 14,
+        "supervision64": 12,
+        "supervision128": 14
+      },
+      {
+        "file": "00025_1.pt",
+        "class": "macaroni2",
+        "total_tokens": 76,
+        "full_supervision": 27,
+        "supervision64": 15,
+        "supervision128": 27
+      },
+      {
+        "file": "00032_1.pt",
+        "class": "pcb2",
+        "total_tokens": 67,
+        "full_supervision": 21,
+        "supervision64": 18,
+        "supervision128": 21
+      },
+      {
+        "file": "00000_1.pt",
+        "class": "candle",
+        "total_tokens": 73,
+        "full_supervision": 21,
+        "supervision64": 12,
+        "supervision128": 21
+      },
+      {
+        "file": "00005_1.pt",
+        "class": "capsules",
+        "total_tokens": 81,
+        "full_supervision": 28,
+        "supervision64": 11,
+        "supervision128": 28
+      },
+      {
+        "file": "00009_0.pt",
+        "class": "cashew",
+        "total_tokens": 61,
+        "full_supervision": 14,
+        "supervision64": 14,
+        "supervision128": 14
+      },
+      {
+        "file": "00023_1.pt",
+        "class": "macaroni1",
+        "total_tokens": 74,
+        "full_supervision": 25,
+        "supervision64": 15,
+        "supervision128": 25
+      },
+      {
+        "file": "00010_0.pt",
+        "class": "cashew",
+        "total_tokens": 61,
+        "full_supervision": 14,
+        "supervision64": 14,
+        "supervision128": 14
+      },
+      {
+        "file": "00010_1.pt",
+        "class": "cashew",
+        "total_tokens": 74,
+        "full_supervision": 27,
+        "supervision64": 17,
+        "supervision128": 27
+      },
+      {
+        "file": "00029_1.pt",
+        "class": "pcb1",
+        "total_tokens": 67,
+        "full_supervision": 21,
+        "supervision64": 18,
+        "supervision128": 21
+      },
+      {
+        "file": "00008_0.pt",
+        "class": "cashew",
+        "total_tokens": 61,
+        "full_supervision": 14,
+        "supervision64": 14,
+        "supervision128": 14
+      },
+      {
+        "file": "00013_1.pt",
+        "class": "chewinggum",
+        "total_tokens": 77,
+        "full_supervision": 27,
+        "supervision64": 14,
+        "supervision128": 27
+      },
+      {
+        "file": "00045_0.pt",
+        "class": "pipe_fryum",
+        "total_tokens": 63,
+        "full_supervision": 14,
+        "supervision64": 14,
+        "supervision128": 14
+      },
+      {
+        "file": "00012_1.pt",
+        "class": "chewinggum",
+        "total_tokens": 76,
+        "full_supervision": 26,
+        "supervision64": 14,
+        "supervision128": 26
+      },
+      {
+        "file": "00037_1.pt",
+        "class": "pcb3",
+        "total_tokens": 67,
+        "full_supervision": 21,
+        "supervision64": 18,
+        "supervision128": 21
+      },
+      {
+        "file": "00002_0.pt",
+        "class": "candle",
+        "total_tokens": 66,
+        "full_supervision": 14,
+        "supervision64": 12,
+        "supervision128": 14
+      },
+      {
+        "file": "00028_0.pt",
+        "class": "pcb1",
+        "total_tokens": 60,
+        "full_supervision": 14,
+        "supervision64": 14,
+        "supervision128": 14
+      }
+    ],
+    "zero64": 0,
+    "zero128": 0,
+    "truncated64": 21,
+    "truncated128": 0
+  }
+}

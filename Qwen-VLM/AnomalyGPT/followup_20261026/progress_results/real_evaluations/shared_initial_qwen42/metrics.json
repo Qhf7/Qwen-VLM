@@ -1,0 +1,365 @@
+{
+  "num_sources": 2005,
+  "generation": {
+    "macro_f1": 0.2652151373768792,
+    "accuracy": 0.23291770573566084,
+    "anomaly_recall": 0.07777777777777778,
+    "normal_recall": 0.41405405405405404,
+    "normal_fpr": 0.10378378378378378,
+    "invalid_rate": 0.4094763092269327,
+    "n_normal": 925,
+    "n_anomaly": 1080
+  },
+  "candidate_classification": {
+    "macro_f1": 0.4314280832835753,
+    "accuracy": 0.4379052369077307,
+    "anomaly_recall": 0.3074074074074074,
+    "normal_recall": 0.5902702702702702,
+    "normal_fpr": 0.4097297297297297,
+    "invalid_rate": 0.0,
+    "n_normal": 925,
+    "n_anomaly": 1080
+  },
+  "map_image": {
+    "auroc": 0.8008338338338338,
+    "ap": 0.8476908596927768
+  },
+  "answer_image": {
+    "auroc": 0.37661811811811813,
+    "ap": 0.4772617345510291
+  },
+  "per_class": {
+    "candle": {
+      "num_sources": 186,
+      "generation": {
+        "macro_f1": 0.3111111111111111,
+        "accuracy": 0.45161290322580644,
+        "anomaly_recall": 0.9333333333333333,
+        "normal_recall": 0.0,
+        "normal_fpr": 1.0,
+        "invalid_rate": 0.0,
+        "n_normal": 96,
+        "n_anomaly": 90
+      },
+      "pixel": {
+        "auroc": 0.9035263978064111,
+        "ap": 0.19280085676099906
+      },
+      "map_image": {
+        "auroc": 0.7784722222222223,
+        "ap": 0.7946982958099379
+      },
+      "answer_image": {
+        "auroc": 0.41336805555555556,
+        "ap": 0.43688676688323064
+      }
+    },
+    "capsules": {
+      "num_sources": 147,
+      "generation": {
+        "macro_f1": 0.0,
+        "accuracy": 0.0,
+        "anomaly_recall": 0.0,
+        "normal_recall": 0.0,
+        "normal_fpr": 0.0,
+        "invalid_rate": 0.7755102040816326,
+        "n_normal": 57,
+        "n_anomaly": 90
+      },
+      "pixel": {
+        "auroc": 0.9296323713064628,
+        "ap": 0.3165778544602499
+      },
+      "map_image": {
+        "auroc": 0.7586744639376218,
+        "ap": 0.8687468002567607
+      },
+      "answer_image": {
+        "auroc": 0.3374269005847953,
+        "ap": 0.5357835448167039
+      }
+    },
+    "cashew": {
+      "num_sources": 134,
+      "generation": {
+        "macro_f1": 0.24719101123595505,
+        "accuracy": 0.3283582089552239,
+        "anomaly_recall": 0.0,
+        "normal_recall": 1.0,
+        "normal_fpr": 0.0,
+        "invalid_rate": 0.0,
+        "n_normal": 44,
+        "n_anomaly": 90
+      },
+      "pixel": {
+        "auroc": 0.8661510521664758,
+        "ap": 0.28598422582039407
+      },
+      "map_image": {
+        "auroc": 0.8931818181818182,
+        "ap": 0.9457237696064094
+      },
+      "answer_image": {
+        "auroc": 0.35782828282828283,
+        "ap": 0.6106787002947135
+      }
+    },
+    "chewinggum": {
+      "num_sources": 137,
+      "generation": {
+        "macro_f1": 0.2554347826086957,
+        "accuracy": 0.34306569343065696,
+        "anomaly_recall": 0.0,
+        "normal_recall": 1.0,
+        "normal_fpr": 0.0,
+        "invalid_rate": 0.0,
+        "n_normal": 47,
+        "n_anomaly": 90
+      },
+      "pixel": {
+        "auroc": 0.9822344597221436,
+        "ap": 0.5805663998080555
+      },
+      "map_image": {
+        "auroc": 0.9504728132387706,
+        "ap": 0.977034086688517
+      },
+      "answer_image": {
+        "auroc": 0.21631205673758866,
+        "ap": 0.5341143901798752
+      }
+    },
+    "fryum": {
+      "num_sources": 138,
+      "generation": {
+        "macro_f1": 0.25806451612903225,
+        "accuracy": 0.34782608695652173,
+        "anomaly_recall": 0.0,
+        "normal_recall": 1.0,
+        "normal_fpr": 0.0,
+        "invalid_rate": 0.0,
+        "n_normal": 48,
+        "n_anomaly": 90
+      },
+      "pixel": {
+        "auroc": 0.8828791451810721,
+        "ap": 0.2751499900286017
+      },
+      "map_image": {
+        "auroc": 0.8515046296296297,
+        "ap": 0.9349442274281178
+      },
+      "answer_image": {
+        "auroc": 0.14537037037037037,
+        "ap": 0.5011631092335305
+      }
+    },
+    "macaroni1": {
+      "num_sources": 187,
+      "generation": {
+        "macro_f1": 0.32974910394265233,
+        "accuracy": 0.4919786096256685,
+        "anomaly_recall": 0.0,
+        "normal_recall": 0.9484536082474226,
+        "normal_fpr": 0.0,
+        "invalid_rate": 0.026737967914438502,
+        "n_normal": 97,
+        "n_anomaly": 90
+      },
+      "pixel": {
+        "auroc": 0.9668177735795176,
+        "ap": 0.07805791852353561
+      },
+      "map_image": {
+        "auroc": 0.8228522336769759,
+        "ap": 0.8519188325729667
+      },
+      "answer_image": {
+        "auroc": 0.18917525773195873,
+        "ap": 0.3598270428830709
+      }
+    },
+    "macaroni2": {
+      "num_sources": 188,
+      "generation": {
+        "macro_f1": 0.34265734265734266,
+        "accuracy": 0.5212765957446809,
+        "anomaly_recall": 0.0,
+        "normal_recall": 1.0,
+        "normal_fpr": 0.0,
+        "invalid_rate": 0.0,
+        "n_normal": 98,
+        "n_anomaly": 90
+      },
+      "pixel": {
+        "auroc": 0.8876379412589407,
+        "ap": 0.025769760924891916
+      },
+      "map_image": {
+        "auroc": 0.6573696145124717,
+        "ap": 0.6671279366925428
+      },
+      "answer_image": {
+        "auroc": 0.4135487528344671,
+        "ap": 0.43901049078426
+      }
+    },
+    "pcb1": {
+      "num_sources": 188,
+      "generation": {
+        "macro_f1": 0.009433962264150943,
+        "accuracy": 0.005319148936170213,
+        "anomaly_recall": 0.0,
+        "normal_recall": 0.01020408163265306,
+        "normal_fpr": 0.0,
+        "invalid_rate": 0.9574468085106383,
+        "n_normal": 98,
+        "n_anomaly": 90
+      },
+      "pixel": {
+        "auroc": 0.8545501704398525,
+        "ap": 0.14126395957915344
+      },
+      "map_image": {
+        "auroc": 0.7874716553287983,
+        "ap": 0.7854888896330193
+      },
+      "answer_image": {
+        "auroc": 0.5328798185941043,
+        "ap": 0.5312216792087947
+      }
+    },
+    "pcb2": {
+      "num_sources": 187,
+      "generation": {
+        "macro_f1": 0.02702702702702703,
+        "accuracy": 0.016042780748663103,
+        "anomaly_recall": 0.0,
+        "normal_recall": 0.030927835051546393,
+        "normal_fpr": 0.0,
+        "invalid_rate": 0.9251336898395722,
+        "n_normal": 97,
+        "n_anomaly": 90
+      },
+      "pixel": {
+        "auroc": 0.9137042698274596,
+        "ap": 0.06549671023748327
+      },
+      "map_image": {
+        "auroc": 0.7438144329896907,
+        "ap": 0.7195145327666538
+      },
+      "answer_image": {
+        "auroc": 0.4009736540664376,
+        "ap": 0.4305588266863889
+      }
+    },
+    "pcb3": {
+      "num_sources": 189,
+      "generation": {
+        "macro_f1": 0.009259259259259259,
+        "accuracy": 0.005291005291005291,
+        "anomaly_recall": 0.0,
+        "normal_recall": 0.010101010101010102,
+        "normal_fpr": 0.0,
+        "invalid_rate": 0.9523809523809523,
+        "n_normal": 99,
+        "n_anomaly": 90
+      },
+      "pixel": {
+        "auroc": 0.8637309380719511,
+        "ap": 0.06892671740644254
+      },
+      "map_image": {
+        "auroc": 0.6390011223344557,
+        "ap": 0.656995783812698
+      },
+      "answer_image": {
+        "auroc": 0.4084175084175084,
+        "ap": 0.4509329896585582
+      }
+    },
+    "pcb4": {
+      "num_sources": 187,
+      "generation": {
+        "macro_f1": 0.01694915254237288,
+        "accuracy": 0.0106951871657754,
+        "anomaly_recall": 0.0,
+        "normal_recall": 0.020618556701030927,
+        "normal_fpr": 0.0,
+        "invalid_rate": 0.8877005347593583,
+        "n_normal": 97,
+        "n_anomaly": 90
+      },
+      "pixel": {
+        "auroc": 0.8520602721239389,
+        "ap": 0.07373135585713728
+      },
+      "map_image": {
+        "auroc": 0.868213058419244,
+        "ap": 0.8510050131229864
+      },
+      "answer_image": {
+        "auroc": 0.5716494845360826,
+        "ap": 0.5789903632017971
+      }
+    },
+    "pipe_fryum": {
+      "num_sources": 137,
+      "generation": {
+        "macro_f1": 0.2596685082872928,
+        "accuracy": 0.34306569343065696,
+        "anomaly_recall": 0.0,
+        "normal_recall": 1.0,
+        "normal_fpr": 0.0,
+        "invalid_rate": 0.021897810218978103,
+        "n_normal": 47,
+        "n_anomaly": 90
+      },
+      "pixel": {
+        "auroc": 0.9570532549445432,
+        "ap": 0.41452354313439377
+      },
+      "map_image": {
+        "auroc": 0.914420803782506,
+        "ap": 0.9614739915192356
+      },
+      "answer_image": {
+        "auroc": 0.3263593380614657,
+        "ap": 0.6237418309904897
+      }
+    }
+  },
+  "category_macro": {
+    "pixel": {
+      "auroc": 0.9049981705357308,
+      "ap": 0.20990410771177817
+    },
+    "map_image": {
+      "auroc": 0.805454072354517,
+      "ap": 0.8345560133258205
+    },
+    "answer_image": {
+      "auroc": 0.3594424566932181,
+      "ap": 0.5027424779017844
+    },
+    "generation": {
+      "macro_f1": 0.172212148088741,
+      "anomaly_recall": 0.07777777777777778,
+      "normal_fpr": 0.08333333333333333
+    }
+  },
+  "definitions": {
+    "pixel": "Four-level maps are averaged before scoring; per-class pixel metrics pool normal and anomaly images; category_macro weights products equally.",
+    "generation_macro_f1": "Normal/anomalous label macro F1 over all sources; invalid answers remain false negatives for their GT class.",
+    "candidate": "Sum continuation conditional log probabilities using the same segmented tokenization as training; log_odds=Yes-No.",
+    "map_image_score": "Maximum of the averaged 224x224 map, without per-image rescaling.",
+    "pixel_metric_algorithm": "Exact BF16 score histogram with simultaneous ties; matches sklearn AUROC and noninterpolated AP."
+  },
+  "seconds": 149.7033133506775,
+  "peak_allocated_gb": 8.145338368,
+  "checkpoint": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/matched_inputs/seed42/bridge_init.pt",
+  "lora_adapter": null,
+  "backend": "qwen",
+  "seed": 42
+}

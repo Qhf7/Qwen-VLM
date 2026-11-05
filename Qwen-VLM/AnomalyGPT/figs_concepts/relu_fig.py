@@ -1,0 +1,36 @@
+import numpy as np, matplotlib
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+
+x = np.linspace(-3, 3, 601)
+relu = np.maximum(0, x)
+drelu = (x > 0).astype(float)
+leaky = np.where(x > 0, x, 0.1*x)
+silu = x / (1 + np.exp(-x))
+gelu = 0.5*x*(1+np.tanh(np.sqrt(2/np.pi)*(x+0.044715*x**3)))
+
+fig, ax = plt.subplots(1, 3, figsize=(15, 4.2))
+ax[0].plot(x, relu, lw=2.5, label="ReLU(x)=max(0,x)")
+ax[0].plot(x, drelu, "--", lw=1.8, label="derivative (0 or 1)")
+ax[0].axhline(0, c="gray", lw=.6); ax[0].axvline(0, c="gray", lw=.6)
+ax[0].set_ylim(-0.5, 3.2); ax[0].legend(); ax[0].set_title("ReLU and its gradient")
+ax[0].grid(alpha=.3)
+
+ax[1].plot(x, relu, lw=2.2, label="ReLU")
+ax[1].plot(x, leaky, lw=1.6, label="LeakyReLU(0.1)")
+ax[1].plot(x, silu, lw=1.6, label="SiLU (LLaMA)")
+ax[1].plot(x, gelu, lw=1.6, label="GELU (ImageBind)")
+ax[1].axhline(0, c="gray", lw=.6); ax[1].axvline(0, c="gray", lw=.6)
+ax[1].set_ylim(-0.6, 3.2); ax[1].legend(fontsize=8); ax[1].set_title("common activations")
+ax[1].grid(alpha=.3)
+
+vals = np.array([-2.5, -0.8, -0.3, 0.0, 0.2, 0.9, 2.1])
+out = np.maximum(0, vals)
+ax[2].bar(np.arange(len(vals))-0.18, vals, 0.36, label="conv output z", color="tab:blue")
+ax[2].bar(np.arange(len(vals))+0.18, out, 0.36, label="after ReLU", color="tab:red")
+ax[2].axhline(0, c="gray", lw=.6)
+ax[2].set_xticks(range(len(vals))); ax[2].set_xticklabels(["%.1f"%v for v in vals])
+ax[2].set_xlabel("z (one value from conv)"); ax[2].legend(); ax[2].set_title("what ReLU does to real numbers")
+ax[2].grid(alpha=.3, axis="y")
+fig.tight_layout(); fig.savefig("19_relu.png", dpi=140, bbox_inches="tight")
+print("saved 19_relu.png")

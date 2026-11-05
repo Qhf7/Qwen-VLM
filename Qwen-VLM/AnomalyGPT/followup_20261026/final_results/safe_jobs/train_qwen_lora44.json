@@ -1,0 +1,94 @@
+{
+  "task": "train_qwen_lora44",
+  "status": "completed",
+  "command": [
+    "/root/autodl-tmp/conda-envs/qwen3vl2/bin/python",
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/train_qwen_matched.py",
+    "--cache",
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/cache_balanced_train48",
+    "--code-dir",
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/code",
+    "--sample-order",
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/matched_inputs/seed44/sample_order.json",
+    "--save-path",
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/matched_runs/qwen_lora_44",
+    "--seed",
+    "44",
+    "--max-steps",
+    "16",
+    "--batch-size",
+    "2",
+    "--max-tgt-len",
+    "128",
+    "--lr",
+    "0.001",
+    "--qwen-ckpt",
+    "/root/autodl-tmp/industrial_vlm/models/Qwen3-VL-8B-Instruct",
+    "--bridge-init",
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/matched_inputs/seed44/bridge_init.pt",
+    "--lora",
+    "qkvo"
+  ],
+  "source_sha256": {
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/code/model/AnomalyGPT_models.py": "798397f04bf189781b2c445f516dbd548b63d3ac3b70ef236f613edef1209f30",
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/code/utils/loss.py": "80679a2a9cf7eb382cae4083dd401bb0d4dea6bb6a1e3e8501e71abecf0c8071",
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/train_qwen_matched.py": "29136939ab4befaf2e72265fa39df72fdb9c57bbd8b9626e8ed02132b362de6c",
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/train_vicuna_matched.py": "de77b0e17388949873ceb59ae0c40a682760ef026fc1da3ccf6ad19806285c9d"
+  },
+  "runtime_sources": {
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/code/model/AnomalyGPT_models.py": {
+      "sha256": "798397f04bf189781b2c445f516dbd548b63d3ac3b70ef236f613edef1209f30",
+      "archive": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/safe_runtime/train_qwen_lora44/20261026T112229.278480Z/00/AnomalyGPT_models.py"
+    },
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/code/utils/loss.py": {
+      "sha256": "80679a2a9cf7eb382cae4083dd401bb0d4dea6bb6a1e3e8501e71abecf0c8071",
+      "archive": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/safe_runtime/train_qwen_lora44/20261026T112229.278480Z/01/loss.py"
+    },
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/train_qwen_matched.py": {
+      "sha256": "29136939ab4befaf2e72265fa39df72fdb9c57bbd8b9626e8ed02132b362de6c",
+      "archive": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/safe_runtime/train_qwen_lora44/20261026T112229.278480Z/02/train_qwen_matched.py"
+    },
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/train_vicuna_matched.py": {
+      "sha256": "de77b0e17388949873ceb59ae0c40a682760ef026fc1da3ccf6ad19806285c9d",
+      "archive": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/safe_runtime/train_qwen_lora44/20261026T112229.278480Z/03/train_vicuna_matched.py"
+    }
+  },
+  "started_at": 1793013749.2797728,
+  "completed_at": 1793013782.909317,
+  "validation": {
+    "kind": "train",
+    "artifacts": {
+      "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/matched_runs/qwen_lora_44/pytorch_model.pt": "8a1310047feea4d96f374873ce50c2911315a6c3189127a1e278c46aae3eb7b6",
+      "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/matched_runs/qwen_lora_44/run.json": "7632487c7d8f5d3f5ca05af240b840b2638e1ab37c18a08a84b2c6eafeac846d",
+      "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/matched_runs/qwen_lora_44/history.jsonl": "daab4203874d12c8146d475ce727771fe18d8a5ddb347aeda820dc83733ace8e",
+      "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/matched_runs/qwen_lora_44/sample_order.json": "847af31f016c0b36cb43722764731b2545575b62ab78be66cc2d0191554dbcf6",
+      "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/matched_runs/qwen_lora_44/token_budget.json": "1d83f52497a5f29ad962f2be907950942ee262df262c1d4a132dc73f0b817f0a",
+      "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/matched_runs/qwen_lora_44/lora_adapter/README.md": "1d01b8c5c52328a551380caaa124e394d6687c948b4a829b3f192f725c6db20e",
+      "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/matched_runs/qwen_lora_44/lora_adapter/adapter_model.safetensors": "dfb31177eab46aec2ff44bd4ebacfae532344f4d5ea1e9956baa35585b02e29b",
+      "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/matched_runs/qwen_lora_44/lora_adapter/adapter_config.json": "9f1957d443b11a6161ec20ad18c291d1069e8170ddc56e1028f4c843fb6319b5"
+    },
+    "recorded_source_trace": {
+      "runner": {
+        "sha256": "29136939ab4befaf2e72265fa39df72fdb9c57bbd8b9626e8ed02132b362de6c",
+        "traceable_file": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/train_qwen_matched.py"
+      },
+      "shared_training": {
+        "sha256": "de77b0e17388949873ceb59ae0c40a682760ef026fc1da3ccf6ad19806285c9d",
+        "traceable_file": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/train_vicuna_matched.py"
+      },
+      "qwen_model": {
+        "sha256": "8bebd7270f75fa84cb996b632425817cf86b66b1b36e6e39570ce9eec187d426",
+        "traceable_file": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/code/model/openllama_qwen3vl_strict.py"
+      },
+      "bridge_architecture": {
+        "sha256": "798397f04bf189781b2c445f516dbd548b63d3ac3b70ef236f613edef1209f30",
+        "traceable_file": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/code/model/AnomalyGPT_models.py"
+      },
+      "pixel_losses": {
+        "sha256": "80679a2a9cf7eb382cae4083dd401bb0d4dea6bb6a1e3e8501e71abecf0c8071",
+        "traceable_file": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/code/utils/loss.py"
+      }
+    },
+    "actual_initial_bridge_fingerprint": "9218c817b4684532f5447e9434bd84fed2763395b62ad34943bfb358cad7322e"
+  }
+}
