@@ -1,0 +1,44 @@
+请使用 Image2（GPT Image 2）直接生成一张正式科研论文质量的实验路线图。必须实际创建图像，不要给代码或解释。
+
+Use case: scientific-educational / infographic-diagram.
+Asset type: publication-quality figure for the README of Qwen-VLM, a visual-language model research repository.
+Canvas: high-resolution landscape, approximately 3840 × 2160 pixels, white background. Flat, precise vector-like geometry, excellent Chinese typography, crisp text and thin strokes, disciplined spacing and alignment. Professional machine-learning paper figure, quiet and restrained. No photographic elements.
+
+Title, exact: “Qwen 迁移与后训练实验路线”.
+Place small stage headings aligned above the diagram columns: “桥接重训”, “共享起点”, “平行实验”, “结构化延续”.
+
+Draw EXACTLY EIGHT rectangular nodes with modest corner radius and these EXACT labels. Use bold experiment identifiers and slightly smaller secondary lines; Chinese must be perfectly legible:
+1. Source node: first line “Vicuna / Qwen”; second line “重新训练桥接”; third line “LLM 冻结”.
+2. A node: first line “A”; second line “Qwen 桥接起点”.
+3. B node: first line “B”; second line “继续训练桥接”.
+4. C node: first line “C”; second line “仅语言 LoRA”.
+5. D node: first line “D”; second line “桥接 + LoRA”.
+6. Cpair node: first line “Cpair”; second line “匹配 CE”. Render Cpair exactly with lowercase pair.
+7. R node: first line “R”; second line “匹配 CE + ranking”. Render ranking in lowercase.
+8. S node: first line “S”; second line “结构化继续训练”.
+
+Composition: strict LEFT-TO-RIGHT flow. Place source and A on the left, vertically near the center. In a single aligned column to the right of A, arrange B, C, D, Cpair, R vertically from top to bottom, with uniform card widths and equal vertical spacing. Place S in a fourth column, on the same row as C. Leave generous white space. All text must remain fully inside its box. A short orthogonal branching bus from A may feed the five parallel arms, with a distinct arrowhead at each destination. Use neutral dark-slate thin connector lines, identical line weight, clean right-angle routes, and visible arrowheads. No edge crossings and no diagonal tangles.
+
+The graph has EXACTLY SEVEN solid directed edges:
+Vicuna / Qwen → A;
+A → B;
+A → C;
+A → D;
+A → Cpair;
+A → R;
+C → S.
+There must also be EXACTLY ONE dotted, UNDIRECTED relation between Cpair and R, positioned to the right of their boxes, with the nearby label “匹配对照”. The dotted relation has NO arrowheads. It represents a comparison, not a training step. Both Cpair and R independently receive their solid training arrow from A.
+
+Scientific invariants: D independently starts from A. R independently starts from A. Only S continues from C, using the same seed. Do not imply Vicuna/Qwen weights are merged. The source node means separately retrained bridge experiments. No invented performance values, no superiority ranking, no additional model nodes.
+
+Node colors, preserve exactly in a muted print-friendly manner:
+Source and A: fill #EFF6FF, border #3B82F6, text #172554.
+C, D, S: fill #ECFDF5, border #0D9488, text #134E4A.
+B, Cpair, R: fill #FFF7ED, border #D97706, text #78350F.
+Main title and connectors: dark slate. No gradients, shadows, 3D, icons, decorative scientific clip art, logos, or watermark.
+
+Bottom legend, compact with line samples:
+“实线箭头：训练关系” and “无向虚线：匹配对照”.
+A single short footnote in readable grey: “各实验分支不表示性能排序；S 从同 seed 的 C 继续训练。”
+
+The final diagram must be academically rigorous, balanced, understated, and easy to read when reduced to a two-column paper-width figure. Prioritize exact text and graph topology over visual decoration.

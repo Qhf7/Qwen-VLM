@@ -40,23 +40,7 @@
 
 **独立分支：原生 Qwen3-VL + QLoRA。** 保留原生图像处理和视觉 token 路径，冻结视觉模块，研究判断任务与区域任务对领域适配的影响。该分支的划分、预算和评分方式与主线不同。
 
-```mermaid
-flowchart LR
-    V["Vicuna / Qwen\n重新训练桥接、LLM 冻结"] --> A["A：Qwen 桥接起点"]
-    A --> B["B：继续训练桥接"]
-    A --> C["C：仅语言 LoRA"]
-    A --> D["D：桥接 + LoRA"]
-    A --> P["Cpair：匹配 CE"]
-    A --> R["R：匹配 CE + ranking"]
-    C --> S["S：结构化继续训练"]
-    P -.- R
-    classDef base fill:#EFF6FF,stroke:#3B82F6,color:#172554;
-    classDef tuned fill:#ECFDF5,stroke:#0D9488,color:#134E4A;
-    classDef control fill:#FFF7ED,stroke:#D97706,color:#78350F;
-    class V,A base;
-    class C,D,S tuned;
-    class B,P,R control;
-```
+![Qwen 迁移与后训练实验路线](docs/assets/readme/experiment_routes.png)
 
 C、D、Cpair/R 是从 A 出发的不同实验，**R 的归因对照是 Cpair**；S 从同 seed 的 C 继续。图中分支代表训练关系，不代表性能必然递增。完整配置见 [迁移演进与训练清单](docs/Qwen迁移实验演进与训练清单.md)。
 

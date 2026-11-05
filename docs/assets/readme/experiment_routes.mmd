@@ -1,0 +1,15 @@
+flowchart LR
+    V["Vicuna / Qwen\n重新训练桥接、LLM 冻结"] --> A["A：Qwen 桥接起点"]
+    A --> B["B：继续训练桥接"]
+    A --> C["C：仅语言 LoRA"]
+    A --> D["D：桥接 + LoRA"]
+    A --> P["Cpair：匹配 CE"]
+    A --> R["R：匹配 CE + ranking"]
+    C --> S["S：结构化继续训练"]
+    P -.- R
+    classDef base fill:#EFF6FF,stroke:#3B82F6,color:#172554;
+    classDef tuned fill:#ECFDF5,stroke:#0D9488,color:#134E4A;
+    classDef control fill:#FFF7ED,stroke:#D97706,color:#78350F;
+    class V,A base;
+    class C,D,S tuned;
+    class B,P,R control;
