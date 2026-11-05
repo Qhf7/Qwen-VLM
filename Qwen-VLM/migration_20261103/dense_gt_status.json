@@ -1,0 +1,114 @@
+{
+  "stage": "dense_gt",
+  "started_at": "2026-11-03 23:07:50 +0800",
+  "state": "complete",
+  "jobs": [
+    {
+      "name": "dense_imagebind_gt_s42",
+      "command": [
+        "/root/autodl-tmp/conda-envs/qwen3vl2/bin/python",
+        "-u",
+        "migration_dense_train.py",
+        "--run",
+        "--features",
+        "imagebind",
+        "--size",
+        "224",
+        "--cache-gb",
+        "8",
+        "--out",
+        "/root/autodl-tmp/AnomalyGPT/runs/migration_20261103/dense_imagebind_gt_s42"
+      ],
+      "state": "complete",
+      "started_at": "2026-11-03 23:07:50 +0800",
+      "returncode": 0,
+      "seconds": 267.641126871109
+    },
+    {
+      "name": "dense_pre_224_gt_s42",
+      "command": [
+        "/root/autodl-tmp/conda-envs/qwen3vl2/bin/python",
+        "-u",
+        "migration_dense_train.py",
+        "--run",
+        "--features",
+        "pre",
+        "--size",
+        "224",
+        "--cache-gb",
+        "8",
+        "--out",
+        "/root/autodl-tmp/AnomalyGPT/runs/migration_20261103/dense_pre_224_gt_s42"
+      ],
+      "state": "complete",
+      "started_at": "2026-11-03 23:12:18 +0800",
+      "returncode": 0,
+      "seconds": 256.7962124347687
+    },
+    {
+      "name": "dense_post_224_gt_s42",
+      "command": [
+        "/root/autodl-tmp/conda-envs/qwen3vl2/bin/python",
+        "-u",
+        "migration_dense_train.py",
+        "--run",
+        "--features",
+        "post",
+        "--size",
+        "224",
+        "--cache-gb",
+        "8",
+        "--out",
+        "/root/autodl-tmp/AnomalyGPT/runs/migration_20261103/dense_post_224_gt_s42"
+      ],
+      "state": "complete",
+      "started_at": "2026-11-03 23:16:35 +0800",
+      "returncode": 0,
+      "seconds": 255.94224762916565
+    },
+    {
+      "name": "dense_pre_gt_s42",
+      "command": [
+        "/root/autodl-tmp/conda-envs/qwen3vl2/bin/python",
+        "-u",
+        "migration_dense_train.py",
+        "--run",
+        "--features",
+        "pre",
+        "--size",
+        "448",
+        "--cache-gb",
+        "8",
+        "--out",
+        "/root/autodl-tmp/AnomalyGPT/runs/migration_20261103/dense_pre_gt_s42"
+      ],
+      "state": "complete",
+      "started_at": "2026-11-03 23:20:51 +0800",
+      "returncode": 0,
+      "seconds": 310.18334341049194
+    },
+    {
+      "name": "dense_post_gt_s42",
+      "command": [
+        "/root/autodl-tmp/conda-envs/qwen3vl2/bin/python",
+        "-u",
+        "migration_dense_train.py",
+        "--run",
+        "--features",
+        "post",
+        "--size",
+        "448",
+        "--cache-gb",
+        "8",
+        "--out",
+        "/root/autodl-tmp/AnomalyGPT/runs/migration_20261103/dense_post_gt_s42"
+      ],
+      "state": "complete",
+      "started_at": "2026-11-03 23:26:01 +0800",
+      "returncode": 0,
+      "seconds": 297.66509079933167
+    }
+  ],
+  "current_job": "dense_post_gt_s42",
+  "completed_at": "2026-11-03 23:30:59 +0800"
+}

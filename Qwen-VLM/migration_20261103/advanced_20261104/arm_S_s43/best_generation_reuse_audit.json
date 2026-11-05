@@ -1,0 +1,53 @@
+{
+  "state": "complete",
+  "identity": {
+    "schema": "visa-yesno-bbox1000-grid3-v1",
+    "seed": 43,
+    "source_c": "/root/autodl-tmp/AnomalyGPT/runs/migration_20261103/lora_20261104/arm_C_s43",
+    "source_c_best_sha256": "dc7ce4fdc8d29f700bd1d493d3e1a862b9fd8ae298f043282d9142e348aa8a8c",
+    "source_c_run_sha256": "de4d9131568e43aa30f09bea196caa71ad5a5a9c0034a645b4d8454f5748ec38",
+    "source_c_step": 100,
+    "source_bridge_sha256": "643dcc229dc3db9ab39d0bd6b4188d1d32efbac2826d9a298e0ff7d28dbad542",
+    "cache_sha256": "90b003550655617f93837e4c0336819b8c6dc0d341d215e9cd3949930eee59f4",
+    "targets_sha256": "7d72a953cdc57abf2139383ae807d513913ff009baf8ad8e64f61ba4cc9d8c37",
+    "base_manifest_sha256": "5339c038e9e0db550bf5ae8661f063cec1f267cdf5e496b61eadd2c6fa42fc89",
+    "schedule_sha256": "eb8b2bbd66d25ae8d229d25e274aba9675beb91d6e3ac8ce01234695cd915589"
+  },
+  "selected_step": 500,
+  "selected_checkpoint_sha256": "fc9b03360138c471dd0b7ab0ea0509b897792e57829554192a7fc7e2929c8fba",
+  "reference_mode": "final",
+  "reference_predictions_sha256": "03eb8398d130d89c0ac4d71e6163ee5142ba013470e8ee441d5df95f7e3fb07c",
+  "reference_policy_sha256": "1d2a486e2e6671f8d7b072f3cb25411507b3839e3c86971aefcc44e8b5772f1c",
+  "copied_best_policy_sha256": "1d2a486e2e6671f8d7b072f3cb25411507b3839e3c86971aefcc44e8b5772f1c",
+  "full_score_n": 380,
+  "full_score_max_abs_error": 0.0,
+  "generation_n": 8,
+  "generation_indices": [
+    9985,
+    9986,
+    9987,
+    9988,
+    10361,
+    10362,
+    10363,
+    10364
+  ],
+  "generation_paths": [
+    "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Normal/0377.JPG",
+    "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Normal/0417.JPG",
+    "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Normal/0159.JPG",
+    "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Normal/0402.JPG",
+    "/root/autodl-tmp/industrial_vlm/datasets/VisA/pipe_fryum/Data/Images/Anomaly/092.JPG",
+    "/root/autodl-tmp/industrial_vlm/datasets/VisA/pipe_fryum/Data/Images/Anomaly/093.JPG",
+    "/root/autodl-tmp/industrial_vlm/datasets/VisA/pipe_fryum/Data/Images/Anomaly/096.JPG",
+    "/root/autodl-tmp/industrial_vlm/datasets/VisA/pipe_fryum/Data/Images/Anomaly/097.JPG"
+  ],
+  "original_evaluation_batch_composition_preserved": true,
+  "generation_exact_match": true,
+  "generation_policy": "scalar",
+  "reused_generation_n": 380,
+  "model_outputs_changed": false,
+  "training_or_selection_changed": false,
+  "test_queries": 0,
+  "external_queries": 0
+}

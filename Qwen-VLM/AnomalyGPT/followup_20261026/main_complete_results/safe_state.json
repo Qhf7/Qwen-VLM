@@ -1,0 +1,161 @@
+{
+  "started_at": 1793013367.8078656,
+  "completed": [
+    {
+      "name": "synthetic_initial",
+      "status": "verified_existing",
+      "current_sources_match_original_manifest": true
+    },
+    {
+      "name": "synthetic_frozen42",
+      "status": "verified_existing",
+      "current_sources_match_original_manifest": true
+    },
+    {
+      "name": "synthetic_lora42",
+      "status": "verified_existing",
+      "current_sources_match_original_manifest": true
+    },
+    {
+      "name": "synthetic_frozen43",
+      "status": "verified_existing",
+      "current_sources_match_original_manifest": true
+    },
+    {
+      "name": "synthetic_lora43",
+      "status": "verified_existing",
+      "current_sources_match_original_manifest": true
+    },
+    {
+      "name": "synthetic_frozen44",
+      "status": "verified_existing",
+      "current_sources_match_original_manifest": true
+    },
+    {
+      "name": "synthetic_lora44",
+      "status": "verified_existing",
+      "current_sources_match_original_manifest": true
+    },
+    {
+      "name": "historical_frozen42",
+      "status": "verified_existing",
+      "current_sources_match_original_manifest": true
+    },
+    {
+      "name": "historical_lora42",
+      "status": "verified_existing",
+      "current_sources_match_original_manifest": true
+    },
+    {
+      "name": "historical_frozen43",
+      "status": "verified_existing",
+      "current_sources_match_original_manifest": true
+    },
+    {
+      "name": "historical_lora43",
+      "status": "verified_existing",
+      "current_sources_match_original_manifest": true
+    },
+    {
+      "name": "historical_frozen44",
+      "status": "verified_existing",
+      "current_sources_match_original_manifest": true
+    },
+    {
+      "name": "historical_lora44",
+      "status": "verified_existing",
+      "current_sources_match_original_manifest": true
+    },
+    {
+      "name": "shared_initial_qwen42",
+      "status": "verified_existing",
+      "current_sources_match_original_manifest": true
+    },
+    {
+      "name": "train_qwen_frozen42",
+      "status": "verified_existing",
+      "current_sources_match_original_manifest": true
+    },
+    {
+      "name": "train_qwen_lora42",
+      "status": "verified_existing",
+      "current_sources_match_original_manifest": true
+    },
+    {
+      "name": "train_vicuna42",
+      "status": "verified_existing",
+      "current_sources_match_original_manifest": true
+    },
+    {
+      "name": "matched_qwen_frozen42",
+      "status": "verified_existing",
+      "current_sources_match_original_manifest": true
+    },
+    {
+      "name": "matched_qwen_lora42",
+      "status": "verified_existing",
+      "current_sources_match_original_manifest": true
+    },
+    {
+      "name": "matched_vicuna42",
+      "status": "verified_existing",
+      "current_sources_match_original_manifest": true
+    },
+    {
+      "name": "train_qwen_frozen43",
+      "status": "verified_existing",
+      "current_sources_match_original_manifest": true
+    },
+    {
+      "name": "train_qwen_lora43",
+      "status": "verified_existing",
+      "current_sources_match_original_manifest": true
+    },
+    {
+      "name": "train_vicuna43",
+      "status": "verified_existing",
+      "current_sources_match_original_manifest": true
+    },
+    {
+      "name": "matched_qwen_frozen43",
+      "status": "verified_existing",
+      "current_sources_match_original_manifest": true
+    },
+    {
+      "name": "matched_qwen_lora43",
+      "status": "executed_and_verified"
+    },
+    {
+      "name": "matched_vicuna43",
+      "status": "executed_and_verified"
+    },
+    {
+      "name": "train_qwen_frozen44",
+      "status": "executed_and_verified"
+    },
+    {
+      "name": "train_qwen_lora44",
+      "status": "executed_and_verified"
+    },
+    {
+      "name": "train_vicuna44",
+      "status": "executed_and_verified"
+    },
+    {
+      "name": "matched_qwen_frozen44",
+      "status": "executed_and_verified"
+    },
+    {
+      "name": "matched_qwen_lora44",
+      "status": "executed_and_verified"
+    },
+    {
+      "name": "matched_vicuna44",
+      "status": "executed_and_verified"
+    }
+  ],
+  "running": null,
+  "failed": null,
+  "archives": [],
+  "finished_at": 1793014318.163564
+}

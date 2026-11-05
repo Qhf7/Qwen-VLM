@@ -1,0 +1,33 @@
+{
+  "state": "complete",
+  "arm": "R",
+  "seed": 44,
+  "checkpoint": "final",
+  "step": 500,
+  "n": 28,
+  "split": "existing_val",
+  "original_batch_composition_preserved": true,
+  "audited_categories": [
+    "candle",
+    "fryum",
+    "pcb2",
+    "pipe_fryum"
+  ],
+  "audited_labels": [
+    0,
+    1
+  ],
+  "fresh_reload_max_abs_score_error": 0.0,
+  "generated_exact_match": true,
+  "adapter_B_nonzero": true,
+  "adapter_disabled_reference": "A",
+  "adapter_disabled_max_abs_score_error": 0.0,
+  "bridge_tensor_sha256": "f25f89b7ed42caa0ecb731965cc1ea4a3a17a48ed55a080cfe95b3913f42eeff",
+  "checkpoint_sha256": "87b3a5bf7d6388f36e410c83c4cf907ce57cdec0f4460bed1670cda8487e2048",
+  "reference_predictions_sha256": "ecaf868fecf097d2dbbae584c645083edd67f0944da0c9c006e3b178c2f9b8c2",
+  "verifier_sha256": "83198e8af965087cee8055744234940f6c93c2bad5099097af6fc310a12f4b71",
+  "test_queries": 0,
+  "both_modes_verified": true,
+  "immutable_base_loads_in_process": 1,
+  "verification_invocation": "both"
+}

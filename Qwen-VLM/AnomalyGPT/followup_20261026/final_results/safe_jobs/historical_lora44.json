@@ -1,0 +1,59 @@
+{
+  "task": "historical_lora44",
+  "status": "completed",
+  "adopted": true,
+  "command": [
+    "/root/autodl-tmp/conda-envs/qwen3vl2/bin/python",
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/evaluate_models.py",
+    "--backend",
+    "qwen",
+    "--cache",
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/real_cache",
+    "--checkpoint",
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/runs/lora_strict_s44/pytorch_model.pt",
+    "--init-ckpt",
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/ckpt/train_visa/pytorch_model.pt",
+    "--code-dir",
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/code",
+    "--out",
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/real_evaluations/historical_lora44",
+    "--seed",
+    "44",
+    "--batch-size",
+    "64",
+    "--max-new-tokens",
+    "32",
+    "--model-factory",
+    "train_qwen_matched:factory",
+    "--qwen-ckpt",
+    "/root/autodl-tmp/industrial_vlm/models/Qwen3-VL-8B-Instruct",
+    "--lora-adapter",
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/runs/lora_strict_s44/lora_adapter"
+  ],
+  "adopted_at": 1792999003.2620916,
+  "current_sources_at_adoption": {
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/code/model/AnomalyGPT_models.py": "798397f04bf189781b2c445f516dbd548b63d3ac3b70ef236f613edef1209f30",
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/code/utils/loss.py": "80679a2a9cf7eb382cae4083dd401bb0d4dea6bb6a1e3e8501e71abecf0c8071",
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/evaluate_models.py": "41d81f8cff7c42157a5bce8c088c22503eb4a52f1c8e7bbfdf692d08b63d58d2",
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/exact_bf16_ranking.py": "3ca199a34e0391c4e4a96e127d620c87ef7e470225863095bc1b28d52ff8e0f7",
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/train_qwen_matched.py": "29136939ab4befaf2e72265fa39df72fdb9c57bbd8b9626e8ed02132b362de6c",
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/train_vicuna_matched.py": "de77b0e17388949873ceb59ae0c40a682760ef026fc1da3ccf6ad19806285c9d"
+  },
+  "validation": {
+    "kind": "evaluation",
+    "artifacts": {
+      "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/real_evaluations/historical_lora44/metrics.json": "c6de3b83872b994d5890e4459bba16894368ee86d47a5f914c9fef486cee597e",
+      "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/real_evaluations/historical_lora44/run.json": "225757ccd4df79d3afd4a04738c8392f8895ee1d0670925f4b9aaf2c92b25cd1",
+      "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/real_evaluations/historical_lora44/predictions.jsonl": "9f94546b14315769da40f288ed3f192b07b9290bda0a62f030ce8ebaf6e4a985"
+    },
+    "recorded_source_trace": {
+      "runner": {
+        "sha256": "41d81f8cff7c42157a5bce8c088c22503eb4a52f1c8e7bbfdf692d08b63d58d2",
+        "traceable_file": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/evaluate_models.py",
+        "frozen_archive": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/safe_runtime/historical_lora44/adopted-20261026T071643.261406Z/00/evaluate_models.py"
+      }
+    },
+    "num_sources": 2005,
+    "prediction_sha256": "9f94546b14315769da40f288ed3f192b07b9290bda0a62f030ce8ebaf6e4a985"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "best_step": 1500,
+  "best_val_auroc": 0.9046427772808587,
+  "elapsed_seconds": 273.6571156978607,
+  "peak_memory_gb": 16.720956928,
+  "reload_max_abs_score_error": 0.0
+}

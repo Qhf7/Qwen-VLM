@@ -1,0 +1,44 @@
+{
+  "arm": "D",
+  "seed": 42,
+  "steps": 40,
+  "best_step": 0,
+  "initial_val_auroc": 1.0,
+  "best_val_auroc": 1.0,
+  "final_val_auroc": 0.875,
+  "paired_A_max_abs_score_error": null,
+  "reload_max_abs_score_error": 0.0,
+  "zero_adapter_max_abs_logit_error": 0.0,
+  "gradient_audit": [
+    {
+      "step": 1,
+      "norms": {
+        "lora_A": 0.0,
+        "lora_B": 1.5081848190166056,
+        "prompt_learner": 0.4346272026810063,
+        "cls_proj": 0.4534786492586136
+      }
+    },
+    {
+      "step": 2,
+      "norms": {
+        "lora_A": 0.005556896463531302,
+        "lora_B": 0.045425091360812075,
+        "prompt_learner": 0.01195584527158644,
+        "cls_proj": 0.009980443865060806
+      }
+    }
+  ],
+  "frozen_parameter_versions_unchanged": true,
+  "frozen_bridge_unchanged": false,
+  "trainable_parameters": 115448760,
+  "peak_memory_bytes": 18982419968,
+  "train_peak_memory_bytes": 18982419968,
+  "train_seconds": 19.249227046966553,
+  "exposures_per_second": 8.312022067671236,
+  "elapsed_seconds": 46.52566361427307,
+  "first5_mean_loss": 0.04446232263762795,
+  "last5_mean_loss": 7.461042309842014e-05,
+  "preflight": true,
+  "test_queries": 0
+}

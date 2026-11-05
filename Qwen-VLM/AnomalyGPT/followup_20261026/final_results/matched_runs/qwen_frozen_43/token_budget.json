@@ -1,0 +1,572 @@
+{
+  "scheduled_steps": 16,
+  "actual_variant_exposures": 32,
+  "unique_variants": 32,
+  "actual_unique_source_paths": 28,
+  "actual_source_paths": [
+    "../visa_data/candle/Data/Images/Normal/0485.JPG",
+    "../visa_data/candle/Data/Images/Normal/0521.JPG",
+    "../visa_data/candle/Data/Images/Normal/0973.JPG",
+    "../visa_data/capsules/Data/Images/Normal/202.JPG",
+    "../visa_data/capsules/Data/Images/Normal/405.JPG",
+    "../visa_data/cashew/Data/Images/Normal/001.JPG",
+    "../visa_data/cashew/Data/Images/Normal/101.JPG",
+    "../visa_data/chewinggum/Data/Images/Normal/226.JPG",
+    "../visa_data/chewinggum/Data/Images/Normal/439.JPG",
+    "../visa_data/fryum/Data/Images/Normal/215.JPG",
+    "../visa_data/fryum/Data/Images/Normal/279.JPG",
+    "../visa_data/macaroni1/Data/Images/Normal/0471.JPG",
+    "../visa_data/macaroni1/Data/Images/Normal/0731.JPG",
+    "../visa_data/macaroni1/Data/Images/Normal/0860.JPG",
+    "../visa_data/macaroni2/Data/Images/Normal/0461.JPG",
+    "../visa_data/macaroni2/Data/Images/Normal/0695.JPG",
+    "../visa_data/pcb1/Data/Images/Normal/0600.JPG",
+    "../visa_data/pcb1/Data/Images/Normal/0722.JPG",
+    "../visa_data/pcb2/Data/Images/Normal/0234.JPG",
+    "../visa_data/pcb2/Data/Images/Normal/0284.JPG",
+    "../visa_data/pcb3/Data/Images/Normal/0226.JPG",
+    "../visa_data/pcb3/Data/Images/Normal/0978.JPG",
+    "../visa_data/pcb4/Data/Images/Normal/0036.JPG",
+    "../visa_data/pcb4/Data/Images/Normal/0213.JPG",
+    "../visa_data/pcb4/Data/Images/Normal/0947.JPG",
+    "../visa_data/pipe_fryum/Data/Images/Normal/092.JPG",
+    "../visa_data/pipe_fryum/Data/Images/Normal/370.JPG",
+    "../visa_data/pipe_fryum/Data/Images/Normal/448.JPG"
+  ],
+  "class_label_counts": {
+    "candle": {
+      "normal": 3
+    },
+    "capsules": {
+      "positive": 2
+    },
+    "cashew": {
+      "normal": 2
+    },
+    "chewinggum": {
+      "positive": 2
+    },
+    "fryum": {
+      "normal": 2
+    },
+    "macaroni1": {
+      "normal": 2,
+      "positive": 1
+    },
+    "macaroni2": {
+      "normal": 2,
+      "positive": 1
+    },
+    "pcb1": {
+      "normal": 1,
+      "positive": 1
+    },
+    "pcb2": {
+      "normal": 2,
+      "positive": 1
+    },
+    "pcb3": {
+      "normal": 1,
+      "positive": 1
+    },
+    "pcb4": {
+      "normal": 1,
+      "positive": 3
+    },
+    "pipe_fryum": {
+      "normal": 1,
+      "positive": 3
+    }
+  },
+  "exposure_class_label_counts": {
+    "candle": {
+      "normal": 3
+    },
+    "capsules": {
+      "positive": 2
+    },
+    "cashew": {
+      "normal": 2
+    },
+    "chewinggum": {
+      "positive": 2
+    },
+    "fryum": {
+      "normal": 2
+    },
+    "macaroni1": {
+      "normal": 2,
+      "positive": 1
+    },
+    "macaroni2": {
+      "normal": 2,
+      "positive": 1
+    },
+    "pcb1": {
+      "normal": 1,
+      "positive": 1
+    },
+    "pcb2": {
+      "normal": 2,
+      "positive": 1
+    },
+    "pcb3": {
+      "normal": 1,
+      "positive": 1
+    },
+    "pcb4": {
+      "normal": 1,
+      "positive": 3
+    },
+    "pipe_fryum": {
+      "normal": 1,
+      "positive": 3
+    }
+  },
+  "class_variant_counts": {
+    "candle": {
+      "0": 3
+    },
+    "capsules": {
+      "1": 2
+    },
+    "cashew": {
+      "0": 1,
+      "1": 1
+    },
+    "chewinggum": {
+      "1": 2
+    },
+    "fryum": {
+      "0": 1,
+      "1": 1
+    },
+    "macaroni1": {
+      "0": 2,
+      "1": 1
+    },
+    "macaroni2": {
+      "0": 2,
+      "1": 1
+    },
+    "pcb1": {
+      "0": 1,
+      "1": 1
+    },
+    "pcb2": {
+      "0": 2,
+      "1": 1
+    },
+    "pcb3": {
+      "0": 1,
+      "1": 1
+    },
+    "pcb4": {
+      "0": 1,
+      "1": 3
+    },
+    "pipe_fryum": {
+      "0": 1,
+      "1": 3
+    }
+  },
+  "normal_vs_positive_mask_count": {
+    "normal": 17,
+    "positive": 15
+  },
+  "exposure_normal_vs_positive_mask_count": {
+    "normal": 17,
+    "positive": 15
+  },
+  "label_definition": "mask > 0.3 contains at least one positive pixel; independent of nominal variant",
+  "max_tgt_len": 128,
+  "truncated_assistant_records": [],
+  "supervised_tokens_by_file": {
+    "00001_0.pt": 11,
+    "00002_0.pt": 11,
+    "00003_0.pt": 11,
+    "00005_1.pt": 24,
+    "00007_1.pt": 21,
+    "00008_0.pt": 11,
+    "00009_1.pt": 19,
+    "00012_1.pt": 22,
+    "00015_1.pt": 18,
+    "00016_1.pt": 19,
+    "00017_0.pt": 11,
+    "00020_0.pt": 11,
+    "00021_1.pt": 18,
+    "00022_0.pt": 11,
+    "00025_0.pt": 11,
+    "00025_1.pt": 23,
+    "00027_0.pt": 11,
+    "00029_0.pt": 11,
+    "00030_1.pt": 23,
+    "00033_0.pt": 11,
+    "00033_1.pt": 19,
+    "00034_0.pt": 11,
+    "00036_1.pt": 18,
+    "00039_0.pt": 11,
+    "00040_0.pt": 11,
+    "00040_1.pt": 19,
+    "00042_1.pt": 21,
+    "00043_1.pt": 18,
+    "00044_1.pt": 18,
+    "00045_0.pt": 11,
+    "00045_1.pt": 21,
+    "00046_1.pt": 24
+  },
+  "tokens_and_sources_by_file": {
+    "00001_0.pt": {
+      "retained_supervised_tokens": 11,
+      "full_supervised_tokens": 11,
+      "full_sequence_tokens": 55,
+      "retained_sequence_tokens": 55,
+      "source_path": "../visa_data/candle/Data/Images/Normal/0485.JPG",
+      "class_name": "candle",
+      "variant": 0,
+      "positive_mask": false,
+      "exposures": 1
+    },
+    "00002_0.pt": {
+      "retained_supervised_tokens": 11,
+      "full_supervised_tokens": 11,
+      "full_sequence_tokens": 55,
+      "retained_sequence_tokens": 55,
+      "source_path": "../visa_data/candle/Data/Images/Normal/0521.JPG",
+      "class_name": "candle",
+      "variant": 0,
+      "positive_mask": false,
+      "exposures": 1
+    },
+    "00003_0.pt": {
+      "retained_supervised_tokens": 11,
+      "full_supervised_tokens": 11,
+      "full_sequence_tokens": 55,
+      "retained_sequence_tokens": 55,
+      "source_path": "../visa_data/candle/Data/Images/Normal/0973.JPG",
+      "class_name": "candle",
+      "variant": 0,
+      "positive_mask": false,
+      "exposures": 1
+    },
+    "00005_1.pt": {
+      "retained_supervised_tokens": 24,
+      "full_supervised_tokens": 24,
+      "full_sequence_tokens": 69,
+      "retained_sequence_tokens": 69,
+      "source_path": "../visa_data/capsules/Data/Images/Normal/202.JPG",
+      "class_name": "capsules",
+      "variant": 1,
+      "positive_mask": true,
+      "exposures": 1
+    },
+    "00007_1.pt": {
+      "retained_supervised_tokens": 21,
+      "full_supervised_tokens": 21,
+      "full_sequence_tokens": 66,
+      "retained_sequence_tokens": 66,
+      "source_path": "../visa_data/capsules/Data/Images/Normal/405.JPG",
+      "class_name": "capsules",
+      "variant": 1,
+      "positive_mask": true,
+      "exposures": 1
+    },
+    "00008_0.pt": {
+      "retained_supervised_tokens": 11,
+      "full_supervised_tokens": 11,
+      "full_sequence_tokens": 52,
+      "retained_sequence_tokens": 52,
+      "source_path": "../visa_data/cashew/Data/Images/Normal/001.JPG",
+      "class_name": "cashew",
+      "variant": 0,
+      "positive_mask": false,
+      "exposures": 1
+    },
+    "00009_1.pt": {
+      "retained_supervised_tokens": 19,
+      "full_supervised_tokens": 19,
+      "full_sequence_tokens": 60,
+      "retained_sequence_tokens": 60,
+      "source_path": "../visa_data/cashew/Data/Images/Normal/101.JPG",
+      "class_name": "cashew",
+      "variant": 1,
+      "positive_mask": false,
+      "exposures": 1
+    },
+    "00012_1.pt": {
+      "retained_supervised_tokens": 22,
+      "full_supervised_tokens": 22,
+      "full_sequence_tokens": 65,
+      "retained_sequence_tokens": 65,
+      "source_path": "../visa_data/chewinggum/Data/Images/Normal/226.JPG",
+      "class_name": "chewinggum",
+      "variant": 1,
+      "positive_mask": true,
+      "exposures": 1
+    },
+    "00015_1.pt": {
+      "retained_supervised_tokens": 18,
+      "full_supervised_tokens": 18,
+      "full_sequence_tokens": 61,
+      "retained_sequence_tokens": 61,
+      "source_path": "../visa_data/chewinggum/Data/Images/Normal/439.JPG",
+      "class_name": "chewinggum",
+      "variant": 1,
+      "positive_mask": true,
+      "exposures": 1
+    },
+    "00016_1.pt": {
+      "retained_supervised_tokens": 19,
+      "full_supervised_tokens": 19,
+      "full_sequence_tokens": 63,
+      "retained_sequence_tokens": 63,
+      "source_path": "../visa_data/fryum/Data/Images/Normal/215.JPG",
+      "class_name": "fryum",
+      "variant": 1,
+      "positive_mask": false,
+      "exposures": 1
+    },
+    "00017_0.pt": {
+      "retained_supervised_tokens": 11,
+      "full_supervised_tokens": 11,
+      "full_sequence_tokens": 55,
+      "retained_sequence_tokens": 55,
+      "source_path": "../visa_data/fryum/Data/Images/Normal/279.JPG",
+      "class_name": "fryum",
+      "variant": 0,
+      "positive_mask": false,
+      "exposures": 1
+    },
+    "00020_0.pt": {
+      "retained_supervised_tokens": 11,
+      "full_supervised_tokens": 11,
+      "full_sequence_tokens": 54,
+      "retained_sequence_tokens": 54,
+      "source_path": "../visa_data/macaroni1/Data/Images/Normal/0471.JPG",
+      "class_name": "macaroni1",
+      "variant": 0,
+      "positive_mask": false,
+      "exposures": 1
+    },
+    "00021_1.pt": {
+      "retained_supervised_tokens": 18,
+      "full_supervised_tokens": 18,
+      "full_sequence_tokens": 61,
+      "retained_sequence_tokens": 61,
+      "source_path": "../visa_data/macaroni1/Data/Images/Normal/0731.JPG",
+      "class_name": "macaroni1",
+      "variant": 1,
+      "positive_mask": true,
+      "exposures": 1
+    },
+    "00022_0.pt": {
+      "retained_supervised_tokens": 11,
+      "full_supervised_tokens": 11,
+      "full_sequence_tokens": 54,
+      "retained_sequence_tokens": 54,
+      "source_path": "../visa_data/macaroni1/Data/Images/Normal/0860.JPG",
+      "class_name": "macaroni1",
+      "variant": 0,
+      "positive_mask": false,
+      "exposures": 1
+    },
+    "00025_0.pt": {
+      "retained_supervised_tokens": 11,
+      "full_supervised_tokens": 11,
+      "full_sequence_tokens": 54,
+      "retained_sequence_tokens": 54,
+      "source_path": "../visa_data/macaroni2/Data/Images/Normal/0461.JPG",
+      "class_name": "macaroni2",
+      "variant": 0,
+      "positive_mask": false,
+      "exposures": 1
+    },
+    "00025_1.pt": {
+      "retained_supervised_tokens": 23,
+      "full_supervised_tokens": 23,
+      "full_sequence_tokens": 66,
+      "retained_sequence_tokens": 66,
+      "source_path": "../visa_data/macaroni2/Data/Images/Normal/0461.JPG",
+      "class_name": "macaroni2",
+      "variant": 1,
+      "positive_mask": true,
+      "exposures": 1
+    },
+    "00027_0.pt": {
+      "retained_supervised_tokens": 11,
+      "full_supervised_tokens": 11,
+      "full_sequence_tokens": 54,
+      "retained_sequence_tokens": 54,
+      "source_path": "../visa_data/macaroni2/Data/Images/Normal/0695.JPG",
+      "class_name": "macaroni2",
+      "variant": 0,
+      "positive_mask": false,
+      "exposures": 1
+    },
+    "00029_0.pt": {
+      "retained_supervised_tokens": 11,
+      "full_supervised_tokens": 11,
+      "full_sequence_tokens": 50,
+      "retained_sequence_tokens": 50,
+      "source_path": "../visa_data/pcb1/Data/Images/Normal/0600.JPG",
+      "class_name": "pcb1",
+      "variant": 0,
+      "positive_mask": false,
+      "exposures": 1
+    },
+    "00030_1.pt": {
+      "retained_supervised_tokens": 23,
+      "full_supervised_tokens": 23,
+      "full_sequence_tokens": 62,
+      "retained_sequence_tokens": 62,
+      "source_path": "../visa_data/pcb1/Data/Images/Normal/0722.JPG",
+      "class_name": "pcb1",
+      "variant": 1,
+      "positive_mask": true,
+      "exposures": 1
+    },
+    "00033_0.pt": {
+      "retained_supervised_tokens": 11,
+      "full_supervised_tokens": 11,
+      "full_sequence_tokens": 50,
+      "retained_sequence_tokens": 50,
+      "source_path": "../visa_data/pcb2/Data/Images/Normal/0234.JPG",
+      "class_name": "pcb2",
+      "variant": 0,
+      "positive_mask": false,
+      "exposures": 1
+    },
+    "00033_1.pt": {
+      "retained_supervised_tokens": 19,
+      "full_supervised_tokens": 19,
+      "full_sequence_tokens": 58,
+      "retained_sequence_tokens": 58,
+      "source_path": "../visa_data/pcb2/Data/Images/Normal/0234.JPG",
+      "class_name": "pcb2",
+      "variant": 1,
+      "positive_mask": true,
+      "exposures": 1
+    },
+    "00034_0.pt": {
+      "retained_supervised_tokens": 11,
+      "full_supervised_tokens": 11,
+      "full_sequence_tokens": 50,
+      "retained_sequence_tokens": 50,
+      "source_path": "../visa_data/pcb2/Data/Images/Normal/0284.JPG",
+      "class_name": "pcb2",
+      "variant": 0,
+      "positive_mask": false,
+      "exposures": 1
+    },
+    "00036_1.pt": {
+      "retained_supervised_tokens": 18,
+      "full_supervised_tokens": 18,
+      "full_sequence_tokens": 57,
+      "retained_sequence_tokens": 57,
+      "source_path": "../visa_data/pcb3/Data/Images/Normal/0226.JPG",
+      "class_name": "pcb3",
+      "variant": 1,
+      "positive_mask": true,
+      "exposures": 1
+    },
+    "00039_0.pt": {
+      "retained_supervised_tokens": 11,
+      "full_supervised_tokens": 11,
+      "full_sequence_tokens": 50,
+      "retained_sequence_tokens": 50,
+      "source_path": "../visa_data/pcb3/Data/Images/Normal/0978.JPG",
+      "class_name": "pcb3",
+      "variant": 0,
+      "positive_mask": false,
+      "exposures": 1
+    },
+    "00040_0.pt": {
+      "retained_supervised_tokens": 11,
+      "full_supervised_tokens": 11,
+      "full_sequence_tokens": 50,
+      "retained_sequence_tokens": 50,
+      "source_path": "../visa_data/pcb4/Data/Images/Normal/0036.JPG",
+      "class_name": "pcb4",
+      "variant": 0,
+      "positive_mask": false,
+      "exposures": 1
+    },
+    "00040_1.pt": {
+      "retained_supervised_tokens": 19,
+      "full_supervised_tokens": 19,
+      "full_sequence_tokens": 58,
+      "retained_sequence_tokens": 58,
+      "source_path": "../visa_data/pcb4/Data/Images/Normal/0036.JPG",
+      "class_name": "pcb4",
+      "variant": 1,
+      "positive_mask": true,
+      "exposures": 1
+    },
+    "00042_1.pt": {
+      "retained_supervised_tokens": 21,
+      "full_supervised_tokens": 21,
+      "full_sequence_tokens": 60,
+      "retained_sequence_tokens": 60,
+      "source_path": "../visa_data/pcb4/Data/Images/Normal/0213.JPG",
+      "class_name": "pcb4",
+      "variant": 1,
+      "positive_mask": true,
+      "exposures": 1
+    },
+    "00043_1.pt": {
+      "retained_supervised_tokens": 18,
+      "full_supervised_tokens": 18,
+      "full_sequence_tokens": 57,
+      "retained_sequence_tokens": 57,
+      "source_path": "../visa_data/pcb4/Data/Images/Normal/0947.JPG",
+      "class_name": "pcb4",
+      "variant": 1,
+      "positive_mask": true,
+      "exposures": 1
+    },
+    "00044_1.pt": {
+      "retained_supervised_tokens": 18,
+      "full_supervised_tokens": 18,
+      "full_sequence_tokens": 60,
+      "retained_sequence_tokens": 60,
+      "source_path": "../visa_data/pipe_fryum/Data/Images/Normal/092.JPG",
+      "class_name": "pipe_fryum",
+      "variant": 1,
+      "positive_mask": true,
+      "exposures": 1
+    },
+    "00045_0.pt": {
+      "retained_supervised_tokens": 11,
+      "full_supervised_tokens": 11,
+      "full_sequence_tokens": 53,
+      "retained_sequence_tokens": 53,
+      "source_path": "../visa_data/pipe_fryum/Data/Images/Normal/370.JPG",
+      "class_name": "pipe_fryum",
+      "variant": 0,
+      "positive_mask": false,
+      "exposures": 1
+    },
+    "00045_1.pt": {
+      "retained_supervised_tokens": 21,
+      "full_supervised_tokens": 21,
+      "full_sequence_tokens": 63,
+      "retained_sequence_tokens": 63,
+      "source_path": "../visa_data/pipe_fryum/Data/Images/Normal/370.JPG",
+      "class_name": "pipe_fryum",
+      "variant": 1,
+      "positive_mask": true,
+      "exposures": 1
+    },
+    "00046_1.pt": {
+      "retained_supervised_tokens": 24,
+      "full_supervised_tokens": 24,
+      "full_sequence_tokens": 66,
+      "retained_sequence_tokens": 66,
+      "source_path": "../visa_data/pipe_fryum/Data/Images/Normal/448.JPG",
+      "class_name": "pipe_fryum",
+      "variant": 1,
+      "positive_mask": true,
+      "exposures": 1
+    }
+  }
+}

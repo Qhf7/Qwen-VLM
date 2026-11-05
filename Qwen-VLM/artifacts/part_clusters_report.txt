@@ -1,0 +1,35 @@
+==============================================================================
+视觉近重复组审计（防泄漏代理，不宣称是真实物理 ID）
+==============================================================================
+样本目录 5971，视觉组 4231
+
+类别                         目录数  视觉组  最大组  单例组
+3_adapter                       249     149       5      98
+PLCC_socket                     250     178       4     126
+accurate_detection_switch       247     171       4     120
+audio_jack_socket               250     184       4     141
+balun_transformer               248     138       5      82
+battery_holder_connector        247     165       4     110
+battery_socket_connector        250     188       4     143
+blade_switch                    250     206       3     173
+boost_converter_module          248     237       3     228
+ceramic_fuse                    250     188       5     151
+ceramic_wave_filter             249     140       5      85
+detection_switch                250     217       3     192
+jam_jar_model                   249     123       5      64
+knob_cap                        249     181       5     139
+lilypad_led                     248     149       5      93
+miniature_laser_module          242     130       5      77
+mobile_charging_connector       250     190       4     150
+multi_function_switch           250     186       4     141
+nylon_ball_head                 250     159       5     107
+pneumatic_elbow                 250     241       2     232
+side_press_switch               247     208       3     178
+silicon_cell_sensor             250     149       5      96
+slide_switch                    249     175       4     131
+smd_receiver_module             249     179       4     131
+
+解释：视觉组必须整体进入 train/dev/holdout 中的一个集合。
+若某类只有一个巨型组，则无法同时得到无近重复泄漏的 train 与 dev；
+拆分脚本会明确将该类标记为 dev-unsplittable，而不是偷偷按 S 号拆开。
+==============================================================================

@@ -1,0 +1,29 @@
+{
+  "scope": "Final main experiment and intervention complete; large tensors remain remote; diagnostic NPZ separately retained locally",
+  "archives": [
+    {
+      "archive": "/Users/qiaohongfei/Desktop/实习/阿里云天池比赛vlm/AnomalyGPT/followup_20261026/local_archives/final_results_20261026T115613Z.tar.gz",
+      "manifest": "/Users/qiaohongfei/Desktop/实习/阿里云天池比赛vlm/AnomalyGPT/followup_20261026/local_archives/final_results_20261026T115613Z.manifest.json",
+      "archive_sha256": "4ad000d4b768bb06dfc14fa102d752636db51f1c77fd094d2584703f69df8cc1",
+      "included_file_count": 367,
+      "large_files_retained": 144,
+      "pipeline_running": null
+    },
+    {
+      "archive": "/Users/qiaohongfei/Desktop/实习/阿里云天池比赛vlm/AnomalyGPT/followup_20261026/local_archives/final_code_20261026T115613Z.tar.gz",
+      "manifest": "/Users/qiaohongfei/Desktop/实习/阿里云天池比赛vlm/AnomalyGPT/followup_20261026/local_archives/final_code_20261026T115613Z.manifest.json",
+      "archive_sha256": "f5976b8bbe90501d774325b665f16024ed4d40ada37ca44f513ac933713d4a01",
+      "included_file_count": 23,
+      "large_files_retained": 0,
+      "pipeline_running": null
+    },
+    {
+      "archive": "/Users/qiaohongfei/Desktop/实习/阿里云天池比赛vlm/AnomalyGPT/followup_20261026/local_archives/final_documents_20261026T115613Z.tar.gz",
+      "manifest": "/Users/qiaohongfei/Desktop/实习/阿里云天池比赛vlm/AnomalyGPT/followup_20261026/local_archives/final_documents_20261026T115613Z.manifest.json",
+      "archive_sha256": "7b3359c52d0bd9db3988ffaac72b07af0a69ccc9110f68358160c8d323bcc694",
+      "included_file_count": 18,
+      "large_files_retained": 0,
+      "pipeline_running": null
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-05",
+  "project": "Qwen3-VL industrial anomaly adaptation and post-training",
+  "package": "Qwen-VLM",
+  "operation": "copy existing project; adapt delivery documentation; retain source files; publish project-only Git tree",
+  "scope": {
+    "payload_files_excluding_audit_and_manifest": 2661,
+    "payload_bytes_excluding_audit_and_manifest": 545468927,
+    "total_delivered_files_including_audit_and_manifest": 2663,
+    "manifest_excludes": "DELIVERY_MANIFEST.tsv only",
+    "source_paths": "relative to original workspace; no private absolute root required"
+  },
+  "copy_integrity": {
+    "copied_source_files": 2658,
+    "unchanged_source_copies": 2648,
+    "missing_copies": [],
+    "adapted_documents_and_inventory": [
+      {
+        "path": "docs/Anomaly-VL_v2框架设计.md",
+        "source_sha256": "7772654fae732b38433d1425ce5addb7561465075df5853a27b422c06e5105b6",
+        "delivered_sha256": "79ea97ef57e16083d58d9d80b2f0a05e73acf0c14e103158d8de256e83bd0ecf"
+      },
+      {
+        "path": "docs/Qwen3-VL多模态适配与后训练优化_项目全程精读.md",
+        "source_sha256": "ca7ac01cb064052944eca53bfc04bec7c1a75193acfc78aa38f6cef25f5d0c41",
+        "delivered_sha256": "14df94e0d9f19e4df8d6335a4275bac6fc11a36e8874f6b4b280e88ca77b9ece"
+      },
+      {
+        "path": "docs/Qwen_LoRA_项目实现步骤详解.md",
+        "source_sha256": "1e17ab0b560729728dc2c4252759b693790ec1378ab5648491f844143b75ffba",
+        "delivered_sha256": "5add9bc974555a93d38f62299e0fe990b7a50a521e25d4aa7a5b640ccac8b1be"
+      },
+      {
+        "path": "docs/仓库同步说明.md",
+        "source_sha256": "8d4798cd4a60f80eaa22a9040fdb088f6731362d550e1c19dcccbd64cae6724c",
+        "delivered_sha256": "cea08633ac54cdf5b87fe4b75a576fea4d5211b8ddfc376c979840c4418f5e52"
+      },
+      {
+        "path": "docs/工业异常检测多模态项目_工作总结与简历详解.md",
+        "source_sha256": "c0d311469e3b0693d83b8cd27c5b8d50e93604de1d8f70030124a767702579d6",
+        "delivered_sha256": "4d1668cd62b8c065329fd6c096cee917c4928cc12bfc3944e307031683e964f0"
+      },
+      {
+        "path": "docs/项目精读附录_代码与文件索引.md",
+        "source_sha256": "b11cfd61f38f6edf1684dcd1032ccee980d2d4924e40df6c01dad8ed6f0e078e",
+        "delivered_sha256": "e25ec421e300d272a6c773684a0908157d2bcdb1659e3af2afa59890aab4268a"
+      },
+      {
+        "path": "docs/项目精读附录_前期路线核查.md",
+        "source_sha256": "6301f8aa49b65a6a44fd9b53f8a96364f6313e6aa9b27a71d3ca91af8eede66b",
+        "delivered_sha256": "6f34d0f13fa4c7f22041711b0ca682760539a5f9b8c96c0db5070453cf1a25ee"
+      },
+      {
+        "path": "industrial_vlm/reports/multitask_v2/实验报告.md",
+        "source_sha256": "045500488c55d103841d13e69f162b85152ad0d14f30376581c54f946a683d84",
+        "delivered_sha256": "561bf132023bfff74b13c7aa379c0554ad7a6d90ea46827777cad2ceb83ff06d"
+      },
+      {
+        "path": "AnomalyGPT/code/README.md",
+        "source_sha256": "b3434af772a297c3c3b5a54941449a1db495737f5987b1dc26f1afe04ff29fb6",
+        "delivered_sha256": "78c34dcd237e16d2a1d3286e89d93869146467c3132d79afbbb0269d68b5baf1"
+      },
+      {
+        "path": "THIRD_PARTY.md",
+        "source_sha256": "0b18801d0fb709db578c77bb3cea3b96fb1679a32d8f7740b88ab17948e2ea6e",
+        "delivered_sha256": "6a8e50fdeb4985713ebd4d4513512843ae4ef1ca04fd76d50e9f442846737711"
+      }
+    ],
+    "all_non_document_copies_byte_identical": true,
+    "original_local_files_retained": true
+  },
+  "source_config_inventory": {
+    "original_entries": 509,
+    "delivered_entries": 508,
+    "all_delivered_sha256_match_original": true,
+    "excluded": [
+      {
+        "path": "build_report.py",
+        "reason": "standalone paper-reading report generator; unrelated to model experiments"
+      }
+    ]
+  },
+  "critical_runtime_files": {
+    "checked": [
+      "seg_cross_part/winclip_b2.py",
+      "industrial_vlm/src/industrial_vlm/train.py",
+      "repair_20261103/code/visa_pipeline.py",
+      "migration_20261103/code/migration_language.py",
+      "migration_20261103/lora_20261104/migration_lora_train.py",
+      "migration_20261103/advanced_20261104/migration_advanced_train.py",
+      "migration_20261103/advanced_20261104/structured_train.py",
+      "migration_20261103/advanced_20261104/evaluate_external_checkpoint.py",
+      "migration_20261103/advanced_20261104/final_evidence_audit.py",
+      "AnomalyGPT/followup_20261026/server_snapshot/code/model/ImageBind/models/imagebind_model.py",
+      "AnomalyGPT/followup_20261026/server_snapshot/LICENSE",
+      "AnomalyGPT/followup_20261026/server_snapshot/code/model/ImageBind/LICENSE",
+      "AnomalyGPT/code/code/model/ImageBind/bpe/bpe_simple_vocab_16e6.txt.gz"
+    ],
+    "all_present": true,
+    "imagebind_bpe_location_note": "BPE present in AnomalyGPT/code runtime copy; server_snapshot does not contain BPE; prepare matching runtime layout."
+  },
+  "markdown_link_check": {
+    "markdown_files_scanned_including_root_readme": 177,
+    "local_targets_checked": 1435,
+    "unresolved_local_paths": [],
+    "scope": "inline/reference/image links outside fenced code; URL fragments and external URLs not validated"
+  },
+  "security_review": {
+    "independent_utf8_text_files_scanned": 2541,
+    "patterns": [
+      "API tokens and credentials",
+      "private-key blocks",
+      "URL credentials",
+      "password/SSH assignments",
+      "JSON key/password literals; tokenizer vocabulary hits reviewed"
+    ],
+    "finding": "No hardcoded credential values found in reviewed package. Tokenizer vocabulary and audit filter-list matches were not credentials.",
+    "prohibited_asset_paths_found": [],
+    "raw_sessions_included": false,
+    "model_tensor_weights_included": false,
+    "raw_image_datasets_included": false
+  },
+  "omitted_asset_categories": [
+    "original conversations and authentication files",
+    "full datasets and large source instruction corpus",
+    "model/adapter tensors and tensor caches",
+    "environments/system cache",
+    "raw .log files and duplicate archives",
+    "standalone paper libraries/translations/clones"
+  ],
+  "verification_limits": [
+    "No new training, inference or external evaluation was run for packaging.",
+    "Checkpoint tensor, base weights and cache identities are historical records; this local audit does not reload them.",
+    "Model environments differ by route; prepare external assets and new output paths before executing historical scripts.",
+    "Only the current Git tree is cleaned; commit history is retained."
+  ]
+}

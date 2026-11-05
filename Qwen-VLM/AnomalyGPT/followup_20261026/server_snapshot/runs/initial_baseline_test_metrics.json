@@ -1,0 +1,10 @@
+{
+  "num_variants": 16,
+  "mean_combined_loss": 3.088832348585129,
+  "mean_batch_token_acc": 0.6473442714126807,
+  "pixel_auroc": 0.8749391242363834,
+  "pixel_ap": 0.6717916324757308,
+  "seconds": 2.774077892303467,
+  "cache": "../cache_visa_test8",
+  "checkpoint": "../ckpt/train_visa/pytorch_model.pt"
+}

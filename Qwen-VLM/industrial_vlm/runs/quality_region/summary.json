@@ -1,0 +1,21 @@
+{
+  "status": "complete",
+  "optimizer_steps": 96,
+  "microsteps": 768,
+  "last_train_loss": 0.47725963592529297,
+  "total_target_tokens": 16506,
+  "total_input_tokens": 453498,
+  "train_wall_seconds_including_validation": 430.847376562655,
+  "trainable_parameters": 15335424,
+  "peak_allocated_gib": 8.394511699676514,
+  "peak_reserved_gib": 8.51171875,
+  "adapter": "/root/autodl-tmp/industrial_vlm/runs/quality_region/adapter",
+  "reload_check": {
+    "passed": true,
+    "max_absolute_logit_difference": 0.0,
+    "same_top1": true,
+    "rtol": 0.001,
+    "atol": 0.001,
+    "scope": "first-sample prompt final-token logits; fresh base + saved adapter"
+  }
+}

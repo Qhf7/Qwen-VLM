@@ -1,0 +1,364 @@
+{
+  "num_sources": 2005,
+  "generation": {
+    "macro_f1": 0.42905258629960213,
+    "accuracy": 0.5047381546134664,
+    "anomaly_recall": 0.13055555555555556,
+    "normal_recall": 0.9416216216216217,
+    "normal_fpr": 0.05837837837837838,
+    "invalid_rate": 0.0,
+    "n_normal": 925,
+    "n_anomaly": 1080
+  },
+  "candidate_classification": {
+    "macro_f1": 0.42905258629960213,
+    "accuracy": 0.5047381546134664,
+    "anomaly_recall": 0.13055555555555556,
+    "normal_recall": 0.9416216216216217,
+    "normal_fpr": 0.05837837837837838,
+    "invalid_rate": 0.0,
+    "n_normal": 925,
+    "n_anomaly": 1080
+  },
+  "map_image": {
+    "auroc": 0.7076161161161161,
+    "ap": 0.7393961876328077
+  },
+  "answer_image": {
+    "auroc": 0.5845,
+    "ap": 0.6310879928463633
+  },
+  "per_class": {
+    "candle": {
+      "num_sources": 186,
+      "generation": {
+        "macro_f1": 0.36459627329192545,
+        "accuracy": 0.5268817204301075,
+        "anomaly_recall": 0.022222222222222223,
+        "normal_recall": 1.0,
+        "normal_fpr": 0.0,
+        "invalid_rate": 0.0,
+        "n_normal": 96,
+        "n_anomaly": 90
+      },
+      "pixel": {
+        "auroc": 0.8985172116879646,
+        "ap": 0.18249070717596466
+      },
+      "map_image": {
+        "auroc": 0.7886574074074074,
+        "ap": 0.7890497284294546
+      },
+      "answer_image": {
+        "auroc": 0.6085648148148148,
+        "ap": 0.6105322278152463
+      }
+    },
+    "capsules": {
+      "num_sources": 147,
+      "generation": {
+        "macro_f1": 0.46369133889749614,
+        "accuracy": 0.5034013605442177,
+        "anomaly_recall": 0.18888888888888888,
+        "normal_recall": 1.0,
+        "normal_fpr": 0.0,
+        "invalid_rate": 0.0,
+        "n_normal": 57,
+        "n_anomaly": 90
+      },
+      "pixel": {
+        "auroc": 0.9235083397487179,
+        "ap": 0.28386393862996856
+      },
+      "map_image": {
+        "auroc": 0.745906432748538,
+        "ap": 0.8576216557720695
+      },
+      "answer_image": {
+        "auroc": 0.6973684210526316,
+        "ap": 0.8079551515956362
+      }
+    },
+    "cashew": {
+      "num_sources": 134,
+      "generation": {
+        "macro_f1": 0.36190476190476195,
+        "accuracy": 0.40298507462686567,
+        "anomaly_recall": 0.1111111111111111,
+        "normal_recall": 1.0,
+        "normal_fpr": 0.0,
+        "invalid_rate": 0.0,
+        "n_normal": 44,
+        "n_anomaly": 90
+      },
+      "pixel": {
+        "auroc": 0.8729364838403044,
+        "ap": 0.27507411171731727
+      },
+      "map_image": {
+        "auroc": 0.8897727272727274,
+        "ap": 0.944792692314742
+      },
+      "answer_image": {
+        "auroc": 0.7333333333333333,
+        "ap": 0.8552322294350705
+      }
+    },
+    "chewinggum": {
+      "num_sources": 137,
+      "generation": {
+        "macro_f1": 0.3594805194805195,
+        "accuracy": 0.40875912408759124,
+        "anomaly_recall": 0.1,
+        "normal_recall": 1.0,
+        "normal_fpr": 0.0,
+        "invalid_rate": 0.0,
+        "n_normal": 47,
+        "n_anomaly": 90
+      },
+      "pixel": {
+        "auroc": 0.9730151104873639,
+        "ap": 0.5158423598764961
+      },
+      "map_image": {
+        "auroc": 0.9256501182033098,
+        "ap": 0.9674803125880028
+      },
+      "answer_image": {
+        "auroc": 0.7022458628841608,
+        "ap": 0.8346275625997664
+      }
+    },
+    "fryum": {
+      "num_sources": 138,
+      "generation": {
+        "macro_f1": 0.4891114982578397,
+        "accuracy": 0.5072463768115942,
+        "anomaly_recall": 0.24444444444444444,
+        "normal_recall": 1.0,
+        "normal_fpr": 0.0,
+        "invalid_rate": 0.0,
+        "n_normal": 48,
+        "n_anomaly": 90
+      },
+      "pixel": {
+        "auroc": 0.8875025594338009,
+        "ap": 0.25607773539832357
+      },
+      "map_image": {
+        "auroc": 0.881712962962963,
+        "ap": 0.9413062571472491
+      },
+      "answer_image": {
+        "auroc": 0.6325231481481483,
+        "ap": 0.8098696330121088
+      }
+    },
+    "macaroni1": {
+      "num_sources": 187,
+      "generation": {
+        "macro_f1": 0.37745379405349555,
+        "accuracy": 0.5347593582887701,
+        "anomaly_recall": 0.03333333333333333,
+        "normal_recall": 1.0,
+        "normal_fpr": 0.0,
+        "invalid_rate": 0.0,
+        "n_normal": 97,
+        "n_anomaly": 90
+      },
+      "pixel": {
+        "auroc": 0.9631962541515097,
+        "ap": 0.06973486607696429
+      },
+      "map_image": {
+        "auroc": 0.8380297823596793,
+        "ap": 0.8506515565874561
+      },
+      "answer_image": {
+        "auroc": 0.6202176403207331,
+        "ap": 0.6236500538928577
+      }
+    },
+    "macaroni2": {
+      "num_sources": 188,
+      "generation": {
+        "macro_f1": 0.36426156008966903,
+        "accuracy": 0.526595744680851,
+        "anomaly_recall": 0.022222222222222223,
+        "normal_recall": 0.9897959183673469,
+        "normal_fpr": 0.01020408163265306,
+        "invalid_rate": 0.0,
+        "n_normal": 98,
+        "n_anomaly": 90
+      },
+      "pixel": {
+        "auroc": 0.8913890544849462,
+        "ap": 0.019281246930961532
+      },
+      "map_image": {
+        "auroc": 0.6501700680272109,
+        "ap": 0.6400701454494129
+      },
+      "answer_image": {
+        "auroc": 0.5003968253968254,
+        "ap": 0.5098185469893581
+      }
+    },
+    "pcb1": {
+      "num_sources": 188,
+      "generation": {
+        "macro_f1": 0.28111508572838284,
+        "accuracy": 0.3404255319148936,
+        "anomaly_recall": 0.05555555555555555,
+        "normal_recall": 0.6020408163265306,
+        "normal_fpr": 0.3979591836734694,
+        "invalid_rate": 0.0,
+        "n_normal": 98,
+        "n_anomaly": 90
+      },
+      "pixel": {
+        "auroc": 0.8329206781170064,
+        "ap": 0.032875643465004545
+      },
+      "map_image": {
+        "auroc": 0.45266439909297057,
+        "ap": 0.5113322224720342
+      },
+      "answer_image": {
+        "auroc": 0.347562358276644,
+        "ap": 0.38861367763634985
+      }
+    },
+    "pcb2": {
+      "num_sources": 187,
+      "generation": {
+        "macro_f1": 0.5040120866207823,
+        "accuracy": 0.5775401069518716,
+        "anomaly_recall": 0.2,
+        "normal_recall": 0.9278350515463918,
+        "normal_fpr": 0.07216494845360824,
+        "invalid_rate": 0.0,
+        "n_normal": 97,
+        "n_anomaly": 90
+      },
+      "pixel": {
+        "auroc": 0.9021903310312775,
+        "ap": 0.03646963359514011
+      },
+      "map_image": {
+        "auroc": 0.6119129438717068,
+        "ap": 0.6370365102815292
+      },
+      "answer_image": {
+        "auroc": 0.6238831615120275,
+        "ap": 0.6310276475125698
+      }
+    },
+    "pcb3": {
+      "num_sources": 189,
+      "generation": {
+        "macro_f1": 0.44286917462099945,
+        "accuracy": 0.5555555555555556,
+        "anomaly_recall": 0.1111111111111111,
+        "normal_recall": 0.9595959595959596,
+        "normal_fpr": 0.04040404040404041,
+        "invalid_rate": 0.0,
+        "n_normal": 99,
+        "n_anomaly": 90
+      },
+      "pixel": {
+        "auroc": 0.8766873951535349,
+        "ap": 0.061452602251150464
+      },
+      "map_image": {
+        "auroc": 0.6380471380471381,
+        "ap": 0.6163768502970606
+      },
+      "answer_image": {
+        "auroc": 0.4712682379349046,
+        "ap": 0.5022722424083644
+      }
+    },
+    "pcb4": {
+      "num_sources": 187,
+      "generation": {
+        "macro_f1": 0.545748987854251,
+        "accuracy": 0.6149732620320856,
+        "anomaly_recall": 0.23333333333333334,
+        "normal_recall": 0.9690721649484536,
+        "normal_fpr": 0.030927835051546393,
+        "invalid_rate": 0.0,
+        "n_normal": 97,
+        "n_anomaly": 90
+      },
+      "pixel": {
+        "auroc": 0.8506857427471969,
+        "ap": 0.04687497026471723
+      },
+      "map_image": {
+        "auroc": 0.8265177548682703,
+        "ap": 0.805780608087252
+      },
+      "answer_image": {
+        "auroc": 0.7060137457044674,
+        "ap": 0.7087740197864303
+      }
+    },
+    "pipe_fryum": {
+      "num_sources": 137,
+      "generation": {
+        "macro_f1": 0.4865520282186949,
+        "accuracy": 0.5036496350364964,
+        "anomaly_recall": 0.24444444444444444,
+        "normal_recall": 1.0,
+        "normal_fpr": 0.0,
+        "invalid_rate": 0.0,
+        "n_normal": 47,
+        "n_anomaly": 90
+      },
+      "pixel": {
+        "auroc": 0.9643308609183868,
+        "ap": 0.42691357305224237
+      },
+      "map_image": {
+        "auroc": 0.9063829787234042,
+        "ap": 0.9574303192375067
+      },
+      "answer_image": {
+        "auroc": 0.650709219858156,
+        "ap": 0.8244350029493701
+      }
+    }
+  },
+  "category_macro": {
+    "pixel": {
+      "auroc": 0.9030733351501676,
+      "ap": 0.18391261570285425
+    },
+    "map_image": {
+      "auroc": 0.7629520594654439,
+      "ap": 0.7932440715553142
+    },
+    "answer_image": {
+      "auroc": 0.6078405641030706,
+      "ap": 0.6755673329694273
+    },
+    "generation": {
+      "macro_f1": 0.4200664257515682,
+      "anomaly_recall": 0.13055555555555556,
+      "normal_fpr": 0.04597167410127646
+    }
+  },
+  "definitions": {
+    "pixel": "Four-level maps are averaged before scoring; per-class pixel metrics pool normal and anomaly images; category_macro weights products equally.",
+    "generation_macro_f1": "Normal/anomalous label macro F1 over all sources; invalid answers remain false negatives for their GT class.",
+    "candidate": "Sum continuation conditional log probabilities using the same segmented tokenization as training; log_odds=Yes-No.",
+    "map_image_score": "Maximum of the averaged 224x224 map, without per-image rescaling."
+  },
+  "seconds": 206.09064316749573,
+  "peak_allocated_gb": 8.145338368,
+  "checkpoint": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/runs/lora_strict_16/pytorch_model.pt",
+  "lora_adapter": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/runs/lora_strict_16/lora_adapter",
+  "backend": "qwen",
+  "seed": 42
+}

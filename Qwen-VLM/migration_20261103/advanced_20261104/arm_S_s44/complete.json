@@ -1,0 +1,46 @@
+{
+  "state": "complete",
+  "schema": "visa-yesno-bbox1000-grid3-v1",
+  "seed": 44,
+  "steps": 500,
+  "exposures": 2000,
+  "preflight": false,
+  "best_step": 300,
+  "initial_val_auroc": 0.8919666815742398,
+  "best_val_auroc": 0.9430763640429338,
+  "final_val_auroc": 0.9424334749552773,
+  "reload_max_abs_score_error": 0.0,
+  "bridge_unchanged": true,
+  "frozen_parameter_versions_unchanged": true,
+  "gradient_audit": [
+    {
+      "step": 1,
+      "norms": {
+        ".lora_A.": 1.4534616030286998,
+        ".lora_B.": 4.465310178697109
+      }
+    },
+    {
+      "step": 2,
+      "norms": {
+        ".lora_A.": 1.353838421171531,
+        ".lora_B.": 3.558960856869817
+      }
+    }
+  ],
+  "first5_mean_loss": 0.6092329120263458,
+  "last5_mean_loss": 0.5427531083347276,
+  "train_seconds": 222.41163563728333,
+  "exposures_per_second": 8.992335289785244,
+  "peak_memory_bytes": 18931499008,
+  "elapsed_seconds": 1147.030169725418,
+  "test_queries": 0,
+  "external_queries": 0,
+  "generation_policies": {
+    "initial": "scalar",
+    "best": "scalar",
+    "final": "scalar"
+  },
+  "best_generation_reused": false,
+  "best_generation_reuse_audit_sha256": "392055cf7d559f005eaab50987d7603628d8b63c92865d249ec2ea60e69a3083"
+}

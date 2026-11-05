@@ -1,0 +1,28 @@
+{
+  "created_at_utc": "2026-10-26T07:59:27.989393+00:00",
+  "scope": "Verified local progress; remote completion unverified",
+  "results": {
+    "archive": "/Users/qiaohongfei/Desktop/实习/阿里云天池比赛vlm/AnomalyGPT/followup_20261026/local_archives/results_progress_20261026T075927Z.tar.gz",
+    "manifest": "/Users/qiaohongfei/Desktop/实习/阿里云天池比赛vlm/AnomalyGPT/followup_20261026/local_archives/results_progress_20261026T075927Z.manifest.json",
+    "archive_sha256": "2b46392fccdce4e921e1e2cd34c64a3cb1fba621bcd3f57fc7871f78333eac99",
+    "included_file_count": 85,
+    "large_files_retained": 0,
+    "pipeline_running": "matched_qwen_frozen43"
+  },
+  "code": {
+    "archive": "/Users/qiaohongfei/Desktop/实习/阿里云天池比赛vlm/AnomalyGPT/followup_20261026/local_archives/followup_code_20261026T075927Z.tar.gz",
+    "manifest": "/Users/qiaohongfei/Desktop/实习/阿里云天池比赛vlm/AnomalyGPT/followup_20261026/local_archives/followup_code_20261026T075927Z.manifest.json",
+    "archive_sha256": "6006b0cec79664591851b380930e2286528eb0d42a0aaac77020910b506aa9bd",
+    "included_file_count": 21,
+    "large_files_retained": 0,
+    "pipeline_running": null
+  },
+  "documents": {
+    "archive": "/Users/qiaohongfei/Desktop/实习/阿里云天池比赛vlm/AnomalyGPT/followup_20261026/local_archives/documents_progress_20261026T075927Z.tar.gz",
+    "manifest": "/Users/qiaohongfei/Desktop/实习/阿里云天池比赛vlm/AnomalyGPT/followup_20261026/local_archives/documents_progress_20261026T075927Z.manifest.json",
+    "archive_sha256": "325e20d4526a50e88e7c40363cd9b0ee701e65fdfdee27e779779519dbb3a370",
+    "included_file_count": 11,
+    "large_files_retained": 0,
+    "pipeline_running": null
+  }
+}

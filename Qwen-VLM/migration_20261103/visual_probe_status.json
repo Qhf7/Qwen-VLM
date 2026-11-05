@@ -1,0 +1,24 @@
+{
+  "stage": "visual_probe",
+  "started_at": "2026-11-03 23:01:47 +0800",
+  "state": "complete",
+  "jobs": [
+    {
+      "name": "visual_probe",
+      "command": [
+        "/root/autodl-tmp/conda-envs/qwen3vl2/bin/python",
+        "-u",
+        "migration_visual_probe.py",
+        "--run",
+        "--out",
+        "/root/autodl-tmp/AnomalyGPT/runs/migration_20261103/visual_probe/val.json"
+      ],
+      "state": "complete",
+      "started_at": "2026-11-03 23:01:47 +0800",
+      "returncode": 0,
+      "seconds": 363.48037338256836
+    }
+  ],
+  "current_job": "visual_probe",
+  "completed_at": "2026-11-03 23:07:50 +0800"
+}

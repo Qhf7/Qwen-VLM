@@ -1,0 +1,66 @@
+[
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb4/Data/Images/Normal/0739.JPG",
+    "category": "pcb4",
+    "label": 0,
+    "split": "val",
+    "score": -10.5,
+    "generated": "No, there is no anomaly in the image."
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/cashew/Data/Images/Normal/166.JPG",
+    "category": "cashew",
+    "label": 0,
+    "split": "val",
+    "score": 9.0,
+    "generated": "Yes, there is an anomaly in the image."
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/candle/Data/Images/Normal/0800.JPG",
+    "category": "candle",
+    "label": 0,
+    "split": "val",
+    "score": -3.0,
+    "generated": "No, there is no anomaly in the image."
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni1/Data/Images/Normal/0685.JPG",
+    "category": "macaroni1",
+    "label": 0,
+    "split": "val",
+    "score": -9.75,
+    "generated": "No, there is no anomaly in the image."
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/fryum/Data/Images/Anomaly/031.JPG",
+    "category": "fryum",
+    "label": 1,
+    "split": "val",
+    "score": -2.75,
+    "generated": "No, there is no anomaly in the image."
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/fryum/Data/Images/Anomaly/010.JPG",
+    "category": "fryum",
+    "label": 1,
+    "split": "val",
+    "score": -3.25,
+    "generated": "No, there is no anomaly in the image."
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/cashew/Data/Images/Anomaly/027.JPG",
+    "category": "cashew",
+    "label": 1,
+    "split": "val",
+    "score": 18.0,
+    "generated": "Yes, there is an anomaly in the image."
+  },
+  {
+    "path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pipe_fryum/Data/Images/Anomaly/000.JPG",
+    "category": "pipe_fryum",
+    "label": 1,
+    "split": "val",
+    "score": 13.125,
+    "generated": "Yes, there is an anomaly in the image."
+  }
+]

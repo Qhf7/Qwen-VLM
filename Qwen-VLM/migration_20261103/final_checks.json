@@ -1,0 +1,73 @@
+{
+  "checked_at_utc": "2026-11-03T16:18:52.391813+00:00",
+  "scope": "Existing result JSON, local log snapshots, report links and source hashes; no new test/model evaluation",
+  "passed": true,
+  "ordered_sequence_complete": true,
+  "stages": [
+    "native_main",
+    "visual_probe",
+    "dense_gt",
+    "roi_pilot",
+    "roi_full",
+    "dense_kd"
+  ],
+  "summary_contract_complete": true,
+  "dense_runs": 7,
+  "validation_checkpoints": 42,
+  "validation_images_each": 380,
+  "categories_each": 12,
+  "best_reload_max_metric_error": 0,
+  "KD_matched_pairs_passed": 2,
+  "finite_training_log_checks": [
+    {
+      "run": "dense_imagebind_gt_s42",
+      "logged_loss_gradient_checks": 61,
+      "last_step": 1200,
+      "finite": true
+    },
+    {
+      "run": "dense_pre_224_gt_s42",
+      "logged_loss_gradient_checks": 61,
+      "last_step": 1200,
+      "finite": true
+    },
+    {
+      "run": "dense_post_224_gt_s42",
+      "logged_loss_gradient_checks": 61,
+      "last_step": 1200,
+      "finite": true
+    },
+    {
+      "run": "dense_pre_gt_s42",
+      "logged_loss_gradient_checks": 61,
+      "last_step": 1200,
+      "finite": true
+    },
+    {
+      "run": "dense_pre_kd_s42",
+      "logged_loss_gradient_checks": 61,
+      "last_step": 1200,
+      "finite": true
+    },
+    {
+      "run": "dense_post_gt_s42",
+      "logged_loss_gradient_checks": 61,
+      "last_step": 1200,
+      "finite": true
+    },
+    {
+      "run": "dense_post_kd_s42",
+      "logged_loss_gradient_checks": 61,
+      "last_step": 1200,
+      "finite": true
+    }
+  ],
+  "report_route5_complete": true,
+  "input_sha_verified": true,
+  "code_snapshot_sha256": "989c530d3de28f6b83a2acbc206ebf6f6a8f5739e553a71c1cd946155ebd8fbe",
+  "summary_sha256": "11d441d16e3c59912d5e61da39cefa49b45512274deaf876a7c22edf39e5f8ca",
+  "single_image_smoke_jsons": [
+    "qwen_s42_first_val_anomaly.json",
+    "qwen_s42_candle_0784.json"
+  ]
+}

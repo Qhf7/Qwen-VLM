@@ -1,0 +1,19 @@
+{
+  "scope": "Local progress; remote still unverified",
+  "code": {
+    "archive": "/Users/qiaohongfei/Desktop/实习/阿里云天池比赛vlm/AnomalyGPT/followup_20261026/local_archives/followup_code_20261026T080304Z.tar.gz",
+    "manifest": "/Users/qiaohongfei/Desktop/实习/阿里云天池比赛vlm/AnomalyGPT/followup_20261026/local_archives/followup_code_20261026T080304Z.manifest.json",
+    "archive_sha256": "f14c8744d9089209e9b38dcdf144b33c5f1ce320997b3a39b426a6a239f4ccb0",
+    "included_file_count": 21,
+    "large_files_retained": 0,
+    "pipeline_running": null
+  },
+  "documents": {
+    "archive": "/Users/qiaohongfei/Desktop/实习/阿里云天池比赛vlm/AnomalyGPT/followup_20261026/local_archives/documents_progress_20261026T080304Z.tar.gz",
+    "manifest": "/Users/qiaohongfei/Desktop/实习/阿里云天池比赛vlm/AnomalyGPT/followup_20261026/local_archives/documents_progress_20261026T080304Z.manifest.json",
+    "archive_sha256": "68799a8b95187a0222bef1f3cb5ee17965ee8ca7fe41143543d95de53b203558",
+    "included_file_count": 11,
+    "large_files_retained": 0,
+    "pipeline_running": null
+  }
+}

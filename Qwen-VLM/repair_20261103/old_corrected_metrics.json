@@ -1,0 +1,92 @@
+{
+  "pixel_auroc_macro": 0.8050675614395368,
+  "pixel_ap_macro": 0.03925492730183904,
+  "pixel_auroc_weighted": 0.8243677826113255,
+  "image_auroc_from_map99": 0.5402276295133438,
+  "image_auroc_from_map_max": 0.5466248037676609,
+  "image_ap_from_map_max": 0.6315990027970226,
+  "foreground_ratio": 0.004803879652172327,
+  "n_categories": 12,
+  "n_images": 456,
+  "split": "test",
+  "training_protocol": "supervised_custom_60_20_20",
+  "pipeline_version": "visa-square-binary-sklearn-v1",
+  "checkpoint": "/root/autodl-tmp/AnomalyGPT/runs/native_clean/best.pt",
+  "checkpoint_step": 1400,
+  "checkpoint_pipeline_version": null,
+  "source_sha256": "6dd9f56a5f950264c866b121b7e0862628ca65b2c2adf755989289f213fdd695",
+  "per_category": {
+    "candle": {
+      "pixel_auroc": 0.8068895621089359,
+      "pixel_ap": 0.0024946489412986357,
+      "foreground_pixels": 1372,
+      "n_pixels": 1655808
+    },
+    "capsules": {
+      "pixel_auroc": 0.7323066340008314,
+      "pixel_ap": 0.0061133762874864064,
+      "foreground_pixels": 6330,
+      "n_pixels": 2207744
+    },
+    "cashew": {
+      "pixel_auroc": 0.8261560119942777,
+      "pixel_ap": 0.020635571768711475,
+      "foreground_pixels": 1567,
+      "n_pixels": 1455104
+    },
+    "chewinggum": {
+      "pixel_auroc": 0.9433121890780694,
+      "pixel_ap": 0.11670640385620049,
+      "foreground_pixels": 7805,
+      "n_pixels": 1404928
+    },
+    "fryum": {
+      "pixel_auroc": 0.8906754519647522,
+      "pixel_ap": 0.22333676083999932,
+      "foreground_pixels": 44001,
+      "n_pixels": 1705984
+    },
+    "macaroni1": {
+      "pixel_auroc": 0.8927327974873124,
+      "pixel_ap": 0.002858878136081636,
+      "foreground_pixels": 717,
+      "n_pixels": 2057216
+    },
+    "macaroni2": {
+      "pixel_auroc": 0.8632229378311352,
+      "pixel_ap": 0.000993290371199661,
+      "foreground_pixels": 679,
+      "n_pixels": 2508800
+    },
+    "pcb1": {
+      "pixel_auroc": 0.7675242159702327,
+      "pixel_ap": 0.014748664175306101,
+      "foreground_pixels": 9322,
+      "n_pixels": 2157568
+    },
+    "pcb2": {
+      "pixel_auroc": 0.7019772254615686,
+      "pixel_ap": 0.005022102751690495,
+      "foreground_pixels": 5232,
+      "n_pixels": 2207744
+    },
+    "pcb3": {
+      "pixel_auroc": 0.6876228851227647,
+      "pixel_ap": 0.006282962356480808,
+      "foreground_pixels": 7248,
+      "n_pixels": 1856512
+    },
+    "pcb4": {
+      "pixel_auroc": 0.6701254353056444,
+      "pixel_ap": 0.007568323071564529,
+      "foreground_pixels": 12194,
+      "n_pixels": 2308096
+    },
+    "pipe_fryum": {
+      "pixel_auroc": 0.8782653909489173,
+      "pixel_ap": 0.06429814506604889,
+      "foreground_pixels": 13447,
+      "n_pixels": 1354752
+    }
+  }
+}

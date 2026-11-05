@@ -1,0 +1,75 @@
+{
+  "args": {
+    "backend": "qwen",
+    "cache": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/real_cache",
+    "checkpoint": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/runs/balanced_strict_16/pytorch_model.pt",
+    "lora_adapter": "",
+    "init_ckpt": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/ckpt/train_visa/pytorch_model.pt",
+    "qwen_ckpt": "/root/autodl-tmp/industrial_vlm/models/Qwen3-VL-8B-Instruct",
+    "vicuna_ckpt": "",
+    "imagebind_ckpt": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/pretrained_ckpt/imagebind_ckpt/imagebind_huge.pth",
+    "code_dir": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/code",
+    "model_factory": "",
+    "vicuna_full_precision": false,
+    "out": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/smoke_qwen",
+    "device": "cuda:0",
+    "seed": 42,
+    "batch_size": 4,
+    "max_new_tokens": 32,
+    "limit": 4,
+    "export_initial_bridge": "",
+    "export_only": false
+  },
+  "source_sha256": "dc5651719f50b75692808b5acd1a6faf5cc777ec1ade0ba230aaf5a41e35a039",
+  "bridge": {
+    "keys": 23,
+    "sha256": "98d27f4ead0ec4abd49ea09d6fcf2e55bb4b42fd0e86efa6d0c53bf72b2d3f29",
+    "path": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/runs/balanced_strict_16/pytorch_model.pt"
+  },
+  "torch": "2.3.0+cu121",
+  "python": "3.10.22 (main, Oct  1 2026, 20:14:04) [GCC 14.3.0]",
+  "candidate_audits": {
+    "candle": {
+      "yes": {
+        "text": "Yes",
+        "ids": [
+          9454
+        ],
+        "decoded": "Yes",
+        "full_text_prefix_stable": true,
+        "full_text_suffix_ids": [
+          9454
+        ],
+        "matches_training_segmented_tokens": true
+      },
+      "no": {
+        "text": "No",
+        "ids": [
+          2753
+        ],
+        "decoded": "No",
+        "full_text_prefix_stable": true,
+        "full_text_suffix_ids": [
+          2753
+        ],
+        "matches_training_segmented_tokens": true
+      }
+    }
+  },
+  "init_sha256": "a7e858586d9118c3322ff8ca3b60a8c7c521859ec8c1825e733df6666acab7d6",
+  "model_source": {
+    "path": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/code/model/openllama_qwen3vl_strict.py",
+    "sha256": "8bebd7270f75fa84cb996b632425817cf86b66b1b36e6e39570ce9eec187d426"
+  },
+  "cache_hashes": {
+    "00000.pt": "3ec6edc6cebb9dd3a3fcf8f64a042ab3d21b3a320040b643b86cf855fb096587",
+    "00001.pt": "ca61c11f33e430efc5512eefdc4f7870aae7d2f377d35c1a77580c7d0ac45bec",
+    "00002.pt": "622ec6cbe5a9fb013b59030735e7962a4d7f84a5f709e29a2e55e08c13c705d4",
+    "00003.pt": "a0c9617ce2a46649b797b1e47166faad28846c3d9ce1e3d20e9b068770632515"
+  },
+  "cache_manifest_sha256": "b1d0941a90282a9cb422c9700aee11fc256b72dbf68c6164fe4857090bccaefe",
+  "num_sources": 4,
+  "completed": true,
+  "completed_num_sources": 4,
+  "prediction_sha256": "86734005d4ce23d9cef92e604ea185c5bc30be9dca0ecd6c4d314c83fb8b547a"
+}

@@ -1,0 +1,75 @@
+{
+  "task": "matched_vicuna44",
+  "status": "completed",
+  "command": [
+    "/root/autodl-tmp/conda-envs/qwen3vl2/bin/python",
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/evaluate_models.py",
+    "--backend",
+    "vicuna",
+    "--cache",
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/real_cache",
+    "--checkpoint",
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/matched_runs/vicuna_44/pytorch_model.pt",
+    "--init-ckpt",
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/ckpt/train_visa/pytorch_model.pt",
+    "--code-dir",
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/code",
+    "--out",
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/real_evaluations/matched_vicuna44",
+    "--seed",
+    "44",
+    "--batch-size",
+    "64",
+    "--max-new-tokens",
+    "32",
+    "--vicuna-ckpt",
+    "/tmp/strict_vicuna_v11_safetensors_20261026"
+  ],
+  "source_sha256": {
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/code/model/AnomalyGPT_models.py": "798397f04bf189781b2c445f516dbd548b63d3ac3b70ef236f613edef1209f30",
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/code/utils/loss.py": "80679a2a9cf7eb382cae4083dd401bb0d4dea6bb6a1e3e8501e71abecf0c8071",
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/evaluate_models.py": "41d81f8cff7c42157a5bce8c088c22503eb4a52f1c8e7bbfdf692d08b63d58d2",
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/exact_bf16_ranking.py": "3ca199a34e0391c4e4a96e127d620c87ef7e470225863095bc1b28d52ff8e0f7",
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/train_vicuna_matched.py": "de77b0e17388949873ceb59ae0c40a682760ef026fc1da3ccf6ad19806285c9d"
+  },
+  "runtime_sources": {
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/code/model/AnomalyGPT_models.py": {
+      "sha256": "798397f04bf189781b2c445f516dbd548b63d3ac3b70ef236f613edef1209f30",
+      "archive": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/safe_runtime/matched_vicuna44/20261026T112920.975536Z/00/AnomalyGPT_models.py"
+    },
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/code/utils/loss.py": {
+      "sha256": "80679a2a9cf7eb382cae4083dd401bb0d4dea6bb6a1e3e8501e71abecf0c8071",
+      "archive": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/safe_runtime/matched_vicuna44/20261026T112920.975536Z/01/loss.py"
+    },
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/evaluate_models.py": {
+      "sha256": "41d81f8cff7c42157a5bce8c088c22503eb4a52f1c8e7bbfdf692d08b63d58d2",
+      "archive": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/safe_runtime/matched_vicuna44/20261026T112920.975536Z/02/evaluate_models.py"
+    },
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/exact_bf16_ranking.py": {
+      "sha256": "3ca199a34e0391c4e4a96e127d620c87ef7e470225863095bc1b28d52ff8e0f7",
+      "archive": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/safe_runtime/matched_vicuna44/20261026T112920.975536Z/03/exact_bf16_ranking.py"
+    },
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/train_vicuna_matched.py": {
+      "sha256": "de77b0e17388949873ceb59ae0c40a682760ef026fc1da3ccf6ad19806285c9d",
+      "archive": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/safe_runtime/matched_vicuna44/20261026T112920.975536Z/04/train_vicuna_matched.py"
+    }
+  },
+  "started_at": 1793014160.9771514,
+  "completed_at": 1793014318.1630805,
+  "validation": {
+    "kind": "evaluation",
+    "artifacts": {
+      "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/real_evaluations/matched_vicuna44/metrics.json": "c0932ca038de71723cbe75512c02a1528f863e5d7c08be1f0ac179ce2ac18547",
+      "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/real_evaluations/matched_vicuna44/run.json": "fc4a7a9b7ffe4890d940bb59d172effc3b202fe01d74dfc6cb8abb137c0b2124",
+      "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/real_evaluations/matched_vicuna44/predictions.jsonl": "3d3c2d228aed3ea456ae6a672ac48f8d7608c67b80291d967804ca9da00189d4"
+    },
+    "recorded_source_trace": {
+      "runner": {
+        "sha256": "41d81f8cff7c42157a5bce8c088c22503eb4a52f1c8e7bbfdf692d08b63d58d2",
+        "traceable_file": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/evaluate_models.py"
+      }
+    },
+    "num_sources": 2005,
+    "prediction_sha256": "3d3c2d228aed3ea456ae6a672ac48f8d7608c67b80291d967804ca9da00189d4"
+  }
+}

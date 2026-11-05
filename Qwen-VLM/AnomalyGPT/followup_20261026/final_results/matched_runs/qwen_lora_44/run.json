@@ -1,0 +1,68 @@
+{
+  "args": {
+    "cache": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/cache_balanced_train48",
+    "code_dir": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/code",
+    "qwen_ckpt": "/root/autodl-tmp/industrial_vlm/models/Qwen3-VL-8B-Instruct",
+    "imagebind_ckpt": null,
+    "bridge_init": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/matched_inputs/seed44/bridge_init.pt",
+    "sample_order": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/matched_inputs/seed44/sample_order.json",
+    "save_path": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/matched_runs/qwen_lora_44",
+    "lora": "qkvo",
+    "lora_r": 8,
+    "lora_alpha": 16,
+    "lora_dropout": 0.05,
+    "seed": 44,
+    "max_steps": 16,
+    "batch_size": 2,
+    "max_tgt_len": 128,
+    "lr": 0.001,
+    "pixel_weight": 1.0,
+    "device": "cuda:0"
+  },
+  "backend": "Qwen3-VL-8B language_model",
+  "lora": "qkvo",
+  "source_sha256": {
+    "runner": "29136939ab4befaf2e72265fa39df72fdb9c57bbd8b9626e8ed02132b362de6c",
+    "shared_training": "de77b0e17388949873ceb59ae0c40a682760ef026fc1da3ccf6ad19806285c9d",
+    "qwen_model": "8bebd7270f75fa84cb996b632425817cf86b66b1b36e6e39570ce9eec187d426",
+    "bridge_architecture": "798397f04bf189781b2c445f516dbd548b63d3ac3b70ef236f613edef1209f30",
+    "pixel_losses": "80679a2a9cf7eb382cae4083dd401bb0d4dea6bb6a1e3e8501e71abecf0c8071"
+  },
+  "initial_bridge_sha256": "b51a4226316a8adefd34da15495b3dde708e549132f14139d23def32845f8e34",
+  "actual_initial_bridge_fingerprint": "9218c817b4684532f5447e9434bd84fed2763395b62ad34943bfb358cad7322e",
+  "sample_order_input_sha256": "847af31f016c0b36cb43722764731b2545575b62ab78be66cc2d0191554dbcf6",
+  "sample_order_sha256": "847af31f016c0b36cb43722764731b2545575b62ab78be66cc2d0191554dbcf6",
+  "cache_manifest_sha256": "1829ec402bf90028c258c7f66fb9e317a574389af13515d8e0e57a81889c4d72",
+  "token_budget_sha256": "1d83f52497a5f29ad962f2be907950942ee262df262c1d4a132dc73f0b817f0a",
+  "actual_unique_source_paths": 25,
+  "actual_unique_variants": 32,
+  "actual_variant_exposures": 32,
+  "trainable_parameters": 124529592,
+  "language_lora_parameters": 7667712,
+  "tokenizer": {
+    "class": "Qwen2TokenizerFast",
+    "bos_token_id": null,
+    "eos_token_id": 151645,
+    "pad_token_id": 151643,
+    "format": "manual ### Human / ### Assistant; no chat template"
+  },
+  "matching": {
+    "initial_bridge": "all three bridge modules loaded strictly from shared tensor file",
+    "sample_order": "explicit per-step cache filenames; no implicit RNG sampling",
+    "ce_normalization": "sum over supervised assistant tokens / token count in each update",
+    "reference_map": "disabled; cached text-matching map for every arm",
+    "max_tgt_len": 128,
+    "rng_reset": "after model, adapter, optimizer and token audit; immediately before training"
+  },
+  "imagebind_instantiated": false,
+  "vision_modules_released": [
+    "Qwen native visual tower"
+  ],
+  "steps": 16,
+  "num_files": 96,
+  "seconds": 5.350602388381958,
+  "peak_allocated_bytes": 9011980800,
+  "checkpoint_sha256": "8a1310047feea4d96f374873ce50c2911315a6c3189127a1e278c46aae3eb7b6",
+  "total_supervised_tokens": 537,
+  "training_token_accuracy": 0.8212290502793296
+}

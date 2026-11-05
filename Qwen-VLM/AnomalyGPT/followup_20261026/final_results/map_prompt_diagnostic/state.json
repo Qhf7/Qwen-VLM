@@ -1,0 +1,25 @@
+{
+  "running": null,
+  "completed": [
+    "qwen_frozen",
+    "qwen_lora",
+    "vicuna"
+  ],
+  "finished": true,
+  "failed": null,
+  "max_new_tokens": 32,
+  "arms": {
+    "qwen_frozen": {
+      "status": "complete",
+      "completed": true
+    },
+    "qwen_lora": {
+      "status": "complete",
+      "completed": true
+    },
+    "vicuna": {
+      "status": "complete",
+      "completed": true
+    }
+  }
+}

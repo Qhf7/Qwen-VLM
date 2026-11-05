@@ -1,0 +1,54 @@
+[
+  {
+    "kernel": 0,
+    "bias": 0.236,
+    "response_min": -0.144,
+    "response_max": 0.239,
+    "frac_positive": 0.976,
+    "mean_on_gt": 0.082,
+    "mean_off_gt": 0.233,
+    "max_loc": [
+      195,
+      149
+    ]
+  },
+  {
+    "kernel": 1,
+    "bias": -0.327,
+    "response_min": -0.545,
+    "response_max": -0.324,
+    "frac_positive": 0.0,
+    "mean_on_gt": -0.415,
+    "mean_off_gt": -0.329,
+    "max_loc": [
+      163,
+      74
+    ]
+  },
+  {
+    "kernel": 2,
+    "bias": -0.082,
+    "response_min": -0.105,
+    "response_max": 0.159,
+    "frac_positive": 0.063,
+    "mean_on_gt": 0.007,
+    "mean_off_gt": -0.08,
+    "max_loc": [
+      150,
+      162
+    ]
+  },
+  {
+    "kernel": 3,
+    "bias": 0.206,
+    "response_min": -0.139,
+    "response_max": 0.228,
+    "frac_positive": 0.979,
+    "mean_on_gt": 0.076,
+    "mean_off_gt": 0.203,
+    "max_loc": [
+      193,
+      120
+    ]
+  }
+]

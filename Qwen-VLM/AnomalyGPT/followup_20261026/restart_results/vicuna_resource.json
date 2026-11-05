@@ -1,0 +1,6 @@
+{
+  "safetensors_path": "/tmp/strict_vicuna_v11_safetensors_20261026",
+  "all_tensors_equal": true,
+  "conversion_audit": "/tmp/strict_vicuna_v11_safetensors_20261026/conversion_audit.json",
+  "source": "/root/autodl-tmp/AnomalyGPT/pretrained_ckpt/vicuna_ckpt/vicuna-7b-v1.1"
+}

@@ -1,0 +1,261 @@
+{
+  "overall": {
+    "scores": {
+      "n": 380,
+      "n_normal": 172,
+      "n_anomaly": 208,
+      "accuracy": 0.8131578947368421,
+      "macro_f1": 0.8115592806006635,
+      "recall": 0.6586538461538461,
+      "fpr": 0.0,
+      "invalid_rate": 0.0,
+      "n_invalid": 0,
+      "n_invalid_normal": 0,
+      "n_invalid_anomaly": 0,
+      "image_auroc": 0.9033569991055457,
+      "image_ap": 0.924575230574911,
+      "threshold": 0.0
+    }
+  },
+  "per_category": {
+    "candle": {
+      "scores": {
+        "n": 31,
+        "n_normal": 16,
+        "n_anomaly": 15,
+        "accuracy": 0.9032258064516129,
+        "macro_f1": 0.9015873015873015,
+        "recall": 0.8,
+        "fpr": 0.0,
+        "invalid_rate": 0.0,
+        "n_invalid": 0,
+        "n_invalid_normal": 0,
+        "n_invalid_anomaly": 0,
+        "image_auroc": 0.95625,
+        "image_ap": 0.9428571428571428,
+        "threshold": 0.0
+      }
+    },
+    "capsules": {
+      "scores": {
+        "n": 29,
+        "n_normal": 12,
+        "n_anomaly": 17,
+        "accuracy": 0.7586206896551724,
+        "macro_f1": 0.7574671445639187,
+        "recall": 0.5882352941176471,
+        "fpr": 0.0,
+        "invalid_rate": 0.0,
+        "n_invalid": 0,
+        "n_invalid_normal": 0,
+        "n_invalid_anomaly": 0,
+        "image_auroc": 0.8970588235294118,
+        "image_ap": 0.9125816993464053,
+        "threshold": 0.0
+      }
+    },
+    "cashew": {
+      "scores": {
+        "n": 26,
+        "n_normal": 14,
+        "n_anomaly": 12,
+        "accuracy": 0.7692307692307693,
+        "macro_f1": 0.7450980392156863,
+        "recall": 0.5,
+        "fpr": 0.0,
+        "invalid_rate": 0.0,
+        "n_invalid": 0,
+        "n_invalid_normal": 0,
+        "n_invalid_anomaly": 0,
+        "image_auroc": 0.9464285714285715,
+        "image_ap": 0.9166666666666666,
+        "threshold": 0.0
+      }
+    },
+    "chewinggum": {
+      "scores": {
+        "n": 20,
+        "n_normal": 9,
+        "n_anomaly": 11,
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "recall": 1.0,
+        "fpr": 0.0,
+        "invalid_rate": 0.0,
+        "n_invalid": 0,
+        "n_invalid_normal": 0,
+        "n_invalid_anomaly": 0,
+        "image_auroc": 1.0,
+        "image_ap": 0.9999999999999999,
+        "threshold": 0.0
+      }
+    },
+    "fryum": {
+      "scores": {
+        "n": 34,
+        "n_normal": 15,
+        "n_anomaly": 19,
+        "accuracy": 0.7647058823529411,
+        "macro_f1": 0.7614035087719297,
+        "recall": 0.5789473684210527,
+        "fpr": 0.0,
+        "invalid_rate": 0.0,
+        "n_invalid": 0,
+        "n_invalid_normal": 0,
+        "n_invalid_anomaly": 0,
+        "image_auroc": 0.7929824561403509,
+        "image_ap": 0.8295002211410878,
+        "threshold": 0.0
+      }
+    },
+    "macaroni1": {
+      "scores": {
+        "n": 40,
+        "n_normal": 17,
+        "n_anomaly": 23,
+        "accuracy": 0.625,
+        "macro_f1": 0.6050032916392363,
+        "recall": 0.34782608695652173,
+        "fpr": 0.0,
+        "invalid_rate": 0.0,
+        "n_invalid": 0,
+        "n_invalid_normal": 0,
+        "n_invalid_anomaly": 0,
+        "image_auroc": 0.8734015345268542,
+        "image_ap": 0.8870137299771166,
+        "threshold": 0.0
+      }
+    },
+    "macaroni2": {
+      "scores": {
+        "n": 38,
+        "n_normal": 22,
+        "n_anomaly": 16,
+        "accuracy": 0.7631578947368421,
+        "macro_f1": 0.7194421657095981,
+        "recall": 0.4375,
+        "fpr": 0.0,
+        "invalid_rate": 0.0,
+        "n_invalid": 0,
+        "n_invalid_normal": 0,
+        "n_invalid_anomaly": 0,
+        "image_auroc": 0.7855113636363635,
+        "image_ap": 0.7397727272727272,
+        "threshold": 0.0
+      }
+    },
+    "pcb1": {
+      "scores": {
+        "n": 29,
+        "n_normal": 12,
+        "n_anomaly": 17,
+        "accuracy": 0.7586206896551724,
+        "macro_f1": 0.7574671445639187,
+        "recall": 0.5882352941176471,
+        "fpr": 0.0,
+        "invalid_rate": 0.0,
+        "n_invalid": 0,
+        "n_invalid_normal": 0,
+        "n_invalid_anomaly": 0,
+        "image_auroc": 0.928921568627451,
+        "image_ap": 0.9515469824293354,
+        "threshold": 0.0
+      }
+    },
+    "pcb2": {
+      "scores": {
+        "n": 34,
+        "n_normal": 18,
+        "n_anomaly": 16,
+        "accuracy": 0.9117647058823529,
+        "macro_f1": 0.9098143236074271,
+        "recall": 0.8125,
+        "fpr": 0.0,
+        "invalid_rate": 0.0,
+        "n_invalid": 0,
+        "n_invalid_normal": 0,
+        "n_invalid_anomaly": 0,
+        "image_auroc": 0.9618055555555556,
+        "image_ap": 0.9583333333333333,
+        "threshold": 0.0
+      }
+    },
+    "pcb3": {
+      "scores": {
+        "n": 35,
+        "n_normal": 18,
+        "n_anomaly": 17,
+        "accuracy": 0.7714285714285715,
+        "macro_f1": 0.7552447552447552,
+        "recall": 0.5294117647058824,
+        "fpr": 0.0,
+        "invalid_rate": 0.0,
+        "n_invalid": 0,
+        "n_invalid_normal": 0,
+        "n_invalid_anomaly": 0,
+        "image_auroc": 0.8839869281045752,
+        "image_ap": 0.8699586417639156,
+        "threshold": 0.0
+      }
+    },
+    "pcb4": {
+      "scores": {
+        "n": 37,
+        "n_normal": 12,
+        "n_anomaly": 25,
+        "accuracy": 0.9459459459459459,
+        "macro_f1": 0.9407051282051282,
+        "recall": 0.92,
+        "fpr": 0.0,
+        "invalid_rate": 0.0,
+        "n_invalid": 0,
+        "n_invalid_normal": 0,
+        "n_invalid_anomaly": 0,
+        "image_auroc": 0.9916666666666666,
+        "image_ap": 0.9933333333333336,
+        "threshold": 0.0
+      }
+    },
+    "pipe_fryum": {
+      "scores": {
+        "n": 27,
+        "n_normal": 7,
+        "n_anomaly": 20,
+        "accuracy": 0.8888888888888888,
+        "macro_f1": 0.8712241653418125,
+        "recall": 0.85,
+        "fpr": 0.0,
+        "invalid_rate": 0.0,
+        "n_invalid": 0,
+        "n_invalid_normal": 0,
+        "n_invalid_anomaly": 0,
+        "image_auroc": 1.0,
+        "image_ap": 1.0,
+        "threshold": 0.0
+      }
+    }
+  },
+  "category_macro": {
+    "scores": {
+      "image_auroc": 0.9181677890179833,
+      "image_ap": 0.9167970398434221,
+      "accuracy": 0.8217158203523559,
+      "macro_f1": 0.8103714140375593,
+      "recall": 0.6627213173598959,
+      "fpr": 0.0,
+      "invalid_rate": 0.0
+    }
+  },
+  "category_macro_counts": {
+    "scores": {
+      "image_auroc": 12,
+      "image_ap": 12,
+      "accuracy": 12,
+      "macro_f1": 12,
+      "recall": 12,
+      "fpr": 12,
+      "invalid_rate": 12
+    }
+  },
+  "generated_rule": "initial Yes/No; invalid is wrong and a false negative for its true class"
+}

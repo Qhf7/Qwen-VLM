@@ -1,0 +1,114 @@
+{
+  "state": "complete",
+  "checks": [
+    {
+      "run": "arm_D_s42",
+      "state": "passed",
+      "n": 28,
+      "both_modes_verified": true,
+      "modes": [
+        "final",
+        "best"
+      ],
+      "best_n": 28,
+      "best_step": 500
+    },
+    {
+      "run": "arm_D_s43",
+      "state": "passed",
+      "n": 28,
+      "both_modes_verified": true,
+      "modes": [
+        "final",
+        "best"
+      ],
+      "best_n": 28,
+      "best_step": 500
+    },
+    {
+      "run": "arm_D_s44",
+      "state": "passed",
+      "n": 28,
+      "both_modes_verified": true,
+      "modes": [
+        "final",
+        "best"
+      ],
+      "best_n": 28,
+      "best_step": 400
+    },
+    {
+      "run": "Cpair_s42",
+      "state": "passed",
+      "n": 28,
+      "both_modes_verified": true,
+      "modes": [
+        "final",
+        "best"
+      ],
+      "best_n": 28,
+      "best_step": 500
+    },
+    {
+      "run": "Cpair_s43",
+      "state": "passed",
+      "n": 28,
+      "both_modes_verified": true,
+      "modes": [
+        "final",
+        "best"
+      ],
+      "best_n": 28,
+      "best_step": 400
+    },
+    {
+      "run": "Cpair_s44",
+      "state": "passed",
+      "n": 28,
+      "both_modes_verified": true,
+      "modes": [
+        "final",
+        "best"
+      ],
+      "best_n": 28,
+      "best_step": 500
+    },
+    {
+      "run": "R_s42",
+      "state": "passed",
+      "n": 28,
+      "both_modes_verified": true,
+      "modes": [
+        "final",
+        "best"
+      ],
+      "best_n": 28,
+      "best_step": 400
+    },
+    {
+      "run": "R_s43",
+      "state": "passed",
+      "n": 28,
+      "both_modes_verified": true,
+      "modes": [
+        "final",
+        "best"
+      ],
+      "best_n": 28,
+      "best_step": 500
+    },
+    {
+      "run": "R_s44",
+      "state": "passed",
+      "n": 28,
+      "both_modes_verified": true,
+      "modes": [
+        "final",
+        "best"
+      ],
+      "best_n": 28,
+      "best_step": 500
+    }
+  ],
+  "run": "R_s44"
+}

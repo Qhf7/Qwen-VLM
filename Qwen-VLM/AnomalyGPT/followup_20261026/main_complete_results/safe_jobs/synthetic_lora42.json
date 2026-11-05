@@ -1,0 +1,30 @@
+{
+  "task": "synthetic_lora42",
+  "status": "completed",
+  "adopted": true,
+  "command": [
+    "/root/autodl-tmp/conda-envs/qwen3vl2/bin/python",
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/corrected_synthetic_eval.py",
+    "--cache",
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/cache_balanced_test24",
+    "--checkpoint",
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/runs/lora_strict_16/pytorch_model.pt",
+    "--model-source",
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/code/model/AnomalyGPT_models.py",
+    "--out",
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/synthetic_corrected/lora42.json"
+  ],
+  "adopted_at": 1792998765.6206777,
+  "current_sources_at_adoption": {
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/code/model/AnomalyGPT_models.py": "798397f04bf189781b2c445f516dbd548b63d3ac3b70ef236f613edef1209f30",
+    "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/corrected_synthetic_eval.py": "419ae6a0cf0098589847fa2f0b3cf1c10b22384f4f5ca2694463e74a61f6fea3"
+  },
+  "validation": {
+    "kind": "synthetic",
+    "artifacts": {
+      "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/synthetic_corrected/lora42.json": "b87d315fe7dc6b7f7031ac177a0295ba980cd32f26a8190a258b69b0df25cd12"
+    },
+    "checkpoint_sha256": "c5830498a5bb8688d92032fecf3139779f42de5ab42972c0ee0cfb1fb030b7ab",
+    "num_records": 48
+  }
+}

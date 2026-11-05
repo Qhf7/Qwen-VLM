@@ -1,0 +1,89 @@
+{
+  "schema_version": "industrial-vlm-figure-inputs-v1",
+  "inputs": [
+    {
+      "path": "evaluations/multitask_v2/decision_decision_decision/metrics.json",
+      "sha256": "0426e630437ff1a542241942102ac30829b1fba0f50f18eada2e04ac3caab438",
+      "bytes": 20102
+    },
+    {
+      "path": "evaluations/multitask_v2/decision_decision_decision/predictions.jsonl",
+      "sha256": "cd4b4a46e7b5691e158c37c482929d572d7b8f4dc390fcec35a5203cf9881f32",
+      "bytes": 93743
+    },
+    {
+      "path": "evaluations/multitask_v2/region_decision_decision/metrics.json",
+      "sha256": "efb74a361cd9b79c8b623319b89009a149a985c13b86d378eb60d2c6a796ee67",
+      "bytes": 19909
+    },
+    {
+      "path": "evaluations/multitask_v2/region_decision_decision/predictions.jsonl",
+      "sha256": "690b30c7aed56866b939c98f763bcfa6bb68528b8b1306063601576669e2fb2a",
+      "bytes": 93756
+    },
+    {
+      "path": "evaluations/multitask_v2/region_decision_region/metrics.json",
+      "sha256": "f7b661689bb7e8c062b82a00006ac158eb92b4535a998f32c9cd0bdf542c88f4",
+      "bytes": 19950
+    },
+    {
+      "path": "evaluations/multitask_v2/region_decision_region/predictions.jsonl",
+      "sha256": "699b4befeb61599ce75109889eb557ee13fc2afee1b4f5897bc22e943cfb5ae5",
+      "bytes": 121984
+    },
+    {
+      "path": "evaluations/multitask_v2/region_region_decision/metrics.json",
+      "sha256": "e32236ab6e4037e26762d24016bf8a391a4c33b179e97354a35284dc03f99ba2",
+      "bytes": 19749
+    },
+    {
+      "path": "evaluations/multitask_v2/region_region_decision/predictions.jsonl",
+      "sha256": "19d6f2ec3421b8f92c2977d7107f7cf43ea601c913bfed417fb70bc0372e04c2",
+      "bytes": 93782
+    },
+    {
+      "path": "evaluations/multitask_v2/region_region_region/metrics.json",
+      "sha256": "fd312048a9f63e825cbffa6c788c11ceac113d822e2661f378222618cf407095",
+      "bytes": 20021
+    },
+    {
+      "path": "evaluations/multitask_v2/region_region_region/predictions.jsonl",
+      "sha256": "d7bd437ab77a071c252024fda5d2e53b1771dfb8bef1574007652e841d32c059",
+      "bytes": 121651
+    },
+    {
+      "path": "ops/plot_multitask_v2.py",
+      "sha256": "71cb0fa3bb098d06eccdb05b6b92884b77ae742cf29ea656fb8187d619ebaff4",
+      "bytes": 22155
+    },
+    {
+      "path": "runs/multitask_v2/decision_decision/metrics.jsonl",
+      "sha256": "078e10896838df633cce403b94be846b0ffbe0b42793c6927680b81b7d990c4e",
+      "bytes": 111032
+    },
+    {
+      "path": "runs/multitask_v2/region_decision/metrics.jsonl",
+      "sha256": "a2d7e97793dca38727141d1edd3f66dab681f70f5014b77cb4791eaf38ea033f",
+      "bytes": 111029
+    },
+    {
+      "path": "runs/multitask_v2/region_region/metrics.jsonl",
+      "sha256": "911586ab861f832f6ddeb282085db0b7ed993381433113e3316bd67005762832",
+      "bytes": 110968
+    }
+  ],
+  "figures": [
+    "/root/autodl-tmp/industrial_vlm/reports/multitask_v2/figures/validation_comparison.pdf",
+    "/root/autodl-tmp/industrial_vlm/reports/multitask_v2/figures/validation_comparison.png",
+    "/root/autodl-tmp/industrial_vlm/reports/multitask_v2/figures/validation_comparison.svg",
+    "/root/autodl-tmp/industrial_vlm/reports/multitask_v2/figures/training_dynamics.pdf",
+    "/root/autodl-tmp/industrial_vlm/reports/multitask_v2/figures/training_dynamics.png",
+    "/root/autodl-tmp/industrial_vlm/reports/multitask_v2/figures/training_dynamics.svg"
+  ],
+  "figure_size_inches": [
+    12,
+    7
+  ],
+  "png_dpi": 300,
+  "confirmation_data_read": false
+}

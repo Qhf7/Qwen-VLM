@@ -1,0 +1,71 @@
+{
+  "identity": {
+    "arm": "B",
+    "seed": 42,
+    "pipeline_version": "visa-square-binary-sklearn-v1",
+    "bridge_path": "/root/autodl-tmp/AnomalyGPT/runs/migration_20261103/lm_qwen_s42/best.pt",
+    "bridge_sha256": "6bcb98c3f01060de1a29751b4e244da8e9cfad71f761b2af04fe2be9cd1cb18c",
+    "bridge_step": 1500,
+    "bridge_tensor_sha256": "e875bf5b97d43fb723ef88634493089ae11e40fe41e7f4e41aa8677b8521fe3c",
+    "cache_sha256": "90b003550655617f93837e4c0336819b8c6dc0d341d215e9cd3949930eee59f4",
+    "decoder_sha256": "cddfa2df9ad63659f65aa3a798566e52d608ace43a1b37704484db5bbfc5617d",
+    "cache_manifest_sha256": "349942973b9207c575be98790d074226845c4631b9f3c5a410adfd1165cd22e2",
+    "base_manifest_sha256": "5339c038e9e0db550bf5ae8661f063cec1f267cdf5e496b61eadd2c6fa42fc89",
+    "sample_schedule_sha256": "1f012c813288bd7a5e714e1aaec31697708a16c3ff0fcda5b7846a4b895c1b3c"
+  },
+  "config": {
+    "arm": "B",
+    "seed": 42,
+    "cache": "/root/autodl-tmp/AnomalyGPT/runs/migration_20261103/teacher_cache.pt",
+    "bridge": "/root/autodl-tmp/AnomalyGPT/runs/migration_20261103/lm_qwen_s42/best.pt",
+    "base_manifest": "/root/autodl-tmp/AnomalyGPT/runs/migration_20261103/lora_20261104/base_manifest.json",
+    "out": "/root/autodl-tmp/AnomalyGPT/runs/migration_20261103/lora_20261104/preflight_B_s42",
+    "steps": 40,
+    "microbatch": 1,
+    "accum": 4,
+    "eval_batch_size": 8,
+    "val_every": 20,
+    "lr_bridge": 0.0005,
+    "lr_lora": 0.0001,
+    "rank": 8,
+    "alpha": 16,
+    "preflight": true
+  },
+  "targets": [],
+  "trainable_parameters": 111614904,
+  "trainable_names": [
+    "prompt_learner.base_prompts",
+    "prompt_learner.meta_net.0.weight",
+    "prompt_learner.meta_net.0.bias",
+    "prompt_learner.meta_net.3.weight",
+    "prompt_learner.meta_net.3.bias",
+    "prompt_learner.meta_net.6.weight",
+    "prompt_learner.meta_net.6.bias",
+    "prompt_learner.meta_net.9.weight",
+    "prompt_learner.meta_net.9.bias",
+    "prompt_learner.meta_net.12.weight",
+    "prompt_learner.meta_net.12.bias",
+    "prompt_learner.meta_net.15.weight",
+    "prompt_learner.meta_net.15.bias",
+    "cls_proj.weight",
+    "cls_proj.bias"
+  ],
+  "train_images": 9985,
+  "validation_images": 8,
+  "test_queries": 0,
+  "exposures": 160,
+  "precision": "BF16 base; FP32 trainable tensors and AdamW",
+  "loss": "unchanged answer-token mean CE including EOS; microbatch mean, accum4",
+  "selection": "max full val image AUROC, step0 eligible, earliest wins ties",
+  "lora": null,
+  "gradient_checkpointing": false,
+  "zero_adapter_max_abs_logit_error": 0.0,
+  "source_sha256": {
+    "migration_lora_train.py": "dd1c93e90e2b5d39a50584375514096a2608fe869f43d7d798ab8aafb22e1b46"
+  },
+  "runtime_versions": {
+    "torch": "2.3.0+cu121",
+    "transformers": "4.57.1",
+    "peft": "0.7.1"
+  }
+}

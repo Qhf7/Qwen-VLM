@@ -1,0 +1,269 @@
+{
+  "schema_version": "industrial-vlm-multitask-v2-provenance-v1",
+  "inputs": [
+    {
+      "path": "evaluations/base_decision/predictions.jsonl",
+      "sha256": "aa46406db4d833025cabd2a6832818c07f77c5e9694944ccecd49725b0245fe1",
+      "bytes": 94793
+    },
+    {
+      "path": "evaluations/base_region/predictions.jsonl",
+      "sha256": "f21ff788c924772569599849f8fe285257459842885742e8552b796c46cd4fce",
+      "bytes": 122765
+    },
+    {
+      "path": "evaluations/external_base_region/predictions.jsonl",
+      "sha256": "bb25c0b644773cb8758083b58dba87b45d2eec59c16a27d61835e5012c70523b",
+      "bytes": 154109
+    },
+    {
+      "path": "evaluations/external_quality_region/predictions.jsonl",
+      "sha256": "1cc9c8060bd5368f0c903fb7c265d694084250c04c3140a0c3989d386ee6781c",
+      "bytes": 153815
+    },
+    {
+      "path": "evaluations/overfit32_training_diagnostic/predictions.jsonl",
+      "sha256": "77f5b167decd261820f2ce9649aec1d6019d4e8d29f3483afb5dd747bc0a2f53",
+      "bytes": 32415
+    },
+    {
+      "path": "evaluations/quality_decision/predictions.jsonl",
+      "sha256": "d70b6addf96360004168e4b56be51b09f44f75322c397918a88e6726620743dc",
+      "bytes": 93763
+    },
+    {
+      "path": "evaluations/quality_region/predictions.jsonl",
+      "sha256": "567e201a446af984d2dcfdbf95b07d9d3db3c273580e004226b1884128bdc649",
+      "bytes": 121663
+    },
+    {
+      "path": "evaluations/quality_region_decision_prompt/predictions.jsonl",
+      "sha256": "09fdb9ca23cd4b49aaa74e91c1943d56d793d7b7b7946149cb8c7bf90c70e2c4",
+      "bytes": 93807
+    },
+    {
+      "path": "evaluations/random_region/predictions.jsonl",
+      "sha256": "e02528ec7b4273188beb52373306fdb2cef47cdeeb8160fd7989f9a5183705f5",
+      "bytes": 121610
+    },
+    {
+      "path": "ops/prepare_multitask_v2.py",
+      "sha256": "26ba095cf173f6865eb43de7f6751f17d2607b4c98a7198ca23a1d39e99ceace",
+      "bytes": 24837
+    },
+    {
+      "path": "prepared/visa/manifest.jsonl",
+      "sha256": "ef4efe06080560639f1c24854ebb19500cc82ba73c6c9b27be94d406a9e8ae4a",
+      "bytes": 9715727
+    },
+    {
+      "path": "prepared/visa/split.json",
+      "sha256": "7ac18e52a96e77dcc2b308d6aebaff374e25cc43beba8fa1cd351c28fb07a1da",
+      "bytes": 833268
+    },
+    {
+      "path": "prepared/visa/test.jsonl",
+      "sha256": "20b0212061cbb34cbb8b6a3aa2e41fb525a20888018262045d2f59c538515ede",
+      "bytes": 1123590
+    },
+    {
+      "path": "prepared/visa/train_quality_decision.jsonl",
+      "sha256": "f61bbe0bdfcfd3d935a38d537a6dbc18ead9dbe40eea7f059f30357fa0ee73c0",
+      "bytes": 386639
+    },
+    {
+      "path": "prepared/visa/train_quality_region.jsonl",
+      "sha256": "a21f1e138b207120352e91f985ed5f9c7c6fb92dd194436fad67992b17276a91",
+      "bytes": 546761
+    },
+    {
+      "path": "prepared/visa/val.jsonl",
+      "sha256": "eec85387645e9781585949033ec12cf5273e22fbf2b7986c1e0005fce5b5f0c0",
+      "bytes": 1124993
+    },
+    {
+      "path": "prepared/visa/val_balanced_120.jsonl",
+      "sha256": "126f60892b3e9fe3fc7f897a3df34b5729b62ebce9723071f59abad1394cb790",
+      "bytes": 85424
+    },
+    {
+      "path": "prepared/visa/val_balanced_120_decision.jsonl",
+      "sha256": "11b12253fb421a5be274a4d7f40219830080c34163221e59cae7520f214053b5",
+      "bytes": 60404
+    }
+  ],
+  "evaluation_history": [
+    {
+      "path": "evaluations/base_decision/predictions.jsonl",
+      "rows": 120,
+      "unique_sources": 120
+    },
+    {
+      "path": "evaluations/base_region/predictions.jsonl",
+      "rows": 120,
+      "unique_sources": 120
+    },
+    {
+      "path": "evaluations/external_base_region/predictions.jsonl",
+      "rows": 150,
+      "unique_sources": 150
+    },
+    {
+      "path": "evaluations/external_quality_region/predictions.jsonl",
+      "rows": 150,
+      "unique_sources": 150
+    },
+    {
+      "path": "evaluations/overfit32_training_diagnostic/predictions.jsonl",
+      "rows": 32,
+      "unique_sources": 32
+    },
+    {
+      "path": "evaluations/quality_decision/predictions.jsonl",
+      "rows": 120,
+      "unique_sources": 120
+    },
+    {
+      "path": "evaluations/quality_region/predictions.jsonl",
+      "rows": 120,
+      "unique_sources": 120
+    },
+    {
+      "path": "evaluations/quality_region_decision_prompt/predictions.jsonl",
+      "rows": 120,
+      "unique_sources": 120
+    },
+    {
+      "path": "evaluations/random_region/predictions.jsonl",
+      "rows": 120,
+      "unique_sources": 120
+    }
+  ],
+  "evaluated_unique_sources": 302,
+  "evaluated_unique_hashes": 302,
+  "inventory_sources": 10821,
+  "source_split_counts": {
+    "train": 7575,
+    "val": 1624,
+    "test": 1622
+  },
+  "training_unique_sources": 768,
+  "training_exposure_rows": 1536,
+  "source_exposure_sequence_sha256": {
+    "region_region": "ea833dafcf0f0aa9822fcb79794521eb50a6188eb88c5bf4086dfa31d9c27044",
+    "decision_decision": "ea833dafcf0f0aa9822fcb79794521eb50a6188eb88c5bf4086dfa31d9c27044",
+    "region_decision": "ea833dafcf0f0aa9822fcb79794521eb50a6188eb88c5bf4086dfa31d9c27044"
+  },
+  "source_epoch_sequence_sha256": [
+    "5c2aeabb29172930a16f3b74d91806b19321b94b40debecd13e53d6a017bda63",
+    "5276e93f791410b3ba19c92ad2c8ef014baeb9f3bf8aafddbc9061ac34669245"
+  ],
+  "task_exposures": {
+    "region_region": {
+      "region": 1536
+    },
+    "decision_decision": {
+      "decision": 1536
+    },
+    "region_decision": {
+      "decision": 768,
+      "region": 768
+    }
+  },
+  "mixed_epoch_task_counts": {
+    "1": {
+      "decision": 384,
+      "region": 384
+    },
+    "2": {
+      "decision": 384,
+      "region": 384
+    }
+  },
+  "confirmation_candidate_counts": {
+    "candle|anomaly": 10,
+    "candle|normal": 145,
+    "capsules|anomaly": 10,
+    "capsules|normal": 85,
+    "cashew|anomaly": 10,
+    "cashew|normal": 70,
+    "chewinggum|anomaly": 10,
+    "chewinggum|normal": 70,
+    "fryum|anomaly": 10,
+    "fryum|normal": 70,
+    "macaroni1|anomaly": 10,
+    "macaroni1|normal": 145,
+    "macaroni2|anomaly": 10,
+    "macaroni2|normal": 145,
+    "pcb1|anomaly": 10,
+    "pcb1|normal": 145,
+    "pcb2|anomaly": 10,
+    "pcb2|normal": 145,
+    "pcb3|anomaly": 10,
+    "pcb3|normal": 146,
+    "pcb4|anomaly": 10,
+    "pcb4|normal": 146,
+    "pipe_fryum|anomaly": 10,
+    "pipe_fryum|normal": 70
+  },
+  "confirmation_counts": {
+    "candle|anomaly": 10,
+    "candle|normal": 10,
+    "capsules|anomaly": 10,
+    "capsules|normal": 10,
+    "cashew|anomaly": 10,
+    "cashew|normal": 10,
+    "chewinggum|anomaly": 10,
+    "chewinggum|normal": 10,
+    "fryum|anomaly": 10,
+    "fryum|normal": 10,
+    "macaroni1|anomaly": 10,
+    "macaroni1|normal": 10,
+    "macaroni2|anomaly": 10,
+    "macaroni2|normal": 10,
+    "pcb1|anomaly": 10,
+    "pcb1|normal": 10,
+    "pcb2|anomaly": 10,
+    "pcb2|normal": 10,
+    "pcb3|anomaly": 10,
+    "pcb3|normal": 10,
+    "pcb4|anomaly": 10,
+    "pcb4|normal": 10,
+    "pipe_fryum|anomaly": 10,
+    "pipe_fryum|normal": 10
+  },
+  "confirmation_source_order_sha256": "ac213d0ec822fa61b0338be3e05c0a236ab0113b3f6943aa912eae2f3fdf869a",
+  "checks": {
+    "source_exposure_sequence_identical_all_arms": true,
+    "row_ids_unique_within_each_arm": true,
+    "each_source_exposed_twice_in_each_arm": true,
+    "mixed_each_source_has_one_region_and_one_decision": true,
+    "mixed_each_category_label_task_has16_sources_per_epoch": true,
+    "confirmation_unique_sources_and_hashes": true,
+    "confirmation_vs_train_source_overlap": 0,
+    "confirmation_vs_val_source_overlap": 0,
+    "confirmation_vs_evaluated_source_overlap": 0,
+    "confirmation_vs_train_val_hash_overlap": 0,
+    "confirmation_vs_evaluated_hash_overlap": 0,
+    "raw_image_io_performed": false,
+    "confirmation_predictions_generated_or_read": false,
+    "model_outcomes_used_for_confirmation_selection": false
+  },
+  "prepared_artifact_sha256": {
+    "confirmation_decision_240.jsonl": "d1dcefd3c02e1149f04f1068a62d4718d20d321cc6d04a7ca97afcfc4f9add15",
+    "confirmation_region_240.jsonl": "6c78967b8727d5a6e8b1631d72a8f8c08b67568fea13e664f959b2669d764d3d",
+    "confirmation_sources.jsonl": "25e261680f6d4796a1312dbec4a3e2218f79aec501f0fdc2ca4ab40d9b2d7a9d",
+    "plan.json": "a2b88fe01f509c07e27b34137c57c0ae847840ca9a71e01a5ec3f05732207875",
+    "train_decision_decision.jsonl": "214778943ccb8be292c533708d12f42944ae8c8f23364560d2e221798e610da4",
+    "train_region_decision.jsonl": "c3b59ab50f5af35351b4d0a8cdd239f0d43503ea8822056b8dfdce54342ccb01",
+    "train_region_region.jsonl": "04c679da569102ec36444cfd76f82c9047869df1ed223152186c29ff01601398",
+    "val_decision_120.jsonl": "cffb9a3bce5da68d6e026b06ee068ca9c266e033f9622d8d01986daa0c0e64f9",
+    "val_region_120.jsonl": "3f7f0f44422a057f7bc8478776a889982dac08b62d39e19f9a3b34a8ca35eda1"
+  },
+  "config_artifact_sha256": {
+    "decision_decision.json": "49241cd733e06250602e0eec51aa1a43a3e530daa6b714382ea522bd90d10ab7",
+    "region_decision.json": "94fb51b1c2d4239332e96b005687f82a61a768ec6a3844030c47e85ef6cf1da8",
+    "region_region.json": "fac060e75729be1fc61c0af2b0239e2446b007004ba313dad2a2bfa8bed7aa4e"
+  },
+  "hash_scope": "Provenance audit excludes its own hash; all generated data/plan/config artifacts are hashed above"
+}

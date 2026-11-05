@@ -1,0 +1,21 @@
+{
+  "stage": "complete",
+  "status": "complete",
+  "date": "2026-11-04",
+  "maps": "complete",
+  "queries": 380,
+  "map_arms": 2,
+  "completed_student_predictions": 760,
+  "teacher_replay_cases": 6,
+  "teacher_replay_passed": true,
+  "replay_max_abs_score_error": 0,
+  "standalone_demo_cases": 2,
+  "standalone_batch_exact": true,
+  "teacher_models_in_student_inference": false,
+  "new_test_inference": false,
+  "supervised_gt_training": true,
+  "single_seed": 42,
+  "failure_analysis": "complete",
+  "next": "Next independent experiment: fixed crop/recognition control; not launched in this continuation",
+  "all_gpu_work_finished": true
+}

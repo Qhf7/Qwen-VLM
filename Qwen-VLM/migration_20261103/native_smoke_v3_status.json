@@ -1,0 +1,26 @@
+{
+  "stage": "native_smoke",
+  "started_at": "2026-11-03 22:28:51 +0800",
+  "state": "complete",
+  "jobs": [
+    {
+      "name": "native_smoke_s42_v3",
+      "command": [
+        "/root/autodl-tmp/conda-envs/qwen3vl2/bin/python",
+        "-u",
+        "migration_native_train.py",
+        "--parity-report",
+        "/root/autodl-tmp/AnomalyGPT/runs/migration_20261103/native_parity/report.json",
+        "--out",
+        "/root/autodl-tmp/AnomalyGPT/runs/migration_20261103/native_smoke_s42_v3",
+        "--smoke"
+      ],
+      "state": "complete",
+      "started_at": "2026-11-03 22:28:51 +0800",
+      "returncode": 0,
+      "seconds": 52.386770248413086
+    }
+  ],
+  "current_job": "native_smoke_s42_v3",
+  "completed_at": "2026-11-03 22:29:44 +0800"
+}

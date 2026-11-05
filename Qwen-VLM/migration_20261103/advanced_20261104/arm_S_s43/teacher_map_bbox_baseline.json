@@ -1,0 +1,39 @@
+{
+  "rule": "union box of teacher map >= its imagewise 95th percentile; no GT/calibration; box on every image",
+  "unconditional_box": {
+    "schema": "visa-yesno-bbox1000-grid3-v1",
+    "n": 380,
+    "n_anomaly": 208,
+    "n_normal": 172,
+    "n_valid": 380,
+    "format_valid_rate": 1.0,
+    "n_valid_positive_on_anomaly": 208,
+    "format_valid_rate_anomaly": 1.0,
+    "format_valid_rate_normal": 1.0,
+    "anomaly_bbox_iou_mean_all": 0.10196270879679978,
+    "anomaly_iou_at_05_all": 0.08653846153846154,
+    "anomaly_box_center_inside_gt_box_all": 0.16826923076923078,
+    "anomaly_grid3_accuracy_all": 0.4423076923076923,
+    "anomaly_bbox_iou_mean_given_valid_positive": 0.10196270879679978,
+    "anomaly_iou_at_05_given_valid_positive": 0.08653846153846154,
+    "note": "All-anomaly denominators count malformed, No, or missing boxes as zero. Conditional metrics require coverage. Center hit is box-center-inside-GT-box, not pixel-mask point accuracy; union box covers all components."
+  },
+  "initial_score_gated": {
+    "schema": "visa-yesno-bbox1000-grid3-v1",
+    "n": 380,
+    "n_anomaly": 208,
+    "n_normal": 172,
+    "n_valid": 380,
+    "format_valid_rate": 1.0,
+    "n_valid_positive_on_anomaly": 134,
+    "format_valid_rate_anomaly": 1.0,
+    "format_valid_rate_normal": 1.0,
+    "anomaly_bbox_iou_mean_all": 0.09391486012035946,
+    "anomaly_iou_at_05_all": 0.08173076923076923,
+    "anomaly_box_center_inside_gt_box_all": 0.15384615384615385,
+    "anomaly_grid3_accuracy_all": 0.32211538461538464,
+    "anomaly_bbox_iou_mean_given_valid_positive": 0.14577829033608036,
+    "anomaly_iou_at_05_given_valid_positive": 0.12686567164179105,
+    "note": "All-anomaly denominators count malformed, No, or missing boxes as zero. Conditional metrics require coverage. Center hit is box-center-inside-GT-box, not pixel-mask point accuracy; union box covers all components."
+  }
+}

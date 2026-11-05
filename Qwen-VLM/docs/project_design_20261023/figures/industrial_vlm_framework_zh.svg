@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180mm" height="116.4706mm" viewBox="0 0 1700 1100">
+<title>Proposed industrial VLM instruction tuning framework</title>
+<desc>Offline annotation-guided instruction construction, frozen Qwen3-VL visual modules and NF4 language weights with trainable attention LoRA, assistant-only SFT, and independent inference evaluation. Proposed design; no experimental results are implied.</desc>
+<rect width="1700" height="1100" fill="white"/>
+<rect x="15" y="15" width="1670" height="265" rx="12" fill="white" stroke="#C7D0DA" stroke-width="1.8"/>
+<text x="40" y="53.0" fill="#263346" font-family="Arial Unicode MS, Arial, sans-serif" font-size="28" font-weight="700" text-anchor="start">(a) 标注约束的工业指令数据构建</text>
+<rect x="45" y="90" width="220" height="110" rx="12" fill="#EAF5EF" stroke="#C7D0DA" stroke-width="1.8"/>
+<text x="155.0" y="138.39999999999998" fill="#263346" font-family="Arial Unicode MS, Arial, sans-serif" font-size="22" font-weight="400" text-anchor="middle">VisA 原始图像</text>
+<text x="155.0" y="166.55999999999997" fill="#263346" font-family="Arial Unicode MS, Arial, sans-serif" font-size="22" font-weight="400" text-anchor="middle">标签与像素标注</text>
+<rect x="310" y="90" width="210" height="110" rx="12" fill="#EAF5EF" stroke="#C7D0DA" stroke-width="1.8"/>
+<text x="415.0" y="138.39999999999998" fill="#263346" font-family="Arial Unicode MS, Arial, sans-serif" font-size="22" font-weight="400" text-anchor="middle">按原图/关联组划分</text>
+<text x="415.0" y="166.55999999999997" fill="#263346" font-family="Arial Unicode MS, Arial, sans-serif" font-size="22" font-weight="400" text-anchor="middle">先划分，再派生</text>
+<rect x="565" y="90" width="235" height="110" rx="12" fill="#EAF5EF" stroke="#C7D0DA" stroke-width="1.8"/>
+<text x="682.5" y="138.39999999999998" fill="#263346" font-family="Arial Unicode MS, Arial, sans-serif" font-size="22" font-weight="400" text-anchor="middle">区域框与裁剪</text>
+<text x="682.5" y="166.55999999999997" fill="#263346" font-family="Arial Unicode MS, Arial, sans-serif" font-size="22" font-weight="400" text-anchor="middle">正常参考图配对</text>
+<rect x="845" y="90" width="235" height="110" rx="12" fill="#EAF5EF" stroke="#C7D0DA" stroke-width="1.8"/>
+<text x="962.5" y="138.39999999999998" fill="#263346" font-family="Arial Unicode MS, Arial, sans-serif" font-size="22" font-weight="400" text-anchor="middle">构建多任务问答</text>
+<text x="962.5" y="166.55999999999997" fill="#263346" font-family="Arial Unicode MS, Arial, sans-serif" font-size="22" font-weight="400" text-anchor="middle">标注约束与表达改写</text>
+<rect x="1125" y="90" width="230" height="110" rx="12" fill="#EAF5EF" stroke="#C7D0DA" stroke-width="1.8"/>
+<text x="1240.0" y="138.39999999999998" fill="#263346" font-family="Arial Unicode MS, Arial, sans-serif" font-size="22" font-weight="400" text-anchor="middle">数据质量过滤</text>
+<text x="1240.0" y="166.55999999999997" fill="#263346" font-family="Arial Unicode MS, Arial, sans-serif" font-size="22" font-weight="400" text-anchor="middle">规则校验与人工抽查</text>
+<rect x="1400" y="90" width="240" height="110" rx="12" fill="#EAF5EF" stroke="#C7D0DA" stroke-width="1.8"/>
+<text x="1520.0" y="138.39999999999998" fill="#263346" font-family="Arial Unicode MS, Arial, sans-serif" font-size="22" font-weight="400" text-anchor="middle">高质量指令记录</text>
+<text x="1520.0" y="166.55999999999997" fill="#263346" font-family="Arial Unicode MS, Arial, sans-serif" font-size="22" font-weight="400" text-anchor="middle">图像 / 指令 / 答案</text>
+<polyline points="265,145 310,145" fill="none" stroke="#263346" stroke-width="2.6" stroke-linejoin="round"/>
+<polygon points="310,145 299.0,140.0 299.0,150.0" fill="#263346"/>
+<polyline points="520,145 565,145" fill="none" stroke="#263346" stroke-width="2.6" stroke-linejoin="round"/>
+<polygon points="565,145 554.0,140.0 554.0,150.0" fill="#263346"/>
+<polyline points="800,145 845,145" fill="none" stroke="#263346" stroke-width="2.6" stroke-linejoin="round"/>
+<polygon points="845,145 834.0,140.0 834.0,150.0" fill="#263346"/>
+<polyline points="1080,145 1125,145" fill="none" stroke="#263346" stroke-width="2.6" stroke-linejoin="round"/>
+<polygon points="1125,145 1114.0,140.0 1114.0,150.0" fill="#263346"/>
+<polyline points="1355,145 1400,145" fill="none" stroke="#263346" stroke-width="2.6" stroke-linejoin="round"/>
+<polygon points="1400,145 1389.0,140.0 1389.0,150.0" fill="#263346"/>
+<text x="1095" y="230.0" fill="#367C67" font-family="Arial Unicode MS, Arial, sans-serif" font-size="22" font-weight="400" text-anchor="middle">区域裁剪、图像配对、表达改写与派生问答仅在训练划分内构建。</text>
+<text x="415" y="258.0" fill="#526174" font-family="Arial Unicode MS, Arial, sans-serif" font-size="21" font-weight="400" text-anchor="middle">验证 / 内部测试 / 外部测试独立锁定，供 (c) 评测。</text>
+<rect x="15" y="300" width="1670" height="420" rx="12" fill="white" stroke="#C7D0DA" stroke-width="1.8"/>
+<text x="40" y="340.0" fill="#263346" font-family="Arial Unicode MS, Arial, sans-serif" font-size="28" font-weight="700" text-anchor="start">(b) 保留 Qwen3-VL-8B 原生多模态架构，进行参数高效适配</text>
+<rect x="45" y="385" width="225" height="120" rx="12" fill="white" stroke="#C7D0DA" stroke-width="1.8"/>
+<text x="157.5" y="438.40000000000003" fill="#263346" font-family="Arial Unicode MS, Arial, sans-serif" font-size="22" font-weight="400" text-anchor="middle">待检图像</text>
+<text x="157.5" y="466.56000000000006" fill="#263346" font-family="Arial Unicode MS, Arial, sans-serif" font-size="22" font-weight="400" text-anchor="middle">可选正常参考图</text>
+<rect x="45" y="600" width="225" height="70" rx="12" fill="white" stroke="#C7D0DA" stroke-width="1.8"/>
+<text x="157.5" y="642.48" fill="#263346" font-family="Arial Unicode MS, Arial, sans-serif" font-size="22" font-weight="400" text-anchor="middle">质检指令</text>
+<rect x="325" y="385" width="300" height="85" rx="12" fill="#EEF1F5" stroke="#C7D0DA" stroke-width="1.8"/>
+<text x="475.0" y="420.3" fill="#263346" font-family="Arial Unicode MS, Arial, sans-serif" font-size="24" font-weight="400" text-anchor="middle">原生视觉编码器</text>
+<text x="475.0" y="451.02" fill="#263346" font-family="Arial Unicode MS, Arial, sans-serif" font-size="24" font-weight="400" text-anchor="middle">冻结</text>
+<rect x="325" y="505" width="300" height="85" rx="12" fill="#EEF1F5" stroke="#C7D0DA" stroke-width="1.8"/>
+<text x="475.0" y="540.6" fill="#263346" font-family="Arial Unicode MS, Arial, sans-serif" font-size="23" font-weight="400" text-anchor="middle">Merger 与 DeepStack 路径</text>
+<text x="475.0" y="570.0400000000001" fill="#263346" font-family="Arial Unicode MS, Arial, sans-serif" font-size="23" font-weight="400" text-anchor="middle">冻结</text>
+<rect x="325" y="600" width="300" height="70" rx="12" fill="white" stroke="#C7D0DA" stroke-width="1.8"/>
+<text x="475.0" y="628.6999999999999" fill="#263346" font-family="Arial Unicode MS, Arial, sans-serif" font-size="21" font-weight="400" text-anchor="middle">文本模板与分词</text>
+<text x="475.0" y="655.5799999999999" fill="#263346" font-family="Arial Unicode MS, Arial, sans-serif" font-size="21" font-weight="400" text-anchor="middle">训练时包含答案前缀</text>
+<polyline points="270,445 325,445" fill="none" stroke="#263346" stroke-width="2.6" stroke-linejoin="round"/>
+<polygon points="325,445 314.0,440.0 314.0,450.0" fill="#263346"/>
+<polyline points="475,470 475,505" fill="none" stroke="#263346" stroke-width="2.6" stroke-linejoin="round"/>
+<polygon points="475,505 480.0,494.0 470.0,494.0" fill="#263346"/>
+<polyline points="270,635 325,635" fill="none" stroke="#263346" stroke-width="2.6" stroke-linejoin="round"/>
+<polygon points="325,635 314.0,630.0 314.0,640.0" fill="#263346"/>
+<rect x="705" y="445" width="230" height="160" rx="12" fill="#EAF1FB" stroke="#C7D0DA" stroke-width="1.8"/>
+<text x="820.0" y="504.32" fill="#263346" font-family="Arial Unicode MS, Arial, sans-serif" font-size="22" font-weight="400" text-anchor="middle">原生多模态融合</text>
+<text x="820.0" y="532.48" fill="#263346" font-family="Arial Unicode MS, Arial, sans-serif" font-size="22" font-weight="400" text-anchor="middle">视觉与文本 token</text>
+<text x="820.0" y="560.64" fill="#263346" font-family="Arial Unicode MS, Arial, sans-serif" font-size="22" font-weight="400" text-anchor="middle">图像网格与位置编码</text>
+<polyline points="625,547 705,547" fill="none" stroke="#263346" stroke-width="2.6" stroke-linejoin="round"/>
+<polygon points="705,547 694.0,542.0 694.0,552.0" fill="#263346"/>
+<polyline points="625,635 670,635 670,580 705,580" fill="none" stroke="#263346" stroke-width="2.6" stroke-linejoin="round"/>
+<polygon points="705,580 694.0,575.0 694.0,585.0" fill="#263346"/>
+<rect x="1000" y="385" width="340" height="285" rx="12" fill="white" stroke="#8B99AB" stroke-width="1.8"/>
+<text x="1170" y="420.0" fill="#263346" font-family="Arial Unicode MS, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="middle">语言模型</text>
+<rect x="1020" y="442" width="300" height="72" rx="12" fill="#EEF1F5" stroke="#C7D0DA" stroke-width="1.8"/>
+<text x="1170.0" y="471.09999999999997" fill="#263346" font-family="Arial Unicode MS, Arial, sans-serif" font-size="23" font-weight="400" text-anchor="middle">NF4 量化基座权重</text>
+<text x="1170.0" y="500.53999999999996" fill="#263346" font-family="Arial Unicode MS, Arial, sans-serif" font-size="23" font-weight="400" text-anchor="middle">冻结</text>
+<rect x="1020" y="535" width="300" height="75" rx="12" fill="#FFF0DE" stroke="#B85B0D" stroke-width="1.8"/>
+<text x="1170.0" y="565.3" fill="#263346" font-family="Arial Unicode MS, Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle">Attention LoRA</text>
+<text x="1170.0" y="596.02" fill="#263346" font-family="Arial Unicode MS, Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle">可训练</text>
+<text x="1066.15478515625" y="645" fill="#263346" font-family="Arial, Helvetica, sans-serif" font-size="22" font-style="italic">h = W</text>
+<text x="1124.22705078125" y="650" fill="#263346" font-family="Arial, Helvetica, sans-serif" font-size="14" font-style="normal">NF4</text>
+<text x="1150.67529296875" y="645" fill="#263346" font-family="Arial, Helvetica, sans-serif" font-size="22" font-style="italic">x + (α/r) BAx</text>
+<polyline points="935,525 1000,525" fill="none" stroke="#263346" stroke-width="2.6" stroke-linejoin="round"/>
+<polygon points="1000,525 989.0,520.0 989.0,530.0" fill="#263346"/>
+<rect x="1405" y="400" width="235" height="70" rx="12" fill="#EAF1FB" stroke="#C7D0DA" stroke-width="1.8"/>
+<text x="1522.5" y="442.82" fill="#263346" font-family="Arial Unicode MS, Arial, sans-serif" font-size="23" font-weight="400" text-anchor="middle">下一 token logits</text>
+<rect x="1405" y="510" width="235" height="160" rx="12" fill="#EAF1FB" stroke="#C7D0DA" stroke-width="1.8"/>
+<text x="1522.5" y="555.24" fill="#263346" font-family="Arial Unicode MS, Arial, sans-serif" font-size="22" font-weight="400" text-anchor="middle">自回归生成答案</text>
+<text x="1522.5" y="583.4" fill="#263346" font-family="Arial Unicode MS, Arial, sans-serif" font-size="22" font-weight="400" text-anchor="middle">异常判断</text>
+<text x="1522.5" y="611.5600000000001" fill="#263346" font-family="Arial Unicode MS, Arial, sans-serif" font-size="22" font-weight="400" text-anchor="middle">缺陷位置框</text>
+<text x="1522.5" y="639.72" fill="#263346" font-family="Arial Unicode MS, Arial, sans-serif" font-size="22" font-weight="400" text-anchor="middle">可见视觉依据</text>
+<polyline points="1340,435 1405,435" fill="none" stroke="#263346" stroke-width="2.6" stroke-linejoin="round"/>
+<polygon points="1405,435 1394.0,430.0 1394.0,440.0" fill="#263346"/>
+<polyline points="1522,470 1522,510" fill="none" stroke="#263346" stroke-width="2.6" stroke-linejoin="round"/>
+<polygon points="1522,510 1527.0,499.0 1517.0,499.0" fill="#263346"/>
+<text x="820" y="698.0" fill="#526174" font-family="Arial Unicode MS, Arial, sans-serif" font-size="21" font-weight="400" text-anchor="middle">保留原生视觉特征注入；LoRA 仅适配选定的语言侧注意力投影。</text>
+<rect x="15" y="740" width="1670" height="295" rx="12" fill="white" stroke="#C7D0DA" stroke-width="1.8"/>
+<text x="40" y="780.0" fill="#263346" font-family="Arial Unicode MS, Arial, sans-serif" font-size="27" font-weight="700" text-anchor="start">(c) 推理与独立评测</text>
+<text x="810" y="780.0" fill="#263346" font-family="Arial Unicode MS, Arial, sans-serif" font-size="27" font-weight="700" text-anchor="start">仅对答案部分计算 SFT 损失</text>
+<rect x="45" y="815" width="195" height="82" rx="12" fill="white" stroke="#C7D0DA" stroke-width="1.8"/>
+<text x="142.5" y="849.4" fill="#263346" font-family="Arial Unicode MS, Arial, sans-serif" font-size="22" font-weight="400" text-anchor="middle">新图像</text>
+<text x="142.5" y="877.56" fill="#263346" font-family="Arial Unicode MS, Arial, sans-serif" font-size="22" font-weight="400" text-anchor="middle">用户请求</text>
+<rect x="285" y="815" width="195" height="82" rx="12" fill="white" stroke="#C7D0DA" stroke-width="1.8"/>
+<text x="382.5" y="849.6999999999999" fill="#263346" font-family="Arial Unicode MS, Arial, sans-serif" font-size="21" font-weight="400" text-anchor="middle">适配后的模型 (b)</text>
+<text x="382.5" y="876.5799999999999" fill="#263346" font-family="Arial Unicode MS, Arial, sans-serif" font-size="21" font-weight="400" text-anchor="middle">推理时参数固定</text>
+<rect x="525" y="815" width="195" height="82" rx="12" fill="white" stroke="#C7D0DA" stroke-width="1.8"/>
+<text x="622.5" y="850.0" fill="#263346" font-family="Arial Unicode MS, Arial, sans-serif" font-size="20" font-weight="400" text-anchor="middle">生成答案</text>
+<text x="622.5" y="875.6" fill="#263346" font-family="Arial Unicode MS, Arial, sans-serif" font-size="20" font-weight="400" text-anchor="middle">判断 / 框 / 依据</text>
+<polyline points="240,856 285,856" fill="none" stroke="#263346" stroke-width="2.6" stroke-linejoin="round"/>
+<polygon points="285,856 274.0,851.0 274.0,861.0" fill="#263346"/>
+<polyline points="480,856 525,856" fill="none" stroke="#263346" stroke-width="2.6" stroke-linejoin="round"/>
+<polygon points="525,856 514.0,851.0 514.0,861.0" fill="#263346"/>
+<rect x="45" y="935" width="195" height="65" rx="12" fill="white" stroke="#C7D0DA" stroke-width="1.8"/>
+<text x="142.5" y="974.98" fill="#263346" font-family="Arial Unicode MS, Arial, sans-serif" font-size="22" font-weight="400" text-anchor="middle">独立测试标注</text>
+<rect x="285" y="935" width="435" height="65" rx="12" fill="#EAF5EF" stroke="#C7D0DA" stroke-width="1.8"/>
+<text x="502.5" y="974.64" fill="#263346" font-family="Arial Unicode MS, Arial, sans-serif" font-size="21" font-weight="400" text-anchor="middle">检测 / 框定位 / 证据一致性 / 效率</text>
+<polyline points="240,968 285,968" fill="none" stroke="#367C67" stroke-width="2.6" stroke-linejoin="round"/>
+<polygon points="285,968 274.0,963.0 274.0,973.0" fill="#367C67"/>
+<polyline points="622,897 622,935" fill="none" stroke="#263346" stroke-width="2.6" stroke-linejoin="round"/>
+<polygon points="622,935 627.0,924.0 617.0,924.0" fill="#263346"/>
+<rect x="810" y="815" width="270" height="90" rx="12" fill="#EAF5EF" stroke="#C7D0DA" stroke-width="1.8"/>
+<text x="945.0" y="853.4" fill="#263346" font-family="Arial Unicode MS, Arial, sans-serif" font-size="22" font-weight="400" text-anchor="middle">目标答案 token</text>
+<text x="945.0" y="881.56" fill="#263346" font-family="Arial Unicode MS, Arial, sans-serif" font-size="22" font-weight="400" text-anchor="middle">来自质检后的训练记录</text>
+<rect x="1130" y="815" width="230" height="90" rx="12" fill="#FFF0DE" stroke="#B85B0D" stroke-width="1.8"/>
+<text x="1245.0" y="853.4" fill="#263346" font-family="Arial Unicode MS, Arial, sans-serif" font-size="22" font-weight="400" text-anchor="middle">Token 交叉熵</text>
+<text x="1245.0" y="881.56" fill="#263346" font-family="Arial Unicode MS, Arial, sans-serif" font-size="22" font-weight="400" text-anchor="middle">仅监督答案位置</text>
+<rect x="1410" y="815" width="230" height="90" rx="12" fill="#EAF1FB" stroke="#C7D0DA" stroke-width="1.8"/>
+<text x="1525.0" y="867.48" fill="#263346" font-family="Arial Unicode MS, Arial, sans-serif" font-size="22" font-weight="400" text-anchor="middle">预测 token logits</text>
+<polyline points="1080,860 1130,860" fill="none" stroke="#367C67" stroke-width="2.6" stroke-linejoin="round"/>
+<polygon points="1130,860 1119.0,855.0 1119.0,865.0" fill="#367C67"/>
+<polyline points="1410,860 1360,860" fill="none" stroke="#367C67" stroke-width="2.6" stroke-linejoin="round"/>
+<polygon points="1360,860 1371.0,865.0 1371.0,855.0" fill="#367C67"/>
+<polyline points="1640,435 1660,435 1660,860 1640,860" fill="none" stroke="#263346" stroke-width="2.6" stroke-linejoin="round"/>
+<polygon points="1640,860 1651.0,865.0 1651.0,855.0" fill="#263346"/>
+<polyline points="1360,835 1370,835 1370,573 1320,573" fill="none" stroke="#B85B0D" stroke-width="2.6" stroke-linejoin="round" stroke-dasharray="9 6"/>
+<polygon points="1320,573 1331.0,578.0 1331.0,568.0" fill="#B85B0D"/>
+<text x="1440" y="730.0" fill="#B85B0D" font-family="Arial Unicode MS, Arial, sans-serif" font-size="20" font-weight="400" text-anchor="middle">仅更新 LoRA</text>
+<text x="1049.87890625" y="958" fill="#263346" font-family="Arial, Helvetica, sans-serif" font-size="25" font-style="italic">L</text>
+<text x="1063.78271484375" y="964" fill="#263346" font-family="Arial, Helvetica, sans-serif" font-size="15" font-style="normal">SFT</text>
+<text x="1092.11279296875" y="958" fill="#263346" font-family="Arial, Helvetica, sans-serif" font-size="25" font-style="normal"> = − Σ</text>
+<text x="1157.603515625" y="965" fill="#263346" font-family="Arial, Helvetica, sans-serif" font-size="14" font-style="normal">t ∈ A</text>
+<text x="1189.1103515625" y="958" fill="#263346" font-family="Arial, Helvetica, sans-serif" font-size="25" font-style="normal"> log p</text>
+<text x="1250.267578125" y="964" fill="#263346" font-family="Arial, Helvetica, sans-serif" font-size="15" font-style="italic">θ,φ</text>
+<text x="1272.357421875" y="958" fill="#263346" font-family="Arial, Helvetica, sans-serif" font-size="25" font-style="normal">(y</text>
+<text x="1293.1826171875" y="964" fill="#263346" font-family="Arial, Helvetica, sans-serif" font-size="15" font-style="italic">t</text>
+<text x="1297.35009765625" y="958" fill="#263346" font-family="Arial, Helvetica, sans-serif" font-size="25" font-style="normal"> | I, q, y</text>
+<text x="1378.86865234375" y="964" fill="#263346" font-family="Arial, Helvetica, sans-serif" font-size="15" font-style="italic">&lt;t</text>
+<text x="1391.7958984375" y="958" fill="#263346" font-family="Arial, Helvetica, sans-serif" font-size="25" font-style="normal">)</text>
+<text x="1225" y="995.0" fill="#526174" font-family="Arial Unicode MS, Arial, sans-serif" font-size="21" font-weight="400" text-anchor="middle">框坐标作为答案 token 监督。</text>
+<rect x="35" y="1060" width="28" height="22" rx="3" fill="#EEF1F5" stroke="#C7D0DA" stroke-width="1.8"/>
+<text x="75" y="1079.0" fill="#263346" font-family="Arial Unicode MS, Arial, sans-serif" font-size="21" font-weight="400" text-anchor="start">冻结参数</text>
+<rect x="290" y="1060" width="28" height="22" rx="3" fill="#FFF0DE" stroke="#B85B0D" stroke-width="1.8"/>
+<text x="330" y="1079.0" fill="#263346" font-family="Arial Unicode MS, Arial, sans-serif" font-size="21" font-weight="400" text-anchor="start">可训练参数</text>
+<polyline points="600,1071 650,1071" fill="none" stroke="#263346" stroke-width="2.6" stroke-linejoin="round"/>
+<polygon points="650,1071 639.0,1066.0 639.0,1076.0" fill="#263346"/>
+<text x="665" y="1079.0" fill="#263346" font-family="Arial Unicode MS, Arial, sans-serif" font-size="21" font-weight="400" text-anchor="start">前向 / 数据</text>
+<polyline points="900,1071 950,1071" fill="none" stroke="#367C67" stroke-width="2.6" stroke-linejoin="round"/>
+<polygon points="950,1071 939.0,1066.0 939.0,1076.0" fill="#367C67"/>
+<text x="965" y="1079.0" fill="#263346" font-family="Arial Unicode MS, Arial, sans-serif" font-size="21" font-weight="400" text-anchor="start">监督</text>
+<polyline points="1175,1071 1225,1071" fill="none" stroke="#B85B0D" stroke-width="2.6" stroke-linejoin="round" stroke-dasharray="9 6"/>
+<polygon points="1225,1071 1214.0,1066.0 1214.0,1076.0" fill="#B85B0D"/>
+<text x="1240" y="1079.0" fill="#263346" font-family="Arial Unicode MS, Arial, sans-serif" font-size="21" font-weight="400" text-anchor="start">梯度 / 更新</text>
+<text x="1660" y="1079.0" fill="#526174" font-family="Arial Unicode MS, Arial, sans-serif" font-size="20" font-weight="400" text-anchor="end">设计方案</text>
+</svg>

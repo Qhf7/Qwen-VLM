@@ -1,0 +1,457 @@
+{
+  "created_at": "2026-10-23T11:30:34.159055+00:00",
+  "root": "/root/autodl-tmp/industrial_vlm",
+  "selection_rule": "Within each of four classification-correctness groups, sort by source_id and select first.",
+  "correctness": "Stored parsed prediction is non-null and its boolean equals the ground-truth label; localization is separate.",
+  "scope": "Post-hoc diagnostic visualization only; not a representative sample or aggregate performance estimate. Ground-truth boxes are overlaid after inference; no inference-time cropping or label input.",
+  "iou": "Local industrial_vlm.metrics.union_box_iou; enclosing predicted rectangle vs enclosing GT rectangle. Undefined for normal GT or invalid format; empty anomaly prediction gives zero.",
+  "datasets": {
+    "visa": {
+      "matched_sources": 120,
+      "candidate_counts": {
+        "base_wrong_sft_right": 31,
+        "base_right_sft_wrong": 8,
+        "both_wrong": 12,
+        "both_right": 69
+      },
+      "missing_groups": [],
+      "base_run": "base_region",
+      "sft_run": "quality_region",
+      "inputs_matched_on": [
+        "model",
+        "data_sha256",
+        "subset_sha256",
+        "max_pixels",
+        "max_length",
+        "max_new_tokens",
+        "generation",
+        "quantization",
+        "limit"
+      ],
+      "files": [
+        "/root/autodl-tmp/industrial_vlm/reports/examples/visa_paired_examples.png",
+        "/root/autodl-tmp/industrial_vlm/reports/examples/visa_paired_examples.pdf"
+      ],
+      "evaluation_sources": {
+        "base": {
+          "metadata": {
+            "path": "/root/autodl-tmp/industrial_vlm/evaluations/base_region/meta.json",
+            "sha256": "5c1935fc6eb986ead41b0e396ee3c3afdd1f30bf20347ab7c068cc31dfbaa471"
+          },
+          "metrics": {
+            "path": "/root/autodl-tmp/industrial_vlm/evaluations/base_region/metrics.json",
+            "sha256": "1963ddc24ae96be22f80e7b48dbc91e5243496a7ea5aab1da1c0a036c64015b4"
+          },
+          "predictions": {
+            "path": "/root/autodl-tmp/industrial_vlm/evaluations/base_region/predictions.jsonl",
+            "sha256": "f21ff788c924772569599849f8fe285257459842885742e8552b796c46cd4fce"
+          }
+        },
+        "sft": {
+          "metadata": {
+            "path": "/root/autodl-tmp/industrial_vlm/evaluations/quality_region/meta.json",
+            "sha256": "ae313c084b5dd033cbd1304925b4e743c4fe3e2ae9a009bf14c8f1797bd34f81"
+          },
+          "metrics": {
+            "path": "/root/autodl-tmp/industrial_vlm/evaluations/quality_region/metrics.json",
+            "sha256": "70298fd9e7f2f9eeab2be486de3e3a9a8e8c5d6afa4718d4688b58197f46c071"
+          },
+          "predictions": {
+            "path": "/root/autodl-tmp/industrial_vlm/evaluations/quality_region/predictions.jsonl",
+            "sha256": "567e201a446af984d2dcfdbf95b07d9d3db3c273580e004226b1884128bdc649"
+          }
+        }
+      },
+      "examples": [
+        {
+          "group": "base_wrong_sft_right",
+          "source_id": "visa_07f720473af99ba5e94c7bb254d24f86061a91405d6f5c71c7d3cda3a61f54dc",
+          "image": "/root/autodl-tmp/industrial_vlm/datasets/VisA/cashew/Data/Images/Anomaly/003.JPG",
+          "category": "cashew",
+          "image_sha256": "07f720473af99ba5e94c7bb254d24f86061a91405d6f5c71c7d3cda3a61f54dc",
+          "base": {
+            "classification_correct": false,
+            "label": true,
+            "prediction": false,
+            "union_box_iou": 0.0,
+            "format_error": null,
+            "raw_text": "{\n  \"is_anomalous\": false,\n  \"boxes\": []\n}",
+            "gt_boxes": [
+              [
+                350.0,
+                576.0,
+                399.0,
+                638.0
+              ]
+            ],
+            "predicted_boxes": []
+          },
+          "sft": {
+            "classification_correct": true,
+            "label": true,
+            "prediction": true,
+            "union_box_iou": 0.711864406779661,
+            "format_error": null,
+            "raw_text": "{\"is_anomalous\":true,\"boxes\":[[345,580,392,640]]}",
+            "gt_boxes": [
+              [
+                350.0,
+                576.0,
+                399.0,
+                638.0
+              ]
+            ],
+            "predicted_boxes": [
+              [
+                345.0,
+                580.0,
+                392.0,
+                640.0
+              ]
+            ]
+          }
+        },
+        {
+          "group": "base_right_sft_wrong",
+          "source_id": "visa_0204696c816bbb2ec9a0e867edda7449aad1a2297edb60b81e1bbeea44e5acd5",
+          "image": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb2/Data/Images/Normal/0703.JPG",
+          "category": "pcb2",
+          "image_sha256": "0204696c816bbb2ec9a0e867edda7449aad1a2297edb60b81e1bbeea44e5acd5",
+          "base": {
+            "classification_correct": true,
+            "label": false,
+            "prediction": false,
+            "union_box_iou": null,
+            "format_error": null,
+            "raw_text": "{\n  \"is_anomalous\": false,\n  \"boxes\": []\n}",
+            "gt_boxes": [],
+            "predicted_boxes": []
+          },
+          "sft": {
+            "classification_correct": false,
+            "label": false,
+            "prediction": true,
+            "union_box_iou": null,
+            "format_error": null,
+            "raw_text": "{\"is_anomalous\":true,\"boxes\":[[382,172,527,356]]}",
+            "gt_boxes": [],
+            "predicted_boxes": [
+              [
+                382.0,
+                172.0,
+                527.0,
+                356.0
+              ]
+            ]
+          }
+        },
+        {
+          "group": "both_wrong",
+          "source_id": "visa_2ad291642a85583f523c83613c3b2a32e25e285b4bf563c74729ee07d23dbcec",
+          "image": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb3/Data/Images/Anomaly/001.JPG",
+          "category": "pcb3",
+          "image_sha256": "2ad291642a85583f523c83613c3b2a32e25e285b4bf563c74729ee07d23dbcec",
+          "base": {
+            "classification_correct": false,
+            "label": true,
+            "prediction": false,
+            "union_box_iou": 0.0,
+            "format_error": null,
+            "raw_text": "{\n  \"is_anomalous\": false,\n  \"boxes\": []\n}",
+            "gt_boxes": [
+              [
+                590.0,
+                561.0,
+                691.0,
+                823.0
+              ]
+            ],
+            "predicted_boxes": []
+          },
+          "sft": {
+            "classification_correct": false,
+            "label": true,
+            "prediction": false,
+            "union_box_iou": 0.0,
+            "format_error": null,
+            "raw_text": "{\"is_anomalous\":false,\"boxes\":[]}",
+            "gt_boxes": [
+              [
+                590.0,
+                561.0,
+                691.0,
+                823.0
+              ]
+            ],
+            "predicted_boxes": []
+          }
+        },
+        {
+          "group": "both_right",
+          "source_id": "visa_01bf2a4362be34e9fd556da20d9e542cfeb140532c321ba6e5972232bcb17bde",
+          "image": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni1/Data/Images/Anomaly/044.JPG",
+          "category": "macaroni1",
+          "image_sha256": "01bf2a4362be34e9fd556da20d9e542cfeb140532c321ba6e5972232bcb17bde",
+          "base": {
+            "classification_correct": true,
+            "label": true,
+            "prediction": true,
+            "union_box_iou": 0.08220441574912088,
+            "format_error": null,
+            "raw_text": "{\n  \"is_anomalous\": true,\n  \"boxes\": [\n    [542, 174, 791, 383]\n  ]\n}",
+            "gt_boxes": [
+              [
+                653.0,
+                245.0,
+                722.0,
+                307.0
+              ]
+            ],
+            "predicted_boxes": [
+              [
+                542.0,
+                174.0,
+                791.0,
+                383.0
+              ]
+            ]
+          },
+          "sft": {
+            "classification_correct": true,
+            "label": true,
+            "prediction": true,
+            "union_box_iou": 0.3702245890252373,
+            "format_error": null,
+            "raw_text": "{\"is_anomalous\":true,\"boxes\":[[683,259,723,300]]}",
+            "gt_boxes": [
+              [
+                653.0,
+                245.0,
+                722.0,
+                307.0
+              ]
+            ],
+            "predicted_boxes": [
+              [
+                683.0,
+                259.0,
+                723.0,
+                300.0
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    "mvtec": {
+      "matched_sources": 150,
+      "candidate_counts": {
+        "base_wrong_sft_right": 27,
+        "base_right_sft_wrong": 25,
+        "both_wrong": 14,
+        "both_right": 84
+      },
+      "missing_groups": [],
+      "base_run": "external_base_region",
+      "sft_run": "external_quality_region",
+      "inputs_matched_on": [
+        "model",
+        "data_sha256",
+        "subset_sha256",
+        "max_pixels",
+        "max_length",
+        "max_new_tokens",
+        "generation",
+        "quantization",
+        "limit"
+      ],
+      "files": [
+        "/root/autodl-tmp/industrial_vlm/reports/examples/mvtec_paired_examples.png",
+        "/root/autodl-tmp/industrial_vlm/reports/examples/mvtec_paired_examples.pdf"
+      ],
+      "evaluation_sources": {
+        "base": {
+          "metadata": {
+            "path": "/root/autodl-tmp/industrial_vlm/evaluations/external_base_region/meta.json",
+            "sha256": "906afa9cb84358a426908c81c66963d74937af89bc1ace5720632bdfbea8fd3b"
+          },
+          "metrics": {
+            "path": "/root/autodl-tmp/industrial_vlm/evaluations/external_base_region/metrics.json",
+            "sha256": "289e20b3a5c055101cbb1f1422b43efe6a210ccf7daf545eab5f129e07556a54"
+          },
+          "predictions": {
+            "path": "/root/autodl-tmp/industrial_vlm/evaluations/external_base_region/predictions.jsonl",
+            "sha256": "bb25c0b644773cb8758083b58dba87b45d2eec59c16a27d61835e5012c70523b"
+          }
+        },
+        "sft": {
+          "metadata": {
+            "path": "/root/autodl-tmp/industrial_vlm/evaluations/external_quality_region/meta.json",
+            "sha256": "b0d626ed16f0e8d9b06e73d30954aaf93283c442e5f9fa70f28171e3d778e49e"
+          },
+          "metrics": {
+            "path": "/root/autodl-tmp/industrial_vlm/evaluations/external_quality_region/metrics.json",
+            "sha256": "76721a09a2c1738d672239f9cecec9c0755243824f875114faced3ccfec6052a"
+          },
+          "predictions": {
+            "path": "/root/autodl-tmp/industrial_vlm/evaluations/external_quality_region/predictions.jsonl",
+            "sha256": "1cc9c8060bd5368f0c903fb7c265d694084250c04c3140a0c3989d386ee6781c"
+          }
+        }
+      },
+      "examples": [
+        {
+          "group": "base_wrong_sft_right",
+          "source_id": "mvtec_0523483988a920ff336c3a239381b98bbf7b67afd53d6b5ba3e7aa5b7ca6fd6c",
+          "image": "/root/autodl-tmp/industrial_vlm/datasets/MVTec_AD_pilot/hazelnut/test/crack/012.png",
+          "category": "hazelnut",
+          "image_sha256": "0523483988a920ff336c3a239381b98bbf7b67afd53d6b5ba3e7aa5b7ca6fd6c",
+          "base": {
+            "classification_correct": false,
+            "label": true,
+            "prediction": false,
+            "union_box_iou": 0.0,
+            "format_error": null,
+            "raw_text": "{\n  \"is_anomalous\": false,\n  \"boxes\": []\n}",
+            "gt_boxes": [
+              [
+                281.0,
+                228.0,
+                604.0,
+                734.0
+              ]
+            ],
+            "predicted_boxes": []
+          },
+          "sft": {
+            "classification_correct": true,
+            "label": true,
+            "prediction": true,
+            "union_box_iou": 0.7048544402158616,
+            "format_error": null,
+            "raw_text": "{\"is_anomalous\":true,\"boxes\":[[360,230,600,710]]}",
+            "gt_boxes": [
+              [
+                281.0,
+                228.0,
+                604.0,
+                734.0
+              ]
+            ],
+            "predicted_boxes": [
+              [
+                360.0,
+                230.0,
+                600.0,
+                710.0
+              ]
+            ]
+          }
+        },
+        {
+          "group": "base_right_sft_wrong",
+          "source_id": "mvtec_0084a580c79da0879545bfc891dd4214623c5edc47d8053b78b2d44866938af8",
+          "image": "/root/autodl-tmp/industrial_vlm/datasets/MVTec_AD_pilot/pill/test/good/019.png",
+          "category": "pill",
+          "image_sha256": "0084a580c79da0879545bfc891dd4214623c5edc47d8053b78b2d44866938af8",
+          "base": {
+            "classification_correct": true,
+            "label": false,
+            "prediction": false,
+            "union_box_iou": null,
+            "format_error": null,
+            "raw_text": "```json\n{\n  \"is_anomalous\": false,\n  \"boxes\": []\n}\n```",
+            "gt_boxes": [],
+            "predicted_boxes": []
+          },
+          "sft": {
+            "classification_correct": false,
+            "label": false,
+            "prediction": true,
+            "union_box_iou": null,
+            "format_error": null,
+            "raw_text": "{\"is_anomalous\":true,\"boxes\":[[100,206,875,800]]}",
+            "gt_boxes": [],
+            "predicted_boxes": [
+              [
+                100.0,
+                206.0,
+                875.0,
+                800.0
+              ]
+            ]
+          }
+        },
+        {
+          "group": "both_wrong",
+          "source_id": "mvtec_12b90fbbb65590d8b1f48d1a5ffff440c45af785b26f23cebd20ad0b86d4ad50",
+          "image": "/root/autodl-tmp/industrial_vlm/datasets/MVTec_AD_pilot/bottle/test/good/012.png",
+          "category": "bottle",
+          "image_sha256": "12b90fbbb65590d8b1f48d1a5ffff440c45af785b26f23cebd20ad0b86d4ad50",
+          "base": {
+            "classification_correct": false,
+            "label": false,
+            "prediction": true,
+            "union_box_iou": null,
+            "format_error": null,
+            "raw_text": "{\n  \"is_anomalous\": true,\n  \"boxes\": [\n    [50, 50, 950, 950]\n  ]\n}",
+            "gt_boxes": [],
+            "predicted_boxes": [
+              [
+                50.0,
+                50.0,
+                950.0,
+                950.0
+              ]
+            ]
+          },
+          "sft": {
+            "classification_correct": false,
+            "label": false,
+            "prediction": true,
+            "union_box_iou": null,
+            "format_error": null,
+            "raw_text": "{\"is_anomalous\":true,\"boxes\":[[150,144,868,868]]}",
+            "gt_boxes": [],
+            "predicted_boxes": [
+              [
+                150.0,
+                144.0,
+                868.0,
+                868.0
+              ]
+            ]
+          }
+        },
+        {
+          "group": "both_right",
+          "source_id": "mvtec_00535e19b7c889d23e4c3188ceb513e180f6acfdaebf2623aa8d48982fdbb43c",
+          "image": "/root/autodl-tmp/industrial_vlm/datasets/MVTec_AD_pilot/grid/test/good/015.png",
+          "category": "grid",
+          "image_sha256": "00535e19b7c889d23e4c3188ceb513e180f6acfdaebf2623aa8d48982fdbb43c",
+          "base": {
+            "classification_correct": true,
+            "label": false,
+            "prediction": false,
+            "union_box_iou": null,
+            "format_error": null,
+            "raw_text": "{\n  \"is_anomalous\": false,\n  \"boxes\": []\n}",
+            "gt_boxes": [],
+            "predicted_boxes": []
+          },
+          "sft": {
+            "classification_correct": true,
+            "label": false,
+            "prediction": false,
+            "union_box_iou": null,
+            "format_error": null,
+            "raw_text": "{\"is_anomalous\":false,\"boxes\":[]}",
+            "gt_boxes": [],
+            "predicted_boxes": []
+          }
+        }
+      ]
+    }
+  },
+  "warnings": []
+}

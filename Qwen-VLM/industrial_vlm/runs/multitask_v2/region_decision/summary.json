@@ -1,0 +1,24 @@
+{
+  "status": "complete",
+  "optimizer_steps": 192,
+  "microsteps": 1536,
+  "last_train_loss": 0.42645611816209616,
+  "total_target_tokens": 24186,
+  "total_input_tokens": 857466,
+  "source_exposure_sha256": "ea833dafcf0f0aa9822fcb79794521eb50a6188eb88c5bf4086dfa31d9c27044",
+  "exposure_trace_sha256": "e7cc3aa942b90cd55d5447ee326cafed8ef5f84964e7155718955b371d5549b2",
+  "initial_trainable_sha256": "03366cda490b2a0054263c2901f2d25d74a9b6cba333da6b25a24af40bd1f984",
+  "train_wall_seconds_including_validation": 849.8960117027164,
+  "trainable_parameters": 15335424,
+  "peak_allocated_gib": 8.394511699676514,
+  "peak_reserved_gib": 8.509765625,
+  "adapter": "/root/autodl-tmp/industrial_vlm/runs/multitask_v2/region_decision/adapter",
+  "reload_check": {
+    "passed": true,
+    "max_absolute_logit_difference": 0.0,
+    "same_top1": true,
+    "rtol": 0.001,
+    "atol": 0.001,
+    "scope": "first-sample prompt final-token logits; fresh base + saved adapter"
+  }
+}

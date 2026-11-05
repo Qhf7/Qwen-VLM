@@ -1,0 +1,521 @@
+{
+  "num_sources": 48,
+  "per_category": "2 normal + 2 anomaly",
+  "max_new_tokens": 32,
+  "selection": "Each class/label sorted by source path; take the first two; no model scores used",
+  "batch_order": "normal, normal, anomaly, anomaly; torch.roll(+2) swaps opposite labels within class",
+  "label_usage": "Labels select the diagnostic subset and are used for posthoc metrics; model inference receives neither label nor mask",
+  "evaluation_scope": "Diagnostic subset of the already used real evaluation cache; not an independent test",
+  "intervention": "Only predicted anomaly maps entering PromptLearner are swapped; own global ImageBind feature and question remain fixed",
+  "same_actual_repeat": "All 48 actual prefixes receive candidate-only repeat scoring; no second generation",
+  "batches": [
+    [
+      {
+        "class_name": "candle",
+        "label": 0,
+        "source_path": "candle/Data/Images/Normal/0011.JPG",
+        "cache_file": "00000.pt",
+        "image_sha256": "26da76bd9dbc5212bb4ae59a394aeb51a624ee42a67a318671fe02cdcb52443f",
+        "cache_sha256": "3ec6edc6cebb9dd3a3fcf8f64a042ab3d21b3a320040b643b86cf855fb096587",
+        "swap_source_path": "candle/Data/Images/Anomaly/000.JPG",
+        "swap_cache_file": "00096.pt"
+      },
+      {
+        "class_name": "candle",
+        "label": 0,
+        "source_path": "candle/Data/Images/Normal/0013.JPG",
+        "cache_file": "00001.pt",
+        "image_sha256": "3a94c3ff1a279dc3915aeba8a4a94a6831b6738a1107b4a579e6bcd9e417e512",
+        "cache_sha256": "ca61c11f33e430efc5512eefdc4f7870aae7d2f377d35c1a77580c7d0ac45bec",
+        "swap_source_path": "candle/Data/Images/Anomaly/001.JPG",
+        "swap_cache_file": "00097.pt"
+      },
+      {
+        "class_name": "candle",
+        "label": 1,
+        "source_path": "candle/Data/Images/Anomaly/000.JPG",
+        "cache_file": "00096.pt",
+        "image_sha256": "c004dbc05698f01cf415e07d2a8cf8fef48aa19516eece6600e13f92f1f788b7",
+        "cache_sha256": "44ffd21647d49aeb21809d40e5323f92163d617f2591f8d63393700b5bfc4509",
+        "swap_source_path": "candle/Data/Images/Normal/0011.JPG",
+        "swap_cache_file": "00000.pt"
+      },
+      {
+        "class_name": "candle",
+        "label": 1,
+        "source_path": "candle/Data/Images/Anomaly/001.JPG",
+        "cache_file": "00097.pt",
+        "image_sha256": "c697ce4e2176c0de5d9f3ba8f38cd5acf99c61be5f91656ebb49c86652875f9a",
+        "cache_sha256": "7ae7edffc8ac9aaf0409e6afead23bb8c688e932855b45e0c48c9614ccbdbb21",
+        "swap_source_path": "candle/Data/Images/Normal/0013.JPG",
+        "swap_cache_file": "00001.pt"
+      }
+    ],
+    [
+      {
+        "class_name": "capsules",
+        "label": 0,
+        "source_path": "capsules/Data/Images/Normal/013.JPG",
+        "cache_file": "00186.pt",
+        "image_sha256": "155b574c3f51e9a610f393877b3443a8e15e59e54f9cc3efa60dcb014404d3d7",
+        "cache_sha256": "c9c02e22c50b628e449b8ac4fb013b5bc97de1d7e6f74c9fdf93689aa25c47fe",
+        "swap_source_path": "capsules/Data/Images/Anomaly/002.JPG",
+        "swap_cache_file": "00243.pt"
+      },
+      {
+        "class_name": "capsules",
+        "label": 0,
+        "source_path": "capsules/Data/Images/Normal/016.JPG",
+        "cache_file": "00187.pt",
+        "image_sha256": "01a4cc23717deebbf1d861ff8e896447cff5a693e26281569c7d7e022dd472fb",
+        "cache_sha256": "3f74c79a829fa5cf64c5b7ac404ab6509b62e1e267cb34da1f24f43ffff6982c",
+        "swap_source_path": "capsules/Data/Images/Anomaly/003.JPG",
+        "swap_cache_file": "00244.pt"
+      },
+      {
+        "class_name": "capsules",
+        "label": 1,
+        "source_path": "capsules/Data/Images/Anomaly/002.JPG",
+        "cache_file": "00243.pt",
+        "image_sha256": "0915d84bc965a23aa6b25ee1ab5c625164a810c8d74d13f21efe30a2fa495247",
+        "cache_sha256": "a8d21b11da85a93d2bfb231c6d5308789ddc2449d550262a916661df5f8dd3ff",
+        "swap_source_path": "capsules/Data/Images/Normal/013.JPG",
+        "swap_cache_file": "00186.pt"
+      },
+      {
+        "class_name": "capsules",
+        "label": 1,
+        "source_path": "capsules/Data/Images/Anomaly/003.JPG",
+        "cache_file": "00244.pt",
+        "image_sha256": "331958377f275154a5399966ecc536fd4304b619a68ee483b9cfb332eab2d6cd",
+        "cache_sha256": "cb6a75a67973221a5cfa4ce22f70488cda91d248eb8b2bec2e6ac5efd33a4776",
+        "swap_source_path": "capsules/Data/Images/Normal/016.JPG",
+        "swap_cache_file": "00187.pt"
+      }
+    ],
+    [
+      {
+        "class_name": "cashew",
+        "label": 0,
+        "source_path": "cashew/Data/Images/Normal/006.JPG",
+        "cache_file": "00333.pt",
+        "image_sha256": "4a0c0a6607571d54302bbab3605ecf764e66eb282618580a598ed9485f9c426c",
+        "cache_sha256": "425aaa937a8a7cae90855ec77df86ac982a7706b5c1800f37ff3b289b340e67b",
+        "swap_source_path": "cashew/Data/Images/Anomaly/000.JPG",
+        "swap_cache_file": "00377.pt"
+      },
+      {
+        "class_name": "cashew",
+        "label": 0,
+        "source_path": "cashew/Data/Images/Normal/012.JPG",
+        "cache_file": "00334.pt",
+        "image_sha256": "494eb7731a83b707726944af16a645ceb887071a68f25d2f45beb039f8c95a01",
+        "cache_sha256": "23c1c3d0010a73be4f752058166ff0ebcb117ffe2f17c6c1ee11352d41052034",
+        "swap_source_path": "cashew/Data/Images/Anomaly/001.JPG",
+        "swap_cache_file": "00378.pt"
+      },
+      {
+        "class_name": "cashew",
+        "label": 1,
+        "source_path": "cashew/Data/Images/Anomaly/000.JPG",
+        "cache_file": "00377.pt",
+        "image_sha256": "f28c4dad19810bc27bd38389a430dcc77c4aace06a5350e74c66c9ccb38affbd",
+        "cache_sha256": "88c18899166db30fba030a432bd47a0e2ec0c749e3532df147c139081bedc97a",
+        "swap_source_path": "cashew/Data/Images/Normal/006.JPG",
+        "swap_cache_file": "00333.pt"
+      },
+      {
+        "class_name": "cashew",
+        "label": 1,
+        "source_path": "cashew/Data/Images/Anomaly/001.JPG",
+        "cache_file": "00378.pt",
+        "image_sha256": "1ed3b61cb81c75ffebf65bb8cbf49282f488ad634846b78c039b429c9aea61af",
+        "cache_sha256": "e0fb86b30678e9f3d327f0beaf9a488d946daea387558c123b2665227d1fe70f",
+        "swap_source_path": "cashew/Data/Images/Normal/012.JPG",
+        "swap_cache_file": "00334.pt"
+      }
+    ],
+    [
+      {
+        "class_name": "chewinggum",
+        "label": 0,
+        "source_path": "chewinggum/Data/Images/Normal/006.JPG",
+        "cache_file": "00467.pt",
+        "image_sha256": "0744bba52b948a7f30051e1633bb2b1e1e88e11c56c8c24acd5fac347a165172",
+        "cache_sha256": "41aae19da86f615e55266388335cedc4d40548405c9463fb054011574eacfc99",
+        "swap_source_path": "chewinggum/Data/Images/Anomaly/001.JPG",
+        "swap_cache_file": "00514.pt"
+      },
+      {
+        "class_name": "chewinggum",
+        "label": 0,
+        "source_path": "chewinggum/Data/Images/Normal/012.JPG",
+        "cache_file": "00468.pt",
+        "image_sha256": "e4cd61bf9e689c6cc1ca6cf148a93db0afdb3db045ebe8db4a6a643cb403aaae",
+        "cache_sha256": "00830034dc9a62a7a9c76a7263a7ae57c2f494c583c03ce080ede0dfe7af9115",
+        "swap_source_path": "chewinggum/Data/Images/Anomaly/002.JPG",
+        "swap_cache_file": "00515.pt"
+      },
+      {
+        "class_name": "chewinggum",
+        "label": 1,
+        "source_path": "chewinggum/Data/Images/Anomaly/001.JPG",
+        "cache_file": "00514.pt",
+        "image_sha256": "e47e6d72e8f55160d0d47273ae6f7670b5b308e53c1ccf601726b4daf2d24ada",
+        "cache_sha256": "ee76fca65ba69d832e64832736d1e52cb6819e00cb3506e672bd3ea747a72365",
+        "swap_source_path": "chewinggum/Data/Images/Normal/006.JPG",
+        "swap_cache_file": "00467.pt"
+      },
+      {
+        "class_name": "chewinggum",
+        "label": 1,
+        "source_path": "chewinggum/Data/Images/Anomaly/002.JPG",
+        "cache_file": "00515.pt",
+        "image_sha256": "f0d4830cb1dd27f9d77414c6fb8319eb2e67477ac19c0e6f176afc69e0b92b23",
+        "cache_sha256": "f3aa3b9da3720bf9075dcbf269c39c9ec317859f6571301ff7195f7400da2ad6",
+        "swap_source_path": "chewinggum/Data/Images/Normal/012.JPG",
+        "swap_cache_file": "00468.pt"
+      }
+    ],
+    [
+      {
+        "class_name": "fryum",
+        "label": 0,
+        "source_path": "fryum/Data/Images/Normal/006.JPG",
+        "cache_file": "00604.pt",
+        "image_sha256": "14645fde04e076f2362aaba6688710c8b29cffe94be14439e880f9cf039f0f83",
+        "cache_sha256": "071b63ea8d601f010828860b60304ee719edbb7fe190c0ad365f7b5feb58ac0c",
+        "swap_source_path": "fryum/Data/Images/Anomaly/000.JPG",
+        "swap_cache_file": "00652.pt"
+      },
+      {
+        "class_name": "fryum",
+        "label": 0,
+        "source_path": "fryum/Data/Images/Normal/012.JPG",
+        "cache_file": "00605.pt",
+        "image_sha256": "73b16366583abea44b441ea854b3d3a4d3b7e7cd47abc39e8f99698935010248",
+        "cache_sha256": "98db41b35ead3f07b0f4635e2e6302c7c5d0493b6980253c216fa37416076320",
+        "swap_source_path": "fryum/Data/Images/Anomaly/001.JPG",
+        "swap_cache_file": "00653.pt"
+      },
+      {
+        "class_name": "fryum",
+        "label": 1,
+        "source_path": "fryum/Data/Images/Anomaly/000.JPG",
+        "cache_file": "00652.pt",
+        "image_sha256": "44139ec9efb05d7106c45000d65f9310edf3bb47a9931b6a080b91ddd64222d5",
+        "cache_sha256": "e373b27ce95558f312ae435c04ecf86579742e3970a69678df898651fecfc272",
+        "swap_source_path": "fryum/Data/Images/Normal/006.JPG",
+        "swap_cache_file": "00604.pt"
+      },
+      {
+        "class_name": "fryum",
+        "label": 1,
+        "source_path": "fryum/Data/Images/Anomaly/001.JPG",
+        "cache_file": "00653.pt",
+        "image_sha256": "47e7921085a2d55b1d3a47fdb3527cd03e86bdc670c29a5bad11ca5076a00caf",
+        "cache_sha256": "de52b606228f4c71426687814e600968c06f11cae1615e17d24752f9c3c46b46",
+        "swap_source_path": "fryum/Data/Images/Normal/012.JPG",
+        "swap_cache_file": "00605.pt"
+      }
+    ],
+    [
+      {
+        "class_name": "macaroni1",
+        "label": 0,
+        "source_path": "macaroni1/Data/Images/Normal/0011.JPG",
+        "cache_file": "00742.pt",
+        "image_sha256": "5031073e4913245b033b6910c4d85f5c16ae2cfbab374fa8dfeee3824523710a",
+        "cache_sha256": "6b67c72ebb1134730195f804722ee5adf39eea76a789f2a44b7503cbccb8cfef",
+        "swap_source_path": "macaroni1/Data/Images/Anomaly/000.JPG",
+        "swap_cache_file": "00839.pt"
+      },
+      {
+        "class_name": "macaroni1",
+        "label": 0,
+        "source_path": "macaroni1/Data/Images/Normal/0013.JPG",
+        "cache_file": "00743.pt",
+        "image_sha256": "b2961c30ec7ec668dedbe4f151b3aff6cfbbc1eea44b346c8e4d19c52d7a6986",
+        "cache_sha256": "56756f3057042b66a7d36c2865cdc7287a95d1e72ae3c34ee081a0c5bca1aed3",
+        "swap_source_path": "macaroni1/Data/Images/Anomaly/001.JPG",
+        "swap_cache_file": "00840.pt"
+      },
+      {
+        "class_name": "macaroni1",
+        "label": 1,
+        "source_path": "macaroni1/Data/Images/Anomaly/000.JPG",
+        "cache_file": "00839.pt",
+        "image_sha256": "e7592eacf0a723ca4c571bc9dc3792d64671b5fe4832f6127974fc5582e47bb2",
+        "cache_sha256": "d1655342acf7feff780c3b90f80f5b72c4ba37e74f01fd3c07e4cb30c50f3f17",
+        "swap_source_path": "macaroni1/Data/Images/Normal/0011.JPG",
+        "swap_cache_file": "00742.pt"
+      },
+      {
+        "class_name": "macaroni1",
+        "label": 1,
+        "source_path": "macaroni1/Data/Images/Anomaly/001.JPG",
+        "cache_file": "00840.pt",
+        "image_sha256": "ea2ceb1add4fdc31fb0fd25818bf0b7ea663ca9242dd00b4fd182a34c2664186",
+        "cache_sha256": "76d75cec5c343bd66d19c3a3b87e89fade0f480c29f245a46d585cbf0b565c28",
+        "swap_source_path": "macaroni1/Data/Images/Normal/0013.JPG",
+        "swap_cache_file": "00743.pt"
+      }
+    ],
+    [
+      {
+        "class_name": "macaroni2",
+        "label": 0,
+        "source_path": "macaroni2/Data/Images/Normal/0011.JPG",
+        "cache_file": "00929.pt",
+        "image_sha256": "4344de8881aa0ab6889a52f7737831dc9f99a539f481f79d7bc1426998a4eb75",
+        "cache_sha256": "5b9d992ab82d10bb6ca534507a0a285979176214864f968d6788f6c579abefec",
+        "swap_source_path": "macaroni2/Data/Images/Anomaly/000.JPG",
+        "swap_cache_file": "01027.pt"
+      },
+      {
+        "class_name": "macaroni2",
+        "label": 0,
+        "source_path": "macaroni2/Data/Images/Normal/0013.JPG",
+        "cache_file": "00930.pt",
+        "image_sha256": "b3b17435f4855dc59642784c446811cde324f353e5ac5d3f2c6d2ae5c63bbfa3",
+        "cache_sha256": "174fe35a5905a1fe964631d6bba7588bb52b0edc7bd45c433c55302e5b24057d",
+        "swap_source_path": "macaroni2/Data/Images/Anomaly/001.JPG",
+        "swap_cache_file": "01028.pt"
+      },
+      {
+        "class_name": "macaroni2",
+        "label": 1,
+        "source_path": "macaroni2/Data/Images/Anomaly/000.JPG",
+        "cache_file": "01027.pt",
+        "image_sha256": "d8d75c58c45bf68793bd2500c1b7c05f27f39c5ed90e40db28baea78e0bb865f",
+        "cache_sha256": "f44135fd1a9aef7ac8f8a0d0d051da98e5f8d9169f0ab73de568a00c0136da5b",
+        "swap_source_path": "macaroni2/Data/Images/Normal/0011.JPG",
+        "swap_cache_file": "00929.pt"
+      },
+      {
+        "class_name": "macaroni2",
+        "label": 1,
+        "source_path": "macaroni2/Data/Images/Anomaly/001.JPG",
+        "cache_file": "01028.pt",
+        "image_sha256": "9f4cf26ebc457443c9b614731e4194edf54dc6f4a19ae1a369ff22bf40848725",
+        "cache_sha256": "a73e817d2571cef79123b20c078b8fab1148ffd14b49d49805759a71ffa64f29",
+        "swap_source_path": "macaroni2/Data/Images/Normal/0013.JPG",
+        "swap_cache_file": "00930.pt"
+      }
+    ],
+    [
+      {
+        "class_name": "pcb1",
+        "label": 0,
+        "source_path": "pcb1/Data/Images/Normal/0011.JPG",
+        "cache_file": "01117.pt",
+        "image_sha256": "09b58a87f2380592be9f72ae3b0f8060adefb3d2836ec974ffce4ef662d6c252",
+        "cache_sha256": "1337823adb3933171e7e96bce0472b1ce53a60d60b91e8a2d95e96c4c4d687ab",
+        "swap_source_path": "pcb1/Data/Images/Anomaly/000.JPG",
+        "swap_cache_file": "01215.pt"
+      },
+      {
+        "class_name": "pcb1",
+        "label": 0,
+        "source_path": "pcb1/Data/Images/Normal/0013.JPG",
+        "cache_file": "01118.pt",
+        "image_sha256": "3a603c10dc9aa30d251def50c53379de97495534b6bb5ce180bcca2ddaea6cee",
+        "cache_sha256": "b946a4dcafa0001d2acc9172a6e97cc769c7278865c53c0c06eb72d5c853995c",
+        "swap_source_path": "pcb1/Data/Images/Anomaly/001.JPG",
+        "swap_cache_file": "01216.pt"
+      },
+      {
+        "class_name": "pcb1",
+        "label": 1,
+        "source_path": "pcb1/Data/Images/Anomaly/000.JPG",
+        "cache_file": "01215.pt",
+        "image_sha256": "e67db34e1045d7b8f01173a2f3e0138a6d89700e8a83d1426b6de0464e1e5e9d",
+        "cache_sha256": "2af7ed264bf419f04a6388b75727ced5c92880f06430ee3bf613c8d1fdd7f9d2",
+        "swap_source_path": "pcb1/Data/Images/Normal/0011.JPG",
+        "swap_cache_file": "01117.pt"
+      },
+      {
+        "class_name": "pcb1",
+        "label": 1,
+        "source_path": "pcb1/Data/Images/Anomaly/001.JPG",
+        "cache_file": "01216.pt",
+        "image_sha256": "4e255d79adde14e83171896fe571113aa632de1202a32b263bd8bd6ba04c105c",
+        "cache_sha256": "dafb1a0c117d4f9345d4c3f2815aebe5800a59736aea167d5cfd254e03d0e5a8",
+        "swap_source_path": "pcb1/Data/Images/Normal/0013.JPG",
+        "swap_cache_file": "01118.pt"
+      }
+    ],
+    [
+      {
+        "class_name": "pcb2",
+        "label": 0,
+        "source_path": "pcb2/Data/Images/Normal/0011.JPG",
+        "cache_file": "01305.pt",
+        "image_sha256": "d2e925aba355079bbb108322e64efcb9db5f68bca3d0763d3b1b2fd95706fbe6",
+        "cache_sha256": "4f92e81a4864911ea84353cb62abf87863a1deb9fe370bd19528398f81fd9eda",
+        "swap_source_path": "pcb2/Data/Images/Anomaly/000.JPG",
+        "swap_cache_file": "01402.pt"
+      },
+      {
+        "class_name": "pcb2",
+        "label": 0,
+        "source_path": "pcb2/Data/Images/Normal/0013.JPG",
+        "cache_file": "01306.pt",
+        "image_sha256": "e147fb6bc898b1e23f97b34b7d78bf7f19a29aefb2b40003776fea187fdef9ec",
+        "cache_sha256": "bd816799ab3707cbe32aec03deeb12c51fa01b734214712dcc74b94dc2e9696c",
+        "swap_source_path": "pcb2/Data/Images/Anomaly/002.JPG",
+        "swap_cache_file": "01403.pt"
+      },
+      {
+        "class_name": "pcb2",
+        "label": 1,
+        "source_path": "pcb2/Data/Images/Anomaly/000.JPG",
+        "cache_file": "01402.pt",
+        "image_sha256": "7ee5d8e7d7496860aa60447f3e779003f4bd852a9f2a1f35b9ed49103a7ef708",
+        "cache_sha256": "dbb8922ab5b60d15fd3790ea40ea96cf766c321567cd41ac4907ac26ba8bfbbb",
+        "swap_source_path": "pcb2/Data/Images/Normal/0011.JPG",
+        "swap_cache_file": "01305.pt"
+      },
+      {
+        "class_name": "pcb2",
+        "label": 1,
+        "source_path": "pcb2/Data/Images/Anomaly/002.JPG",
+        "cache_file": "01403.pt",
+        "image_sha256": "8a9335e83494f8284a379db3ba5902aa0a99002104f233514c2308ea6b94f40e",
+        "cache_sha256": "84489e6d6af5a74b3e127287262b5cf7168ce1a5e378ee5815264831d30c33f1",
+        "swap_source_path": "pcb2/Data/Images/Normal/0013.JPG",
+        "swap_cache_file": "01306.pt"
+      }
+    ],
+    [
+      {
+        "class_name": "pcb3",
+        "label": 0,
+        "source_path": "pcb3/Data/Images/Normal/0011.JPG",
+        "cache_file": "01492.pt",
+        "image_sha256": "354297db13961e7e7bc8dcb4bb8d63c7192b3b844512be536cb57a49b31ee5eb",
+        "cache_sha256": "fc172e16ff3f7b10c9aca81ff57ecffdff0f689f7bcf67448274100106c921c2",
+        "swap_source_path": "pcb3/Data/Images/Anomaly/000.JPG",
+        "swap_cache_file": "01591.pt"
+      },
+      {
+        "class_name": "pcb3",
+        "label": 0,
+        "source_path": "pcb3/Data/Images/Normal/0013.JPG",
+        "cache_file": "01493.pt",
+        "image_sha256": "9ce09bb41941dc3803e6f0c680cd64c653df7f277fc486910bb8f049057d3db0",
+        "cache_sha256": "0d889177e769530119bdc18aa73eb280154cda54d731e623cc11fe621c220431",
+        "swap_source_path": "pcb3/Data/Images/Anomaly/001.JPG",
+        "swap_cache_file": "01592.pt"
+      },
+      {
+        "class_name": "pcb3",
+        "label": 1,
+        "source_path": "pcb3/Data/Images/Anomaly/000.JPG",
+        "cache_file": "01591.pt",
+        "image_sha256": "79ac7a187be52277077c7d09432c2d71611517e957165b99d12c2138d12f84c9",
+        "cache_sha256": "45a0599154b3a0018e05bc71fc431ec7e7b6bc7dea42bbb22cf5f2a48d6472f4",
+        "swap_source_path": "pcb3/Data/Images/Normal/0011.JPG",
+        "swap_cache_file": "01492.pt"
+      },
+      {
+        "class_name": "pcb3",
+        "label": 1,
+        "source_path": "pcb3/Data/Images/Anomaly/001.JPG",
+        "cache_file": "01592.pt",
+        "image_sha256": "2ad291642a85583f523c83613c3b2a32e25e285b4bf563c74729ee07d23dbcec",
+        "cache_sha256": "997ec019b89706adfbd5a6b3fa4bce90b86e60c270e715c4ef99f488ee226a7f",
+        "swap_source_path": "pcb3/Data/Images/Normal/0013.JPG",
+        "swap_cache_file": "01493.pt"
+      }
+    ],
+    [
+      {
+        "class_name": "pcb4",
+        "label": 0,
+        "source_path": "pcb4/Data/Images/Normal/0011.JPG",
+        "cache_file": "01681.pt",
+        "image_sha256": "829addcef8ce290b35f00218d508c633cc37f628c8304591d62995e3f09cf411",
+        "cache_sha256": "0793ca26d34a0658b14f7e9f9d7db32d88b9bbd36bc7ddcdce7d32433fbe9b42",
+        "swap_source_path": "pcb4/Data/Images/Anomaly/000.JPG",
+        "swap_cache_file": "01778.pt"
+      },
+      {
+        "class_name": "pcb4",
+        "label": 0,
+        "source_path": "pcb4/Data/Images/Normal/0013.JPG",
+        "cache_file": "01682.pt",
+        "image_sha256": "90eb97218809e48ab63bd1d08bee5fa524cc8b385cfe1a5b5702d29c82d156ba",
+        "cache_sha256": "d647a911a65f90b724a4547933f2a7a2ea6886a65002dc92b042695fb598491e",
+        "swap_source_path": "pcb4/Data/Images/Anomaly/001.JPG",
+        "swap_cache_file": "01779.pt"
+      },
+      {
+        "class_name": "pcb4",
+        "label": 1,
+        "source_path": "pcb4/Data/Images/Anomaly/000.JPG",
+        "cache_file": "01778.pt",
+        "image_sha256": "c121111d1240de839c9716022873a68efa9af569979d4c0ff5bc26a678079b26",
+        "cache_sha256": "ff2243ab8a0ec1697f7befed3bb2cb46bb7bb26c820bc1e949bca0c6154bf157",
+        "swap_source_path": "pcb4/Data/Images/Normal/0011.JPG",
+        "swap_cache_file": "01681.pt"
+      },
+      {
+        "class_name": "pcb4",
+        "label": 1,
+        "source_path": "pcb4/Data/Images/Anomaly/001.JPG",
+        "cache_file": "01779.pt",
+        "image_sha256": "a8939fa9a4bd657899017c6403a0fcba3d799311c7c6921c7fa9a67fe096085c",
+        "cache_sha256": "a5b7c5eecf0e6dd4b4089bef72d45bc6d2ae168d38f1f7452317467161f645c8",
+        "swap_source_path": "pcb4/Data/Images/Normal/0013.JPG",
+        "swap_cache_file": "01682.pt"
+      }
+    ],
+    [
+      {
+        "class_name": "pipe_fryum",
+        "label": 0,
+        "source_path": "pipe_fryum/Data/Images/Normal/006.JPG",
+        "cache_file": "01868.pt",
+        "image_sha256": "eae38f93ef89909bf1f7bb76838ad45826602ca6d19a537a19c7ff17e61e0aba",
+        "cache_sha256": "23a1ce5aa6942f2a7ee537a77acbeaea39d1085100a0a1d777322f7ca67acf07",
+        "swap_source_path": "pipe_fryum/Data/Images/Anomaly/000.JPG",
+        "swap_cache_file": "01915.pt"
+      },
+      {
+        "class_name": "pipe_fryum",
+        "label": 0,
+        "source_path": "pipe_fryum/Data/Images/Normal/012.JPG",
+        "cache_file": "01869.pt",
+        "image_sha256": "24cfd63b397e1696a747f829afba32f9e287a67ef77d6e3c6f2f59d74b9acbff",
+        "cache_sha256": "c0931e48e7a94ebef6fd9c23036e93ef4b5bef8dfb118e34ae896923298c274d",
+        "swap_source_path": "pipe_fryum/Data/Images/Anomaly/001.JPG",
+        "swap_cache_file": "01916.pt"
+      },
+      {
+        "class_name": "pipe_fryum",
+        "label": 1,
+        "source_path": "pipe_fryum/Data/Images/Anomaly/000.JPG",
+        "cache_file": "01915.pt",
+        "image_sha256": "6f5b7859cf761971e7708bc08a8fa0da3fef70c5c9d1f06b32e81ab8cdcdc2ce",
+        "cache_sha256": "7e5b4d51bbe649adfc542f584d7a688d89313ff64f79ca09698c8980a0fd853f",
+        "swap_source_path": "pipe_fryum/Data/Images/Normal/006.JPG",
+        "swap_cache_file": "01868.pt"
+      },
+      {
+        "class_name": "pipe_fryum",
+        "label": 1,
+        "source_path": "pipe_fryum/Data/Images/Anomaly/001.JPG",
+        "cache_file": "01916.pt",
+        "image_sha256": "80f35897bd2cc6dad97baee1683bf11c402cb0489b6c3420fbf0b25ed1487581",
+        "cache_sha256": "2a5f73a8c8ec59c5d8f4ac8879c7472d92889a880a0a99dab3d33e0610858c78",
+        "swap_source_path": "pipe_fryum/Data/Images/Normal/012.JPG",
+        "swap_cache_file": "01869.pt"
+      }
+    ]
+  ],
+  "cache_manifest_sha256": "b1d0941a90282a9cb422c9700aee11fc256b72dbf68c6164fe4857090bccaefe",
+  "sources_sha256": "3651cfff743bd3cf07f03aff92d430dfff7ab766b762261b75ba060d42dda2ec",
+  "cache_integrity_sha256": "123f92f8f5be6d3c54a5624817094c6c36bb2c0771df5d8d0f818256b164f637",
+  "vicuna_resource_sha256": "c29ec086302a9bcaa39dc70400383b684bf1db35b4e5a42aa2a2ad07c8a6c2cf"
+}

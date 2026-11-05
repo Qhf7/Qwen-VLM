@@ -1,0 +1,3626 @@
+{
+  "repo": "foersben/mvtec-ad",
+  "revision": "c75b39616f84db43677bcc8228caaafaf5096d7f",
+  "seed": 31415,
+  "per_category_per_label": 5,
+  "protocol": "Fixed label-stratified pilot; no image inspection or model-dependent selection.",
+  "scope": "Partial MVTec AD official test images via public mirror, not the full benchmark.",
+  "n_images": 150,
+  "files": [
+    {
+      "type": "file",
+      "oid": "709b100ba9e463968b0898f4d70030707b40c10c",
+      "size": 532480,
+      "lfs": {
+        "oid": "22e8a84b84435aa6e67266529d6a2f3b7a29f89e4701fd0a969031e517a12dea",
+        "size": 532480,
+        "pointerSize": 131
+      },
+      "xetHash": "45e4e618cf3b141ddd4b08af02710c5fa3db1a0707616e1b0cba42a1bdadf287",
+      "path": "bottle/test/good/004.png",
+      "category": "bottle",
+      "is_anomalous": false,
+      "downloaded_bytes": 532480,
+      "sha256": "22e8a84b84435aa6e67266529d6a2f3b7a29f89e4701fd0a969031e517a12dea"
+    },
+    {
+      "type": "file",
+      "oid": "d3edbb5d945b5b02dd56ee95d295e7978fd95a90",
+      "size": 530194,
+      "lfs": {
+        "oid": "b31ddd1a297e85ad505f8d8b1b2df94452ab22a5d5482f500db920635356f963",
+        "size": 530194,
+        "pointerSize": 131
+      },
+      "xetHash": "c9b3e512df115fa4d744fd31e4121a0ab59314da00016505f292d20ca8469e3e",
+      "path": "bottle/test/good/010.png",
+      "category": "bottle",
+      "is_anomalous": false,
+      "downloaded_bytes": 530194,
+      "sha256": "b31ddd1a297e85ad505f8d8b1b2df94452ab22a5d5482f500db920635356f963"
+    },
+    {
+      "type": "file",
+      "oid": "d14f6cc28693bca4894068d1be77f8a6e21012ea",
+      "size": 541674,
+      "lfs": {
+        "oid": "12b90fbbb65590d8b1f48d1a5ffff440c45af785b26f23cebd20ad0b86d4ad50",
+        "size": 541674,
+        "pointerSize": 131
+      },
+      "xetHash": "3632756440cebfbd5729350da3e04d86d17d6137be54e2c2ba81075b2ccdc667",
+      "path": "bottle/test/good/012.png",
+      "category": "bottle",
+      "is_anomalous": false,
+      "downloaded_bytes": 541674,
+      "sha256": "12b90fbbb65590d8b1f48d1a5ffff440c45af785b26f23cebd20ad0b86d4ad50"
+    },
+    {
+      "type": "file",
+      "oid": "0947f424670a9b897ca5301a87be116f130a8b26",
+      "size": 535814,
+      "lfs": {
+        "oid": "179aecaca86a1964bdc3075782bb36dcd1c7b25266077711a157d2dd565cfffc",
+        "size": 535814,
+        "pointerSize": 131
+      },
+      "xetHash": "761da4f36b4c6cd6120b9b4c5e712585b0efe36d4523f50c1f90248b42bd84cc",
+      "path": "bottle/test/good/015.png",
+      "category": "bottle",
+      "is_anomalous": false,
+      "downloaded_bytes": 535814,
+      "sha256": "179aecaca86a1964bdc3075782bb36dcd1c7b25266077711a157d2dd565cfffc"
+    },
+    {
+      "type": "file",
+      "oid": "7ee7e6b0b805af2121ef8f725deb778c32c002d0",
+      "size": 532817,
+      "lfs": {
+        "oid": "4f0c476b10508c8f163cba4a93f6272126e4b55b59df9d7ace36247ab72709df",
+        "size": 532817,
+        "pointerSize": 131
+      },
+      "xetHash": "6d7e1a446a1620b06a192b4270c55ab7c3cde91f91bada82254eec899c4fc9d8",
+      "path": "bottle/test/good/018.png",
+      "category": "bottle",
+      "is_anomalous": false,
+      "downloaded_bytes": 532817,
+      "sha256": "4f0c476b10508c8f163cba4a93f6272126e4b55b59df9d7ace36247ab72709df"
+    },
+    {
+      "type": "file",
+      "oid": "e8c7c8af7de496a2dfc9310ddd7e83db8aed2dbf",
+      "size": 541672,
+      "lfs": {
+        "oid": "c97b387cdafd8df6d1834dcd4bb284cb784969a5416dc067f6f2476592c1ee57",
+        "size": 541672,
+        "pointerSize": 131
+      },
+      "xetHash": "6e70d34b0bb20b7675e2c92b810ba8110d6191d08d2fbf193c28e6805dbd7dae",
+      "path": "bottle/test/broken_small/003.png",
+      "category": "bottle",
+      "is_anomalous": true,
+      "downloaded_bytes": 541672,
+      "sha256": "c97b387cdafd8df6d1834dcd4bb284cb784969a5416dc067f6f2476592c1ee57"
+    },
+    {
+      "type": "file",
+      "oid": "7b967adc5b2c342d646ce8590fc605ec661bb5e9",
+      "size": 3804,
+      "lfs": {
+        "oid": "612d84d62449633b63f50d8956062890b908a53f83d11f7bdbe56c6355f1adc7",
+        "size": 3804,
+        "pointerSize": 129
+      },
+      "xetHash": "ce8581c626e3b8aa797ee8339933caf4425504bfb74013afc2aa767e33acaf06",
+      "path": "bottle/ground_truth/broken_small/003_mask.png",
+      "category": "bottle",
+      "is_mask": true,
+      "downloaded_bytes": 3804,
+      "sha256": "612d84d62449633b63f50d8956062890b908a53f83d11f7bdbe56c6355f1adc7"
+    },
+    {
+      "type": "file",
+      "oid": "c1bd0d972ccbe823355c7570330700ea0a7329cf",
+      "size": 532917,
+      "lfs": {
+        "oid": "ef423951e8f0bed66ab053c28ad709e68ef24af62b4650254c3d39aaa2bb48da",
+        "size": 532917,
+        "pointerSize": 131
+      },
+      "xetHash": "2d5fe4afd5f65f582275590bb88e3f7599d2c9f3d4ecd58a373722354a5d6dd3",
+      "path": "bottle/test/broken_small/015.png",
+      "category": "bottle",
+      "is_anomalous": true,
+      "downloaded_bytes": 532917,
+      "sha256": "ef423951e8f0bed66ab053c28ad709e68ef24af62b4650254c3d39aaa2bb48da"
+    },
+    {
+      "type": "file",
+      "oid": "030e10ebf42ea86f67ea09ff091a529db46d8d1b",
+      "size": 2992,
+      "lfs": {
+        "oid": "e9b59d2678fcb0a171b93bfcdb8d47732ec455c6d5f96a25897c27fdefdb2336",
+        "size": 2992,
+        "pointerSize": 129
+      },
+      "xetHash": "118ea55fae8b74c1cfa1ea225ddf7b4fc237f8a3d5faf26ec596eb45d31ed78d",
+      "path": "bottle/ground_truth/broken_small/015_mask.png",
+      "category": "bottle",
+      "is_mask": true,
+      "downloaded_bytes": 2992,
+      "sha256": "e9b59d2678fcb0a171b93bfcdb8d47732ec455c6d5f96a25897c27fdefdb2336"
+    },
+    {
+      "type": "file",
+      "oid": "008176259096ec8334c50782b1d2c05bc7ed3f14",
+      "size": 544297,
+      "lfs": {
+        "oid": "9cabee2946258e61422d092acdf82bdc9946d7b881dd8bfa4ed032b674be49fe",
+        "size": 544297,
+        "pointerSize": 131
+      },
+      "xetHash": "874a0af9b6ac9ab0d4c2c8f58132a7408b7d2e5d26686f7c20cd8f48cbaf8a91",
+      "path": "bottle/test/contamination/010.png",
+      "category": "bottle",
+      "is_anomalous": true,
+      "downloaded_bytes": 544297,
+      "sha256": "9cabee2946258e61422d092acdf82bdc9946d7b881dd8bfa4ed032b674be49fe"
+    },
+    {
+      "type": "file",
+      "oid": "e27fa159c9ef0690815be996f0dd0f08a91f45c4",
+      "size": 3325,
+      "lfs": {
+        "oid": "ea1b1961cf975b0bbea0b1aa43d68f4d21923937ea187f620f0a6a8e80e29be4",
+        "size": 3325,
+        "pointerSize": 129
+      },
+      "xetHash": "c6794446f2d6005205827bc0aaf01a7e6d2ba6c9c8e022eea49dd194956b9f7d",
+      "path": "bottle/ground_truth/contamination/010_mask.png",
+      "category": "bottle",
+      "is_mask": true,
+      "downloaded_bytes": 3325,
+      "sha256": "ea1b1961cf975b0bbea0b1aa43d68f4d21923937ea187f620f0a6a8e80e29be4"
+    },
+    {
+      "type": "file",
+      "oid": "81025700465d4c0afef0efd1d4741b877b6de358",
+      "size": 539098,
+      "lfs": {
+        "oid": "1e8ba471a607de42e71890f010c0e7a620522f5c55abc8f64d52b290438c31be",
+        "size": 539098,
+        "pointerSize": 131
+      },
+      "xetHash": "0a78f2df2590363281c1e9ea9ce6c147e7a40baec44c492f56982755e5285f34",
+      "path": "bottle/test/contamination/015.png",
+      "category": "bottle",
+      "is_anomalous": true,
+      "downloaded_bytes": 539098,
+      "sha256": "1e8ba471a607de42e71890f010c0e7a620522f5c55abc8f64d52b290438c31be"
+    },
+    {
+      "type": "file",
+      "oid": "8f1862ab77ec6140beed3b0077702c7eadec1909",
+      "size": 3542,
+      "lfs": {
+        "oid": "44b99c3f376afb842118efc8a21ec68b270635799aa1db28d3560f0193757ffc",
+        "size": 3542,
+        "pointerSize": 129
+      },
+      "xetHash": "f0eb0e854b8b372834a52a274cd4c54ec47c5c8748bde3467fc6049e203444ed",
+      "path": "bottle/ground_truth/contamination/015_mask.png",
+      "category": "bottle",
+      "is_mask": true,
+      "downloaded_bytes": 3542,
+      "sha256": "44b99c3f376afb842118efc8a21ec68b270635799aa1db28d3560f0193757ffc"
+    },
+    {
+      "type": "file",
+      "oid": "1a56b7b608e9b565d8ef3a61bee69478ba6e4728",
+      "size": 538498,
+      "lfs": {
+        "oid": "71c18397def5e402077a127a882dc3c871053b2796cf158aad1ff1a149a465dc",
+        "size": 538498,
+        "pointerSize": 131
+      },
+      "xetHash": "ceb78fddd5d8770e329e9bdfc9feb497d36927c4ff51ac48fd097e6e8dfa2dd0",
+      "path": "bottle/test/contamination/018.png",
+      "category": "bottle",
+      "is_anomalous": true,
+      "downloaded_bytes": 538498,
+      "sha256": "71c18397def5e402077a127a882dc3c871053b2796cf158aad1ff1a149a465dc"
+    },
+    {
+      "type": "file",
+      "oid": "39eeb28af8b19b232210ba2588f18b822b63436e",
+      "size": 2944,
+      "lfs": {
+        "oid": "b4e5bed8a33f40336a6267833512ffa516a7e8da104b9bafe2b6622adc02adaa",
+        "size": 2944,
+        "pointerSize": 129
+      },
+      "xetHash": "bd7de787dfe9c03d77a2ee818c894e79a0eb3e44cac3ac985758246593462dba",
+      "path": "bottle/ground_truth/contamination/018_mask.png",
+      "category": "bottle",
+      "is_mask": true,
+      "downloaded_bytes": 2944,
+      "sha256": "b4e5bed8a33f40336a6267833512ffa516a7e8da104b9bafe2b6622adc02adaa"
+    },
+    {
+      "type": "file",
+      "oid": "7153659b23d84ff57b827878b9458a9046254775",
+      "size": 1339489,
+      "lfs": {
+        "oid": "89132397ea130312c961d447deb33216f14ec133c4ef62793b4ba817696e48cb",
+        "size": 1339489,
+        "pointerSize": 132
+      },
+      "xetHash": "07fa791ec1e74dff9c663a80031e981d38bcd06e1a0f83147350fdafa03b214f",
+      "path": "cable/test/good/000.png",
+      "category": "cable",
+      "is_anomalous": false,
+      "downloaded_bytes": 1339489,
+      "sha256": "89132397ea130312c961d447deb33216f14ec133c4ef62793b4ba817696e48cb"
+    },
+    {
+      "type": "file",
+      "oid": "04d229cdfb4d78f7734857f80a3b01604e564be8",
+      "size": 1359414,
+      "lfs": {
+        "oid": "620db08ca72896d35a6b84eb41577d4f270db068fa3ac22d273e1bc1db7a68f7",
+        "size": 1359414,
+        "pointerSize": 132
+      },
+      "xetHash": "4b15ff99680d736df7db5bb575c009f854ce9a68fd14fd9973cb0ee23511701a",
+      "path": "cable/test/good/009.png",
+      "category": "cable",
+      "is_anomalous": false,
+      "downloaded_bytes": 1359414,
+      "sha256": "620db08ca72896d35a6b84eb41577d4f270db068fa3ac22d273e1bc1db7a68f7"
+    },
+    {
+      "type": "file",
+      "oid": "e330d2edd8da496e4bdd07dacb31aaf7498242b6",
+      "size": 1370499,
+      "lfs": {
+        "oid": "c0ea66bb742375ab0f6639a88459bf9d4de5267385bfe70deca237449ced926e",
+        "size": 1370499,
+        "pointerSize": 132
+      },
+      "xetHash": "12ab1c29e48dc4bfc962c33b1856f28493e85d9027af2121100534629bfe2a8b",
+      "path": "cable/test/good/035.png",
+      "category": "cable",
+      "is_anomalous": false,
+      "downloaded_bytes": 1370499,
+      "sha256": "c0ea66bb742375ab0f6639a88459bf9d4de5267385bfe70deca237449ced926e"
+    },
+    {
+      "type": "file",
+      "oid": "3e8ecab0dcd33c5468f85f6fe43e5c288db88134",
+      "size": 1359739,
+      "lfs": {
+        "oid": "7a3fb1e33584e7a53cc3fe243f0f9ce262ea5b2f210fecdcd68331e69c6a95bf",
+        "size": 1359739,
+        "pointerSize": 132
+      },
+      "xetHash": "44f59b1384c9d06a7a42461e87bb339072b41fe84a0f1a47aa3879c0953adb6c",
+      "path": "cable/test/good/041.png",
+      "category": "cable",
+      "is_anomalous": false,
+      "downloaded_bytes": 1359739,
+      "sha256": "7a3fb1e33584e7a53cc3fe243f0f9ce262ea5b2f210fecdcd68331e69c6a95bf"
+    },
+    {
+      "type": "file",
+      "oid": "9442188d9731af44d4ef8986b2629bd99cf9e2c7",
+      "size": 1353117,
+      "lfs": {
+        "oid": "afe6089417fe57e1895154184a474ac8e2f27d0cea1239fa1f5a66220294d2ef",
+        "size": 1353117,
+        "pointerSize": 132
+      },
+      "xetHash": "586e7863280418569d9091f13c9e30fddb3284bae7072ef82ca9efb199667669",
+      "path": "cable/test/good/057.png",
+      "category": "cable",
+      "is_anomalous": false,
+      "downloaded_bytes": 1353117,
+      "sha256": "afe6089417fe57e1895154184a474ac8e2f27d0cea1239fa1f5a66220294d2ef"
+    },
+    {
+      "type": "file",
+      "oid": "920ad330aba5419778e5e01c7ee3c5040760fbaf",
+      "size": 1348014,
+      "lfs": {
+        "oid": "3fca90a1c05ba97cadf5d8c944a927377396c958f14faae9780d6d7ec4af226d",
+        "size": 1348014,
+        "pointerSize": 132
+      },
+      "xetHash": "fe247a096c7b72a1272114deaedb9da84695617a033df93ee548814b2689068f",
+      "path": "cable/test/bent_wire/003.png",
+      "category": "cable",
+      "is_anomalous": true,
+      "downloaded_bytes": 1348014,
+      "sha256": "3fca90a1c05ba97cadf5d8c944a927377396c958f14faae9780d6d7ec4af226d"
+    },
+    {
+      "type": "file",
+      "oid": "6a22db29657fb76e16d8838e0592eea01bc4f583",
+      "size": 3882,
+      "lfs": {
+        "oid": "3874e5ba2ca1145afeb525e08e5516d30f875b2d11fc9a13c0e14225b158469c",
+        "size": 3882,
+        "pointerSize": 129
+      },
+      "xetHash": "cdeeb4afd7fb7b07bba41973b3d90c464f45309f95bbe2b19919c1263b87ee6c",
+      "path": "cable/ground_truth/bent_wire/003_mask.png",
+      "category": "cable",
+      "is_mask": true,
+      "downloaded_bytes": 3882,
+      "sha256": "3874e5ba2ca1145afeb525e08e5516d30f875b2d11fc9a13c0e14225b158469c"
+    },
+    {
+      "type": "file",
+      "oid": "488fa9192e29eb0b3929c1c4dfb0bc820ebbd3af",
+      "size": 1352231,
+      "lfs": {
+        "oid": "f6741462e12ea91951ab44fa0225736f571ab9dc445976577d75e8d68a2744dd",
+        "size": 1352231,
+        "pointerSize": 132
+      },
+      "xetHash": "27688c8bc4e582870a1d4da2b30d5fe21d881b555495cfcfbdb696b0518741c8",
+      "path": "cable/test/bent_wire/004.png",
+      "category": "cable",
+      "is_anomalous": true,
+      "downloaded_bytes": 1352231,
+      "sha256": "f6741462e12ea91951ab44fa0225736f571ab9dc445976577d75e8d68a2744dd"
+    },
+    {
+      "type": "file",
+      "oid": "2c41d1ff31473b67911813fe13f0fd41ee8c96e0",
+      "size": 5491,
+      "lfs": {
+        "oid": "3b9ff8b8016b0c4c69edefe258dc83007b3720c5c4644867619852b438ade129",
+        "size": 5491,
+        "pointerSize": 129
+      },
+      "xetHash": "5f55b4791b179dc49040f5fb507351d9ef66b65214c0f8ba049323bcfdcf1628",
+      "path": "cable/ground_truth/bent_wire/004_mask.png",
+      "category": "cable",
+      "is_mask": true,
+      "downloaded_bytes": 5491,
+      "sha256": "3b9ff8b8016b0c4c69edefe258dc83007b3720c5c4644867619852b438ade129"
+    },
+    {
+      "type": "file",
+      "oid": "c7cdcd8df75260005365c859666fce204e2c8946",
+      "size": 1358261,
+      "lfs": {
+        "oid": "5bd227c33d3136bd5ffe4f54d54dfa7db57011120c95876162594e5718fa48ec",
+        "size": 1358261,
+        "pointerSize": 132
+      },
+      "xetHash": "1602a608b9bf4fc7b4de23d2d9bbcae544419a9517a475c21f7fddb2114aba50",
+      "path": "cable/test/cable_swap/004.png",
+      "category": "cable",
+      "is_anomalous": true,
+      "downloaded_bytes": 1358261,
+      "sha256": "5bd227c33d3136bd5ffe4f54d54dfa7db57011120c95876162594e5718fa48ec"
+    },
+    {
+      "type": "file",
+      "oid": "31190eca3987618d2d2786c651ca91da6ce5ed7d",
+      "size": 5045,
+      "lfs": {
+        "oid": "f05c2f1c0c39035d9199268160ffb184ff87b11b18cf14e33d0aa233a9525544",
+        "size": 5045,
+        "pointerSize": 129
+      },
+      "xetHash": "ca4e950f3dcbaebd448c44af25282d7321cbbfde633f9a04d508c79c4f9c3dc7",
+      "path": "cable/ground_truth/cable_swap/004_mask.png",
+      "category": "cable",
+      "is_mask": true,
+      "downloaded_bytes": 5045,
+      "sha256": "f05c2f1c0c39035d9199268160ffb184ff87b11b18cf14e33d0aa233a9525544"
+    },
+    {
+      "type": "file",
+      "oid": "64e68baf2366e85133a89cc3041edbd97e81062d",
+      "size": 1361808,
+      "lfs": {
+        "oid": "ffdfc77dadef2da53a91054187ec91d40e80574aee6a482639b618d60f9c0708",
+        "size": 1361808,
+        "pointerSize": 132
+      },
+      "xetHash": "ffe3874c5926820003cd90d158691ff84b88d5432556c9d79bc94d0c453ba57e",
+      "path": "cable/test/cut_outer_insulation/004.png",
+      "category": "cable",
+      "is_anomalous": true,
+      "downloaded_bytes": 1361808,
+      "sha256": "ffdfc77dadef2da53a91054187ec91d40e80574aee6a482639b618d60f9c0708"
+    },
+    {
+      "type": "file",
+      "oid": "aad022a5e989390accfe076a51172a7a1098ec30",
+      "size": 5094,
+      "lfs": {
+        "oid": "1090d6440b7e2aa3ec850894d9fbe3dffbcd4808bccad9689c092964266662ba",
+        "size": 5094,
+        "pointerSize": 129
+      },
+      "xetHash": "af4b381261f37f9a19e53f797b909afcd4245acac49006de0b86b3ed344c233b",
+      "path": "cable/ground_truth/cut_outer_insulation/004_mask.png",
+      "category": "cable",
+      "is_mask": true,
+      "downloaded_bytes": 5094,
+      "sha256": "1090d6440b7e2aa3ec850894d9fbe3dffbcd4808bccad9689c092964266662ba"
+    },
+    {
+      "type": "file",
+      "oid": "1635a697be00b9e8cdca2cb25b51b87fa2e6a6d5",
+      "size": 1311247,
+      "lfs": {
+        "oid": "be9567b15a3a093ec7af14ea3c67d46833ecadb863aa62da6f9d4fa6b0e25f66",
+        "size": 1311247,
+        "pointerSize": 132
+      },
+      "xetHash": "bd3abfcffd2dcc9d038a283fb8b7cf5f3ae8011d8797b9a486e97d85837f33fd",
+      "path": "cable/test/poke_insulation/001.png",
+      "category": "cable",
+      "is_anomalous": true,
+      "downloaded_bytes": 1311247,
+      "sha256": "be9567b15a3a093ec7af14ea3c67d46833ecadb863aa62da6f9d4fa6b0e25f66"
+    },
+    {
+      "type": "file",
+      "oid": "fc15fd8abd9d46146c0c1df32f1042f489f7992d",
+      "size": 4607,
+      "lfs": {
+        "oid": "701eafc699ffe09cdb4dd42fa5b33995662f520b72adae9d26376f3839903607",
+        "size": 4607,
+        "pointerSize": 129
+      },
+      "xetHash": "37b255f4758e8e0852a8a451ba5626d2c90a8d2b829a84d55efe8d27e960272d",
+      "path": "cable/ground_truth/poke_insulation/001_mask.png",
+      "category": "cable",
+      "is_mask": true,
+      "downloaded_bytes": 4607,
+      "sha256": "701eafc699ffe09cdb4dd42fa5b33995662f520b72adae9d26376f3839903607"
+    },
+    {
+      "type": "file",
+      "oid": "3c7920752fce7f9812afa1cc10e420cbc0eca8f4",
+      "size": 1158308,
+      "lfs": {
+        "oid": "329429f109ca9750ed6accb74c719f9257bee603fbfcd91017932b06dfa21ef3",
+        "size": 1158308,
+        "pointerSize": 132
+      },
+      "xetHash": "6b64e54b95e1413de260721658f3630396a346a98936283b4e19347a2cd65ac6",
+      "path": "capsule/test/good/001.png",
+      "category": "capsule",
+      "is_anomalous": false,
+      "downloaded_bytes": 1158308,
+      "sha256": "329429f109ca9750ed6accb74c719f9257bee603fbfcd91017932b06dfa21ef3"
+    },
+    {
+      "type": "file",
+      "oid": "14486bad849cfa29e03dc5f4e6fd2551f5a03abe",
+      "size": 1126614,
+      "lfs": {
+        "oid": "f0ed2675bd817654bea97f73fd60ed1128b576124b5e183abd806eef1c9430bf",
+        "size": 1126614,
+        "pointerSize": 132
+      },
+      "xetHash": "3310b6178b71842fa92262fbd0eaecb6328844033cec4c3504e04c00cecbb5ae",
+      "path": "capsule/test/good/004.png",
+      "category": "capsule",
+      "is_anomalous": false,
+      "downloaded_bytes": 1126614,
+      "sha256": "f0ed2675bd817654bea97f73fd60ed1128b576124b5e183abd806eef1c9430bf"
+    },
+    {
+      "type": "file",
+      "oid": "3032ddf40953f1d676225fb2faa40695e0e43c45",
+      "size": 1118678,
+      "lfs": {
+        "oid": "90f188a440702eeaf5da17c8dca5c72296fb34ce49993dc802585ce3a7d14eae",
+        "size": 1118678,
+        "pointerSize": 132
+      },
+      "xetHash": "3641bc0879c426dfab75e4e8521f0dc3fff3227fc816f14e16d8a9c3d5dec320",
+      "path": "capsule/test/good/009.png",
+      "category": "capsule",
+      "is_anomalous": false,
+      "downloaded_bytes": 1118678,
+      "sha256": "90f188a440702eeaf5da17c8dca5c72296fb34ce49993dc802585ce3a7d14eae"
+    },
+    {
+      "type": "file",
+      "oid": "b947fa7d284add86b382315a8be7e3c147d96308",
+      "size": 1148876,
+      "lfs": {
+        "oid": "210099387bd7d4e3812bfddc1071e60dc9b532ed7feb21487c88ad6b1e3e7e93",
+        "size": 1148876,
+        "pointerSize": 132
+      },
+      "xetHash": "a4553ade461ac65d5042ecaa029d2feae1f970d42eb1fa6b1a235dbdbc19c8b1",
+      "path": "capsule/test/good/017.png",
+      "category": "capsule",
+      "is_anomalous": false,
+      "downloaded_bytes": 1148876,
+      "sha256": "210099387bd7d4e3812bfddc1071e60dc9b532ed7feb21487c88ad6b1e3e7e93"
+    },
+    {
+      "type": "file",
+      "oid": "90b471fa8b903537318bcd8212d34b6ce6765e7a",
+      "size": 1161004,
+      "lfs": {
+        "oid": "245a48284fa594533271fd723a55e8d05fbc7c8c514fd5d355eec6f8ff2e9e92",
+        "size": 1161004,
+        "pointerSize": 132
+      },
+      "xetHash": "6976a299648dcccda5353a216d2bbf223f23205c36aac40fe49ebd5720451d47",
+      "path": "capsule/test/good/020.png",
+      "category": "capsule",
+      "is_anomalous": false,
+      "downloaded_bytes": 1161004,
+      "sha256": "245a48284fa594533271fd723a55e8d05fbc7c8c514fd5d355eec6f8ff2e9e92"
+    },
+    {
+      "type": "file",
+      "oid": "cbdb8b18fa5f8cd369689d65c5be6f41614c9dd6",
+      "size": 1149906,
+      "lfs": {
+        "oid": "4e1d9bc962cf9ea39e2c102afb6d606ecec986fc693e18be9d3ef7f47b9d8439",
+        "size": 1149906,
+        "pointerSize": 132
+      },
+      "xetHash": "6755271cfbbc2be5f293fa263a94059a4455cc3d5bef2e52115065402d245842",
+      "path": "capsule/test/faulty_imprint/017.png",
+      "category": "capsule",
+      "is_anomalous": true,
+      "downloaded_bytes": 1149906,
+      "sha256": "4e1d9bc962cf9ea39e2c102afb6d606ecec986fc693e18be9d3ef7f47b9d8439"
+    },
+    {
+      "type": "file",
+      "oid": "1d8b63d384e528839137760389f4d1634c9a8e80",
+      "size": 2761,
+      "lfs": {
+        "oid": "bd3328aac3d94274b0480e3199756b67882278071f39e185bc9478ed92583bb0",
+        "size": 2761,
+        "pointerSize": 129
+      },
+      "xetHash": "25f93479444912a60281844bc41ed96e37df32ade77d525e19e3b24c35d307c7",
+      "path": "capsule/ground_truth/faulty_imprint/017_mask.png",
+      "category": "capsule",
+      "is_mask": true,
+      "downloaded_bytes": 2761,
+      "sha256": "bd3328aac3d94274b0480e3199756b67882278071f39e185bc9478ed92583bb0"
+    },
+    {
+      "type": "file",
+      "oid": "65006f87827ab03e71ca102fbe106233f414f6b0",
+      "size": 1132543,
+      "lfs": {
+        "oid": "c1a9cb94bbadbc38e9dbcbb7fe723574db7b5331167e72a4c577c9c4f235bcdf",
+        "size": 1132543,
+        "pointerSize": 132
+      },
+      "xetHash": "457a9b2cc7aa824de2408e3510f928b4491785ede4743c765ed19a007fc12b7e",
+      "path": "capsule/test/faulty_imprint/018.png",
+      "category": "capsule",
+      "is_anomalous": true,
+      "downloaded_bytes": 1132543,
+      "sha256": "c1a9cb94bbadbc38e9dbcbb7fe723574db7b5331167e72a4c577c9c4f235bcdf"
+    },
+    {
+      "type": "file",
+      "oid": "eb6e4d77ccd4e580280b8a1b7603e3d73cc08fc4",
+      "size": 2647,
+      "lfs": {
+        "oid": "5a8f8bdfd163b73ab36f3c2892402182f4fe5d8703a33b8d0c7b4e03ece2e403",
+        "size": 2647,
+        "pointerSize": 129
+      },
+      "xetHash": "3786a254aa1be2bc4569a8b1a63c81a40dbcaa9eda81997f18cbc459f64d8954",
+      "path": "capsule/ground_truth/faulty_imprint/018_mask.png",
+      "category": "capsule",
+      "is_mask": true,
+      "downloaded_bytes": 2647,
+      "sha256": "5a8f8bdfd163b73ab36f3c2892402182f4fe5d8703a33b8d0c7b4e03ece2e403"
+    },
+    {
+      "type": "file",
+      "oid": "b5c9ca0e5d6a03d0e4c633c894d42d609ffe92b1",
+      "size": 1117526,
+      "lfs": {
+        "oid": "080e2c2c0141764e6d85402f28b08f75ebd452f8deb5535a9917b0d13ff96ed9",
+        "size": 1117526,
+        "pointerSize": 132
+      },
+      "xetHash": "a8e7a0600ec6aea56785044e5a08f30076f401fceb2e50b6df8debe52df0c972",
+      "path": "capsule/test/faulty_imprint/020.png",
+      "category": "capsule",
+      "is_anomalous": true,
+      "downloaded_bytes": 1117526,
+      "sha256": "080e2c2c0141764e6d85402f28b08f75ebd452f8deb5535a9917b0d13ff96ed9"
+    },
+    {
+      "type": "file",
+      "oid": "c9f2d2408f8c48b50ac9d507f9292caedfeb4a69",
+      "size": 2682,
+      "lfs": {
+        "oid": "79a0ab75c16235e33cb6e62cf2b3d454fbdeb4e8c3135f33816f3dd021c9784e",
+        "size": 2682,
+        "pointerSize": 129
+      },
+      "xetHash": "ba7c6b7bb92d435ff8ef68053da7576b0359136be0aac46148f4b0ec1fa4e76f",
+      "path": "capsule/ground_truth/faulty_imprint/020_mask.png",
+      "category": "capsule",
+      "is_mask": true,
+      "downloaded_bytes": 2682,
+      "sha256": "79a0ab75c16235e33cb6e62cf2b3d454fbdeb4e8c3135f33816f3dd021c9784e"
+    },
+    {
+      "type": "file",
+      "oid": "521d59d83a07173f42a2a643afbbdb231dff0ca1",
+      "size": 1155306,
+      "lfs": {
+        "oid": "6aa71a125ac0f802b6d8c6900ffdb66223edbba0cd1ac02cb340d7f1f64b9119",
+        "size": 1155306,
+        "pointerSize": 132
+      },
+      "xetHash": "b185f58afe067bc513ca8772f4c2716c49e7d5a6b88815c72a29c4aff243f6e7",
+      "path": "capsule/test/poke/017.png",
+      "category": "capsule",
+      "is_anomalous": true,
+      "downloaded_bytes": 1155306,
+      "sha256": "6aa71a125ac0f802b6d8c6900ffdb66223edbba0cd1ac02cb340d7f1f64b9119"
+    },
+    {
+      "type": "file",
+      "oid": "f67bb388d21fdc45c8efd7183c9ea53527a15395",
+      "size": 2611,
+      "lfs": {
+        "oid": "75e04ee70d47d371b84f5a0a93ff8a00b8b94aa2b16cad9071adc45f1b9a88a5",
+        "size": 2611,
+        "pointerSize": 129
+      },
+      "xetHash": "ad5bc0537268b4da62eb71ed9ae82e88f30be4e5d8ca9b536b5bbf7bc8aca275",
+      "path": "capsule/ground_truth/poke/017_mask.png",
+      "category": "capsule",
+      "is_mask": true,
+      "downloaded_bytes": 2611,
+      "sha256": "75e04ee70d47d371b84f5a0a93ff8a00b8b94aa2b16cad9071adc45f1b9a88a5"
+    },
+    {
+      "type": "file",
+      "oid": "1cb4c953cfe5a807a4265d197a2bcdc5e582460b",
+      "size": 1170890,
+      "lfs": {
+        "oid": "f2affe78c2d06202819520c1d74a13cd4ff2467d5c6eaa52f073c2b0644f449f",
+        "size": 1170890,
+        "pointerSize": 132
+      },
+      "xetHash": "a9ec13271b7afb7a56c0f9f3a27d877a46f5c68ec30d427a6ed6fa9dc3eece44",
+      "path": "capsule/test/scratch/000.png",
+      "category": "capsule",
+      "is_anomalous": true,
+      "downloaded_bytes": 1170890,
+      "sha256": "f2affe78c2d06202819520c1d74a13cd4ff2467d5c6eaa52f073c2b0644f449f"
+    },
+    {
+      "type": "file",
+      "oid": "ba732ac4c0b4db752a2218a11b728aab6a0bedf8",
+      "size": 3023,
+      "lfs": {
+        "oid": "59d5cfde64cf7de7bc7a6123daadc9827153bad3f0af7c6408d2fd71b70ebf42",
+        "size": 3023,
+        "pointerSize": 129
+      },
+      "xetHash": "bdd02a136038e2f877bafe317d0016df54cc458deeb611d18f65a7a51fc95d4a",
+      "path": "capsule/ground_truth/scratch/000_mask.png",
+      "category": "capsule",
+      "is_mask": true,
+      "downloaded_bytes": 3023,
+      "sha256": "59d5cfde64cf7de7bc7a6123daadc9827153bad3f0af7c6408d2fd71b70ebf42"
+    },
+    {
+      "type": "file",
+      "oid": "537570d7b520671a8f96ee49b8c9e4963bf0eea5",
+      "size": 1843957,
+      "lfs": {
+        "oid": "115a3d1b84e0206be269fc0b8d484ee0c79385daff199b6864bf64415d0e2964",
+        "size": 1843957,
+        "pointerSize": 132
+      },
+      "xetHash": "f8d4f5d500ad475595f08d09f8c5cef5795cf6792358ec94f0edcd76a3b5394b",
+      "path": "carpet/test/good/004.png",
+      "category": "carpet",
+      "is_anomalous": false,
+      "downloaded_bytes": 1843957,
+      "sha256": "115a3d1b84e0206be269fc0b8d484ee0c79385daff199b6864bf64415d0e2964"
+    },
+    {
+      "type": "file",
+      "oid": "7544e960e2d25f1a6f6ee71d7b16c88b94eb76fe",
+      "size": 1870402,
+      "lfs": {
+        "oid": "4aba9333d8c7c985e00562cc18dd5d7ae06fcd287017c5c39d08584f8d718905",
+        "size": 1870402,
+        "pointerSize": 132
+      },
+      "xetHash": "7c0b0f3d23af94395ab4119db16b614a50cb30a8e9dff68de9edd2b6626ff555",
+      "path": "carpet/test/good/006.png",
+      "category": "carpet",
+      "is_anomalous": false,
+      "downloaded_bytes": 1870402,
+      "sha256": "4aba9333d8c7c985e00562cc18dd5d7ae06fcd287017c5c39d08584f8d718905"
+    },
+    {
+      "type": "file",
+      "oid": "f56cfd0892a8d1f2711f238b19629af278e32c60",
+      "size": 1892227,
+      "lfs": {
+        "oid": "866cc605aec6bf222907e9ae6dc0d05a69d7bea51ed76d5bd729bce6dba8edf6",
+        "size": 1892227,
+        "pointerSize": 132
+      },
+      "xetHash": "ca63f2d9b7f3d5ae449baff1e3bc36f704703271d556e21db6844ae722b9aa07",
+      "path": "carpet/test/good/013.png",
+      "category": "carpet",
+      "is_anomalous": false,
+      "downloaded_bytes": 1892227,
+      "sha256": "866cc605aec6bf222907e9ae6dc0d05a69d7bea51ed76d5bd729bce6dba8edf6"
+    },
+    {
+      "type": "file",
+      "oid": "850237824935f4340ff5f2929dcbc6575e317f86",
+      "size": 1842564,
+      "lfs": {
+        "oid": "5db1d42adf0266a33c5060dba434925731c5231122dd8ad029d448d566544a93",
+        "size": 1842564,
+        "pointerSize": 132
+      },
+      "xetHash": "b3d2003bd8de4b4a26a40e6fd0088d29b421dd2409e3e564feae29efb14de7b1",
+      "path": "carpet/test/good/021.png",
+      "category": "carpet",
+      "is_anomalous": false,
+      "downloaded_bytes": 1842564,
+      "sha256": "5db1d42adf0266a33c5060dba434925731c5231122dd8ad029d448d566544a93"
+    },
+    {
+      "type": "file",
+      "oid": "07763421b7fb600592adc5a9218435ad8561399a",
+      "size": 1858012,
+      "lfs": {
+        "oid": "9d3a5c5e481a46db4aa7e8251270dbf25a5d54e0bac8f2eed6fb4d35209718fa",
+        "size": 1858012,
+        "pointerSize": 132
+      },
+      "xetHash": "8064bb5cd7fce8d6b0be231a06440627f3ee817cd61285a5729e8779e49946df",
+      "path": "carpet/test/good/023.png",
+      "category": "carpet",
+      "is_anomalous": false,
+      "downloaded_bytes": 1858012,
+      "sha256": "9d3a5c5e481a46db4aa7e8251270dbf25a5d54e0bac8f2eed6fb4d35209718fa"
+    },
+    {
+      "type": "file",
+      "oid": "c315ce2cbe4c32cf1fe5176df612568b06aa0a8e",
+      "size": 1837195,
+      "lfs": {
+        "oid": "541e2d09dbc332ed74981424fb04368f65f3c58473965785832c9416d4578452",
+        "size": 1837195,
+        "pointerSize": 132
+      },
+      "xetHash": "b9a1fb58532f7b2bed533f2c2895dcc5a6c16ff61cbeb32361e98c682598708f",
+      "path": "carpet/test/color/001.png",
+      "category": "carpet",
+      "is_anomalous": true,
+      "downloaded_bytes": 1837195,
+      "sha256": "541e2d09dbc332ed74981424fb04368f65f3c58473965785832c9416d4578452"
+    },
+    {
+      "type": "file",
+      "oid": "f21987e0d7ca96e98942826ac75be1ce2a1f6158",
+      "size": 3257,
+      "lfs": {
+        "oid": "743dff71465bdf125d97c78ddaba250cb9d3ec69121988d03989154614eb33e9",
+        "size": 3257,
+        "pointerSize": 129
+      },
+      "xetHash": "2398a6ffd5a2e3aadb56696801579c0f0dc18d00424ef4f8cb8828faacae159a",
+      "path": "carpet/ground_truth/color/001_mask.png",
+      "category": "carpet",
+      "is_mask": true,
+      "downloaded_bytes": 3257,
+      "sha256": "743dff71465bdf125d97c78ddaba250cb9d3ec69121988d03989154614eb33e9"
+    },
+    {
+      "type": "file",
+      "oid": "cf46a21b086b89603801cb52df3549e23761ea7f",
+      "size": 1924016,
+      "lfs": {
+        "oid": "3d43c326e11cea563c7c77e51cec796541de6a216ae77402f1203288a4121381",
+        "size": 1924016,
+        "pointerSize": 132
+      },
+      "xetHash": "990634903d58e567fd07827d48e2d3fc2866013e5928a31d50e28b5f6d62a1cf",
+      "path": "carpet/test/hole/005.png",
+      "category": "carpet",
+      "is_anomalous": true,
+      "downloaded_bytes": 1924016,
+      "sha256": "3d43c326e11cea563c7c77e51cec796541de6a216ae77402f1203288a4121381"
+    },
+    {
+      "type": "file",
+      "oid": "5fde801b8c421aac31b6b9458ec2b982b75be69f",
+      "size": 3207,
+      "lfs": {
+        "oid": "33f335624c7897302286ebfce34f391895086c4d7633d125e1bb4a58be4c0d9e",
+        "size": 3207,
+        "pointerSize": 129
+      },
+      "xetHash": "577d3ffcf439b3ce0460ad1f59f1b18f6ca26620ec013fdf9b96d1f6fd67bc96",
+      "path": "carpet/ground_truth/hole/005_mask.png",
+      "category": "carpet",
+      "is_mask": true,
+      "downloaded_bytes": 3207,
+      "sha256": "33f335624c7897302286ebfce34f391895086c4d7633d125e1bb4a58be4c0d9e"
+    },
+    {
+      "type": "file",
+      "oid": "5d2bf886e77daf5e6e8d22997dac39361006d10b",
+      "size": 1928761,
+      "lfs": {
+        "oid": "939d44a6f3f8cefde9ae4ff7c271939d752a62cadab3e92aacc29d1fcf75bbb5",
+        "size": 1928761,
+        "pointerSize": 132
+      },
+      "xetHash": "47dd4ca360a85ba267246656bac9a472a55e102229baeb639508dfc7b27f6ed9",
+      "path": "carpet/test/hole/012.png",
+      "category": "carpet",
+      "is_anomalous": true,
+      "downloaded_bytes": 1928761,
+      "sha256": "939d44a6f3f8cefde9ae4ff7c271939d752a62cadab3e92aacc29d1fcf75bbb5"
+    },
+    {
+      "type": "file",
+      "oid": "d750bf284082d1d93a52377a9697d534db1072dc",
+      "size": 3178,
+      "lfs": {
+        "oid": "77f69041f137307cfe40bf289857f80d1b8f724aec667478230a3b81e171a85c",
+        "size": 3178,
+        "pointerSize": 129
+      },
+      "xetHash": "79457c5731401ad65281f33bb6fea1405c15a18b807b72ce3aff856f70570f3b",
+      "path": "carpet/ground_truth/hole/012_mask.png",
+      "category": "carpet",
+      "is_mask": true,
+      "downloaded_bytes": 3178,
+      "sha256": "77f69041f137307cfe40bf289857f80d1b8f724aec667478230a3b81e171a85c"
+    },
+    {
+      "type": "file",
+      "oid": "d7b7c4a869cdc24f868d0884d3e219c3e1c35a13",
+      "size": 1912282,
+      "lfs": {
+        "oid": "cb1830afcb7235d4fd511414c8025bbd8892f8657e816186b901f70eef4a14d9",
+        "size": 1912282,
+        "pointerSize": 132
+      },
+      "xetHash": "51999d9ece534579c818557a45eb60ca18f9d63f90d01988b4f154d91a61fc1d",
+      "path": "carpet/test/hole/014.png",
+      "category": "carpet",
+      "is_anomalous": true,
+      "downloaded_bytes": 1912282,
+      "sha256": "cb1830afcb7235d4fd511414c8025bbd8892f8657e816186b901f70eef4a14d9"
+    },
+    {
+      "type": "file",
+      "oid": "ee8a6744e113e51cad073861d12f5a546d006caf",
+      "size": 2969,
+      "lfs": {
+        "oid": "3af96e6469a453a2c4b3c3a018a7b80d045baa9e08fc4c0169c325328ed46c2b",
+        "size": 2969,
+        "pointerSize": 129
+      },
+      "xetHash": "5a6e701a2556f25f473eeb3af68ff77f45dbc4f3152f04a0c86886c655c5ced4",
+      "path": "carpet/ground_truth/hole/014_mask.png",
+      "category": "carpet",
+      "is_mask": true,
+      "downloaded_bytes": 2969,
+      "sha256": "3af96e6469a453a2c4b3c3a018a7b80d045baa9e08fc4c0169c325328ed46c2b"
+    },
+    {
+      "type": "file",
+      "oid": "a9870bffc38463d0a5b7f598a0f171938ad2ef7b",
+      "size": 1861917,
+      "lfs": {
+        "oid": "d4924fa625a2c81533b127c65fe22e79ead991206edcdc983bebaac459ea6dca",
+        "size": 1861917,
+        "pointerSize": 132
+      },
+      "xetHash": "9271f4fc85878b4eda8f33d2e2ba0401b134c67b89d15d1a7b2e1141f9d75fc2",
+      "path": "carpet/test/thread/004.png",
+      "category": "carpet",
+      "is_anomalous": true,
+      "downloaded_bytes": 1861917,
+      "sha256": "d4924fa625a2c81533b127c65fe22e79ead991206edcdc983bebaac459ea6dca"
+    },
+    {
+      "type": "file",
+      "oid": "f9b33b3e8133f5d15e6d80e741577cacc51ed150",
+      "size": 3634,
+      "lfs": {
+        "oid": "70ff00b26a85edc5b4c1a1f8eff735be646efb013f7cedc9bd56f2eeedbdcab9",
+        "size": 3634,
+        "pointerSize": 129
+      },
+      "xetHash": "4fdd1a4af7c950cb6097714f21992632dacc7906dced1ced73fcd0e29da0ef9f",
+      "path": "carpet/ground_truth/thread/004_mask.png",
+      "category": "carpet",
+      "is_mask": true,
+      "downloaded_bytes": 3634,
+      "sha256": "70ff00b26a85edc5b4c1a1f8eff735be646efb013f7cedc9bd56f2eeedbdcab9"
+    },
+    {
+      "type": "file",
+      "oid": "d3dfa25dce8f4959cb074893d2c8f5922d87e7fd",
+      "size": 454784,
+      "lfs": {
+        "oid": "17a24835865fe32a80df0fa568e63d90ede794d1f5d91efcbd6d71310cc04470",
+        "size": 454784,
+        "pointerSize": 131
+      },
+      "xetHash": "879fce06937a5ba9b89b87a8159b22e1825c32f27f0975d5b560c13bd9ba3562",
+      "path": "grid/test/good/001.png",
+      "category": "grid",
+      "is_anomalous": false,
+      "downloaded_bytes": 454784,
+      "sha256": "17a24835865fe32a80df0fa568e63d90ede794d1f5d91efcbd6d71310cc04470"
+    },
+    {
+      "type": "file",
+      "oid": "bd66e6ec6e558ce7875a199d96104994f5dee9f2",
+      "size": 448536,
+      "lfs": {
+        "oid": "921e83bf81abc8df558f6b986c16901fda85d5df74dee588612bcca286d8f6cd",
+        "size": 448536,
+        "pointerSize": 131
+      },
+      "xetHash": "4252f7cc1ed80546bd1e80e5bc4d2f69dd0f9766fd58ac34ccc7935092293225",
+      "path": "grid/test/good/003.png",
+      "category": "grid",
+      "is_anomalous": false,
+      "downloaded_bytes": 448536,
+      "sha256": "921e83bf81abc8df558f6b986c16901fda85d5df74dee588612bcca286d8f6cd"
+    },
+    {
+      "type": "file",
+      "oid": "5384687eae256458bab240cbdcc9ad80e1198948",
+      "size": 467426,
+      "lfs": {
+        "oid": "971354c6ec461dcdc3d18824594c387112eb41193e0a00d9e26a9c67df8474db",
+        "size": 467426,
+        "pointerSize": 131
+      },
+      "xetHash": "309c628356b5ad479c827b570f36117bd7c89224a296ae90a8f17eedc337e6da",
+      "path": "grid/test/good/009.png",
+      "category": "grid",
+      "is_anomalous": false,
+      "downloaded_bytes": 467426,
+      "sha256": "971354c6ec461dcdc3d18824594c387112eb41193e0a00d9e26a9c67df8474db"
+    },
+    {
+      "type": "file",
+      "oid": "6cb3496dc913390ed6801aa171a1c4a022b2aba0",
+      "size": 464413,
+      "lfs": {
+        "oid": "00535e19b7c889d23e4c3188ceb513e180f6acfdaebf2623aa8d48982fdbb43c",
+        "size": 464413,
+        "pointerSize": 131
+      },
+      "xetHash": "b450d2ee3c06f4ddd09919e17bd21edca426cf80c7bfc8074e14a5b5093e47b9",
+      "path": "grid/test/good/015.png",
+      "category": "grid",
+      "is_anomalous": false,
+      "downloaded_bytes": 464413,
+      "sha256": "00535e19b7c889d23e4c3188ceb513e180f6acfdaebf2623aa8d48982fdbb43c"
+    },
+    {
+      "type": "file",
+      "oid": "b16f257d77028027aa7e27dc8a32b7ad94d4a0e8",
+      "size": 458590,
+      "lfs": {
+        "oid": "5c9e0ac837bc245054ba864978c16caf10263d95635699e851683105a5752306",
+        "size": 458590,
+        "pointerSize": 131
+      },
+      "xetHash": "040979f51b80fd0c590a0b32b04591329cb240a471e5d1f91f18e5501e45881f",
+      "path": "grid/test/good/016.png",
+      "category": "grid",
+      "is_anomalous": false,
+      "downloaded_bytes": 458590,
+      "sha256": "5c9e0ac837bc245054ba864978c16caf10263d95635699e851683105a5752306"
+    },
+    {
+      "type": "file",
+      "oid": "499d8a655e5773dd16d3792c6e041d0c1df9b6e8",
+      "size": 477234,
+      "lfs": {
+        "oid": "5849fb4e6d5c5aa2c7e3e83242ecb52d1ddf498a0caa7d139f7d63e6abd6b743",
+        "size": 477234,
+        "pointerSize": 131
+      },
+      "xetHash": "a21da95ee5c76c4ad4228032562bc782a8f5ef6d2aa775cc6cce7bf56f2232c6",
+      "path": "grid/test/bent/011.png",
+      "category": "grid",
+      "is_anomalous": true,
+      "downloaded_bytes": 477234,
+      "sha256": "5849fb4e6d5c5aa2c7e3e83242ecb52d1ddf498a0caa7d139f7d63e6abd6b743"
+    },
+    {
+      "type": "file",
+      "oid": "4d08eb1cfca13504341680d22fb6f0e6dcd0a205",
+      "size": 3603,
+      "lfs": {
+        "oid": "dd096f6675d5fee9829e7d3eaa72d874cbe7d97467e4fff7aa051c46adcf318e",
+        "size": 3603,
+        "pointerSize": 129
+      },
+      "xetHash": "542895cbf838ffb74581b1051df81dca65e69aabac1ec61587f2a2d9107152d1",
+      "path": "grid/ground_truth/bent/011_mask.png",
+      "category": "grid",
+      "is_mask": true,
+      "downloaded_bytes": 3603,
+      "sha256": "dd096f6675d5fee9829e7d3eaa72d874cbe7d97467e4fff7aa051c46adcf318e"
+    },
+    {
+      "type": "file",
+      "oid": "3568fced84cb66b073be2c9123962b06041c9243",
+      "size": 465865,
+      "lfs": {
+        "oid": "3fce0c3c93ae76cfd6703af01779a5b6272bb614f2a425bb91649b316d683e68",
+        "size": 465865,
+        "pointerSize": 131
+      },
+      "xetHash": "a058e781d00956579b01b9018b3aa2c3924902f43c4f15b1910aa64daea4be17",
+      "path": "grid/test/broken/003.png",
+      "category": "grid",
+      "is_anomalous": true,
+      "downloaded_bytes": 465865,
+      "sha256": "3fce0c3c93ae76cfd6703af01779a5b6272bb614f2a425bb91649b316d683e68"
+    },
+    {
+      "type": "file",
+      "oid": "59d6e2dd7f087e912c6352f1190ac6a2fe0e08bb",
+      "size": 3736,
+      "lfs": {
+        "oid": "bec75d216ba1e15e20a976e34f7b6ec8a9791b2b5d86613bda43fd1aab33863f",
+        "size": 3736,
+        "pointerSize": 129
+      },
+      "xetHash": "c6c31b2cb8ea5aed53f410e420b28d7f670f1d756bd0eb5e988e261ba7b61b24",
+      "path": "grid/ground_truth/broken/003_mask.png",
+      "category": "grid",
+      "is_mask": true,
+      "downloaded_bytes": 3736,
+      "sha256": "bec75d216ba1e15e20a976e34f7b6ec8a9791b2b5d86613bda43fd1aab33863f"
+    },
+    {
+      "type": "file",
+      "oid": "7ba28332a6b74217175bbe2f8b9b2f073b6dc8c8",
+      "size": 496160,
+      "lfs": {
+        "oid": "1d436746d5b55251f25ecca9780b8afd994d33e885ccc7404f2ce7490d42290f",
+        "size": 496160,
+        "pointerSize": 131
+      },
+      "xetHash": "8ab1272ccf4b63ec58a85c8392dc9de6d332c56a1ee8d632f668882e46b150ee",
+      "path": "grid/test/glue/005.png",
+      "category": "grid",
+      "is_anomalous": true,
+      "downloaded_bytes": 496160,
+      "sha256": "1d436746d5b55251f25ecca9780b8afd994d33e885ccc7404f2ce7490d42290f"
+    },
+    {
+      "type": "file",
+      "oid": "d0f88ab4950ddb45b4daaf1acc3b9ac8c4200518",
+      "size": 2912,
+      "lfs": {
+        "oid": "ee9b9d0816df74710e1ad37c0731cb38ac8b3115ab8fae22636dea7c69aaafe0",
+        "size": 2912,
+        "pointerSize": 129
+      },
+      "xetHash": "41adcf3e4448c37a793ed40bedbca2e1ac37592b2ab89f0811118fbf6072ee00",
+      "path": "grid/ground_truth/glue/005_mask.png",
+      "category": "grid",
+      "is_mask": true,
+      "downloaded_bytes": 2912,
+      "sha256": "ee9b9d0816df74710e1ad37c0731cb38ac8b3115ab8fae22636dea7c69aaafe0"
+    },
+    {
+      "type": "file",
+      "oid": "d4c09a269aee957b224f2d522b479cafc569c775",
+      "size": 464883,
+      "lfs": {
+        "oid": "2dc19020cd8b3c4d57accdad5e36116c45dc24b01f2d14b1f70825ac6faef89e",
+        "size": 464883,
+        "pointerSize": 131
+      },
+      "xetHash": "a251f7b33c59cabc2801de894bc9710c460cb30fa5d40317175b20b8b6e5dc9c",
+      "path": "grid/test/metal_contamination/003.png",
+      "category": "grid",
+      "is_anomalous": true,
+      "downloaded_bytes": 464883,
+      "sha256": "2dc19020cd8b3c4d57accdad5e36116c45dc24b01f2d14b1f70825ac6faef89e"
+    },
+    {
+      "type": "file",
+      "oid": "4d1109e92929de9aa2c17728637bc5dacb860283",
+      "size": 3382,
+      "lfs": {
+        "oid": "c016fb950aa9ad57d63b92e34a7b829c8b318a1ccf794942225efd9617715a5e",
+        "size": 3382,
+        "pointerSize": 129
+      },
+      "xetHash": "723e921177ce4e5ab85ac87a4f9460973abaa2f35818d8669e4d9c22bfb53f46",
+      "path": "grid/ground_truth/metal_contamination/003_mask.png",
+      "category": "grid",
+      "is_mask": true,
+      "downloaded_bytes": 3382,
+      "sha256": "c016fb950aa9ad57d63b92e34a7b829c8b318a1ccf794942225efd9617715a5e"
+    },
+    {
+      "type": "file",
+      "oid": "1bfd410c96af33e424881d59de9e9f958a337319",
+      "size": 475490,
+      "lfs": {
+        "oid": "042f4ebbe507612d4d77d8579bc08807bd0b4d2b323950f1ed193e589c02c0e4",
+        "size": 475490,
+        "pointerSize": 131
+      },
+      "xetHash": "9f1ee0a78df02f3b0f596065f3dc0f740047ab8f811f61f85d2ae56022c08079",
+      "path": "grid/test/metal_contamination/008.png",
+      "category": "grid",
+      "is_anomalous": true,
+      "downloaded_bytes": 475490,
+      "sha256": "042f4ebbe507612d4d77d8579bc08807bd0b4d2b323950f1ed193e589c02c0e4"
+    },
+    {
+      "type": "file",
+      "oid": "87f0781600638ad8c5c1fee11ef975931d2f5bc6",
+      "size": 3125,
+      "lfs": {
+        "oid": "6777577c3e9f90e0b523fad0eeaca84437ad6a55835bd579b9d150810c3c0c06",
+        "size": 3125,
+        "pointerSize": 129
+      },
+      "xetHash": "447317ae5dabd9b1e412b423a6ece2444a9a0368e781c98f1c6579be35aac646",
+      "path": "grid/ground_truth/metal_contamination/008_mask.png",
+      "category": "grid",
+      "is_mask": true,
+      "downloaded_bytes": 3125,
+      "sha256": "6777577c3e9f90e0b523fad0eeaca84437ad6a55835bd579b9d150810c3c0c06"
+    },
+    {
+      "type": "file",
+      "oid": "dd4f3ee580f0234c91f8c425dacf98cfb7750cbf",
+      "size": 1256509,
+      "lfs": {
+        "oid": "32034b75a2dca53cff86c4833e00a25cd65939859820e96ce9b980359cb08955",
+        "size": 1256509,
+        "pointerSize": 132
+      },
+      "xetHash": "d3c5f54c63c26bd99612379d4b8c03e629ee6ea7d0dea84e7366696174da097a",
+      "path": "hazelnut/test/good/000.png",
+      "category": "hazelnut",
+      "is_anomalous": false,
+      "downloaded_bytes": 1256509,
+      "sha256": "32034b75a2dca53cff86c4833e00a25cd65939859820e96ce9b980359cb08955"
+    },
+    {
+      "type": "file",
+      "oid": "43141c5efcb704fed2a73ce42dca46a3131dd235",
+      "size": 1254932,
+      "lfs": {
+        "oid": "79d966e719a6a88b12e3b07c8e339af879e1659dd5fb64c39438355ba787dad7",
+        "size": 1254932,
+        "pointerSize": 132
+      },
+      "xetHash": "1549c95b0ff698b7f7f41427d2a1f5325ff2e8f66e8d3179e3935b6e2f170739",
+      "path": "hazelnut/test/good/005.png",
+      "category": "hazelnut",
+      "is_anomalous": false,
+      "downloaded_bytes": 1254932,
+      "sha256": "79d966e719a6a88b12e3b07c8e339af879e1659dd5fb64c39438355ba787dad7"
+    },
+    {
+      "type": "file",
+      "oid": "a8f3136515c9f3cdb17f9107da7535dc44abf731",
+      "size": 1232996,
+      "lfs": {
+        "oid": "cd762b359ee068d9a9f2585a17a879b91f8cc5340c18662606bb5f15f9e8a03c",
+        "size": 1232996,
+        "pointerSize": 132
+      },
+      "xetHash": "571aa58ad60abf7e4ae5f4552ff5cb1b97d0ab511518ec9a8b1aca8dc5ce0129",
+      "path": "hazelnut/test/good/012.png",
+      "category": "hazelnut",
+      "is_anomalous": false,
+      "downloaded_bytes": 1232996,
+      "sha256": "cd762b359ee068d9a9f2585a17a879b91f8cc5340c18662606bb5f15f9e8a03c"
+    },
+    {
+      "type": "file",
+      "oid": "e32c49283bf51729386f97ba803cb8d12eb02d60",
+      "size": 1239944,
+      "lfs": {
+        "oid": "c375c88bedafc858fb65787203feaf6e866cbfce45485a5106b2298383fab1be",
+        "size": 1239944,
+        "pointerSize": 132
+      },
+      "xetHash": "0a8332e91214a60d23ae1cdd8d0b406eb4915d85d74a6916ebeb4b5e15625d12",
+      "path": "hazelnut/test/good/013.png",
+      "category": "hazelnut",
+      "is_anomalous": false,
+      "downloaded_bytes": 1239944,
+      "sha256": "c375c88bedafc858fb65787203feaf6e866cbfce45485a5106b2298383fab1be"
+    },
+    {
+      "type": "file",
+      "oid": "69f1c2e3f8f6105de5c22ebae1c65879751b0ea3",
+      "size": 1270306,
+      "lfs": {
+        "oid": "a14d34540fbcaa4fabd992095bf3e6a409599af1ec815d380e0db0b460011797",
+        "size": 1270306,
+        "pointerSize": 132
+      },
+      "xetHash": "83fef73fdb13189f1f1aa80b1bdf94c2104e4a85e0ede12285ade287fb43a74c",
+      "path": "hazelnut/test/good/028.png",
+      "category": "hazelnut",
+      "is_anomalous": false,
+      "downloaded_bytes": 1270306,
+      "sha256": "a14d34540fbcaa4fabd992095bf3e6a409599af1ec815d380e0db0b460011797"
+    },
+    {
+      "type": "file",
+      "oid": "f07484a171522ecf4b141d554efe13852dc0efe9",
+      "size": 1259297,
+      "lfs": {
+        "oid": "15d9b0d004a7a77e6541b5d68c6fd12b45a8b12b43c017e87bd20d4fe0727bbf",
+        "size": 1259297,
+        "pointerSize": 132
+      },
+      "xetHash": "8b68a222821d53dffc84efc030265d44762dcf165ea0d3c520e2b6cdabe416e5",
+      "path": "hazelnut/test/crack/004.png",
+      "category": "hazelnut",
+      "is_anomalous": true,
+      "downloaded_bytes": 1259297,
+      "sha256": "15d9b0d004a7a77e6541b5d68c6fd12b45a8b12b43c017e87bd20d4fe0727bbf"
+    },
+    {
+      "type": "file",
+      "oid": "89e0e91d7d4b4b2501cf88ab62d33838c61fd273",
+      "size": 3205,
+      "lfs": {
+        "oid": "cf0cb47ccb6285bfe50208f6e1439aa2f265151e24216211b520c1ee9b29fc6e",
+        "size": 3205,
+        "pointerSize": 129
+      },
+      "xetHash": "a16a30c9b78d38d695eb99b46ac117ef849616c9f66dc07fa17f655d9117cd02",
+      "path": "hazelnut/ground_truth/crack/004_mask.png",
+      "category": "hazelnut",
+      "is_mask": true,
+      "downloaded_bytes": 3205,
+      "sha256": "cf0cb47ccb6285bfe50208f6e1439aa2f265151e24216211b520c1ee9b29fc6e"
+    },
+    {
+      "type": "file",
+      "oid": "12e1668e2ac32424dbfdf67c66134d438f1b9788",
+      "size": 1287290,
+      "lfs": {
+        "oid": "c30d8b0a924b2859c2283a1b90ffc74f6eb5c76b64e312fe7c45fe5e28548df4",
+        "size": 1287290,
+        "pointerSize": 132
+      },
+      "xetHash": "3c649047dc06573fe0232866069c92dce3e7035bd3b91607cc448e25c74d5684",
+      "path": "hazelnut/test/crack/009.png",
+      "category": "hazelnut",
+      "is_anomalous": true,
+      "downloaded_bytes": 1287290,
+      "sha256": "c30d8b0a924b2859c2283a1b90ffc74f6eb5c76b64e312fe7c45fe5e28548df4"
+    },
+    {
+      "type": "file",
+      "oid": "63981b9fff5dc62720af07e4e92fc91639a756e4",
+      "size": 4775,
+      "lfs": {
+        "oid": "c32d0df33f876023e0a480302255cfd3d964fb33616c10427049e077f9fb2b6e",
+        "size": 4775,
+        "pointerSize": 129
+      },
+      "xetHash": "bdb3007f6ced83f01aedf26a6932c7050d5b34f3252ed0610fd80078e5ba503e",
+      "path": "hazelnut/ground_truth/crack/009_mask.png",
+      "category": "hazelnut",
+      "is_mask": true,
+      "downloaded_bytes": 4775,
+      "sha256": "c32d0df33f876023e0a480302255cfd3d964fb33616c10427049e077f9fb2b6e"
+    },
+    {
+      "type": "file",
+      "oid": "56e5c4d748603164f0eefa1823f56977d26f5003",
+      "size": 1245173,
+      "lfs": {
+        "oid": "0523483988a920ff336c3a239381b98bbf7b67afd53d6b5ba3e7aa5b7ca6fd6c",
+        "size": 1245173,
+        "pointerSize": 132
+      },
+      "xetHash": "4868ac9a6ac7cccaf52fdfde4b61a624e5b16f1520de15e92a22fd6128dba6cf",
+      "path": "hazelnut/test/crack/012.png",
+      "category": "hazelnut",
+      "is_anomalous": true,
+      "downloaded_bytes": 1245173,
+      "sha256": "0523483988a920ff336c3a239381b98bbf7b67afd53d6b5ba3e7aa5b7ca6fd6c"
+    },
+    {
+      "type": "file",
+      "oid": "d37bb2f6af5b660ee533997efce725b3d23243e9",
+      "size": 4429,
+      "lfs": {
+        "oid": "20e83cfde422f08dc4390b42a4d5e1363c1315f0ef93e1b045fa8beeef3344f1",
+        "size": 4429,
+        "pointerSize": 129
+      },
+      "xetHash": "7dbac1dceee3f98ca84d1b827bbf74663b674cfb80b69eaaec1ca56070191d98",
+      "path": "hazelnut/ground_truth/crack/012_mask.png",
+      "category": "hazelnut",
+      "is_mask": true,
+      "downloaded_bytes": 4429,
+      "sha256": "20e83cfde422f08dc4390b42a4d5e1363c1315f0ef93e1b045fa8beeef3344f1"
+    },
+    {
+      "type": "file",
+      "oid": "a046c4001b0f2068808e171b4aa418fdfb81a1ba",
+      "size": 1242898,
+      "lfs": {
+        "oid": "84301659e7f9358c3d1f79b5dd3561ddcf4d2c72e99399bb20961ef7ce7e31c2",
+        "size": 1242898,
+        "pointerSize": 132
+      },
+      "xetHash": "66e1259fd8cc93ed00b99ab7206b18178dc24f852e6c4d3e0d2268e4ce4b73d0",
+      "path": "hazelnut/test/cut/003.png",
+      "category": "hazelnut",
+      "is_anomalous": true,
+      "downloaded_bytes": 1242898,
+      "sha256": "84301659e7f9358c3d1f79b5dd3561ddcf4d2c72e99399bb20961ef7ce7e31c2"
+    },
+    {
+      "type": "file",
+      "oid": "3f10884e7e067de45a57313e1f2f3e7cb92f56b3",
+      "size": 3258,
+      "lfs": {
+        "oid": "01d5e260a864dad4ef1c1328911d4c50fe601f0bae4317e51a7c7e0b82573f79",
+        "size": 3258,
+        "pointerSize": 129
+      },
+      "xetHash": "a681fb2fb3a1cdc9541135d13c92d763ac9dfe34e11c71a4e02231aebdd7072d",
+      "path": "hazelnut/ground_truth/cut/003_mask.png",
+      "category": "hazelnut",
+      "is_mask": true,
+      "downloaded_bytes": 3258,
+      "sha256": "01d5e260a864dad4ef1c1328911d4c50fe601f0bae4317e51a7c7e0b82573f79"
+    },
+    {
+      "type": "file",
+      "oid": "6ea13f6055c7bb38c2765d4232e0627f7c4de225",
+      "size": 1247856,
+      "lfs": {
+        "oid": "5db56fd188862556d9dd8337e1a563efe1154bef08f63372e1b38cc756ebcfe1",
+        "size": 1247856,
+        "pointerSize": 132
+      },
+      "xetHash": "21a3eeafb81baffbf4a441e93da19678f11989b286871b4f581fbcf461403142",
+      "path": "hazelnut/test/cut/016.png",
+      "category": "hazelnut",
+      "is_anomalous": true,
+      "downloaded_bytes": 1247856,
+      "sha256": "5db56fd188862556d9dd8337e1a563efe1154bef08f63372e1b38cc756ebcfe1"
+    },
+    {
+      "type": "file",
+      "oid": "e3a4203bc3b04147a921cd6c4c5d12ea96c54469",
+      "size": 3437,
+      "lfs": {
+        "oid": "1a85b4486469aafe07cf33f921f3eb1d63274bfc137985288476a288d1d99db7",
+        "size": 3437,
+        "pointerSize": 129
+      },
+      "xetHash": "32344ffff5bde05affe00868238c438807dcb553173681e10f7413b6403beec1",
+      "path": "hazelnut/ground_truth/cut/016_mask.png",
+      "category": "hazelnut",
+      "is_mask": true,
+      "downloaded_bytes": 3437,
+      "sha256": "1a85b4486469aafe07cf33f921f3eb1d63274bfc137985288476a288d1d99db7"
+    },
+    {
+      "type": "file",
+      "oid": "0c257921c4d2c50ba4665ca4aac024704a552ec3",
+      "size": 1519353,
+      "lfs": {
+        "oid": "c9b3727f94c5a87df5b16cb6a867eb8de467843afeac6a2d9d2d3b0b4ff62e07",
+        "size": 1519353,
+        "pointerSize": 132
+      },
+      "xetHash": "df169e94341dcb5f54ea4fa684dde5eb2ad5bf0b85232d9c545b282af985c1ce",
+      "path": "leather/test/good/003.png",
+      "category": "leather",
+      "is_anomalous": false,
+      "downloaded_bytes": 1519353,
+      "sha256": "c9b3727f94c5a87df5b16cb6a867eb8de467843afeac6a2d9d2d3b0b4ff62e07"
+    },
+    {
+      "type": "file",
+      "oid": "e2cab2390df05d0b2ad69385a57d84ac7fc14b3d",
+      "size": 1545902,
+      "lfs": {
+        "oid": "aaf28f6b65ca4e89502906a7b6c386ec41acb9c2c325d4709f53b020a307a0a2",
+        "size": 1545902,
+        "pointerSize": 132
+      },
+      "xetHash": "107aba29f4cff276a0de38a8c98dccc66383e3a927e77bd2c8ddeb69fb1e4834",
+      "path": "leather/test/good/011.png",
+      "category": "leather",
+      "is_anomalous": false,
+      "downloaded_bytes": 1545902,
+      "sha256": "aaf28f6b65ca4e89502906a7b6c386ec41acb9c2c325d4709f53b020a307a0a2"
+    },
+    {
+      "type": "file",
+      "oid": "b1855fea5819ce12a5927b2ec430c4a1d8370a64",
+      "size": 1460368,
+      "lfs": {
+        "oid": "9e87d1c8652c57d8b2c166a59b218419e467aa6ed36fb756eee9f7eb34c83922",
+        "size": 1460368,
+        "pointerSize": 132
+      },
+      "xetHash": "3a232a0bd7821415436bec3644b3679efe51786552718072d314bd4a9c134111",
+      "path": "leather/test/good/019.png",
+      "category": "leather",
+      "is_anomalous": false,
+      "downloaded_bytes": 1460368,
+      "sha256": "9e87d1c8652c57d8b2c166a59b218419e467aa6ed36fb756eee9f7eb34c83922"
+    },
+    {
+      "type": "file",
+      "oid": "ca22c77f36cbf456a8f68b56c5a6afec5144ddaf",
+      "size": 1522669,
+      "lfs": {
+        "oid": "c1903350ac3c28d1dcd70efa685f621ed8e66757b8e17ae93a9783cc16913519",
+        "size": 1522669,
+        "pointerSize": 132
+      },
+      "xetHash": "2eb0b2e831fe4bc1fb2ebe5861b9164c70f294e4d6f77fcf14b78926e7073a61",
+      "path": "leather/test/good/024.png",
+      "category": "leather",
+      "is_anomalous": false,
+      "downloaded_bytes": 1522669,
+      "sha256": "c1903350ac3c28d1dcd70efa685f621ed8e66757b8e17ae93a9783cc16913519"
+    },
+    {
+      "type": "file",
+      "oid": "257420671fa45f50f1300d0289131fc106db89f3",
+      "size": 1533274,
+      "lfs": {
+        "oid": "e8f0bba0c71d3c21f6e5ea403e8684ee7ee584cfebd1d42be9bc8426575204dd",
+        "size": 1533274,
+        "pointerSize": 132
+      },
+      "xetHash": "5f003c88ddc7d0b239b223adc453adb67c76b417bc4f9a2bb69c5c3e97f5820e",
+      "path": "leather/test/good/031.png",
+      "category": "leather",
+      "is_anomalous": false,
+      "downloaded_bytes": 1533274,
+      "sha256": "e8f0bba0c71d3c21f6e5ea403e8684ee7ee584cfebd1d42be9bc8426575204dd"
+    },
+    {
+      "type": "file",
+      "oid": "0569ef7bcadd99caf8767d0333ebe1df5bddf883",
+      "size": 1505774,
+      "lfs": {
+        "oid": "723c61ff929cc2e572787d55bb7361aadab2669fb9ab48efd2a09fe84d1ac38c",
+        "size": 1505774,
+        "pointerSize": 132
+      },
+      "xetHash": "5c7d3d78763d96ba635ea37cdcd1b8e1fbf3584c75adf5cd7e66f50162c77260",
+      "path": "leather/test/color/006.png",
+      "category": "leather",
+      "is_anomalous": true,
+      "downloaded_bytes": 1505774,
+      "sha256": "723c61ff929cc2e572787d55bb7361aadab2669fb9ab48efd2a09fe84d1ac38c"
+    },
+    {
+      "type": "file",
+      "oid": "a8c4006708268cd89bd1ab1dc452d9fc079a5488",
+      "size": 2625,
+      "lfs": {
+        "oid": "e9fe263c0c3efe7dff139ae2f70f58943ad043e1749c3902c73919b94f23baf4",
+        "size": 2625,
+        "pointerSize": 129
+      },
+      "xetHash": "13b7018b0357c58463b57d4871d9f10ddbc9ced9ebc24208298f490955f30d88",
+      "path": "leather/ground_truth/color/006_mask.png",
+      "category": "leather",
+      "is_mask": true,
+      "downloaded_bytes": 2625,
+      "sha256": "e9fe263c0c3efe7dff139ae2f70f58943ad043e1749c3902c73919b94f23baf4"
+    },
+    {
+      "type": "file",
+      "oid": "45f13a4a24e236fa98e5ca002d4a38983231e3e5",
+      "size": 1500087,
+      "lfs": {
+        "oid": "be636830ff2631ac55d7e9d85d02b43a170a5b25549fc40444f8dee88b56182a",
+        "size": 1500087,
+        "pointerSize": 132
+      },
+      "xetHash": "530f38dced4ce5d0fa7e1a955eab2cd80c124b0899be689fcce59650e0772048",
+      "path": "leather/test/color/013.png",
+      "category": "leather",
+      "is_anomalous": true,
+      "downloaded_bytes": 1500087,
+      "sha256": "be636830ff2631ac55d7e9d85d02b43a170a5b25549fc40444f8dee88b56182a"
+    },
+    {
+      "type": "file",
+      "oid": "86c293dd0c3ed8be6f805e1bde4e02bfb700c717",
+      "size": 2844,
+      "lfs": {
+        "oid": "b0ffd455424d3a4e6eb499ba8351e30927237d8e4f0214b15a57e38862ac41dd",
+        "size": 2844,
+        "pointerSize": 129
+      },
+      "xetHash": "c9ac2664e068ac04bffcc485802770c9687bb0492985a45715721313d4fcd198",
+      "path": "leather/ground_truth/color/013_mask.png",
+      "category": "leather",
+      "is_mask": true,
+      "downloaded_bytes": 2844,
+      "sha256": "b0ffd455424d3a4e6eb499ba8351e30927237d8e4f0214b15a57e38862ac41dd"
+    },
+    {
+      "type": "file",
+      "oid": "3374a53a3f971c64b1e469b1b9add0c6e3e0173e",
+      "size": 1504902,
+      "lfs": {
+        "oid": "08157c3a881d967885b7cbae7cb307a132f8b89cce49f04fd39334a9d83aad36",
+        "size": 1504902,
+        "pointerSize": 132
+      },
+      "xetHash": "dd4da2668701caf563fbddcbe0cacf324bb87bc396a7db2015b2f5af42a0af90",
+      "path": "leather/test/fold/001.png",
+      "category": "leather",
+      "is_anomalous": true,
+      "downloaded_bytes": 1504902,
+      "sha256": "08157c3a881d967885b7cbae7cb307a132f8b89cce49f04fd39334a9d83aad36"
+    },
+    {
+      "type": "file",
+      "oid": "4034c84af06d63c053e4b0f8e87d23e0730b923a",
+      "size": 2844,
+      "lfs": {
+        "oid": "e2970a0a7f983454361c917315d8a10d829af935d0b9293829a597177d22cb36",
+        "size": 2844,
+        "pointerSize": 129
+      },
+      "xetHash": "75f626f6132a91ad508c067cec1de7494270b6f48aff75a56535228ebc284ad2",
+      "path": "leather/ground_truth/fold/001_mask.png",
+      "category": "leather",
+      "is_mask": true,
+      "downloaded_bytes": 2844,
+      "sha256": "e2970a0a7f983454361c917315d8a10d829af935d0b9293829a597177d22cb36"
+    },
+    {
+      "type": "file",
+      "oid": "5d82abefd1ee429c74a3d859630f529bc649e08b",
+      "size": 1480723,
+      "lfs": {
+        "oid": "4df4eea15eddb56f4090a7c2dc1ca0cd7d60ee0d615b7d7fa724274fb42ad726",
+        "size": 1480723,
+        "pointerSize": 132
+      },
+      "xetHash": "242fede2e0e44804276475506a1648cac72b95a76fa121fddadc2cf2d207b3cf",
+      "path": "leather/test/fold/010.png",
+      "category": "leather",
+      "is_anomalous": true,
+      "downloaded_bytes": 1480723,
+      "sha256": "4df4eea15eddb56f4090a7c2dc1ca0cd7d60ee0d615b7d7fa724274fb42ad726"
+    },
+    {
+      "type": "file",
+      "oid": "eaed052412164686d74ba4ce4768257d94ed8b7d",
+      "size": 3177,
+      "lfs": {
+        "oid": "c427029c75b97ae2cd6b317348d082cebde230fdcc0c2c8ccff2b100b6337718",
+        "size": 3177,
+        "pointerSize": 129
+      },
+      "xetHash": "ddb58fb4c5b92b000071f339f76d5f5c529ea291311850821b358f7be16018fd",
+      "path": "leather/ground_truth/fold/010_mask.png",
+      "category": "leather",
+      "is_mask": true,
+      "downloaded_bytes": 3177,
+      "sha256": "c427029c75b97ae2cd6b317348d082cebde230fdcc0c2c8ccff2b100b6337718"
+    },
+    {
+      "type": "file",
+      "oid": "69725e25a8fef46c11b5f8bc1dd8b2ce30447a51",
+      "size": 1418335,
+      "lfs": {
+        "oid": "ece2643da68441c3420e13227625014678cc91ccc67a3efe974f3b4991db0fcf",
+        "size": 1418335,
+        "pointerSize": 132
+      },
+      "xetHash": "e5648790f0c3c9e40a89175b7a5f01c4f35720367b614035e30b4938ee4a3faa",
+      "path": "leather/test/glue/009.png",
+      "category": "leather",
+      "is_anomalous": true,
+      "downloaded_bytes": 1418335,
+      "sha256": "ece2643da68441c3420e13227625014678cc91ccc67a3efe974f3b4991db0fcf"
+    },
+    {
+      "type": "file",
+      "oid": "8d54743d6788f13f724b6cbad469a8746cc0b81a",
+      "size": 2870,
+      "lfs": {
+        "oid": "27618526313ce66cdb67bb7d0efc6becf9329d21908a504d211e9a33cbe1d2fb",
+        "size": 2870,
+        "pointerSize": 129
+      },
+      "xetHash": "ff28c4ae4d98f5aa84db0875530c946fa9e16faf31fac1ab6ff762d19303290b",
+      "path": "leather/ground_truth/glue/009_mask.png",
+      "category": "leather",
+      "is_mask": true,
+      "downloaded_bytes": 2870,
+      "sha256": "27618526313ce66cdb67bb7d0efc6becf9329d21908a504d211e9a33cbe1d2fb"
+    },
+    {
+      "type": "file",
+      "oid": "db82b384a758b1b689186c97f47bbfdbef40bebf",
+      "size": 514651,
+      "lfs": {
+        "oid": "8053b24c2fef17e040cb18f81eafaef33959991332df717783300905e525d97a",
+        "size": 514651,
+        "pointerSize": 131
+      },
+      "xetHash": "a83e2c3d4b04c0e6dd28f4668f43d8ca6326fd5acb079006379caeaa7c30452c",
+      "path": "metal_nut/test/good/009.png",
+      "category": "metal_nut",
+      "is_anomalous": false,
+      "downloaded_bytes": 514651,
+      "sha256": "8053b24c2fef17e040cb18f81eafaef33959991332df717783300905e525d97a"
+    },
+    {
+      "type": "file",
+      "oid": "0038d0231d9c1a4bcf6a20ecb76845a97635eebb",
+      "size": 506209,
+      "lfs": {
+        "oid": "9e094532fd66ad52c59c2e7bbcf67eace77202d363aa5050a7d79f0356c53e62",
+        "size": 506209,
+        "pointerSize": 131
+      },
+      "xetHash": "53c6d7387917555b2f01154198296a8897d891bbac59d8060b60a8e71267e57e",
+      "path": "metal_nut/test/good/014.png",
+      "category": "metal_nut",
+      "is_anomalous": false,
+      "downloaded_bytes": 506209,
+      "sha256": "9e094532fd66ad52c59c2e7bbcf67eace77202d363aa5050a7d79f0356c53e62"
+    },
+    {
+      "type": "file",
+      "oid": "60553500a415c33f23618491c922668591fed25f",
+      "size": 491991,
+      "lfs": {
+        "oid": "a8b48fd4b3415db0d580716d74719947ca45ac41c09799856b7f488954e6bdb8",
+        "size": 491991,
+        "pointerSize": 131
+      },
+      "xetHash": "a4decd34398711860833ee7a842c97e71a59811b18b3d578bd5d0c322cceb760",
+      "path": "metal_nut/test/good/016.png",
+      "category": "metal_nut",
+      "is_anomalous": false,
+      "downloaded_bytes": 491991,
+      "sha256": "a8b48fd4b3415db0d580716d74719947ca45ac41c09799856b7f488954e6bdb8"
+    },
+    {
+      "type": "file",
+      "oid": "28a528e11c4dc680504f3208f7b9c9a07291600a",
+      "size": 497874,
+      "lfs": {
+        "oid": "f59dbe04cc8dedb211ce64256007c4c5b266f6439919f1a677e3b32a2180b127",
+        "size": 497874,
+        "pointerSize": 131
+      },
+      "xetHash": "6334657bf4a5a96038e518fb934221565b91d4e6f9c76ef500dbbbc55645d32f",
+      "path": "metal_nut/test/good/020.png",
+      "category": "metal_nut",
+      "is_anomalous": false,
+      "downloaded_bytes": 497874,
+      "sha256": "f59dbe04cc8dedb211ce64256007c4c5b266f6439919f1a677e3b32a2180b127"
+    },
+    {
+      "type": "file",
+      "oid": "b77d02c3024ff0ff28bb0a8e4fa2080634742e93",
+      "size": 495372,
+      "lfs": {
+        "oid": "2322222a562c5cb49717047cff52535f57f073cff167d189a0500af08fba083e",
+        "size": 495372,
+        "pointerSize": 131
+      },
+      "xetHash": "c16af126219fe15ccc7ece3ccd1eb8dbd87fb54f449a95486e413b4aa24c76fc",
+      "path": "metal_nut/test/good/021.png",
+      "category": "metal_nut",
+      "is_anomalous": false,
+      "downloaded_bytes": 495372,
+      "sha256": "2322222a562c5cb49717047cff52535f57f073cff167d189a0500af08fba083e"
+    },
+    {
+      "type": "file",
+      "oid": "c6cb5ca90b38cbe348ff9035d7a993d43fbc688d",
+      "size": 503233,
+      "lfs": {
+        "oid": "4443ec9e57407e3710711790ecc73187a9cbff96c4f981c12ce77ea57a5683c0",
+        "size": 503233,
+        "pointerSize": 131
+      },
+      "xetHash": "7d8b2c5975fcbb82d50b53254463829b09ae4c38a25175c0db79a5e7f5da1a63",
+      "path": "metal_nut/test/color/004.png",
+      "category": "metal_nut",
+      "is_anomalous": true,
+      "downloaded_bytes": 503233,
+      "sha256": "4443ec9e57407e3710711790ecc73187a9cbff96c4f981c12ce77ea57a5683c0"
+    },
+    {
+      "type": "file",
+      "oid": "e7bdf6fbcb96b9ca2e823f9757a2ba94d24002fa",
+      "size": 2301,
+      "lfs": {
+        "oid": "e9cb0450cbeb1f5fbe6895ece89f098cbcdbcfa454ab62e6ac2b7a83c198aade",
+        "size": 2301,
+        "pointerSize": 129
+      },
+      "xetHash": "9da14c563d6988683e27c5ecc5a3576f1b4ed1d8fda48fc15eea4ef1a04c54c8",
+      "path": "metal_nut/ground_truth/color/004_mask.png",
+      "category": "metal_nut",
+      "is_mask": true,
+      "downloaded_bytes": 2301,
+      "sha256": "e9cb0450cbeb1f5fbe6895ece89f098cbcdbcfa454ab62e6ac2b7a83c198aade"
+    },
+    {
+      "type": "file",
+      "oid": "73785837e394c80a3cd276e969335a50b0ceb65e",
+      "size": 495941,
+      "lfs": {
+        "oid": "9b6ad18663609b2fc428a948f56cd80718fdf6a267f1144e445e336dd0231a87",
+        "size": 495941,
+        "pointerSize": 131
+      },
+      "xetHash": "433cf7eb1ee75d030e5e1fa97b7eb0d283ff6620d953a3b633ca74d9a632a65b",
+      "path": "metal_nut/test/color/008.png",
+      "category": "metal_nut",
+      "is_anomalous": true,
+      "downloaded_bytes": 495941,
+      "sha256": "9b6ad18663609b2fc428a948f56cd80718fdf6a267f1144e445e336dd0231a87"
+    },
+    {
+      "type": "file",
+      "oid": "c43ee0109a71692c4db60b5c4658a282db57d1d4",
+      "size": 3175,
+      "lfs": {
+        "oid": "1e20c39f72c5001e84c8aadf6b4a4bd8e0e48ecf78fca16e2e5abb73290f74ce",
+        "size": 3175,
+        "pointerSize": 129
+      },
+      "xetHash": "91ec4a6ceeff4d7eab24e305c8e52d79001b3faec7f7f9c46d7a39625166b808",
+      "path": "metal_nut/ground_truth/color/008_mask.png",
+      "category": "metal_nut",
+      "is_mask": true,
+      "downloaded_bytes": 3175,
+      "sha256": "1e20c39f72c5001e84c8aadf6b4a4bd8e0e48ecf78fca16e2e5abb73290f74ce"
+    },
+    {
+      "type": "file",
+      "oid": "b07096c98a85fc421e3c8be1421249cd3cabc7a3",
+      "size": 463619,
+      "lfs": {
+        "oid": "86ee9fac2a1ea560536782de2122ce44f24dce115b3d9e7f4b5d87f57b40e773",
+        "size": 463619,
+        "pointerSize": 131
+      },
+      "xetHash": "d887725ced2ed47062288f7dea2a64901fa04a7a640c65ab07316011070914d4",
+      "path": "metal_nut/test/flip/000.png",
+      "category": "metal_nut",
+      "is_anomalous": true,
+      "downloaded_bytes": 463619,
+      "sha256": "86ee9fac2a1ea560536782de2122ce44f24dce115b3d9e7f4b5d87f57b40e773"
+    },
+    {
+      "type": "file",
+      "oid": "8d4592c985b838ef4d55a8322139c7dd26c100fe",
+      "size": 4740,
+      "lfs": {
+        "oid": "1c26bfe33daef64d705efed07bd2d2ef16eb99369b5fedf99f1b40c666e50056",
+        "size": 4740,
+        "pointerSize": 129
+      },
+      "xetHash": "27d4e8d5abd53c325c0783079c417573b4c5c2087dfa43d6ca1acc6a550a886c",
+      "path": "metal_nut/ground_truth/flip/000_mask.png",
+      "category": "metal_nut",
+      "is_mask": true,
+      "downloaded_bytes": 4740,
+      "sha256": "1c26bfe33daef64d705efed07bd2d2ef16eb99369b5fedf99f1b40c666e50056"
+    },
+    {
+      "type": "file",
+      "oid": "d5e38e13596a2c4a684c04262ef7f1ea9480db9a",
+      "size": 454610,
+      "lfs": {
+        "oid": "24bddb5c4910eff52d6666fda39f5515ed93a7a75580b7cf93e358bdf83f5571",
+        "size": 454610,
+        "pointerSize": 131
+      },
+      "xetHash": "2bf64484fb6851268275bb2c3504d704e5cd2fa4aa14ab9e4c1a576b0568adc9",
+      "path": "metal_nut/test/flip/013.png",
+      "category": "metal_nut",
+      "is_anomalous": true,
+      "downloaded_bytes": 454610,
+      "sha256": "24bddb5c4910eff52d6666fda39f5515ed93a7a75580b7cf93e358bdf83f5571"
+    },
+    {
+      "type": "file",
+      "oid": "8be8ca0b9fa41143cd0e53a6f12fcb5757026c3f",
+      "size": 4272,
+      "lfs": {
+        "oid": "74efba4b367d7a91052698e4fad154cd2a2e27a8dbbbf2cecc50f787581c043d",
+        "size": 4272,
+        "pointerSize": 129
+      },
+      "xetHash": "4c182a95fbfac7fcdb930dd4f686b232f7642c78d68114dd281176e35d90ba45",
+      "path": "metal_nut/ground_truth/flip/013_mask.png",
+      "category": "metal_nut",
+      "is_mask": true,
+      "downloaded_bytes": 4272,
+      "sha256": "74efba4b367d7a91052698e4fad154cd2a2e27a8dbbbf2cecc50f787581c043d"
+    },
+    {
+      "type": "file",
+      "oid": "f6f9e091204b2a0ecb2db1404b29201f4133f299",
+      "size": 498227,
+      "lfs": {
+        "oid": "5ae53ead104443af7e403281e4ac36d27383a327dcd07114da0860dc1cd9e591",
+        "size": 498227,
+        "pointerSize": 131
+      },
+      "xetHash": "0ed7c2088684e0d302cb88f13bc19dade3045042db69b344509c504799308923",
+      "path": "metal_nut/test/scratch/019.png",
+      "category": "metal_nut",
+      "is_anomalous": true,
+      "downloaded_bytes": 498227,
+      "sha256": "5ae53ead104443af7e403281e4ac36d27383a327dcd07114da0860dc1cd9e591"
+    },
+    {
+      "type": "file",
+      "oid": "dcb7ddf47c8d454a9e9cf6a6bbb2af1757921ddb",
+      "size": 3064,
+      "lfs": {
+        "oid": "8132b9a903c5589e3413d32e6182a69b021aa468ea8031ebe3365742c195249e",
+        "size": 3064,
+        "pointerSize": 129
+      },
+      "xetHash": "8454dc3e1e28a96d0c642c6bf83ac5940cced07ce3b6dae5f273377605a4ce32",
+      "path": "metal_nut/ground_truth/scratch/019_mask.png",
+      "category": "metal_nut",
+      "is_mask": true,
+      "downloaded_bytes": 3064,
+      "sha256": "8132b9a903c5589e3413d32e6182a69b021aa468ea8031ebe3365742c195249e"
+    },
+    {
+      "type": "file",
+      "oid": "09ee426f7ee6d53b606ad9f976d6a64427a3b5c3",
+      "size": 647489,
+      "lfs": {
+        "oid": "3243e078047221b22870996b14104f8afc05ecd8964c66cdddc41551d4a36f4e",
+        "size": 647489,
+        "pointerSize": 131
+      },
+      "xetHash": "4848b85115694e1521c7610bf303301f239ece32981645aa4b23e3f914ce29c7",
+      "path": "pill/test/good/000.png",
+      "category": "pill",
+      "is_anomalous": false,
+      "downloaded_bytes": 647489,
+      "sha256": "3243e078047221b22870996b14104f8afc05ecd8964c66cdddc41551d4a36f4e"
+    },
+    {
+      "type": "file",
+      "oid": "d9fcdfd0274dece80a5fe40ee67ae0601a610ab8",
+      "size": 640886,
+      "lfs": {
+        "oid": "bb5215699a2d62bb5066cf8b51dcd25f4c7bd7fc7ee2117a5f2d52261f9dc2e1",
+        "size": 640886,
+        "pointerSize": 131
+      },
+      "xetHash": "015a204b6e7caced6b0e8ce81ec924a2165c5f2fd07bdeb96b200774fc917dce",
+      "path": "pill/test/good/005.png",
+      "category": "pill",
+      "is_anomalous": false,
+      "downloaded_bytes": 640886,
+      "sha256": "bb5215699a2d62bb5066cf8b51dcd25f4c7bd7fc7ee2117a5f2d52261f9dc2e1"
+    },
+    {
+      "type": "file",
+      "oid": "8f2edd89dba41c0e7fc77fc864f88cee090ce618",
+      "size": 616131,
+      "lfs": {
+        "oid": "bb0c1fd0482c8b9a4780ee3279c7024b0327562c08ecc1c8206ebacd10cef847",
+        "size": 616131,
+        "pointerSize": 131
+      },
+      "xetHash": "ddda5b1c3fa3322bf365578840534d5a6a0de30c7eb19c1df33acc5e18c35dc5",
+      "path": "pill/test/good/016.png",
+      "category": "pill",
+      "is_anomalous": false,
+      "downloaded_bytes": 616131,
+      "sha256": "bb0c1fd0482c8b9a4780ee3279c7024b0327562c08ecc1c8206ebacd10cef847"
+    },
+    {
+      "type": "file",
+      "oid": "4228faa98b9526a77d7a572890c91b09d4d25639",
+      "size": 608711,
+      "lfs": {
+        "oid": "0084a580c79da0879545bfc891dd4214623c5edc47d8053b78b2d44866938af8",
+        "size": 608711,
+        "pointerSize": 131
+      },
+      "xetHash": "942ee9df3366c9e1572b2bb5dfbb60e25094f741d664c8eeed594d1cf4b4f9e4",
+      "path": "pill/test/good/019.png",
+      "category": "pill",
+      "is_anomalous": false,
+      "downloaded_bytes": 608711,
+      "sha256": "0084a580c79da0879545bfc891dd4214623c5edc47d8053b78b2d44866938af8"
+    },
+    {
+      "type": "file",
+      "oid": "74a41c85360e5552982ce2e623fbb6619309da5b",
+      "size": 613386,
+      "lfs": {
+        "oid": "657549628cbdd809da1f7ad42bdb0774868cb3fe9bd805884afe678f88020d3c",
+        "size": 613386,
+        "pointerSize": 131
+      },
+      "xetHash": "49063bf6308c69e008ad0ea5cfb02b06b69b7cb084f2a7658a57f68e8e541d75",
+      "path": "pill/test/good/022.png",
+      "category": "pill",
+      "is_anomalous": false,
+      "downloaded_bytes": 613386,
+      "sha256": "657549628cbdd809da1f7ad42bdb0774868cb3fe9bd805884afe678f88020d3c"
+    },
+    {
+      "type": "file",
+      "oid": "ac1eff0b54a7a5949a26522dd90c82423d6b3510",
+      "size": 635661,
+      "lfs": {
+        "oid": "d3f975073a5fde118e8848e495370c32c714f58870127537e74bb8b9a32ef74c",
+        "size": 635661,
+        "pointerSize": 131
+      },
+      "xetHash": "187e8007990309640b0afdf7ef868baf8a27775db8a5ef16e6d942cb5ffb19de",
+      "path": "pill/test/color/000.png",
+      "category": "pill",
+      "is_anomalous": true,
+      "downloaded_bytes": 635661,
+      "sha256": "d3f975073a5fde118e8848e495370c32c714f58870127537e74bb8b9a32ef74c"
+    },
+    {
+      "type": "file",
+      "oid": "ebeda7793d5b26b928ffdb833408794b5e1f3bc2",
+      "size": 870,
+      "lfs": {
+        "oid": "4b987232ba22f83865db68b82ca9b484fe62eabfaca0d7fab9159d913160c277",
+        "size": 870,
+        "pointerSize": 128
+      },
+      "xetHash": "91cb4ed83ba468df4b79fb8fc8c17f55bb49ebbebeb448698332089e17176d2c",
+      "path": "pill/ground_truth/color/000_mask.png",
+      "category": "pill",
+      "is_mask": true,
+      "downloaded_bytes": 870,
+      "sha256": "4b987232ba22f83865db68b82ca9b484fe62eabfaca0d7fab9159d913160c277"
+    },
+    {
+      "type": "file",
+      "oid": "f1f942758819fb113b7b0fee6a4179514d53be46",
+      "size": 664755,
+      "lfs": {
+        "oid": "194c2b9ad09730191c33e254207a6cf4bd9e7b8f74206b9461c582dd5025d5c9",
+        "size": 664755,
+        "pointerSize": 131
+      },
+      "xetHash": "7bc9de471539477b7e87648422213de9174cbf561636672a1eee8c76c78782df",
+      "path": "pill/test/contamination/018.png",
+      "category": "pill",
+      "is_anomalous": true,
+      "downloaded_bytes": 664755,
+      "sha256": "194c2b9ad09730191c33e254207a6cf4bd9e7b8f74206b9461c582dd5025d5c9"
+    },
+    {
+      "type": "file",
+      "oid": "1ccf533428230f1c950e99263a4d145d67e156b5",
+      "size": 1231,
+      "lfs": {
+        "oid": "06f26d82f102a161fd59819da3a320477547ff47ba385d95f986abe6c297c67a",
+        "size": 1231,
+        "pointerSize": 129
+      },
+      "xetHash": "c420c13ab08ecdea7620d18fac3a2338724871f0d7fd190c8dd7726b5f45604e",
+      "path": "pill/ground_truth/contamination/018_mask.png",
+      "category": "pill",
+      "is_mask": true,
+      "downloaded_bytes": 1231,
+      "sha256": "06f26d82f102a161fd59819da3a320477547ff47ba385d95f986abe6c297c67a"
+    },
+    {
+      "type": "file",
+      "oid": "77fd7e70a9eee0665f7c73bb6e8c53419b890855",
+      "size": 644115,
+      "lfs": {
+        "oid": "4ea52f535c40b34febdecce26aa310f6e383f162a5acb56f1b17f6468a2c294d",
+        "size": 644115,
+        "pointerSize": 131
+      },
+      "xetHash": "9271a8d19095ed18427f60086abf244ee840158aed8edaea56095b9f45ffbe14",
+      "path": "pill/test/contamination/019.png",
+      "category": "pill",
+      "is_anomalous": true,
+      "downloaded_bytes": 644115,
+      "sha256": "4ea52f535c40b34febdecce26aa310f6e383f162a5acb56f1b17f6468a2c294d"
+    },
+    {
+      "type": "file",
+      "oid": "1e4f38daba31b6a49fcfdfd6d28fa12a1dd52e1e",
+      "size": 993,
+      "lfs": {
+        "oid": "79da70959b1411e8cf40deaae169ec5a73eb0e811787fd35ce65441ee783455a",
+        "size": 993,
+        "pointerSize": 128
+      },
+      "xetHash": "99e9bf7ba7420b70f85a69f0ab7dd196f8293f1a47786b088922f92ad657ca5e",
+      "path": "pill/ground_truth/contamination/019_mask.png",
+      "category": "pill",
+      "is_mask": true,
+      "downloaded_bytes": 993,
+      "sha256": "79da70959b1411e8cf40deaae169ec5a73eb0e811787fd35ce65441ee783455a"
+    },
+    {
+      "type": "file",
+      "oid": "1bdeed36c9ee5c46ff23e2c90826b598b62ad893",
+      "size": 650717,
+      "lfs": {
+        "oid": "a901b2c63a32e04e4c47083ddd1c4ba093ff3ce32fb1bc01933cb23de613645f",
+        "size": 650717,
+        "pointerSize": 131
+      },
+      "xetHash": "6ab6dff641f23f7326eeb722960d9548eb876df140a8ad4ff7b48ab077187925",
+      "path": "pill/test/crack/012.png",
+      "category": "pill",
+      "is_anomalous": true,
+      "downloaded_bytes": 650717,
+      "sha256": "a901b2c63a32e04e4c47083ddd1c4ba093ff3ce32fb1bc01933cb23de613645f"
+    },
+    {
+      "type": "file",
+      "oid": "eafd0acdff448c7c7fe24356a553d65d85443638",
+      "size": 1049,
+      "lfs": {
+        "oid": "c472d0632f77ea43f542a159ececc4d1201f37cecc0d0c6b5ecf64b05ad90fa2",
+        "size": 1049,
+        "pointerSize": 129
+      },
+      "xetHash": "38325ae447a6eb785e7d44a8c98171926a1e00bbf301b6a907338584e358336e",
+      "path": "pill/ground_truth/crack/012_mask.png",
+      "category": "pill",
+      "is_mask": true,
+      "downloaded_bytes": 1049,
+      "sha256": "c472d0632f77ea43f542a159ececc4d1201f37cecc0d0c6b5ecf64b05ad90fa2"
+    },
+    {
+      "type": "file",
+      "oid": "637726373532ad2c2b8acf6ddb3eb4896fafc949",
+      "size": 632900,
+      "lfs": {
+        "oid": "b90b59f62862e47e1e86523c2a2cecf2f19b64fd936dd0e9a22035bca82f56fe",
+        "size": 632900,
+        "pointerSize": 131
+      },
+      "xetHash": "3822970c6cba8437b52142bcd55f7b1137b97b959fd6ccfcf0b036bbb13bdad8",
+      "path": "pill/test/crack/018.png",
+      "category": "pill",
+      "is_anomalous": true,
+      "downloaded_bytes": 632900,
+      "sha256": "b90b59f62862e47e1e86523c2a2cecf2f19b64fd936dd0e9a22035bca82f56fe"
+    },
+    {
+      "type": "file",
+      "oid": "372fc55af28d288b3dd18e172c3d6a924a11ee4b",
+      "size": 1249,
+      "lfs": {
+        "oid": "fe950c0405758159db4042ca74486614d48c1fa90436e439d961c7f01a934a53",
+        "size": 1249,
+        "pointerSize": 129
+      },
+      "xetHash": "9f59d53cc58d95aa818b0c1cdf9290c59f93e4336df203a5a7abefe494982914",
+      "path": "pill/ground_truth/crack/018_mask.png",
+      "category": "pill",
+      "is_mask": true,
+      "downloaded_bytes": 1249,
+      "sha256": "fe950c0405758159db4042ca74486614d48c1fa90436e439d961c7f01a934a53"
+    },
+    {
+      "type": "file",
+      "oid": "c18a579e0c1db26299fe64a8cc8bb7303ea0b3fd",
+      "size": 401163,
+      "lfs": {
+        "oid": "5f54892104b4ece29cce389a2c98dc336d04de92ff8dfb3d186ad555fc946f45",
+        "size": 401163,
+        "pointerSize": 131
+      },
+      "xetHash": "8f47926963169d408972232d79b879116c5e85d0b4f124c51c5870dbbc354e9c",
+      "path": "screw/test/good/015.png",
+      "category": "screw",
+      "is_anomalous": false,
+      "downloaded_bytes": 401163,
+      "sha256": "5f54892104b4ece29cce389a2c98dc336d04de92ff8dfb3d186ad555fc946f45"
+    },
+    {
+      "type": "file",
+      "oid": "79cab8abcc3ef4192c01528b892b0411233432fb",
+      "size": 399977,
+      "lfs": {
+        "oid": "4bc78ce5f58cb48e832916e7214eaa7b03f54daf5e1aeff7aa890871f424ae22",
+        "size": 399977,
+        "pointerSize": 131
+      },
+      "xetHash": "20f57d4cb597f97e302c88a4fd1c0eaca18feceb50bfead680b4a9cf7381757d",
+      "path": "screw/test/good/019.png",
+      "category": "screw",
+      "is_anomalous": false,
+      "downloaded_bytes": 399977,
+      "sha256": "4bc78ce5f58cb48e832916e7214eaa7b03f54daf5e1aeff7aa890871f424ae22"
+    },
+    {
+      "type": "file",
+      "oid": "a2208c25a9d554bba0bda2b6f5af239ecbb62103",
+      "size": 390804,
+      "lfs": {
+        "oid": "86f42ee33e72ef6e4af25e1e6c9afd3289ae528b37f3de9b3323da388c7a5db4",
+        "size": 390804,
+        "pointerSize": 131
+      },
+      "xetHash": "9b2442cb6886b9cd5a642d841b8a92015540f45c2c191d5f78f817761a9ca646",
+      "path": "screw/test/good/020.png",
+      "category": "screw",
+      "is_anomalous": false,
+      "downloaded_bytes": 390804,
+      "sha256": "86f42ee33e72ef6e4af25e1e6c9afd3289ae528b37f3de9b3323da388c7a5db4"
+    },
+    {
+      "type": "file",
+      "oid": "3e8314bc68a25294c4060bd8036fdb3e5eedc2e4",
+      "size": 398143,
+      "lfs": {
+        "oid": "1dd487daa97dc5103264ab014adf6e270ff32111e04f8c7ebbc5b27a8b498cbc",
+        "size": 398143,
+        "pointerSize": 131
+      },
+      "xetHash": "82aaba5cd8ffcec2d396f493250a6100e5c1f00cec75fe30ff1972360c83cd2e",
+      "path": "screw/test/good/022.png",
+      "category": "screw",
+      "is_anomalous": false,
+      "downloaded_bytes": 398143,
+      "sha256": "1dd487daa97dc5103264ab014adf6e270ff32111e04f8c7ebbc5b27a8b498cbc"
+    },
+    {
+      "type": "file",
+      "oid": "3b5c9617202adca1247dd87d476ce79ba0efb202",
+      "size": 401768,
+      "lfs": {
+        "oid": "c1cad20517fa3a4c3ca5e0a542706ca2aaa224e35e5749992f427d7b53632a41",
+        "size": 401768,
+        "pointerSize": 131
+      },
+      "xetHash": "d2e5ecc20a48b6f524fe4cdf57c34c3da61c38fcc95955307132b8359d024aa7",
+      "path": "screw/test/good/040.png",
+      "category": "screw",
+      "is_anomalous": false,
+      "downloaded_bytes": 401768,
+      "sha256": "c1cad20517fa3a4c3ca5e0a542706ca2aaa224e35e5749992f427d7b53632a41"
+    },
+    {
+      "type": "file",
+      "oid": "e3d3bb9038d95e87613247525d94c06580d621d7",
+      "size": 408218,
+      "lfs": {
+        "oid": "e1b37d07f8a3f14ad9dbd583b5fb2dbfbd149d2a294b3c42bde5ab08c791d54e",
+        "size": 408218,
+        "pointerSize": 131
+      },
+      "xetHash": "4ff061a02ea43dc79d463da04ae013cb2c8b577f65a1e49580ec3f1da4ac40ac",
+      "path": "screw/test/scratch_head/007.png",
+      "category": "screw",
+      "is_anomalous": true,
+      "downloaded_bytes": 408218,
+      "sha256": "e1b37d07f8a3f14ad9dbd583b5fb2dbfbd149d2a294b3c42bde5ab08c791d54e"
+    },
+    {
+      "type": "file",
+      "oid": "542b71342aa4d7696c80b0d08273997e949ef4ca",
+      "size": 2758,
+      "lfs": {
+        "oid": "75c3c27eb34da1d21592581b7df34a24a1bb344f5805821acd6b0cdfd547788c",
+        "size": 2758,
+        "pointerSize": 129
+      },
+      "xetHash": "f4eb3243dc2fc45e00527bf1ae83b1cb89306eea9861b5ffc29647150a911b34",
+      "path": "screw/ground_truth/scratch_head/007_mask.png",
+      "category": "screw",
+      "is_mask": true,
+      "downloaded_bytes": 2758,
+      "sha256": "75c3c27eb34da1d21592581b7df34a24a1bb344f5805821acd6b0cdfd547788c"
+    },
+    {
+      "type": "file",
+      "oid": "5fec7ccbaeab1e6aec3d00293d11e7d17d68d3a9",
+      "size": 407345,
+      "lfs": {
+        "oid": "856875e0cb812bbc40929b498b7b5acd66d489e3d9abdc1c49d6a5a3aa4c5cfd",
+        "size": 407345,
+        "pointerSize": 131
+      },
+      "xetHash": "d0b68955572a70833c3e5de81842f2eef7cb32afa43f318d8bf03c8764116117",
+      "path": "screw/test/scratch_neck/018.png",
+      "category": "screw",
+      "is_anomalous": true,
+      "downloaded_bytes": 407345,
+      "sha256": "856875e0cb812bbc40929b498b7b5acd66d489e3d9abdc1c49d6a5a3aa4c5cfd"
+    },
+    {
+      "type": "file",
+      "oid": "a58d5b6431ec82dd554b0f185fdae25aea0980c2",
+      "size": 2714,
+      "lfs": {
+        "oid": "9d4efec5393dd57a49c35ed36000bbeffd943391cdd926e218e5203ee5dbfe4d",
+        "size": 2714,
+        "pointerSize": 129
+      },
+      "xetHash": "5b53fc9fc05043713044aea7b66001304139be03d69bcb7cf2f9babbe95ec7f7",
+      "path": "screw/ground_truth/scratch_neck/018_mask.png",
+      "category": "screw",
+      "is_mask": true,
+      "downloaded_bytes": 2714,
+      "sha256": "9d4efec5393dd57a49c35ed36000bbeffd943391cdd926e218e5203ee5dbfe4d"
+    },
+    {
+      "type": "file",
+      "oid": "4164140cb65c964a12d927300c3de8c668824e16",
+      "size": 410211,
+      "lfs": {
+        "oid": "f6edb7c130a03da3c2fb738dc0ef46d43daf9e990494a020cb447577e53f7ef9",
+        "size": 410211,
+        "pointerSize": 131
+      },
+      "xetHash": "d1c97039da15ae3bb5e270562710871d4796c71818195cbb62fe0a83855f04c6",
+      "path": "screw/test/scratch_neck/023.png",
+      "category": "screw",
+      "is_anomalous": true,
+      "downloaded_bytes": 410211,
+      "sha256": "f6edb7c130a03da3c2fb738dc0ef46d43daf9e990494a020cb447577e53f7ef9"
+    },
+    {
+      "type": "file",
+      "oid": "6204dd4e1c28e10cef5a381d22ac8f4b6968c2c7",
+      "size": 2645,
+      "lfs": {
+        "oid": "65918dd249095276f133cf41be250ff71e4ee3540331ac858f5ae5004336bea3",
+        "size": 2645,
+        "pointerSize": 129
+      },
+      "xetHash": "ab675c1fc787ecf9243e21e7dc9d77b1397fb1ac7408f83c3e7e81cd1ca09ad0",
+      "path": "screw/ground_truth/scratch_neck/023_mask.png",
+      "category": "screw",
+      "is_mask": true,
+      "downloaded_bytes": 2645,
+      "sha256": "65918dd249095276f133cf41be250ff71e4ee3540331ac858f5ae5004336bea3"
+    },
+    {
+      "type": "file",
+      "oid": "588b3c100f1e08e707b34ecb32765be83b3a98bc",
+      "size": 409110,
+      "lfs": {
+        "oid": "2bd07f4bb4ed5370b0c0b9ae5e0038102326342b2d36bf4375714f8a6628b8aa",
+        "size": 409110,
+        "pointerSize": 131
+      },
+      "xetHash": "8693407f91f08003e67ea9eee80cf563ca3c9970eb46c84a629b7a4c71e1b0a0",
+      "path": "screw/test/thread_top/003.png",
+      "category": "screw",
+      "is_anomalous": true,
+      "downloaded_bytes": 409110,
+      "sha256": "2bd07f4bb4ed5370b0c0b9ae5e0038102326342b2d36bf4375714f8a6628b8aa"
+    },
+    {
+      "type": "file",
+      "oid": "5e23d5625854fd944804589511184e6d25dcb532",
+      "size": 2862,
+      "lfs": {
+        "oid": "8db3cf8c93ac378258d03c9e224979e9c150f3a242c99cac1da54a840f9e7020",
+        "size": 2862,
+        "pointerSize": 129
+      },
+      "xetHash": "7de4ca08bbddac76ca8433dfdd56e60f5eb372a8e73c38390f421de906f202ab",
+      "path": "screw/ground_truth/thread_top/003_mask.png",
+      "category": "screw",
+      "is_mask": true,
+      "downloaded_bytes": 2862,
+      "sha256": "8db3cf8c93ac378258d03c9e224979e9c150f3a242c99cac1da54a840f9e7020"
+    },
+    {
+      "type": "file",
+      "oid": "8797d2ba6474a51d36c255fc347224c9a3f0f593",
+      "size": 410842,
+      "lfs": {
+        "oid": "c197e7e13a05d213c87c1ca295c29d4dc7f931f5d97a1725501ee21a3674d65a",
+        "size": 410842,
+        "pointerSize": 131
+      },
+      "xetHash": "c949edf8487a405a23eaa6bd2439d4035391636de64bcf92cce7c994aaf9c0bb",
+      "path": "screw/test/thread_top/015.png",
+      "category": "screw",
+      "is_anomalous": true,
+      "downloaded_bytes": 410842,
+      "sha256": "c197e7e13a05d213c87c1ca295c29d4dc7f931f5d97a1725501ee21a3674d65a"
+    },
+    {
+      "type": "file",
+      "oid": "627a772f83357f2a577de1cfffadf4411c937611",
+      "size": 2826,
+      "lfs": {
+        "oid": "ffe50efa062c268236f093da8b024d228bf302128f8097247f8856197c8947ef",
+        "size": 2826,
+        "pointerSize": 129
+      },
+      "xetHash": "82634f23ed0653ce1b8383ddd5231787c3e38dd48e391690b7bf98707f728252",
+      "path": "screw/ground_truth/thread_top/015_mask.png",
+      "category": "screw",
+      "is_mask": true,
+      "downloaded_bytes": 2826,
+      "sha256": "ffe50efa062c268236f093da8b024d228bf302128f8097247f8856197c8947ef"
+    },
+    {
+      "type": "file",
+      "oid": "12fdae0eebe816838cca8c6896e98a283be8ef4c",
+      "size": 997521,
+      "lfs": {
+        "oid": "905c233eef1caca99d54dba85308825176ebe792e87f0521b5a2211f7414eb97",
+        "size": 997521,
+        "pointerSize": 131
+      },
+      "xetHash": "bc6c6ef5423c2a33a8e7aba9ada4c1455d1346f7eebc18ff3b8a8234cede71fa",
+      "path": "tile/test/good/005.png",
+      "category": "tile",
+      "is_anomalous": false,
+      "downloaded_bytes": 997521,
+      "sha256": "905c233eef1caca99d54dba85308825176ebe792e87f0521b5a2211f7414eb97"
+    },
+    {
+      "type": "file",
+      "oid": "04e562cfef2b4faa839d5d1c5c711ef1f3e9703d",
+      "size": 1013983,
+      "lfs": {
+        "oid": "e426f5d1279a771870c1c77288e70183a73e9088b6a0709bc3240e8adc94c50d",
+        "size": 1013983,
+        "pointerSize": 132
+      },
+      "xetHash": "1a50379fc2f3258dd2ea7c091095f83a31cd264d48a1695d75e7c628b87727e7",
+      "path": "tile/test/good/010.png",
+      "category": "tile",
+      "is_anomalous": false,
+      "downloaded_bytes": 1013983,
+      "sha256": "e426f5d1279a771870c1c77288e70183a73e9088b6a0709bc3240e8adc94c50d"
+    },
+    {
+      "type": "file",
+      "oid": "24faf578faf70da9cacd869cd424e83d257b620a",
+      "size": 998664,
+      "lfs": {
+        "oid": "3fde39bb5eecb444dad9a347d285e614f55c611237375a939f10ebf5ec00d802",
+        "size": 998664,
+        "pointerSize": 131
+      },
+      "xetHash": "eef61e72dae4a168d114792578a42aad3f1d36a8479ab1f641831e750017e237",
+      "path": "tile/test/good/011.png",
+      "category": "tile",
+      "is_anomalous": false,
+      "downloaded_bytes": 998664,
+      "sha256": "3fde39bb5eecb444dad9a347d285e614f55c611237375a939f10ebf5ec00d802"
+    },
+    {
+      "type": "file",
+      "oid": "e22768cba5440198c6d437b5620a2a07f5a3456c",
+      "size": 970724,
+      "lfs": {
+        "oid": "5e0b3e6003e8500c6162b059fdec8b8e4f1d9d0c5d5c1b982bd5c3458bccc03a",
+        "size": 970724,
+        "pointerSize": 131
+      },
+      "xetHash": "4d77907a41ef8e278c096ed81f32e47f74fd555c3ab50d1a05766a96e4ef7fc7",
+      "path": "tile/test/good/017.png",
+      "category": "tile",
+      "is_anomalous": false,
+      "downloaded_bytes": 970724,
+      "sha256": "5e0b3e6003e8500c6162b059fdec8b8e4f1d9d0c5d5c1b982bd5c3458bccc03a"
+    },
+    {
+      "type": "file",
+      "oid": "591d4e9a8aaaf4e4c43925be55b2220e1172cd34",
+      "size": 1020162,
+      "lfs": {
+        "oid": "f1b84bc0da1a9db17b78c6f7c7d6265af59cf6e743b18d13e2ea458918086fa3",
+        "size": 1020162,
+        "pointerSize": 132
+      },
+      "xetHash": "3300de9c4baf96f9ce2d01ca67495190cd05286565a41c2b6387aba35d8b17af",
+      "path": "tile/test/good/029.png",
+      "category": "tile",
+      "is_anomalous": false,
+      "downloaded_bytes": 1020162,
+      "sha256": "f1b84bc0da1a9db17b78c6f7c7d6265af59cf6e743b18d13e2ea458918086fa3"
+    },
+    {
+      "type": "file",
+      "oid": "1c894b3cf825d593ecd623ddbe9ff27158ff9195",
+      "size": 1017607,
+      "lfs": {
+        "oid": "7a21df26efc01ae8edbb277f0411a22efaf72088587e47a9413bcaca1d2fac74",
+        "size": 1017607,
+        "pointerSize": 132
+      },
+      "xetHash": "b21fa925698e3a74c37304465ff95e7684bb57f03a3b0d5e5a84867f59520cc4",
+      "path": "tile/test/glue_strip/016.png",
+      "category": "tile",
+      "is_anomalous": true,
+      "downloaded_bytes": 1017607,
+      "sha256": "7a21df26efc01ae8edbb277f0411a22efaf72088587e47a9413bcaca1d2fac74"
+    },
+    {
+      "type": "file",
+      "oid": "1db0bacd956a155f53ff5a5a00ac2df4561c68dc",
+      "size": 3086,
+      "lfs": {
+        "oid": "23d2dcdcef15925418f33d95c17341e823e349559125708f2bce5eae66744920",
+        "size": 3086,
+        "pointerSize": 129
+      },
+      "xetHash": "e8dcc2fcdccc04de1b791610430cfdef0ab00cc710b950b0b8bcb04db9f3a50a",
+      "path": "tile/ground_truth/glue_strip/016_mask.png",
+      "category": "tile",
+      "is_mask": true,
+      "downloaded_bytes": 3086,
+      "sha256": "23d2dcdcef15925418f33d95c17341e823e349559125708f2bce5eae66744920"
+    },
+    {
+      "type": "file",
+      "oid": "1d0ee98de8f7f413cb5e4cad0dc398c229b66097",
+      "size": 983880,
+      "lfs": {
+        "oid": "b826808b3c2c0a246a7df1b3c2ccfe4d3ab640b8ea7cb379e99259d2d5085169",
+        "size": 983880,
+        "pointerSize": 131
+      },
+      "xetHash": "bbc835325efa49c11f05da352987b70fa649d1b82a5a214df293552201baf758",
+      "path": "tile/test/glue_strip/017.png",
+      "category": "tile",
+      "is_anomalous": true,
+      "downloaded_bytes": 983880,
+      "sha256": "b826808b3c2c0a246a7df1b3c2ccfe4d3ab640b8ea7cb379e99259d2d5085169"
+    },
+    {
+      "type": "file",
+      "oid": "3edd4535422c7b19b1ce44192c078c6af3febddc",
+      "size": 3683,
+      "lfs": {
+        "oid": "c3ff0d0475c949b3e67c0c4f916027b58d084303046eca44c8dc316911e18d5e",
+        "size": 3683,
+        "pointerSize": 129
+      },
+      "xetHash": "7f0c54dda48143ae7e4032540ef5e85b127bb922c5f2286d65e2a0cb4f570a02",
+      "path": "tile/ground_truth/glue_strip/017_mask.png",
+      "category": "tile",
+      "is_mask": true,
+      "downloaded_bytes": 3683,
+      "sha256": "c3ff0d0475c949b3e67c0c4f916027b58d084303046eca44c8dc316911e18d5e"
+    },
+    {
+      "type": "file",
+      "oid": "a4153075269c9d158f465f46b316fc3b481d8ec1",
+      "size": 1002283,
+      "lfs": {
+        "oid": "d723b9c45531c84562f7c22946a64c365805ef1d2b91827ff6532422547e17b2",
+        "size": 1002283,
+        "pointerSize": 132
+      },
+      "xetHash": "4e3f440b0f09536c5ed4d4454d52f360046ef37717ab1f0ace04a879e77bb08d",
+      "path": "tile/test/gray_stroke/004.png",
+      "category": "tile",
+      "is_anomalous": true,
+      "downloaded_bytes": 1002283,
+      "sha256": "d723b9c45531c84562f7c22946a64c365805ef1d2b91827ff6532422547e17b2"
+    },
+    {
+      "type": "file",
+      "oid": "2f932f4ce78e1398a71129ec841e571a8b3a474b",
+      "size": 2937,
+      "lfs": {
+        "oid": "539d06ab4b00b0a16846e28394aa3037d8bb61311e608d048c52c0a583373c83",
+        "size": 2937,
+        "pointerSize": 129
+      },
+      "xetHash": "bd7f60a5d7d8b8e44d220c4715d0bff0968316c9e830f07a15c28cefcb6d881f",
+      "path": "tile/ground_truth/gray_stroke/004_mask.png",
+      "category": "tile",
+      "is_mask": true,
+      "downloaded_bytes": 2937,
+      "sha256": "539d06ab4b00b0a16846e28394aa3037d8bb61311e608d048c52c0a583373c83"
+    },
+    {
+      "type": "file",
+      "oid": "ff74376434907f149ef38171b6406a18e51e3228",
+      "size": 1011974,
+      "lfs": {
+        "oid": "29291e48a86c1bb4fb597a7958dee18d9d7fe077d8567ecd698a229e8e2675b7",
+        "size": 1011974,
+        "pointerSize": 132
+      },
+      "xetHash": "f98fbd7a35e126d889ce0c25714339cbc964000644a551ab8f2e9ab5e67c7309",
+      "path": "tile/test/gray_stroke/015.png",
+      "category": "tile",
+      "is_anomalous": true,
+      "downloaded_bytes": 1011974,
+      "sha256": "29291e48a86c1bb4fb597a7958dee18d9d7fe077d8567ecd698a229e8e2675b7"
+    },
+    {
+      "type": "file",
+      "oid": "f2da6747345257cdd59f8372a4688cfa7dbdc7a3",
+      "size": 2968,
+      "lfs": {
+        "oid": "a89c80503acaa7ad7b1eb71ea1eb7ef5d16b143e44edf84a8b26b7af5a5eeea6",
+        "size": 2968,
+        "pointerSize": 129
+      },
+      "xetHash": "e19ae2985487f4a83731f1cae52ba6cc43f1658226d5bf9f5e6a99a7903bfe52",
+      "path": "tile/ground_truth/gray_stroke/015_mask.png",
+      "category": "tile",
+      "is_mask": true,
+      "downloaded_bytes": 2968,
+      "sha256": "a89c80503acaa7ad7b1eb71ea1eb7ef5d16b143e44edf84a8b26b7af5a5eeea6"
+    },
+    {
+      "type": "file",
+      "oid": "b7f936fd4cf2593edf3df499ef3544ba44d3dc4a",
+      "size": 1003502,
+      "lfs": {
+        "oid": "af4711cdd10c0164949362d4133654eec065a2ba8c34c671209f4c633b38b653",
+        "size": 1003502,
+        "pointerSize": 132
+      },
+      "xetHash": "6c5b8f3c6ab596c4606106e277c1dafce1ccd8c0251d445724b1d19d726ca297",
+      "path": "tile/test/oil/002.png",
+      "category": "tile",
+      "is_anomalous": true,
+      "downloaded_bytes": 1003502,
+      "sha256": "af4711cdd10c0164949362d4133654eec065a2ba8c34c671209f4c633b38b653"
+    },
+    {
+      "type": "file",
+      "oid": "ddb9d5f6854b5a475c3119ff911a9e9c66906dfd",
+      "size": 3759,
+      "lfs": {
+        "oid": "4a648a02d74868291af824eeb73cf5856c831d10addd0826e27b504d8a6fdfa7",
+        "size": 3759,
+        "pointerSize": 129
+      },
+      "xetHash": "9af6018bac5de47b63a518a3354a8e28df45f3d1be1fb4fa1333d8016d2591be",
+      "path": "tile/ground_truth/oil/002_mask.png",
+      "category": "tile",
+      "is_mask": true,
+      "downloaded_bytes": 3759,
+      "sha256": "4a648a02d74868291af824eeb73cf5856c831d10addd0826e27b504d8a6fdfa7"
+    },
+    {
+      "type": "file",
+      "oid": "e7827003f0238b9ed36f43befc7024580cf37b81",
+      "size": 1094609,
+      "lfs": {
+        "oid": "5bc08bcc32c14929468d08af67b2db894600c2dd76df97a2bf81cdc92e1bf73b",
+        "size": 1094609,
+        "pointerSize": 132
+      },
+      "xetHash": "5e9b2a72902c51c7d6e0d8f915723a77ed987069f1b10ee9f85bb247bc9e59c1",
+      "path": "toothbrush/test/good/000.png",
+      "category": "toothbrush",
+      "is_anomalous": false,
+      "downloaded_bytes": 1094609,
+      "sha256": "5bc08bcc32c14929468d08af67b2db894600c2dd76df97a2bf81cdc92e1bf73b"
+    },
+    {
+      "type": "file",
+      "oid": "87723e1e1ef06b092e7be7aa72cbc050b8f0ad7d",
+      "size": 1091098,
+      "lfs": {
+        "oid": "711ff7c5b73b33ae81398fa687290e6e28141aacdcfcdc8b4675d8088609590d",
+        "size": 1091098,
+        "pointerSize": 132
+      },
+      "xetHash": "9e5dac03bb078ca2f54b1d050f1fc2909e2005d1c33ecde7bacaf5f1df752c3b",
+      "path": "toothbrush/test/good/002.png",
+      "category": "toothbrush",
+      "is_anomalous": false,
+      "downloaded_bytes": 1091098,
+      "sha256": "711ff7c5b73b33ae81398fa687290e6e28141aacdcfcdc8b4675d8088609590d"
+    },
+    {
+      "type": "file",
+      "oid": "4da7f96310f23c0e106e42c92888168c2e5452e4",
+      "size": 1064954,
+      "lfs": {
+        "oid": "9b13a7315e16beda233c0d6489f4601b6f20a150a688e17f629ac1448138e34f",
+        "size": 1064954,
+        "pointerSize": 132
+      },
+      "xetHash": "5479ce3fc941dbc3a26409d42028c5488f8c3fcb633bf2bd035db62ef770b575",
+      "path": "toothbrush/test/good/004.png",
+      "category": "toothbrush",
+      "is_anomalous": false,
+      "downloaded_bytes": 1064954,
+      "sha256": "9b13a7315e16beda233c0d6489f4601b6f20a150a688e17f629ac1448138e34f"
+    },
+    {
+      "type": "file",
+      "oid": "735f5c5d3197a8c4e80adda2b1e5bda2a234316e",
+      "size": 1058454,
+      "lfs": {
+        "oid": "fc94cf7c488a8cfa98fad2b436aff551307460e0abeaf8679249f98b29ba5986",
+        "size": 1058454,
+        "pointerSize": 132
+      },
+      "xetHash": "5029b8b8f7d498ecdad9eb7020378268ac997f4e889516e6eaa52cc07ca546ac",
+      "path": "toothbrush/test/good/005.png",
+      "category": "toothbrush",
+      "is_anomalous": false,
+      "downloaded_bytes": 1058454,
+      "sha256": "fc94cf7c488a8cfa98fad2b436aff551307460e0abeaf8679249f98b29ba5986"
+    },
+    {
+      "type": "file",
+      "oid": "d534a2da7ac3c865279a48c37f81329a4a9f7f3c",
+      "size": 1070897,
+      "lfs": {
+        "oid": "58e1cfc23f7d5179e090fa8e69a93547ee6dedca982609a76fa225c6cf2ddc25",
+        "size": 1070897,
+        "pointerSize": 132
+      },
+      "xetHash": "b4227a7e39797573834acbbd859a9195ea718992eeae0fc5e3971fa77251ff04",
+      "path": "toothbrush/test/good/008.png",
+      "category": "toothbrush",
+      "is_anomalous": false,
+      "downloaded_bytes": 1070897,
+      "sha256": "58e1cfc23f7d5179e090fa8e69a93547ee6dedca982609a76fa225c6cf2ddc25"
+    },
+    {
+      "type": "file",
+      "oid": "5667688ca6906b8d50d2baee25df64b37d6c51a9",
+      "size": 1079989,
+      "lfs": {
+        "oid": "6b64787c4c49665e4bdee1ad44e91a86236c91b23fccb9450c87d8e0226d06f8",
+        "size": 1079989,
+        "pointerSize": 132
+      },
+      "xetHash": "ebc14c644ed666319c4793b56f8da48716c6b1e726e8bd4b2866e69441d0f5ac",
+      "path": "toothbrush/test/defective/006.png",
+      "category": "toothbrush",
+      "is_anomalous": true,
+      "downloaded_bytes": 1079989,
+      "sha256": "6b64787c4c49665e4bdee1ad44e91a86236c91b23fccb9450c87d8e0226d06f8"
+    },
+    {
+      "type": "file",
+      "oid": "35db53234e686a91bdd6db17794f40e98465ee37",
+      "size": 3940,
+      "lfs": {
+        "oid": "aadd39b4d2a8bd1501403d1d5310fcf0c0b2460342a7654a35ba5557e505ec37",
+        "size": 3940,
+        "pointerSize": 129
+      },
+      "xetHash": "13e38bf7305ec5a93c3b6923da5e3399b79a34880d5fd56452a5818e76b2a582",
+      "path": "toothbrush/ground_truth/defective/006_mask.png",
+      "category": "toothbrush",
+      "is_mask": true,
+      "downloaded_bytes": 3940,
+      "sha256": "aadd39b4d2a8bd1501403d1d5310fcf0c0b2460342a7654a35ba5557e505ec37"
+    },
+    {
+      "type": "file",
+      "oid": "5f149aa1d63831328daa1f5fa88fabf41f901ca0",
+      "size": 1028747,
+      "lfs": {
+        "oid": "32d1dcaee346cf855ce913365404d54addb9970c1ddb2091ee384a5e0247eb13",
+        "size": 1028747,
+        "pointerSize": 132
+      },
+      "xetHash": "3ca37c3bbbbc82d15bf4fe1414cf08ccb739bd30ec5b0f42dacb446445d2017a",
+      "path": "toothbrush/test/defective/011.png",
+      "category": "toothbrush",
+      "is_anomalous": true,
+      "downloaded_bytes": 1028747,
+      "sha256": "32d1dcaee346cf855ce913365404d54addb9970c1ddb2091ee384a5e0247eb13"
+    },
+    {
+      "type": "file",
+      "oid": "e8a29a177f4c8a16af283be2353c412fcdd8f3aa",
+      "size": 2799,
+      "lfs": {
+        "oid": "b07b2711e412dca77bdc12ea1e1016d28be365be990ccac881bc4ee8f993a400",
+        "size": 2799,
+        "pointerSize": 129
+      },
+      "xetHash": "5e554bf934502af68f54feb732ea434a24e081361cb80aa9d206661b7f5d7257",
+      "path": "toothbrush/ground_truth/defective/011_mask.png",
+      "category": "toothbrush",
+      "is_mask": true,
+      "downloaded_bytes": 2799,
+      "sha256": "b07b2711e412dca77bdc12ea1e1016d28be365be990ccac881bc4ee8f993a400"
+    },
+    {
+      "type": "file",
+      "oid": "28568049da4280e893f3e2e9db39499743dd3de6",
+      "size": 1027910,
+      "lfs": {
+        "oid": "f766d53f31462f9c5eddb760daa8e3f906533686f10ce9625c5e7e4960facc4a",
+        "size": 1027910,
+        "pointerSize": 132
+      },
+      "xetHash": "3ec5193a9126a963777a676ef8c56ef0dca9d837bb0dd2d4d182e0cf93ed5a25",
+      "path": "toothbrush/test/defective/012.png",
+      "category": "toothbrush",
+      "is_anomalous": true,
+      "downloaded_bytes": 1027910,
+      "sha256": "f766d53f31462f9c5eddb760daa8e3f906533686f10ce9625c5e7e4960facc4a"
+    },
+    {
+      "type": "file",
+      "oid": "9df1ae41b374e151725c8723652022abbb1c98d5",
+      "size": 4376,
+      "lfs": {
+        "oid": "1d9e620c93a862738a6d847eaade1da99e7da14d5ab2644b5785150de0eb77ee",
+        "size": 4376,
+        "pointerSize": 129
+      },
+      "xetHash": "6819af3cc9097f0e04e9614d1fa73f4e019d9a45fff8519e46ca67c38baae719",
+      "path": "toothbrush/ground_truth/defective/012_mask.png",
+      "category": "toothbrush",
+      "is_mask": true,
+      "downloaded_bytes": 4376,
+      "sha256": "1d9e620c93a862738a6d847eaade1da99e7da14d5ab2644b5785150de0eb77ee"
+    },
+    {
+      "type": "file",
+      "oid": "dcd95433e8bee2a448437405fae2a1e6c015ee7b",
+      "size": 1085429,
+      "lfs": {
+        "oid": "52818564feeef01ebb73cf9f37a6136432d4156ce3bdb0292e71695cbc8b9009",
+        "size": 1085429,
+        "pointerSize": 132
+      },
+      "xetHash": "973fa71c2d1bd7f13abdcb8dd4f681aff181877edb268070af8b67cbb33a612a",
+      "path": "toothbrush/test/defective/022.png",
+      "category": "toothbrush",
+      "is_anomalous": true,
+      "downloaded_bytes": 1085429,
+      "sha256": "52818564feeef01ebb73cf9f37a6136432d4156ce3bdb0292e71695cbc8b9009"
+    },
+    {
+      "type": "file",
+      "oid": "3e938833ef22b778432e19d4e31395d8998d4600",
+      "size": 5712,
+      "lfs": {
+        "oid": "c130a002ecb2dbb526cc3fffa3e184775fdb94325e893e2a9beed6518c026a16",
+        "size": 5712,
+        "pointerSize": 129
+      },
+      "xetHash": "4a19889c9a3cf5295b1ebc4d0abdd28714fce5b3ad63d57fd01f1455f2455198",
+      "path": "toothbrush/ground_truth/defective/022_mask.png",
+      "category": "toothbrush",
+      "is_mask": true,
+      "downloaded_bytes": 5712,
+      "sha256": "c130a002ecb2dbb526cc3fffa3e184775fdb94325e893e2a9beed6518c026a16"
+    },
+    {
+      "type": "file",
+      "oid": "fdb26e73f71fbd5667ff1ae3e2510a84630fc834",
+      "size": 1091268,
+      "lfs": {
+        "oid": "fd48a9495a577dd09ece99faac91fa2505f12ddb539c0ccf3b4ae15f907926d8",
+        "size": 1091268,
+        "pointerSize": 132
+      },
+      "xetHash": "4a78d37522c3aeddf3dc5d20e7ddef6401646fa90c5be5428cbb4d0d1ab8113e",
+      "path": "toothbrush/test/defective/025.png",
+      "category": "toothbrush",
+      "is_anomalous": true,
+      "downloaded_bytes": 1091268,
+      "sha256": "fd48a9495a577dd09ece99faac91fa2505f12ddb539c0ccf3b4ae15f907926d8"
+    },
+    {
+      "type": "file",
+      "oid": "2fd201eb782c3061b173689952ef929fb07adc0b",
+      "size": 4887,
+      "lfs": {
+        "oid": "054e2d921a679c0bdeb24002f0db5634de25c21a515d105bbfd7cf3bf5151a7a",
+        "size": 4887,
+        "pointerSize": 129
+      },
+      "xetHash": "9f31c4fa877ff6414af6c0443fe731cac8080872bbcc023a7875ea56986a4ddd",
+      "path": "toothbrush/ground_truth/defective/025_mask.png",
+      "category": "toothbrush",
+      "is_mask": true,
+      "downloaded_bytes": 4887,
+      "sha256": "054e2d921a679c0bdeb24002f0db5634de25c21a515d105bbfd7cf3bf5151a7a"
+    },
+    {
+      "type": "file",
+      "oid": "7a6c889a74e0b4eb69f39d10d1aa18795cecf603",
+      "size": 1277593,
+      "lfs": {
+        "oid": "b343892f2c2c79017885445e1594c52cba12d939e7c50d3cae083ff2ca33478b",
+        "size": 1277593,
+        "pointerSize": 132
+      },
+      "xetHash": "b34d97808b3ed9240c22799187e4755ce3928721ff550fb71769865d5f5e3252",
+      "path": "transistor/test/good/000.png",
+      "category": "transistor",
+      "is_anomalous": false,
+      "downloaded_bytes": 1277593,
+      "sha256": "b343892f2c2c79017885445e1594c52cba12d939e7c50d3cae083ff2ca33478b"
+    },
+    {
+      "type": "file",
+      "oid": "76e7c2d8e2b8541f1d6b71d56f96b46a9cbbd8e9",
+      "size": 1302147,
+      "lfs": {
+        "oid": "ea1313c1d23ba37aafc552a6391113cc261a4c24f871c2a36a7f0e3be01d4bb1",
+        "size": 1302147,
+        "pointerSize": 132
+      },
+      "xetHash": "ebe712aa4cbfee9a662edebedce08b559c552eb8823c647fc5d40b94b2be8c7d",
+      "path": "transistor/test/good/019.png",
+      "category": "transistor",
+      "is_anomalous": false,
+      "downloaded_bytes": 1302147,
+      "sha256": "ea1313c1d23ba37aafc552a6391113cc261a4c24f871c2a36a7f0e3be01d4bb1"
+    },
+    {
+      "type": "file",
+      "oid": "854a71dad08055d8fd4fbebfa32ffbdd45ace033",
+      "size": 1300587,
+      "lfs": {
+        "oid": "36b7bcab8290fc43a36e2cf535544f5b0a4054d8e7943ebaec226aead2c042d1",
+        "size": 1300587,
+        "pointerSize": 132
+      },
+      "xetHash": "dda25ac64e279529138fa3a4802a926430a2a7f48ab61c2e508a72129ac83022",
+      "path": "transistor/test/good/021.png",
+      "category": "transistor",
+      "is_anomalous": false,
+      "downloaded_bytes": 1300587,
+      "sha256": "36b7bcab8290fc43a36e2cf535544f5b0a4054d8e7943ebaec226aead2c042d1"
+    },
+    {
+      "type": "file",
+      "oid": "c98eaee7ffd23a9ed247ef9988f5fce3396ea338",
+      "size": 1274773,
+      "lfs": {
+        "oid": "827e69244c8e213841ef917481a5b75e0e540eae0ff2a63d18e7d0691a9610e5",
+        "size": 1274773,
+        "pointerSize": 132
+      },
+      "xetHash": "e33489eeb181eda61e54e5c466f0051503c6c0d28a7d22dabc124d19e72c55fb",
+      "path": "transistor/test/good/046.png",
+      "category": "transistor",
+      "is_anomalous": false,
+      "downloaded_bytes": 1274773,
+      "sha256": "827e69244c8e213841ef917481a5b75e0e540eae0ff2a63d18e7d0691a9610e5"
+    },
+    {
+      "type": "file",
+      "oid": "dff65c4f5937c8388353531297ee743a936d12ca",
+      "size": 1276538,
+      "lfs": {
+        "oid": "4f6455e099d35e1c6f238842347af2d4f657f307b0b30d88a9febe0220845a91",
+        "size": 1276538,
+        "pointerSize": 132
+      },
+      "xetHash": "81a0a85cfa06f4c8f9d8ed08cbf51b438da4495d1d5f0b2e8d5ab77be952e177",
+      "path": "transistor/test/good/050.png",
+      "category": "transistor",
+      "is_anomalous": false,
+      "downloaded_bytes": 1276538,
+      "sha256": "4f6455e099d35e1c6f238842347af2d4f657f307b0b30d88a9febe0220845a91"
+    },
+    {
+      "type": "file",
+      "oid": "0be7c2379ca48fe0edfd83af6a8d0212146a81ea",
+      "size": 1263793,
+      "lfs": {
+        "oid": "b7f616807dea69d9ab44caf18b4fd2d2704ad7185d79c04871fb11a762f3e6e9",
+        "size": 1263793,
+        "pointerSize": 132
+      },
+      "xetHash": "f36f7e35127acc1915615a69542f0e2a1e36b5b404d600682ab7a992cd782683",
+      "path": "transistor/test/cut_lead/003.png",
+      "category": "transistor",
+      "is_anomalous": true,
+      "downloaded_bytes": 1263793,
+      "sha256": "b7f616807dea69d9ab44caf18b4fd2d2704ad7185d79c04871fb11a762f3e6e9"
+    },
+    {
+      "type": "file",
+      "oid": "e7d372e83b476a7782b21084d4216cb813d3c6cc",
+      "size": 3229,
+      "lfs": {
+        "oid": "b93fc18e0706dccad2d52176f9ea07160555cb1757917c4b40a2bb2b4c66b680",
+        "size": 3229,
+        "pointerSize": 129
+      },
+      "xetHash": "59861d3649f9795a167ec20c4dd59dde5fa7024123bb47e862a8c6003ea779d1",
+      "path": "transistor/ground_truth/cut_lead/003_mask.png",
+      "category": "transistor",
+      "is_mask": true,
+      "downloaded_bytes": 3229,
+      "sha256": "b93fc18e0706dccad2d52176f9ea07160555cb1757917c4b40a2bb2b4c66b680"
+    },
+    {
+      "type": "file",
+      "oid": "f206ca0c50d6bad136adbef78f7e157efdcec211",
+      "size": 1268106,
+      "lfs": {
+        "oid": "c4e025310eb9ee2d281e5a704ee6cb43ca2fb4c3a3dd07c4295fcbea29b0db8b",
+        "size": 1268106,
+        "pointerSize": 132
+      },
+      "xetHash": "d95a6322c98d5a0844e6ab40208956d6db8a2c58c197e927dc59d4ab6f16d333",
+      "path": "transistor/test/cut_lead/004.png",
+      "category": "transistor",
+      "is_anomalous": true,
+      "downloaded_bytes": 1268106,
+      "sha256": "c4e025310eb9ee2d281e5a704ee6cb43ca2fb4c3a3dd07c4295fcbea29b0db8b"
+    },
+    {
+      "type": "file",
+      "oid": "c1559cfb9090a7a301928214095feaf688adc068",
+      "size": 3554,
+      "lfs": {
+        "oid": "b14f495301bd9f4d3363630e7ff577638c4efa688290cbd9ceeb41bef25642fd",
+        "size": 3554,
+        "pointerSize": 129
+      },
+      "xetHash": "c62457aea351eb5ef56c91055f944c8221648fd7f49b750f05edbc2b2cdd195c",
+      "path": "transistor/ground_truth/cut_lead/004_mask.png",
+      "category": "transistor",
+      "is_mask": true,
+      "downloaded_bytes": 3554,
+      "sha256": "b14f495301bd9f4d3363630e7ff577638c4efa688290cbd9ceeb41bef25642fd"
+    },
+    {
+      "type": "file",
+      "oid": "bb1dd8734d0ad5be91016bcf07b50f4c353e5790",
+      "size": 1285840,
+      "lfs": {
+        "oid": "4beab5fec71718ef9874639b3bd779ef479bf6f0ba8c0e793f8af19171e9a98e",
+        "size": 1285840,
+        "pointerSize": 132
+      },
+      "xetHash": "b22e3ed86614358ef87245733eaca80c581e805ae516e935ae23bf94dfaa49b1",
+      "path": "transistor/test/cut_lead/006.png",
+      "category": "transistor",
+      "is_anomalous": true,
+      "downloaded_bytes": 1285840,
+      "sha256": "4beab5fec71718ef9874639b3bd779ef479bf6f0ba8c0e793f8af19171e9a98e"
+    },
+    {
+      "type": "file",
+      "oid": "7a7edad9457a9381aa6cb19e0d39e9a619ad103f",
+      "size": 3175,
+      "lfs": {
+        "oid": "e50a9e1ba99ad545532d4d30f7bfce6d6134232a62d1f34c24a3793bafc37ace",
+        "size": 3175,
+        "pointerSize": 129
+      },
+      "xetHash": "9a2053b4536e6425d3044eb0014cdabcbcf1ea4ea5b798a08d2296c393c044a3",
+      "path": "transistor/ground_truth/cut_lead/006_mask.png",
+      "category": "transistor",
+      "is_mask": true,
+      "downloaded_bytes": 3175,
+      "sha256": "e50a9e1ba99ad545532d4d30f7bfce6d6134232a62d1f34c24a3793bafc37ace"
+    },
+    {
+      "type": "file",
+      "oid": "f4fae41e434dbf41163cf1d9f6fe131f4a4f03e1",
+      "size": 1285401,
+      "lfs": {
+        "oid": "e8379a0728738931aa3e03af44219eea3f3bc1884495f767e35f9926ac3f05d3",
+        "size": 1285401,
+        "pointerSize": 132
+      },
+      "xetHash": "f91b23d458c768014adcc68a1021bb12027bb3f4d8d3ecbea2efeea8772a099c",
+      "path": "transistor/test/damaged_case/003.png",
+      "category": "transistor",
+      "is_anomalous": true,
+      "downloaded_bytes": 1285401,
+      "sha256": "e8379a0728738931aa3e03af44219eea3f3bc1884495f767e35f9926ac3f05d3"
+    },
+    {
+      "type": "file",
+      "oid": "c70ba9e23a19a6b9ed461444fec288fbce6b9016",
+      "size": 3264,
+      "lfs": {
+        "oid": "ef1312107e91bffb86f12159a94578ac9e3b76ffaf280a8c5a04d20999c6fb7b",
+        "size": 3264,
+        "pointerSize": 129
+      },
+      "xetHash": "a8f0eef526c39869537fab9a7aeaf21717d879a669c4a94be8700528a5e72ab8",
+      "path": "transistor/ground_truth/damaged_case/003_mask.png",
+      "category": "transistor",
+      "is_mask": true,
+      "downloaded_bytes": 3264,
+      "sha256": "ef1312107e91bffb86f12159a94578ac9e3b76ffaf280a8c5a04d20999c6fb7b"
+    },
+    {
+      "type": "file",
+      "oid": "64aefa1e07a4c45b861e681583ea4f899deec1bf",
+      "size": 1292529,
+      "lfs": {
+        "oid": "135c5fafb8133a8fb5706a651c3bd2a67e8fa428ba9d827119a41a5766f284e5",
+        "size": 1292529,
+        "pointerSize": 132
+      },
+      "xetHash": "c038b6fc8b16f294612e116494c28395c82577e0633c0318deadd8f7a6459b19",
+      "path": "transistor/test/misplaced/001.png",
+      "category": "transistor",
+      "is_anomalous": true,
+      "downloaded_bytes": 1292529,
+      "sha256": "135c5fafb8133a8fb5706a651c3bd2a67e8fa428ba9d827119a41a5766f284e5"
+    },
+    {
+      "type": "file",
+      "oid": "b8e8ab725329cb40f4d2a7e14de3c53609213539",
+      "size": 5205,
+      "lfs": {
+        "oid": "5b4a997355371297f4fac8db023c6cc34d5856a891c0714089ec4f5b15215cd9",
+        "size": 5205,
+        "pointerSize": 129
+      },
+      "xetHash": "bcb4c36c5cbad6cf255835b83e7536ce35da96e0acbb7b6d86ec471829298625",
+      "path": "transistor/ground_truth/misplaced/001_mask.png",
+      "category": "transistor",
+      "is_mask": true,
+      "downloaded_bytes": 5205,
+      "sha256": "5b4a997355371297f4fac8db023c6cc34d5856a891c0714089ec4f5b15215cd9"
+    },
+    {
+      "type": "file",
+      "oid": "b317a9b2a8ba516edc9ea8e55033eff043828516",
+      "size": 1434931,
+      "lfs": {
+        "oid": "6efeb9d8ce58a4ef8f5c661dc94f39a9b98b0c4c355b76378a296a69804108ce",
+        "size": 1434931,
+        "pointerSize": 132
+      },
+      "xetHash": "8f7b87c9f08c3ed3a3476a0e3d4fa9f3b97c3df9706dc3e1d9519f3f4432706c",
+      "path": "wood/test/good/003.png",
+      "category": "wood",
+      "is_anomalous": false,
+      "downloaded_bytes": 1434931,
+      "sha256": "6efeb9d8ce58a4ef8f5c661dc94f39a9b98b0c4c355b76378a296a69804108ce"
+    },
+    {
+      "type": "file",
+      "oid": "c29b96941604820b572ada81ebf6e98bd88e0feb",
+      "size": 1338052,
+      "lfs": {
+        "oid": "c04ddb34f0e55956c06fa28078980319f7c14e5791fb259d9ae4f437263997e0",
+        "size": 1338052,
+        "pointerSize": 132
+      },
+      "xetHash": "0718176af6cb29944c6eaecbfaf8f36186cdb944f28cf245b6bb701ba14dbb43",
+      "path": "wood/test/good/006.png",
+      "category": "wood",
+      "is_anomalous": false,
+      "downloaded_bytes": 1338052,
+      "sha256": "c04ddb34f0e55956c06fa28078980319f7c14e5791fb259d9ae4f437263997e0"
+    },
+    {
+      "type": "file",
+      "oid": "636cd54fb2d5b3945e89d95f1517f42289840a46",
+      "size": 1468599,
+      "lfs": {
+        "oid": "375fa7de6fa9984996a1a2d8b4bdc7c7b797f4d59a4ed2763a69bb1464690d43",
+        "size": 1468599,
+        "pointerSize": 132
+      },
+      "xetHash": "959223bf2f79ca4498cffbfd552d684785d816f947bf707c9994d2a701fcd526",
+      "path": "wood/test/good/007.png",
+      "category": "wood",
+      "is_anomalous": false,
+      "downloaded_bytes": 1468599,
+      "sha256": "375fa7de6fa9984996a1a2d8b4bdc7c7b797f4d59a4ed2763a69bb1464690d43"
+    },
+    {
+      "type": "file",
+      "oid": "6aebd21368481b72f2a332aebf1a506545271086",
+      "size": 1450478,
+      "lfs": {
+        "oid": "945040657559dece5f242a7a6e07d83dc4c4ff5a1c2fb4da464cf3ada081b501",
+        "size": 1450478,
+        "pointerSize": 132
+      },
+      "xetHash": "13fb3e5b64a425411ca91989e3d40cf5a38fadf2509abccab90f101a76672522",
+      "path": "wood/test/good/008.png",
+      "category": "wood",
+      "is_anomalous": false,
+      "downloaded_bytes": 1450478,
+      "sha256": "945040657559dece5f242a7a6e07d83dc4c4ff5a1c2fb4da464cf3ada081b501"
+    },
+    {
+      "type": "file",
+      "oid": "ead79fbcf4044212d559d18c6ab0f1dd895ae393",
+      "size": 1553271,
+      "lfs": {
+        "oid": "e9fbc2d7eaf3a3a2f6f55c01469bd170c47999b3884d3b9af650aed07c78a464",
+        "size": 1553271,
+        "pointerSize": 132
+      },
+      "xetHash": "3d85d65eaf3f47c46cdb84365ea5ba6a3c3aef2706e1e0225d2f37df5fd6d7cf",
+      "path": "wood/test/good/018.png",
+      "category": "wood",
+      "is_anomalous": false,
+      "downloaded_bytes": 1553271,
+      "sha256": "e9fbc2d7eaf3a3a2f6f55c01469bd170c47999b3884d3b9af650aed07c78a464"
+    },
+    {
+      "type": "file",
+      "oid": "faa55d876f2c5d41844b018f5da33f5424f605f9",
+      "size": 1483275,
+      "lfs": {
+        "oid": "572640c1de71b26a40901dd6e2ee36d7414209a53173a5f65d5eed91c0b15350",
+        "size": 1483275,
+        "pointerSize": 132
+      },
+      "xetHash": "3077549292c7521599399b90b0503d4fb9a07e51e113da92f6da66f7cae4c5a2",
+      "path": "wood/test/color/002.png",
+      "category": "wood",
+      "is_anomalous": true,
+      "downloaded_bytes": 1483275,
+      "sha256": "572640c1de71b26a40901dd6e2ee36d7414209a53173a5f65d5eed91c0b15350"
+    },
+    {
+      "type": "file",
+      "oid": "4e84e4f7b5c3a603ae5f5b896849a0177f3fe5d3",
+      "size": 3407,
+      "lfs": {
+        "oid": "108fd82ea253583f67a9475c1135062cad0b15aefa25a233e607c900c64a2887",
+        "size": 3407,
+        "pointerSize": 129
+      },
+      "xetHash": "32efc98069e3272613df67c23e6ee7aec938f8cea77929b5f46863f8dc88cdbb",
+      "path": "wood/ground_truth/color/002_mask.png",
+      "category": "wood",
+      "is_mask": true,
+      "downloaded_bytes": 3407,
+      "sha256": "108fd82ea253583f67a9475c1135062cad0b15aefa25a233e607c900c64a2887"
+    },
+    {
+      "type": "file",
+      "oid": "d50c70cd09486e6bcdc311738d2b89d2e26ac056",
+      "size": 1433364,
+      "lfs": {
+        "oid": "b338d67d534404b4c01fea2340513e356f619e27194fa0f24a3b96bfd84b0b05",
+        "size": 1433364,
+        "pointerSize": 132
+      },
+      "xetHash": "af70232a33f15e19f880c1673ada7d53070949f4f615a24e79270b2e243424ef",
+      "path": "wood/test/color/006.png",
+      "category": "wood",
+      "is_anomalous": true,
+      "downloaded_bytes": 1433364,
+      "sha256": "b338d67d534404b4c01fea2340513e356f619e27194fa0f24a3b96bfd84b0b05"
+    },
+    {
+      "type": "file",
+      "oid": "95c3fe55507dd37763887107b27014a9587e4108",
+      "size": 3846,
+      "lfs": {
+        "oid": "dc85698a71f67162e8d039921222a51d92f8b067670781e473137c0972bb8bbf",
+        "size": 3846,
+        "pointerSize": 129
+      },
+      "xetHash": "4f31563da66bec6e3efbcbe6cb25e4bc27b2fd15b4d52d9d4cb8e9819cae5305",
+      "path": "wood/ground_truth/color/006_mask.png",
+      "category": "wood",
+      "is_mask": true,
+      "downloaded_bytes": 3846,
+      "sha256": "dc85698a71f67162e8d039921222a51d92f8b067670781e473137c0972bb8bbf"
+    },
+    {
+      "type": "file",
+      "oid": "5d17a90eb8f03f5d0cf8e848dc942bd835b7d980",
+      "size": 1576055,
+      "lfs": {
+        "oid": "bc246386b18cb2534a880e3d4d240405e146a312fd8133e9d408b5426a215f33",
+        "size": 1576055,
+        "pointerSize": 132
+      },
+      "xetHash": "10b7f9d95aef8f02a3991a80fbedd00b229c9b355647fe42e4788620a61f33c4",
+      "path": "wood/test/hole/004.png",
+      "category": "wood",
+      "is_anomalous": true,
+      "downloaded_bytes": 1576055,
+      "sha256": "bc246386b18cb2534a880e3d4d240405e146a312fd8133e9d408b5426a215f33"
+    },
+    {
+      "type": "file",
+      "oid": "b7ec9d573f9055fba161fb87a7008414b66ec31f",
+      "size": 4674,
+      "lfs": {
+        "oid": "bfcba39dff7f5906fee49ae6915bc171f50b5b1ebb235a6bfb1e09e129cb595c",
+        "size": 4674,
+        "pointerSize": 129
+      },
+      "xetHash": "d814be8d24a16ab8362fa76e45e99998fc127a73cf1e150c45673f2922378fab",
+      "path": "wood/ground_truth/hole/004_mask.png",
+      "category": "wood",
+      "is_mask": true,
+      "downloaded_bytes": 4674,
+      "sha256": "bfcba39dff7f5906fee49ae6915bc171f50b5b1ebb235a6bfb1e09e129cb595c"
+    },
+    {
+      "type": "file",
+      "oid": "90064fc30e16014cbea5bc72ac9c7c044fc5519e",
+      "size": 1438987,
+      "lfs": {
+        "oid": "7128a7346decb42282fc026942b32015ddd14b970a0f765c7c19d3e21861495f",
+        "size": 1438987,
+        "pointerSize": 132
+      },
+      "xetHash": "6acff71d08513a8f8bab5302a1e673bca49aa8280ac8be38e1b06cb933a5f05a",
+      "path": "wood/test/liquid/005.png",
+      "category": "wood",
+      "is_anomalous": true,
+      "downloaded_bytes": 1438987,
+      "sha256": "7128a7346decb42282fc026942b32015ddd14b970a0f765c7c19d3e21861495f"
+    },
+    {
+      "type": "file",
+      "oid": "14fb26d70a0b02b5ee767e53a625f5770a67e48a",
+      "size": 4124,
+      "lfs": {
+        "oid": "f33beafea29018a4aa79f24d0be98680a0dc1b66533eba6f796a6abcb0c46057",
+        "size": 4124,
+        "pointerSize": 129
+      },
+      "xetHash": "e86681c5572c47dd9c142cd1f71cdd3381282aa1db6de048f680d035cdac4303",
+      "path": "wood/ground_truth/liquid/005_mask.png",
+      "category": "wood",
+      "is_mask": true,
+      "downloaded_bytes": 4124,
+      "sha256": "f33beafea29018a4aa79f24d0be98680a0dc1b66533eba6f796a6abcb0c46057"
+    },
+    {
+      "type": "file",
+      "oid": "076eacc99023f9711bce92f7e5b22dced769a022",
+      "size": 1474687,
+      "lfs": {
+        "oid": "5e8356101b534e279d3a7a5ce68ccd2c4392af28ca2e1337afcd4639e3ddfe17",
+        "size": 1474687,
+        "pointerSize": 132
+      },
+      "xetHash": "b32d212fc5da10d7caac284c59c2a1a26456fcab20948544fcc8de984fef6f8d",
+      "path": "wood/test/scratch/001.png",
+      "category": "wood",
+      "is_anomalous": true,
+      "downloaded_bytes": 1474687,
+      "sha256": "5e8356101b534e279d3a7a5ce68ccd2c4392af28ca2e1337afcd4639e3ddfe17"
+    },
+    {
+      "type": "file",
+      "oid": "3d9c65263754226824ad3bc2883336a96db97301",
+      "size": 4179,
+      "lfs": {
+        "oid": "2d3b77d4fca3833241a17f837a0f0b5328d8ef561fc1855d680d0873cc469ccf",
+        "size": 4179,
+        "pointerSize": 129
+      },
+      "xetHash": "74fa6a3378aefef49619104ded64363cc7c2ce72bc3a89420ae8e730b166b2af",
+      "path": "wood/ground_truth/scratch/001_mask.png",
+      "category": "wood",
+      "is_mask": true,
+      "downloaded_bytes": 4179,
+      "sha256": "2d3b77d4fca3833241a17f837a0f0b5328d8ef561fc1855d680d0873cc469ccf"
+    },
+    {
+      "type": "file",
+      "oid": "d1d403f4c45ecd312a84bf781977c68a53d9708c",
+      "size": 400523,
+      "lfs": {
+        "oid": "d32509278132f15d01ec1c3fd59e9b6514c28ad29c238ebd5b4b07443b23c5ad",
+        "size": 400523,
+        "pointerSize": 131
+      },
+      "xetHash": "3e499bae52637f08e1c1990d176a57612eb8964a0f370169d44ce84d94677b2c",
+      "path": "zipper/test/good/000.png",
+      "category": "zipper",
+      "is_anomalous": false,
+      "downloaded_bytes": 400523,
+      "sha256": "d32509278132f15d01ec1c3fd59e9b6514c28ad29c238ebd5b4b07443b23c5ad"
+    },
+    {
+      "type": "file",
+      "oid": "31cd7ba15d95cbd21e01d1439e4e7547f4e95c6f",
+      "size": 417812,
+      "lfs": {
+        "oid": "4ac47a00cc93633c5a36327d5842daa9475eace765c76d12b1b29237a4b61557",
+        "size": 417812,
+        "pointerSize": 131
+      },
+      "xetHash": "e22f682a1a666e1f8bc08076c3950888e3a6f9a4f38c0643f5e3b66b922c8807",
+      "path": "zipper/test/good/002.png",
+      "category": "zipper",
+      "is_anomalous": false,
+      "downloaded_bytes": 417812,
+      "sha256": "4ac47a00cc93633c5a36327d5842daa9475eace765c76d12b1b29237a4b61557"
+    },
+    {
+      "type": "file",
+      "oid": "ef4277b791324f215f02a6f2aa607814e0f12699",
+      "size": 411480,
+      "lfs": {
+        "oid": "ca139a8fcb13aff1db2557d938d4a0ba86a048331d512b831a182821d0563724",
+        "size": 411480,
+        "pointerSize": 131
+      },
+      "xetHash": "a25107b4b15c24280dd83b479d574d4f5fac2ed83d2dc8101512d44c7f64d9fb",
+      "path": "zipper/test/good/004.png",
+      "category": "zipper",
+      "is_anomalous": false,
+      "downloaded_bytes": 411480,
+      "sha256": "ca139a8fcb13aff1db2557d938d4a0ba86a048331d512b831a182821d0563724"
+    },
+    {
+      "type": "file",
+      "oid": "64f49c1938c066daefffa91224b79f9d1df60a8c",
+      "size": 408218,
+      "lfs": {
+        "oid": "eecbdb724fad9b1d35fd4fa555a0c32213884504ce9d60dfc64a5734fe0fdbdb",
+        "size": 408218,
+        "pointerSize": 131
+      },
+      "xetHash": "0179c89c7a5c1b7e9d7213ec733632dab1d8b5786dd93a7f9110d55313d34c18",
+      "path": "zipper/test/good/021.png",
+      "category": "zipper",
+      "is_anomalous": false,
+      "downloaded_bytes": 408218,
+      "sha256": "eecbdb724fad9b1d35fd4fa555a0c32213884504ce9d60dfc64a5734fe0fdbdb"
+    },
+    {
+      "type": "file",
+      "oid": "cd0b6b4367aaba79e47bfde5c0d51e5db395f145",
+      "size": 398550,
+      "lfs": {
+        "oid": "132ef4a3f450cd35c429181896e8865b8775206273ed5366a1e08846fa68c49e",
+        "size": 398550,
+        "pointerSize": 131
+      },
+      "xetHash": "d1b81de6c8246c9b957147fa8339140b7f73e3a356d248bc2e4515e26e912817",
+      "path": "zipper/test/good/028.png",
+      "category": "zipper",
+      "is_anomalous": false,
+      "downloaded_bytes": 398550,
+      "sha256": "132ef4a3f450cd35c429181896e8865b8775206273ed5366a1e08846fa68c49e"
+    },
+    {
+      "type": "file",
+      "oid": "bcdec77c33bcbe7937fbf2d6ec926e62242d0916",
+      "size": 412507,
+      "lfs": {
+        "oid": "197de19377fd555282a46c820d2769a8fe90455e8728dc8f14d8261268d2c227",
+        "size": 412507,
+        "pointerSize": 131
+      },
+      "xetHash": "bb70846bfe367b5b5ea089a491c8a49835f0e4c55c91d86979c6885eb824c2ff",
+      "path": "zipper/test/combined/011.png",
+      "category": "zipper",
+      "is_anomalous": true,
+      "downloaded_bytes": 412507,
+      "sha256": "197de19377fd555282a46c820d2769a8fe90455e8728dc8f14d8261268d2c227"
+    },
+    {
+      "type": "file",
+      "oid": "3d45d36eeac4064564a78a33b3953cfd4022965b",
+      "size": 3331,
+      "lfs": {
+        "oid": "55b6f2b032b73816e0666c034aa4afdb9623e2c2f32377780a11d7d41be4c929",
+        "size": 3331,
+        "pointerSize": 129
+      },
+      "xetHash": "1d206833f3fdc255567bf61949c74120a3b8e4b3c63ff7bc8baa2a5d91f7f6f1",
+      "path": "zipper/ground_truth/combined/011_mask.png",
+      "category": "zipper",
+      "is_mask": true,
+      "downloaded_bytes": 3331,
+      "sha256": "55b6f2b032b73816e0666c034aa4afdb9623e2c2f32377780a11d7d41be4c929"
+    },
+    {
+      "type": "file",
+      "oid": "21f8976b8f1041211f3a37b75e3fd6d7baa04c1e",
+      "size": 410397,
+      "lfs": {
+        "oid": "8ccae1361689344593df81312737e5e6dc6ed0ee97a8dcf6e01e87f6158b4fc2",
+        "size": 410397,
+        "pointerSize": 131
+      },
+      "xetHash": "c8be6e78572227361aa512053974cf7f9443955ce6a68c0c4bfce421d6f8439a",
+      "path": "zipper/test/fabric_interior/011.png",
+      "category": "zipper",
+      "is_anomalous": true,
+      "downloaded_bytes": 410397,
+      "sha256": "8ccae1361689344593df81312737e5e6dc6ed0ee97a8dcf6e01e87f6158b4fc2"
+    },
+    {
+      "type": "file",
+      "oid": "a95b764a441d30c243cbc395b53c343a1489c9c3",
+      "size": 2952,
+      "lfs": {
+        "oid": "97c80f0e49f6e22f5970bd7ce3b56ad014b1f06aa2bfceb2185fe7b3bacc7d26",
+        "size": 2952,
+        "pointerSize": 129
+      },
+      "xetHash": "a1a12604de7325d34ed41d14d3d5c4ae572d639dfd54a09143d832129a349c6b",
+      "path": "zipper/ground_truth/fabric_interior/011_mask.png",
+      "category": "zipper",
+      "is_mask": true,
+      "downloaded_bytes": 2952,
+      "sha256": "97c80f0e49f6e22f5970bd7ce3b56ad014b1f06aa2bfceb2185fe7b3bacc7d26"
+    },
+    {
+      "type": "file",
+      "oid": "dd99ef126becd48d524dceadd97b0e01d1663fec",
+      "size": 385662,
+      "lfs": {
+        "oid": "1777e9f112b6fed14e79d1bfbd1854dbf7d2f3440f6b1d7fdfdb9a552a6ee6e5",
+        "size": 385662,
+        "pointerSize": 131
+      },
+      "xetHash": "7c3f1882ca23c103799d7c41e4c0c4fb80977abf0a60daab69bfc5e57e824ce2",
+      "path": "zipper/test/split_teeth/006.png",
+      "category": "zipper",
+      "is_anomalous": true,
+      "downloaded_bytes": 385662,
+      "sha256": "1777e9f112b6fed14e79d1bfbd1854dbf7d2f3440f6b1d7fdfdb9a552a6ee6e5"
+    },
+    {
+      "type": "file",
+      "oid": "38f4621a755138f7062ded978bc4e5202c179b97",
+      "size": 2237,
+      "lfs": {
+        "oid": "769377a05bfb690a3ebc24e13e0f592117a651e5c7dd8413f5974e899acfd342",
+        "size": 2237,
+        "pointerSize": 129
+      },
+      "xetHash": "4fb1f7a4cee04659b8b0801dcc590c324d81e8184e049f8ad3e83a59306e028a",
+      "path": "zipper/ground_truth/split_teeth/006_mask.png",
+      "category": "zipper",
+      "is_mask": true,
+      "downloaded_bytes": 2237,
+      "sha256": "769377a05bfb690a3ebc24e13e0f592117a651e5c7dd8413f5974e899acfd342"
+    },
+    {
+      "type": "file",
+      "oid": "909877c87259e78c22e5b4236f7bbb220bb691f0",
+      "size": 405933,
+      "lfs": {
+        "oid": "6c8a1451b0050eefe5aae1fc8c58974fe151172d4a734e52edfdb6cb79d085a8",
+        "size": 405933,
+        "pointerSize": 131
+      },
+      "xetHash": "d86de620b985565dfb36796ec0c22322d2b3b9506535f1b9b58f17768782b5bc",
+      "path": "zipper/test/squeezed_teeth/009.png",
+      "category": "zipper",
+      "is_anomalous": true,
+      "downloaded_bytes": 405933,
+      "sha256": "6c8a1451b0050eefe5aae1fc8c58974fe151172d4a734e52edfdb6cb79d085a8"
+    },
+    {
+      "type": "file",
+      "oid": "d4767d8ee2541143164787ca434b08f901a679b7",
+      "size": 1904,
+      "lfs": {
+        "oid": "d2db4be63722da5d50fecf9906430fbbdebbd489f1f2cbc359bf08ad4d528a79",
+        "size": 1904,
+        "pointerSize": 129
+      },
+      "xetHash": "51914cebf585d134f5a3901b94402a9a3846830a80e1b515e8f48ee7cfeb12eb",
+      "path": "zipper/ground_truth/squeezed_teeth/009_mask.png",
+      "category": "zipper",
+      "is_mask": true,
+      "downloaded_bytes": 1904,
+      "sha256": "d2db4be63722da5d50fecf9906430fbbdebbd489f1f2cbc359bf08ad4d528a79"
+    },
+    {
+      "type": "file",
+      "oid": "cf59fd450d6286a91207d727d013dddc157f70a5",
+      "size": 400393,
+      "lfs": {
+        "oid": "e1bcf32992496a19dac4bdf36dbe80fd3f4f02907933655c79294c3196072f8b",
+        "size": 400393,
+        "pointerSize": 131
+      },
+      "xetHash": "bce1bd4987c14340966d572ee32da02f17ffe44e0b0dc26f1b4a1fba7e44a37d",
+      "path": "zipper/test/squeezed_teeth/013.png",
+      "category": "zipper",
+      "is_anomalous": true,
+      "downloaded_bytes": 400393,
+      "sha256": "e1bcf32992496a19dac4bdf36dbe80fd3f4f02907933655c79294c3196072f8b"
+    },
+    {
+      "type": "file",
+      "oid": "09397c8b6e0f110e6b8e780503760bea374e89ce",
+      "size": 1836,
+      "lfs": {
+        "oid": "5a4ea82eedb95ebf63c6cb6e6073bcfbe003f9c495a0c80480cb4e088c68fa78",
+        "size": 1836,
+        "pointerSize": 129
+      },
+      "xetHash": "a19b972221bc83935783abe79505287a1959445b54c8bbeb3180b4dfe59ee4e7",
+      "path": "zipper/ground_truth/squeezed_teeth/013_mask.png",
+      "category": "zipper",
+      "is_mask": true,
+      "downloaded_bytes": 1836,
+      "sha256": "5a4ea82eedb95ebf63c6cb6e6073bcfbe003f9c495a0c80480cb4e088c68fa78"
+    },
+    {
+      "path": "README.md",
+      "downloaded_bytes": 1180,
+      "sha256": "2c2c5ea943e7495c6b611d350c7e737cc1e825d4b4c75b3d537ea3f3f970e817"
+    },
+    {
+      "path": "license.txt",
+      "downloaded_bytes": 20845,
+      "sha256": "a355a57937552790ebd751f8a8026b23882160ab73f1c38f8030456dfcf1a330"
+    },
+    {
+      "path": "readme.txt",
+      "downloaded_bytes": 881,
+      "sha256": "60222d7e42a41e6e63ee6ed632d1149b76705fa49924b4c7594ebfc36f0a667c"
+    }
+  ]
+}

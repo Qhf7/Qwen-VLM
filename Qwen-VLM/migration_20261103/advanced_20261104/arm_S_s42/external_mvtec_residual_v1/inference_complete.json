@@ -1,0 +1,9 @@
+{
+  "state": "inference_complete",
+  "processed": 1575,
+  "mask_reads": 0,
+  "predictions_sha256": "97e92612f91bd0dc83d6364d6d420cdfdbb582023c4939828196dfa65009bc35",
+  "inference_seconds": 1489.2751381397247,
+  "peak_memory_bytes": 17279739904,
+  "frozen_config_sha256": "ce1a62e7f204d13cf0a90e224ba5008decd64d7cbc7a72b010a07f2a4b379b58"
+}

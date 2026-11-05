@@ -1,0 +1,31 @@
+{
+  "schema": "imagebind-bigdec-external-cache-v1",
+  "pipeline_version": "visa-square-binary-sklearn-v1",
+  "manifest_sha256": "4cf2709614c8fd6aabe1268ef3c9f8687a07a0849d3d0f0341d1756570f9497a",
+  "decoder_sha256": "cddfa2df9ad63659f65aa3a798566e52d608ace43a1b37704484db5bbfc5617d",
+  "decoder_seed": null,
+  "geometry": "direct-square224",
+  "images": 1575,
+  "singleton_checks": [
+    {
+      "index": 0,
+      "map_max_abs": 0.014283150434494019,
+      "cls_max_abs": 0.000244140625
+    },
+    {
+      "index": 787,
+      "map_max_abs": 0.0012164711952209473,
+      "cls_max_abs": 0.000244140625
+    },
+    {
+      "index": 1574,
+      "map_max_abs": 0.0008996650576591492,
+      "cls_max_abs": 0.000732421875
+    }
+  ],
+  "gt_masks_opened": false,
+  "images_for_training": false,
+  "generation_or_qwen_queries": 0,
+  "elapsed_seconds": 67.05758500099182,
+  "cache_sha256": "60b4700cc1b87192e4bac05f42504e4c6aea46d40a27e9f63c3a5f38bda8b11c"
+}

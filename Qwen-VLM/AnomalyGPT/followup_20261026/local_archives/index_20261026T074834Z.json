@@ -1,0 +1,20 @@
+{
+  "created_at_utc": "2026-10-26T07:48:34.964732+00:00",
+  "scope": "Local progress snapshot; remote completion unverified due SSH pre-authentication disconnect",
+  "results": {
+    "archive": "/Users/qiaohongfei/Desktop/实习/阿里云天池比赛vlm/AnomalyGPT/followup_20261026/local_archives/results_progress_20261026T074834Z.tar.gz",
+    "manifest": "/Users/qiaohongfei/Desktop/实习/阿里云天池比赛vlm/AnomalyGPT/followup_20261026/local_archives/results_progress_20261026T074834Z.manifest.json",
+    "archive_sha256": "43307ddb0ac2308c1727d09b2f62a572e4fff892aa33ddb817bc676316363e97",
+    "included_file_count": 85,
+    "large_files_retained": 0,
+    "pipeline_running": "matched_qwen_frozen43"
+  },
+  "code": {
+    "archive": "/Users/qiaohongfei/Desktop/实习/阿里云天池比赛vlm/AnomalyGPT/followup_20261026/local_archives/followup_code_20261026T074834Z.tar.gz",
+    "manifest": "/Users/qiaohongfei/Desktop/实习/阿里云天池比赛vlm/AnomalyGPT/followup_20261026/local_archives/followup_code_20261026T074834Z.manifest.json",
+    "archive_sha256": "1f65af1ffb732a30e350d27148719226175d8ffd28cae542be06652ccb7bc671",
+    "included_file_count": 22,
+    "large_files_retained": 0,
+    "pipeline_running": null
+  }
+}

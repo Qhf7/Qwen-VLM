@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.venv/
+models/
+datasets/
+downloads/
+runs/
+logs/
+*.safetensors
+*.partial

@@ -1,0 +1,10 @@
+{
+  "num_variants": 16,
+  "mean_combined_loss": 2.6971980333328247,
+  "mean_batch_token_acc": 0.7061457174638488,
+  "pixel_auroc": 0.9443209717623607,
+  "pixel_ap": 0.6723749274502296,
+  "seconds": 2.759960889816284,
+  "cache": "../cache_visa_test8",
+  "checkpoint": "../runs/ablation_normal_only/pytorch_model.pt"
+}

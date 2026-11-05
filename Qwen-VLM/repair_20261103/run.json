@@ -1,0 +1,25 @@
+{
+  "pipeline_version": "visa-square-binary-sklearn-v1",
+  "protocol": "supervised_custom_60_20_20",
+  "seed": 42,
+  "config": {
+    "steps": 1200,
+    "bs": 4,
+    "lr": 0.001,
+    "seed": 42,
+    "val_every": 200,
+    "cache_gb": 2.0,
+    "eval": false,
+    "split": "test",
+    "ckpt": "",
+    "audit_data": false,
+    "smoke": false,
+    "out": "runs/dec_big_fixed_s42"
+  },
+  "parameters": 5409537,
+  "feature_layout": "ImageBind [257,B,1280] -> [B,256,1280], CLS removed",
+  "selection": "validation macro pixel AUROC",
+  "train_n": 9985,
+  "val_n": 380,
+  "test_n": 456
+}

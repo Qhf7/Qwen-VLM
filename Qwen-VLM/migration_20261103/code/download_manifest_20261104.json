@@ -1,0 +1,94 @@
+{
+  "migration_aux_official_parity.py": {
+    "sha256": "469a933a2ead9452da8fe7b27046cbc007e49b3f91a8f52bba695f376b6537b4",
+    "bytes": 26744
+  },
+  "migration_cache.py": {
+    "sha256": "93e7c0fc574d9327a506665dbc8f0b1f62458568d7d4e10bdbb2d538c8a10904",
+    "bytes": 4518
+  },
+  "migration_continue_ordered.py": {
+    "sha256": "ad3b3177551da1aa2c7bc4522b62a694d3c2d235793a25c327c297e24ffcb70d",
+    "bytes": 43158
+  },
+  "migration_convert_vicuna.py": {
+    "sha256": "34750b1dbaa69714c0a694e82aa331fc921ad87c6bb279d6908a29c626ff17c7",
+    "bytes": 2913
+  },
+  "migration_dense_train.py": {
+    "sha256": "a05336a7e94aea1fff50bec009eebc1ee1fbba327c6da5da3a140415df5a7a3d",
+    "bytes": 58085
+  },
+  "migration_export_teacher.py": {
+    "sha256": "568f1e1c1cbdc36ab16cfcb3882d81a60d92ba46a42823a966f8142c06422b88",
+    "bytes": 16821
+  },
+  "migration_infer_language.py": {
+    "sha256": "10ae0660320c97ffa4eaee55e7f80926f39139ac12036f5959021715809422df",
+    "bytes": 19365
+  },
+  "migration_language.py": {
+    "sha256": "027a9f9b01f7543642e7b1f71a7bf4b7ad600175370706da6800ee2ff6e1caef",
+    "bytes": 19859
+  },
+  "migration_metrics.py": {
+    "sha256": "18780dda38a176fbe438f54c65d5f25bd6879f74153ac1eebd7e1816d00f08d0",
+    "bytes": 11432
+  },
+  "migration_native_parity.py": {
+    "sha256": "e6133ee379f5fdd8199890052a985f99d0991119265280aeda38b0322b265d51",
+    "bytes": 26026
+  },
+  "migration_native_train.py": {
+    "sha256": "63a95e25e87a2c4e1f0b67ad811151d90a687bf9747d6ec1f6bdd7765948d2dc",
+    "bytes": 48260
+  },
+  "migration_phase1_protocol.md": {
+    "sha256": "90c8cc31da86c66b63279e462ad18dfe738ad08c8f1c8b1002c7b890a720fb1f",
+    "bytes": 4395
+  },
+  "migration_plot_results.py": {
+    "sha256": "c5efc67d30e7069a7240ed8dc6e6fb40fff826a0958a44eb18f58243e98cc093",
+    "bytes": 3857
+  },
+  "migration_report_progress.py": {
+    "sha256": "a53fae26e5cf7594b7178b1560ee5780c96f62f302ad7b772ba170ad4f4a658f",
+    "bytes": 7789
+  },
+  "migration_roi_eval.py": {
+    "sha256": "324aaeb97eea674d63b322129a01cc6694547f8f884726450f327f390e9cc711",
+    "bytes": 25758
+  },
+  "migration_roi_preflight.py": {
+    "sha256": "4dbdc5249baaadf4ccd97b3c91071a2de8bf039e4d7489e2aa308aad9c4af8b3",
+    "bytes": 12650
+  },
+  "migration_runner.py": {
+    "sha256": "ec96628bd33527fa1adc4967ff4c828f87679f19df10e9d666597aac1fe9732b",
+    "bytes": 6763
+  },
+  "migration_summarize_all.py": {
+    "sha256": "d8c84eeca9eab26e7907dfb11e7d51bff9dfa95671a3922575ea8fdf25f803a9",
+    "bytes": 58290
+  },
+  "migration_summarize_phase1.py": {
+    "sha256": "ceaa65fc4d452bd8607c2b60f7c21172fd98967069f6f4d97a06ec160582ec49",
+    "bytes": 22765
+  },
+  "migration_train.py": {
+    "sha256": "c8feae67b2babc5d92b1ce157aab37b3a56092f281a0855d060fb0e07b80d097",
+    "bytes": 14531
+  },
+  "migration_visual_probe.py": {
+    "sha256": "af80a1b9d9fd585cacb25b1e7a63c483f73a15bb1811ac3ed3492fb19c33aea6",
+    "bytes": 26000
+  },
+  "test_migration_metrics.py": {
+    "sha256": "1bfa179b5a42d543e933aa749424e51d602c24fa870db53ab7b75889747f6a7a",
+    "bytes": 7900
+  },
+  "test_migration_schedule.py": {
+    "sha256": "d48f2572a8d003337d7b6b69571c3011fbff5ab39b122a1a5b98350b10bb2c55",
+    "bytes": 4615
+  }
+}

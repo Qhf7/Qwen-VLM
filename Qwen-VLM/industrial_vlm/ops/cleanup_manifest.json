@@ -1,0 +1,265 @@
+{
+  "created_unix": 1792750927.7842731,
+  "authorization": "User requested deletion of unrelated previous server datasets and code.",
+  "preserve": [
+    "/root/autodl-tmp/industrial_vlm/models/Qwen3-VL-8B-Instruct",
+    "/root/autodl-tmp/vlm/.venv"
+  ],
+  "delete": [
+    {
+      "path": "/root/autodl-tmp/vlm/Dataset",
+      "bytes": 18358362996
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/artifacts",
+      "bytes": 19767640442
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/seg_cross_part",
+      "bytes": 504237
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/data",
+      "bytes": 3809506
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/docs",
+      "bytes": 629784
+    },
+    {
+      "path": "/root/autodl-tmp/vlm-five-view-retired-20260905",
+      "bytes": 8094780
+    },
+    {
+      "path": "/root/autodl-tmp/archive_c2",
+      "bytes": 87624471
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/models/Qwen3-VL-2B-Instruct",
+      "bytes": 4266652510
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/models/dinov2-base",
+      "bytes": 692746070
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/models/clip-vit-large-patch14-336",
+      "bytes": 5139904682
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/b_a0_fix.log",
+      "bytes": 5929
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/README.md",
+      "bytes": 2163
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/auto_a2clip.sh",
+      "bytes": 1387
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/run_a2clip.sh",
+      "bytes": 1291
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/conv.py",
+      "bytes": 439
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/auto_a2clip.log",
+      "bytes": 11184
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/c_f0_a0_518.log",
+      "bytes": 6476
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/c_f0_a2gate.log",
+      "bytes": 10152
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/eval_a2gate.log",
+      "bytes": 862
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/bench.py",
+      "bytes": 1260
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/b2_f0_k4.log",
+      "bytes": 894
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/b2_f0_k0.log",
+      "bytes": 894
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/b1_f0_k4.log",
+      "bytes": 743
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/b0_defect.log",
+      "bytes": 1468
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/b2_defect.log",
+      "bytes": 1467
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/b2_defect_max.log",
+      "bytes": 1464
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/vlm_recheck.log",
+      "bytes": 2048
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/vlm_cmp.log",
+      "bytes": 2055
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/probe.py",
+      "bytes": 2103
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/probe2.py",
+      "bytes": 1223
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/hf_dl_7b.log",
+      "bytes": 585
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/hf_dl_8b.log",
+      "bytes": 2218
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/probe8.py",
+      "bytes": 3028
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/auto_probe8.sh",
+      "bytes": 523
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/probe8b.log",
+      "bytes": 8413
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/curl8b.log",
+      "bytes": 116527
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/auto_probe8b.sh",
+      "bytes": 650
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/probe_hi.py",
+      "bytes": 2057
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/probe_hi.log",
+      "bytes": 3407
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/probe_hi2.py",
+      "bytes": 2446
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/probe8b_1024n30.log",
+      "bytes": 5077
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/vlm_8b.log",
+      "bytes": 3866
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/vlm_cmp8b.log",
+      "bytes": 3741
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/vis_probe.py",
+      "bytes": 1450
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/vis_probe2.py",
+      "bytes": 743
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/vis_probe3.py",
+      "bytes": 1347
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/extract_vlm.log",
+      "bytes": 8288
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/train_a3.log",
+      "bytes": 5736
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/train_a3_novlm.log",
+      "bytes": 5740
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/sft_fold0.log",
+      "bytes": 6061
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/eval_sft.log",
+      "bytes": 4127
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/eval_zero.log",
+      "bytes": 4005
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/sft_choice.log",
+      "bytes": 4401
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/eval_choice_sft.log",
+      "bytes": 3682
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/eval_choice_zero.log",
+      "bytes": 3504
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/probe_lm.py",
+      "bytes": 776
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/align_dino.log",
+      "bytes": 4311
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/align_eval.log",
+      "bytes": 4360
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/sft_stage2.log",
+      "bytes": 8841
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/stage2_eval.log",
+      "bytes": 4397
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/chk_degen.py",
+      "bytes": 1338
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/pair_1200_sft.log",
+      "bytes": 4076
+    },
+    {
+      "path": "/root/autodl-tmp/vlm/pair_300_zero.log",
+      "bytes": 3697
+    }
+  ],
+  "disk_before": "Filesystem      Size  Used Avail Use% Mounted on\n/dev/md0         90G   68G   23G  75% /root/autodl-tmp\n",
+  "disk_after": "Filesystem      Size  Used Avail Use% Mounted on\n/dev/md0         90G   23G   68G  25% /root/autodl-tmp\n",
+  "completed_unix": 1792750932.4735017
+}

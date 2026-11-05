@@ -1,0 +1,261 @@
+{
+  "overall": {
+    "scores": {
+      "n": 24,
+      "n_normal": 12,
+      "n_anomaly": 12,
+      "accuracy": 0.5,
+      "macro_f1": 0.3333333333333333,
+      "recall": 1.0,
+      "fpr": 1.0,
+      "invalid_rate": 0.0,
+      "n_invalid": 0,
+      "n_invalid_normal": 0,
+      "n_invalid_anomaly": 0,
+      "image_auroc": 0.6840277777777778,
+      "image_ap": 0.7181889668302712,
+      "threshold": 0.0
+    }
+  },
+  "per_category": {
+    "candle": {
+      "scores": {
+        "n": 2,
+        "n_normal": 1,
+        "n_anomaly": 1,
+        "accuracy": 0.5,
+        "macro_f1": 0.3333333333333333,
+        "recall": 1.0,
+        "fpr": 1.0,
+        "invalid_rate": 0.0,
+        "n_invalid": 0,
+        "n_invalid_normal": 0,
+        "n_invalid_anomaly": 0,
+        "image_auroc": 1.0,
+        "image_ap": 1.0,
+        "threshold": 0.0
+      }
+    },
+    "capsules": {
+      "scores": {
+        "n": 2,
+        "n_normal": 1,
+        "n_anomaly": 1,
+        "accuracy": 0.5,
+        "macro_f1": 0.3333333333333333,
+        "recall": 1.0,
+        "fpr": 1.0,
+        "invalid_rate": 0.0,
+        "n_invalid": 0,
+        "n_invalid_normal": 0,
+        "n_invalid_anomaly": 0,
+        "image_auroc": 1.0,
+        "image_ap": 1.0,
+        "threshold": 0.0
+      }
+    },
+    "cashew": {
+      "scores": {
+        "n": 2,
+        "n_normal": 1,
+        "n_anomaly": 1,
+        "accuracy": 0.5,
+        "macro_f1": 0.3333333333333333,
+        "recall": 1.0,
+        "fpr": 1.0,
+        "invalid_rate": 0.0,
+        "n_invalid": 0,
+        "n_invalid_normal": 0,
+        "n_invalid_anomaly": 0,
+        "image_auroc": 1.0,
+        "image_ap": 1.0,
+        "threshold": 0.0
+      }
+    },
+    "chewinggum": {
+      "scores": {
+        "n": 2,
+        "n_normal": 1,
+        "n_anomaly": 1,
+        "accuracy": 0.5,
+        "macro_f1": 0.3333333333333333,
+        "recall": 1.0,
+        "fpr": 1.0,
+        "invalid_rate": 0.0,
+        "n_invalid": 0,
+        "n_invalid_normal": 0,
+        "n_invalid_anomaly": 0,
+        "image_auroc": 1.0,
+        "image_ap": 1.0,
+        "threshold": 0.0
+      }
+    },
+    "fryum": {
+      "scores": {
+        "n": 2,
+        "n_normal": 1,
+        "n_anomaly": 1,
+        "accuracy": 0.5,
+        "macro_f1": 0.3333333333333333,
+        "recall": 1.0,
+        "fpr": 1.0,
+        "invalid_rate": 0.0,
+        "n_invalid": 0,
+        "n_invalid_normal": 0,
+        "n_invalid_anomaly": 0,
+        "image_auroc": 1.0,
+        "image_ap": 1.0,
+        "threshold": 0.0
+      }
+    },
+    "macaroni1": {
+      "scores": {
+        "n": 2,
+        "n_normal": 1,
+        "n_anomaly": 1,
+        "accuracy": 0.5,
+        "macro_f1": 0.3333333333333333,
+        "recall": 1.0,
+        "fpr": 1.0,
+        "invalid_rate": 0.0,
+        "n_invalid": 0,
+        "n_invalid_normal": 0,
+        "n_invalid_anomaly": 0,
+        "image_auroc": 1.0,
+        "image_ap": 1.0,
+        "threshold": 0.0
+      }
+    },
+    "macaroni2": {
+      "scores": {
+        "n": 2,
+        "n_normal": 1,
+        "n_anomaly": 1,
+        "accuracy": 0.5,
+        "macro_f1": 0.3333333333333333,
+        "recall": 1.0,
+        "fpr": 1.0,
+        "invalid_rate": 0.0,
+        "n_invalid": 0,
+        "n_invalid_normal": 0,
+        "n_invalid_anomaly": 0,
+        "image_auroc": 0.0,
+        "image_ap": 0.5,
+        "threshold": 0.0
+      }
+    },
+    "pcb1": {
+      "scores": {
+        "n": 2,
+        "n_normal": 1,
+        "n_anomaly": 1,
+        "accuracy": 0.5,
+        "macro_f1": 0.3333333333333333,
+        "recall": 1.0,
+        "fpr": 1.0,
+        "invalid_rate": 0.0,
+        "n_invalid": 0,
+        "n_invalid_normal": 0,
+        "n_invalid_anomaly": 0,
+        "image_auroc": 1.0,
+        "image_ap": 1.0,
+        "threshold": 0.0
+      }
+    },
+    "pcb2": {
+      "scores": {
+        "n": 2,
+        "n_normal": 1,
+        "n_anomaly": 1,
+        "accuracy": 0.5,
+        "macro_f1": 0.3333333333333333,
+        "recall": 1.0,
+        "fpr": 1.0,
+        "invalid_rate": 0.0,
+        "n_invalid": 0,
+        "n_invalid_normal": 0,
+        "n_invalid_anomaly": 0,
+        "image_auroc": 0.0,
+        "image_ap": 0.5,
+        "threshold": 0.0
+      }
+    },
+    "pcb3": {
+      "scores": {
+        "n": 2,
+        "n_normal": 1,
+        "n_anomaly": 1,
+        "accuracy": 0.5,
+        "macro_f1": 0.3333333333333333,
+        "recall": 1.0,
+        "fpr": 1.0,
+        "invalid_rate": 0.0,
+        "n_invalid": 0,
+        "n_invalid_normal": 0,
+        "n_invalid_anomaly": 0,
+        "image_auroc": 1.0,
+        "image_ap": 1.0,
+        "threshold": 0.0
+      }
+    },
+    "pcb4": {
+      "scores": {
+        "n": 2,
+        "n_normal": 1,
+        "n_anomaly": 1,
+        "accuracy": 0.5,
+        "macro_f1": 0.3333333333333333,
+        "recall": 1.0,
+        "fpr": 1.0,
+        "invalid_rate": 0.0,
+        "n_invalid": 0,
+        "n_invalid_normal": 0,
+        "n_invalid_anomaly": 0,
+        "image_auroc": 1.0,
+        "image_ap": 1.0,
+        "threshold": 0.0
+      }
+    },
+    "pipe_fryum": {
+      "scores": {
+        "n": 2,
+        "n_normal": 1,
+        "n_anomaly": 1,
+        "accuracy": 0.5,
+        "macro_f1": 0.3333333333333333,
+        "recall": 1.0,
+        "fpr": 1.0,
+        "invalid_rate": 0.0,
+        "n_invalid": 0,
+        "n_invalid_normal": 0,
+        "n_invalid_anomaly": 0,
+        "image_auroc": 1.0,
+        "image_ap": 1.0,
+        "threshold": 0.0
+      }
+    }
+  },
+  "category_macro": {
+    "scores": {
+      "image_auroc": 0.8333333333333334,
+      "image_ap": 0.9166666666666666,
+      "accuracy": 0.5,
+      "macro_f1": 0.3333333333333333,
+      "recall": 1.0,
+      "fpr": 1.0,
+      "invalid_rate": 0.0
+    }
+  },
+  "category_macro_counts": {
+    "scores": {
+      "image_auroc": 12,
+      "image_ap": 12,
+      "accuracy": 12,
+      "macro_f1": 12,
+      "recall": 12,
+      "fpr": 12,
+      "invalid_rate": 12
+    }
+  },
+  "generated_rule": "initial Yes/No; invalid is wrong and a false negative for its true class"
+}
