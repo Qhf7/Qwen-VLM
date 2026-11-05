@@ -1,0 +1,27 @@
+Create a top-tier computer-vision paper method figure for “Qwen-VLM: Industrial Anomaly Detection with Visual Evidence and Parameter-Efficient Language Adaptation”. Use a clean white landscape 16:9 canvas, precise flat vector infographic style, navy outlines, orthogonal arrows, generous whitespace, crisp readable typography, no gradients, 3D, photos, logos, or watermark. Use meaningful icons: industrial image, feature grid, CLS vector, CNN blocks, heatmap, token chips, transformer, snowflake, flame, score gauge, JSON braces, bounding-box overlay.
+
+Compose three zones.
+
+UPPER LARGE ZONE — title “Main transfer route — shared ImageBind / BigDec visual evidence”. Left-to-right flow with no crossings:
+Industrial image + square224 preprocessing → frozen ImageBind encoder. Split into two streams:
+(1) “Global CLS [B,1024]” → “Linear projection 1024→4096” → one chip “1 global token”.
+(2) “Layers 7 / 15 / 23 / 31 patch features” → “BigDec upsampling decoder” with note “fixed teacher downstream” → anomaly probability heatmap “[B,1,224,224]” → “PromptLearner”.
+PromptLearner must show two groups: “9 learned base prompts” and “9 map-adaptive prompts”, output “18 map tokens”. Merge stream (1) and stream (2) into a ribbon labeled exactly “19 soft tokens = CLS + 9 base + 9 adaptive”. Insert into a text-sequence card labeled “text prefix + 19 soft tokens + text suffix”. Then → “Qwen3-VL language backbone (text part only)” with transformer-stack icon, blue snowflake, and note “original BF16 weights frozen; optional q/v LoRA r8, α16”. Split to:
+• “First-answer score” with formula “s = logit(Yes) − logit(No)” and AUROC/AP gauge.
+• “Free-form answer” with “Yes / No”.
+• “Structured output S” with exact schema “Yes + {bbox, location}” and a bounding-box overlay.
+Add a grey note: “Main route does not use Qwen native vision tokens, DeepStack, or ground-truth mask at inference.” Bbox/location are generated language tokens; do not draw a detection head or IoU head.
+
+LOWER DASHED ZONE — title “Independent native Qwen3-VL QLoRA route — separate protocol”. Draw a distinct path, no connection to upper zone:
+“RGB image + instruction” → “Native Qwen3-VL processor” → “frozen native vision encoder + merger + DeepStack” → “NF4 language model” → “q/k/v/o LoRA r16, α32” → “decision JSON” and “region JSON”. Add caption “independent data / budget / evaluation protocol”. Use teal and violet accents.
+
+BOTTOM STRIP — title “Training and evaluation”. Four compact lanes:
+“Locator repair: ImageBind frozen; BigDec trainable”
+“Phase 1 / A: bridge trainable; language weights frozen”
+“B / C / D / Cpair / R: matched branch studies; q/v LoRA where specified”
+“S: continues from same-seed C best; structured SFT”
+Far-right evaluation block: “decision score → AUROC/AP”; “generated answer → F1 / recall / FPR”; “structured answer → schema validity / bbox IoU”.
+
+Legend with exact labels: “snowflake = frozen”, “flame = trainable”, “solid arrow = data flow”, “dashed box = separate protocol”.
+
+Scientific constraints: BigDec consumes the four ImageBind patch streams, not global CLS. Main route uses only Qwen language component; do not draw native vision tower there. Main route has 19 soft tokens in order CLS, 9 base, 9 adaptive. Native QLoRA is independent complete Qwen vision with NF4 q/k/v/o LoRA. Do not invent metrics, modules, or a sequential chain across variants. Make it balanced and legible when reduced to paper-column width.
