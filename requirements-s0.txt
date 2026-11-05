@@ -1,7 +1,0 @@
-numpy
-pandas
-pyarrow
-Pillow
-opencv-python
-scipy
-scikit-learn

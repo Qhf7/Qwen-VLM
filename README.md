@@ -1,88 +1,88 @@
-# 工业异常检测与多模态领域适配
+# Qwen3-VL 多模态适配与参数高效后训练
 
-本仓库记录从跨零件异常分割、AnomalyGPT 语言迁移到原生 Qwen3-VL QLoRA 的代码、实验协议和结果。三个方向使用不同的数据与训练条件，结果分别解释。
+本目录汇集本项目的代码、配置、实验结果和文档，复制自原工作目录，保留原文件。整理日期为 2026-11-05。本次整理只做归档、文档适配与核验，没有新增模型训练或推理。
 
-| 路线 | 代码入口 | 已完成的工作 | 结果入口 |
-|---|---|---|---|
-| 原生 Qwen3-VL | [industrial_vlm](industrial_vlm/) | VisA 数据构建、语言层 NF4 QLoRA、三组任务消融、生成及连续评分、单图推理 | [第二轮实验报告](industrial_vlm/reports/multitask_v2/实验报告.md) |
-| AnomalyGPT 语言迁移 | [followup_20261026](AnomalyGPT/followup_20261026/) | 保留 ImageBind/decoder/PromptLearner，比较冻结 Qwen、Qwen LoRA、Vicuna，三随机种子控制实验 | [最终实验结论](docs/strict_qwen_followup_20261026/最终实验结论.md) |
-| 跨零件分割 | [seg_cross_part](seg_cross_part/) | Real-IAD 分组划分、DINOv2 分割、CLIP 语义对照、像素指标与 bootstrap | [项目说明](docs/项目说明.md)、[实验台账](docs/实验进度与版本记录.md) |
+## 从哪里开始
 
-## 修正视觉管线后的迁移实验（2026-11-04）
+1. 阅读 [项目全程精读](docs/Qwen3-VL多模态适配与后训练优化_项目全程精读.md)，理解问题、架构、修复、训练及评测证据。文末含代码索引和面试问答。
+2. 用 [成果与创新总结](docs/项目成果与创新总结.md) 查看数字与贡献边界，用 [迁移演进与训练清单](docs/Qwen迁移实验演进与训练清单.md) 区分历史实验。
+3. 对照 [最终报告](migration_20261103/advanced_20261104/FINAL_REPORT.md) 与 [最终证据审计](migration_20261103/advanced_20261104/FINAL_EVIDENCE_AUDIT.md)，复核开发收益和外部负结果。
+4. 通过 [代码与文件附录](docs/项目精读附录_代码与文件索引.md)、[源码配置表](docs/项目源码与配置清单.tsv) 和 [全包清单](DELIVERY_MANIFEST.tsv) 找到实际实现。
+5. 简历准备可读 [项目经历](docs/大模型基座算法岗位_项目经历_整合版.md) 和 [140 题面试问答](docs/项目精读附录_面试问答.md)。
 
-[本轮迁移目录](migration_20261103/README.md)包含修正 mask、几何和特征布局后的源码、三 seed 配对实验、原生视觉适配、定位蒸馏、学生 ROI 推理及失败分析。固定 ImageBind/BigDec，训练桥接层并冻结语言骨干时，自定义监督开发验证 val380 的 Image AUROC 为 Vicuna **0.889684±0.013285**、Qwen **0.925779±0.032698**（均值±样本标准差）；生成 Macro-F1 为 **0.816122→0.845672**。
+## 已得到的结果
 
-这与下文 2026-10-26 的历史小预算迁移实验采用不同管线和预算。后续B/C三seed配对延续实验已完成：冻结桥接、仅训练语言q/v LoRA（r8、alpha16、383万参数），按val AUROC选择的平均AUROC由 **0.925779→0.936983**（+1.1204个百分点），生成Macro-F1由 **0.845672→0.861732**；异常召回均值71.96%→76.44%，正常FPR为0→1.94%。固定500步终点也保持AUROC正增量。完整配置、继续桥接对照、独立重载证据与限制见 [LoRA结果分析](migration_20261103/lora_20261104/ANALYSIS.md) 和 [数值报告](migration_20261103/lora_20261104/RESULTS.md)。
+主线采用含真实异常监督的自定义 VisA 划分：train 9,985、val 380（正常 172、异常 208）。val 用于选 checkpoint 和报告，以下数值均为 seed 42/43/44 的均值。
 
-## 原生 Qwen3-VL 的当前结果
+| 主线方案 | 开发 AUROC | 开发生成 Macro-F1 | 开发正常 FPR | MVTec 外部 AUROC |
+|---|---:|---:|---:|---:|
+| Vicuna，重新训练桥接、LLM 冻结 | 0.889684 | 0.816122 | 见 Phase1 报告 | 未运行 |
+| A：Qwen，重新训练桥接、LLM 冻结 | 0.925779 | 0.845672 | 0.000000 | 0.708834 |
+| C：语言 q/v LoRA | 0.936983 | 0.861732 | 0.019380 | 0.711363 |
+| D：桥接低学习率＋语言 LoRA | 0.940258 | 0.866186 | 0.011628 | 0.714118 |
+| Cpair：匹配 CE 控制 | 0.935334 | 0.860004 | 0.025194 | 0.709581 |
+| R：匹配 CE＋ranking | 0.947348 | 0.871828 | 0.062016 | 0.703438 |
 
-底座为 Qwen3-VL-8B-Instruct，保留原生视觉输入路径，冻结视觉模块与底座参数，仅对语言注意力 q/k/v/o 投影注入 LoRA（r=16、alpha=32、dropout=0.05）。可训练参数为 **15,335,424**。
+C 的可训练参数为 **3,833,856**（q/v，r=8、alpha=16）；D 额外更新桥接。C、D、Cpair/R 从 A 的同 seed 起点分别训练，不能读成逐级累计提升；R 的归因对照是 Cpair。只有 S 从 C 继续训练。首答案 Yes−No logit 差用于 AUROC/AP；自由生成答案用于 F1/Recall/FPR，两者分开报告。
 
-第二轮各组均使用 768 张训练来源图、1,536 次曝光、192 次优化更新，seed=42。同一份 120 张同域验证图包含 60 正常、60 异常，覆盖 12 类产品。
+冻结 MVTec 外部集含 1,575 图，7 模型×3 seed 共 **33,075** 条预测。外部生成 FPR 约 **61%–72%**，R 的开发排序收益未跨域复现。S 把结构有效率从 **0.641270 提高至 0.919577**，但异常框 IoU **0.071108→0.069815**；原生 ROI planner 在 380 图上全部选择 answer，crop=0。定位与自主工具收益尚未成立。
 
-| 模型/训练任务 | AUROC | AP |
-|---|---:|---:|
-| NF4 量化底座 | 82.39% | 85.58% |
-| RR：两次区域任务 | 91.49% | 93.01% |
-| DD：两次判断任务 | **94.56%** | **95.26%** |
-| RD：区域与判断各一次 | 92.01% | 93.54% |
+独立原生 Qwen QLoRA 分支保留原生视觉路径：768 张训练来源、1,536 次曝光、192 更新、seed42、val120；判断任务 DD 的 AUROC 从量化底座 **0.8239 提高至 0.9456**。该分支的模型、数据和预算与主线不同，详见 [独立实验报告](industrial_vlm/reports/multitask_v2/实验报告.md)，不能把两条路线的指标直接相减。
 
-连续分数为 `logP(true) - logP(false)`；DD 相对相同量化底座的 AUROC 提高 **12.17 个百分点**。DD 的生成式判断 Macro F1 为 **85.83%**，与按连续分数设阈值的 F1 属不同推理方式。
+## 目录和主要入口
 
-这些是单随机种子、定制有监督协议下的开发验证结果。训练使用真实异常标注；不能直接对照仅正常训练图的官方无监督基准。独立的 240 来源确认集尚未进行模型推理。
+| 路径 | 用途 |
+|---|---|
+| [docs/](docs/) | 全程精读、成果、简历、代码附录、历史项目审计和图表 |
+| [seg_cross_part/](seg_cross_part/) | Real-IAD 跨零件划分、DINO 分割、CLIP 对照、指令构建与评测 |
+| [artifacts/](artifacts/) / [data/](data/) | 小型划分、manifest、统计、指令及历史结果 |
+| [AnomalyGPT/](AnomalyGPT/) | 必要上游代码、复现指南、早期迁移与运行时快照 |
+| [repair_20261103/](repair_20261103/) | mask、几何、特征轴修复，BigDec 训练与复评 |
+| [migration_20261103/code/](migration_20261103/code/) | 视觉缓存、语言桥接、原生视觉对照、定位与推理 |
+| [migration_20261103/lora_20261104/](migration_20261103/lora_20261104/) | B/C LoRA 训练、dtype/梯度/保存重载审计 |
+| [migration_20261103/advanced_20261104/](migration_20261103/advanced_20261104/) | D/Cpair/R/S、工具、冻结外评与原始轻量预测 |
+| [industrial_vlm/](industrial_vlm/) | 原生 Qwen NF4 QLoRA、三任务消融、评分和单图推理 |
 
-![原生 Qwen 验证结果](industrial_vlm/reports/multitask_v2/figures/validation_comparison.png)
+日期目录是历史实验批次。重复的 runtime、配置和 tokenizer 属于当时的执行/保存快照；源码与 checkpoint 身份以对应 run 的 source manifest、SHA 和协议为准。
 
-AnomalyGPT 迁移实验使用另一套视觉路径和预算。2,005 张 VisA 诊断图上，三随机种子生成判断 Macro F1 为：冻结 Qwen 40.63±8.02%、Qwen LoRA 40.52±12.26%、Vicuna 35.14±2.29%；该小预算迁移实验尚未显示稳定的 LoRA 收益。
-
-## 阅读入口
-
-- [项目精读：从问题到代码、从样本到结论](docs/项目精读/00_导读与项目地图.md)：按 kelip 六站方法，分章解释三条路线、真实样本、张量形状、训练损失、指标及关键函数。
-- [工作总结与简历详解](docs/工业异常检测多模态项目_工作总结与简历详解.md)：工作过程、结果口径、项目经历写法。
-- [Qwen LoRA 实现步骤](docs/Qwen_LoRA_项目实现步骤详解.md)：数据、加载、注入、训练、梯度审计、保存与推理。
-- [数据与监督协议](industrial_vlm/DATA_PROTOCOL.md)、[项目卡](industrial_vlm/PROJECT_CARD_ZH.md)。
-- [原生 Qwen 评分比较](industrial_vlm/reports/multitask_v2/scoring_matrix.md)、[生成比较](industrial_vlm/reports/multitask_v2/validation_matrix.md)。
-- [论文阅读索引](docs/论文与代码阅读索引_20261023.md)、[上游代码来源](THIRD_PARTY.md)。
-- [原跨零件项目 README](docs/跨零件异常分割_原始说明.md)。
-
-## 安装与验证
+## 环境与运行准备
 
 ```bash
 git clone https://github.com/Qhf7/VLM_Ali.git
-cd VLM_Ali
+cd VLM_Ali/Qwen-VLM
 
-# 在具备 CUDA 的 Linux 环境安装原生 Qwen 实验依赖
+# 原生 Qwen 路线；在独立 CUDA 环境执行
 python -m pip install -e ./industrial_vlm
 
-# 已有依赖环境中的 CPU 检查；不加载模型权重
+# 已具备依赖时，检查评分逻辑，不加载模型权重
 (cd industrial_vlm && PYTHONPATH=src python ops/test_score.py)
-
-# 分割指标检查另需 requirements-s0.txt 中的依赖
-python -m pip install -r requirements-s0.txt
-python -m seg_cross_part.check_metrics
 ```
 
-原生训练要求支持 BF16 的 CUDA 环境。实际服务器依赖版本见 [requirements-runtime.txt](industrial_vlm/requirements-runtime.txt)；旧 AnomalyGPT 运行环境和原生 Qwen 环境分别记录，不能混装后假定等价。
+原生分支要求 Python≥3.10 及支持 BF16 的 CUDA；实际依赖见 [requirements-runtime.txt](industrial_vlm/requirements-runtime.txt)。历史 AnomalyGPT、当前语言迁移与原生 Qwen 的环境分别记录在各阶段协议中，不应混用后假定结果等价。
 
-## 准备数据与运行
+准备数据、底座及训练权重后，按路线运行：
 
-模型权重、适配器、原始图片、特征缓存和重复压缩快照保存在本地或训练服务器。仓库包含源代码、历史配置、协议、汇总指标及选定的训练/评估元数据，详见 [同步说明](docs/仓库同步说明.md)。
+- 原生 QLoRA：读 [工程 README](industrial_vlm/README.md)、[数据协议](industrial_vlm/DATA_PROTOCOL.md) 与 [多任务实验报告](industrial_vlm/reports/multitask_v2/实验报告.md)。
+- 语言迁移：读 [Phase1 协议](migration_20261103/PHASE1_PROTOCOL.md)、[LoRA 协议](migration_20261103/lora_20261104/PROTOCOL.md) 和 [进阶协议](migration_20261103/advanced_20261104/PROTOCOL.md)。
+- 单图推理：读 [语言迁移入口](migration_20261103/INFERENCE_USAGE.md) 或 [student ROI 入口](migration_20261103/student_roi_20261104/INFERENCE_USAGE.md)，选择结构匹配的 checkpoint。
+- 早期分割：读 [项目说明](docs/项目说明.md) 与 [原始说明](docs/跨零件异常分割_原始说明.md)。
 
-原生路线先从官方来源准备 VisA，并将 Qwen3-VL-8B-Instruct 底座放在本地模型目录，再从 `industrial_vlm` 目录执行：
+历史命令中的 `/root/autodl-tmp/...` 是当时的服务器路径，须根据本机资产映射准备运行目录。训练权重、原始图片和特征缓存没有包含在此包中，因此克隆仓库后需要另行准备资产才能训练或推理。不要改写旧 run、SHA 或 source manifest 来伪装为新运行。
+
+## 交付核验
+
+[ASSETS.md](ASSETS.md) 说明资产来源和省略范围；[THIRD_PARTY.md](THIRD_PARTY.md) 说明上游许可；[DELIVERY_AUDIT.json](DELIVERY_AUDIT.json) 记录复制完整性、源码身份、敏感信息和链接核验。[DELIVERY_MANIFEST.tsv](DELIVERY_MANIFEST.tsv) 包含除清单自身之外的每个交付文件及 SHA256，可在本目录用以下只读命令检查：
 
 ```bash
-export PYTHONPATH="$PWD/src"
-python -m industrial_vlm.data --data-root datasets/VisA --output prepared/visa \
-  --train-size 768 --eval-size 120 --seed 42
-python -m industrial_vlm.infer --model models/Qwen3-VL-8B-Instruct \
-  --adapter runs/multitask_v2/decision_decision/adapter \
-  --image /absolute/path/to/image.png --task decision --output prediction.json
+python - <<'PYVERIFY'
+import csv, hashlib
+from pathlib import Path
+rows = list(csv.DictReader(Path('DELIVERY_MANIFEST.tsv').open(), delimiter='\t'))
+bad = [r['path'] for r in rows if not Path(r['path']).is_file()
+       or hashlib.sha256(Path(r['path']).read_bytes()).hexdigest() != r['sha256']]
+assert not bad, bad
+print(f'PASS: {len(rows)} files')
+PYVERIFY
 ```
 
-上述推理命令需要另行取得对应适配器。历史配置中的 `/root/autodl-tmp/...` 是实验时的服务器路径，换环境时需调整输入与输出路径；复用完整协议请阅读 [原生路线 README](industrial_vlm/README.md) 和第二轮实验报告。训练未保存 optimizer/scheduler 状态，现有适配器检查点不支持精确恢复训练。
-
-服务器辅助工具通过 SSH 自身认证，可使用 `--host`、`--port`，或环境变量 `INDUSTRIAL_VLM_SSH_HOST`、`INDUSTRIAL_VLM_SSH_PORT`；仓库不提供认证信息。
-
-## 代码来源
-
-项目自有代码与上游实现的边界见 [THIRD_PARTY.md](THIRD_PARTY.md)。AnomalyGPT 和 ImageBind 的随附许可证保留在迁移运行时快照内。数据集、模型及上游代码分别遵循各自许可。
+原始对话与认证材料、原始数据集、权重/adapter tensor、特征缓存、重复压缩包及独立论文阅读库均未随包发布。相关论文的必要引用、AnomalyGPT/ImageBind 运行时及其许可仍保留；本项目的精读和实验审计文档属于交付内容。

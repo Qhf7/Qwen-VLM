@@ -1,8 +1,0 @@
-{
-  "state": "not_applicable",
-  "selected_step": 300,
-  "reason": "Intermediate selected checkpoint receives a full generation evaluation",
-  "reused_generation_n": 0,
-  "test_queries": 0,
-  "external_queries": 0
-}

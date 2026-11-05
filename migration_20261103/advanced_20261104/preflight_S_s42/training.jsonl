@@ -1,6 +1,0 @@
-{"step": 1, "loss": 0.25645902805263177, "gradient_norm": 0.26944929361343384, "train_seconds": 0.5613706111907959, "learning_rate": 0.0001}
-{"step": 2, "loss": 0.8859547331085196, "gradient_norm": 0.9047674536705017, "train_seconds": 1.017472743988037, "learning_rate": 0.0001}
-{"step": 10, "loss": 0.7467831826488691, "gradient_norm": 0.3898744285106659, "train_seconds": 4.6393725872039795, "learning_rate": 0.0001}
-{"step": 20, "loss": 0.6574217168677023, "gradient_norm": 0.23822782933712006, "train_seconds": 9.18390154838562, "learning_rate": 0.0001}
-{"step": 30, "loss": 0.589316849847819, "gradient_norm": 0.30554866790771484, "train_seconds": 13.700943231582642, "learning_rate": 0.0001}
-{"step": 40, "loss": 0.45194011926122357, "gradient_norm": 0.7097615003585815, "train_seconds": 18.23294758796692, "learning_rate": 0.0001}

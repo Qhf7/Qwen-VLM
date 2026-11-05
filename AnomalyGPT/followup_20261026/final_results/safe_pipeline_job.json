@@ -1,6 +1,0 @@
-{
-  "pid": 1460,
-  "log": "/root/autodl-tmp/AnomalyGPT/experiments/strict_qwen_bridge_v0/followup_20261026/safe_pipeline_restart_20261026T111607Z.log",
-  "started_at_utc": "2026-10-26T11:16:07.757378+00:00",
-  "reason": "Resume after instance restart; preserve partial outputs"
-}
