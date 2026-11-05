@@ -34,7 +34,7 @@
 <a id="architecture"></a>
 ## 🧩 架构与实验路线
 
-![Qwen-VLM 完整模型框架](docs/assets/readme/model_framework_image2.png)
+![Qwen-VLM 完整模型框架](docs/assets/readme/architecture_real_part_editable.jpg)
 
 **主线：AnomalyGPT 视觉前端 + Qwen 语言骨干。** ImageBind/BigDec 提供图像全局表示与异常图，经 CLS 投影和 PromptLearner 转成语言侧输入。先重新训练桥接，再比较语言 LoRA、联合适配与新训练目标。主线不调用 Qwen 原生视觉 tower。
 
