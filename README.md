@@ -32,7 +32,7 @@
 | **冻结外部验证** | 7 模型 × 3 seed × 1,575 张 MVTec 图，保存并复算 33,075 条预测；保留负结果 | [最终证据审计](migration_20261103/advanced_20261104/FINAL_EVIDENCE_AUDIT.md) |
 | **Jev 判别式基线** | 引入 TypeSafe Jev（System One）作为通用判别基线与决策层对照；同 120 图、448 输入比较 0/1/4-shot 与 Qwen 底座/DD，并完成 ROI 复核与真实路由 pilot | [Jev 研究索引](docs/Jev/README.md) |
 
-这些工作体现多模态接口适配、领域后训练、优化目标设计和评测工程能力。LoRA、QLoRA、ImageBind 与 Qwen 均采用已有方法和底座；个人贡献与上游边界见 [THIRD_PARTY.md](THIRD_PARTY.md)。
+这些工作覆盖多模态接口适配、领域后训练、优化目标设计和评测工程。LoRA、QLoRA、ImageBind 与 Qwen 均采用已有方法和底座；实现与上游边界见 [THIRD_PARTY.md](THIRD_PARTY.md)。
 
 <a id="architecture"></a>
 ## 🧩 架构与实验路线
