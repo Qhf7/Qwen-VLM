@@ -216,7 +216,7 @@ Qwen-VLM/                           ← 仓库根目录
 ├── ASSETS.md / THIRD_PARTY.md       资产准备与上游许可
 ├── DELIVERY_MANIFEST.tsv            逐文件大小与 SHA256
 ├── DELIVERY_AUDIT.json              布局、源码身份和交付核验
-├── docs/                           全程精读、成果、简历、面试与图表
+├── docs/                           全程精读、成果与图表
 │   └── assets/readme/              本页可视化、源数据与绘图脚本
 ├── industrial_vlm/                 独立原生 Qwen NF4 QLoRA 工程
 │   ├── src/industrial_vlm/          数据 / 模型 / 训练 / 推理 / 评分
@@ -240,13 +240,16 @@ Qwen-VLM/                           ← 仓库根目录
 
 | 想了解什么 | 文档 |
 |---|---|
-| 从头理解项目 | [全程精读：问题 → 架构 → 训练 → 结果 → 代码 → 面试](docs/Qwen3-VL多模态适配与后训练优化_项目全程精读.md) |
+| 从头理解项目 | [全程精读：问题 → 架构 → 训练 → 结果 → 代码](docs/Qwen3-VL多模态适配与后训练优化_项目全程精读.md) |
 | 具体成果与创新边界 | [项目成果与创新总结](docs/项目成果与创新总结.md) |
 | Jev 通用判别基线：结果、边界与复现 | [Jev 研究索引](docs/Jev/README.md) · [阶段总报告](industrial_vlm/experiments/jev_followup_20261111/CONTINUOUS_RESEARCH_COMPLETION.md) |
 | 为什么早期替换失败、后来提高 | [迁移演进与训练清单](docs/Qwen迁移实验演进与训练清单.md) |
 | LoRA 如何实现和检查 | [实现步骤详解](docs/Qwen_LoRA_项目实现步骤详解.md) · [保存重载证据](migration_20261103/lora_20261104/verify_status.json) |
 | 最终的正结果与负结果 | [进阶最终报告](migration_20261103/advanced_20261104/FINAL_REPORT.md) · [最终证据审计](migration_20261103/advanced_20261104/FINAL_EVIDENCE_AUDIT.md) |
-| 面试与简历表达 | [140 题面试问答](docs/项目精读附录_面试问答.md) · [项目经历](docs/大模型基座算法岗位_项目经历_整合版.md) |
 | 文件来源与发布范围 | [源码配置清单](docs/项目源码与配置清单.tsv) · [同步说明](docs/仓库同步说明.md) |
 
 本页图表提供 [机器可读数据及来源](docs/assets/readme/evidence.json)、SVG/PNG 和 [生成脚本](docs/assets/readme/render_figures.py)，便于核对与复用。上游代码、模型和数据遵循各自许可；AnomalyGPT/ImageBind 随附许可保留。详见 [THIRD_PARTY.md](THIRD_PARTY.md)。
+
+## License
+
+本仓库中由本项目编写的代码与文档采用 [Apache License 2.0](LICENSE)。第三方组件（AnomalyGPT、ImageBind、Qwen3-VL 等）继续遵循各自上游许可证；范围说明见 [NOTICE](NOTICE) 和 [THIRD_PARTY.md](THIRD_PARTY.md)。仓库不包含模型权重或数据集，本许可不改变第三方资产的许可条件。

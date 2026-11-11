@@ -36,7 +36,7 @@ best按val AUROC选择，允许step0；同时报告固定500步final。三seed�
 
 精确加载使用 `FrozenLanguageBridge` → 原seed bridge → `configure_arm`（先将adapter转FP32）→ `load_delta`。C的 `.pt` 绑定原bridge、基座与cache身份；仅加载adapter不能替代桥接。标准PEFT导出便于互操作，精确复现以本项目加载代码和独立进程核验为准。
 
-固定Yes/No答案模板支持异常判别领域适配，不能据此证明模型具有更强的复杂缺陷解释或推理能力。只有真实完成并核验后，才在简历补充LoRA/SFT实现；性能提升数字以配对结果为准。
+固定Yes/No答案模板支持异常判别领域适配，不能据此证明模型具有更强的复杂缺陷解释或推理能力。只有真实完成并核验后，才对外补充LoRA/SFT实现说明；性能提升数字以配对结果为准。
 
 本轮已完成结果：C best三seed平均AUROC0.936983、AP0.951534、生成Macro-F1 0.861732，FPR均值0.019380；固定500步final AUROC0.936452。与起点及继续训练对照的差值和限制见 [ANALYSIS.md](ANALYSIS.md)。从18份保存预测重新计算的整体/逐类别指标均一致，见 `prediction_metrics_audit.json`。
 

@@ -1,0 +1,10 @@
+Qwen-VLM
+Copyright 2026 Qhf7
+
+This repository contains original code and documentation licensed under the
+Apache License, Version 2.0, except where otherwise noted.
+
+Third-party components, including AnomalyGPT, ImageBind, Qwen3-VL and
+dataset-derived materials, remain under their respective upstream licenses.
+See THIRD_PARTY.md for attribution and scope. No model weights, datasets or
+third-party assets are relicensed by this notice.

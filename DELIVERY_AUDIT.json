@@ -41,16 +41,6 @@
         "root_sha256": "683c0d24cbb982fc2629c1d006529d8955707c853032b3bb2f3d08aac8c1dc06"
       },
       {
-        "path": "docs/大模型基座算法岗位_项目经历.md",
-        "previous_package_sha256": "58439707461ce98247296e499191e74a6b659b2a0d2279b4a1654d746e4b1053",
-        "root_sha256": "45ae598af9fec89685fc04f0a1758c088038f14daa9544b095baf4fc1138c5cc"
-      },
-      {
-        "path": "docs/大模型基座算法岗位_项目经历_整合版.md",
-        "previous_package_sha256": "f85e8b6f264bc85289bd7efda3324d7e53fc06c690c6d7e39ff9aa10697839e2",
-        "root_sha256": "29447fef18f4b1b3a07e94778852a02bab111285da2ef6251c39587b7db6577e"
-      },
-      {
         "path": "docs/项目源码与配置清单.tsv",
         "previous_package_sha256": "119b7adaa99b58204b92079800836536b69326be83af7f3a04c176c2d4e91e12",
         "root_sha256": "47ab8e338b1ba51c37168d552a681a122a27dc79148b7cec18908b0e7ac75bbe"
@@ -125,5 +115,7 @@
     "Historical run/source manifests and model hashes retain their original bytes; they do not imply weight or dataset availability.",
     "Only published project files are listed in the manifest; unrelated local assets remain outside Git tracking.",
     "Repository rename preserves existing commit history."
-  ]
+  ],
+  "public_repository_cleanup_2026_11_11": "Non-public personal documents were moved outside Git tracking and removed from the public tree. Counts and hashes in this file describe the 2026-11-05 delivery snapshot.",
+  "snapshot_note": "This audit describes the 2026-11-05 delivery snapshot. DELIVERY_MANIFEST.tsv is authoritative for current file bytes; later documentation and license edits are not reflected in the historical hashes above."
 }

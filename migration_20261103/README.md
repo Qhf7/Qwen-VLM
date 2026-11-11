@@ -8,10 +8,9 @@
 - [语言骨干三 seed 配对](PHASE1_RESULTS.md)：只改变语言骨干及必要分词器/模板，Image AUROC 0.889684→0.925779。
 - [原生多模态接口](PHASE2_RESULTS.md)、[定位与蒸馏](PHASE3_5_RESULTS.md)、[ROI 对照](PHASE4_RESULTS.md)。
 - [学生 ROI 结果](student_roi_20261104/STUDENT_ROI_RESULTS.md)、[单图推理](student_roi_20261104/INFERENCE_USAGE.md)、[失败诊断](student_roi_20261104/failure_analysis_224/REPORT.md)。
-- [项目经历与下一阶段 LoRA 方案](PROJECT_EXPERIENCE_AND_LORA_PLAN.md)。
 - [已完成语言LoRA三seed配对实验](lora_20261104/ANALYSIS.md)：B为桥接继续训练、C为冻结桥接的q/v LoRA；C best平均AUROC0.936983、生成Macro-F1 0.861732，同时报告召回/FPR、固定500步终点及独立重载核验。
 
-- [进阶实验与冻结外评](advanced_20261104/README.md)：D联合适配、匹配排序、mask监督空间回答和五臂原生ROI工具已完成；外部21/21组已完成并复算，详见[最终报告](advanced_20261104/FINAL_REPORT.md)与[简历表述](advanced_20261104/PROJECT_PROGRESS.md)。
+- [进阶实验与冻结外评](advanced_20261104/README.md)：D联合适配、匹配排序、mask监督空间回答和五臂原生ROI工具已完成；外部21/21组已完成并复算，详见[最终报告](advanced_20261104/FINAL_REPORT.md)。
 
 数据为自定义有监督 train9985/val380，包含真实异常训练；这些属于开发验证结果。历史 test456 已参与开发，不能称为未见盲测。
 
