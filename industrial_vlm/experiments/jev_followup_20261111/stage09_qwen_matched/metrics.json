@@ -1,0 +1,335 @@
+{
+  "schema": "qwen-stage08-matched-png-v1",
+  "status": "complete",
+  "mode": "formal240",
+  "prediction_freeze": {
+    "schema": "qwen-stage08-matched-png-v1",
+    "contract_sha256": "905d2f978a041de44b0078811aed001985b15acaf351796805ca37a8c6573f01",
+    "scores_sha256": "14eb5850370b2b706c82a9a46c208c2ef97b173fba3042248ce21587c3dcd83b",
+    "accepted": 240,
+    "labels_opened_before_prediction_freeze": false,
+    "confirmation_opened": false
+  },
+  "labels_file_sha256": "6b46a731a113eedac1dc73b86fbe2d09a7c1218b5514417fd7dde1cd52d0bdc6",
+  "arms": {
+    "base": {
+      "overall": {
+        "n": 120,
+        "n_anomalous": 60,
+        "n_normal": 60,
+        "auroc": 0.8244444444444444,
+        "average_precision": 0.8596780408578113,
+        "auprc_definition": "non-interpolated average precision; tied values grouped",
+        "ranking_field": "anomaly_log_odds",
+        "confidence_calibrated": false
+      },
+      "default_equal_candidate_threshold": {
+        "threshold_log_odds": 0.0,
+        "comparison": "anomaly_log_odds > threshold",
+        "tp": 14,
+        "fp": 0,
+        "tn": 60,
+        "fn": 46,
+        "recall": 0.23333333333333334,
+        "fpr": 0.0,
+        "precision": 1.0,
+        "anomaly_f1": 0.3783783783783784,
+        "macro_f1": 0.5506349723217193
+      },
+      "by_category": {
+        "candle": {
+          "n": 10,
+          "n_anomalous": 5,
+          "n_normal": 5,
+          "auroc": 1.0,
+          "average_precision": 1.0,
+          "auprc_definition": "non-interpolated average precision; tied values grouped",
+          "ranking_field": "anomaly_log_odds",
+          "confidence_calibrated": false
+        },
+        "capsules": {
+          "n": 10,
+          "n_anomalous": 5,
+          "n_normal": 5,
+          "auroc": 0.92,
+          "average_precision": 0.9266666666666667,
+          "auprc_definition": "non-interpolated average precision; tied values grouped",
+          "ranking_field": "anomaly_log_odds",
+          "confidence_calibrated": false
+        },
+        "cashew": {
+          "n": 10,
+          "n_anomalous": 5,
+          "n_normal": 5,
+          "auroc": 1.0,
+          "average_precision": 1.0,
+          "auprc_definition": "non-interpolated average precision; tied values grouped",
+          "ranking_field": "anomaly_log_odds",
+          "confidence_calibrated": false
+        },
+        "chewinggum": {
+          "n": 10,
+          "n_anomalous": 5,
+          "n_normal": 5,
+          "auroc": 1.0,
+          "average_precision": 1.0,
+          "auprc_definition": "non-interpolated average precision; tied values grouped",
+          "ranking_field": "anomaly_log_odds",
+          "confidence_calibrated": false
+        },
+        "fryum": {
+          "n": 10,
+          "n_anomalous": 5,
+          "n_normal": 5,
+          "auroc": 0.96,
+          "average_precision": 0.9666666666666668,
+          "auprc_definition": "non-interpolated average precision; tied values grouped",
+          "ranking_field": "anomaly_log_odds",
+          "confidence_calibrated": false
+        },
+        "macaroni1": {
+          "n": 10,
+          "n_anomalous": 5,
+          "n_normal": 5,
+          "auroc": 0.94,
+          "average_precision": 0.942857142857143,
+          "auprc_definition": "non-interpolated average precision; tied values grouped",
+          "ranking_field": "anomaly_log_odds",
+          "confidence_calibrated": false
+        },
+        "macaroni2": {
+          "n": 10,
+          "n_anomalous": 5,
+          "n_normal": 5,
+          "auroc": 0.82,
+          "average_precision": 0.8711111111111113,
+          "auprc_definition": "non-interpolated average precision; tied values grouped",
+          "ranking_field": "anomaly_log_odds",
+          "confidence_calibrated": false
+        },
+        "pcb1": {
+          "n": 10,
+          "n_anomalous": 5,
+          "n_normal": 5,
+          "auroc": 0.6,
+          "average_precision": 0.72,
+          "auprc_definition": "non-interpolated average precision; tied values grouped",
+          "ranking_field": "anomaly_log_odds",
+          "confidence_calibrated": false
+        },
+        "pcb2": {
+          "n": 10,
+          "n_anomalous": 5,
+          "n_normal": 5,
+          "auroc": 0.98,
+          "average_precision": 0.9666666666666668,
+          "auprc_definition": "non-interpolated average precision; tied values grouped",
+          "ranking_field": "anomaly_log_odds",
+          "confidence_calibrated": false
+        },
+        "pcb3": {
+          "n": 10,
+          "n_anomalous": 5,
+          "n_normal": 5,
+          "auroc": 0.3,
+          "average_precision": 0.4355555555555556,
+          "auprc_definition": "non-interpolated average precision; tied values grouped",
+          "ranking_field": "anomaly_log_odds",
+          "confidence_calibrated": false
+        },
+        "pcb4": {
+          "n": 10,
+          "n_anomalous": 5,
+          "n_normal": 5,
+          "auroc": 1.0,
+          "average_precision": 1.0,
+          "auprc_definition": "non-interpolated average precision; tied values grouped",
+          "ranking_field": "anomaly_log_odds",
+          "confidence_calibrated": false
+        },
+        "pipe_fryum": {
+          "n": 10,
+          "n_anomalous": 5,
+          "n_normal": 5,
+          "auroc": 1.0,
+          "average_precision": 1.0,
+          "auprc_definition": "non-interpolated average precision; tied values grouped",
+          "ranking_field": "anomaly_log_odds",
+          "confidence_calibrated": false
+        }
+      },
+      "mean_latency_seconds": 0.26028774039198954,
+      "peak_memory_allocated_bytes": 7371736064
+    },
+    "decision_decision": {
+      "overall": {
+        "n": 120,
+        "n_anomalous": 60,
+        "n_normal": 60,
+        "auroc": 0.9348611111111111,
+        "average_precision": 0.9432879438886246,
+        "auprc_definition": "non-interpolated average precision; tied values grouped",
+        "ranking_field": "anomaly_log_odds",
+        "confidence_calibrated": false
+      },
+      "default_equal_candidate_threshold": {
+        "threshold_log_odds": 0.0,
+        "comparison": "anomaly_log_odds > threshold",
+        "tp": 43,
+        "fp": 3,
+        "tn": 57,
+        "fn": 17,
+        "recall": 0.7166666666666667,
+        "fpr": 0.05,
+        "precision": 0.9347826086956522,
+        "anomaly_f1": 0.8113207547169812,
+        "macro_f1": 0.8310335116868488
+      },
+      "by_category": {
+        "candle": {
+          "n": 10,
+          "n_anomalous": 5,
+          "n_normal": 5,
+          "auroc": 1.0,
+          "average_precision": 1.0,
+          "auprc_definition": "non-interpolated average precision; tied values grouped",
+          "ranking_field": "anomaly_log_odds",
+          "confidence_calibrated": false
+        },
+        "capsules": {
+          "n": 10,
+          "n_anomalous": 5,
+          "n_normal": 5,
+          "auroc": 0.8,
+          "average_precision": 0.7961904761904762,
+          "auprc_definition": "non-interpolated average precision; tied values grouped",
+          "ranking_field": "anomaly_log_odds",
+          "confidence_calibrated": false
+        },
+        "cashew": {
+          "n": 10,
+          "n_anomalous": 5,
+          "n_normal": 5,
+          "auroc": 1.0,
+          "average_precision": 1.0,
+          "auprc_definition": "non-interpolated average precision; tied values grouped",
+          "ranking_field": "anomaly_log_odds",
+          "confidence_calibrated": false
+        },
+        "chewinggum": {
+          "n": 10,
+          "n_anomalous": 5,
+          "n_normal": 5,
+          "auroc": 1.0,
+          "average_precision": 1.0,
+          "auprc_definition": "non-interpolated average precision; tied values grouped",
+          "ranking_field": "anomaly_log_odds",
+          "confidence_calibrated": false
+        },
+        "fryum": {
+          "n": 10,
+          "n_anomalous": 5,
+          "n_normal": 5,
+          "auroc": 1.0,
+          "average_precision": 1.0,
+          "auprc_definition": "non-interpolated average precision; tied values grouped",
+          "ranking_field": "anomaly_log_odds",
+          "confidence_calibrated": false
+        },
+        "macaroni1": {
+          "n": 10,
+          "n_anomalous": 5,
+          "n_normal": 5,
+          "auroc": 0.92,
+          "average_precision": 0.942857142857143,
+          "auprc_definition": "non-interpolated average precision; tied values grouped",
+          "ranking_field": "anomaly_log_odds",
+          "confidence_calibrated": false
+        },
+        "macaroni2": {
+          "n": 10,
+          "n_anomalous": 5,
+          "n_normal": 5,
+          "auroc": 0.76,
+          "average_precision": 0.8444444444444446,
+          "auprc_definition": "non-interpolated average precision; tied values grouped",
+          "ranking_field": "anomaly_log_odds",
+          "confidence_calibrated": false
+        },
+        "pcb1": {
+          "n": 10,
+          "n_anomalous": 5,
+          "n_normal": 5,
+          "auroc": 1.0,
+          "average_precision": 1.0,
+          "auprc_definition": "non-interpolated average precision; tied values grouped",
+          "ranking_field": "anomaly_log_odds",
+          "confidence_calibrated": false
+        },
+        "pcb2": {
+          "n": 10,
+          "n_anomalous": 5,
+          "n_normal": 5,
+          "auroc": 0.96,
+          "average_precision": 0.9666666666666668,
+          "auprc_definition": "non-interpolated average precision; tied values grouped",
+          "ranking_field": "anomaly_log_odds",
+          "confidence_calibrated": false
+        },
+        "pcb3": {
+          "n": 10,
+          "n_anomalous": 5,
+          "n_normal": 5,
+          "auroc": 0.2,
+          "average_precision": 0.5210317460317461,
+          "auprc_definition": "non-interpolated average precision; tied values grouped",
+          "ranking_field": "anomaly_log_odds",
+          "confidence_calibrated": false
+        },
+        "pcb4": {
+          "n": 10,
+          "n_anomalous": 5,
+          "n_normal": 5,
+          "auroc": 1.0,
+          "average_precision": 1.0,
+          "auprc_definition": "non-interpolated average precision; tied values grouped",
+          "ranking_field": "anomaly_log_odds",
+          "confidence_calibrated": false
+        },
+        "pipe_fryum": {
+          "n": 10,
+          "n_anomalous": 5,
+          "n_normal": 5,
+          "auroc": 1.0,
+          "average_precision": 1.0,
+          "auprc_definition": "non-interpolated average precision; tied values grouped",
+          "ranking_field": "anomaly_log_odds",
+          "confidence_calibrated": false
+        }
+      },
+      "mean_latency_seconds": 0.28854165549079575,
+      "peak_memory_allocated_bytes": 7433077760
+    }
+  },
+  "limitations": [
+    "Previously viewed development validation; no blind confirmation or deployment claim.",
+    "Exact same stage08 query PNG bytes, one image and no references in both Qwen arms.",
+    "Qwen JSON boolean prompt/scoring and Jev typed Noul protocol differ.",
+    "Jev internal visual tokens and compute are unknown; matching pixels/images is not matching FLOPs or tokens.",
+    "Qwen two-candidate normalized score is not calibrated confidence.",
+    "Historical Qwen original-resolution scores and historical Jev renderer remain separate evidence."
+  ],
+  "matched_jev_contract": {
+    "path": "/root/autodl-tmp/industrial_vlm/experiments/jev_followup_20261111/stage08_support/contract.json",
+    "sha256": "49a55faf08234a9c7d1c199c87b8f5e5e1de02fa0c0bdbc4ca20b11a9d66d511",
+    "query_plan_sha256": "88beb9f2043ecd1487ed10ed8b1f709b8c3b2574325c76fb6db604b12e0822f2",
+    "historical_config_sha256": "7fbb9d77d05f0a14141d1f1501b4e652758862e46f969618f24afa9e379890a4"
+  },
+  "image_size": [
+    448,
+    448
+  ],
+  "merged_visual_tokens": 196,
+  "fitted_thresholds": false,
+  "confirmation_opened": false
+}

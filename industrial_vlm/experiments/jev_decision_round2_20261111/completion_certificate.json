@@ -1,0 +1,29 @@
+{
+  "schema": "jev-three-way-completion-certificate-v1",
+  "status": "complete",
+  "timestamp_utc": "2026-11-10T19:55:21.292197+00:00",
+  "hostname": "autodl-container-132444827f-9c594038",
+  "passed": 5630,
+  "failed": 0,
+  "artifacts_sha256": {
+    "protocol.json": "f513d908347c5ead1429786e29da0bdfe33f3b3d44f76daf7101f23cfe291fbc",
+    "PROTOCOL.md": "4005f0d7cbc303a22ceabbec3f75a19e8744de748aa01b04f94f3394c0a1badc",
+    "selected_policies.json": "f667483e7e4c97967b3f77811ab980159fb097b25e6f1543af73a49318eb6dc1",
+    "results.json": "acd2cdd5c30e535109b9979ecb64b39533955b3c95fea7ad46d21d60ee97a4f7",
+    "REPORT.md": "b2194d9cd807209f2b4ddb02d901d52b6f357bec291c0ac097ea07e6078b8159",
+    "independent_audit.json": "143a99465ba34ae45436f59899b8704d06d98140e72629dbfbb2e3ec07e8a571",
+    "AUDIT.md": "ed5074443c3a1158374a21cc6b81d01f688a7981df4a706dcecd22587bddb303",
+    "decision_routing_analysis.png": "29b9dd346b38de81764e89121a80e40bce3f2190d73ad13d626a08e8d349422e",
+    "decision_routing_analysis.svg": "1a08bca36d0a477ae2fcac6dd232220fe6879eace2108f2534e2f676f9e111fd",
+    "decision_routing_analysis.provenance.json": "37c7ebf66c47850c38832625e90895ad91fa58ba80887053014655d8839832e8",
+    "code/decision_routing_analysis.py": "585f4e29c434517fcb79049683257840e9eea783a5a79c42fcbfdbfa0d40239d",
+    "code/audit_plot_decision.py": "e5254ce152ff962debbe203e52bf8348c1f09d835b2e8bf593ee02f6edabd516",
+    "code/render_decision_figure_v2.py": "7baea5b1d0f6efcd7ab6e743ad31a1a66c585f261aba52b47ad81c93db6de5bb"
+  },
+  "visual_qa": "Final display-only v2 PNG reviewed locally after server rendering; all4panels labels and captions visible; first-render duplicatelegend corrected, preserved revisions/first_render; numeric and method artifacts unchanged",
+  "api_calls": 0,
+  "model_forward_calls": 0,
+  "model_refit": false,
+  "confirmation_data_read": false,
+  "development_only": true
+}

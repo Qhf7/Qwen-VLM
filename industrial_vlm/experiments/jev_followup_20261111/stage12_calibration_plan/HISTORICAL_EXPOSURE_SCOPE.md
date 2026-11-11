@@ -1,0 +1,7 @@
+# Stage12历史曝光边界：源码引用补充
+
+本记录只阅读已知ops/src/config源码，未遍历预测目录、未读取confirmation或test成员，也未重开stage12标签。已知初始三臂配置的val_file指向balanced120；v2布尔评分与正常阈值校准明确使用prepared/multitask_v2/val_decision_120.jsonl，即本次选样已经排除的current120。prepare_multitask_v2.py会载入完整val做split/annotation一致性核验；这不等于证明全部1,624被模型推理，也不能证明其余来源绝对未使用。
+
+这些只界定已检查的源码入口，不能穷尽历史手动任务、旧配置、验证loss、缓存或模型选择。stage12继续标为native validation remainder的来源隔离新采样研究，不写blind、研究者未读或所有历史模型从未见过。API模型输入不含标签与身份字段；metadata分层选样已经读取标签，必须与之后的预测/校准/评价入口隔离区分。
+
+具体文件SHA与代码行见historical_exposure_reference_review.json。不根据该补充更换已冻结240来源或改变采样规则。

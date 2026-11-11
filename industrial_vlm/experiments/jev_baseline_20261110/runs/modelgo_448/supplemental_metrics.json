@@ -1,0 +1,2548 @@
+{
+  "schema": "jev-industrial-supplement-v1",
+  "status": "complete",
+  "generated_utc": "2026-11-10T15:11:34.230017+00:00",
+  "endpoint_status": "supplementary_not_primary",
+  "model_requested": "jev-1.14.0",
+  "data_role": "previously_viewed_development_validation_not_blind_test",
+  "formal_target_judgments": 360,
+  "query_count": 120,
+  "support_count": 48,
+  "metrics": {
+    "definition": "Unweighted arithmetic mean of 12 within-category AUROCs or APs; not pooled cross-category ranking.",
+    "endpoint_status": "supplementary_not_primary",
+    "shots": {
+      "0": {
+        "n": 120,
+        "category_count": 12,
+        "category_macro": {
+          "auroc": 0.9049999999999999,
+          "ap": 0.9293187830687831
+        },
+        "confusion": {
+          "threshold": 0.5,
+          "comparison": "probability >= threshold",
+          "TP": 46,
+          "FP": 20,
+          "TN": 40,
+          "FN": 14,
+          "n": 120
+        },
+        "by_category": {
+          "candle": {
+            "auroc": 0.9400000000000001,
+            "ap": 0.9428571428571428,
+            "confusion": {
+              "threshold": 0.5,
+              "comparison": "probability >= threshold",
+              "TP": 5,
+              "FP": 4,
+              "TN": 1,
+              "FN": 0,
+              "n": 10
+            }
+          },
+          "capsules": {
+            "auroc": 0.88,
+            "ap": 0.925,
+            "confusion": {
+              "threshold": 0.5,
+              "comparison": "probability >= threshold",
+              "TP": 1,
+              "FP": 0,
+              "TN": 5,
+              "FN": 4,
+              "n": 10
+            }
+          },
+          "cashew": {
+            "auroc": 0.9600000000000001,
+            "ap": 0.9666666666666666,
+            "confusion": {
+              "threshold": 0.5,
+              "comparison": "probability >= threshold",
+              "TP": 2,
+              "FP": 0,
+              "TN": 5,
+              "FN": 3,
+              "n": 10
+            }
+          },
+          "chewinggum": {
+            "auroc": 1.0,
+            "ap": 1.0,
+            "confusion": {
+              "threshold": 0.5,
+              "comparison": "probability >= threshold",
+              "TP": 5,
+              "FP": 1,
+              "TN": 4,
+              "FN": 0,
+              "n": 10
+            }
+          },
+          "fryum": {
+            "auroc": 0.9600000000000001,
+            "ap": 0.9666666666666667,
+            "confusion": {
+              "threshold": 0.5,
+              "comparison": "probability >= threshold",
+              "TP": 4,
+              "FP": 1,
+              "TN": 4,
+              "FN": 1,
+              "n": 10
+            }
+          },
+          "macaroni1": {
+            "auroc": 0.8400000000000001,
+            "ap": 0.9111111111111111,
+            "confusion": {
+              "threshold": 0.5,
+              "comparison": "probability >= threshold",
+              "TP": 4,
+              "FP": 2,
+              "TN": 3,
+              "FN": 1,
+              "n": 10
+            }
+          },
+          "macaroni2": {
+            "auroc": 0.92,
+            "ap": 0.9428571428571428,
+            "confusion": {
+              "threshold": 0.5,
+              "comparison": "probability >= threshold",
+              "TP": 4,
+              "FP": 1,
+              "TN": 4,
+              "FN": 1,
+              "n": 10
+            }
+          },
+          "pcb1": {
+            "auroc": 0.9,
+            "ap": 0.925,
+            "confusion": {
+              "threshold": 0.5,
+              "comparison": "probability >= threshold",
+              "TP": 4,
+              "FP": 2,
+              "TN": 3,
+              "FN": 1,
+              "n": 10
+            }
+          },
+          "pcb2": {
+            "auroc": 0.76,
+            "ap": 0.8392857142857142,
+            "confusion": {
+              "threshold": 0.5,
+              "comparison": "probability >= threshold",
+              "TP": 5,
+              "FP": 4,
+              "TN": 1,
+              "FN": 0,
+              "n": 10
+            }
+          },
+          "pcb3": {
+            "auroc": 0.78,
+            "ap": 0.8057142857142858,
+            "confusion": {
+              "threshold": 0.5,
+              "comparison": "probability >= threshold",
+              "TP": 2,
+              "FP": 0,
+              "TN": 5,
+              "FN": 3,
+              "n": 10
+            }
+          },
+          "pcb4": {
+            "auroc": 1.0,
+            "ap": 1.0,
+            "confusion": {
+              "threshold": 0.5,
+              "comparison": "probability >= threshold",
+              "TP": 5,
+              "FP": 4,
+              "TN": 1,
+              "FN": 0,
+              "n": 10
+            }
+          },
+          "pipe_fryum": {
+            "auroc": 0.92,
+            "ap": 0.9266666666666667,
+            "confusion": {
+              "threshold": 0.5,
+              "comparison": "probability >= threshold",
+              "TP": 5,
+              "FP": 1,
+              "TN": 4,
+              "FN": 0,
+              "n": 10
+            }
+          }
+        },
+        "calibration": {
+          "bins": 10,
+          "definition": "equal-width on predicted probability; p=1 belongs to bin9",
+          "records": [
+            {
+              "bin": 0,
+              "lower": 0.0,
+              "upper": 0.1,
+              "interval": "closed_left_open_right",
+              "count": 0,
+              "positive_count": 0,
+              "mean_probability": null,
+              "positive_fraction": null,
+              "absolute_gap": null
+            },
+            {
+              "bin": 1,
+              "lower": 0.1,
+              "upper": 0.2,
+              "interval": "closed_left_open_right",
+              "count": 5,
+              "positive_count": 0,
+              "mean_probability": 0.14600000000000002,
+              "positive_fraction": 0.0,
+              "absolute_gap": 0.14600000000000002
+            },
+            {
+              "bin": 2,
+              "lower": 0.2,
+              "upper": 0.3,
+              "interval": "closed_left_open_right",
+              "count": 6,
+              "positive_count": 1,
+              "mean_probability": 0.265,
+              "positive_fraction": 0.16666666666666666,
+              "absolute_gap": 0.09833333333333336
+            },
+            {
+              "bin": 3,
+              "lower": 0.3,
+              "upper": 0.4,
+              "interval": "closed_left_open_right",
+              "count": 23,
+              "positive_count": 7,
+              "mean_probability": 0.3465217391304347,
+              "positive_fraction": 0.30434782608695654,
+              "absolute_gap": 0.04217391304347817
+            },
+            {
+              "bin": 4,
+              "lower": 0.4,
+              "upper": 0.5,
+              "interval": "closed_left_open_right",
+              "count": 20,
+              "positive_count": 6,
+              "mean_probability": 0.45199999999999996,
+              "positive_fraction": 0.3,
+              "absolute_gap": 0.15199999999999997
+            },
+            {
+              "bin": 5,
+              "lower": 0.5,
+              "upper": 0.6,
+              "interval": "closed_left_open_right",
+              "count": 17,
+              "positive_count": 7,
+              "mean_probability": 0.5429411764705883,
+              "positive_fraction": 0.4117647058823529,
+              "absolute_gap": 0.13117647058823534
+            },
+            {
+              "bin": 6,
+              "lower": 0.6,
+              "upper": 0.7,
+              "interval": "closed_left_open_right",
+              "count": 14,
+              "positive_count": 7,
+              "mean_probability": 0.6328571428571428,
+              "positive_fraction": 0.5,
+              "absolute_gap": 0.13285714285714278
+            },
+            {
+              "bin": 7,
+              "lower": 0.7,
+              "upper": 0.8,
+              "interval": "closed_left_open_right",
+              "count": 13,
+              "positive_count": 10,
+              "mean_probability": 0.7538461538461539,
+              "positive_fraction": 0.7692307692307693,
+              "absolute_gap": 0.01538461538461533
+            },
+            {
+              "bin": 8,
+              "lower": 0.8,
+              "upper": 0.9,
+              "interval": "closed_left_open_right",
+              "count": 12,
+              "positive_count": 12,
+              "mean_probability": 0.8500000000000001,
+              "positive_fraction": 1.0,
+              "absolute_gap": 0.1499999999999999
+            },
+            {
+              "bin": 9,
+              "lower": 0.9,
+              "upper": 1.0,
+              "interval": "closed_both",
+              "count": 10,
+              "positive_count": 10,
+              "mean_probability": 0.9309999999999998,
+              "positive_fraction": 1.0,
+              "absolute_gap": 0.06900000000000017
+            }
+          ],
+          "ece_10_equal_width": 0.10091666666666664
+        },
+        "binary_label_macro_f1_note": "Primary macro_f1 averages normal/anomalous labels, not object categories."
+      },
+      "1": {
+        "n": 120,
+        "category_count": 12,
+        "category_macro": {
+          "auroc": 0.9300000000000002,
+          "ap": 0.9521362433862435
+        },
+        "confusion": {
+          "threshold": 0.5,
+          "comparison": "probability >= threshold",
+          "TP": 52,
+          "FP": 22,
+          "TN": 38,
+          "FN": 8,
+          "n": 120
+        },
+        "by_category": {
+          "candle": {
+            "auroc": 1.0,
+            "ap": 1.0,
+            "confusion": {
+              "threshold": 0.5,
+              "comparison": "probability >= threshold",
+              "TP": 5,
+              "FP": 4,
+              "TN": 1,
+              "FN": 0,
+              "n": 10
+            }
+          },
+          "capsules": {
+            "auroc": 0.8,
+            "ap": 0.8711111111111112,
+            "confusion": {
+              "threshold": 0.5,
+              "comparison": "probability >= threshold",
+              "TP": 3,
+              "FP": 0,
+              "TN": 5,
+              "FN": 2,
+              "n": 10
+            }
+          },
+          "cashew": {
+            "auroc": 1.0,
+            "ap": 1.0,
+            "confusion": {
+              "threshold": 0.5,
+              "comparison": "probability >= threshold",
+              "TP": 4,
+              "FP": 0,
+              "TN": 5,
+              "FN": 1,
+              "n": 10
+            }
+          },
+          "chewinggum": {
+            "auroc": 1.0,
+            "ap": 1.0,
+            "confusion": {
+              "threshold": 0.5,
+              "comparison": "probability >= threshold",
+              "TP": 5,
+              "FP": 1,
+              "TN": 4,
+              "FN": 0,
+              "n": 10
+            }
+          },
+          "fryum": {
+            "auroc": 0.9600000000000001,
+            "ap": 0.9666666666666666,
+            "confusion": {
+              "threshold": 0.5,
+              "comparison": "probability >= threshold",
+              "TP": 4,
+              "FP": 0,
+              "TN": 5,
+              "FN": 1,
+              "n": 10
+            }
+          },
+          "macaroni1": {
+            "auroc": 0.88,
+            "ap": 0.9028571428571428,
+            "confusion": {
+              "threshold": 0.5,
+              "comparison": "probability >= threshold",
+              "TP": 4,
+              "FP": 1,
+              "TN": 4,
+              "FN": 1,
+              "n": 10
+            }
+          },
+          "macaroni2": {
+            "auroc": 0.92,
+            "ap": 0.9266666666666665,
+            "confusion": {
+              "threshold": 0.5,
+              "comparison": "probability >= threshold",
+              "TP": 5,
+              "FP": 4,
+              "TN": 1,
+              "FN": 0,
+              "n": 10
+            }
+          },
+          "pcb1": {
+            "auroc": 1.0,
+            "ap": 1.0,
+            "confusion": {
+              "threshold": 0.5,
+              "comparison": "probability >= threshold",
+              "TP": 5,
+              "FP": 1,
+              "TN": 4,
+              "FN": 0,
+              "n": 10
+            }
+          },
+          "pcb2": {
+            "auroc": 0.8,
+            "ap": 0.8999999999999999,
+            "confusion": {
+              "threshold": 0.5,
+              "comparison": "probability >= threshold",
+              "TP": 5,
+              "FP": 5,
+              "TN": 0,
+              "FN": 0,
+              "n": 10
+            }
+          },
+          "pcb3": {
+            "auroc": 0.88,
+            "ap": 0.925,
+            "confusion": {
+              "threshold": 0.5,
+              "comparison": "probability >= threshold",
+              "TP": 2,
+              "FP": 0,
+              "TN": 5,
+              "FN": 3,
+              "n": 10
+            }
+          },
+          "pcb4": {
+            "auroc": 0.9600000000000001,
+            "ap": 0.9666666666666666,
+            "confusion": {
+              "threshold": 0.5,
+              "comparison": "probability >= threshold",
+              "TP": 5,
+              "FP": 4,
+              "TN": 1,
+              "FN": 0,
+              "n": 10
+            }
+          },
+          "pipe_fryum": {
+            "auroc": 0.9600000000000001,
+            "ap": 0.9666666666666666,
+            "confusion": {
+              "threshold": 0.5,
+              "comparison": "probability >= threshold",
+              "TP": 5,
+              "FP": 2,
+              "TN": 3,
+              "FN": 0,
+              "n": 10
+            }
+          }
+        },
+        "calibration": {
+          "bins": 10,
+          "definition": "equal-width on predicted probability; p=1 belongs to bin9",
+          "records": [
+            {
+              "bin": 0,
+              "lower": 0.0,
+              "upper": 0.1,
+              "interval": "closed_left_open_right",
+              "count": 0,
+              "positive_count": 0,
+              "mean_probability": null,
+              "positive_fraction": null,
+              "absolute_gap": null
+            },
+            {
+              "bin": 1,
+              "lower": 0.1,
+              "upper": 0.2,
+              "interval": "closed_left_open_right",
+              "count": 6,
+              "positive_count": 0,
+              "mean_probability": 0.17499999999999996,
+              "positive_fraction": 0.0,
+              "absolute_gap": 0.17499999999999996
+            },
+            {
+              "bin": 2,
+              "lower": 0.2,
+              "upper": 0.3,
+              "interval": "closed_left_open_right",
+              "count": 17,
+              "positive_count": 2,
+              "mean_probability": 0.23294117647058823,
+              "positive_fraction": 0.11764705882352941,
+              "absolute_gap": 0.11529411764705882
+            },
+            {
+              "bin": 3,
+              "lower": 0.3,
+              "upper": 0.4,
+              "interval": "closed_left_open_right",
+              "count": 14,
+              "positive_count": 2,
+              "mean_probability": 0.34500000000000003,
+              "positive_fraction": 0.14285714285714285,
+              "absolute_gap": 0.20214285714285718
+            },
+            {
+              "bin": 4,
+              "lower": 0.4,
+              "upper": 0.5,
+              "interval": "closed_left_open_right",
+              "count": 9,
+              "positive_count": 4,
+              "mean_probability": 0.4566666666666666,
+              "positive_fraction": 0.4444444444444444,
+              "absolute_gap": 0.01222222222222219
+            },
+            {
+              "bin": 5,
+              "lower": 0.5,
+              "upper": 0.6,
+              "interval": "closed_left_open_right",
+              "count": 15,
+              "positive_count": 7,
+              "mean_probability": 0.5473333333333336,
+              "positive_fraction": 0.4666666666666667,
+              "absolute_gap": 0.08066666666666689
+            },
+            {
+              "bin": 6,
+              "lower": 0.6,
+              "upper": 0.7,
+              "interval": "closed_left_open_right",
+              "count": 12,
+              "positive_count": 5,
+              "mean_probability": 0.6366666666666667,
+              "positive_fraction": 0.4166666666666667,
+              "absolute_gap": 0.22000000000000003
+            },
+            {
+              "bin": 7,
+              "lower": 0.7,
+              "upper": 0.8,
+              "interval": "closed_left_open_right",
+              "count": 14,
+              "positive_count": 7,
+              "mean_probability": 0.7350000000000001,
+              "positive_fraction": 0.5,
+              "absolute_gap": 0.2350000000000001
+            },
+            {
+              "bin": 8,
+              "lower": 0.8,
+              "upper": 0.9,
+              "interval": "closed_left_open_right",
+              "count": 15,
+              "positive_count": 15,
+              "mean_probability": 0.8513333333333332,
+              "positive_fraction": 1.0,
+              "absolute_gap": 0.14866666666666684
+            },
+            {
+              "bin": 9,
+              "lower": 0.9,
+              "upper": 1.0,
+              "interval": "closed_both",
+              "count": 18,
+              "positive_count": 18,
+              "mean_probability": 0.9405555555555556,
+              "positive_fraction": 1.0,
+              "absolute_gap": 0.05944444444444441
+            }
+          ],
+          "ece_10_equal_width": 0.1365833333333334
+        },
+        "binary_label_macro_f1_note": "Primary macro_f1 averages normal/anomalous labels, not object categories."
+      },
+      "4": {
+        "n": 120,
+        "category_count": 12,
+        "category_macro": {
+          "auroc": 0.9383333333333334,
+          "ap": 0.9549735449735449
+        },
+        "confusion": {
+          "threshold": 0.5,
+          "comparison": "probability >= threshold",
+          "TP": 47,
+          "FP": 14,
+          "TN": 46,
+          "FN": 13,
+          "n": 120
+        },
+        "by_category": {
+          "candle": {
+            "auroc": 1.0,
+            "ap": 1.0,
+            "confusion": {
+              "threshold": 0.5,
+              "comparison": "probability >= threshold",
+              "TP": 5,
+              "FP": 2,
+              "TN": 3,
+              "FN": 0,
+              "n": 10
+            }
+          },
+          "capsules": {
+            "auroc": 0.8,
+            "ap": 0.86,
+            "confusion": {
+              "threshold": 0.5,
+              "comparison": "probability >= threshold",
+              "TP": 2,
+              "FP": 0,
+              "TN": 5,
+              "FN": 3,
+              "n": 10
+            }
+          },
+          "cashew": {
+            "auroc": 1.0,
+            "ap": 1.0,
+            "confusion": {
+              "threshold": 0.5,
+              "comparison": "probability >= threshold",
+              "TP": 3,
+              "FP": 0,
+              "TN": 5,
+              "FN": 2,
+              "n": 10
+            }
+          },
+          "chewinggum": {
+            "auroc": 1.0,
+            "ap": 1.0,
+            "confusion": {
+              "threshold": 0.5,
+              "comparison": "probability >= threshold",
+              "TP": 5,
+              "FP": 1,
+              "TN": 4,
+              "FN": 0,
+              "n": 10
+            }
+          },
+          "fryum": {
+            "auroc": 0.92,
+            "ap": 0.9428571428571428,
+            "confusion": {
+              "threshold": 0.5,
+              "comparison": "probability >= threshold",
+              "TP": 3,
+              "FP": 0,
+              "TN": 5,
+              "FN": 2,
+              "n": 10
+            }
+          },
+          "macaroni1": {
+            "auroc": 0.88,
+            "ap": 0.9028571428571428,
+            "confusion": {
+              "threshold": 0.5,
+              "comparison": "probability >= threshold",
+              "TP": 4,
+              "FP": 1,
+              "TN": 4,
+              "FN": 1,
+              "n": 10
+            }
+          },
+          "macaroni2": {
+            "auroc": 0.9600000000000001,
+            "ap": 0.9666666666666668,
+            "confusion": {
+              "threshold": 0.5,
+              "comparison": "probability >= threshold",
+              "TP": 3,
+              "FP": 0,
+              "TN": 5,
+              "FN": 2,
+              "n": 10
+            }
+          },
+          "pcb1": {
+            "auroc": 0.9600000000000001,
+            "ap": 0.9666666666666667,
+            "confusion": {
+              "threshold": 0.5,
+              "comparison": "probability >= threshold",
+              "TP": 5,
+              "FP": 2,
+              "TN": 3,
+              "FN": 0,
+              "n": 10
+            }
+          },
+          "pcb2": {
+            "auroc": 0.8400000000000001,
+            "ap": 0.9111111111111112,
+            "confusion": {
+              "threshold": 0.5,
+              "comparison": "probability >= threshold",
+              "TP": 4,
+              "FP": 4,
+              "TN": 1,
+              "FN": 1,
+              "n": 10
+            }
+          },
+          "pcb3": {
+            "auroc": 0.9400000000000001,
+            "ap": 0.9428571428571428,
+            "confusion": {
+              "threshold": 0.5,
+              "comparison": "probability >= threshold",
+              "TP": 3,
+              "FP": 0,
+              "TN": 5,
+              "FN": 2,
+              "n": 10
+            }
+          },
+          "pcb4": {
+            "auroc": 1.0,
+            "ap": 1.0,
+            "confusion": {
+              "threshold": 0.5,
+              "comparison": "probability >= threshold",
+              "TP": 5,
+              "FP": 2,
+              "TN": 3,
+              "FN": 0,
+              "n": 10
+            }
+          },
+          "pipe_fryum": {
+            "auroc": 0.9600000000000001,
+            "ap": 0.9666666666666666,
+            "confusion": {
+              "threshold": 0.5,
+              "comparison": "probability >= threshold",
+              "TP": 5,
+              "FP": 2,
+              "TN": 3,
+              "FN": 0,
+              "n": 10
+            }
+          }
+        },
+        "calibration": {
+          "bins": 10,
+          "definition": "equal-width on predicted probability; p=1 belongs to bin9",
+          "records": [
+            {
+              "bin": 0,
+              "lower": 0.0,
+              "upper": 0.1,
+              "interval": "closed_left_open_right",
+              "count": 0,
+              "positive_count": 0,
+              "mean_probability": null,
+              "positive_fraction": null,
+              "absolute_gap": null
+            },
+            {
+              "bin": 1,
+              "lower": 0.1,
+              "upper": 0.2,
+              "interval": "closed_left_open_right",
+              "count": 13,
+              "positive_count": 1,
+              "mean_probability": 0.16999999999999998,
+              "positive_fraction": 0.07692307692307693,
+              "absolute_gap": 0.09307692307692306
+            },
+            {
+              "bin": 2,
+              "lower": 0.2,
+              "upper": 0.3,
+              "interval": "closed_left_open_right",
+              "count": 14,
+              "positive_count": 1,
+              "mean_probability": 0.25428571428571434,
+              "positive_fraction": 0.07142857142857142,
+              "absolute_gap": 0.1828571428571429
+            },
+            {
+              "bin": 3,
+              "lower": 0.3,
+              "upper": 0.4,
+              "interval": "closed_left_open_right",
+              "count": 18,
+              "positive_count": 4,
+              "mean_probability": 0.34277777777777774,
+              "positive_fraction": 0.2222222222222222,
+              "absolute_gap": 0.12055555555555553
+            },
+            {
+              "bin": 4,
+              "lower": 0.4,
+              "upper": 0.5,
+              "interval": "closed_left_open_right",
+              "count": 14,
+              "positive_count": 7,
+              "mean_probability": 0.445,
+              "positive_fraction": 0.5,
+              "absolute_gap": 0.05499999999999999
+            },
+            {
+              "bin": 5,
+              "lower": 0.5,
+              "upper": 0.6,
+              "interval": "closed_left_open_right",
+              "count": 12,
+              "positive_count": 4,
+              "mean_probability": 0.5650000000000001,
+              "positive_fraction": 0.3333333333333333,
+              "absolute_gap": 0.23166666666666674
+            },
+            {
+              "bin": 6,
+              "lower": 0.6,
+              "upper": 0.7,
+              "interval": "closed_left_open_right",
+              "count": 12,
+              "positive_count": 8,
+              "mean_probability": 0.6408333333333334,
+              "positive_fraction": 0.6666666666666666,
+              "absolute_gap": 0.025833333333333264
+            },
+            {
+              "bin": 7,
+              "lower": 0.7,
+              "upper": 0.8,
+              "interval": "closed_left_open_right",
+              "count": 5,
+              "positive_count": 3,
+              "mean_probability": 0.742,
+              "positive_fraction": 0.6,
+              "absolute_gap": 0.14200000000000002
+            },
+            {
+              "bin": 8,
+              "lower": 0.8,
+              "upper": 0.9,
+              "interval": "closed_left_open_right",
+              "count": 16,
+              "positive_count": 16,
+              "mean_probability": 0.8500000000000001,
+              "positive_fraction": 1.0,
+              "absolute_gap": 0.1499999999999999
+            },
+            {
+              "bin": 9,
+              "lower": 0.9,
+              "upper": 1.0,
+              "interval": "closed_both",
+              "count": 16,
+              "positive_count": 16,
+              "mean_probability": 0.9450000000000001,
+              "positive_fraction": 1.0,
+              "absolute_gap": 0.05499999999999994
+            }
+          ],
+          "ece_10_equal_width": 0.11491666666666665
+        },
+        "binary_label_macro_f1_note": "Primary macro_f1 averages normal/anomalous labels, not object categories."
+      }
+    },
+    "paired_category_macro_bootstrap": {
+      "1-0": {
+        "auroc": {
+          "point_difference": 0.025000000000000244,
+          "percentile_95_ci": [
+            -0.0333750000000001,
+            0.08499999999999996
+          ],
+          "point_difference_percentage_points": 2.5000000000000244,
+          "percentile_95_ci_percentage_points": [
+            -3.33750000000001,
+            8.499999999999996
+          ],
+          "replicates": 2000,
+          "seed": 42,
+          "strata": "category_and_label",
+          "endpoint_status": "supplementary_not_primary",
+          "limitation": "Fixed categories and support set; no provider or support-selection variance; no multiplicity correction."
+        },
+        "ap": {
+          "point_difference": 0.022817460317460347,
+          "percentile_95_ci": [
+            -0.015146329365079567,
+            0.058759920634920755
+          ],
+          "point_difference_percentage_points": 2.2817460317460347,
+          "percentile_95_ci_percentage_points": [
+            -1.5146329365079567,
+            5.875992063492076
+          ],
+          "replicates": 2000,
+          "seed": 42,
+          "strata": "category_and_label",
+          "endpoint_status": "supplementary_not_primary",
+          "limitation": "Fixed categories and support set; no provider or support-selection variance; no multiplicity correction."
+        }
+      },
+      "4-0": {
+        "auroc": {
+          "point_difference": 0.03333333333333344,
+          "percentile_95_ci": [
+            -0.0199999999999998,
+            0.09004166666666662
+          ],
+          "point_difference_percentage_points": 3.3333333333333437,
+          "percentile_95_ci_percentage_points": [
+            -1.99999999999998,
+            9.004166666666661
+          ],
+          "replicates": 2000,
+          "seed": 42,
+          "strata": "category_and_label",
+          "endpoint_status": "supplementary_not_primary",
+          "limitation": "Fixed categories and support set; no provider or support-selection variance; no multiplicity correction."
+        },
+        "ap": {
+          "point_difference": 0.02565476190476179,
+          "percentile_95_ci": [
+            -0.011084490740740735,
+            0.06108614417989417
+          ],
+          "point_difference_percentage_points": 2.565476190476179,
+          "percentile_95_ci_percentage_points": [
+            -1.1084490740740736,
+            6.1086144179894175
+          ],
+          "replicates": 2000,
+          "seed": 42,
+          "strata": "category_and_label",
+          "endpoint_status": "supplementary_not_primary",
+          "limitation": "Fixed categories and support set; no provider or support-selection variance; no multiplicity correction."
+        }
+      },
+      "4-1": {
+        "auroc": {
+          "point_difference": 0.008333333333333193,
+          "percentile_95_ci": [
+            -0.020000000000000018,
+            0.040000000000000036
+          ],
+          "point_difference_percentage_points": 0.8333333333333193,
+          "percentile_95_ci_percentage_points": [
+            -2.0000000000000018,
+            4.0000000000000036
+          ],
+          "replicates": 2000,
+          "seed": 42,
+          "strata": "category_and_label",
+          "endpoint_status": "supplementary_not_primary",
+          "limitation": "Fixed categories and support set; no provider or support-selection variance; no multiplicity correction."
+        },
+        "ap": {
+          "point_difference": 0.002837301587301444,
+          "percentile_95_ci": [
+            -0.01534391534391522,
+            0.022324404761904778
+          ],
+          "point_difference_percentage_points": 0.2837301587301444,
+          "percentile_95_ci_percentage_points": [
+            -1.534391534391522,
+            2.2324404761904777
+          ],
+          "replicates": 2000,
+          "seed": 42,
+          "strata": "category_and_label",
+          "endpoint_status": "supplementary_not_primary",
+          "limitation": "Fixed categories and support set; no provider or support-selection variance; no multiplicity correction."
+        }
+      }
+    },
+    "primary_recomputation": "All pooled and per-category primary metrics and pooled bootstrap intervals reproduced."
+  },
+  "attempt_accounting": {
+    "overall": {
+      "started_attempts": 494,
+      "distinct_targets": 360,
+      "successful_attempts": 360,
+      "failed_observed_attempts": 133,
+      "interrupted_without_terminal_event": 1,
+      "server_completion_unknown_attempts": 67,
+      "retry_attempts": 134,
+      "successful_after_retry": 108,
+      "targets_with_retry_attempt": 108,
+      "elapsed_seconds_success": {
+        "count": 360,
+        "sum": 9499.357038208283,
+        "mean": 26.387102883911897,
+        "median": 22.442732229013927,
+        "p95": 59.068746456597005
+      },
+      "elapsed_seconds_failed_observed": {
+        "count": 133,
+        "sum": 2961.021432707552,
+        "mean": 22.263319042913924,
+        "median": 15.469465750036761,
+        "p95": 55.55447986619546
+      },
+      "usage_reported_totals": {
+        "input_tokens": 670065,
+        "output_tokens": 7560
+      },
+      "usage_reported_by_outcome": {
+        "success": {
+          "input_tokens": 670065,
+          "output_tokens": 7560
+        },
+        "failed_observed": {
+          "input_tokens": 0,
+          "output_tokens": 0
+        },
+        "interrupted_unknown": {
+          "input_tokens": 0,
+          "output_tokens": 0
+        }
+      },
+      "usage_present_attempts": 360,
+      "usage_missing_attempts": 134,
+      "usage_missing_failed_or_unknown": 134,
+      "failure_error_counts": {
+        "transport_error_unknown_server_completion_no_automatic_retry": 9,
+        "http_502": 67,
+        "timeout_unknown_server_completion_no_automatic_retry_this_invocation": 3,
+        "transport_error_unknown_server_completion_no_automatic_retry_this_invocation": 54
+      },
+      "failure_http_status_counts": {
+        "None": 66,
+        "502": 67
+      },
+      "failure_exception_class_counts": {},
+      "failure_stage_counts": {}
+    },
+    "by_shots": {
+      "0": {
+        "started_attempts": 149,
+        "distinct_targets": 120,
+        "successful_attempts": 120,
+        "failed_observed_attempts": 29,
+        "interrupted_without_terminal_event": 0,
+        "server_completion_unknown_attempts": 1,
+        "retry_attempts": 29,
+        "successful_after_retry": 21,
+        "targets_with_retry_attempt": 21,
+        "elapsed_seconds_success": {
+          "count": 120,
+          "sum": 1854.573858542135,
+          "mean": 15.454782154517792,
+          "median": 13.42686229152605,
+          "p95": 29.036536207585588
+        },
+        "elapsed_seconds_failed_observed": {
+          "count": 29,
+          "sum": 456.5696321660653,
+          "mean": 15.743780419519492,
+          "median": 15.565457416931167,
+          "p95": 26.9499581831973
+        },
+        "usage_reported_totals": {
+          "input_tokens": 113648,
+          "output_tokens": 2520
+        },
+        "usage_reported_by_outcome": {
+          "success": {
+            "input_tokens": 113648,
+            "output_tokens": 2520
+          },
+          "failed_observed": {
+            "input_tokens": 0,
+            "output_tokens": 0
+          },
+          "interrupted_unknown": {
+            "input_tokens": 0,
+            "output_tokens": 0
+          }
+        },
+        "usage_present_attempts": 120,
+        "usage_missing_attempts": 29,
+        "usage_missing_failed_or_unknown": 29,
+        "failure_error_counts": {
+          "http_502": 28,
+          "transport_error_unknown_server_completion_no_automatic_retry_this_invocation": 1
+        },
+        "failure_http_status_counts": {
+          "502": 28,
+          "None": 1
+        },
+        "failure_exception_class_counts": {},
+        "failure_stage_counts": {}
+      },
+      "1": {
+        "started_attempts": 144,
+        "distinct_targets": 120,
+        "successful_attempts": 120,
+        "failed_observed_attempts": 23,
+        "interrupted_without_terminal_event": 1,
+        "server_completion_unknown_attempts": 3,
+        "retry_attempts": 24,
+        "successful_after_retry": 21,
+        "targets_with_retry_attempt": 21,
+        "elapsed_seconds_success": {
+          "count": 120,
+          "sum": 3058.521904580528,
+          "mean": 25.487682538171065,
+          "median": 22.831578521057963,
+          "p95": 52.94419012884609
+        },
+        "elapsed_seconds_failed_observed": {
+          "count": 23,
+          "sum": 707.3791516243946,
+          "mean": 30.755615288017157,
+          "median": 22.26237424998544,
+          "p95": 86.27648528774729
+        },
+        "usage_reported_totals": {
+          "input_tokens": 179462,
+          "output_tokens": 2520
+        },
+        "usage_reported_by_outcome": {
+          "success": {
+            "input_tokens": 179462,
+            "output_tokens": 2520
+          },
+          "failed_observed": {
+            "input_tokens": 0,
+            "output_tokens": 0
+          },
+          "interrupted_unknown": {
+            "input_tokens": 0,
+            "output_tokens": 0
+          }
+        },
+        "usage_present_attempts": 120,
+        "usage_missing_attempts": 24,
+        "usage_missing_failed_or_unknown": 24,
+        "failure_error_counts": {
+          "http_502": 21,
+          "timeout_unknown_server_completion_no_automatic_retry_this_invocation": 2
+        },
+        "failure_http_status_counts": {
+          "502": 21,
+          "None": 2
+        },
+        "failure_exception_class_counts": {},
+        "failure_stage_counts": {}
+      },
+      "4": {
+        "started_attempts": 201,
+        "distinct_targets": 120,
+        "successful_attempts": 120,
+        "failed_observed_attempts": 81,
+        "interrupted_without_terminal_event": 0,
+        "server_completion_unknown_attempts": 63,
+        "retry_attempts": 81,
+        "successful_after_retry": 66,
+        "targets_with_retry_attempt": 66,
+        "elapsed_seconds_success": {
+          "count": 120,
+          "sum": 4586.261275085621,
+          "mean": 38.218843959046836,
+          "median": 35.987431478570215,
+          "p95": 68.91126679235603
+        },
+        "elapsed_seconds_failed_observed": {
+          "count": 81,
+          "sum": 1797.072648917092,
+          "mean": 22.186082085396198,
+          "median": 15.31474458402954,
+          "p95": 56.65645904093981
+        },
+        "usage_reported_totals": {
+          "input_tokens": 376955,
+          "output_tokens": 2520
+        },
+        "usage_reported_by_outcome": {
+          "success": {
+            "input_tokens": 376955,
+            "output_tokens": 2520
+          },
+          "failed_observed": {
+            "input_tokens": 0,
+            "output_tokens": 0
+          },
+          "interrupted_unknown": {
+            "input_tokens": 0,
+            "output_tokens": 0
+          }
+        },
+        "usage_present_attempts": 120,
+        "usage_missing_attempts": 81,
+        "usage_missing_failed_or_unknown": 81,
+        "failure_error_counts": {
+          "transport_error_unknown_server_completion_no_automatic_retry": 9,
+          "http_502": 18,
+          "timeout_unknown_server_completion_no_automatic_retry_this_invocation": 1,
+          "transport_error_unknown_server_completion_no_automatic_retry_this_invocation": 53
+        },
+        "failure_http_status_counts": {
+          "None": 63,
+          "502": 18
+        },
+        "failure_exception_class_counts": {},
+        "failure_stage_counts": {}
+      }
+    },
+    "by_phase": {
+      "original_workers3": {
+        "started_attempts": 78,
+        "distinct_targets": 78,
+        "successful_attempts": 61,
+        "failed_observed_attempts": 16,
+        "interrupted_without_terminal_event": 1,
+        "server_completion_unknown_attempts": 10,
+        "retry_attempts": 0,
+        "successful_after_retry": 0,
+        "targets_with_retry_attempt": 0,
+        "elapsed_seconds_success": {
+          "count": 61,
+          "sum": 1154.1335729986895,
+          "mean": 18.920222508175236,
+          "median": 16.933050584048033,
+          "p95": 36.60900058387779
+        },
+        "elapsed_seconds_failed_observed": {
+          "count": 16,
+          "sum": 243.14651437546127,
+          "mean": 15.196657148466329,
+          "median": 15.237453917041421,
+          "p95": 21.771902926964685
+        },
+        "usage_reported_totals": {
+          "input_tokens": 106074,
+          "output_tokens": 1281
+        },
+        "usage_reported_by_outcome": {
+          "success": {
+            "input_tokens": 106074,
+            "output_tokens": 1281
+          },
+          "failed_observed": {
+            "input_tokens": 0,
+            "output_tokens": 0
+          },
+          "interrupted_unknown": {
+            "input_tokens": 0,
+            "output_tokens": 0
+          }
+        },
+        "usage_present_attempts": 61,
+        "usage_missing_attempts": 17,
+        "usage_missing_failed_or_unknown": 17,
+        "failure_error_counts": {
+          "transport_error_unknown_server_completion_no_automatic_retry": 9,
+          "http_502": 7
+        },
+        "failure_http_status_counts": {
+          "None": 9,
+          "502": 7
+        },
+        "failure_exception_class_counts": {},
+        "failure_stage_counts": {}
+      },
+      "rolling6": {
+        "started_attempts": 221,
+        "distinct_targets": 221,
+        "successful_attempts": 135,
+        "failed_observed_attempts": 86,
+        "interrupted_without_terminal_event": 0,
+        "server_completion_unknown_attempts": 57,
+        "retry_attempts": 17,
+        "successful_after_retry": 7,
+        "targets_with_retry_attempt": 17,
+        "elapsed_seconds_success": {
+          "count": 135,
+          "sum": 3743.322703250218,
+          "mean": 27.728316320371988,
+          "median": 24.054415832972154,
+          "p95": 60.138641158305106
+        },
+        "elapsed_seconds_failed_observed": {
+          "count": 86,
+          "sum": 2010.8658882922027,
+          "mean": 23.3821614917698,
+          "median": 15.479736083070748,
+          "p95": 66.0982879785006
+        },
+        "usage_reported_totals": {
+          "input_tokens": 198599,
+          "output_tokens": 2835
+        },
+        "usage_reported_by_outcome": {
+          "success": {
+            "input_tokens": 198599,
+            "output_tokens": 2835
+          },
+          "failed_observed": {
+            "input_tokens": 0,
+            "output_tokens": 0
+          },
+          "interrupted_unknown": {
+            "input_tokens": 0,
+            "output_tokens": 0
+          }
+        },
+        "usage_present_attempts": 135,
+        "usage_missing_attempts": 86,
+        "usage_missing_failed_or_unknown": 86,
+        "failure_error_counts": {
+          "timeout_unknown_server_completion_no_automatic_retry_this_invocation": 3,
+          "transport_error_unknown_server_completion_no_automatic_retry_this_invocation": 54,
+          "http_502": 29
+        },
+        "failure_http_status_counts": {
+          "None": 57,
+          "502": 29
+        },
+        "failure_exception_class_counts": {},
+        "failure_stage_counts": {}
+      },
+      "transport_rolling6": {
+        "started_attempts": 195,
+        "distinct_targets": 164,
+        "successful_attempts": 164,
+        "failed_observed_attempts": 31,
+        "interrupted_without_terminal_event": 0,
+        "server_completion_unknown_attempts": 0,
+        "retry_attempts": 117,
+        "successful_after_retry": 101,
+        "targets_with_retry_attempt": 101,
+        "elapsed_seconds_success": {
+          "count": 164,
+          "sum": 4601.900761959376,
+          "mean": 28.060370499752292,
+          "median": 24.648354499950074,
+          "p95": 63.89586356439394
+        },
+        "elapsed_seconds_failed_observed": {
+          "count": 31,
+          "sum": 707.0090300398879,
+          "mean": 22.80674290451251,
+          "median": 16.901839750120416,
+          "p95": 46.61388920806348
+        },
+        "usage_reported_totals": {
+          "input_tokens": 365392,
+          "output_tokens": 3444
+        },
+        "usage_reported_by_outcome": {
+          "success": {
+            "input_tokens": 365392,
+            "output_tokens": 3444
+          },
+          "failed_observed": {
+            "input_tokens": 0,
+            "output_tokens": 0
+          },
+          "interrupted_unknown": {
+            "input_tokens": 0,
+            "output_tokens": 0
+          }
+        },
+        "usage_present_attempts": 164,
+        "usage_missing_attempts": 31,
+        "usage_missing_failed_or_unknown": 31,
+        "failure_error_counts": {
+          "http_502": 31
+        },
+        "failure_http_status_counts": {
+          "502": 31
+        },
+        "failure_exception_class_counts": {},
+        "failure_stage_counts": {}
+      }
+    },
+    "by_phase_and_shots": {
+      "original_workers3": {
+        "0": {
+          "started_attempts": 26,
+          "distinct_targets": 26,
+          "successful_attempts": 21,
+          "failed_observed_attempts": 5,
+          "interrupted_without_terminal_event": 0,
+          "server_completion_unknown_attempts": 0,
+          "retry_attempts": 0,
+          "successful_after_retry": 0,
+          "targets_with_retry_attempt": 0,
+          "elapsed_seconds_success": {
+            "count": 21,
+            "sum": 274.7724824184552,
+            "mean": 13.084403924688342,
+            "median": 13.436221041018143,
+            "p95": 22.07084112497978
+          },
+          "elapsed_seconds_failed_observed": {
+            "count": 5,
+            "sum": 68.74799641687423,
+            "mean": 13.749599283374845,
+            "median": 10.1558679160662,
+            "p95": 21.232737641735003
+          },
+          "usage_reported_totals": {
+            "input_tokens": 19888,
+            "output_tokens": 441
+          },
+          "usage_reported_by_outcome": {
+            "success": {
+              "input_tokens": 19888,
+              "output_tokens": 441
+            },
+            "failed_observed": {
+              "input_tokens": 0,
+              "output_tokens": 0
+            },
+            "interrupted_unknown": {
+              "input_tokens": 0,
+              "output_tokens": 0
+            }
+          },
+          "usage_present_attempts": 21,
+          "usage_missing_attempts": 5,
+          "usage_missing_failed_or_unknown": 5,
+          "failure_error_counts": {
+            "http_502": 5
+          },
+          "failure_http_status_counts": {
+            "502": 5
+          },
+          "failure_exception_class_counts": {},
+          "failure_stage_counts": {}
+        },
+        "1": {
+          "started_attempts": 26,
+          "distinct_targets": 26,
+          "successful_attempts": 24,
+          "failed_observed_attempts": 1,
+          "interrupted_without_terminal_event": 1,
+          "server_completion_unknown_attempts": 1,
+          "retry_attempts": 0,
+          "successful_after_retry": 0,
+          "targets_with_retry_attempt": 0,
+          "elapsed_seconds_success": {
+            "count": 24,
+            "sum": 455.4653044133447,
+            "mean": 18.977721017222695,
+            "median": 18.22273054148536,
+            "p95": 28.56377316251164
+          },
+          "elapsed_seconds_failed_observed": {
+            "count": 1,
+            "sum": 14.421544790966436,
+            "mean": 14.421544790966436,
+            "median": 14.421544790966436,
+            "p95": 14.421544790966436
+          },
+          "usage_reported_totals": {
+            "input_tokens": 35912,
+            "output_tokens": 504
+          },
+          "usage_reported_by_outcome": {
+            "success": {
+              "input_tokens": 35912,
+              "output_tokens": 504
+            },
+            "failed_observed": {
+              "input_tokens": 0,
+              "output_tokens": 0
+            },
+            "interrupted_unknown": {
+              "input_tokens": 0,
+              "output_tokens": 0
+            }
+          },
+          "usage_present_attempts": 24,
+          "usage_missing_attempts": 2,
+          "usage_missing_failed_or_unknown": 2,
+          "failure_error_counts": {
+            "http_502": 1
+          },
+          "failure_http_status_counts": {
+            "502": 1
+          },
+          "failure_exception_class_counts": {},
+          "failure_stage_counts": {}
+        },
+        "4": {
+          "started_attempts": 26,
+          "distinct_targets": 26,
+          "successful_attempts": 16,
+          "failed_observed_attempts": 10,
+          "interrupted_without_terminal_event": 0,
+          "server_completion_unknown_attempts": 9,
+          "retry_attempts": 0,
+          "successful_after_retry": 0,
+          "targets_with_retry_attempt": 0,
+          "elapsed_seconds_success": {
+            "count": 16,
+            "sum": 423.8957861668896,
+            "mean": 26.4934866354306,
+            "median": 25.03068833355792,
+            "p95": 37.89846532267984
+          },
+          "elapsed_seconds_failed_observed": {
+            "count": 10,
+            "sum": 159.9769731676206,
+            "mean": 15.99769731676206,
+            "median": 15.285104708513245,
+            "p95": 19.278579739551052
+          },
+          "usage_reported_totals": {
+            "input_tokens": 50274,
+            "output_tokens": 336
+          },
+          "usage_reported_by_outcome": {
+            "success": {
+              "input_tokens": 50274,
+              "output_tokens": 336
+            },
+            "failed_observed": {
+              "input_tokens": 0,
+              "output_tokens": 0
+            },
+            "interrupted_unknown": {
+              "input_tokens": 0,
+              "output_tokens": 0
+            }
+          },
+          "usage_present_attempts": 16,
+          "usage_missing_attempts": 10,
+          "usage_missing_failed_or_unknown": 10,
+          "failure_error_counts": {
+            "transport_error_unknown_server_completion_no_automatic_retry": 9,
+            "http_502": 1
+          },
+          "failure_http_status_counts": {
+            "None": 9,
+            "502": 1
+          },
+          "failure_exception_class_counts": {},
+          "failure_stage_counts": {}
+        }
+      },
+      "rolling6": {
+        "0": {
+          "started_attempts": 73,
+          "distinct_targets": 73,
+          "successful_attempts": 60,
+          "failed_observed_attempts": 13,
+          "interrupted_without_terminal_event": 0,
+          "server_completion_unknown_attempts": 1,
+          "retry_attempts": 5,
+          "successful_after_retry": 4,
+          "targets_with_retry_attempt": 5,
+          "elapsed_seconds_success": {
+            "count": 60,
+            "sum": 1177.0097451237962,
+            "mean": 19.616829085396603,
+            "median": 16.61159114597831,
+            "p95": 37.561094708484596
+          },
+          "elapsed_seconds_failed_observed": {
+            "count": 13,
+            "sum": 239.60328429169022,
+            "mean": 18.431021868591554,
+            "median": 18.078721291851252,
+            "p95": 28.087856033584103
+          },
+          "usage_reported_totals": {
+            "input_tokens": 56818,
+            "output_tokens": 1260
+          },
+          "usage_reported_by_outcome": {
+            "success": {
+              "input_tokens": 56818,
+              "output_tokens": 1260
+            },
+            "failed_observed": {
+              "input_tokens": 0,
+              "output_tokens": 0
+            },
+            "interrupted_unknown": {
+              "input_tokens": 0,
+              "output_tokens": 0
+            }
+          },
+          "usage_present_attempts": 60,
+          "usage_missing_attempts": 13,
+          "usage_missing_failed_or_unknown": 13,
+          "failure_error_counts": {
+            "http_502": 12,
+            "transport_error_unknown_server_completion_no_automatic_retry_this_invocation": 1
+          },
+          "failure_http_status_counts": {
+            "502": 12,
+            "None": 1
+          },
+          "failure_exception_class_counts": {},
+          "failure_stage_counts": {}
+        },
+        "1": {
+          "started_attempts": 70,
+          "distinct_targets": 70,
+          "successful_attempts": 57,
+          "failed_observed_attempts": 13,
+          "interrupted_without_terminal_event": 0,
+          "server_completion_unknown_attempts": 2,
+          "retry_attempts": 2,
+          "successful_after_retry": 2,
+          "targets_with_retry_attempt": 2,
+          "elapsed_seconds_success": {
+            "count": 57,
+            "sum": 1886.4707636663225,
+            "mean": 33.09597830993548,
+            "median": 27.696857415838167,
+            "p95": 61.38460983401164
+          },
+          "elapsed_seconds_failed_observed": {
+            "count": 13,
+            "sum": 566.0478048336226,
+            "mean": 43.54213883335559,
+            "median": 38.28550516604446,
+            "p95": 90.24585315836593
+          },
+          "usage_reported_totals": {
+            "input_tokens": 85236,
+            "output_tokens": 1197
+          },
+          "usage_reported_by_outcome": {
+            "success": {
+              "input_tokens": 85236,
+              "output_tokens": 1197
+            },
+            "failed_observed": {
+              "input_tokens": 0,
+              "output_tokens": 0
+            },
+            "interrupted_unknown": {
+              "input_tokens": 0,
+              "output_tokens": 0
+            }
+          },
+          "usage_present_attempts": 57,
+          "usage_missing_attempts": 13,
+          "usage_missing_failed_or_unknown": 13,
+          "failure_error_counts": {
+            "http_502": 11,
+            "timeout_unknown_server_completion_no_automatic_retry_this_invocation": 2
+          },
+          "failure_http_status_counts": {
+            "502": 11,
+            "None": 2
+          },
+          "failure_exception_class_counts": {},
+          "failure_stage_counts": {}
+        },
+        "4": {
+          "started_attempts": 78,
+          "distinct_targets": 78,
+          "successful_attempts": 18,
+          "failed_observed_attempts": 60,
+          "interrupted_without_terminal_event": 0,
+          "server_completion_unknown_attempts": 54,
+          "retry_attempts": 10,
+          "successful_after_retry": 1,
+          "targets_with_retry_attempt": 10,
+          "elapsed_seconds_success": {
+            "count": 18,
+            "sum": 679.8421944600996,
+            "mean": 37.769010803338865,
+            "median": 37.2163807710167,
+            "p95": 64.13342078929999
+          },
+          "elapsed_seconds_failed_observed": {
+            "count": 60,
+            "sum": 1205.2147991668899,
+            "mean": 20.086913319448165,
+            "median": 15.243858499918133,
+            "p95": 57.285914303443825
+          },
+          "usage_reported_totals": {
+            "input_tokens": 56545,
+            "output_tokens": 378
+          },
+          "usage_reported_by_outcome": {
+            "success": {
+              "input_tokens": 56545,
+              "output_tokens": 378
+            },
+            "failed_observed": {
+              "input_tokens": 0,
+              "output_tokens": 0
+            },
+            "interrupted_unknown": {
+              "input_tokens": 0,
+              "output_tokens": 0
+            }
+          },
+          "usage_present_attempts": 18,
+          "usage_missing_attempts": 60,
+          "usage_missing_failed_or_unknown": 60,
+          "failure_error_counts": {
+            "timeout_unknown_server_completion_no_automatic_retry_this_invocation": 1,
+            "transport_error_unknown_server_completion_no_automatic_retry_this_invocation": 53,
+            "http_502": 6
+          },
+          "failure_http_status_counts": {
+            "None": 54,
+            "502": 6
+          },
+          "failure_exception_class_counts": {},
+          "failure_stage_counts": {}
+        }
+      },
+      "transport_rolling6": {
+        "0": {
+          "started_attempts": 50,
+          "distinct_targets": 39,
+          "successful_attempts": 39,
+          "failed_observed_attempts": 11,
+          "interrupted_without_terminal_event": 0,
+          "server_completion_unknown_attempts": 0,
+          "retry_attempts": 24,
+          "successful_after_retry": 17,
+          "targets_with_retry_attempt": 17,
+          "elapsed_seconds_success": {
+            "count": 39,
+            "sum": 402.79163099988364,
+            "mean": 10.327990538458554,
+            "median": 9.749011166160926,
+            "p95": 16.387374874926177
+          },
+          "elapsed_seconds_failed_observed": {
+            "count": 11,
+            "sum": 148.21835145750083,
+            "mean": 13.47439558704553,
+            "median": 12.494743457995355,
+            "p95": 20.208111812477
+          },
+          "usage_reported_totals": {
+            "input_tokens": 36942,
+            "output_tokens": 819
+          },
+          "usage_reported_by_outcome": {
+            "success": {
+              "input_tokens": 36942,
+              "output_tokens": 819
+            },
+            "failed_observed": {
+              "input_tokens": 0,
+              "output_tokens": 0
+            },
+            "interrupted_unknown": {
+              "input_tokens": 0,
+              "output_tokens": 0
+            }
+          },
+          "usage_present_attempts": 39,
+          "usage_missing_attempts": 11,
+          "usage_missing_failed_or_unknown": 11,
+          "failure_error_counts": {
+            "http_502": 11
+          },
+          "failure_http_status_counts": {
+            "502": 11
+          },
+          "failure_exception_class_counts": {},
+          "failure_stage_counts": {}
+        },
+        "1": {
+          "started_attempts": 48,
+          "distinct_targets": 39,
+          "successful_attempts": 39,
+          "failed_observed_attempts": 9,
+          "interrupted_without_terminal_event": 0,
+          "server_completion_unknown_attempts": 0,
+          "retry_attempts": 22,
+          "successful_after_retry": 19,
+          "targets_with_retry_attempt": 19,
+          "elapsed_seconds_success": {
+            "count": 39,
+            "sum": 716.5858365008608,
+            "mean": 18.37399580771438,
+            "median": 16.07826616591774,
+            "p95": 29.17545737072361
+          },
+          "elapsed_seconds_failed_observed": {
+            "count": 9,
+            "sum": 126.9098019998055,
+            "mean": 14.1010891110895,
+            "median": 12.22983341687359,
+            "p95": 21.98294044183567
+          },
+          "usage_reported_totals": {
+            "input_tokens": 58314,
+            "output_tokens": 819
+          },
+          "usage_reported_by_outcome": {
+            "success": {
+              "input_tokens": 58314,
+              "output_tokens": 819
+            },
+            "failed_observed": {
+              "input_tokens": 0,
+              "output_tokens": 0
+            },
+            "interrupted_unknown": {
+              "input_tokens": 0,
+              "output_tokens": 0
+            }
+          },
+          "usage_present_attempts": 39,
+          "usage_missing_attempts": 9,
+          "usage_missing_failed_or_unknown": 9,
+          "failure_error_counts": {
+            "http_502": 9
+          },
+          "failure_http_status_counts": {
+            "502": 9
+          },
+          "failure_exception_class_counts": {},
+          "failure_stage_counts": {}
+        },
+        "4": {
+          "started_attempts": 97,
+          "distinct_targets": 86,
+          "successful_attempts": 86,
+          "failed_observed_attempts": 11,
+          "interrupted_without_terminal_event": 0,
+          "server_completion_unknown_attempts": 0,
+          "retry_attempts": 71,
+          "successful_after_retry": 65,
+          "targets_with_retry_attempt": 65,
+          "elapsed_seconds_success": {
+            "count": 86,
+            "sum": 3482.5232944586314,
+            "mean": 40.494456912309666,
+            "median": 37.92313916655257,
+            "p95": 69.78286070853937
+          },
+          "elapsed_seconds_failed_observed": {
+            "count": 11,
+            "sum": 431.88087658258155,
+            "mean": 39.26189787114378,
+            "median": 38.132549416972324,
+            "p95": 64.9988499165047
+          },
+          "usage_reported_totals": {
+            "input_tokens": 270136,
+            "output_tokens": 1806
+          },
+          "usage_reported_by_outcome": {
+            "success": {
+              "input_tokens": 270136,
+              "output_tokens": 1806
+            },
+            "failed_observed": {
+              "input_tokens": 0,
+              "output_tokens": 0
+            },
+            "interrupted_unknown": {
+              "input_tokens": 0,
+              "output_tokens": 0
+            }
+          },
+          "usage_present_attempts": 86,
+          "usage_missing_attempts": 11,
+          "usage_missing_failed_or_unknown": 11,
+          "failure_error_counts": {
+            "http_502": 11
+          },
+          "failure_http_status_counts": {
+            "502": 11
+          },
+          "failure_exception_class_counts": {},
+          "failure_stage_counts": {}
+        }
+      }
+    },
+    "unknown_attempts": [
+      {
+        "source_id": "visa_02118dfcc70533cacff3d1f94e7545584a0162a8d5af70a71a95e9a44c1ec23b",
+        "shots": 4,
+        "attempt": 1,
+        "phase": "original_workers3",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry"
+      },
+      {
+        "source_id": "visa_07bfdf2da58b61d1de26368da4b5aa2c4587de4c3ea220389647057745ba6c4a",
+        "shots": 4,
+        "attempt": 1,
+        "phase": "original_workers3",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry"
+      },
+      {
+        "source_id": "visa_17b1056a4488d59413cbf86d879d470bdbae88fdfa05d981b28a6b909bfedae8",
+        "shots": 4,
+        "attempt": 1,
+        "phase": "original_workers3",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry"
+      },
+      {
+        "source_id": "visa_19c53aa37353abee35a64fd37d8225095d93e6c1e973a2d0b19fa7631cea100e",
+        "shots": 4,
+        "attempt": 1,
+        "phase": "original_workers3",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry"
+      },
+      {
+        "source_id": "visa_1be7809506f2372505d7506c47502f75ec9ba094e306c9d394a067b368c6a8e3",
+        "shots": 4,
+        "attempt": 1,
+        "phase": "original_workers3",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry"
+      },
+      {
+        "source_id": "visa_24b73ed6c3e0ef894969e307b4b53ad78c3cc4c031de786307100224158bd54c",
+        "shots": 4,
+        "attempt": 1,
+        "phase": "original_workers3",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry"
+      },
+      {
+        "source_id": "visa_274537cc9cf2df811c54a90477f1af5c0bc01ed89b8d1f586040f844f7aefb31",
+        "shots": 4,
+        "attempt": 1,
+        "phase": "original_workers3",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry"
+      },
+      {
+        "source_id": "visa_275532f2cbe28d92bf32b925602c174d56af798ce6963bcfa1fbc913f8cdf80e",
+        "shots": 4,
+        "attempt": 1,
+        "phase": "original_workers3",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry"
+      },
+      {
+        "source_id": "visa_27d55bbf49acdaa3120733d213d58f6d86bd7b30520a5c7c3b77aeab06c789b6",
+        "shots": 1,
+        "attempt": 1,
+        "phase": "original_workers3",
+        "outcome": "interrupted_unknown",
+        "error": null
+      },
+      {
+        "source_id": "visa_27d55bbf49acdaa3120733d213d58f6d86bd7b30520a5c7c3b77aeab06c789b6",
+        "shots": 4,
+        "attempt": 1,
+        "phase": "original_workers3",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry"
+      },
+      {
+        "source_id": "visa_07bfdf2da58b61d1de26368da4b5aa2c4587de4c3ea220389647057745ba6c4a",
+        "shots": 4,
+        "attempt": 2,
+        "phase": "rolling6",
+        "outcome": "failed_observed",
+        "error": "timeout_unknown_server_completion_no_automatic_retry_this_invocation"
+      },
+      {
+        "source_id": "visa_17b1056a4488d59413cbf86d879d470bdbae88fdfa05d981b28a6b909bfedae8",
+        "shots": 4,
+        "attempt": 2,
+        "phase": "rolling6",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry_this_invocation"
+      },
+      {
+        "source_id": "visa_19c53aa37353abee35a64fd37d8225095d93e6c1e973a2d0b19fa7631cea100e",
+        "shots": 4,
+        "attempt": 2,
+        "phase": "rolling6",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry_this_invocation"
+      },
+      {
+        "source_id": "visa_1be7809506f2372505d7506c47502f75ec9ba094e306c9d394a067b368c6a8e3",
+        "shots": 4,
+        "attempt": 2,
+        "phase": "rolling6",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry_this_invocation"
+      },
+      {
+        "source_id": "visa_239efd141060d4cc71769087867869cf8f5e6e616c6f6b3c37aa533fe9b7c30a",
+        "shots": 4,
+        "attempt": 2,
+        "phase": "rolling6",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry_this_invocation"
+      },
+      {
+        "source_id": "visa_24b73ed6c3e0ef894969e307b4b53ad78c3cc4c031de786307100224158bd54c",
+        "shots": 4,
+        "attempt": 2,
+        "phase": "rolling6",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry_this_invocation"
+      },
+      {
+        "source_id": "visa_274537cc9cf2df811c54a90477f1af5c0bc01ed89b8d1f586040f844f7aefb31",
+        "shots": 4,
+        "attempt": 2,
+        "phase": "rolling6",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry_this_invocation"
+      },
+      {
+        "source_id": "visa_275532f2cbe28d92bf32b925602c174d56af798ce6963bcfa1fbc913f8cdf80e",
+        "shots": 4,
+        "attempt": 2,
+        "phase": "rolling6",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry_this_invocation"
+      },
+      {
+        "source_id": "visa_27d55bbf49acdaa3120733d213d58f6d86bd7b30520a5c7c3b77aeab06c789b6",
+        "shots": 4,
+        "attempt": 2,
+        "phase": "rolling6",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry_this_invocation"
+      },
+      {
+        "source_id": "visa_27e8ef0c6219a8cf7a6417aa6f9c5bf46b5e3c17c1c3b0fac2f11d81911efd98",
+        "shots": 4,
+        "attempt": 1,
+        "phase": "rolling6",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry_this_invocation"
+      },
+      {
+        "source_id": "visa_2ad68cdec7cfd55a58f554f93a07dba4e054ed5e1f5b578984381e09c88393ae",
+        "shots": 4,
+        "attempt": 1,
+        "phase": "rolling6",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry_this_invocation"
+      },
+      {
+        "source_id": "visa_2b2f19d8bfbb2761a5f2b3afba2d73f04435eb68d5f10a590a2d9de74a3475c5",
+        "shots": 1,
+        "attempt": 1,
+        "phase": "rolling6",
+        "outcome": "failed_observed",
+        "error": "timeout_unknown_server_completion_no_automatic_retry_this_invocation"
+      },
+      {
+        "source_id": "visa_2b2f19d8bfbb2761a5f2b3afba2d73f04435eb68d5f10a590a2d9de74a3475c5",
+        "shots": 4,
+        "attempt": 1,
+        "phase": "rolling6",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry_this_invocation"
+      },
+      {
+        "source_id": "visa_3209433cd5be38bef4b85e73d4b0a8ad9f0af9b8f89d1d13b91d3991f5cdc0a1",
+        "shots": 4,
+        "attempt": 1,
+        "phase": "rolling6",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry_this_invocation"
+      },
+      {
+        "source_id": "visa_327f5fa628f8de6e7e9af779c9964163fc5fd3d2d4da8706e5b3331d6b815af9",
+        "shots": 4,
+        "attempt": 1,
+        "phase": "rolling6",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry_this_invocation"
+      },
+      {
+        "source_id": "visa_331a918522239e8befad4c93940649fb9bb85bf237a63b04791c586d75b4f5b5",
+        "shots": 4,
+        "attempt": 1,
+        "phase": "rolling6",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry_this_invocation"
+      },
+      {
+        "source_id": "visa_3538f10a1d93329b6b3512454f12d304bad710ba16d6f873decf595de8daec7a",
+        "shots": 4,
+        "attempt": 1,
+        "phase": "rolling6",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry_this_invocation"
+      },
+      {
+        "source_id": "visa_369c056fe93c793b0341285d45c0b2d73a488ae3c8c0f8caa395e95127bea109",
+        "shots": 4,
+        "attempt": 1,
+        "phase": "rolling6",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry_this_invocation"
+      },
+      {
+        "source_id": "visa_37324060625ebe75b5d9a2a219d2d613ba668923803429d00d81c133928e0a7a",
+        "shots": 4,
+        "attempt": 1,
+        "phase": "rolling6",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry_this_invocation"
+      },
+      {
+        "source_id": "visa_3818647071f5f7c1ed01b7c48c9797b8a9285c38587738ab449ab55d8f0b2bb3",
+        "shots": 4,
+        "attempt": 1,
+        "phase": "rolling6",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry_this_invocation"
+      },
+      {
+        "source_id": "visa_3bcf05efa51bebfa0df49867683cdeaf0e10568ba4ba35779d1336803e21aeb4",
+        "shots": 4,
+        "attempt": 1,
+        "phase": "rolling6",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry_this_invocation"
+      },
+      {
+        "source_id": "visa_3cd84b868058a3576c3aa8367a6c42376af2018b11be1ac0d9e983a4715d9274",
+        "shots": 4,
+        "attempt": 1,
+        "phase": "rolling6",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry_this_invocation"
+      },
+      {
+        "source_id": "visa_3d8c21d64cc497ca03a95a21995abdcbd3b7271de7a7133b0a03fbe4faa171d0",
+        "shots": 4,
+        "attempt": 1,
+        "phase": "rolling6",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry_this_invocation"
+      },
+      {
+        "source_id": "visa_4068584cb961745bcf1b30ba642206d4ddb41a34287bc40a50c8f897787b5004",
+        "shots": 4,
+        "attempt": 1,
+        "phase": "rolling6",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry_this_invocation"
+      },
+      {
+        "source_id": "visa_5862eadc67eebf7da8c35b61bd0bbc7f47ffeccafc0d74d87beac0f381bd5267",
+        "shots": 4,
+        "attempt": 1,
+        "phase": "rolling6",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry_this_invocation"
+      },
+      {
+        "source_id": "visa_59261648b344053c2f75436747f39503fa272f962e72d87a2177457aa08fee8d",
+        "shots": 4,
+        "attempt": 1,
+        "phase": "rolling6",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry_this_invocation"
+      },
+      {
+        "source_id": "visa_696d91b33e290952cd60ef09b886eabb75ab7e0a183b2972a8c681208bda4e50",
+        "shots": 4,
+        "attempt": 1,
+        "phase": "rolling6",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry_this_invocation"
+      },
+      {
+        "source_id": "visa_7124ae0359137ced54749ec7dfc6a9e0c2eab5c4c998471e2ceb69711bdf6a8c",
+        "shots": 1,
+        "attempt": 1,
+        "phase": "rolling6",
+        "outcome": "failed_observed",
+        "error": "timeout_unknown_server_completion_no_automatic_retry_this_invocation"
+      },
+      {
+        "source_id": "visa_7124ae0359137ced54749ec7dfc6a9e0c2eab5c4c998471e2ceb69711bdf6a8c",
+        "shots": 4,
+        "attempt": 1,
+        "phase": "rolling6",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry_this_invocation"
+      },
+      {
+        "source_id": "visa_73ee79b8b1f5e528e61ad441c76ce886d76d7041ce05c28b2829fa1545e866e3",
+        "shots": 4,
+        "attempt": 1,
+        "phase": "rolling6",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry_this_invocation"
+      },
+      {
+        "source_id": "visa_78a54d30e0a03b1ddacb373acd894f5fb595b3306da7ff1598724338c69d7036",
+        "shots": 4,
+        "attempt": 1,
+        "phase": "rolling6",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry_this_invocation"
+      },
+      {
+        "source_id": "visa_78c0678463ccbbb28f078b5d1a95e95f40e229ff042d3592310bcb5e6cbcc7a8",
+        "shots": 4,
+        "attempt": 1,
+        "phase": "rolling6",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry_this_invocation"
+      },
+      {
+        "source_id": "visa_7a640f61d9ea9ec28e6eda5f70bd4dc7a965f1cb7de24f7a894c64ebb98c5127",
+        "shots": 4,
+        "attempt": 1,
+        "phase": "rolling6",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry_this_invocation"
+      },
+      {
+        "source_id": "visa_7eace5a2fd5b57b63c61f2f9aab9a61694c9f667b5e9ca8c5a206d3d9852a848",
+        "shots": 4,
+        "attempt": 1,
+        "phase": "rolling6",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry_this_invocation"
+      },
+      {
+        "source_id": "visa_7faf8ff401dbb9a9f14b36c4f0f3e5ec0950391351aa57be812dc515eed0c5e0",
+        "shots": 4,
+        "attempt": 1,
+        "phase": "rolling6",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry_this_invocation"
+      },
+      {
+        "source_id": "visa_7fe2d5df369e8713ca46b1cb9c4d07741746b4ec96cf4c16e09aa4cfe4baeb6f",
+        "shots": 4,
+        "attempt": 1,
+        "phase": "rolling6",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry_this_invocation"
+      },
+      {
+        "source_id": "visa_80826359e7704e236090453a9c4eeda4631b40ce4c891ed1a492a83f28af2c2c",
+        "shots": 4,
+        "attempt": 1,
+        "phase": "rolling6",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry_this_invocation"
+      },
+      {
+        "source_id": "visa_80bf0ee5a0a24dfcff35c15d663a981e88e04ccad33dc6eb229c4f7e52c3c077",
+        "shots": 4,
+        "attempt": 1,
+        "phase": "rolling6",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry_this_invocation"
+      },
+      {
+        "source_id": "visa_82147a7d0c321426267a87f92bbe3b77fc135f0fc6f4ce6f6dd337ead6858765",
+        "shots": 4,
+        "attempt": 1,
+        "phase": "rolling6",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry_this_invocation"
+      },
+      {
+        "source_id": "visa_86bfe261614be2c47034888b985dfb27629947f88e6e196d637ed3b7635e65a2",
+        "shots": 4,
+        "attempt": 1,
+        "phase": "rolling6",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry_this_invocation"
+      },
+      {
+        "source_id": "visa_89fcd08a408a078300b536636a9d32134c7a349c7036110aac39aeffe7e7ed5e",
+        "shots": 4,
+        "attempt": 1,
+        "phase": "rolling6",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry_this_invocation"
+      },
+      {
+        "source_id": "visa_9226ca3ad7ad192e481efbc58a4835b6353f4844435f06aff5980d99401378ed",
+        "shots": 4,
+        "attempt": 1,
+        "phase": "rolling6",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry_this_invocation"
+      },
+      {
+        "source_id": "visa_9c470dd5e1785200fd73a38c339713664248eeb6d5e335f0c02b1c38c7685528",
+        "shots": 4,
+        "attempt": 1,
+        "phase": "rolling6",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry_this_invocation"
+      },
+      {
+        "source_id": "visa_a3a9234a1a5bd713928e289afab41cb53505a56fae4faa2fda20f116e07d7c34",
+        "shots": 4,
+        "attempt": 1,
+        "phase": "rolling6",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry_this_invocation"
+      },
+      {
+        "source_id": "visa_a84a9a364bf527803e035d51ce8fcd8c9550aba41a38f9a5c7586f14bf56afb5",
+        "shots": 4,
+        "attempt": 1,
+        "phase": "rolling6",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry_this_invocation"
+      },
+      {
+        "source_id": "visa_a92b025d0e1a5a6bb6aebf951077601708fc56b97b8e4baf301a1f08c0d02d4b",
+        "shots": 4,
+        "attempt": 1,
+        "phase": "rolling6",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry_this_invocation"
+      },
+      {
+        "source_id": "visa_ababe8f688ad026370002e0f5f9b3f53b36942fa317b6b688cebe2228e376a09",
+        "shots": 4,
+        "attempt": 1,
+        "phase": "rolling6",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry_this_invocation"
+      },
+      {
+        "source_id": "visa_ad662d336c2daa1b8225a499c27331be0eaa9800d7e7855e0e1b53807fe3879f",
+        "shots": 4,
+        "attempt": 1,
+        "phase": "rolling6",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry_this_invocation"
+      },
+      {
+        "source_id": "visa_ada5f9c784ffcc0d2ba643a11ae48fec215950fb220036085907360273816523",
+        "shots": 0,
+        "attempt": 1,
+        "phase": "rolling6",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry_this_invocation"
+      },
+      {
+        "source_id": "visa_ada5f9c784ffcc0d2ba643a11ae48fec215950fb220036085907360273816523",
+        "shots": 4,
+        "attempt": 1,
+        "phase": "rolling6",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry_this_invocation"
+      },
+      {
+        "source_id": "visa_aee76fb8b46988be09be5958cba31785124377041c96e59472552f8ae88773ef",
+        "shots": 4,
+        "attempt": 1,
+        "phase": "rolling6",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry_this_invocation"
+      },
+      {
+        "source_id": "visa_b1bb734ac934f58421c178a6d8f6b7bf96148c5d0413f023e7da7075126c071d",
+        "shots": 4,
+        "attempt": 1,
+        "phase": "rolling6",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry_this_invocation"
+      },
+      {
+        "source_id": "visa_b340ef3805e0887d9e607bdbd40ca8f43dbedc952fc7bfca7f04c34965523225",
+        "shots": 4,
+        "attempt": 1,
+        "phase": "rolling6",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry_this_invocation"
+      },
+      {
+        "source_id": "visa_b81a85941ba79e2767f90bf712c6b6a09871dc960a78b1e7030aaae82d6c4320",
+        "shots": 4,
+        "attempt": 1,
+        "phase": "rolling6",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry_this_invocation"
+      },
+      {
+        "source_id": "visa_c0f81d6f9a9060e3c1b5f48258e2bd6e3c05b992fa9b9039fd2f2c3f944df44b",
+        "shots": 4,
+        "attempt": 1,
+        "phase": "rolling6",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry_this_invocation"
+      },
+      {
+        "source_id": "visa_c5c0f803e6fa2e54617736fae4c7fa965fcc15fa40d0b126306861ffd7fafdbe",
+        "shots": 4,
+        "attempt": 1,
+        "phase": "rolling6",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry_this_invocation"
+      },
+      {
+        "source_id": "visa_c765753d3b3f06de90428ee947f4ec5f51ee3baaacd10ff6dcd23ce533474432",
+        "shots": 4,
+        "attempt": 1,
+        "phase": "rolling6",
+        "outcome": "failed_observed",
+        "error": "transport_error_unknown_server_completion_no_automatic_retry_this_invocation"
+      }
+    ],
+    "accounting_note": "Success/failure/interrupted partition starts; server_completion_unknown overlaps observed transport failures. Retry=attempt number >1. Missing usage is not zero usage or cost.",
+    "currency_cost": "Not estimated: no independently verified monetary billing field."
+  },
+  "timing": {
+    "first_attempt_started_utc": "2026-11-10T14:18:44.704890+00:00",
+    "last_observed_or_elapsed_reconstructed_client_finish_utc": "2026-11-10T15:08:52.800302+00:00",
+    "request_observation_span_seconds": 3008.095412,
+    "last_recorded_status_or_session_finish_utc": "2026-11-10T15:08:52.823969+00:00",
+    "recorded_total_wall_span_seconds": 3008.119079,
+    "sessions": [
+      {
+        "invocation_id": "18fd4e0c-b94d-46db-a97e-f789a591bd2c",
+        "phase": "rolling6",
+        "started_utc": "2026-11-10T14:32:33.102077+00:00",
+        "finished_utc": "2026-11-10T14:48:52.421630+00:00",
+        "recorded_seconds": 979.319553,
+        "actual_workers": 6,
+        "api_calls_started_this_invocation": 221,
+        "amendment_sha256": "71ee3d4c1b3c7c2cf6b6c858e74ca7b21422a621f2a909a397b2584e2ee560a1"
+      },
+      {
+        "invocation_id": "e5b46f5a-50ab-40e6-bf47-5fd94c46db10",
+        "phase": "transport_rolling6",
+        "started_utc": "2026-11-10T14:53:51.090527+00:00",
+        "finished_utc": "2026-11-10T15:08:52.823969+00:00",
+        "recorded_seconds": 901.733442,
+        "actual_workers": 6,
+        "api_calls_started_this_invocation": 195,
+        "amendment_sha256": "f23330d734229b827d495b558f51005710012a848b5d60c24daf997b27cec3b5"
+      }
+    ],
+    "session_file_sha256": {
+      "operational_sessions.jsonl": "e0fdfde0646e1b65ab703e0185e55d9d5f5ce0b01edb546eaa0da8bee563d422",
+      "operational_sessions_v2.jsonl": "10700265459dee421d0a3c2b9dcb8a45733cb8edaae1caec2e31ac0e90d1b196"
+    },
+    "timestamp_sources": [
+      "attempts.jsonl started.timestamp_utc",
+      "predictions.jsonl timestamp_utc",
+      "failed client completion reconstructed as started.timestamp_utc + seconds",
+      "status.json timestamp_utc",
+      "operational_sessions*.jsonl started_utc/finished_utc when available"
+    ],
+    "limitation": "Wall span includes pauses/restarts and is not sum of request seconds. Failed events inherit start timestamp; reconstructed finish is client-only. Unknown interrupted attempt duration is not imputed."
+  },
+  "operational_amendments": {
+    "rolling6": {
+      "file": "operational_amendment.json",
+      "file_sha256": "95c01b885e493d2a55c7b50f9acdb82e817dcdf21cbd2e1ed9595ef370d6e9fd",
+      "canonical_sha256": "71ee3d4c1b3c7c2cf6b6c858e74ca7b21422a621f2a909a397b2584e2ee560a1",
+      "executor": "resume_executor.py",
+      "actual_workers": 6,
+      "read_timeout_seconds": 90.0,
+      "connect_upload_timeout_seconds": null
+    },
+    "transport_rolling6": {
+      "file": "operational_amendment_v2.json",
+      "file_sha256": "c3890316f87b75164675137c481024bd1589f70c686f2cb17fef06df0a9189a7",
+      "canonical_sha256": "f23330d734229b827d495b558f51005710012a848b5d60c24daf997b27cec3b5",
+      "executor": "transport_executor.py",
+      "actual_workers": 6,
+      "read_timeout_seconds": 120.0,
+      "connect_upload_timeout_seconds": 60.0
+    }
+  },
+  "limitations": [
+    "Supplementary category-macro diagnostics are not replacement primary endpoints.",
+    "Previously viewed 120-image development validation, not a new blind or cross-domain test.",
+    "One fixed normal-support selection and order; nested 1-of-4 supports; no support-selection variance measured.",
+    "Increasing supports also increases input information, image tokens and gateway work; no pure sample-count effect isolated.",
+    "Bootstrap is conditional on these 12 categories and fixed supports, excludes service randomness, and has no multiplicity correction.",
+    "Each category has only five normal and five anomalous queries; confidence intervals and calibration are small-sample diagnostics.",
+    "The balanced 50-percent anomaly prevalence differs from production; AP and probability diagnostics do not transfer automatically.",
+    "TypeSafe image functionality is experimental; public images may have appeared in upstream pretraining, which cannot be independently excluded.",
+    "Gateway logical model-name echo is not independent evidence of upstream weights or immutable provider routing.",
+    "Operational concurrency and timeout phases differ; request latency is not intrinsic model speed or a controlled phase comparison.",
+    "Transport errors can have unknown server completion; absent failure usage does not mean zero tokens or zero charges.",
+    "No currency cost is estimated; reported token totals include only observed usage fields.",
+    "Historical Qwen differs in preprocessing, prompt, training exposure, budget and runtime; cross-method gaps are not architectural causal effects."
+  ],
+  "source_file_sha256": {
+    "status.json": "09f1b154af4934d7a160aa9d7ffcc8abd5988097d0559363e54542b6a0034083",
+    "contract.json": "8b7218ab87fefcfb991796404972044a64d03e62ec439189e03a72c7b103a27a",
+    "predictions.jsonl": "c261c972ecb4eb514626b8c23bca11679f9536c41280043ac48f8be2dbacfac2",
+    "metrics.json": "d6ffc7495d1e8e8c4e12ece9b80dbeb0280f2496b2fe86b50b7799f9b481aa90",
+    "attempts.jsonl": "eaf621af11f04ff5fbb812d2aae41e74be10e599cef496a5ad01330531d63513"
+  },
+  "frozen_file_sha256": {
+    "config.json": "7fbb9d77d05f0a14141d1f1501b4e652758862e46f969618f24afa9e379890a4",
+    "plan.json": "88beb9f2043ecd1487ed10ed8b1f709b8c3b2574325c76fb6db604b12e0822f2",
+    "labels.json": "6b46a731a113eedac1dc73b86fbe2d09a7c1218b5514417fd7dde1cd52d0bdc6",
+    "materialized.json": "9838df3ba1f1554300d388b923adeba5f663461a8ad681e9b948fa4b1297c450"
+  },
+  "script_sha256": "bb9b81dd538c901b2ff05a54856b49ec7852f06318000a044422ad7d916dab6c",
+  "runtime_versions": {
+    "python": "3.12.2",
+    "pillow": "10.3.0",
+    "numpy": "1.26.4",
+    "sklearn": "1.6.1",
+    "requests": "2.32.2"
+  }
+}

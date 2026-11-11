@@ -1,0 +1,960 @@
+{
+  "schema": "jev-wholeimage-development-oof-calibration-v1",
+  "status": "frozen",
+  "timestamp_utc": "2026-11-10T17:53:18.236365+00:00",
+  "hostname": "autodl-container-132444827f-9c594038",
+  "protocol_sha256": "eceaedb31654c9bbd6bd009e67c6b2c1862ec0158fce57728329ee152ba49564",
+  "probabilities_evaluated": false,
+  "approved120_labels_read_for_strata": true,
+  "ground_truth_masks_opened": false,
+  "candidate_evaluation_available_at_prepare": true,
+  "stage05_sha256_at_prepare": "fe2702586f60d575b319790c7ec37b737bc189d864d6f6238b98f34588992a92",
+  "freeze_timing": "Before any calibration fitting or calibration/rejection metric computation; stage05 availability recorded explicitly",
+  "protocol": {
+    "schema": "jev-wholeimage-development-oof-calibration-v1",
+    "models": [
+      "jev_0shot",
+      "jev_1shot",
+      "jev_4shot",
+      "qwen_base",
+      "qwen_decision_decision"
+    ],
+    "files_sha256": {
+      "source_plan": "88beb9f2043ecd1487ed10ed8b1f709b8c3b2574325c76fb6db604b12e0822f2",
+      "source_labels": "6b46a731a113eedac1dc73b86fbe2d09a7c1218b5514417fd7dde1cd52d0bdc6",
+      "source_config": "7fbb9d77d05f0a14141d1f1501b4e652758862e46f969618f24afa9e379890a4",
+      "wholeimage_jev_predictions": "c261c972ecb4eb514626b8c23bca11679f9536c41280043ac48f8be2dbacfac2",
+      "code": "a8458f6cc2e6961708ee4ca689d218672a97a704fd7bc30935b23a66e121b29e",
+      "qwen_base": "dc109510af9e58701257ef943e05cee4b100f46df80a14620b36fdfb64f96499",
+      "qwen_decision_decision": "d19c70935d3369d400a921d5a9281c6382566c327667b9b3f6de0bb3a7b4681c"
+    },
+    "dependencies": {
+      "python": "3.10.22",
+      "packages": {
+        "numpy": "2.2.6",
+        "scipy": "1.15.3",
+        "scikit-learn": "1.7.2"
+      }
+    },
+    "source_count": 120,
+    "source_unit": "one original-image source; same source never crosses train/heldout",
+    "data_role": "Reused previously viewed120 development queries; not independent calibration/test data",
+    "target": "whole-image visible industrial anomaly label, not candidate-region label",
+    "allowed_label_access": "Only source_baseline frozen120 labels for predefined folds and evaluation; no GT masks",
+    "crossfit": {
+      "folds": 5,
+      "seed": 42,
+      "strata": "category x image_label",
+      "assignment": "Sorted strata, sorted source_id; numpy default_rng42 permutation within each five-source stratum; assignfold0..4",
+      "calibration_train_folds": 4,
+      "calibration_test_folds": 1,
+      "heldout_per_fold": 24,
+      "fit_scope": "Single scalar calibrator per model on96 sources; no category-specific fit",
+      "shared_folds_across_models": true,
+      "outer_hyperparameter_search": false,
+      "refit_on_all120": false,
+      "fold_records": [
+        {
+          "source_id": "visa_02118dfcc70533cacff3d1f94e7545584a0162a8d5af70a71a95e9a44c1ec23b",
+          "category": "cashew",
+          "label": 1,
+          "original_sha256": "02118dfcc70533cacff3d1f94e7545584a0162a8d5af70a71a95e9a44c1ec23b",
+          "fold": 1
+        },
+        {
+          "source_id": "visa_03bf3de6c94990a0e03ea785c205a9a6370cd05afc344d8b2bfb9f0db98b0b7d",
+          "category": "pcb1",
+          "label": 0,
+          "original_sha256": "03bf3de6c94990a0e03ea785c205a9a6370cd05afc344d8b2bfb9f0db98b0b7d",
+          "fold": 0
+        },
+        {
+          "source_id": "visa_056418a7dea6b445f00af24256b5a867068bc720484d335ed7c59ead13bda5f5",
+          "category": "macaroni2",
+          "label": 0,
+          "original_sha256": "056418a7dea6b445f00af24256b5a867068bc720484d335ed7c59ead13bda5f5",
+          "fold": 2
+        },
+        {
+          "source_id": "visa_06923fecac473165ea7cc74dd763f38d88aec13b0f35c479f8dbc24fe63fd4b1",
+          "category": "pcb4",
+          "label": 0,
+          "original_sha256": "06923fecac473165ea7cc74dd763f38d88aec13b0f35c479f8dbc24fe63fd4b1",
+          "fold": 2
+        },
+        {
+          "source_id": "visa_06d6756770a3762dbd04216f88a4c14da3aa92683e06d584cecac3fb87a683b5",
+          "category": "pipe_fryum",
+          "label": 1,
+          "original_sha256": "06d6756770a3762dbd04216f88a4c14da3aa92683e06d584cecac3fb87a683b5",
+          "fold": 0
+        },
+        {
+          "source_id": "visa_07bfdf2da58b61d1de26368da4b5aa2c4587de4c3ea220389647057745ba6c4a",
+          "category": "cashew",
+          "label": 1,
+          "original_sha256": "07bfdf2da58b61d1de26368da4b5aa2c4587de4c3ea220389647057745ba6c4a",
+          "fold": 4
+        },
+        {
+          "source_id": "visa_08b018905002d81f6c03e9bd7811c9e0592bb575b5655d899e7adebc5f3bf98b",
+          "category": "pcb3",
+          "label": 1,
+          "original_sha256": "08b018905002d81f6c03e9bd7811c9e0592bb575b5655d899e7adebc5f3bf98b",
+          "fold": 0
+        },
+        {
+          "source_id": "visa_0905967ed6f69618638a663faab8051fdb8b7b4ff87c7b26d7a993f15fd8d052",
+          "category": "macaroni1",
+          "label": 0,
+          "original_sha256": "0905967ed6f69618638a663faab8051fdb8b7b4ff87c7b26d7a993f15fd8d052",
+          "fold": 2
+        },
+        {
+          "source_id": "visa_094f90fda64be342bd38b8e43d8aeea5e7a6b02d266e5e41cfc8a448d62c0c01",
+          "category": "capsules",
+          "label": 1,
+          "original_sha256": "094f90fda64be342bd38b8e43d8aeea5e7a6b02d266e5e41cfc8a448d62c0c01",
+          "fold": 2
+        },
+        {
+          "source_id": "visa_0a507972356d8c3f70840298cb94342d791efddfc0b857ea1b9673c2d19ccdeb",
+          "category": "pcb3",
+          "label": 0,
+          "original_sha256": "0a507972356d8c3f70840298cb94342d791efddfc0b857ea1b9673c2d19ccdeb",
+          "fold": 0
+        },
+        {
+          "source_id": "visa_0ad1e76137ca16b7baf5e2988ba6008e52d54319664359383446ba6aee9426af",
+          "category": "chewinggum",
+          "label": 0,
+          "original_sha256": "0ad1e76137ca16b7baf5e2988ba6008e52d54319664359383446ba6aee9426af",
+          "fold": 0
+        },
+        {
+          "source_id": "visa_0e1137bd859430b2dc914a81a517c2eafb95507f8622f3bd0d85143cf903ac84",
+          "category": "fryum",
+          "label": 0,
+          "original_sha256": "0e1137bd859430b2dc914a81a517c2eafb95507f8622f3bd0d85143cf903ac84",
+          "fold": 1
+        },
+        {
+          "source_id": "visa_12113008ba45eebb2ffd45b369cbd690c7f91ed4531bd99034737834ade89ab7",
+          "category": "capsules",
+          "label": 0,
+          "original_sha256": "12113008ba45eebb2ffd45b369cbd690c7f91ed4531bd99034737834ade89ab7",
+          "fold": 2
+        },
+        {
+          "source_id": "visa_165dc8aa9b514b8644d5e6aee40b2e6b9a4252619a49bff78e2f4713b19c9119",
+          "category": "pcb3",
+          "label": 0,
+          "original_sha256": "165dc8aa9b514b8644d5e6aee40b2e6b9a4252619a49bff78e2f4713b19c9119",
+          "fold": 4
+        },
+        {
+          "source_id": "visa_17b1056a4488d59413cbf86d879d470bdbae88fdfa05d981b28a6b909bfedae8",
+          "category": "pcb1",
+          "label": 0,
+          "original_sha256": "17b1056a4488d59413cbf86d879d470bdbae88fdfa05d981b28a6b909bfedae8",
+          "fold": 1
+        },
+        {
+          "source_id": "visa_19c53aa37353abee35a64fd37d8225095d93e6c1e973a2d0b19fa7631cea100e",
+          "category": "macaroni2",
+          "label": 1,
+          "original_sha256": "19c53aa37353abee35a64fd37d8225095d93e6c1e973a2d0b19fa7631cea100e",
+          "fold": 2
+        },
+        {
+          "source_id": "visa_1be7809506f2372505d7506c47502f75ec9ba094e306c9d394a067b368c6a8e3",
+          "category": "pcb2",
+          "label": 1,
+          "original_sha256": "1be7809506f2372505d7506c47502f75ec9ba094e306c9d394a067b368c6a8e3",
+          "fold": 0
+        },
+        {
+          "source_id": "visa_22d46fe93b56c9c54c70798c09510990dd80427f764469d742ccab3ae19cd22c",
+          "category": "fryum",
+          "label": 1,
+          "original_sha256": "22d46fe93b56c9c54c70798c09510990dd80427f764469d742ccab3ae19cd22c",
+          "fold": 3
+        },
+        {
+          "source_id": "visa_237b3130d94c23e97c61f64034b54e1452844a529f59aac625a05e1aa34d07c9",
+          "category": "pcb3",
+          "label": 0,
+          "original_sha256": "237b3130d94c23e97c61f64034b54e1452844a529f59aac625a05e1aa34d07c9",
+          "fold": 3
+        },
+        {
+          "source_id": "visa_239efd141060d4cc71769087867869cf8f5e6e616c6f6b3c37aa533fe9b7c30a",
+          "category": "macaroni2",
+          "label": 0,
+          "original_sha256": "239efd141060d4cc71769087867869cf8f5e6e616c6f6b3c37aa533fe9b7c30a",
+          "fold": 4
+        },
+        {
+          "source_id": "visa_245af4e00c07467a6c79bca646862343f8b788a2ba1f99e69fb276779729c8dc",
+          "category": "macaroni1",
+          "label": 0,
+          "original_sha256": "245af4e00c07467a6c79bca646862343f8b788a2ba1f99e69fb276779729c8dc",
+          "fold": 4
+        },
+        {
+          "source_id": "visa_24b73ed6c3e0ef894969e307b4b53ad78c3cc4c031de786307100224158bd54c",
+          "category": "pcb2",
+          "label": 0,
+          "original_sha256": "24b73ed6c3e0ef894969e307b4b53ad78c3cc4c031de786307100224158bd54c",
+          "fold": 2
+        },
+        {
+          "source_id": "visa_26e8994377df592315f6fe95dddf1f4bf7fa11e1844dabf8b10183b70c803ff2",
+          "category": "candle",
+          "label": 1,
+          "original_sha256": "26e8994377df592315f6fe95dddf1f4bf7fa11e1844dabf8b10183b70c803ff2",
+          "fold": 1
+        },
+        {
+          "source_id": "visa_274537cc9cf2df811c54a90477f1af5c0bc01ed89b8d1f586040f844f7aefb31",
+          "category": "macaroni1",
+          "label": 1,
+          "original_sha256": "274537cc9cf2df811c54a90477f1af5c0bc01ed89b8d1f586040f844f7aefb31",
+          "fold": 4
+        },
+        {
+          "source_id": "visa_275532f2cbe28d92bf32b925602c174d56af798ce6963bcfa1fbc913f8cdf80e",
+          "category": "capsules",
+          "label": 1,
+          "original_sha256": "275532f2cbe28d92bf32b925602c174d56af798ce6963bcfa1fbc913f8cdf80e",
+          "fold": 4
+        },
+        {
+          "source_id": "visa_27d55bbf49acdaa3120733d213d58f6d86bd7b30520a5c7c3b77aeab06c789b6",
+          "category": "pcb1",
+          "label": 0,
+          "original_sha256": "27d55bbf49acdaa3120733d213d58f6d86bd7b30520a5c7c3b77aeab06c789b6",
+          "fold": 2
+        },
+        {
+          "source_id": "visa_27e8ef0c6219a8cf7a6417aa6f9c5bf46b5e3c17c1c3b0fac2f11d81911efd98",
+          "category": "candle",
+          "label": 0,
+          "original_sha256": "27e8ef0c6219a8cf7a6417aa6f9c5bf46b5e3c17c1c3b0fac2f11d81911efd98",
+          "fold": 4
+        },
+        {
+          "source_id": "visa_2ad68cdec7cfd55a58f554f93a07dba4e054ed5e1f5b578984381e09c88393ae",
+          "category": "capsules",
+          "label": 0,
+          "original_sha256": "2ad68cdec7cfd55a58f554f93a07dba4e054ed5e1f5b578984381e09c88393ae",
+          "fold": 3
+        },
+        {
+          "source_id": "visa_2b2f19d8bfbb2761a5f2b3afba2d73f04435eb68d5f10a590a2d9de74a3475c5",
+          "category": "pcb1",
+          "label": 1,
+          "original_sha256": "2b2f19d8bfbb2761a5f2b3afba2d73f04435eb68d5f10a590a2d9de74a3475c5",
+          "fold": 1
+        },
+        {
+          "source_id": "visa_3209433cd5be38bef4b85e73d4b0a8ad9f0af9b8f89d1d13b91d3991f5cdc0a1",
+          "category": "pcb2",
+          "label": 0,
+          "original_sha256": "3209433cd5be38bef4b85e73d4b0a8ad9f0af9b8f89d1d13b91d3991f5cdc0a1",
+          "fold": 1
+        },
+        {
+          "source_id": "visa_327f5fa628f8de6e7e9af779c9964163fc5fd3d2d4da8706e5b3331d6b815af9",
+          "category": "macaroni2",
+          "label": 1,
+          "original_sha256": "327f5fa628f8de6e7e9af779c9964163fc5fd3d2d4da8706e5b3331d6b815af9",
+          "fold": 0
+        },
+        {
+          "source_id": "visa_331a918522239e8befad4c93940649fb9bb85bf237a63b04791c586d75b4f5b5",
+          "category": "candle",
+          "label": 0,
+          "original_sha256": "331a918522239e8befad4c93940649fb9bb85bf237a63b04791c586d75b4f5b5",
+          "fold": 3
+        },
+        {
+          "source_id": "visa_3538f10a1d93329b6b3512454f12d304bad710ba16d6f873decf595de8daec7a",
+          "category": "fryum",
+          "label": 1,
+          "original_sha256": "3538f10a1d93329b6b3512454f12d304bad710ba16d6f873decf595de8daec7a",
+          "fold": 2
+        },
+        {
+          "source_id": "visa_369c056fe93c793b0341285d45c0b2d73a488ae3c8c0f8caa395e95127bea109",
+          "category": "pcb1",
+          "label": 1,
+          "original_sha256": "369c056fe93c793b0341285d45c0b2d73a488ae3c8c0f8caa395e95127bea109",
+          "fold": 3
+        },
+        {
+          "source_id": "visa_37324060625ebe75b5d9a2a219d2d613ba668923803429d00d81c133928e0a7a",
+          "category": "macaroni2",
+          "label": 0,
+          "original_sha256": "37324060625ebe75b5d9a2a219d2d613ba668923803429d00d81c133928e0a7a",
+          "fold": 1
+        },
+        {
+          "source_id": "visa_3818647071f5f7c1ed01b7c48c9797b8a9285c38587738ab449ab55d8f0b2bb3",
+          "category": "macaroni2",
+          "label": 0,
+          "original_sha256": "3818647071f5f7c1ed01b7c48c9797b8a9285c38587738ab449ab55d8f0b2bb3",
+          "fold": 0
+        },
+        {
+          "source_id": "visa_3bcf05efa51bebfa0df49867683cdeaf0e10568ba4ba35779d1336803e21aeb4",
+          "category": "pcb4",
+          "label": 0,
+          "original_sha256": "3bcf05efa51bebfa0df49867683cdeaf0e10568ba4ba35779d1336803e21aeb4",
+          "fold": 0
+        },
+        {
+          "source_id": "visa_3cd84b868058a3576c3aa8367a6c42376af2018b11be1ac0d9e983a4715d9274",
+          "category": "candle",
+          "label": 0,
+          "original_sha256": "3cd84b868058a3576c3aa8367a6c42376af2018b11be1ac0d9e983a4715d9274",
+          "fold": 1
+        },
+        {
+          "source_id": "visa_3d8c21d64cc497ca03a95a21995abdcbd3b7271de7a7133b0a03fbe4faa171d0",
+          "category": "pcb1",
+          "label": 0,
+          "original_sha256": "3d8c21d64cc497ca03a95a21995abdcbd3b7271de7a7133b0a03fbe4faa171d0",
+          "fold": 4
+        },
+        {
+          "source_id": "visa_3e14ced880fb26c8fed002e3c2906cc897bad408c4319f499caae010b32687fd",
+          "category": "pipe_fryum",
+          "label": 1,
+          "original_sha256": "3e14ced880fb26c8fed002e3c2906cc897bad408c4319f499caae010b32687fd",
+          "fold": 3
+        },
+        {
+          "source_id": "visa_3f0eb76d52933fbe7607fe4ec7fe07abfabe536506df7a756313d432e9698b88",
+          "category": "pcb4",
+          "label": 1,
+          "original_sha256": "3f0eb76d52933fbe7607fe4ec7fe07abfabe536506df7a756313d432e9698b88",
+          "fold": 4
+        },
+        {
+          "source_id": "visa_4068584cb961745bcf1b30ba642206d4ddb41a34287bc40a50c8f897787b5004",
+          "category": "capsules",
+          "label": 0,
+          "original_sha256": "4068584cb961745bcf1b30ba642206d4ddb41a34287bc40a50c8f897787b5004",
+          "fold": 0
+        },
+        {
+          "source_id": "visa_40ee15f5ebfc20af2e739db0ceafd12469221302742f5cf8150b5d1576640ed3",
+          "category": "pipe_fryum",
+          "label": 0,
+          "original_sha256": "40ee15f5ebfc20af2e739db0ceafd12469221302742f5cf8150b5d1576640ed3",
+          "fold": 0
+        },
+        {
+          "source_id": "visa_41af2fdf67383050a4b626d24a88742125c29866c8cfe4965f2d624a9deb1c2f",
+          "category": "pcb3",
+          "label": 0,
+          "original_sha256": "41af2fdf67383050a4b626d24a88742125c29866c8cfe4965f2d624a9deb1c2f",
+          "fold": 2
+        },
+        {
+          "source_id": "visa_461215936f1309a8c75f06be3d091f1feb0b19c388c3dc73e1aa313214e927cb",
+          "category": "pipe_fryum",
+          "label": 1,
+          "original_sha256": "461215936f1309a8c75f06be3d091f1feb0b19c388c3dc73e1aa313214e927cb",
+          "fold": 1
+        },
+        {
+          "source_id": "visa_489e688c69ed7811ec54aa4de9ba2bb84505b86771fc24b6cd625e8e393c8784",
+          "category": "pcb2",
+          "label": 1,
+          "original_sha256": "489e688c69ed7811ec54aa4de9ba2bb84505b86771fc24b6cd625e8e393c8784",
+          "fold": 3
+        },
+        {
+          "source_id": "visa_4a755110d545b74d2f75224f139ed41ea3ce5b61f450997f3be7067e13eab5e9",
+          "category": "pcb3",
+          "label": 1,
+          "original_sha256": "4a755110d545b74d2f75224f139ed41ea3ce5b61f450997f3be7067e13eab5e9",
+          "fold": 2
+        },
+        {
+          "source_id": "visa_502c3257aaed24fd0007a98536086baf7b87c72379904f8cfe651179a743caa5",
+          "category": "fryum",
+          "label": 0,
+          "original_sha256": "502c3257aaed24fd0007a98536086baf7b87c72379904f8cfe651179a743caa5",
+          "fold": 0
+        },
+        {
+          "source_id": "visa_50f5f6d1d68c158d39744936d26ccca425386fe542d48cff4fb00cf3dc4948cc",
+          "category": "pcb3",
+          "label": 1,
+          "original_sha256": "50f5f6d1d68c158d39744936d26ccca425386fe542d48cff4fb00cf3dc4948cc",
+          "fold": 1
+        },
+        {
+          "source_id": "visa_5862eadc67eebf7da8c35b61bd0bbc7f47ffeccafc0d74d87beac0f381bd5267",
+          "category": "pcb2",
+          "label": 0,
+          "original_sha256": "5862eadc67eebf7da8c35b61bd0bbc7f47ffeccafc0d74d87beac0f381bd5267",
+          "fold": 4
+        },
+        {
+          "source_id": "visa_59261648b344053c2f75436747f39503fa272f962e72d87a2177457aa08fee8d",
+          "category": "pcb4",
+          "label": 1,
+          "original_sha256": "59261648b344053c2f75436747f39503fa272f962e72d87a2177457aa08fee8d",
+          "fold": 3
+        },
+        {
+          "source_id": "visa_592e4588daadf77158dad0561872ee43a5042ff825173d929e054b063f5fc142",
+          "category": "pcb3",
+          "label": 1,
+          "original_sha256": "592e4588daadf77158dad0561872ee43a5042ff825173d929e054b063f5fc142",
+          "fold": 3
+        },
+        {
+          "source_id": "visa_65f4be0362b2ca3fae482efa598fd409c38fb7665f71bb0f1101a6c9a0c6acaa",
+          "category": "chewinggum",
+          "label": 1,
+          "original_sha256": "65f4be0362b2ca3fae482efa598fd409c38fb7665f71bb0f1101a6c9a0c6acaa",
+          "fold": 1
+        },
+        {
+          "source_id": "visa_696d91b33e290952cd60ef09b886eabb75ab7e0a183b2972a8c681208bda4e50",
+          "category": "chewinggum",
+          "label": 0,
+          "original_sha256": "696d91b33e290952cd60ef09b886eabb75ab7e0a183b2972a8c681208bda4e50",
+          "fold": 4
+        },
+        {
+          "source_id": "visa_699b527824e48ac44e0f054adcad7d7220ecd83c71755d5ce36eacf49499574a",
+          "category": "macaroni2",
+          "label": 1,
+          "original_sha256": "699b527824e48ac44e0f054adcad7d7220ecd83c71755d5ce36eacf49499574a",
+          "fold": 1
+        },
+        {
+          "source_id": "visa_69a89ce9bf726a8a376e41d01cef31dede1a6f7f8dd5e29aacfdd22ed3d92f2c",
+          "category": "pipe_fryum",
+          "label": 1,
+          "original_sha256": "69a89ce9bf726a8a376e41d01cef31dede1a6f7f8dd5e29aacfdd22ed3d92f2c",
+          "fold": 4
+        },
+        {
+          "source_id": "visa_6b6bca78ae7ba8babca4c24f7e04125e1e96a3ded627288e67d945d2e474791a",
+          "category": "pcb4",
+          "label": 1,
+          "original_sha256": "6b6bca78ae7ba8babca4c24f7e04125e1e96a3ded627288e67d945d2e474791a",
+          "fold": 1
+        },
+        {
+          "source_id": "visa_6b6c78513751314419209dffa03c21d693c0791f4e9ec92158addb73c1eca987",
+          "category": "fryum",
+          "label": 1,
+          "original_sha256": "6b6c78513751314419209dffa03c21d693c0791f4e9ec92158addb73c1eca987",
+          "fold": 1
+        },
+        {
+          "source_id": "visa_6f55f9413413d3febdef98b1919cb5882c0df8a9b6d28580ab8665be92be8e60",
+          "category": "fryum",
+          "label": 1,
+          "original_sha256": "6f55f9413413d3febdef98b1919cb5882c0df8a9b6d28580ab8665be92be8e60",
+          "fold": 0
+        },
+        {
+          "source_id": "visa_7124ae0359137ced54749ec7dfc6a9e0c2eab5c4c998471e2ceb69711bdf6a8c",
+          "category": "cashew",
+          "label": 0,
+          "original_sha256": "7124ae0359137ced54749ec7dfc6a9e0c2eab5c4c998471e2ceb69711bdf6a8c",
+          "fold": 0
+        },
+        {
+          "source_id": "visa_73ee79b8b1f5e528e61ad441c76ce886d76d7041ce05c28b2829fa1545e866e3",
+          "category": "macaroni1",
+          "label": 1,
+          "original_sha256": "73ee79b8b1f5e528e61ad441c76ce886d76d7041ce05c28b2829fa1545e866e3",
+          "fold": 0
+        },
+        {
+          "source_id": "visa_78a54d30e0a03b1ddacb373acd894f5fb595b3306da7ff1598724338c69d7036",
+          "category": "pcb1",
+          "label": 0,
+          "original_sha256": "78a54d30e0a03b1ddacb373acd894f5fb595b3306da7ff1598724338c69d7036",
+          "fold": 3
+        },
+        {
+          "source_id": "visa_78c0678463ccbbb28f078b5d1a95e95f40e229ff042d3592310bcb5e6cbcc7a8",
+          "category": "capsules",
+          "label": 1,
+          "original_sha256": "78c0678463ccbbb28f078b5d1a95e95f40e229ff042d3592310bcb5e6cbcc7a8",
+          "fold": 0
+        },
+        {
+          "source_id": "visa_7a640f61d9ea9ec28e6eda5f70bd4dc7a965f1cb7de24f7a894c64ebb98c5127",
+          "category": "chewinggum",
+          "label": 0,
+          "original_sha256": "7a640f61d9ea9ec28e6eda5f70bd4dc7a965f1cb7de24f7a894c64ebb98c5127",
+          "fold": 3
+        },
+        {
+          "source_id": "visa_7eace5a2fd5b57b63c61f2f9aab9a61694c9f667b5e9ca8c5a206d3d9852a848",
+          "category": "macaroni1",
+          "label": 1,
+          "original_sha256": "7eace5a2fd5b57b63c61f2f9aab9a61694c9f667b5e9ca8c5a206d3d9852a848",
+          "fold": 1
+        },
+        {
+          "source_id": "visa_7faf8ff401dbb9a9f14b36c4f0f3e5ec0950391351aa57be812dc515eed0c5e0",
+          "category": "cashew",
+          "label": 0,
+          "original_sha256": "7faf8ff401dbb9a9f14b36c4f0f3e5ec0950391351aa57be812dc515eed0c5e0",
+          "fold": 1
+        },
+        {
+          "source_id": "visa_7fe2d5df369e8713ca46b1cb9c4d07741746b4ec96cf4c16e09aa4cfe4baeb6f",
+          "category": "macaroni1",
+          "label": 0,
+          "original_sha256": "7fe2d5df369e8713ca46b1cb9c4d07741746b4ec96cf4c16e09aa4cfe4baeb6f",
+          "fold": 0
+        },
+        {
+          "source_id": "visa_80826359e7704e236090453a9c4eeda4631b40ce4c891ed1a492a83f28af2c2c",
+          "category": "pipe_fryum",
+          "label": 0,
+          "original_sha256": "80826359e7704e236090453a9c4eeda4631b40ce4c891ed1a492a83f28af2c2c",
+          "fold": 3
+        },
+        {
+          "source_id": "visa_80bf0ee5a0a24dfcff35c15d663a981e88e04ccad33dc6eb229c4f7e52c3c077",
+          "category": "pcb1",
+          "label": 1,
+          "original_sha256": "80bf0ee5a0a24dfcff35c15d663a981e88e04ccad33dc6eb229c4f7e52c3c077",
+          "fold": 4
+        },
+        {
+          "source_id": "visa_82147a7d0c321426267a87f92bbe3b77fc135f0fc6f4ce6f6dd337ead6858765",
+          "category": "macaroni2",
+          "label": 1,
+          "original_sha256": "82147a7d0c321426267a87f92bbe3b77fc135f0fc6f4ce6f6dd337ead6858765",
+          "fold": 4
+        },
+        {
+          "source_id": "visa_86bfe261614be2c47034888b985dfb27629947f88e6e196d637ed3b7635e65a2",
+          "category": "capsules",
+          "label": 0,
+          "original_sha256": "86bfe261614be2c47034888b985dfb27629947f88e6e196d637ed3b7635e65a2",
+          "fold": 4
+        },
+        {
+          "source_id": "visa_892614dd5d2ce2b080136ef54fc175e225931c10adadfe782ff65013849e2bcc",
+          "category": "fryum",
+          "label": 0,
+          "original_sha256": "892614dd5d2ce2b080136ef54fc175e225931c10adadfe782ff65013849e2bcc",
+          "fold": 2
+        },
+        {
+          "source_id": "visa_89fcd08a408a078300b536636a9d32134c7a349c7036110aac39aeffe7e7ed5e",
+          "category": "cashew",
+          "label": 0,
+          "original_sha256": "89fcd08a408a078300b536636a9d32134c7a349c7036110aac39aeffe7e7ed5e",
+          "fold": 3
+        },
+        {
+          "source_id": "visa_9226ca3ad7ad192e481efbc58a4835b6353f4844435f06aff5980d99401378ed",
+          "category": "candle",
+          "label": 0,
+          "original_sha256": "9226ca3ad7ad192e481efbc58a4835b6353f4844435f06aff5980d99401378ed",
+          "fold": 2
+        },
+        {
+          "source_id": "visa_96f92391b80123b7eb3af927fd3af10671026eb9b063de2b9ca47b49964b0a30",
+          "category": "pcb3",
+          "label": 1,
+          "original_sha256": "96f92391b80123b7eb3af927fd3af10671026eb9b063de2b9ca47b49964b0a30",
+          "fold": 4
+        },
+        {
+          "source_id": "visa_9aaac129e234e0fce7ce1ba032167f1a5b96fd4b098cdb4a1016378d7d5b6dfb",
+          "category": "macaroni2",
+          "label": 0,
+          "original_sha256": "9aaac129e234e0fce7ce1ba032167f1a5b96fd4b098cdb4a1016378d7d5b6dfb",
+          "fold": 3
+        },
+        {
+          "source_id": "visa_9c1d1f5ae6c30175bd38879f95a2f87d4e8eb2d6dbc9a577ca57c3cab22acc10",
+          "category": "candle",
+          "label": 1,
+          "original_sha256": "9c1d1f5ae6c30175bd38879f95a2f87d4e8eb2d6dbc9a577ca57c3cab22acc10",
+          "fold": 2
+        },
+        {
+          "source_id": "visa_9c470dd5e1785200fd73a38c339713664248eeb6d5e335f0c02b1c38c7685528",
+          "category": "pcb4",
+          "label": 0,
+          "original_sha256": "9c470dd5e1785200fd73a38c339713664248eeb6d5e335f0c02b1c38c7685528",
+          "fold": 3
+        },
+        {
+          "source_id": "visa_a0027349aa1afc7dd8e6b779192c80bb4eacce3e07fc8e0d7d6a367af9509d39",
+          "category": "chewinggum",
+          "label": 0,
+          "original_sha256": "a0027349aa1afc7dd8e6b779192c80bb4eacce3e07fc8e0d7d6a367af9509d39",
+          "fold": 1
+        },
+        {
+          "source_id": "visa_a3a9234a1a5bd713928e289afab41cb53505a56fae4faa2fda20f116e07d7c34",
+          "category": "pcb2",
+          "label": 0,
+          "original_sha256": "a3a9234a1a5bd713928e289afab41cb53505a56fae4faa2fda20f116e07d7c34",
+          "fold": 0
+        },
+        {
+          "source_id": "visa_a84a9a364bf527803e035d51ce8fcd8c9550aba41a38f9a5c7586f14bf56afb5",
+          "category": "candle",
+          "label": 1,
+          "original_sha256": "a84a9a364bf527803e035d51ce8fcd8c9550aba41a38f9a5c7586f14bf56afb5",
+          "fold": 3
+        },
+        {
+          "source_id": "visa_a92b025d0e1a5a6bb6aebf951077601708fc56b97b8e4baf301a1f08c0d02d4b",
+          "category": "chewinggum",
+          "label": 1,
+          "original_sha256": "a92b025d0e1a5a6bb6aebf951077601708fc56b97b8e4baf301a1f08c0d02d4b",
+          "fold": 0
+        },
+        {
+          "source_id": "visa_ababe8f688ad026370002e0f5f9b3f53b36942fa317b6b688cebe2228e376a09",
+          "category": "pcb2",
+          "label": 1,
+          "original_sha256": "ababe8f688ad026370002e0f5f9b3f53b36942fa317b6b688cebe2228e376a09",
+          "fold": 1
+        },
+        {
+          "source_id": "visa_ad662d336c2daa1b8225a499c27331be0eaa9800d7e7855e0e1b53807fe3879f",
+          "category": "fryum",
+          "label": 1,
+          "original_sha256": "ad662d336c2daa1b8225a499c27331be0eaa9800d7e7855e0e1b53807fe3879f",
+          "fold": 4
+        },
+        {
+          "source_id": "visa_ada5f9c784ffcc0d2ba643a11ae48fec215950fb220036085907360273816523",
+          "category": "fryum",
+          "label": 0,
+          "original_sha256": "ada5f9c784ffcc0d2ba643a11ae48fec215950fb220036085907360273816523",
+          "fold": 4
+        },
+        {
+          "source_id": "visa_aee76fb8b46988be09be5958cba31785124377041c96e59472552f8ae88773ef",
+          "category": "chewinggum",
+          "label": 1,
+          "original_sha256": "aee76fb8b46988be09be5958cba31785124377041c96e59472552f8ae88773ef",
+          "fold": 4
+        },
+        {
+          "source_id": "visa_b04a27e2687de5cc064b577c418b5b120a4c8bc008a1f458a28aa5d3d9fe459e",
+          "category": "capsules",
+          "label": 1,
+          "original_sha256": "b04a27e2687de5cc064b577c418b5b120a4c8bc008a1f458a28aa5d3d9fe459e",
+          "fold": 3
+        },
+        {
+          "source_id": "visa_b1bb734ac934f58421c178a6d8f6b7bf96148c5d0413f023e7da7075126c071d",
+          "category": "candle",
+          "label": 1,
+          "original_sha256": "b1bb734ac934f58421c178a6d8f6b7bf96148c5d0413f023e7da7075126c071d",
+          "fold": 0
+        },
+        {
+          "source_id": "visa_b340ef3805e0887d9e607bdbd40ca8f43dbedc952fc7bfca7f04c34965523225",
+          "category": "pcb1",
+          "label": 1,
+          "original_sha256": "b340ef3805e0887d9e607bdbd40ca8f43dbedc952fc7bfca7f04c34965523225",
+          "fold": 2
+        },
+        {
+          "source_id": "visa_b81a85941ba79e2767f90bf712c6b6a09871dc960a78b1e7030aaae82d6c4320",
+          "category": "chewinggum",
+          "label": 1,
+          "original_sha256": "b81a85941ba79e2767f90bf712c6b6a09871dc960a78b1e7030aaae82d6c4320",
+          "fold": 2
+        },
+        {
+          "source_id": "visa_c0f81d6f9a9060e3c1b5f48258e2bd6e3c05b992fa9b9039fd2f2c3f944df44b",
+          "category": "cashew",
+          "label": 0,
+          "original_sha256": "c0f81d6f9a9060e3c1b5f48258e2bd6e3c05b992fa9b9039fd2f2c3f944df44b",
+          "fold": 4
+        },
+        {
+          "source_id": "visa_c32480dad6beb0160b5bc969d18a533c4cd7242dc8ca96cd100cd3d067620c1d",
+          "category": "macaroni1",
+          "label": 1,
+          "original_sha256": "c32480dad6beb0160b5bc969d18a533c4cd7242dc8ca96cd100cd3d067620c1d",
+          "fold": 3
+        },
+        {
+          "source_id": "visa_c5c0f803e6fa2e54617736fae4c7fa965fcc15fa40d0b126306861ffd7fafdbe",
+          "category": "candle",
+          "label": 0,
+          "original_sha256": "c5c0f803e6fa2e54617736fae4c7fa965fcc15fa40d0b126306861ffd7fafdbe",
+          "fold": 0
+        },
+        {
+          "source_id": "visa_c765753d3b3f06de90428ee947f4ec5f51ee3baaacd10ff6dcd23ce533474432",
+          "category": "cashew",
+          "label": 1,
+          "original_sha256": "c765753d3b3f06de90428ee947f4ec5f51ee3baaacd10ff6dcd23ce533474432",
+          "fold": 2
+        },
+        {
+          "source_id": "visa_c857c6af258a04c1beaa7b34a5c5b74adc68b9fe3b66287af1814853c5949361",
+          "category": "pcb4",
+          "label": 1,
+          "original_sha256": "c857c6af258a04c1beaa7b34a5c5b74adc68b9fe3b66287af1814853c5949361",
+          "fold": 2
+        },
+        {
+          "source_id": "visa_cd1b5cdb7e8bd8a194164101bff94ecc3d17d86e1eb452361fdca76729ddd4dc",
+          "category": "pcb1",
+          "label": 1,
+          "original_sha256": "cd1b5cdb7e8bd8a194164101bff94ecc3d17d86e1eb452361fdca76729ddd4dc",
+          "fold": 0
+        },
+        {
+          "source_id": "visa_cec0e1b971f1da88b662b945d85555b01b9815008b385bd8d16280e33143f1c2",
+          "category": "pipe_fryum",
+          "label": 1,
+          "original_sha256": "cec0e1b971f1da88b662b945d85555b01b9815008b385bd8d16280e33143f1c2",
+          "fold": 2
+        },
+        {
+          "source_id": "visa_d2c4982cf4cde7957d2c39a3b55e5d54985fc9e11050ad0476e5ab125c94be15",
+          "category": "pcb4",
+          "label": 0,
+          "original_sha256": "d2c4982cf4cde7957d2c39a3b55e5d54985fc9e11050ad0476e5ab125c94be15",
+          "fold": 1
+        },
+        {
+          "source_id": "visa_d42e14742264bb9e9393ae9044aac2fb325c03fd35e9846faad7f63d865e825c",
+          "category": "capsules",
+          "label": 1,
+          "original_sha256": "d42e14742264bb9e9393ae9044aac2fb325c03fd35e9846faad7f63d865e825c",
+          "fold": 1
+        },
+        {
+          "source_id": "visa_d64fd49078bf1585b89af15ec4dfb108f71fc7ffeabc68e43b9cfbb09362e3e0",
+          "category": "pcb2",
+          "label": 0,
+          "original_sha256": "d64fd49078bf1585b89af15ec4dfb108f71fc7ffeabc68e43b9cfbb09362e3e0",
+          "fold": 3
+        },
+        {
+          "source_id": "visa_d859e02fc937073d2ad266dcb0102b3f43e7e0611649f4e964aa31bcb7c19217",
+          "category": "macaroni1",
+          "label": 0,
+          "original_sha256": "d859e02fc937073d2ad266dcb0102b3f43e7e0611649f4e964aa31bcb7c19217",
+          "fold": 1
+        },
+        {
+          "source_id": "visa_dcf8bd48cae28d15c66f7219a2646116c857c88a1ff16634d47968adc713d125",
+          "category": "cashew",
+          "label": 0,
+          "original_sha256": "dcf8bd48cae28d15c66f7219a2646116c857c88a1ff16634d47968adc713d125",
+          "fold": 2
+        },
+        {
+          "source_id": "visa_dd1d62eb6c25db5f94a5e0bbdfd728ee3174b0c0ec215ec2567c32e27479acf4",
+          "category": "capsules",
+          "label": 0,
+          "original_sha256": "dd1d62eb6c25db5f94a5e0bbdfd728ee3174b0c0ec215ec2567c32e27479acf4",
+          "fold": 1
+        },
+        {
+          "source_id": "visa_de72214c79777745fe18fa271a12b4a73a03587bac5e96cc7d8cae7ac8235778",
+          "category": "macaroni2",
+          "label": 1,
+          "original_sha256": "de72214c79777745fe18fa271a12b4a73a03587bac5e96cc7d8cae7ac8235778",
+          "fold": 3
+        },
+        {
+          "source_id": "visa_e1b0ff3feb43ce597d40cf67913a60151bd23a52cc19309cc70ea0d35a8a8e15",
+          "category": "candle",
+          "label": 1,
+          "original_sha256": "e1b0ff3feb43ce597d40cf67913a60151bd23a52cc19309cc70ea0d35a8a8e15",
+          "fold": 4
+        },
+        {
+          "source_id": "visa_e1db10ae3c3a76064af134e8cb52b8f7dcb8ecdab83bcd8a1e8902141f0bcb0f",
+          "category": "chewinggum",
+          "label": 0,
+          "original_sha256": "e1db10ae3c3a76064af134e8cb52b8f7dcb8ecdab83bcd8a1e8902141f0bcb0f",
+          "fold": 2
+        },
+        {
+          "source_id": "visa_e3f8ccfd909a536181e05348d44e76ae56b2c06026b666c96babb963f3081e0a",
+          "category": "pipe_fryum",
+          "label": 0,
+          "original_sha256": "e3f8ccfd909a536181e05348d44e76ae56b2c06026b666c96babb963f3081e0a",
+          "fold": 4
+        },
+        {
+          "source_id": "visa_e47e6d72e8f55160d0d47273ae6f7670b5b308e53c1ccf601726b4daf2d24ada",
+          "category": "chewinggum",
+          "label": 1,
+          "original_sha256": "e47e6d72e8f55160d0d47273ae6f7670b5b308e53c1ccf601726b4daf2d24ada",
+          "fold": 3
+        },
+        {
+          "source_id": "visa_e52327c124f16ff844b05aa3818660a9b0481af14913a20f19c75aea0c00d434",
+          "category": "pcb2",
+          "label": 1,
+          "original_sha256": "e52327c124f16ff844b05aa3818660a9b0481af14913a20f19c75aea0c00d434",
+          "fold": 2
+        },
+        {
+          "source_id": "visa_e792b23268ce631361e08b52655a4ffc7a571de02061945a7a2b54ae64a9f948",
+          "category": "macaroni1",
+          "label": 0,
+          "original_sha256": "e792b23268ce631361e08b52655a4ffc7a571de02061945a7a2b54ae64a9f948",
+          "fold": 3
+        },
+        {
+          "source_id": "visa_e7c62008b7f4bc8e0e3e43d4d65823a9623fe467a1f27584a9876580c04ab6e8",
+          "category": "pcb4",
+          "label": 1,
+          "original_sha256": "e7c62008b7f4bc8e0e3e43d4d65823a9623fe467a1f27584a9876580c04ab6e8",
+          "fold": 0
+        },
+        {
+          "source_id": "visa_e97ef05da5ed9aefeb06e63c527743b47b7f9778e0d8b708f0201e78b29ebe4c",
+          "category": "fryum",
+          "label": 0,
+          "original_sha256": "e97ef05da5ed9aefeb06e63c527743b47b7f9778e0d8b708f0201e78b29ebe4c",
+          "fold": 3
+        },
+        {
+          "source_id": "visa_ea40de182554b6fd42a5c700bbfcad8ffcafe3086fd8c8f95c66337c2dbaf691",
+          "category": "pipe_fryum",
+          "label": 0,
+          "original_sha256": "ea40de182554b6fd42a5c700bbfcad8ffcafe3086fd8c8f95c66337c2dbaf691",
+          "fold": 2
+        },
+        {
+          "source_id": "visa_f1d12249261d62f00fd20c476804de6884a96d351e04e7943b3a82852ba86c34",
+          "category": "pipe_fryum",
+          "label": 0,
+          "original_sha256": "f1d12249261d62f00fd20c476804de6884a96d351e04e7943b3a82852ba86c34",
+          "fold": 1
+        },
+        {
+          "source_id": "visa_f2a9758e961a446ded92f68287e810b401b74d0d731d2e33475e335efb158ab7",
+          "category": "pcb2",
+          "label": 1,
+          "original_sha256": "f2a9758e961a446ded92f68287e810b401b74d0d731d2e33475e335efb158ab7",
+          "fold": 4
+        },
+        {
+          "source_id": "visa_f3a026383e4573baca1494d3687b7316222f06e8fef2014cefc22ad94f704d79",
+          "category": "pcb4",
+          "label": 0,
+          "original_sha256": "f3a026383e4573baca1494d3687b7316222f06e8fef2014cefc22ad94f704d79",
+          "fold": 4
+        },
+        {
+          "source_id": "visa_f8f2281ab983cbeb9cb650ffe437b81642df1565764d2c7675ff173788bf1008",
+          "category": "cashew",
+          "label": 1,
+          "original_sha256": "f8f2281ab983cbeb9cb650ffe437b81642df1565764d2c7675ff173788bf1008",
+          "fold": 3
+        },
+        {
+          "source_id": "visa_f9f3e8ef99623c63b69a694e7ab9e5a958c62b5e9cfb238136e6ad06a833737c",
+          "category": "macaroni1",
+          "label": 1,
+          "original_sha256": "f9f3e8ef99623c63b69a694e7ab9e5a958c62b5e9cfb238136e6ad06a833737c",
+          "fold": 2
+        },
+        {
+          "source_id": "visa_fd78e36ad21b32a65ac940279be55cf8817cdaa05d55be17e0987c40acf614d0",
+          "category": "cashew",
+          "label": 1,
+          "original_sha256": "fd78e36ad21b32a65ac940279be55cf8817cdaa05d55be17e0987c40acf614d0",
+          "fold": 0
+        },
+        {
+          "source_id": "visa_ffa6d01176ebd6cce6849b91ba620cd2d7e1a8bb50d272d4cc2f27a5e8037d73",
+          "category": "pcb3",
+          "label": 0,
+          "original_sha256": "ffa6d01176ebd6cce6849b91ba620cd2d7e1a8bb50d272d4cc2f27a5e8037d73",
+          "fold": 1
+        }
+      ],
+      "fold_map_sha256": "c3f8ed70f634449a4f11445bd7f8eb060f11c2a5f5565fc87c1e2e043b32641b"
+    },
+    "logistic": {
+      "feature": "log(p_clip/(1-p_clip))",
+      "clip": 1e-06,
+      "C": 1.0,
+      "penalty": "l2",
+      "solver": "lbfgs",
+      "fit_intercept": true,
+      "max_iter": 1000,
+      "tol": 1e-08,
+      "class_weight": null,
+      "random_state": 42,
+      "convergence_warning_action": "fail",
+      "input_note": "Qwen sigmoid preference scores are not independently calibrated probabilities"
+    },
+    "metric_policy": {
+      "metrics": [
+        "Brier",
+        "binary_log_loss",
+        "ECE10_equal_width",
+        "AUROC"
+      ],
+      "brier": "mean((p-y)^2) on raw or heldout probability without extra clipping",
+      "logloss": "binary logloss after fixed clip1e-6 on raw or heldout probability",
+      "ece": "10 bins [b/10,(b+1)/10), last includes1; sum n_bin/n * abs(mean_p-mean_y)",
+      "auroc": "sklearn roc_auc_score on raw or OOF heldout probability; tied scores retained",
+      "uncertainty": "Descriptive fixed-fold diagnostics; no confidence interval claiming repeated-calibration uncertainty"
+    },
+    "rejection": {
+      "confidence": "max(p,1-p)",
+      "coverages": [
+        0.5,
+        0.75,
+        1.0
+      ],
+      "ranking": "descending confidence, then sha256(prefix|source_id), then source_id",
+      "tie_prefix": "jev-calibration-reject-v1",
+      "ranking_uses_label": false,
+      "accepted_count": "round(coverage *120), exactly60/90/120",
+      "prediction": "p>=0.5",
+      "metrics": [
+        "selected_accuracy",
+        "selective_risk",
+        "selected_class_counts",
+        "selected_FPR",
+        "selected_recall",
+        "full_anomaly_automatic_detection_rate",
+        "class_specific_acceptance_coverage"
+      ],
+      "abstention": "Unselected cases abstain; not imputed negative; report class-specific selected denominators",
+      "no_threshold_or_coverage_tuning": true
+    },
+    "evaluation_gate": "stage05_evaluation.status==complete and source set identical; stage07 protocol pre-frozen",
+    "independent_calibration_task_completed": false,
+    "confirmation_task_completed": false,
+    "model_training": "Only one-dimensional logistic calibration fit; no foundation-model/LoRA training",
+    "no_api_calls": true,
+    "no_new_predictions": true,
+    "no_rgb_or_masks_opened": true,
+    "confirmation_opened": false
+  }
+}

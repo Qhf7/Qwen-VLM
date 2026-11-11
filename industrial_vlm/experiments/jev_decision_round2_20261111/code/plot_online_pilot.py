@@ -1,0 +1,35 @@
+#!/usr/bin/env python3
+"""Plot only completed audited pilot aggregates; no labels or images opened."""
+from pathlib import Path
+import json,hashlib,socket,datetime
+import numpy as np
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+R=Path('/root/autodl-tmp/industrial_vlm/experiments/jev_decision_round2_20261111');S=R/'online_route_pilot';sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest();read=lambda p:json.loads(p.read_text())
+assert socket.gethostname()=='autodl-container-132444827f-9c594038'
+a=read(S/'independent_postexecution_audit.json');s=read(S/'INDEPENDENT_STATISTICAL_SUPPLEMENT.json');m=read(S/'metrics.json');cert=read(S/'completion_certificate.json');assert a['failed']==0 and a['status']==s['status']==m['status']==cert['status']=='complete' and a['supplement_sha256']==sha(S/'INDEPENDENT_STATISTICAL_SUPPLEMENT.json')
+names=['new_duplicate','learned_gate','matched_random','historical_uncertainty','geometry_small'];labels=['New duplicate','Live Noul gate','Random','Oldscore uncertainty','Small area'];colors=['#46779F','#269986','#9C76AD','#D49C49','#7C88A0'];plt.rcParams.update({'font.family':'DejaVu Sans','font.size':10,'axes.spines.top':False,'axes.spines.right':False});fig,ax=plt.subplots(1,3,figsize=(17.8,7.8));x=np.arange(5)
+ax[0].bar(x,[s['metrics'][n]['auroc'] for n in names],color=colors)
+for i,n in enumerate(names):ax[0].text(i,s['metrics'][n]['auroc']+.025,f"{s['metrics'][n]['auroc']:.3f}",ha='center',fontsize=9)
+ax[0].set(xticks=x,xticklabels=labels,ylim=(0,1.1),ylabel='AUROC',title='A  New shared downstream potential outcomes');ax[0].tick_params(axis='x',rotation=28)
+for j,(k,col) in enumerate([('recall','#269986'),('fpr','#D47945')]):
+ vals=[s['extras'][n][k] for n in names];xx=x+(j-.5)*.23;est=[v['estimate'] for v in vals];ax[1].errorbar(xx,est,yerr=[[v['estimate']-v['ci95'][0] for v in vals],[v['ci95'][1]-v['estimate'] for v in vals]],fmt='o',color=col,capsize=3,label=k)
+ for p,v in zip(xx,vals):ax[1].annotate(f"{v['count']}/{v['denominator']}",(p,v['estimate']),textcoords='offset points',xytext=(0,7 if j==0 else -14),ha='center',fontsize=8)
+ax[1].set(xticks=x,xticklabels=labels,ylim=(-.05,1.1),ylabel='Rate and Wilson95%',title='B  Tiny sample; explicit class denominators');ax[1].tick_params(axis='x',rotation=28);ax[1].legend(fontsize=8,loc='upper left')
+ns=names[1:];y=np.arange(4);ideal=[s['costs'][n]['ideal_minimal_logical_calls'] for n in ns];acq=[s['costs'][n]['pilot_policy_acquisition_with_new_duplicate_baseline'] for n in ns];ax[2].barh(y,acq,color='#CAD1DD',label='Policy acquisition incl duplicate controls');ax[2].barh(y,ideal,color=[colors[i+1] for i in range(4)],label='Ideal chosen final + required gate')
+for i,(v,z) in enumerate(zip(ideal,acq)):ax[2].text(z+.5,i,f'{v} / {z}',va='center',fontsize=9)
+ax[2].set(yticks=y,yticklabels=labels[1:],xlim=(0,max(acq)+12),xlabel='Successful logical calls (ideal / acquisition)',title='C  Gate cost is additional, never free');ax[2].legend(fontsize=8,loc='upper center',bbox_to_anchor=(.5,-.14))
+fig.subplots_adjust(left=.06,right=.98,top=.83,bottom=.34,wspace=.38);fig.text(.06,.97,'Exploratory real online crop-gate pilot: 24 previously viewed development images',fontsize=15,weight='bold',va='top');op=s['actualpilot'];cap=f"N=24 ({s['normal']}normal/{s['anomalous']}anomaly); eligible{s['eligible']}, commonK{s['K']}, unionROI{s['union_roi']}. Actual collection:{op['accepted']}success/{op['started']}starts/{op['failed']}failed/unknown0.\nFour policies share the same newly measured duplicate/ROI potential outcomes; gate only ranks crop usefulness, not anomaly probability.\nRecall/FPR Wilson intervals are finite-sample descriptions. Paired bootstrap2k fixesroutes; sparse categories are descriptive only; provider variation remains unmeasured.\nIdeal minimal calls are inferred, not independently timed deployments. Historical uncertainty requires earlier score prepass; cost unknown separately.\nNo newblind test, no trained router head, no complete Agent; no stage13 data or GT masks read by this supplement."
+fig.text(.06,.18,cap,fontsize=9,va='top',linespacing=1.65,color='#444444');png=S/'online_route_pilot_analysis.png';svg=S/'online_route_pilot_analysis.svg';assert not png.exists();fig.savefig(png,dpi=280,facecolor='white');fig.savefig(svg,facecolor='white');plt.close(fig)
+prov=dict(schema='jev-online-pilot-figure-provenance-v1',timestamp_utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),hostname=socket.gethostname(),script_sha256=sha(Path(__file__)),inputs_sha256={n:sha(S/n) for n in ['metrics.json','INDEPENDENT_STATISTICAL_SUPPLEMENT.json','independent_postexecution_audit.json','completion_certificate.json']},outputs_sha256={n:sha(S/n) for n in [png.name,svg.name]},labels_read=False,images_or_masks_read=False,stage13_data_read=False,new_api_calls=0)
+with (S/'online_route_pilot_analysis.provenance.json').open('x') as f:f.write(json.dumps(prov,ensure_ascii=False,indent=2)+chr(10))
+lines=['# 在线门控pilot独立解释','','这是24张已看开发图上的探索性试验，不是新盲测。Jev先对整图+bbox回答crop_needed，再固定K选图执行真实裁剪；新duplicate与unionROI终判全部重新采集。四策略共用同一新潜在结果表，不当成四轮独立部署。所有分类统计把区域候选判定与image label对比，属于image-label proxy；Brier/ECE/Logloss不代表区域概率校准或全图校准。', '',f"样本normal{s['normal']}、anomaly{s['anomalous']}；eligible{s['eligible']}，共同K{s['K']}，ROI并集{s['union_roi']}。真实总{op['accepted']}accepted/{op['started']}started/{op['failed']}failed，unknown0。",'', '| 策略 | AUROC | AP | F1 | Recall计数/分母 | FPR计数/分母 | Brier | ECE10 | Logloss |','|---|---:|---:|---:|---|---|---:|---:|---:|']
+for n,l in zip(names,labels):
+ v=s['metrics'][n];e=s['extras'][n];lines.append(f"| {l} | {v['auroc']:.6f} | {v['ap']:.6f} | {v['macro_f1']:.6f} | {e['recall']['count']}/{e['recall']['denominator']} | {e['fpr']['count']}/{e['fpr']['denominator']} | {v['brier']:.6f} | {v['ece_10_equal_width']:.6f} | {e['binary_logloss']:.6f} |")
+lines+=['','## 配对收益与不确定性','','以下为各策略−新duplicate基线；区间是独立补充的label分层2000配对bootstrap，固定本次route。主runner与独立补充均按label分层2000配对bootstrap，category仅描述；区间固定既有route和API响应，不能当未来保证。','','| 策略 | AUROC差及95% | Brier差及95% | Recall差及95% | FPR差及95% |','|---|---|---|---|---|']
+for n in ns:
+ fmt=lambda k:f"{s['paired_minus_newduplicate'][n][k]['delta']:+.6f} [{s['paired_minus_newduplicate'][n][k]['ci95'][0]:+.6f},{s['paired_minus_newduplicate'][n][k]['ci95'][1]:+.6f}]";lines.append('| '+n+' | '+' | '.join(fmt(k) for k in ['auroc','brier','recall','fpr'])+' |')
+lines+=['','## 费用口径','','真实pilot总成本包括24gate+24duplicate+unionROI，失败usage未知、不能填0或估货币账单。单policy取证包括选中K张的额外duplicate对照：gate策略48+K，其他24+K。理论最简只选择每张终判一次，则gate为24gate+24final=48，其他24final；该数只是由潜在表推导，不是测过的独立部署时延。历史uncertainty还依赖旧评分预pass，成本另计。','','crop_needed是“放大是否可能有帮助”的typedNoul概率，不是异常概率，没有训练新的router head。最终异常阈值固定p>=0.5，不把gate直接当异常。此试验是有限固定K的真实门控与工具调用，不是完整Agent。','','固定candidate定位质量、teacher历史暴露、provider变化与24样本不平衡限制仍在。任何gate负收益或成本增加都应保留；不能拿stage13确认来再调这轮新路由。','']
+with (S/'INDEPENDENT_ANALYSIS.md').open('x') as f:f.write(chr(10).join(lines))
+print(json.dumps(dict(status='complete',png_sha256=sha(png),svg_sha256=sha(svg),analysis_sha256=sha(S/'INDEPENDENT_ANALYSIS.md'),provenance_sha256=sha(S/'online_route_pilot_analysis.provenance.json')),indent=2))

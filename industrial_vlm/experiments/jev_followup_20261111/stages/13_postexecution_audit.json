@@ -1,0 +1,2245 @@
+{
+  "schema": "jev-stage13-independent-postexecution-audit-v1",
+  "status": "complete",
+  "timestamp_utc": "2026-11-10T19:14:44.054307+00:00",
+  "hostname": "autodl-container-132444827f-9c594038",
+  "passed": 548,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "server",
+      "passed": true
+    },
+    {
+      "name": "method_unchanged",
+      "passed": true
+    },
+    {
+      "name": "completed_artifacts_present",
+      "passed": true
+    },
+    {
+      "name": "240complete",
+      "passed": true
+    },
+    {
+      "name": "frozen_contract_bundle",
+      "passed": true
+    },
+    {
+      "name": "full_predictionfreeze",
+      "passed": true
+    },
+    {
+      "name": "mapfreeze",
+      "passed": true
+    },
+    {
+      "name": "fixed_primary_secondary",
+      "passed": true
+    },
+    {
+      "name": "certificate_binding",
+      "passed": true
+    },
+    {
+      "name": "allsettled240",
+      "passed": true
+    },
+    {
+      "name": "response_0",
+      "passed": true
+    },
+    {
+      "name": "response_1",
+      "passed": true
+    },
+    {
+      "name": "response_2",
+      "passed": true
+    },
+    {
+      "name": "response_3",
+      "passed": true
+    },
+    {
+      "name": "response_4",
+      "passed": true
+    },
+    {
+      "name": "response_5",
+      "passed": true
+    },
+    {
+      "name": "response_6",
+      "passed": true
+    },
+    {
+      "name": "response_7",
+      "passed": true
+    },
+    {
+      "name": "response_8",
+      "passed": true
+    },
+    {
+      "name": "response_9",
+      "passed": true
+    },
+    {
+      "name": "response_10",
+      "passed": true
+    },
+    {
+      "name": "response_11",
+      "passed": true
+    },
+    {
+      "name": "response_12",
+      "passed": true
+    },
+    {
+      "name": "response_13",
+      "passed": true
+    },
+    {
+      "name": "response_14",
+      "passed": true
+    },
+    {
+      "name": "response_15",
+      "passed": true
+    },
+    {
+      "name": "response_16",
+      "passed": true
+    },
+    {
+      "name": "response_17",
+      "passed": true
+    },
+    {
+      "name": "response_18",
+      "passed": true
+    },
+    {
+      "name": "response_19",
+      "passed": true
+    },
+    {
+      "name": "response_20",
+      "passed": true
+    },
+    {
+      "name": "response_21",
+      "passed": true
+    },
+    {
+      "name": "response_22",
+      "passed": true
+    },
+    {
+      "name": "response_23",
+      "passed": true
+    },
+    {
+      "name": "response_24",
+      "passed": true
+    },
+    {
+      "name": "response_25",
+      "passed": true
+    },
+    {
+      "name": "response_26",
+      "passed": true
+    },
+    {
+      "name": "response_27",
+      "passed": true
+    },
+    {
+      "name": "response_28",
+      "passed": true
+    },
+    {
+      "name": "response_29",
+      "passed": true
+    },
+    {
+      "name": "response_30",
+      "passed": true
+    },
+    {
+      "name": "response_31",
+      "passed": true
+    },
+    {
+      "name": "response_32",
+      "passed": true
+    },
+    {
+      "name": "response_33",
+      "passed": true
+    },
+    {
+      "name": "response_34",
+      "passed": true
+    },
+    {
+      "name": "response_35",
+      "passed": true
+    },
+    {
+      "name": "response_36",
+      "passed": true
+    },
+    {
+      "name": "response_37",
+      "passed": true
+    },
+    {
+      "name": "response_38",
+      "passed": true
+    },
+    {
+      "name": "response_39",
+      "passed": true
+    },
+    {
+      "name": "response_40",
+      "passed": true
+    },
+    {
+      "name": "response_41",
+      "passed": true
+    },
+    {
+      "name": "response_42",
+      "passed": true
+    },
+    {
+      "name": "response_43",
+      "passed": true
+    },
+    {
+      "name": "response_44",
+      "passed": true
+    },
+    {
+      "name": "response_45",
+      "passed": true
+    },
+    {
+      "name": "response_46",
+      "passed": true
+    },
+    {
+      "name": "response_47",
+      "passed": true
+    },
+    {
+      "name": "response_48",
+      "passed": true
+    },
+    {
+      "name": "response_49",
+      "passed": true
+    },
+    {
+      "name": "response_50",
+      "passed": true
+    },
+    {
+      "name": "response_51",
+      "passed": true
+    },
+    {
+      "name": "response_52",
+      "passed": true
+    },
+    {
+      "name": "response_53",
+      "passed": true
+    },
+    {
+      "name": "response_54",
+      "passed": true
+    },
+    {
+      "name": "response_55",
+      "passed": true
+    },
+    {
+      "name": "response_56",
+      "passed": true
+    },
+    {
+      "name": "response_57",
+      "passed": true
+    },
+    {
+      "name": "response_58",
+      "passed": true
+    },
+    {
+      "name": "response_59",
+      "passed": true
+    },
+    {
+      "name": "response_60",
+      "passed": true
+    },
+    {
+      "name": "response_61",
+      "passed": true
+    },
+    {
+      "name": "response_62",
+      "passed": true
+    },
+    {
+      "name": "response_63",
+      "passed": true
+    },
+    {
+      "name": "response_64",
+      "passed": true
+    },
+    {
+      "name": "response_65",
+      "passed": true
+    },
+    {
+      "name": "response_66",
+      "passed": true
+    },
+    {
+      "name": "response_67",
+      "passed": true
+    },
+    {
+      "name": "response_68",
+      "passed": true
+    },
+    {
+      "name": "response_69",
+      "passed": true
+    },
+    {
+      "name": "response_70",
+      "passed": true
+    },
+    {
+      "name": "response_71",
+      "passed": true
+    },
+    {
+      "name": "response_72",
+      "passed": true
+    },
+    {
+      "name": "response_73",
+      "passed": true
+    },
+    {
+      "name": "response_74",
+      "passed": true
+    },
+    {
+      "name": "response_75",
+      "passed": true
+    },
+    {
+      "name": "response_76",
+      "passed": true
+    },
+    {
+      "name": "response_77",
+      "passed": true
+    },
+    {
+      "name": "response_78",
+      "passed": true
+    },
+    {
+      "name": "response_79",
+      "passed": true
+    },
+    {
+      "name": "response_80",
+      "passed": true
+    },
+    {
+      "name": "response_81",
+      "passed": true
+    },
+    {
+      "name": "response_82",
+      "passed": true
+    },
+    {
+      "name": "response_83",
+      "passed": true
+    },
+    {
+      "name": "response_84",
+      "passed": true
+    },
+    {
+      "name": "response_85",
+      "passed": true
+    },
+    {
+      "name": "response_86",
+      "passed": true
+    },
+    {
+      "name": "response_87",
+      "passed": true
+    },
+    {
+      "name": "response_88",
+      "passed": true
+    },
+    {
+      "name": "response_89",
+      "passed": true
+    },
+    {
+      "name": "response_90",
+      "passed": true
+    },
+    {
+      "name": "response_91",
+      "passed": true
+    },
+    {
+      "name": "response_92",
+      "passed": true
+    },
+    {
+      "name": "response_93",
+      "passed": true
+    },
+    {
+      "name": "response_94",
+      "passed": true
+    },
+    {
+      "name": "response_95",
+      "passed": true
+    },
+    {
+      "name": "response_96",
+      "passed": true
+    },
+    {
+      "name": "response_97",
+      "passed": true
+    },
+    {
+      "name": "response_98",
+      "passed": true
+    },
+    {
+      "name": "response_99",
+      "passed": true
+    },
+    {
+      "name": "response_100",
+      "passed": true
+    },
+    {
+      "name": "response_101",
+      "passed": true
+    },
+    {
+      "name": "response_102",
+      "passed": true
+    },
+    {
+      "name": "response_103",
+      "passed": true
+    },
+    {
+      "name": "response_104",
+      "passed": true
+    },
+    {
+      "name": "response_105",
+      "passed": true
+    },
+    {
+      "name": "response_106",
+      "passed": true
+    },
+    {
+      "name": "response_107",
+      "passed": true
+    },
+    {
+      "name": "response_108",
+      "passed": true
+    },
+    {
+      "name": "response_109",
+      "passed": true
+    },
+    {
+      "name": "response_110",
+      "passed": true
+    },
+    {
+      "name": "response_111",
+      "passed": true
+    },
+    {
+      "name": "response_112",
+      "passed": true
+    },
+    {
+      "name": "response_113",
+      "passed": true
+    },
+    {
+      "name": "response_114",
+      "passed": true
+    },
+    {
+      "name": "response_115",
+      "passed": true
+    },
+    {
+      "name": "response_116",
+      "passed": true
+    },
+    {
+      "name": "response_117",
+      "passed": true
+    },
+    {
+      "name": "response_118",
+      "passed": true
+    },
+    {
+      "name": "response_119",
+      "passed": true
+    },
+    {
+      "name": "response_120",
+      "passed": true
+    },
+    {
+      "name": "response_121",
+      "passed": true
+    },
+    {
+      "name": "response_122",
+      "passed": true
+    },
+    {
+      "name": "response_123",
+      "passed": true
+    },
+    {
+      "name": "response_124",
+      "passed": true
+    },
+    {
+      "name": "response_125",
+      "passed": true
+    },
+    {
+      "name": "response_126",
+      "passed": true
+    },
+    {
+      "name": "response_127",
+      "passed": true
+    },
+    {
+      "name": "response_128",
+      "passed": true
+    },
+    {
+      "name": "response_129",
+      "passed": true
+    },
+    {
+      "name": "response_130",
+      "passed": true
+    },
+    {
+      "name": "response_131",
+      "passed": true
+    },
+    {
+      "name": "response_132",
+      "passed": true
+    },
+    {
+      "name": "response_133",
+      "passed": true
+    },
+    {
+      "name": "response_134",
+      "passed": true
+    },
+    {
+      "name": "response_135",
+      "passed": true
+    },
+    {
+      "name": "response_136",
+      "passed": true
+    },
+    {
+      "name": "response_137",
+      "passed": true
+    },
+    {
+      "name": "response_138",
+      "passed": true
+    },
+    {
+      "name": "response_139",
+      "passed": true
+    },
+    {
+      "name": "response_140",
+      "passed": true
+    },
+    {
+      "name": "response_141",
+      "passed": true
+    },
+    {
+      "name": "response_142",
+      "passed": true
+    },
+    {
+      "name": "response_143",
+      "passed": true
+    },
+    {
+      "name": "response_144",
+      "passed": true
+    },
+    {
+      "name": "response_145",
+      "passed": true
+    },
+    {
+      "name": "response_146",
+      "passed": true
+    },
+    {
+      "name": "response_147",
+      "passed": true
+    },
+    {
+      "name": "response_148",
+      "passed": true
+    },
+    {
+      "name": "response_149",
+      "passed": true
+    },
+    {
+      "name": "response_150",
+      "passed": true
+    },
+    {
+      "name": "response_151",
+      "passed": true
+    },
+    {
+      "name": "response_152",
+      "passed": true
+    },
+    {
+      "name": "response_153",
+      "passed": true
+    },
+    {
+      "name": "response_154",
+      "passed": true
+    },
+    {
+      "name": "response_155",
+      "passed": true
+    },
+    {
+      "name": "response_156",
+      "passed": true
+    },
+    {
+      "name": "response_157",
+      "passed": true
+    },
+    {
+      "name": "response_158",
+      "passed": true
+    },
+    {
+      "name": "response_159",
+      "passed": true
+    },
+    {
+      "name": "response_160",
+      "passed": true
+    },
+    {
+      "name": "response_161",
+      "passed": true
+    },
+    {
+      "name": "response_162",
+      "passed": true
+    },
+    {
+      "name": "response_163",
+      "passed": true
+    },
+    {
+      "name": "response_164",
+      "passed": true
+    },
+    {
+      "name": "response_165",
+      "passed": true
+    },
+    {
+      "name": "response_166",
+      "passed": true
+    },
+    {
+      "name": "response_167",
+      "passed": true
+    },
+    {
+      "name": "response_168",
+      "passed": true
+    },
+    {
+      "name": "response_169",
+      "passed": true
+    },
+    {
+      "name": "response_170",
+      "passed": true
+    },
+    {
+      "name": "response_171",
+      "passed": true
+    },
+    {
+      "name": "response_172",
+      "passed": true
+    },
+    {
+      "name": "response_173",
+      "passed": true
+    },
+    {
+      "name": "response_174",
+      "passed": true
+    },
+    {
+      "name": "response_175",
+      "passed": true
+    },
+    {
+      "name": "response_176",
+      "passed": true
+    },
+    {
+      "name": "response_177",
+      "passed": true
+    },
+    {
+      "name": "response_178",
+      "passed": true
+    },
+    {
+      "name": "response_179",
+      "passed": true
+    },
+    {
+      "name": "response_180",
+      "passed": true
+    },
+    {
+      "name": "response_181",
+      "passed": true
+    },
+    {
+      "name": "response_182",
+      "passed": true
+    },
+    {
+      "name": "response_183",
+      "passed": true
+    },
+    {
+      "name": "response_184",
+      "passed": true
+    },
+    {
+      "name": "response_185",
+      "passed": true
+    },
+    {
+      "name": "response_186",
+      "passed": true
+    },
+    {
+      "name": "response_187",
+      "passed": true
+    },
+    {
+      "name": "response_188",
+      "passed": true
+    },
+    {
+      "name": "response_189",
+      "passed": true
+    },
+    {
+      "name": "response_190",
+      "passed": true
+    },
+    {
+      "name": "response_191",
+      "passed": true
+    },
+    {
+      "name": "response_192",
+      "passed": true
+    },
+    {
+      "name": "response_193",
+      "passed": true
+    },
+    {
+      "name": "response_194",
+      "passed": true
+    },
+    {
+      "name": "response_195",
+      "passed": true
+    },
+    {
+      "name": "response_196",
+      "passed": true
+    },
+    {
+      "name": "response_197",
+      "passed": true
+    },
+    {
+      "name": "response_198",
+      "passed": true
+    },
+    {
+      "name": "response_199",
+      "passed": true
+    },
+    {
+      "name": "response_200",
+      "passed": true
+    },
+    {
+      "name": "response_201",
+      "passed": true
+    },
+    {
+      "name": "response_202",
+      "passed": true
+    },
+    {
+      "name": "response_203",
+      "passed": true
+    },
+    {
+      "name": "response_204",
+      "passed": true
+    },
+    {
+      "name": "response_205",
+      "passed": true
+    },
+    {
+      "name": "response_206",
+      "passed": true
+    },
+    {
+      "name": "response_207",
+      "passed": true
+    },
+    {
+      "name": "response_208",
+      "passed": true
+    },
+    {
+      "name": "response_209",
+      "passed": true
+    },
+    {
+      "name": "response_210",
+      "passed": true
+    },
+    {
+      "name": "response_211",
+      "passed": true
+    },
+    {
+      "name": "response_212",
+      "passed": true
+    },
+    {
+      "name": "response_213",
+      "passed": true
+    },
+    {
+      "name": "response_214",
+      "passed": true
+    },
+    {
+      "name": "response_215",
+      "passed": true
+    },
+    {
+      "name": "response_216",
+      "passed": true
+    },
+    {
+      "name": "response_217",
+      "passed": true
+    },
+    {
+      "name": "response_218",
+      "passed": true
+    },
+    {
+      "name": "response_219",
+      "passed": true
+    },
+    {
+      "name": "response_220",
+      "passed": true
+    },
+    {
+      "name": "response_221",
+      "passed": true
+    },
+    {
+      "name": "response_222",
+      "passed": true
+    },
+    {
+      "name": "response_223",
+      "passed": true
+    },
+    {
+      "name": "response_224",
+      "passed": true
+    },
+    {
+      "name": "response_225",
+      "passed": true
+    },
+    {
+      "name": "response_226",
+      "passed": true
+    },
+    {
+      "name": "response_227",
+      "passed": true
+    },
+    {
+      "name": "response_228",
+      "passed": true
+    },
+    {
+      "name": "response_229",
+      "passed": true
+    },
+    {
+      "name": "response_230",
+      "passed": true
+    },
+    {
+      "name": "response_231",
+      "passed": true
+    },
+    {
+      "name": "response_232",
+      "passed": true
+    },
+    {
+      "name": "response_233",
+      "passed": true
+    },
+    {
+      "name": "response_234",
+      "passed": true
+    },
+    {
+      "name": "response_235",
+      "passed": true
+    },
+    {
+      "name": "response_236",
+      "passed": true
+    },
+    {
+      "name": "response_237",
+      "passed": true
+    },
+    {
+      "name": "response_238",
+      "passed": true
+    },
+    {
+      "name": "response_239",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_0",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_1",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_2",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_3",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_4",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_5",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_6",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_7",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_8",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_9",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_10",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_11",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_12",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_13",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_14",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_15",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_16",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_17",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_18",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_19",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_20",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_21",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_22",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_23",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_24",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_25",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_26",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_27",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_28",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_29",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_30",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_31",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_32",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_33",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_34",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_35",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_36",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_37",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_38",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_39",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_40",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_41",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_42",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_43",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_44",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_45",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_46",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_47",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_48",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_49",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_50",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_51",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_52",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_53",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_54",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_55",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_56",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_57",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_58",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_59",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_60",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_61",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_62",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_63",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_64",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_65",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_66",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_67",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_68",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_69",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_70",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_71",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_72",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_73",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_74",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_75",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_76",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_77",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_78",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_79",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_80",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_81",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_82",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_83",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_84",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_85",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_86",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_87",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_88",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_89",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_90",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_91",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_92",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_93",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_94",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_95",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_96",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_97",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_98",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_99",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_100",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_101",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_102",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_103",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_104",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_105",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_106",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_107",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_108",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_109",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_110",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_111",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_112",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_113",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_114",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_115",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_116",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_117",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_118",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_119",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_120",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_121",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_122",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_123",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_124",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_125",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_126",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_127",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_128",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_129",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_130",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_131",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_132",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_133",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_134",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_135",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_136",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_137",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_138",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_139",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_140",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_141",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_142",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_143",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_144",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_145",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_146",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_147",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_148",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_149",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_150",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_151",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_152",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_153",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_154",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_155",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_156",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_157",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_158",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_159",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_160",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_161",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_162",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_163",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_164",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_165",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_166",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_167",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_168",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_169",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_170",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_171",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_172",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_173",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_174",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_175",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_176",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_177",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_178",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_179",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_180",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_181",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_182",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_183",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_184",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_185",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_186",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_187",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_188",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_189",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_190",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_191",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_192",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_193",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_194",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_195",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_196",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_197",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_198",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_199",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_200",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_201",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_202",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_203",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_204",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_205",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_206",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_207",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_208",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_209",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_210",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_211",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_212",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_213",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_214",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_215",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_216",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_217",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_218",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_219",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_220",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_221",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_222",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_223",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_224",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_225",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_226",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_227",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_228",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_229",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_230",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_231",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_232",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_233",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_234",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_235",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_236",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_237",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_238",
+      "passed": true
+    },
+    {
+      "name": "fixed_map_239",
+      "passed": true
+    },
+    {
+      "name": "map240",
+      "passed": true
+    },
+    {
+      "name": "labels_guard_before_open",
+      "passed": true
+    },
+    {
+      "name": "protectedlabel_sha",
+      "passed": true
+    },
+    {
+      "name": "labels240identity",
+      "passed": true
+    },
+    {
+      "name": "12x2x10",
+      "passed": true
+    },
+    {
+      "name": "pooled_primary_calibrated",
+      "passed": true
+    },
+    {
+      "name": "coverage_primary_calibrated",
+      "passed": true
+    },
+    {
+      "name": "category_candle_primary_calibrated",
+      "passed": true
+    },
+    {
+      "name": "category_capsules_primary_calibrated",
+      "passed": true
+    },
+    {
+      "name": "category_cashew_primary_calibrated",
+      "passed": true
+    },
+    {
+      "name": "category_chewinggum_primary_calibrated",
+      "passed": true
+    },
+    {
+      "name": "category_fryum_primary_calibrated",
+      "passed": true
+    },
+    {
+      "name": "category_macaroni1_primary_calibrated",
+      "passed": true
+    },
+    {
+      "name": "category_macaroni2_primary_calibrated",
+      "passed": true
+    },
+    {
+      "name": "category_pcb1_primary_calibrated",
+      "passed": true
+    },
+    {
+      "name": "category_pcb2_primary_calibrated",
+      "passed": true
+    },
+    {
+      "name": "category_pcb3_primary_calibrated",
+      "passed": true
+    },
+    {
+      "name": "category_pcb4_primary_calibrated",
+      "passed": true
+    },
+    {
+      "name": "category_pipe_fryum_primary_calibrated",
+      "passed": true
+    },
+    {
+      "name": "macro_primary_calibrated",
+      "passed": true
+    },
+    {
+      "name": "interval_primary_calibrated_auroc",
+      "passed": true
+    },
+    {
+      "name": "interval_primary_calibrated_ap",
+      "passed": true
+    },
+    {
+      "name": "interval_primary_calibrated_macro_f1",
+      "passed": true
+    },
+    {
+      "name": "interval_primary_calibrated_recall",
+      "passed": true
+    },
+    {
+      "name": "interval_primary_calibrated_fpr",
+      "passed": true
+    },
+    {
+      "name": "interval_primary_calibrated_brier",
+      "passed": true
+    },
+    {
+      "name": "interval_primary_calibrated_ece_10_equal_width",
+      "passed": true
+    },
+    {
+      "name": "pooled_secondary_raw",
+      "passed": true
+    },
+    {
+      "name": "coverage_secondary_raw",
+      "passed": true
+    },
+    {
+      "name": "category_candle_secondary_raw",
+      "passed": true
+    },
+    {
+      "name": "category_capsules_secondary_raw",
+      "passed": true
+    },
+    {
+      "name": "category_cashew_secondary_raw",
+      "passed": true
+    },
+    {
+      "name": "category_chewinggum_secondary_raw",
+      "passed": true
+    },
+    {
+      "name": "category_fryum_secondary_raw",
+      "passed": true
+    },
+    {
+      "name": "category_macaroni1_secondary_raw",
+      "passed": true
+    },
+    {
+      "name": "category_macaroni2_secondary_raw",
+      "passed": true
+    },
+    {
+      "name": "category_pcb1_secondary_raw",
+      "passed": true
+    },
+    {
+      "name": "category_pcb2_secondary_raw",
+      "passed": true
+    },
+    {
+      "name": "category_pcb3_secondary_raw",
+      "passed": true
+    },
+    {
+      "name": "category_pcb4_secondary_raw",
+      "passed": true
+    },
+    {
+      "name": "category_pipe_fryum_secondary_raw",
+      "passed": true
+    },
+    {
+      "name": "macro_secondary_raw",
+      "passed": true
+    },
+    {
+      "name": "interval_secondary_raw_auroc",
+      "passed": true
+    },
+    {
+      "name": "interval_secondary_raw_ap",
+      "passed": true
+    },
+    {
+      "name": "interval_secondary_raw_macro_f1",
+      "passed": true
+    },
+    {
+      "name": "interval_secondary_raw_recall",
+      "passed": true
+    },
+    {
+      "name": "interval_secondary_raw_fpr",
+      "passed": true
+    },
+    {
+      "name": "interval_secondary_raw_brier",
+      "passed": true
+    },
+    {
+      "name": "interval_secondary_raw_ece_10_equal_width",
+      "passed": true
+    },
+    {
+      "name": "paireddelta_auroc",
+      "passed": true
+    },
+    {
+      "name": "paireddelta_ap",
+      "passed": true
+    },
+    {
+      "name": "paireddelta_macro_f1",
+      "passed": true
+    },
+    {
+      "name": "paireddelta_recall",
+      "passed": true
+    },
+    {
+      "name": "paireddelta_fpr",
+      "passed": true
+    },
+    {
+      "name": "paireddelta_brier",
+      "passed": true
+    },
+    {
+      "name": "paireddelta_ece_10_equal_width",
+      "passed": true
+    },
+    {
+      "name": "bootmethod",
+      "passed": true
+    },
+    {
+      "name": "operations",
+      "passed": true
+    }
+  ],
+  "auditor_sha256": "c78c35c1a669e980ed13b4952d609154aff713c459766ba8f454b22553efa831",
+  "methodology_sha256": "badcb9434620f93d6c00e890ca9c20b6dddceb9bb96c4a75d67242ba1d46e6b1",
+  "contract_sha256": "60ac5b7c7d8a8e69e07bb26817751c19c6aff25870d7998eb7bdbbbf3ab0645c",
+  "bundle_sha256": "72ab9b8706cdf77c102f7fb53c372e3a183ecdf69e67599d9d58732838fd392e",
+  "prediction_freeze_sha256": "785e76ea8593c1dcba52111581d92fd090b456ba22e95421ee07a339c152a20f",
+  "metrics_sha256": "2838095b23bba31a4c233be7a385f3e010c4af7a978673de40bccf10f6e63976",
+  "operations": {
+    "accepted": 240,
+    "started": 240,
+    "failed": 0,
+    "unknown": 0
+  },
+  "point_metrics": {
+    "primary_calibrated": {
+      "n": 240,
+      "normal": 120,
+      "anomalous": 120,
+      "auroc": 0.9018402777777778,
+      "ap": 0.9169708835430664,
+      "macro_f1": 0.8206807874754566,
+      "recall": 0.85,
+      "fpr": 0.20833333333333334,
+      "brier": 0.12697414763235343,
+      "ece_10_equal_width": 0.07283459546249932
+    },
+    "secondary_raw": {
+      "n": 240,
+      "normal": 120,
+      "anomalous": 120,
+      "auroc": 0.9018402777777778,
+      "ap": 0.9169708835430664,
+      "macro_f1": 0.8158482142857143,
+      "recall": 0.8833333333333333,
+      "fpr": 0.25,
+      "brier": 0.1401025,
+      "ece_10_equal_width": 0.12300000000000001
+    }
+  },
+  "legacy_metadata_opened": false,
+  "protected_boolean_labels_opened_after_full_freeze": true,
+  "gt_masks_opened": false,
+  "new_api_requests": 0,
+  "no_refit_or_selection": true
+}

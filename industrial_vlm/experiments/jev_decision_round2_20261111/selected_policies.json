@@ -1,0 +1,361 @@
+{
+  "schema": "jev-three-way-calibration-selected-policies-v1",
+  "status": "frozen_before_round2_heldout_label_read",
+  "timestamp_utc": "2026-11-10T19:49:51.306492+00:00",
+  "protocol_sha256": "f513d908347c5ead1429786e29da0bdfe33f3b3d44f76daf7101f23cfe291fbc",
+  "calibrator_sha256": "0bac063df108bd44938c25a8bb2c07261d79bfe2350b6d1bdb8b8cf1c1bcd9ec",
+  "calibration_source_count": 120,
+  "calibration_labels_sha256": "aaaf4898122c685ed5a511af5b1d0d85d6eaa4d699a7822174eaa2a84a56fd1d",
+  "policies": [
+    {
+      "name": "r1_h0.1",
+      "fn_to_fp": 1,
+      "human_penalty": 0.1,
+      "lower": 0.07,
+      "upper": 0.8,
+      "primary": false,
+      "calibration_selection": {
+        "objective": 0.0675,
+        "counts": {
+          "lower": 0.07,
+          "upper": 0.8,
+          "fn": 0,
+          "fp": 0,
+          "human": 81,
+          "auto_normal": 3,
+          "auto_anomaly": 36
+        },
+        "tie_tuple": [
+          0.0675,
+          0,
+          -81,
+          0,
+          0.07,
+          -0.8
+        ]
+      },
+      "selected_only_on_calibration": true
+    },
+    {
+      "name": "r1_h0.25",
+      "fn_to_fp": 1,
+      "human_penalty": 0.25,
+      "lower": 0.37,
+      "upper": 0.8,
+      "primary": false,
+      "calibration_selection": {
+        "objective": 0.13125,
+        "counts": {
+          "lower": 0.37,
+          "upper": 0.8,
+          "fn": 9,
+          "fp": 0,
+          "human": 27,
+          "auto_normal": 57,
+          "auto_anomaly": 36
+        },
+        "tie_tuple": [
+          0.13125,
+          9,
+          -27,
+          0,
+          0.37,
+          -0.8
+        ]
+      },
+      "selected_only_on_calibration": true
+    },
+    {
+      "name": "r1_h0.5",
+      "fn_to_fp": 1,
+      "human_penalty": 0.5,
+      "lower": 0.51,
+      "upper": 0.52,
+      "primary": false,
+      "calibration_selection": {
+        "objective": 0.16666666666667,
+        "counts": {
+          "lower": 0.51,
+          "upper": 0.52,
+          "fn": 12,
+          "fp": 8,
+          "human": 0,
+          "auto_normal": 64,
+          "auto_anomaly": 56
+        },
+        "tie_tuple": [
+          0.16666666666667,
+          12,
+          0,
+          8,
+          0.51,
+          -0.52
+        ]
+      },
+      "selected_only_on_calibration": true
+    },
+    {
+      "name": "r5_h0.1",
+      "fn_to_fp": 5,
+      "human_penalty": 0.1,
+      "lower": 0.07,
+      "upper": 0.8,
+      "primary": false,
+      "calibration_selection": {
+        "objective": 0.0675,
+        "counts": {
+          "lower": 0.07,
+          "upper": 0.8,
+          "fn": 0,
+          "fp": 0,
+          "human": 81,
+          "auto_normal": 3,
+          "auto_anomaly": 36
+        },
+        "tie_tuple": [
+          0.0675,
+          0,
+          -81,
+          0,
+          0.07,
+          -0.8
+        ]
+      },
+      "selected_only_on_calibration": true
+    },
+    {
+      "name": "r5_h0.25",
+      "fn_to_fp": 5,
+      "human_penalty": 0.25,
+      "lower": 0.07,
+      "upper": 0.8,
+      "primary": false,
+      "calibration_selection": {
+        "objective": 0.16875,
+        "counts": {
+          "lower": 0.07,
+          "upper": 0.8,
+          "fn": 0,
+          "fp": 0,
+          "human": 81,
+          "auto_normal": 3,
+          "auto_anomaly": 36
+        },
+        "tie_tuple": [
+          0.16875,
+          0,
+          -81,
+          0,
+          0.07,
+          -0.8
+        ]
+      },
+      "selected_only_on_calibration": true
+    },
+    {
+      "name": "r5_h0.5",
+      "fn_to_fp": 5,
+      "human_penalty": 0.5,
+      "lower": 0.07,
+      "upper": 0.52,
+      "primary": false,
+      "calibration_selection": {
+        "objective": 0.32083333333333,
+        "counts": {
+          "lower": 0.07,
+          "upper": 0.52,
+          "fn": 0,
+          "fp": 8,
+          "human": 61,
+          "auto_normal": 3,
+          "auto_anomaly": 56
+        },
+        "tie_tuple": [
+          0.32083333333333,
+          0,
+          -61,
+          8,
+          0.07,
+          -0.52
+        ]
+      },
+      "selected_only_on_calibration": true
+    },
+    {
+      "name": "r10_h0.1",
+      "fn_to_fp": 10,
+      "human_penalty": 0.1,
+      "lower": 0.07,
+      "upper": 0.8,
+      "primary": false,
+      "calibration_selection": {
+        "objective": 0.0675,
+        "counts": {
+          "lower": 0.07,
+          "upper": 0.8,
+          "fn": 0,
+          "fp": 0,
+          "human": 81,
+          "auto_normal": 3,
+          "auto_anomaly": 36
+        },
+        "tie_tuple": [
+          0.0675,
+          0,
+          -81,
+          0,
+          0.07,
+          -0.8
+        ]
+      },
+      "selected_only_on_calibration": true
+    },
+    {
+      "name": "r10_h0.25",
+      "fn_to_fp": 10,
+      "human_penalty": 0.25,
+      "lower": 0.07,
+      "upper": 0.8,
+      "primary": true,
+      "calibration_selection": {
+        "objective": 0.16875,
+        "counts": {
+          "lower": 0.07,
+          "upper": 0.8,
+          "fn": 0,
+          "fp": 0,
+          "human": 81,
+          "auto_normal": 3,
+          "auto_anomaly": 36
+        },
+        "tie_tuple": [
+          0.16875,
+          0,
+          -81,
+          0,
+          0.07,
+          -0.8
+        ]
+      },
+      "selected_only_on_calibration": true
+    },
+    {
+      "name": "r10_h0.5",
+      "fn_to_fp": 10,
+      "human_penalty": 0.5,
+      "lower": 0.07,
+      "upper": 0.52,
+      "primary": false,
+      "calibration_selection": {
+        "objective": 0.32083333333333,
+        "counts": {
+          "lower": 0.07,
+          "upper": 0.52,
+          "fn": 0,
+          "fp": 8,
+          "human": 61,
+          "auto_normal": 3,
+          "auto_anomaly": 56
+        },
+        "tie_tuple": [
+          0.32083333333333,
+          0,
+          -61,
+          8,
+          0.07,
+          -0.52
+        ]
+      },
+      "selected_only_on_calibration": true
+    },
+    {
+      "name": "r20_h0.1",
+      "fn_to_fp": 20,
+      "human_penalty": 0.1,
+      "lower": 0.07,
+      "upper": 0.8,
+      "primary": false,
+      "calibration_selection": {
+        "objective": 0.0675,
+        "counts": {
+          "lower": 0.07,
+          "upper": 0.8,
+          "fn": 0,
+          "fp": 0,
+          "human": 81,
+          "auto_normal": 3,
+          "auto_anomaly": 36
+        },
+        "tie_tuple": [
+          0.0675,
+          0,
+          -81,
+          0,
+          0.07,
+          -0.8
+        ]
+      },
+      "selected_only_on_calibration": true
+    },
+    {
+      "name": "r20_h0.25",
+      "fn_to_fp": 20,
+      "human_penalty": 0.25,
+      "lower": 0.07,
+      "upper": 0.8,
+      "primary": false,
+      "calibration_selection": {
+        "objective": 0.16875,
+        "counts": {
+          "lower": 0.07,
+          "upper": 0.8,
+          "fn": 0,
+          "fp": 0,
+          "human": 81,
+          "auto_normal": 3,
+          "auto_anomaly": 36
+        },
+        "tie_tuple": [
+          0.16875,
+          0,
+          -81,
+          0,
+          0.07,
+          -0.8
+        ]
+      },
+      "selected_only_on_calibration": true
+    },
+    {
+      "name": "r20_h0.5",
+      "fn_to_fp": 20,
+      "human_penalty": 0.5,
+      "lower": 0.07,
+      "upper": 0.52,
+      "primary": false,
+      "calibration_selection": {
+        "objective": 0.32083333333333,
+        "counts": {
+          "lower": 0.07,
+          "upper": 0.52,
+          "fn": 0,
+          "fp": 8,
+          "human": 61,
+          "auto_normal": 3,
+          "auto_anomaly": 56
+        },
+        "tie_tuple": [
+          0.32083333333333,
+          0,
+          -61,
+          8,
+          0.07,
+          -0.52
+        ]
+      },
+      "selected_only_on_calibration": true
+    }
+  ],
+  "heldout_labels_read_in_round2_before_policy_freeze": false,
+  "stage13_data_read": false
+}

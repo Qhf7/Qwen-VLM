@@ -1,0 +1,96 @@
+{
+  "schema": "jev-stage12-new-source-calibration-preprotocol-v1",
+  "status": "data_roles_frozen_system_pending",
+  "created_utc": "2026-11-10T18:16:00.991823+00:00",
+  "hostname": "autodl-container-132444827f-9c594038",
+  "final_model": "jev-1.14.0",
+  "endpoint": "https://api.modelgo.ai/v1/systemone",
+  "final_system_must_be_frozen_from": "complete stage08-10 development results before stage12 responses exist",
+  "eligible_final_arms": [
+    "fixed whole-image 0-shot",
+    "fixed whole-image 4-shot normal-reference"
+  ],
+  "forbidden_selection": "No prompt, size, references, shots, or model choice based on these240 new responses",
+  "teacher_use": false,
+  "question_target": "whole-image presence of at least one visible industrial anomaly",
+  "query_roles": {
+    "calibration": {
+      "n": 120,
+      "normal": 60,
+      "anomalous": 60,
+      "role": "fit one frozen probability mapping only"
+    },
+    "heldout_eval": {
+      "n": 120,
+      "normal": 60,
+      "anomalous": 60,
+      "role": "evaluate already fitted mapping and fixed system; prediction-first freeze then labels/metrics"
+    }
+  },
+  "query_selection": "SHA256(UTF8(jev-new-calibration-v1|42| + source_id)) ascending, source_id tie-break",
+  "calibration": {
+    "method": "logit_then_LogisticRegression",
+    "probability_clip": [
+      1e-06,
+      0.999999
+    ],
+    "C": 1.0,
+    "penalty": "l2",
+    "solver": "lbfgs",
+    "fit_intercept": true,
+    "class_weight": null,
+    "max_iter": 1000,
+    "tuning": false,
+    "training_sources": "calibration120 only",
+    "probability_target_prior": "balanced category x label case-control sample, anomaly prevalence0.5",
+    "decision_rule": "p>=0.5 for raw and calibrated; exact ties disclosed",
+    "strict_native_qwen_rule": "not applicable; no Qwen arm in stage12"
+  },
+  "metrics": [
+    "AUROC",
+    "average_precision",
+    "macro_F1",
+    "recall",
+    "FPR",
+    "confusion_matrix",
+    "Brier",
+    "logloss",
+    "ECE10_equal_width",
+    "raw_vs_calibrated_paired_differences"
+  ],
+  "uncertainty": {
+    "bootstrap": "paired category x label stratified source bootstrap",
+    "replicates": 2000,
+    "seed": 42,
+    "confidence": 0.95,
+    "FPR_recall_intervals": "Wilson95"
+  },
+  "freeze_order": [
+    "final system specification before any stage12 request",
+    "input images SHA and rendered assets plus exact request/contract freeze",
+    "all240 raw responses and complete failures ledger freeze",
+    "fit coefficients on calibration120 only and freeze coefficients",
+    "heldout120 labels opened to evaluation path only after prediction and coefficient freeze",
+    "full-denominator metrics and report; never tune from heldout result"
+  ],
+  "api_accepted_targets": 240,
+  "new_api_requests_at_plan_time": 0,
+  "api_budget_gate": "Parent executor must freeze started-attempt/error/fee ceilings and retry policy in final system contract before run; 240 accepted logical requests may require more attempts. No extra reference/size arms.",
+  "failure_handling": "All240 targets retained in ledger. Missing probability is failure/abstention, never normal or zero. Fit/evaluation refuse to silently drop failures. Freeze a declared completion/failure policy before run.",
+  "non_goals": [
+    "confirmation access",
+    "native test access",
+    "Teacher ROI or maps",
+    "training",
+    "claim of strict blind generalization"
+  ],
+  "confirmation_opened": false,
+  "metadata_audit_sha256": "b4b4539d8a5d02c584c5a4452d68b2f1df8472fe3afbfa515de2056746150933",
+  "output_file_sha256": {
+    "calibration_inputs.jsonl": "cacb9522e4c50df7388400aa9904b07c1a5284f4e0a72d2102d2b23e14bf8bfa",
+    "calibration_labels.jsonl": "aaaf4898122c685ed5a511af5b1d0d85d6eaa4d699a7822174eaa2a84a56fd1d",
+    "heldout_eval_inputs.jsonl": "1e5ca69c49347861222397fadab2cf85d4b3090a17faa56ffc25ed1b14a06f99",
+    "heldout_eval_labels.jsonl": "7cc2853e08c36af1491a29b60622d42cdc2a377d803f07b962dd5a81942761d3",
+    "selected_sources.jsonl": "5f5afd298dc80032400ef805c65be14ba798c46e85d6e99a6e5d1ec88eff7be3"
+  }
+}

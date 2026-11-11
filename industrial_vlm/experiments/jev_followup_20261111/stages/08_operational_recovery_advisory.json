@@ -1,0 +1,89 @@
+{
+  "schema": "jev-stage08-operational-recovery-advisory-v1",
+  "status": "advisory_only_no_api",
+  "timestamp_utc": "2026-11-10T18:26:07.393528+00:00",
+  "hostname": "autodl-container-132444827f-9c594038",
+  "scope": "Attempt metadata only; no partial model performance or label access",
+  "observed_status": {
+    "automatic_retries": false,
+    "by_arm": {
+      "s43_1": 111,
+      "s43_4": 112,
+      "s44_1": 111,
+      "s44_4": 111,
+      "shared0": 114
+    },
+    "completed": 559,
+    "confirmation_opened": false,
+    "contract_sha256": "b8438cec41443aa2db8fddba2a6107b70ee843d5161fafae362400152137aadf",
+    "exhausted_unaccepted": 3,
+    "expected": 600,
+    "failed_attempts": 99,
+    "interrupted_unknown_attempts": 0,
+    "mode": "formal_independent_support_robustness",
+    "schema": "jev-independent-support-robustness-v1",
+    "started_attempts": 658,
+    "status": "incomplete_requires_explicit_retry",
+    "stop_reason": "consecutive_errors",
+    "timestamp_utc": "2026-11-10T18:24:34.726260+00:00"
+  },
+  "eligible_true_3x502_snapshot": [
+    {
+      "source_id": "visa_59261648b344053c2f75436747f39503fa272f962e72d87a2177457aa08fee8d",
+      "arm": "s43_4",
+      "base_started": 3,
+      "base_terminal_http_statuses": [
+        502,
+        502,
+        502
+      ]
+    },
+    {
+      "source_id": "visa_696d91b33e290952cd60ef09b886eabb75ab7e0a183b2972a8c681208bda4e50",
+      "arm": "shared0",
+      "base_started": 3,
+      "base_terminal_http_statuses": [
+        502,
+        502,
+        502
+      ]
+    },
+    {
+      "source_id": "visa_9226ca3ad7ad192e481efbc58a4835b6353f4844435f06aff5980d99401378ed",
+      "arm": "s44_1",
+      "base_started": 3,
+      "base_terminal_http_statuses": [
+        502,
+        502,
+        502
+      ]
+    }
+  ],
+  "original_contract_sha256": "49a55faf08234a9c7d1c199c87b8f5e5e1de02fa0c0bdbc4ca20b11a9d66d511",
+  "original_contract_canonical_sha256": "b8438cec41443aa2db8fddba2a6107b70ee843d5161fafae362400152137aadf",
+  "original_support_validator_cap": 3,
+  "minimal_legal_sequence": [
+    "Complete still-eligible attempts below3 through the existing explicit retry path; do not infer final failure from inflight status",
+    "At stable terminal state snapshot and preserve original partial ledger, predictions, contract and status",
+    "Only if unresolved3x502 targets remain, separately freeze operational amendment and finite rescue eligible list before extra requests",
+    "Do not append attempt4/5 to original files: original validator hard-fails1<=attempt<=3",
+    "Rescue requests must reconstruct original body using original canonical contract hash, preserving UUIDv5 asset IDs, bytes, question and request SHA",
+    "Separate rescue ledger with global attempts4/5 and at most2 extra starts per listed unresolved target; serial execution and bounded cumulative started/error stops",
+    "Combine predictions in a new artifact with provenance/source ledger per target; freeze before labels",
+    "Use an explicit amended evaluator and reference resolver for stage10/12; do not falsely mark old contract unchanged3-start execution as complete"
+  ],
+  "recommended_stop_rules": [
+    "No requests if original worker or any unknown/inflight intent remains",
+    "No rescue for any already accepted target",
+    "Stop immediately on payload/SHA/dependency/host mismatch",
+    "Stop after maximum2 extra starts per frozeneligible or2consecutive rescue failures; drain none under serial executor",
+    "Never continue unbounded after budget exhaustion; preserve unresolved targets as failures and full denominators",
+    "No partial score inspection to choose rescue targets or retrypriority"
+  ],
+  "scientific_changes": "none; operational limit changes3 to at most5 for explicitly listed true failures, reported as amendment",
+  "prediction_files_opened": false,
+  "label_files_opened": false,
+  "gt_masks_opened": false,
+  "confirmation_opened": false,
+  "new_api_requests": 0
+}

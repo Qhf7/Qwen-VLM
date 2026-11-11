@@ -1,0 +1,31 @@
+{
+  "schema": "semantic-v2-independent-input-audit-v1",
+  "status": "passed",
+  "denominator": 24,
+  "normal": 12,
+  "anomaly": 12,
+  "selected": 2,
+  "targets": 8,
+  "started": 0,
+  "new_API_calls": 0,
+  "stage13_data_read": false,
+  "independent_check": "Recomputed binary mask connectivity/grid/margin without importing semantic runner; original448 frame replay in frozen prepare.",
+  "contract_sha256": "2f8fec5fc19d2c5e77ef8e17161ca413f5f1aa2b5a78ed32874f7b9975db7d1f",
+  "feasibility_sha256": "b91187d4fad25921e466181e8a7c39d4ba9439d5c12fcef5c5f5271ca700484b",
+  "diagnostics": [
+    {
+      "source_id": "visa_07bfdf2da58b61d1de26368da4b5aa2c4587de4c3ea220389647057745ba6c4a",
+      "mask_component_count": 1,
+      "all_GT_in_true_cell": true,
+      "false_cell_nonadjacent_and_empty": true,
+      "paired_text_contentbounds_identical": true
+    },
+    {
+      "source_id": "visa_094f90fda64be342bd38b8e43d8aeea5e7a6b02d266e5e41cfc8a448d62c0c01",
+      "mask_component_count": 1,
+      "all_GT_in_true_cell": true,
+      "false_cell_nonadjacent_and_empty": true,
+      "paired_text_contentbounds_identical": true
+    }
+  ]
+}

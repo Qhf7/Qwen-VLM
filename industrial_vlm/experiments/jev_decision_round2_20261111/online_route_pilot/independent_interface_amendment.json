@@ -1,0 +1,20 @@
+{
+  "schema": "jev-online-independent-technical-interface-amendment-v1",
+  "status": "frozen_before_complete_pilot",
+  "timestamp_utc": "2026-11-10T20:13:39.572648+00:00",
+  "methodology_sha256": "c52643ff4cfe3a80a6b931d5f5b574fd3d0d62c39db24ca85a0dc4d6bd8fc8bd",
+  "original_auditor_sha256": "c5f8d40e448743e0ad6b7afa375cd1c25678af4a669bcba99ce6b99626d2f8db",
+  "updated_auditor_sha256": "d39818eb683f64f0be8ed5669db27799e8f11282ac1a896aa573d2360e2701f6",
+  "runner_sha256": "52b53e8d95351ab28ea4660302d2426733f9c44b732179303390542d5d624ca7",
+  "change": "Compare against only keys present in frozen runner pilot_metrics (Brier/ECE excluded there before prepare), preserve all7 predeclared supplemental metrics; label proxy semantic warning; no numerical method or threshold changes",
+  "snapshot": {
+    "status": "complete",
+    "completed": 37,
+    "expected": 37,
+    "global_started": 61,
+    "global_failed": 0,
+    "global_unknown": 0
+  },
+  "new_predictions_or_labels_opened": false,
+  "stage13_data_read": false
+}

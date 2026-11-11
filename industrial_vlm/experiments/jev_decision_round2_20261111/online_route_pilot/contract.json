@@ -1,0 +1,1311 @@
+{
+  "schema": "jev-live-noul-crop-gate-pilot-v1",
+  "status": "input_protocol_frozen",
+  "model": "jev-1.14.0",
+  "records": [
+    {
+      "source_id": "visa_f1d12249261d62f00fd20c476804de6884a96d351e04e7943b3a82852ba86c34",
+      "category": "pipe_fryum",
+      "teacher_split": "train",
+      "bbox_original_norm": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "bbox_448_norm": [
+        0.0,
+        0.05580357142857143,
+        1.0,
+        0.9441964285714286
+      ],
+      "assets": {
+        "crop": {
+          "path": "assets/crop/visa_f1d12249261d62f00fd20c476804de6884a96d351e04e7943b3a82852ba86c34.png",
+          "png_bytes": 146397,
+          "png_sha256": "538ad80aa0a2011c76de6edc9c6cba36365ed9eff8fd802abb4a6746cb4b9e83",
+          "size": [
+            448,
+            448
+          ]
+        },
+        "query": {
+          "path": "assets/query/visa_f1d12249261d62f00fd20c476804de6884a96d351e04e7943b3a82852ba86c34.png",
+          "png_bytes": 146397,
+          "png_sha256": "538ad80aa0a2011c76de6edc9c6cba36365ed9eff8fd802abb4a6746cb4b9e83",
+          "size": [
+            448,
+            448
+          ]
+        }
+      },
+      "eligible": false,
+      "area": 1.0,
+      "full_image_candidate": true,
+      "crop_bounds_original": [
+        0,
+        0,
+        1300,
+        1154
+      ],
+      "original_sha256": "f1d12249261d62f00fd20c476804de6884a96d351e04e7943b3a82852ba86c34",
+      "original_size": [
+        1300,
+        1154
+      ],
+      "historical_duplicate_probability": 0.29
+    },
+    {
+      "source_id": "visa_892614dd5d2ce2b080136ef54fc175e225931c10adadfe782ff65013849e2bcc",
+      "category": "fryum",
+      "teacher_split": "train",
+      "bbox_original_norm": [
+        0.35714285714285715,
+        0.20982142857142858,
+        0.71875,
+        0.7544642857142857
+      ],
+      "bbox_448_norm": [
+        0.35714285714285715,
+        0.30521564094387754,
+        0.71875,
+        0.6687161192602041
+      ],
+      "assets": {
+        "crop": {
+          "path": "assets/crop/visa_892614dd5d2ce2b080136ef54fc175e225931c10adadfe782ff65013849e2bcc.png",
+          "png_bytes": 268439,
+          "png_sha256": "0fba80d4b6e0d46c09fba4f7b5b054a355765374b35421e303787310faa6865a",
+          "size": [
+            448,
+            448
+          ]
+        },
+        "query": {
+          "path": "assets/query/visa_892614dd5d2ce2b080136ef54fc175e225931c10adadfe782ff65013849e2bcc.png",
+          "png_bytes": 218906,
+          "png_sha256": "baeed7f8999c41a22cac9352e7df580e1d7d9f745781ddc5d2ed731054e01089",
+          "size": [
+            448,
+            448
+          ]
+        }
+      },
+      "eligible": true,
+      "area": 0.19694674744897958,
+      "full_image_candidate": false,
+      "crop_bounds_original": [
+        535,
+        209,
+        1079,
+        755
+      ],
+      "original_sha256": "892614dd5d2ce2b080136ef54fc175e225931c10adadfe782ff65013849e2bcc",
+      "original_size": [
+        1500,
+        1000
+      ],
+      "historical_duplicate_probability": 0.25
+    },
+    {
+      "source_id": "visa_7faf8ff401dbb9a9f14b36c4f0f3e5ec0950391351aa57be812dc515eed0c5e0",
+      "category": "cashew",
+      "teacher_split": "train",
+      "bbox_original_norm": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "bbox_448_norm": [
+        0.0,
+        0.03794642857142857,
+        1.0,
+        0.9620535714285714
+      ],
+      "assets": {
+        "crop": {
+          "path": "assets/crop/visa_7faf8ff401dbb9a9f14b36c4f0f3e5ec0950391351aa57be812dc515eed0c5e0.png",
+          "png_bytes": 362136,
+          "png_sha256": "0b1c42b23d570969767c5703ce5c1153934e35a81ef267b99b80cde07a380e87",
+          "size": [
+            448,
+            448
+          ]
+        },
+        "query": {
+          "path": "assets/query/visa_7faf8ff401dbb9a9f14b36c4f0f3e5ec0950391351aa57be812dc515eed0c5e0.png",
+          "png_bytes": 362136,
+          "png_sha256": "0b1c42b23d570969767c5703ce5c1153934e35a81ef267b99b80cde07a380e87",
+          "size": [
+            448,
+            448
+          ]
+        }
+      },
+      "eligible": false,
+      "area": 1.0,
+      "full_image_candidate": true,
+      "crop_bounds_original": [
+        0,
+        0,
+        1274,
+        1176
+      ],
+      "original_sha256": "7faf8ff401dbb9a9f14b36c4f0f3e5ec0950391351aa57be812dc515eed0c5e0",
+      "original_size": [
+        1274,
+        1176
+      ],
+      "historical_duplicate_probability": 0.21
+    },
+    {
+      "source_id": "visa_461215936f1309a8c75f06be3d091f1feb0b19c388c3dc73e1aa313214e927cb",
+      "category": "pipe_fryum",
+      "teacher_split": "train",
+      "bbox_original_norm": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "bbox_448_norm": [
+        0.0,
+        0.05580357142857143,
+        1.0,
+        0.9441964285714286
+      ],
+      "assets": {
+        "crop": {
+          "path": "assets/crop/visa_461215936f1309a8c75f06be3d091f1feb0b19c388c3dc73e1aa313214e927cb.png",
+          "png_bytes": 139326,
+          "png_sha256": "bd3c21eec806a435556765a5528b4ad73a0ba6548bb9ba9e9ccadd039da72b77",
+          "size": [
+            448,
+            448
+          ]
+        },
+        "query": {
+          "path": "assets/query/visa_461215936f1309a8c75f06be3d091f1feb0b19c388c3dc73e1aa313214e927cb.png",
+          "png_bytes": 139326,
+          "png_sha256": "bd3c21eec806a435556765a5528b4ad73a0ba6548bb9ba9e9ccadd039da72b77",
+          "size": [
+            448,
+            448
+          ]
+        }
+      },
+      "eligible": false,
+      "area": 1.0,
+      "full_image_candidate": true,
+      "crop_bounds_original": [
+        0,
+        0,
+        1300,
+        1154
+      ],
+      "original_sha256": "461215936f1309a8c75f06be3d091f1feb0b19c388c3dc73e1aa313214e927cb",
+      "original_size": [
+        1300,
+        1154
+      ],
+      "historical_duplicate_probability": 0.8
+    },
+    {
+      "source_id": "visa_6b6c78513751314419209dffa03c21d693c0791f4e9ec92158addb73c1eca987",
+      "category": "fryum",
+      "teacher_split": "train",
+      "bbox_original_norm": [
+        0.3705357142857143,
+        0.24107142857142858,
+        0.6473214285714286,
+        0.8392857142857143
+      ],
+      "bbox_448_norm": [
+        0.3705357142857143,
+        0.3260722257653061,
+        0.6473214285714286,
+        0.7253268494897959
+      ],
+      "assets": {
+        "crop": {
+          "path": "assets/crop/visa_6b6c78513751314419209dffa03c21d693c0791f4e9ec92158addb73c1eca987.png",
+          "png_bytes": 197378,
+          "png_sha256": "6ad0f120c3df3f3eae5ede74582274575cb5c2fce4d4aba4ff240be6b7ef404b",
+          "size": [
+            448,
+            448
+          ]
+        },
+        "query": {
+          "path": "assets/query/visa_6b6c78513751314419209dffa03c21d693c0791f4e9ec92158addb73c1eca987.png",
+          "png_bytes": 215245,
+          "png_sha256": "00531a27689476f90dfdc450f38671d661ef2cd4b459a5a28e1c21722ca49b0c",
+          "size": [
+            448,
+            448
+          ]
+        }
+      },
+      "eligible": true,
+      "area": 0.16557716836734696,
+      "full_image_candidate": false,
+      "crop_bounds_original": [
+        555,
+        241,
+        971,
+        840
+      ],
+      "original_sha256": "6b6c78513751314419209dffa03c21d693c0791f4e9ec92158addb73c1eca987",
+      "original_size": [
+        1500,
+        1000
+      ],
+      "historical_duplicate_probability": 0.9
+    },
+    {
+      "source_id": "visa_80826359e7704e236090453a9c4eeda4631b40ce4c891ed1a492a83f28af2c2c",
+      "category": "pipe_fryum",
+      "teacher_split": "train",
+      "bbox_original_norm": [
+        0.24553571428571427,
+        0.38839285714285715,
+        0.71875,
+        0.59375
+      ],
+      "bbox_448_norm": [
+        0.24553571428571427,
+        0.40084901147959184,
+        0.71875,
+        0.5832868303571429
+      ],
+      "assets": {
+        "crop": {
+          "path": "assets/crop/visa_80826359e7704e236090453a9c4eeda4631b40ce4c891ed1a492a83f28af2c2c.png",
+          "png_bytes": 83471,
+          "png_sha256": "c6a11724518317dff8a9d699d0f078ac3c0300db311199794b8af94b11d81882",
+          "size": [
+            448,
+            448
+          ]
+        },
+        "query": {
+          "path": "assets/query/visa_80826359e7704e236090453a9c4eeda4631b40ce4c891ed1a492a83f28af2c2c.png",
+          "png_bytes": 145638,
+          "png_sha256": "5e13edbdafbe9d4e305e2df55ef7ba0bf58a044f1d3b0c61951e8f1e251205e1",
+          "size": [
+            448,
+            448
+          ]
+        }
+      },
+      "eligible": true,
+      "area": 0.09717793367346939,
+      "full_image_candidate": false,
+      "crop_bounds_original": [
+        319,
+        448,
+        935,
+        686
+      ],
+      "original_sha256": "80826359e7704e236090453a9c4eeda4631b40ce4c891ed1a492a83f28af2c2c",
+      "original_size": [
+        1300,
+        1154
+      ],
+      "historical_duplicate_probability": 0.65
+    },
+    {
+      "source_id": "visa_c765753d3b3f06de90428ee947f4ec5f51ee3baaacd10ff6dcd23ce533474432",
+      "category": "cashew",
+      "teacher_split": "test",
+      "bbox_original_norm": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "bbox_448_norm": [
+        0.0,
+        0.03794642857142857,
+        1.0,
+        0.9620535714285714
+      ],
+      "assets": {
+        "crop": {
+          "path": "assets/crop/visa_c765753d3b3f06de90428ee947f4ec5f51ee3baaacd10ff6dcd23ce533474432.png",
+          "png_bytes": 409018,
+          "png_sha256": "68481944fc19d4f3fad95f0d8daa60b27fc9059859e3dfc3696c6f5e47a36289",
+          "size": [
+            448,
+            448
+          ]
+        },
+        "query": {
+          "path": "assets/query/visa_c765753d3b3f06de90428ee947f4ec5f51ee3baaacd10ff6dcd23ce533474432.png",
+          "png_bytes": 409018,
+          "png_sha256": "68481944fc19d4f3fad95f0d8daa60b27fc9059859e3dfc3696c6f5e47a36289",
+          "size": [
+            448,
+            448
+          ]
+        }
+      },
+      "eligible": false,
+      "area": 1.0,
+      "full_image_candidate": true,
+      "crop_bounds_original": [
+        0,
+        0,
+        1274,
+        1176
+      ],
+      "original_sha256": "c765753d3b3f06de90428ee947f4ec5f51ee3baaacd10ff6dcd23ce533474432",
+      "original_size": [
+        1274,
+        1176
+      ],
+      "historical_duplicate_probability": 0.28
+    },
+    {
+      "source_id": "visa_0905967ed6f69618638a663faab8051fdb8b7b4ff87c7b26d7a993f15fd8d052",
+      "category": "macaroni1",
+      "teacher_split": "train",
+      "bbox_original_norm": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "bbox_448_norm": [
+        0.0,
+        0.16517857142857142,
+        1.0,
+        0.8325892857142857
+      ],
+      "assets": {
+        "crop": {
+          "path": "assets/crop/visa_0905967ed6f69618638a663faab8051fdb8b7b4ff87c7b26d7a993f15fd8d052.png",
+          "png_bytes": 184049,
+          "png_sha256": "8c66f34c158767360dfc69bb9cdca7e7ace1f47e98ba545733c39394f55fd445",
+          "size": [
+            448,
+            448
+          ]
+        },
+        "query": {
+          "path": "assets/query/visa_0905967ed6f69618638a663faab8051fdb8b7b4ff87c7b26d7a993f15fd8d052.png",
+          "png_bytes": 184049,
+          "png_sha256": "8c66f34c158767360dfc69bb9cdca7e7ace1f47e98ba545733c39394f55fd445",
+          "size": [
+            448,
+            448
+          ]
+        }
+      },
+      "eligible": false,
+      "area": 1.0,
+      "full_image_candidate": true,
+      "crop_bounds_original": [
+        0,
+        0,
+        1500,
+        1000
+      ],
+      "original_sha256": "0905967ed6f69618638a663faab8051fdb8b7b4ff87c7b26d7a993f15fd8d052",
+      "original_size": [
+        1500,
+        1000
+      ],
+      "historical_duplicate_probability": 0.4
+    },
+    {
+      "source_id": "visa_19c53aa37353abee35a64fd37d8225095d93e6c1e973a2d0b19fa7631cea100e",
+      "category": "macaroni2",
+      "teacher_split": "train",
+      "bbox_original_norm": [
+        0.125,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "bbox_448_norm": [
+        0.125,
+        0.16517857142857142,
+        1.0,
+        0.8325892857142857
+      ],
+      "assets": {
+        "crop": {
+          "path": "assets/crop/visa_19c53aa37353abee35a64fd37d8225095d93e6c1e973a2d0b19fa7631cea100e.png",
+          "png_bytes": 188235,
+          "png_sha256": "ae0bc49ccb5472840592a7c75f2bd87eefa3a7d5c93e4e4b43e5dbab768d21de",
+          "size": [
+            448,
+            448
+          ]
+        },
+        "query": {
+          "path": "assets/query/visa_19c53aa37353abee35a64fd37d8225095d93e6c1e973a2d0b19fa7631cea100e.png",
+          "png_bytes": 173815,
+          "png_sha256": "16b29b769d2798ad1489864cf3587b10912e7d41e559bbdd9400dd0218ae1aa8",
+          "size": [
+            448,
+            448
+          ]
+        }
+      },
+      "eligible": true,
+      "area": 0.875,
+      "full_image_candidate": false,
+      "crop_bounds_original": [
+        187,
+        0,
+        1500,
+        1000
+      ],
+      "original_sha256": "19c53aa37353abee35a64fd37d8225095d93e6c1e973a2d0b19fa7631cea100e",
+      "original_size": [
+        1500,
+        1000
+      ],
+      "historical_duplicate_probability": 0.62
+    },
+    {
+      "source_id": "visa_3538f10a1d93329b6b3512454f12d304bad710ba16d6f873decf595de8daec7a",
+      "category": "fryum",
+      "teacher_split": "train",
+      "bbox_original_norm": [
+        0.30357142857142855,
+        0.29910714285714285,
+        0.71875,
+        0.8125
+      ],
+      "bbox_448_norm": [
+        0.30357142857142855,
+        0.36480588329081637,
+        0.71875,
+        0.7074497767857143
+      ],
+      "assets": {
+        "crop": {
+          "path": "assets/crop/visa_3538f10a1d93329b6b3512454f12d304bad710ba16d6f873decf595de8daec7a.png",
+          "png_bytes": 240160,
+          "png_sha256": "ec61a27d5cc99a6e0733dae9a371e8a32eb4a0d831da21e4e863ee3f3c75d957",
+          "size": [
+            448,
+            448
+          ]
+        },
+        "query": {
+          "path": "assets/query/visa_3538f10a1d93329b6b3512454f12d304bad710ba16d6f873decf595de8daec7a.png",
+          "png_bytes": 217731,
+          "png_sha256": "9278fbb6ff59def35347e3df2033e71f542050ed21e8c2ca5f81e238e8c65ad0",
+          "size": [
+            448,
+            448
+          ]
+        }
+      },
+      "eligible": true,
+      "area": 0.21314971301020413,
+      "full_image_candidate": false,
+      "crop_bounds_original": [
+        455,
+        299,
+        1079,
+        813
+      ],
+      "original_sha256": "3538f10a1d93329b6b3512454f12d304bad710ba16d6f873decf595de8daec7a",
+      "original_size": [
+        1500,
+        1000
+      ],
+      "historical_duplicate_probability": 0.42
+    },
+    {
+      "source_id": "visa_1be7809506f2372505d7506c47502f75ec9ba094e306c9d394a067b368c6a8e3",
+      "category": "pcb2",
+      "teacher_split": "train",
+      "bbox_original_norm": [
+        0.09375,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "bbox_448_norm": [
+        0.09375,
+        0.11830357142857142,
+        1.0,
+        0.8794642857142857
+      ],
+      "assets": {
+        "crop": {
+          "path": "assets/crop/visa_1be7809506f2372505d7506c47502f75ec9ba094e306c9d394a067b368c6a8e3.png",
+          "png_bytes": 309080,
+          "png_sha256": "6213bffaee532e2fd3c685a947531ba7e723409d9ccaec2fbd636a884ec38059",
+          "size": [
+            448,
+            448
+          ]
+        },
+        "query": {
+          "path": "assets/query/visa_1be7809506f2372505d7506c47502f75ec9ba094e306c9d394a067b368c6a8e3.png",
+          "png_bytes": 280521,
+          "png_sha256": "4ccb087511afc130de6aefbf365aae5ac37c5e829b20bcc5f33cb826a789857b",
+          "size": [
+            448,
+            448
+          ]
+        }
+      },
+      "eligible": true,
+      "area": 0.90625,
+      "full_image_candidate": false,
+      "crop_bounds_original": [
+        131,
+        0,
+        1404,
+        1070
+      ],
+      "original_sha256": "1be7809506f2372505d7506c47502f75ec9ba094e306c9d394a067b368c6a8e3",
+      "original_size": [
+        1404,
+        1070
+      ],
+      "historical_duplicate_probability": 0.45
+    },
+    {
+      "source_id": "visa_165dc8aa9b514b8644d5e6aee40b2e6b9a4252619a49bff78e2f4713b19c9119",
+      "category": "pcb3",
+      "teacher_split": "train",
+      "bbox_original_norm": [
+        0.20535714285714285,
+        0.0,
+        1.0,
+        0.6830357142857143
+      ],
+      "bbox_448_norm": [
+        0.20535714285714285,
+        0.19196428571428573,
+        1.0,
+        0.6112384406887755
+      ],
+      "assets": {
+        "crop": {
+          "path": "assets/crop/visa_165dc8aa9b514b8644d5e6aee40b2e6b9a4252619a49bff78e2f4713b19c9119.png",
+          "png_bytes": 159951,
+          "png_sha256": "d185272aee1accabaf2e24e0db01a4c953c5098d1a9ee5b6e9952b23363f9136",
+          "size": [
+            448,
+            448
+          ]
+        },
+        "query": {
+          "path": "assets/query/visa_165dc8aa9b514b8644d5e6aee40b2e6b9a4252619a49bff78e2f4713b19c9119.png",
+          "png_bytes": 173009,
+          "png_sha256": "21ab89c1d6aa3c546eb25a97d88084445151f8850b9129bf4ce932c43a4cbb1d",
+          "size": [
+            448,
+            448
+          ]
+        }
+      },
+      "eligible": true,
+      "area": 0.5427694515306123,
+      "full_image_candidate": false,
+      "crop_bounds_original": [
+        320,
+        0,
+        1562,
+        656
+      ],
+      "original_sha256": "165dc8aa9b514b8644d5e6aee40b2e6b9a4252619a49bff78e2f4713b19c9119",
+      "original_size": [
+        1562,
+        960
+      ],
+      "historical_duplicate_probability": 0.32
+    },
+    {
+      "source_id": "visa_b81a85941ba79e2767f90bf712c6b6a09871dc960a78b1e7030aaae82d6c4320",
+      "category": "chewinggum",
+      "teacher_split": "test",
+      "bbox_original_norm": [
+        0.26339285714285715,
+        0.0,
+        1.0,
+        0.71875
+      ],
+      "bbox_448_norm": [
+        0.26339285714285715,
+        0.08258928571428571,
+        1.0,
+        0.6810128348214286
+      ],
+      "assets": {
+        "crop": {
+          "path": "assets/crop/visa_b81a85941ba79e2767f90bf712c6b6a09871dc960a78b1e7030aaae82d6c4320.png",
+          "png_bytes": 187245,
+          "png_sha256": "9ee93ba0d339e67ac727eebde5307dad3d28ec595ca36ad51264548c2279430c",
+          "size": [
+            448,
+            448
+          ]
+        },
+        "query": {
+          "path": "assets/query/visa_b81a85941ba79e2767f90bf712c6b6a09871dc960a78b1e7030aaae82d6c4320.png",
+          "png_bytes": 240669,
+          "png_sha256": "90fcfa1f5fc94847e1a8991516440b9330e7bf915d50935e4682d2aee8fed1f0",
+          "size": [
+            448,
+            448
+          ]
+        }
+      },
+      "eligible": true,
+      "area": 0.5294363839285714,
+      "full_image_candidate": false,
+      "crop_bounds_original": [
+        353,
+        0,
+        1342,
+        804
+      ],
+      "original_sha256": "b81a85941ba79e2767f90bf712c6b6a09871dc960a78b1e7030aaae82d6c4320",
+      "original_size": [
+        1342,
+        1118
+      ],
+      "historical_duplicate_probability": 0.92
+    },
+    {
+      "source_id": "visa_12113008ba45eebb2ffd45b369cbd690c7f91ed4531bd99034737834ade89ab7",
+      "category": "capsules",
+      "teacher_split": "train",
+      "bbox_original_norm": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "bbox_448_norm": [
+        0.0,
+        0.16517857142857142,
+        1.0,
+        0.8325892857142857
+      ],
+      "assets": {
+        "crop": {
+          "path": "assets/crop/visa_12113008ba45eebb2ffd45b369cbd690c7f91ed4531bd99034737834ade89ab7.png",
+          "png_bytes": 241132,
+          "png_sha256": "acc54842133ad633b9e26c609fcfeb6a4998a2228b70fc7874b3ae47863ff23f",
+          "size": [
+            448,
+            448
+          ]
+        },
+        "query": {
+          "path": "assets/query/visa_12113008ba45eebb2ffd45b369cbd690c7f91ed4531bd99034737834ade89ab7.png",
+          "png_bytes": 241132,
+          "png_sha256": "acc54842133ad633b9e26c609fcfeb6a4998a2228b70fc7874b3ae47863ff23f",
+          "size": [
+            448,
+            448
+          ]
+        }
+      },
+      "eligible": false,
+      "area": 1.0,
+      "full_image_candidate": true,
+      "crop_bounds_original": [
+        0,
+        0,
+        1500,
+        1000
+      ],
+      "original_sha256": "12113008ba45eebb2ffd45b369cbd690c7f91ed4531bd99034737834ade89ab7",
+      "original_size": [
+        1500,
+        1000
+      ],
+      "historical_duplicate_probability": 0.18
+    },
+    {
+      "source_id": "visa_07bfdf2da58b61d1de26368da4b5aa2c4587de4c3ea220389647057745ba6c4a",
+      "category": "cashew",
+      "teacher_split": "val",
+      "bbox_original_norm": [
+        0.3080357142857143,
+        0.12053571428571429,
+        1.0,
+        0.7142857142857143
+      ],
+      "bbox_448_norm": [
+        0.3080357142857143,
+        0.14933434311224492,
+        1.0,
+        0.6980229591836735
+      ],
+      "assets": {
+        "crop": {
+          "path": "assets/crop/visa_07bfdf2da58b61d1de26368da4b5aa2c4587de4c3ea220389647057745ba6c4a.png",
+          "png_bytes": 332303,
+          "png_sha256": "cf178b081b464d3bffc59b7731fb03cebe31e95cec3ae48e416489047a83c598",
+          "size": [
+            448,
+            448
+          ]
+        },
+        "query": {
+          "path": "assets/query/visa_07bfdf2da58b61d1de26368da4b5aa2c4587de4c3ea220389647057745ba6c4a.png",
+          "png_bytes": 419886,
+          "png_sha256": "1b4a924cfcaf1ed975b89889d04825b77ba71250419cf582bd4727170ffdd613",
+          "size": [
+            448,
+            448
+          ]
+        }
+      },
+      "eligible": true,
+      "area": 0.41085379464285715,
+      "full_image_candidate": false,
+      "crop_bounds_original": [
+        392,
+        141,
+        1274,
+        840
+      ],
+      "original_sha256": "07bfdf2da58b61d1de26368da4b5aa2c4587de4c3ea220389647057745ba6c4a",
+      "original_size": [
+        1274,
+        1176
+      ],
+      "historical_duplicate_probability": 0.8
+    },
+    {
+      "source_id": "visa_65f4be0362b2ca3fae482efa598fd409c38fb7665f71bb0f1101a6c9a0c6acaa",
+      "category": "chewinggum",
+      "teacher_split": "train",
+      "bbox_original_norm": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "bbox_448_norm": [
+        0.0,
+        0.08258928571428571,
+        1.0,
+        0.9151785714285714
+      ],
+      "assets": {
+        "crop": {
+          "path": "assets/crop/visa_65f4be0362b2ca3fae482efa598fd409c38fb7665f71bb0f1101a6c9a0c6acaa.png",
+          "png_bytes": 228453,
+          "png_sha256": "065be3578affe332eb8fc29e10612ea0aa256ba6c08f74b7c4c726349835b818",
+          "size": [
+            448,
+            448
+          ]
+        },
+        "query": {
+          "path": "assets/query/visa_65f4be0362b2ca3fae482efa598fd409c38fb7665f71bb0f1101a6c9a0c6acaa.png",
+          "png_bytes": 228453,
+          "png_sha256": "065be3578affe332eb8fc29e10612ea0aa256ba6c08f74b7c4c726349835b818",
+          "size": [
+            448,
+            448
+          ]
+        }
+      },
+      "eligible": false,
+      "area": 1.0,
+      "full_image_candidate": true,
+      "crop_bounds_original": [
+        0,
+        0,
+        1342,
+        1118
+      ],
+      "original_sha256": "65f4be0362b2ca3fae482efa598fd409c38fb7665f71bb0f1101a6c9a0c6acaa",
+      "original_size": [
+        1342,
+        1118
+      ],
+      "historical_duplicate_probability": 0.83
+    },
+    {
+      "source_id": "visa_f3a026383e4573baca1494d3687b7316222f06e8fef2014cefc22ad94f704d79",
+      "category": "pcb4",
+      "teacher_split": "train",
+      "bbox_original_norm": [
+        0.1875,
+        0.0,
+        0.8258928571428571,
+        1.0
+      ],
+      "bbox_448_norm": [
+        0.1875,
+        0.09375,
+        0.8258928571428571,
+        0.90625
+      ],
+      "assets": {
+        "crop": {
+          "path": "assets/crop/visa_f3a026383e4573baca1494d3687b7316222f06e8fef2014cefc22ad94f704d79.png",
+          "png_bytes": 258414,
+          "png_sha256": "e9515e660e40b1202f729690c33abd96989f32322ff467554840c7d826922d22",
+          "size": [
+            448,
+            448
+          ]
+        },
+        "query": {
+          "path": "assets/query/visa_f3a026383e4573baca1494d3687b7316222f06e8fef2014cefc22ad94f704d79.png",
+          "png_bytes": 250016,
+          "png_sha256": "2310af3a8ece6c75bc4c002f464cfbbafef8d13c4a57132d3c0831e4095e8498",
+          "size": [
+            448,
+            448
+          ]
+        }
+      },
+      "eligible": true,
+      "area": 0.6383928571428571,
+      "full_image_candidate": false,
+      "crop_bounds_original": [
+        254,
+        0,
+        1122,
+        1104
+      ],
+      "original_sha256": "f3a026383e4573baca1494d3687b7316222f06e8fef2014cefc22ad94f704d79",
+      "original_size": [
+        1358,
+        1104
+      ],
+      "historical_duplicate_probability": 0.38
+    },
+    {
+      "source_id": "visa_e3f8ccfd909a536181e05348d44e76ae56b2c06026b666c96babb963f3081e0a",
+      "category": "pipe_fryum",
+      "teacher_split": "train",
+      "bbox_original_norm": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "bbox_448_norm": [
+        0.0,
+        0.05580357142857143,
+        1.0,
+        0.9441964285714286
+      ],
+      "assets": {
+        "crop": {
+          "path": "assets/crop/visa_e3f8ccfd909a536181e05348d44e76ae56b2c06026b666c96babb963f3081e0a.png",
+          "png_bytes": 149063,
+          "png_sha256": "bb521f4f02ec8783321fd245573be6bdce221020b1569ac30884c31ba922b268",
+          "size": [
+            448,
+            448
+          ]
+        },
+        "query": {
+          "path": "assets/query/visa_e3f8ccfd909a536181e05348d44e76ae56b2c06026b666c96babb963f3081e0a.png",
+          "png_bytes": 149063,
+          "png_sha256": "bb521f4f02ec8783321fd245573be6bdce221020b1569ac30884c31ba922b268",
+          "size": [
+            448,
+            448
+          ]
+        }
+      },
+      "eligible": false,
+      "area": 1.0,
+      "full_image_candidate": true,
+      "crop_bounds_original": [
+        0,
+        0,
+        1300,
+        1154
+      ],
+      "original_sha256": "e3f8ccfd909a536181e05348d44e76ae56b2c06026b666c96babb963f3081e0a",
+      "original_size": [
+        1300,
+        1154
+      ],
+      "historical_duplicate_probability": 0.3
+    },
+    {
+      "source_id": "visa_7eace5a2fd5b57b63c61f2f9aab9a61694c9f667b5e9ca8c5a206d3d9852a848",
+      "category": "macaroni1",
+      "teacher_split": "test",
+      "bbox_original_norm": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "bbox_448_norm": [
+        0.0,
+        0.16517857142857142,
+        1.0,
+        0.8325892857142857
+      ],
+      "assets": {
+        "crop": {
+          "path": "assets/crop/visa_7eace5a2fd5b57b63c61f2f9aab9a61694c9f667b5e9ca8c5a206d3d9852a848.png",
+          "png_bytes": 211646,
+          "png_sha256": "ada15981bbd2bfc54b2875d0b9b0f9b5b8cc82cfbad2498de0a08350a5cbbc15",
+          "size": [
+            448,
+            448
+          ]
+        },
+        "query": {
+          "path": "assets/query/visa_7eace5a2fd5b57b63c61f2f9aab9a61694c9f667b5e9ca8c5a206d3d9852a848.png",
+          "png_bytes": 211646,
+          "png_sha256": "ada15981bbd2bfc54b2875d0b9b0f9b5b8cc82cfbad2498de0a08350a5cbbc15",
+          "size": [
+            448,
+            448
+          ]
+        }
+      },
+      "eligible": false,
+      "area": 1.0,
+      "full_image_candidate": true,
+      "crop_bounds_original": [
+        0,
+        0,
+        1500,
+        1000
+      ],
+      "original_sha256": "7eace5a2fd5b57b63c61f2f9aab9a61694c9f667b5e9ca8c5a206d3d9852a848",
+      "original_size": [
+        1500,
+        1000
+      ],
+      "historical_duplicate_probability": 0.23
+    },
+    {
+      "source_id": "visa_369c056fe93c793b0341285d45c0b2d73a488ae3c8c0f8caa395e95127bea109",
+      "category": "pcb1",
+      "teacher_split": "test",
+      "bbox_original_norm": [
+        0.10714285714285714,
+        0.375,
+        0.7857142857142857,
+        0.8258928571428571
+      ],
+      "bbox_448_norm": [
+        0.10714285714285714,
+        0.4037388392857143,
+        0.7857142857142857,
+        0.746940768494898
+      ],
+      "assets": {
+        "crop": {
+          "path": "assets/crop/visa_369c056fe93c793b0341285d45c0b2d73a488ae3c8c0f8caa395e95127bea109.png",
+          "png_bytes": 198812,
+          "png_sha256": "0908779151e6cecb0731f37f5da38b2a0062a115b6a545fcc4a8d7d22e3636e3",
+          "size": [
+            448,
+            448
+          ]
+        },
+        "query": {
+          "path": "assets/query/visa_369c056fe93c793b0341285d45c0b2d73a488ae3c8c0f8caa395e95127bea109.png",
+          "png_bytes": 261314,
+          "png_sha256": "e6610ea7ea9ded5aef50547eaca1fbfdf52763c60afb24412782bc94f43aff60",
+          "size": [
+            448,
+            448
+          ]
+        }
+      },
+      "eligible": true,
+      "area": 0.3059630102040816,
+      "full_image_candidate": false,
+      "crop_bounds_original": [
+        150,
+        401,
+        1104,
+        884
+      ],
+      "original_sha256": "369c056fe93c793b0341285d45c0b2d73a488ae3c8c0f8caa395e95127bea109",
+      "original_size": [
+        1404,
+        1070
+      ],
+      "historical_duplicate_probability": 0.5
+    },
+    {
+      "source_id": "visa_094f90fda64be342bd38b8e43d8aeea5e7a6b02d266e5e41cfc8a448d62c0c01",
+      "category": "capsules",
+      "teacher_split": "test",
+      "bbox_original_norm": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "bbox_448_norm": [
+        0.0,
+        0.16517857142857142,
+        1.0,
+        0.8325892857142857
+      ],
+      "assets": {
+        "crop": {
+          "path": "assets/crop/visa_094f90fda64be342bd38b8e43d8aeea5e7a6b02d266e5e41cfc8a448d62c0c01.png",
+          "png_bytes": 247628,
+          "png_sha256": "83983e748a5b19efbb60224b6129a754cc4aa9ea0d82f140534168ab3b29c0e4",
+          "size": [
+            448,
+            448
+          ]
+        },
+        "query": {
+          "path": "assets/query/visa_094f90fda64be342bd38b8e43d8aeea5e7a6b02d266e5e41cfc8a448d62c0c01.png",
+          "png_bytes": 247628,
+          "png_sha256": "83983e748a5b19efbb60224b6129a754cc4aa9ea0d82f140534168ab3b29c0e4",
+          "size": [
+            448,
+            448
+          ]
+        }
+      },
+      "eligible": false,
+      "area": 1.0,
+      "full_image_candidate": true,
+      "crop_bounds_original": [
+        0,
+        0,
+        1500,
+        1000
+      ],
+      "original_sha256": "094f90fda64be342bd38b8e43d8aeea5e7a6b02d266e5e41cfc8a448d62c0c01",
+      "original_size": [
+        1500,
+        1000
+      ],
+      "historical_duplicate_probability": 0.49
+    },
+    {
+      "source_id": "visa_3209433cd5be38bef4b85e73d4b0a8ad9f0af9b8f89d1d13b91d3991f5cdc0a1",
+      "category": "pcb2",
+      "teacher_split": "train",
+      "bbox_original_norm": [
+        0.12053571428571429,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "bbox_448_norm": [
+        0.12053571428571429,
+        0.11830357142857142,
+        1.0,
+        0.8794642857142857
+      ],
+      "assets": {
+        "crop": {
+          "path": "assets/crop/visa_3209433cd5be38bef4b85e73d4b0a8ad9f0af9b8f89d1d13b91d3991f5cdc0a1.png",
+          "png_bytes": 295390,
+          "png_sha256": "b2ae3f30e7e1f3d76fbe5c151d3576507553899c4522612c6203b5b07d021d21",
+          "size": [
+            448,
+            448
+          ]
+        },
+        "query": {
+          "path": "assets/query/visa_3209433cd5be38bef4b85e73d4b0a8ad9f0af9b8f89d1d13b91d3991f5cdc0a1.png",
+          "png_bytes": 264050,
+          "png_sha256": "5c7223b6540441dac65c0d167199cf7bff63d164e3384c425fc28f122615c912",
+          "size": [
+            448,
+            448
+          ]
+        }
+      },
+      "eligible": true,
+      "area": 0.8794642857142857,
+      "full_image_candidate": false,
+      "crop_bounds_original": [
+        169,
+        0,
+        1404,
+        1070
+      ],
+      "original_sha256": "3209433cd5be38bef4b85e73d4b0a8ad9f0af9b8f89d1d13b91d3991f5cdc0a1",
+      "original_size": [
+        1404,
+        1070
+      ],
+      "historical_duplicate_probability": 0.29
+    },
+    {
+      "source_id": "visa_d64fd49078bf1585b89af15ec4dfb108f71fc7ffeabc68e43b9cfbb09362e3e0",
+      "category": "pcb2",
+      "teacher_split": "train",
+      "bbox_original_norm": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "bbox_448_norm": [
+        0.0,
+        0.11830357142857142,
+        1.0,
+        0.8794642857142857
+      ],
+      "assets": {
+        "crop": {
+          "path": "assets/crop/visa_d64fd49078bf1585b89af15ec4dfb108f71fc7ffeabc68e43b9cfbb09362e3e0.png",
+          "png_bytes": 253815,
+          "png_sha256": "2e717658f224eb8fa89109025186a91e79c53b0101b51d36aecf76fad993e219",
+          "size": [
+            448,
+            448
+          ]
+        },
+        "query": {
+          "path": "assets/query/visa_d64fd49078bf1585b89af15ec4dfb108f71fc7ffeabc68e43b9cfbb09362e3e0.png",
+          "png_bytes": 253815,
+          "png_sha256": "2e717658f224eb8fa89109025186a91e79c53b0101b51d36aecf76fad993e219",
+          "size": [
+            448,
+            448
+          ]
+        }
+      },
+      "eligible": false,
+      "area": 1.0,
+      "full_image_candidate": true,
+      "crop_bounds_original": [
+        0,
+        0,
+        1404,
+        1070
+      ],
+      "original_sha256": "d64fd49078bf1585b89af15ec4dfb108f71fc7ffeabc68e43b9cfbb09362e3e0",
+      "original_size": [
+        1404,
+        1070
+      ],
+      "historical_duplicate_probability": 0.53
+    },
+    {
+      "source_id": "visa_06923fecac473165ea7cc74dd763f38d88aec13b0f35c479f8dbc24fe63fd4b1",
+      "category": "pcb4",
+      "teacher_split": "train",
+      "bbox_original_norm": [
+        0.1875,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "bbox_448_norm": [
+        0.1875,
+        0.09375,
+        1.0,
+        0.90625
+      ],
+      "assets": {
+        "crop": {
+          "path": "assets/crop/visa_06923fecac473165ea7cc74dd763f38d88aec13b0f35c479f8dbc24fe63fd4b1.png",
+          "png_bytes": 305264,
+          "png_sha256": "e2962b0acc42f4936ee2ab6ad9dcf42f4401f44b2f12c618ee6a9ecde8a115ee",
+          "size": [
+            448,
+            448
+          ]
+        },
+        "query": {
+          "path": "assets/query/visa_06923fecac473165ea7cc74dd763f38d88aec13b0f35c479f8dbc24fe63fd4b1.png",
+          "png_bytes": 255664,
+          "png_sha256": "8a7f98d88d5a829b704aa1490546b5ac8e814006b74b8c2afade7cac7fc84a08",
+          "size": [
+            448,
+            448
+          ]
+        }
+      },
+      "eligible": true,
+      "area": 0.8125,
+      "full_image_candidate": false,
+      "crop_bounds_original": [
+        254,
+        0,
+        1358,
+        1104
+      ],
+      "original_sha256": "06923fecac473165ea7cc74dd763f38d88aec13b0f35c479f8dbc24fe63fd4b1",
+      "original_size": [
+        1358,
+        1104
+      ],
+      "historical_duplicate_probability": 0.25
+    }
+  ],
+  "selected_source_order": [
+    "visa_f1d12249261d62f00fd20c476804de6884a96d351e04e7943b3a82852ba86c34",
+    "visa_892614dd5d2ce2b080136ef54fc175e225931c10adadfe782ff65013849e2bcc",
+    "visa_7faf8ff401dbb9a9f14b36c4f0f3e5ec0950391351aa57be812dc515eed0c5e0",
+    "visa_461215936f1309a8c75f06be3d091f1feb0b19c388c3dc73e1aa313214e927cb",
+    "visa_6b6c78513751314419209dffa03c21d693c0791f4e9ec92158addb73c1eca987",
+    "visa_80826359e7704e236090453a9c4eeda4631b40ce4c891ed1a492a83f28af2c2c",
+    "visa_c765753d3b3f06de90428ee947f4ec5f51ee3baaacd10ff6dcd23ce533474432",
+    "visa_0905967ed6f69618638a663faab8051fdb8b7b4ff87c7b26d7a993f15fd8d052",
+    "visa_19c53aa37353abee35a64fd37d8225095d93e6c1e973a2d0b19fa7631cea100e",
+    "visa_3538f10a1d93329b6b3512454f12d304bad710ba16d6f873decf595de8daec7a",
+    "visa_1be7809506f2372505d7506c47502f75ec9ba094e306c9d394a067b368c6a8e3",
+    "visa_165dc8aa9b514b8644d5e6aee40b2e6b9a4252619a49bff78e2f4713b19c9119",
+    "visa_b81a85941ba79e2767f90bf712c6b6a09871dc960a78b1e7030aaae82d6c4320",
+    "visa_12113008ba45eebb2ffd45b369cbd690c7f91ed4531bd99034737834ade89ab7",
+    "visa_07bfdf2da58b61d1de26368da4b5aa2c4587de4c3ea220389647057745ba6c4a",
+    "visa_65f4be0362b2ca3fae482efa598fd409c38fb7665f71bb0f1101a6c9a0c6acaa",
+    "visa_f3a026383e4573baca1494d3687b7316222f06e8fef2014cefc22ad94f704d79",
+    "visa_e3f8ccfd909a536181e05348d44e76ae56b2c06026b666c96babb963f3081e0a",
+    "visa_7eace5a2fd5b57b63c61f2f9aab9a61694c9f667b5e9ca8c5a206d3d9852a848",
+    "visa_369c056fe93c793b0341285d45c0b2d73a488ae3c8c0f8caa395e95127bea109",
+    "visa_094f90fda64be342bd38b8e43d8aeea5e7a6b02d266e5e41cfc8a448d62c0c01",
+    "visa_3209433cd5be38bef4b85e73d4b0a8ad9f0af9b8f89d1d13b91d3991f5cdc0a1",
+    "visa_d64fd49078bf1585b89af15ec4dfb108f71fc7ffeabc68e43b9cfbb09362e3e0",
+    "visa_06923fecac473165ea7cc74dd763f38d88aec13b0f35c479f8dbc24fe63fd4b1"
+  ],
+  "eligible_count": 13,
+  "K": 8,
+  "protocol_sha256": "32df1c663a2d0bae1427211e66830e721c511fd9b0c3529f41ba6c25e8fe0a52",
+  "source_files": {
+    "oldcontract": "03c1d0382427b75b30dce6044066cbb4e0f78e3e1c4396694e6fa7da7e112108",
+    "oldpredictions": "76b3a9521aa3f46e875b2a14456406e7a280293cf164ed1090e1b8b34cbd8abb",
+    "oldcandidates": "8ce1e859a74de0d33abefaff8c0b3f66a58a8daeca6eb7be70d5cd23591414ef",
+    "old_source_plan": "88beb9f2043ecd1487ed10ed8b1f709b8c3b2574325c76fb6db604b12e0822f2",
+    "old_source_audit": "0f67b7267735532bac1d3bd10214e33483ff77c08c90a8e848e315989d27f8c7",
+    "old_evaluation": "fe2702586f60d575b319790c7ec37b737bc189d864d6f6238b98f34588992a92"
+  },
+  "runner_sha256": "52b53e8d95351ab28ea4660302d2426733f9c44b732179303390542d5d624ca7",
+  "roi_source_sha256": "4f7b5ed1f703b3751f9fd4bb8c86131d684cec0bed3a9011f5108621e7aa9e01",
+  "evaluation_source_sha256": "aad082c77ee00f9cc1fcd214fa50a06ee9cf7560469e8891fb6fd05274c18496",
+  "support_source_sha256": "fc6ddc02eb2e2a8c0556f3843a5e73321f9d9bfcf1b5f14314de1aea2077d0bd",
+  "dependencies": {
+    "python": "3.10.22",
+    "packages": {
+      "Pillow": "12.3.0",
+      "requests": "2.34.2",
+      "urllib3": "2.8.0",
+      "certifi": "2026.10.23",
+      "charset-normalizer": "3.5.2",
+      "idna": "3.20"
+    },
+    "numpy": "2.2.6",
+    "sklearn": "1.7.2"
+  },
+  "no_label_or_mask_reads": true,
+  "stage13_data_read": false
+}

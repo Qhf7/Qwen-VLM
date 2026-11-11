@@ -1,0 +1,44 @@
+{
+  "schema": "jev-support-matched-qwen-figure-v1",
+  "timestamp_utc": "2026-11-10T18:48:26.868242+00:00",
+  "hostname": "autodl-container-132444827f-9c594038",
+  "script_sha256": "5938a22a14f9bc118caf6aff9850d309a0381bc14679c314ddb43203eb8e495b",
+  "inputs_sha256": {
+    "stage08_rescue/metrics.json": "0d12d2e387bced5eb2de93b362cace3b2eed9e627bc680bef9b23ec664874a00",
+    "stage09_qwen_matched/metrics.json": "82936f475ecf105839bdb387db52adb28024a82c73a424573bf6b06b91ff3d3e",
+    "stage09_qwen_matched/contract.json": "eada1d9c5fe7e02289eab471ec9fbea737b63e9dd25e3e88d9879a4fa75716cd",
+    "stage09_qwen_matched/prediction_freeze.json": "04db017c0600c11ecca14901c776a7dc563010629c99e41c5611854dfd6864cd",
+    "stage09_qwen_matched/scores.jsonl": "14eb5850370b2b706c82a9a46c208c2ef97b173fba3042248ce21587c3dcd83b"
+  },
+  "outputs_sha256": {
+    "support_qwen_matched_comparison.png": "a244becf400709a260da075c6cb71cb6515412466193a02f0d3cd98f434a82d3",
+    "support_qwen_matched_comparison.svg": "fee6a213c4614d678a57cefb77fa0f6db624e9a91a6d7cec0667e0543fde45e2"
+  },
+  "pooled_auroc": {
+    "Jev 0": 0.8345833333333333,
+    "Jev 1\nseed43": 0.8920833333333333,
+    "Jev 1\nseed44": 0.8913888888888888,
+    "Jev 4\nseed43": 0.9133333333333333,
+    "Jev 4\nseed44": 0.91125,
+    "Qwen\nbase": 0.8244444444444444,
+    "Qwen\nDD LoRA": 0.9348611111111111
+  },
+  "category_macro_auroc": {
+    "Jev 0": 0.8900000000000001,
+    "Jev 1\nseed43": 0.92,
+    "Jev 1\nseed44": 0.9283333333333333,
+    "Jev 4\nseed43": 0.9600000000000001,
+    "Jev 4\nseed44": 0.9516666666666668,
+    "Qwen\nbase": 0.8766666666666668,
+    "Qwen\nDD LoRA": 0.8866666666666666
+  },
+  "qwen_prompt_tokens": {
+    "minimum": 227,
+    "maximum": 227,
+    "merged_visual_tokens": 196
+  },
+  "same_query_png_note": "exact bytes, not internal token/FLOP equality; references addimages for Jevfewshot",
+  "historical_native_control_separate": true,
+  "confirmation_opened": false,
+  "new_api_requests": 0
+}

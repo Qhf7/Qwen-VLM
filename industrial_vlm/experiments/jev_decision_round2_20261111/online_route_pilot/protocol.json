@@ -1,0 +1,55 @@
+{
+  "schema": "jev-live-noul-crop-gate-pilot-v1",
+  "model": "jev-1.14.0",
+  "endpoint": "https://api.modelgo.ai/v1/systemone",
+  "n_queries": 24,
+  "selection": "Sort original120 by sha256(source_id UTF8), then source_id; first24; no label selection",
+  "eligibility": "Candidate crop PNG SHA differs from query PNG SHA; no substitute samples; area/fullimage recorded",
+  "common_K": "min(8,eligible_count)",
+  "gate_question": "Would inspecting an enlarged close-up of the frozen candidate region provide useful additional visible evidence for deciding whether that candidate region contains an industrial defect? query is the original448 image. candidate_bbox_in_query is [left,top,right,bottom], normalized0to1, x rightward and y downward. Only the original image is available at this stage; the proposed close-up is sampled from the recorded same-image bounds. Judge need for a closer view, not whether an anomaly is present. Use visible ambiguity, small details or uncertain texture. An unchanged full-image duplicate gives no additional detail. Do not invent unseen defects.",
+  "gate_criteria": {
+    "true": "An enlarged close-up of the recorded candidate would provide useful additional visual evidence.",
+    "false": "The recorded close-up is unnecessary or adds no useful visible evidence."
+  },
+  "gate_inputs": "Original448RGB plus fixed candidatebbox and category; no cropRGB,teacher map,label,oldprobability",
+  "policies": {
+    "learned_gate": "Highest crop_needed Noul among eligible; neutralhash tie",
+    "matched_random": "sha256(jev-live-route-random-v1|20261111|source_id) ascending among eligible",
+    "historical_uncertainty": "Original stage04 duplicate abs(p-.5) ascending among eligible; neutralhash tie",
+    "geometry_small": "Original normalized candidate area ascending among eligible; neutralhash tie"
+  },
+  "final_requests": "New duplicate for all24 and new ROI for union of4 policy sets; no cached downstream outcomes",
+  "anomaly_question": "Does the candidate region in the image identified by query contain at least one visible industrial anomaly (surface damage, contamination, missing material or component, or structural irregularity)? candidate_bbox_in_query is normalized [left, top, right, bottom] in query, with x increasing rightward and y downward. Judge that candidate region, not unrelated regions. second_view contains either a close-up of this same candidate region or an unchanged duplicate of query, as declared by second_view_kind. A candidate_crop is an enlarged view of the recorded original-image bounds with centered white padding; padding is not a defect. A duplicate_original adds no new visual region. Use only visible evidence. Ordinary differences in lighting, viewpoint, background or object identity alone are not defects.",
+  "anomaly_criteria": {
+    "true": "At least one visible industrial defect is present inside the candidate region.",
+    "false": "No visible industrial defect is present inside the candidate region."
+  },
+  "threshold": 0.5,
+  "sequence": "All gate24 first; freeze gate/route/actual crop hashes; final newdups/ROI interleaved by sourcehash and armhash",
+  "successful_targets_upper_bound": 72,
+  "max_started_global": 216,
+  "max_started_per_target": 3,
+  "workers": 3,
+  "failed_submission_stop_threshold": 30,
+  "inflight_failed_drain_bound": 32,
+  "consecutive_failure_stop": 3,
+  "unknown_completion_hardstop": true,
+  "explicit_newinvocation_retry": true,
+  "no_automatic_http_retry": true,
+  "evaluation": "Exploratory previously viewed24; all strategies share same newly collected potential outcome table; gate24cost extra explicit",
+  "comparison": "Each strategy vs newduplicate24; only selectedsubset has newly measured pairedROI potential outcomes",
+  "post_evaluation": "After all newpredictions freeze: read only approved24 historical development labels and stage05 frozen candidateIoU, no new mask reads",
+  "bootstrap": {
+    "replicates": 2000,
+    "seed": 42,
+    "strata": "image_label only",
+    "fixed_routes": true,
+    "category": "Descriptive only; do not use categoryxlabel singleton bootstrap",
+    "limitation": "Conditions on fixed24/routes/provider outcomes; excludes route selection/model/provider randomness"
+  },
+  "masks_or_new_GT_opened": false,
+  "stage13_data_read": false,
+  "no_new_training": true,
+  "api_capability": "Only already verified gateway image Noul; no Choice Score or Box request",
+  "limitation": "Oldduplicate uncertainty has earlier collection time; selected24 may be unbalanced; small strata and provider timing not causal proof"
+}

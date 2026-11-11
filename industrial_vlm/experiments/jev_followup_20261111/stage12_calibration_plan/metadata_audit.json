@@ -1,0 +1,106 @@
+{
+  "schema": "jev-stage12-calibration-selection-audit-v1",
+  "status": "complete_metadata_only",
+  "created_utc": "2026-11-10T18:16:00.988190+00:00",
+  "hostname": "autodl-container-132444827f-9c594038",
+  "selection_key": "SHA256(UTF8(jev-new-calibration-v1|42| + source_id)) ascending, source_id tie-break",
+  "selection_scope": "approved native val minus current120; category x label stratified",
+  "source_counts": {
+    "native_val": 1624,
+    "current120": 120,
+    "remaining": 1504,
+    "qwen_training_unique": 768
+  },
+  "selected_counts": {
+    "calibration": {
+      "unique_sources": 120,
+      "normal": 60,
+      "anomalous": 60,
+      "category_label_counts": {
+        "candle|0": 5,
+        "candle|1": 5,
+        "capsules|0": 5,
+        "capsules|1": 5,
+        "cashew|0": 5,
+        "cashew|1": 5,
+        "chewinggum|0": 5,
+        "chewinggum|1": 5,
+        "fryum|0": 5,
+        "fryum|1": 5,
+        "macaroni1|0": 5,
+        "macaroni1|1": 5,
+        "macaroni2|0": 5,
+        "macaroni2|1": 5,
+        "pcb1|0": 5,
+        "pcb1|1": 5,
+        "pcb2|0": 5,
+        "pcb2|1": 5,
+        "pcb3|0": 5,
+        "pcb3|1": 5,
+        "pcb4|0": 5,
+        "pcb4|1": 5,
+        "pipe_fryum|0": 5,
+        "pipe_fryum|1": 5
+      }
+    },
+    "heldout_eval": {
+      "unique_sources": 120,
+      "normal": 60,
+      "anomalous": 60,
+      "category_label_counts": {
+        "candle|0": 5,
+        "candle|1": 5,
+        "capsules|0": 5,
+        "capsules|1": 5,
+        "cashew|0": 5,
+        "cashew|1": 5,
+        "chewinggum|0": 5,
+        "chewinggum|1": 5,
+        "fryum|0": 5,
+        "fryum|1": 5,
+        "macaroni1|0": 5,
+        "macaroni1|1": 5,
+        "macaroni2|0": 5,
+        "macaroni2|1": 5,
+        "pcb1|0": 5,
+        "pcb1|1": 5,
+        "pcb2|0": 5,
+        "pcb2|1": 5,
+        "pcb3|0": 5,
+        "pcb3|1": 5,
+        "pcb4|0": 5,
+        "pcb4|1": 5,
+        "pipe_fryum|0": 5,
+        "pipe_fryum|1": 5
+      }
+    }
+  },
+  "overlaps": {
+    "calibration_vs_heldout_eval_sources": 0,
+    "calibration_vs_heldout_eval_original_sha256": 0,
+    "selected_vs_current120_sources": 0,
+    "selected_vs_qwen_train768_sources": 0,
+    "selected_vs_current120_original_sha256": 0,
+    "selected_vs_qwen_train768_original_sha256": 0
+  },
+  "original_byte_identity_check": "Compared native source_id-encoded original SHA256 under DATA_PROTOCOL; selected RGB bytes not opened or rehashed at metadata-only phase. Runtime must verify each selected image SHA before any model request.",
+  "confirmation_files_opened": false,
+  "native_test_manifest_opened": false,
+  "images_opened": false,
+  "gt_masks_opened": false,
+  "new_api_requests": 0,
+  "teacher_in_final_route": false,
+  "historical_exposure_caveat": "native validation remainder; may have participated in earlier full-val loss or model selection; not blind and not claimed never seen",
+  "input_sha256": {
+    "prepared/visa/val.jsonl": "eec85387645e9781585949033ec12cf5273e22fbf2b7986c1e0005fce5b5f0c0",
+    "prepared/multitask_v2/val_decision_120.jsonl": "cffb9a3bce5da68d6e026b06ee068ca9c266e033f9622d8d01986daa0c0e64f9",
+    "prepared/multitask_v2/train_decision_decision.jsonl": "214778943ccb8be292c533708d12f42944ae8c8f23364560d2e221798e610da4"
+  },
+  "outputs_sha256": {
+    "calibration_inputs.jsonl": "cacb9522e4c50df7388400aa9904b07c1a5284f4e0a72d2102d2b23e14bf8bfa",
+    "calibration_labels.jsonl": "aaaf4898122c685ed5a511af5b1d0d85d6eaa4d699a7822174eaa2a84a56fd1d",
+    "heldout_eval_inputs.jsonl": "1e5ca69c49347861222397fadab2cf85d4b3090a17faa56ffc25ed1b14a06f99",
+    "heldout_eval_labels.jsonl": "7cc2853e08c36af1491a29b60622d42cdc2a377d803f07b962dd5a81942761d3",
+    "selected_sources.jsonl": "5f5afd298dc80032400ef805c65be14ba798c46e85d6e99a6e5d1ec88eff7be3"
+  }
+}

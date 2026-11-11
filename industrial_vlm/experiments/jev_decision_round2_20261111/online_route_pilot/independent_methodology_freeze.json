@@ -1,0 +1,35 @@
+{
+  "schema": "jev-online-independent-methodology-freeze-v1",
+  "status": "frozen_before_complete_pilot_results",
+  "timestamp_utc": "2026-11-10T20:06:30.907053+00:00",
+  "hostname": "autodl-container-132444827f-9c594038",
+  "auditor_sha256": "c5f8d40e448743e0ad6b7afa375cd1c25678af4a669bcba99ce6b99626d2f8db",
+  "runner_sha256": "52b53e8d95351ab28ea4660302d2426733f9c44b732179303390542d5d624ca7",
+  "protocol_sha256": "32df1c663a2d0bae1427211e66830e721c511fd9b0c3529f41ba6c25e8fe0a52",
+  "contract_sha256": "16941598c4589bdc4eedbbe2990d1e75bee0dde3db41be889bc3e23fac2473c1",
+  "methods": {
+    "metrics": [
+      "auroc",
+      "ap",
+      "macro_f1",
+      "recall",
+      "fpr",
+      "brier",
+      "ece_10_equal_width"
+    ],
+    "binary_threshold": 0.5,
+    "logloss_clip": 1e-15,
+    "confusion": "TP FP TN FN anomalypositive",
+    "wilson": "Two-sided95 z1.959963984540054; explicit denominators",
+    "bootstrap": "2000 seed42 multinomial within observed binary-label strata, paired sources, fixed routes; per-category descriptive only (sparse)",
+    "comparison": "Four frozen K-select policies vs same newly collected duplicate24; all use same new downstream potential-outcome table",
+    "costs": "Actualpilot allgate+allnewdup+unionROI; perpolicy marginal acquisition includingdupbaseline; ideal minimal policy chosenfinal24 plusgate24 when needed, historical-control prepass unknown separately",
+    "gatescore": "Needforcloseup only, never final anomaly probability"
+  },
+  "label_gate": "Complete24 gate + all24newdup + unionROI settled, all hashes durable prediction_freeze; then only approved_labels24.json subset",
+  "stage13_data_read": false,
+  "GT_masks_read": false,
+  "new_api_calls": 0,
+  "development_pilot": true,
+  "no_deployment_or_agent_guarantee": true
+}

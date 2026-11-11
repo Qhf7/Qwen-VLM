@@ -1,0 +1,17 @@
+{
+  "schema": "human-review-material-preparation-v1",
+  "status": "prepared_waiting_for_human_annotation",
+  "items": 24,
+  "source_images": 24,
+  "image_assets": 48,
+  "blank_forms": 48,
+  "human_completed": 0,
+  "online_contract_sha256": "16941598c4589bdc4eedbbe2990d1e75bee0dde3db41be889bc3e23fac2473c1",
+  "builder_sha256": "fa89d35c695bb4777e53256a196b57e8f30c503aed0604406cc3d108e4ba5412",
+  "archive_sha256": "20675995cb5998f9ea8f254f9f95feb3354413fd236e8ffbbe670b28f6a017cf",
+  "no_labels_or_masks_read": true,
+  "API_calls": 0,
+  "model_forwards": 0,
+  "private_mapping_outside_packet": true,
+  "stage13_read": false
+}

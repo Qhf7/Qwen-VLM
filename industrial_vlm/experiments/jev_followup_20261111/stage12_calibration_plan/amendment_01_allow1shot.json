@@ -1,0 +1,54 @@
+{
+  "schema": "jev-stage12-preprotocol-amendment-v1",
+  "status": "effective_before_stage12_api_or_final_system",
+  "timestamp_utc": "2026-11-10T18:17:14.353567+00:00",
+  "hostname": "autodl-container-132444827f-9c594038",
+  "amends": {
+    "preprotocol.json": "0f5021f67e2c345ed253b4cb81b07cb6d7c41398eae0bf6b9b1cf9b293fdc844",
+    "README.md": "3185c6c21358c3b6e6c9177bb3101b49eac9a2998a7e67bac158466c72717520"
+  },
+  "reason": "Parent finalized the deterministic stage08-only system selection rule to include 1-shot alongside0/4 before any stage12 request or response. Original files and data-role manifests remain unchanged.",
+  "original_eligible_final_arms": [
+    "fixed whole-image 0-shot",
+    "fixed whole-image 4-shot normal-reference"
+  ],
+  "effective_eligible_shots": [
+    0,
+    1,
+    4
+  ],
+  "final_system_selection": {
+    "development_dataset": "stage08 fixed current120 only",
+    "scores": {
+      "0": "shared0 AUROC",
+      "1": "mean(AUROC(s43_1),AUROC(s44_1))",
+      "4": "mean(AUROC(s43_4),AUROC(s44_4))"
+    },
+    "rule": "Select smallest shots whose score is within0.01 absolute AUROC of maximum score (inclusive).",
+    "reference_seed_if_nonzero": 43,
+    "input_size": [
+      448,
+      448
+    ],
+    "selection_protocol_freeze": "Parent/protocol-review executor must freeze exact selection protocol before reading stage08 metrics; it is separate from this data-role amendment."
+  },
+  "unchanged": [
+    "all240 selected source identities and120/120 roles",
+    "fixed logistic C1/clip1e-6/L2/lbfgs calibration fit120",
+    "heldout120 evaluation-only",
+    "one final selected arm and240 accepted logical requests",
+    "no selection based on stage12 responses",
+    "no Teacher",
+    "confirmation remains sealed"
+  ],
+  "new_api_requests_before_amendment": 0,
+  "stage12_responses_observed_before_amendment": 0,
+  "confirmation_opened": false,
+  "stage12_data_files_sha256": {
+    "calibration_inputs.jsonl": "cacb9522e4c50df7388400aa9904b07c1a5284f4e0a72d2102d2b23e14bf8bfa",
+    "calibration_labels.jsonl": "aaaf4898122c685ed5a511af5b1d0d85d6eaa4d699a7822174eaa2a84a56fd1d",
+    "heldout_eval_inputs.jsonl": "1e5ca69c49347861222397fadab2cf85d4b3090a17faa56ffc25ed1b14a06f99",
+    "heldout_eval_labels.jsonl": "7cc2853e08c36af1491a29b60622d42cdc2a377d803f07b962dd5a81942761d3",
+    "selected_sources.jsonl": "5f5afd298dc80032400ef805c65be14ba798c46e85d6e99a6e5d1ec88eff7be3"
+  }
+}
