@@ -66,6 +66,8 @@ mean IoU 差 **0.001176**，配对 95% 区间跨 0。更关键的是候选本身
 
 Jev gate 多检出 1 个异常，同时多报 1 个正常；相对基准 AUROC 低 **5.90 个百分点**，配对区间 `[-17.36, +2.08]`。**通用判别器不等于策略头**；pilot 证明了真实调用链可运行，但没有证明智能路由更好或更省费。
 
+后续困难样本实验：`connected95` 将候选 mean IoU 从 0.089529 提升到 0.180475，并消除整图框；Qwen DD gate 回顾 AUROC 82.64%，不优于新 duplicate 82.99%，Jev gate 仍为 77.08%。因此暂停付费 Jev 路由，保留为困难样本语义复核候选。详见 [hardcase 目录](../../industrial_vlm/experiments/jev_hardcase_integration_20261111/README.md)。
+
 ## 5. 校准、三态路由与最终确认
 
 ![ROI、路由与校准](../../industrial_vlm/experiments/jev_followup_20261111/figures/followup_roi_routing_calibration.png)
@@ -116,6 +118,7 @@ Jev gate 多检出 1 个异常，同时多报 1 个正常；相对基准 AUROC �
 
 ### 实验
 
+- [困难样本二次判定器：候选几何与 Qwen DD gate 回顾](../../industrial_vlm/experiments/jev_hardcase_integration_20261111/README.md)
 - [Jev 图像判断基线（0/1/4-shot）](../../industrial_vlm/experiments/jev_baseline_20261110/README.md)
 - [阶段 01–13 完整报告](../../industrial_vlm/experiments/jev_followup_20261111/CONTINUOUS_RESEARCH_COMPLETION.md)
 - [候选瓶颈分析](../../industrial_vlm/experiments/jev_followup_20261111/CANDIDATE_FAILURE_ANALYSIS.md)

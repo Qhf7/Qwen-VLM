@@ -241,6 +241,7 @@ Qwen-VLM/                           ← 仓库根目录
 | 想了解什么 | 文档 |
 |---|---|
 | 从头理解项目 | [全程精读：问题 → 架构 → 训练 → 结果 → 代码](docs/Qwen3-VL多模态适配与后训练优化_项目全程精读.md) |
+| 从零实操与逐步复现 | [技术栈全景与实操教程](docs/Qwen-VLM技术栈全景与实操教程.md) · [逐步实践教程](docs/Qwen-VLM技术栈与逐步实践教程.md) |
 | 具体成果与创新边界 | [项目成果与创新总结](docs/项目成果与创新总结.md) |
 | Jev 通用判别基线：结果、边界与复现 | [Jev 研究索引](docs/Jev/README.md) · [阶段总报告](industrial_vlm/experiments/jev_followup_20261111/CONTINUOUS_RESEARCH_COMPLETION.md) |
 | 为什么早期替换失败、后来提高 | [迁移演进与训练清单](docs/Qwen迁移实验演进与训练清单.md) |

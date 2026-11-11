@@ -1,0 +1,29 @@
+{
+  "schema": "jev-hardcase-candidate-geometry-v1",
+  "status": "frozen_before_generation",
+  "timestamp_utc": "2026-11-11T08:24:15.748885+00:00",
+  "hostname": "autodl-container-132444827f-9c594038",
+  "query_count": 120,
+  "rules": {
+    "union95": {
+      "quantile": 0.95
+    },
+    "connected95": {
+      "quantile": 0.95,
+      "connectivity": 8
+    },
+    "peak56": {
+      "window_square224": 56
+    }
+  },
+  "coordinate_chain": "square224 -> original image -> 448",
+  "inputs": {
+    "plan_sha256": "88beb9f2043ecd1487ed10ed8b1f709b8c3b2574325c76fb6db604b12e0822f2",
+    "stage03_candidates_sha256": "8ce1e859a74de0d33abefaff8c0b3f66a58a8daeca6eb7be70d5cd23591414ef",
+    "teacher_cache_sha256_from_sidecar": "90b003550655617f93837e4c0336819b8c6dc0d341d215e9cd3949930eee59f4"
+  },
+  "ground_truth_masks_opened": false,
+  "confirmation_opened": false,
+  "api_requests": 0,
+  "gpu_forward": false
+}
