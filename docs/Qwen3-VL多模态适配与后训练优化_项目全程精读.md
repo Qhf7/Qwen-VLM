@@ -1243,9 +1243,9 @@ D/Cpair/R共9正式训练、best/final18份raw，共6840行；fresh每run每端�
 <a id="discussion"></a>
 ## 9. 项目贡献、结论边界与下一步
 
-### 9.1 最能体现大模型基座算法能力的部分
+### 9.1 主要技术工作
 
-| 能力 | 本项目中具体做了什么 | 可展示证据 |
+| 技术环节 | 本项目中具体做了什么 | 可展示证据 |
 |---|---|---|
 | 多模态接口适配 | CLS/map→soft tokens、不同LLM模板和嵌入、原生视觉接口核对 | pack/forward、官方parity、Phase1配对 |
 | 参数高效后训练 | NF4 QLoRA与BF16 LoRA，精确语言目标模块、dtype、梯度和加载 | runtime manifest、trainable审计、fresh报告 |
