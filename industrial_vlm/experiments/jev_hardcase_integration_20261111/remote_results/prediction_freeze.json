@@ -1,0 +1,12 @@
+{
+  "schema": "jev-hardcase-candidate-prediction-freeze-v1",
+  "status": "complete",
+  "timestamp_utc": "2026-11-11T08:24:18.716604+00:00",
+  "protocol_sha256": "93e3414eaf0fd42a1857c770983a4ca20dcbcb1337f7d6b864078854aeb387d3",
+  "predictions_sha256": "b0b981948f2c5fd8c900f4bcf5c3d51370bc910931a41262d8673c9b5c4fdc8e",
+  "n_queries": 120,
+  "ground_truth_masks_opened": false,
+  "confirmation_opened": false,
+  "api_requests": 0,
+  "gpu_forward": false
+}
