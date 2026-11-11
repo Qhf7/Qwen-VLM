@@ -1,0 +1,16 @@
+{
+  "schema": "semantic-v2-completion-certificate-v1",
+  "status": "complete",
+  "denominator": 24,
+  "eligible": 2,
+  "independent_sources": 2,
+  "targets": 8,
+  "started": 8,
+  "failed": 0,
+  "unknown": 0,
+  "stage13_data_read": false,
+  "report_sha256": "037414e4d1d5bbb4cfcb54a5067dcfdebef8b6d7ef7f5f802e1679281129eb4a",
+  "metrics_sha256": "7610a1389f2a333ddaff6fdb668dd4f29c6bebad7d304dbdf80c0a7ba44d60e9",
+  "independent_result_audit_sha256": "12fa632376988c15ce6140df2a266ec580aa4fed9c8c1455e5a63051ec4a082b",
+  "prediction_freeze_sha256": "5eb458ae43131aa386333ba3e9f7888f671ad9af4dc4de43507ee78735003fd0"
+}

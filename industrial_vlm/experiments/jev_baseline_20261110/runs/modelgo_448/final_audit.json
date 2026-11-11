@@ -1,0 +1,121 @@
+{
+  "schema": "jev-independent-final-audit-v1",
+  "status": "passed",
+  "audited_utc": "2026-11-10T15:14:58.016957+00:00",
+  "scope": "Independent raw-prediction, original-byte, processed-byte, request and attempt audit; primary scripts not modified.",
+  "checks": {
+    "query_count": 120,
+    "support_count": 48,
+    "formal_success_rows": 360,
+    "unique_success_targets": 360,
+    "source_path_byte_intersections": 0,
+    "original_images_rehashed": 168,
+    "processed_images_rehashed": 168,
+    "all_payload_hashes_verified": 360,
+    "labels_reconciled_to_source_manifest": true,
+    "fixed_support_selection_recomputed": true,
+    "runner_and_executor_hashes_verified": true,
+    "successes_after_success_resubmitted": 0,
+    "original_history_prefixes_verified": true,
+    "confirmation_images_opened": false
+  },
+  "independent_metrics": {
+    "0": {
+      "auroc": 0.8254166666666667,
+      "ap": 0.8593690475058733,
+      "confusion": {
+        "TP": 46,
+        "FP": 20,
+        "TN": 40,
+        "FN": 14
+      },
+      "macro_f1": 0.7159565580618212,
+      "recall": 0.7666666666666667,
+      "fpr": 0.3333333333333333,
+      "brier": 0.1742591666666667,
+      "ece_10_equal_width": 0.10091666666666664,
+      "unique_scores": 62,
+      "positive_negative_tied_pairs": 29
+    },
+    "1": {
+      "auroc": 0.8719444444444444,
+      "ap": 0.8933712138743028,
+      "confusion": {
+        "TP": 52,
+        "FP": 22,
+        "TN": 38,
+        "FN": 8
+      },
+      "macro_f1": 0.7465502675302731,
+      "recall": 0.8666666666666667,
+      "fpr": 0.36666666666666664,
+      "brier": 0.15722416666666666,
+      "ece_10_equal_width": 0.13658333333333333,
+      "unique_scores": 69,
+      "positive_negative_tied_pairs": 20
+    },
+    "4": {
+      "auroc": 0.8884722222222222,
+      "ap": 0.9080454057943438,
+      "confusion": {
+        "TP": 47,
+        "FP": 14,
+        "TN": 46,
+        "FN": 13
+      },
+      "macro_f1": 0.7749843739148552,
+      "recall": 0.7833333333333333,
+      "fpr": 0.23333333333333334,
+      "brier": 0.14126916666666667,
+      "ece_10_equal_width": 0.1149166666666667,
+      "unique_scores": 61,
+      "positive_negative_tied_pairs": 21
+    }
+  },
+  "attempt_accounting": {
+    "started": 494,
+    "failed": 133,
+    "accepted_successes": 360,
+    "interrupted_unknown_attempts": 1,
+    "max_started_per_target": 5,
+    "started_count_distribution": {
+      "1": 252,
+      "2": 87,
+      "3": 17,
+      "4": 3,
+      "5": 1
+    },
+    "possible_unobserved_server_completion": "One interrupted unknown plus transport/timeout failures may have completed upstream; cannot prove zero duplicated upstream computation or billing. No completed accepted target was re-sent after its success was persisted."
+  },
+  "credential_scan": {
+    "files_scanned": 80,
+    "files_with_live_key_or_long_bearer_matches": 0,
+    "values_disclosed": false
+  },
+  "provenance": {
+    "runner.py": "32645dafd5b45d18de9dd93bf31dc8e1e23b597fe244b49212c401f841a59ddf",
+    "resume_executor.py": "84988f0cde336c9dd8978498ecef5a1f0406e196a513304d0acd78553431d8b6",
+    "transport_executor.py": "a38bcab255c600ff09b1971c4de3641597d1ea3ccfff88fc203ecb8bc08829ce",
+    "frozen/config.json": "7fbb9d77d05f0a14141d1f1501b4e652758862e46f969618f24afa9e379890a4",
+    "frozen/plan.json": "88beb9f2043ecd1487ed10ed8b1f709b8c3b2574325c76fb6db604b12e0822f2",
+    "frozen/labels.json": "6b46a731a113eedac1dc73b86fbe2d09a7c1218b5514417fd7dde1cd52d0bdc6",
+    "frozen/materialized.json": "9838df3ba1f1554300d388b923adeba5f663461a8ad681e9b948fa4b1297c450",
+    "runs/modelgo_448/contract.json": "8b7218ab87fefcfb991796404972044a64d03e62ec439189e03a72c7b103a27a",
+    "runs/modelgo_448/operational_amendment.json": "95c01b885e493d2a55c7b50f9acdb82e817dcdf21cbd2e1ed9595ef370d6e9fd",
+    "runs/modelgo_448/operational_amendment_v2.json": "c3890316f87b75164675137c481024bd1589f70c686f2cb17fef06df0a9189a7",
+    "runs/modelgo_448/predictions.jsonl": "c261c972ecb4eb514626b8c23bca11679f9536c41280043ac48f8be2dbacfac2",
+    "runs/modelgo_448/attempts.jsonl": "eaf621af11f04ff5fbb812d2aae41e74be10e599cef496a5ad01330531d63513",
+    "runs/modelgo_448/metrics.json": "d6ffc7495d1e8e8c4e12ece9b80dbeb0280f2496b2fe86b50b7799f9b481aa90",
+    "runs/modelgo_448/supplemental_metrics.json": "85ddbeddcd5ea45646692bcc28beaf7ad8f26b11c275befea29eec4d29167d84"
+  },
+  "limitations": [
+    "120 previously-viewed same-domain development images, not a new blind test.",
+    "Fixed single support set and one accepted response per target; no support-selection or provider-repeat uncertainty.",
+    "ModelGo logical response model echo is not independent verification of upstream weights/version.",
+    "Only image-level decisions; no localization or pixel segmentation evaluated.",
+    "Raw latency across shots/phases includes gateway, upload, concurrency, timeout and retry effects; not model compute benchmark.",
+    "Probability calibration is empirical on this small balanced development sample, not a guarantee for deployment.",
+    "Paired bootstrap resamples fixed query strata and does not include service/support variability or multiple-comparison correction.",
+    "Jev image support is experimental; existing native Qwen results used different inputs/processing/training and are historical references, not strict controlled head-to-head."
+  ]
+}

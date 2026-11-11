@@ -1,0 +1,35 @@
+{
+  "schema": "jev-operational-amendment-v2",
+  "timestamp_utc": "2026-11-10T14:52:22.874847+00:00",
+  "reason": "Large-image transport failures clustered near 15 seconds; increase connect/upload timeout and read timeout with per-thread connection reuse. Scientific inputs and request identities remain unchanged.",
+  "operational_phase": "transport_rolling6",
+  "original_contract_file_sha256": "8b7218ab87fefcfb991796404972044a64d03e62ec439189e03a72c7b103a27a",
+  "original_contract_canonical_sha256": "a3dd4dec8ad8832fe2493c45e18d0dce1e8e1333ff0e433bcc48eca5406a9ed8",
+  "original_runner_sha256": "32645dafd5b45d18de9dd93bf31dc8e1e23b597fe244b49212c401f841a59ddf",
+  "executor_sha256": "a38bcab255c600ff09b1971c4de3641597d1ea3ccfff88fc203ecb8bc08829ce",
+  "actual_workers": 6,
+  "actual_connect_upload_timeout_seconds": 60.0,
+  "actual_read_timeout_seconds": 120.0,
+  "previous_amendment_file_sha256": "95c01b885e493d2a55c7b50f9acdb82e817dcdf21cbd2e1ed9595ef370d6e9fd",
+  "previous_amendment_canonical_sha256": "71ee3d4c1b3c7c2cf6b6c858e74ca7b21422a621f2a909a397b2584e2ee560a1",
+  "original_workers": 3,
+  "original_timeout_seconds": 90.0,
+  "max_total_started_per_target": 5,
+  "initial_completed_count": 196,
+  "initial_predictions_file": {
+    "exists": true,
+    "sha256": "f4e3af19aa11073050205d5d7282c3ec7573e9a76edc15f61ddc2d55e424928b",
+    "bytes": 124648
+  },
+  "initial_attempts_file": {
+    "exists": true,
+    "sha256": "ea067efaf39bafbe8d20931615925c4b67edc27fb5859d9d899c2b68864d175a",
+    "bytes": 202526
+  },
+  "interrupted_unknown_targets": [],
+  "maximum_previous_inflight_at_interrupt": 6,
+  "retry_authorization": "Explicit --retry-failed required; each target max 5 total started across all phases.",
+  "same_invocation_retry": "HTTP 502 only. Transport/timeout/other failures wait until next explicit invocation.",
+  "latency_note": "Report original, rolling6 and transport_rolling6 phases separately; higher timeout changes observed successful latency and failure rate.",
+  "connection_reuse": "requests.Session per worker via thread-local storage; trust_env left at default True."
+}

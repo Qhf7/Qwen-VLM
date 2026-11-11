@@ -1,0 +1,38 @@
+{
+  "schema": "jev-paired-predictions-frozen-before-gt-v1",
+  "timestamp_utc": "2026-11-10T17:51:29.951760+00:00",
+  "hostname": "autodl-container-132444827f-9c594038",
+  "run": "runs/modelgo_roi",
+  "n_predictions": 240,
+  "files_sha256": {
+    "formal_predictions": "76b3a9521aa3f46e875b2a14456406e7a280293cf164ed1090e1b8b34cbd8abb",
+    "formal_attempts": "1fc21a95ce510011f90426caad55c797cba882318f6c9531e9205c0178919712",
+    "formal_contract": "03c1d0382427b75b30dce6044066cbb4e0f78e3e1c4396694e6fa7da7e112108",
+    "formal_status": "3c563ac65516e92b2e75eee18aae888bfede9a4f5bcc1eaf9b2ee7d189880f8d",
+    "candidates": "8ce1e859a74de0d33abefaff8c0b3f66a58a8daeca6eb7be70d5cd23591414ef",
+    "protocol": "8d3b6f5a8931d6e780b4beb7a8dc5777d06d1e94b3f64e7cc2f8a07be5845c7a",
+    "source_audit": "0f67b7267735532bac1d3bd10214e33483ff77c08c90a8e848e315989d27f8c7",
+    "teacher_alignment": "4c4794b385a1eb00a88e28ad56491b1964a3ee7362933f8f07034b149238e138",
+    "source_plan": "88beb9f2043ecd1487ed10ed8b1f709b8c3b2574325c76fb6db604b12e0822f2",
+    "source_config": "7fbb9d77d05f0a14141d1f1501b4e652758862e46f969618f24afa9e379890a4",
+    "source_materialized": "9838df3ba1f1554300d388b923adeba5f663461a8ad681e9b948fa4b1297c450",
+    "source_labels": "6b46a731a113eedac1dc73b86fbe2d09a7c1218b5514417fd7dde1cd52d0bdc6",
+    "historical_predictions": "c261c972ecb4eb514626b8c23bca11679f9536c41280043ac48f8be2dbacfac2",
+    "evaluator": "aad082c77ee00f9cc1fcd214fa50a06ee9cf7560469e8891fb6fd05274c18496",
+    "api_runner": "4f7b5ed1f703b3751f9fd4bb8c86131d684cec0bed3a9011f5108621e7aa9e01",
+    "qwen_base": "dc109510af9e58701257ef943e05cee4b100f46df80a14620b36fdfb64f96499",
+    "qwen_decision_decision": "d19c70935d3369d400a921d5a9281c6382566c327667b9b3f6de0bb3a7b4681c"
+  },
+  "contract_sha256": "f40a0ea5e6ca1921e3876838c022f38765b12c8301841e4b6a2ba617be0503e8",
+  "confirmation_opened": false,
+  "ground_truth_masks_opened": false,
+  "evaluation_policy": "Fixed threshold0.5, all-anomaly/normal denominators; no GT tuning",
+  "bootstrap": {
+    "replicates": 2000,
+    "seed": 42,
+    "strata": "category x image_label",
+    "paired": true,
+    "interval": "percentile95",
+    "multiplicity_corrected": false
+  }
+}

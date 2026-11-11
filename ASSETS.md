@@ -6,7 +6,7 @@
 
 - 项目 Python/Shell 实现、环境声明、协议、配置和冻结运行时源码。
 - 小型数据划分、指令 JSONL、样本来源 manifest、轻量逐图预测、指标及审计结果。
-- 项目图表、全程精读、代码索引、成果总结、简历和面试问答。
+- 项目图表、全程精读、代码索引和成果总结。
 - AnomalyGPT/ImageBind 必要运行时代码、tokenizer/BPE 及原有许可；LoRA 配置和保存时的 tokenizer 元数据。adapter 的 tensor 权重不包含。
 
 `industrial_vlm/prepared/` 的训练文本与来源身份用于解释历史协议，不包含对应完整图片数据集。数据获取及使用须遵守原数据集条款。历史报告与旧 run 可能引用未随包交付的服务器资产，这是资产身份记录。

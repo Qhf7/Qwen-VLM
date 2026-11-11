@@ -1,0 +1,51 @@
+{
+  "schema": "jev-mask-derived-spatial-support-diagnostic-v2",
+  "status": "complete",
+  "denominator": 24,
+  "eligible": 2,
+  "selected": 2,
+  "targets": 8,
+  "image_proxy_accuracy": 1.0,
+  "image_separation_mean": 0.43999999999999995,
+  "text_prior_separation_mean": 0.05500000000000002,
+  "paired_separation_gain_mean": 0.385,
+  "records": [
+    {
+      "source_id": "visa_094f90fda64be342bd38b8e43d8aeea5e7a6b02d266e5e41cfc8a448d62c0c01",
+      "image_true": 0.59,
+      "image_false": 0.33,
+      "text_true": 0.34,
+      "text_false": 0.29,
+      "image_separation": 0.25999999999999995,
+      "text_separation": 0.050000000000000044,
+      "image_minus_text_separation": 0.2099999999999999,
+      "image_proxy_correct": 2
+    },
+    {
+      "source_id": "visa_07bfdf2da58b61d1de26368da4b5aa2c4587de4c3ea220389647057745ba6c4a",
+      "image_true": 0.77,
+      "image_false": 0.15,
+      "text_true": 0.31,
+      "text_false": 0.25,
+      "image_separation": 0.62,
+      "text_separation": 0.06,
+      "image_minus_text_separation": 0.56,
+      "image_proxy_correct": 2
+    }
+  ],
+  "operations": {
+    "accepted": 8,
+    "started": 8,
+    "failed": 0,
+    "unknown": 0
+  },
+  "labels_are_mask_derived_proxy": true,
+  "human_visual_fact_gold": false,
+  "defect_type_or_cause_validated": false,
+  "limitations": [
+    "Strict mask geometry may yield few or zero sources.",
+    "Mask spatial proxy is not human-verified image-visible semantic truth.",
+    "No-image measures wording/position priors and missing-evidence behavior, not identical visual task accuracy.",
+    "Previously viewed development subset; no new unseen-data claim."
+  ]
+}

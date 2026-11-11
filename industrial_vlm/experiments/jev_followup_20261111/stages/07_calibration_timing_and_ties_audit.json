@@ -1,0 +1,71 @@
+{
+  "schema": "jev-calibration-freeze-timing-and-equality-audit-v1",
+  "timestamp_utc": "2026-11-10T17:56:24.245877+00:00",
+  "protocol_sha256": "7442f1c0b504bdc0d4c3836d145b5151cfc72adb6889ad52ca049652c9c294c0",
+  "protocol_body_sha256": "eceaedb31654c9bbd6bd009e67c6b2c1862ec0158fce57728329ee152ba49564",
+  "results_sha256": "a5bb87f0f6863143ca44b8b60a3c030d37d9bb710a8af9f6308481f0719f9e8b",
+  "protocol_formed_after_stage05": true,
+  "calibration_fit_performed_before_freeze": false,
+  "stage05_sha256_at_prepare": "fe2702586f60d575b319790c7ec37b737bc189d864d6f6238b98f34588992a92",
+  "timing_evidence": "prepare reads source identities/approved labels and hashes probability files, but does not parse probabilities, compute calibration metrics or call fit; evaluate is a separate command after frozen protocol publication",
+  "posthoc_development_diagnostic": true,
+  "independent_calibration_completed": false,
+  "confirmation_opened": false,
+  "threshold_comparison": {
+    "native_default": "anomaly_log_odds > 0",
+    "stage07_all_raw_and_oof": "probability >= 0.5",
+    "ties": [
+      {
+        "model": "base",
+        "n": 120,
+        "file_sha256": "dc109510af9e58701257ef943e05cee4b100f46df80a14620b36fdfb64f96499",
+        "zero_logodds_ties": 1,
+        "tie_anomaly": 1,
+        "tie_normal": 0,
+        "source_ids": [
+          "visa_82147a7d0c321426267a87f92bbe3b77fc135f0fc6f4ce6f6dd337ead6858765"
+        ],
+        "strict_logodds_positive": {
+          "TP": 18,
+          "FP": 0,
+          "TN": 60,
+          "FN": 42
+        },
+        "raw_probability_ge_half": {
+          "TP": 19,
+          "FP": 0,
+          "TN": 60,
+          "FN": 41
+        },
+        "mismatch_count": 1
+      },
+      {
+        "model": "decision_decision",
+        "n": 120,
+        "file_sha256": "d19c70935d3369d400a921d5a9281c6382566c327667b9b3f6de0bb3a7b4681c",
+        "zero_logodds_ties": 3,
+        "tie_anomaly": 2,
+        "tie_normal": 1,
+        "source_ids": [
+          "visa_08b018905002d81f6c03e9bd7811c9e0592bb575b5655d899e7adebc5f3bf98b",
+          "visa_c765753d3b3f06de90428ee947f4ec5f51ee3baaacd10ff6dcd23ce533474432",
+          "visa_e792b23268ce631361e08b52655a4ffc7a571de02061945a7a2b54ae64a9f948"
+        ],
+        "strict_logodds_positive": {
+          "TP": 49,
+          "FP": 7,
+          "TN": 53,
+          "FN": 11
+        },
+        "raw_probability_ge_half": {
+          "TP": 51,
+          "FP": 8,
+          "TN": 52,
+          "FN": 9
+        },
+        "mismatch_count": 3
+      }
+    ]
+  },
+  "report_before_note_sha256": "6bca72a39bda5a8afd316dc36109421a59532746452fa2b1788b420e3e8a5402"
+}

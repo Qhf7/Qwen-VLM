@@ -1,0 +1,46 @@
+{
+  "schema": "semantic-v2-independent-result-audit-v1",
+  "status": "passed",
+  "denominator": 24,
+  "normal": 12,
+  "anomaly": 12,
+  "eligible": 2,
+  "independent_sources": 2,
+  "targets": 8,
+  "started": 8,
+  "succeeded": 8,
+  "failed": 0,
+  "unknown": 0,
+  "all_attempts1": true,
+  "metrics_recomputed_without_semantic_runner": true,
+  "freeze_sha256": "5eb458ae43131aa386333ba3e9f7888f671ad9af4dc4de43507ee78735003fd0",
+  "metrics_sha256": "7610a1389f2a333ddaff6fdb668dd4f29c6bebad7d304dbdf80c0a7ba44d60e9",
+  "records": [
+    {
+      "source_id": "visa_094f90fda64be342bd38b8e43d8aeea5e7a6b02d266e5e41cfc8a448d62c0c01",
+      "image_true": 0.59,
+      "image_false": 0.33,
+      "text_true": 0.34,
+      "text_false": 0.29,
+      "image_separation": 0.25999999999999995,
+      "text_separation": 0.050000000000000044,
+      "paired_gain": 0.2099999999999999
+    },
+    {
+      "source_id": "visa_07bfdf2da58b61d1de26368da4b5aa2c4587de4c3ea220389647057745ba6c4a",
+      "image_true": 0.77,
+      "image_false": 0.15,
+      "text_true": 0.31,
+      "text_false": 0.25,
+      "image_separation": 0.62,
+      "text_separation": 0.06,
+      "paired_gain": 0.56
+    }
+  ],
+  "image_proxy_accuracy": 1.0,
+  "limitations": [
+    "Only2 selected development sources, not8 independent observations.",
+    "Mask-derived spatial proxy; not human-visible fact gold or defect type/cause evaluation.",
+    "Text-only lacks image evidence; scores reveal wording/grid priors and cannot be visual accuracy."
+  ]
+}

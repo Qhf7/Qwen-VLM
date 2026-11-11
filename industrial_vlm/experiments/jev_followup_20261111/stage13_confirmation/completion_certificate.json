@@ -1,0 +1,18 @@
+{
+  "schema": "jev-one-time-final-confirmation-v1",
+  "status": "complete",
+  "expected": 240,
+  "completed": 240,
+  "contract_sha256": "60ac5b7c7d8a8e69e07bb26817751c19c6aff25870d7998eb7bdbbbf3ab0645c",
+  "bundle_sha256": "72ab9b8706cdf77c102f7fb53c372e3a183ecdf69e67599d9d58732838fd392e",
+  "prediction_freeze_sha256": "785e76ea8593c1dcba52111581d92fd090b456ba22e95421ee07a339c152a20f",
+  "metrics_sha256": "2838095b23bba31a4c233be7a385f3e010c4af7a978673de40bccf10f6e63976",
+  "report_sha256": "2db39dd2314ddef9984dff490ad38a2df4a01c4b5f8416dd838595b9e4077c48",
+  "no_refit": true,
+  "no_threshold_optimization": true,
+  "no_reselection": true,
+  "inference_label_reads": 0,
+  "evaluator_boolean_labels_opened": true,
+  "masks_opened": false,
+  "confirmation_opened": true
+}

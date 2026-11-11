@@ -1,0 +1,13 @@
+{
+  "schema": "qwen-stage08-matched-png-v1",
+  "status": "complete",
+  "expected": 240,
+  "completed": 240,
+  "per_arm": {
+    "decision_decision": 120,
+    "base": 120
+  },
+  "contract_sha256": "905d2f978a041de44b0078811aed001985b15acaf351796805ca37a8c6573f01",
+  "timestamp_utc": "2026-11-10T18:09:40.545639+00:00",
+  "confirmation_opened": false
+}

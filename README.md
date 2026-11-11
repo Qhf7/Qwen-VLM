@@ -17,6 +17,8 @@
 </div>
 
 > **核心结果：** 在共同 ImageBind/BigDec 视觉前端、重新训练桥接的受控实验中，Qwen 相对 Vicuna 的开发 AUROC 提高 **3.61 个百分点**；语言 q/v LoRA 进一步提高 **1.12 个百分点**。两项 AUROC 配对增量在三个 seed 上均为正。跨域外评仍有高误报，下面同时展示收益与限制。
+>
+> **附加对照：** 在不改变主线的条件下引入 Jev 通用判别基线；同 120 图、448 输入下 0/4-shot AUROC 为 **83.46% / 91.33%**，低于 Qwen DD 的 **93.49%**。详见 [Jev 研究索引](docs/Jev/README.md)。
 
 <a id="highlights"></a>
 ## ✨ 工作亮点
@@ -28,6 +30,7 @@
 | **参数高效后训练** | q/v LoRA、桥接联合适配、匹配 CE / ranking、结构化 SFT；核验 dtype、梯度、参数组与保存重载 | [LoRA 分析](migration_20261103/lora_20261104/ANALYSIS.md) · [进阶协议](migration_20261103/advanced_20261104/PROTOCOL.md) |
 | **独立原生 QLoRA** | 保留 Qwen 原生视觉，语言侧 NF4 + LoRA；控制来源、曝光与更新数，比较判断/区域任务 | [原生分支实验报告](industrial_vlm/reports/multitask_v2/实验报告.md) |
 | **冻结外部验证** | 7 模型 × 3 seed × 1,575 张 MVTec 图，保存并复算 33,075 条预测；保留负结果 | [最终证据审计](migration_20261103/advanced_20261104/FINAL_EVIDENCE_AUDIT.md) |
+| **Jev 判别式基线** | 引入 TypeSafe Jev（System One）作为通用判别基线与决策层对照；同 120 图、448 输入比较 0/1/4-shot 与 Qwen 底座/DD，并完成 ROI 复核与真实路由 pilot | [Jev 研究索引](docs/Jev/README.md) |
 
 这些工作体现多模态接口适配、领域后训练、优化目标设计和评测工程能力。LoRA、QLoRA、ImageBind 与 Qwen 均采用已有方法和底座；个人贡献与上游边界见 [THIRD_PARTY.md](THIRD_PARTY.md)。
 
@@ -115,6 +118,29 @@ DD 相对同量化底座的开发 AUROC 提高 **12.17 pp**；其自由生成判
 
 </details>
 
+### 5 · 附加对照：Jev 通用判别基线
+
+![Jev 0/1/4-shot 与 Qwen 对照](industrial_vlm/experiments/jev_followup_20261111/figures/support_qwen_matched_comparison.png)
+
+在不改变主线的条件下，引入 TypeSafe Jev（System One 判别模型）作为另一条基线：它不是检测主干，而是“通用判别器 + 类型化决策”的对照。同一批 120 张图、同一 448 输入下：
+
+| 系统 | 训练方式 | AUROC ↑ | 默认阈值下 Recall | 默认阈值下 FPR |
+|---|---|---:|---:|---:|
+| Jev 0-shot | 无训练，仅提示 | 83.46% | 78.33% | 35.00% |
+| Jev 4-shot（seed43 / 44） | 4 张正常参考 | **91.33% / 91.13%** | 85.00% | 23.33% |
+| Qwen 量化底座 | 无领域训练 | 82.44% | 23.33% | 0.00% |
+| Qwen DD LoRA | 领域 SFT | **93.49%** | 71.67% | **5.00%** |
+
+- **通用零样本接近**：Jev 0-shot 83.46% 与 Qwen 底座 82.44% 只差约 1 个百分点。
+- **领域后训练仍最强**：DD 比底座高 **11.05 个百分点**。
+- **few-shot 回收大部分差距**：Jev 4-shot 比 0-shot 高约 **7.7–7.9 个百分点**，但仍比 DD 低 **2.16 个百分点**。
+- **ROI 复核未证明净收益**：240 个配对判断中，ROI/重复原图的 mean IoU 为 **0.069719 / 0.068542**，配对区间跨 0；**60/120** 候选是整图框，上游几何是瓶颈。
+- **在线路由未证明净收益**：24 图、**61 次**真实请求；Jev gate AUROC **77.08%**，低于新 duplicate **82.99%** 和同 K 随机 **77.78%**。
+- **校准是部署层**：heldout FPR **18.33%→10.00%**、Brier **0.12423→0.10774**，但 AUROC/Recall 不变。
+
+这些结果支持“Jev 作为通用基线/决策层对照”的定位，不支持“Jev 替代检测主干”或“路由已获得净收益”。完整协议、负结果和复现入口见 [Jev 研究索引](docs/Jev/README.md)。
+
+
 <a id="quickstart"></a>
 ## 🚀 快速开始
 
@@ -123,6 +149,7 @@ DD 相对同量化底座的开发 AUROC 提高 **12.17 pp**；其自由生成判
 | 你的目标 | 建议入口 | 运行前需要准备 |
 |---|---|---|
 | 理解项目和研究结论 | [全程精读](docs/Qwen3-VL多模态适配与后训练优化_项目全程精读.md) | 直接阅读，无需 GPU |
+| 了解 Jev 通用判别基线 | [Jev 研究索引](docs/Jev/README.md) | 直接阅读，无需 GPU/API |
 | 核对已有代码和结果文件 | 下方文件校验、[证据审计](migration_20261103/advanced_20261104/FINAL_EVIDENCE_AUDIT.md) | Python 标准库；指标复算另需对应依赖 |
 | 运行原生 Qwen 单图推理 / QLoRA | [industrial_vlm](industrial_vlm/README.md) | CUDA、Qwen 底座；领域推理另需对应 adapter |
 | 复现语言骨干迁移和 q/v LoRA | [Phase1](migration_20261103/PHASE1_PROTOCOL.md) → [B/C](migration_20261103/lora_20261104/PROTOCOL.md) | 数据、ImageBind、BigDec、语言底座及阶段权重 |
@@ -145,6 +172,8 @@ assert not bad, bad
 print(f'PASS: {len(rows)} files verified')
 PY
 ```
+
+> `DELIVERY_MANIFEST.tsv` 保持原交付范围；Jev 附录新增文件的逐文件 SHA256 见 [Jev 清单](docs/Jev/MANIFEST.tsv)。
 
 ### ② 配置原生 Qwen 环境
 
@@ -187,11 +216,12 @@ Qwen-VLM/                           ← 仓库根目录
 ├── ASSETS.md / THIRD_PARTY.md       资产准备与上游许可
 ├── DELIVERY_MANIFEST.tsv            逐文件大小与 SHA256
 ├── DELIVERY_AUDIT.json              布局、源码身份和交付核验
-├── docs/                           全程精读、成果、简历、面试与图表
+├── docs/                           全程精读、成果与图表
 │   └── assets/readme/              本页可视化、源数据与绘图脚本
 ├── industrial_vlm/                 独立原生 Qwen NF4 QLoRA 工程
 │   ├── src/industrial_vlm/          数据 / 模型 / 训练 / 推理 / 评分
-│   └── configs/ · experiments/ · reports/
+│   ├── experiments/jev_*            Jev 基线、ROI 复核与路由 pilot
+│   └── configs/ · reports/
 ├── repair_20261103/                 定位管线修复、BigDec 训练与复评
 ├── migration_20261103/              共同视觉前端上的迁移主线
 │   ├── code/                       桥接、语言模型、缓存与推理
@@ -210,12 +240,16 @@ Qwen-VLM/                           ← 仓库根目录
 
 | 想了解什么 | 文档 |
 |---|---|
-| 从头理解项目 | [全程精读：问题 → 架构 → 训练 → 结果 → 代码 → 面试](docs/Qwen3-VL多模态适配与后训练优化_项目全程精读.md) |
+| 从头理解项目 | [全程精读：问题 → 架构 → 训练 → 结果 → 代码](docs/Qwen3-VL多模态适配与后训练优化_项目全程精读.md) |
 | 具体成果与创新边界 | [项目成果与创新总结](docs/项目成果与创新总结.md) |
+| Jev 通用判别基线：结果、边界与复现 | [Jev 研究索引](docs/Jev/README.md) · [阶段总报告](industrial_vlm/experiments/jev_followup_20261111/CONTINUOUS_RESEARCH_COMPLETION.md) |
 | 为什么早期替换失败、后来提高 | [迁移演进与训练清单](docs/Qwen迁移实验演进与训练清单.md) |
 | LoRA 如何实现和检查 | [实现步骤详解](docs/Qwen_LoRA_项目实现步骤详解.md) · [保存重载证据](migration_20261103/lora_20261104/verify_status.json) |
 | 最终的正结果与负结果 | [进阶最终报告](migration_20261103/advanced_20261104/FINAL_REPORT.md) · [最终证据审计](migration_20261103/advanced_20261104/FINAL_EVIDENCE_AUDIT.md) |
-| 面试与简历表达 | [140 题面试问答](docs/项目精读附录_面试问答.md) · [项目经历](docs/大模型基座算法岗位_项目经历_整合版.md) |
 | 文件来源与发布范围 | [源码配置清单](docs/项目源码与配置清单.tsv) · [同步说明](docs/仓库同步说明.md) |
 
 本页图表提供 [机器可读数据及来源](docs/assets/readme/evidence.json)、SVG/PNG 和 [生成脚本](docs/assets/readme/render_figures.py)，便于核对与复用。上游代码、模型和数据遵循各自许可；AnomalyGPT/ImageBind 随附许可保留。详见 [THIRD_PARTY.md](THIRD_PARTY.md)。
+
+## License
+
+本仓库中由本项目编写的代码与文档采用 [Apache License 2.0](LICENSE)。第三方组件（AnomalyGPT、ImageBind、Qwen3-VL 等）继续遵循各自上游许可证；范围说明见 [NOTICE](NOTICE) 和 [THIRD_PARTY.md](THIRD_PARTY.md)。仓库不包含模型权重或数据集，本许可不改变第三方资产的许可条件。

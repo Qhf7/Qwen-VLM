@@ -1,0 +1,1198 @@
+{
+  "schema": "jev-online-pilot-independent-input-audit-v1",
+  "status": "complete",
+  "timestamp_utc": "2026-11-10T20:10:50.408765+00:00",
+  "hostname": "autodl-container-132444827f-9c594038",
+  "phase": "final",
+  "passed": 292,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "server",
+      "passed": true
+    },
+    {
+      "name": "24_hash_no_replacement",
+      "passed": true
+    },
+    {
+      "name": "fixed_version_source",
+      "passed": true
+    },
+    {
+      "name": "budget_caps",
+      "passed": true
+    },
+    {
+      "name": "candidate_0",
+      "passed": true
+    },
+    {
+      "name": "eligibility_0",
+      "passed": true
+    },
+    {
+      "name": "oldscore_control_only_0",
+      "passed": true
+    },
+    {
+      "name": "asset_0_query",
+      "passed": true
+    },
+    {
+      "name": "asset_0_crop",
+      "passed": true
+    },
+    {
+      "name": "candidate_1",
+      "passed": true
+    },
+    {
+      "name": "eligibility_1",
+      "passed": true
+    },
+    {
+      "name": "oldscore_control_only_1",
+      "passed": true
+    },
+    {
+      "name": "asset_1_query",
+      "passed": true
+    },
+    {
+      "name": "asset_1_crop",
+      "passed": true
+    },
+    {
+      "name": "candidate_2",
+      "passed": true
+    },
+    {
+      "name": "eligibility_2",
+      "passed": true
+    },
+    {
+      "name": "oldscore_control_only_2",
+      "passed": true
+    },
+    {
+      "name": "asset_2_query",
+      "passed": true
+    },
+    {
+      "name": "asset_2_crop",
+      "passed": true
+    },
+    {
+      "name": "candidate_3",
+      "passed": true
+    },
+    {
+      "name": "eligibility_3",
+      "passed": true
+    },
+    {
+      "name": "oldscore_control_only_3",
+      "passed": true
+    },
+    {
+      "name": "asset_3_query",
+      "passed": true
+    },
+    {
+      "name": "asset_3_crop",
+      "passed": true
+    },
+    {
+      "name": "candidate_4",
+      "passed": true
+    },
+    {
+      "name": "eligibility_4",
+      "passed": true
+    },
+    {
+      "name": "oldscore_control_only_4",
+      "passed": true
+    },
+    {
+      "name": "asset_4_query",
+      "passed": true
+    },
+    {
+      "name": "asset_4_crop",
+      "passed": true
+    },
+    {
+      "name": "candidate_5",
+      "passed": true
+    },
+    {
+      "name": "eligibility_5",
+      "passed": true
+    },
+    {
+      "name": "oldscore_control_only_5",
+      "passed": true
+    },
+    {
+      "name": "asset_5_query",
+      "passed": true
+    },
+    {
+      "name": "asset_5_crop",
+      "passed": true
+    },
+    {
+      "name": "candidate_6",
+      "passed": true
+    },
+    {
+      "name": "eligibility_6",
+      "passed": true
+    },
+    {
+      "name": "oldscore_control_only_6",
+      "passed": true
+    },
+    {
+      "name": "asset_6_query",
+      "passed": true
+    },
+    {
+      "name": "asset_6_crop",
+      "passed": true
+    },
+    {
+      "name": "candidate_7",
+      "passed": true
+    },
+    {
+      "name": "eligibility_7",
+      "passed": true
+    },
+    {
+      "name": "oldscore_control_only_7",
+      "passed": true
+    },
+    {
+      "name": "asset_7_query",
+      "passed": true
+    },
+    {
+      "name": "asset_7_crop",
+      "passed": true
+    },
+    {
+      "name": "candidate_8",
+      "passed": true
+    },
+    {
+      "name": "eligibility_8",
+      "passed": true
+    },
+    {
+      "name": "oldscore_control_only_8",
+      "passed": true
+    },
+    {
+      "name": "asset_8_query",
+      "passed": true
+    },
+    {
+      "name": "asset_8_crop",
+      "passed": true
+    },
+    {
+      "name": "candidate_9",
+      "passed": true
+    },
+    {
+      "name": "eligibility_9",
+      "passed": true
+    },
+    {
+      "name": "oldscore_control_only_9",
+      "passed": true
+    },
+    {
+      "name": "asset_9_query",
+      "passed": true
+    },
+    {
+      "name": "asset_9_crop",
+      "passed": true
+    },
+    {
+      "name": "candidate_10",
+      "passed": true
+    },
+    {
+      "name": "eligibility_10",
+      "passed": true
+    },
+    {
+      "name": "oldscore_control_only_10",
+      "passed": true
+    },
+    {
+      "name": "asset_10_query",
+      "passed": true
+    },
+    {
+      "name": "asset_10_crop",
+      "passed": true
+    },
+    {
+      "name": "candidate_11",
+      "passed": true
+    },
+    {
+      "name": "eligibility_11",
+      "passed": true
+    },
+    {
+      "name": "oldscore_control_only_11",
+      "passed": true
+    },
+    {
+      "name": "asset_11_query",
+      "passed": true
+    },
+    {
+      "name": "asset_11_crop",
+      "passed": true
+    },
+    {
+      "name": "candidate_12",
+      "passed": true
+    },
+    {
+      "name": "eligibility_12",
+      "passed": true
+    },
+    {
+      "name": "oldscore_control_only_12",
+      "passed": true
+    },
+    {
+      "name": "asset_12_query",
+      "passed": true
+    },
+    {
+      "name": "asset_12_crop",
+      "passed": true
+    },
+    {
+      "name": "candidate_13",
+      "passed": true
+    },
+    {
+      "name": "eligibility_13",
+      "passed": true
+    },
+    {
+      "name": "oldscore_control_only_13",
+      "passed": true
+    },
+    {
+      "name": "asset_13_query",
+      "passed": true
+    },
+    {
+      "name": "asset_13_crop",
+      "passed": true
+    },
+    {
+      "name": "candidate_14",
+      "passed": true
+    },
+    {
+      "name": "eligibility_14",
+      "passed": true
+    },
+    {
+      "name": "oldscore_control_only_14",
+      "passed": true
+    },
+    {
+      "name": "asset_14_query",
+      "passed": true
+    },
+    {
+      "name": "asset_14_crop",
+      "passed": true
+    },
+    {
+      "name": "candidate_15",
+      "passed": true
+    },
+    {
+      "name": "eligibility_15",
+      "passed": true
+    },
+    {
+      "name": "oldscore_control_only_15",
+      "passed": true
+    },
+    {
+      "name": "asset_15_query",
+      "passed": true
+    },
+    {
+      "name": "asset_15_crop",
+      "passed": true
+    },
+    {
+      "name": "candidate_16",
+      "passed": true
+    },
+    {
+      "name": "eligibility_16",
+      "passed": true
+    },
+    {
+      "name": "oldscore_control_only_16",
+      "passed": true
+    },
+    {
+      "name": "asset_16_query",
+      "passed": true
+    },
+    {
+      "name": "asset_16_crop",
+      "passed": true
+    },
+    {
+      "name": "candidate_17",
+      "passed": true
+    },
+    {
+      "name": "eligibility_17",
+      "passed": true
+    },
+    {
+      "name": "oldscore_control_only_17",
+      "passed": true
+    },
+    {
+      "name": "asset_17_query",
+      "passed": true
+    },
+    {
+      "name": "asset_17_crop",
+      "passed": true
+    },
+    {
+      "name": "candidate_18",
+      "passed": true
+    },
+    {
+      "name": "eligibility_18",
+      "passed": true
+    },
+    {
+      "name": "oldscore_control_only_18",
+      "passed": true
+    },
+    {
+      "name": "asset_18_query",
+      "passed": true
+    },
+    {
+      "name": "asset_18_crop",
+      "passed": true
+    },
+    {
+      "name": "candidate_19",
+      "passed": true
+    },
+    {
+      "name": "eligibility_19",
+      "passed": true
+    },
+    {
+      "name": "oldscore_control_only_19",
+      "passed": true
+    },
+    {
+      "name": "asset_19_query",
+      "passed": true
+    },
+    {
+      "name": "asset_19_crop",
+      "passed": true
+    },
+    {
+      "name": "candidate_20",
+      "passed": true
+    },
+    {
+      "name": "eligibility_20",
+      "passed": true
+    },
+    {
+      "name": "oldscore_control_only_20",
+      "passed": true
+    },
+    {
+      "name": "asset_20_query",
+      "passed": true
+    },
+    {
+      "name": "asset_20_crop",
+      "passed": true
+    },
+    {
+      "name": "candidate_21",
+      "passed": true
+    },
+    {
+      "name": "eligibility_21",
+      "passed": true
+    },
+    {
+      "name": "oldscore_control_only_21",
+      "passed": true
+    },
+    {
+      "name": "asset_21_query",
+      "passed": true
+    },
+    {
+      "name": "asset_21_crop",
+      "passed": true
+    },
+    {
+      "name": "candidate_22",
+      "passed": true
+    },
+    {
+      "name": "eligibility_22",
+      "passed": true
+    },
+    {
+      "name": "oldscore_control_only_22",
+      "passed": true
+    },
+    {
+      "name": "asset_22_query",
+      "passed": true
+    },
+    {
+      "name": "asset_22_crop",
+      "passed": true
+    },
+    {
+      "name": "candidate_23",
+      "passed": true
+    },
+    {
+      "name": "eligibility_23",
+      "passed": true
+    },
+    {
+      "name": "oldscore_control_only_23",
+      "passed": true
+    },
+    {
+      "name": "asset_23_query",
+      "passed": true
+    },
+    {
+      "name": "asset_23_crop",
+      "passed": true
+    },
+    {
+      "name": "commonK",
+      "passed": true
+    },
+    {
+      "name": "request_hash_0",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_0",
+      "passed": true
+    },
+    {
+      "name": "final_fixed_question_0",
+      "passed": true
+    },
+    {
+      "name": "final_actual_view_0",
+      "passed": true
+    },
+    {
+      "name": "request_hash_1",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_1",
+      "passed": true
+    },
+    {
+      "name": "final_fixed_question_1",
+      "passed": true
+    },
+    {
+      "name": "final_actual_view_1",
+      "passed": true
+    },
+    {
+      "name": "request_hash_2",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_2",
+      "passed": true
+    },
+    {
+      "name": "final_fixed_question_2",
+      "passed": true
+    },
+    {
+      "name": "final_actual_view_2",
+      "passed": true
+    },
+    {
+      "name": "request_hash_3",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_3",
+      "passed": true
+    },
+    {
+      "name": "final_fixed_question_3",
+      "passed": true
+    },
+    {
+      "name": "final_actual_view_3",
+      "passed": true
+    },
+    {
+      "name": "request_hash_4",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_4",
+      "passed": true
+    },
+    {
+      "name": "final_fixed_question_4",
+      "passed": true
+    },
+    {
+      "name": "final_actual_view_4",
+      "passed": true
+    },
+    {
+      "name": "request_hash_5",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_5",
+      "passed": true
+    },
+    {
+      "name": "final_fixed_question_5",
+      "passed": true
+    },
+    {
+      "name": "final_actual_view_5",
+      "passed": true
+    },
+    {
+      "name": "request_hash_6",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_6",
+      "passed": true
+    },
+    {
+      "name": "final_fixed_question_6",
+      "passed": true
+    },
+    {
+      "name": "final_actual_view_6",
+      "passed": true
+    },
+    {
+      "name": "request_hash_7",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_7",
+      "passed": true
+    },
+    {
+      "name": "final_fixed_question_7",
+      "passed": true
+    },
+    {
+      "name": "final_actual_view_7",
+      "passed": true
+    },
+    {
+      "name": "request_hash_8",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_8",
+      "passed": true
+    },
+    {
+      "name": "final_fixed_question_8",
+      "passed": true
+    },
+    {
+      "name": "final_actual_view_8",
+      "passed": true
+    },
+    {
+      "name": "request_hash_9",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_9",
+      "passed": true
+    },
+    {
+      "name": "final_fixed_question_9",
+      "passed": true
+    },
+    {
+      "name": "final_actual_view_9",
+      "passed": true
+    },
+    {
+      "name": "request_hash_10",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_10",
+      "passed": true
+    },
+    {
+      "name": "final_fixed_question_10",
+      "passed": true
+    },
+    {
+      "name": "final_actual_view_10",
+      "passed": true
+    },
+    {
+      "name": "request_hash_11",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_11",
+      "passed": true
+    },
+    {
+      "name": "final_fixed_question_11",
+      "passed": true
+    },
+    {
+      "name": "final_actual_view_11",
+      "passed": true
+    },
+    {
+      "name": "request_hash_12",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_12",
+      "passed": true
+    },
+    {
+      "name": "final_fixed_question_12",
+      "passed": true
+    },
+    {
+      "name": "final_actual_view_12",
+      "passed": true
+    },
+    {
+      "name": "request_hash_13",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_13",
+      "passed": true
+    },
+    {
+      "name": "final_fixed_question_13",
+      "passed": true
+    },
+    {
+      "name": "final_actual_view_13",
+      "passed": true
+    },
+    {
+      "name": "request_hash_14",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_14",
+      "passed": true
+    },
+    {
+      "name": "final_fixed_question_14",
+      "passed": true
+    },
+    {
+      "name": "final_actual_view_14",
+      "passed": true
+    },
+    {
+      "name": "request_hash_15",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_15",
+      "passed": true
+    },
+    {
+      "name": "final_fixed_question_15",
+      "passed": true
+    },
+    {
+      "name": "final_actual_view_15",
+      "passed": true
+    },
+    {
+      "name": "request_hash_16",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_16",
+      "passed": true
+    },
+    {
+      "name": "final_fixed_question_16",
+      "passed": true
+    },
+    {
+      "name": "final_actual_view_16",
+      "passed": true
+    },
+    {
+      "name": "request_hash_17",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_17",
+      "passed": true
+    },
+    {
+      "name": "final_fixed_question_17",
+      "passed": true
+    },
+    {
+      "name": "final_actual_view_17",
+      "passed": true
+    },
+    {
+      "name": "request_hash_18",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_18",
+      "passed": true
+    },
+    {
+      "name": "final_fixed_question_18",
+      "passed": true
+    },
+    {
+      "name": "final_actual_view_18",
+      "passed": true
+    },
+    {
+      "name": "request_hash_19",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_19",
+      "passed": true
+    },
+    {
+      "name": "final_fixed_question_19",
+      "passed": true
+    },
+    {
+      "name": "final_actual_view_19",
+      "passed": true
+    },
+    {
+      "name": "request_hash_20",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_20",
+      "passed": true
+    },
+    {
+      "name": "final_fixed_question_20",
+      "passed": true
+    },
+    {
+      "name": "final_actual_view_20",
+      "passed": true
+    },
+    {
+      "name": "request_hash_21",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_21",
+      "passed": true
+    },
+    {
+      "name": "final_fixed_question_21",
+      "passed": true
+    },
+    {
+      "name": "final_actual_view_21",
+      "passed": true
+    },
+    {
+      "name": "request_hash_22",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_22",
+      "passed": true
+    },
+    {
+      "name": "final_fixed_question_22",
+      "passed": true
+    },
+    {
+      "name": "final_actual_view_22",
+      "passed": true
+    },
+    {
+      "name": "request_hash_23",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_23",
+      "passed": true
+    },
+    {
+      "name": "final_fixed_question_23",
+      "passed": true
+    },
+    {
+      "name": "final_actual_view_23",
+      "passed": true
+    },
+    {
+      "name": "request_hash_24",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_24",
+      "passed": true
+    },
+    {
+      "name": "final_fixed_question_24",
+      "passed": true
+    },
+    {
+      "name": "final_actual_view_24",
+      "passed": true
+    },
+    {
+      "name": "request_hash_25",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_25",
+      "passed": true
+    },
+    {
+      "name": "final_fixed_question_25",
+      "passed": true
+    },
+    {
+      "name": "final_actual_view_25",
+      "passed": true
+    },
+    {
+      "name": "request_hash_26",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_26",
+      "passed": true
+    },
+    {
+      "name": "final_fixed_question_26",
+      "passed": true
+    },
+    {
+      "name": "final_actual_view_26",
+      "passed": true
+    },
+    {
+      "name": "request_hash_27",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_27",
+      "passed": true
+    },
+    {
+      "name": "final_fixed_question_27",
+      "passed": true
+    },
+    {
+      "name": "final_actual_view_27",
+      "passed": true
+    },
+    {
+      "name": "request_hash_28",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_28",
+      "passed": true
+    },
+    {
+      "name": "final_fixed_question_28",
+      "passed": true
+    },
+    {
+      "name": "final_actual_view_28",
+      "passed": true
+    },
+    {
+      "name": "request_hash_29",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_29",
+      "passed": true
+    },
+    {
+      "name": "final_fixed_question_29",
+      "passed": true
+    },
+    {
+      "name": "final_actual_view_29",
+      "passed": true
+    },
+    {
+      "name": "request_hash_30",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_30",
+      "passed": true
+    },
+    {
+      "name": "final_fixed_question_30",
+      "passed": true
+    },
+    {
+      "name": "final_actual_view_30",
+      "passed": true
+    },
+    {
+      "name": "request_hash_31",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_31",
+      "passed": true
+    },
+    {
+      "name": "final_fixed_question_31",
+      "passed": true
+    },
+    {
+      "name": "final_actual_view_31",
+      "passed": true
+    },
+    {
+      "name": "request_hash_32",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_32",
+      "passed": true
+    },
+    {
+      "name": "final_fixed_question_32",
+      "passed": true
+    },
+    {
+      "name": "final_actual_view_32",
+      "passed": true
+    },
+    {
+      "name": "request_hash_33",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_33",
+      "passed": true
+    },
+    {
+      "name": "final_fixed_question_33",
+      "passed": true
+    },
+    {
+      "name": "final_actual_view_33",
+      "passed": true
+    },
+    {
+      "name": "request_hash_34",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_34",
+      "passed": true
+    },
+    {
+      "name": "final_fixed_question_34",
+      "passed": true
+    },
+    {
+      "name": "final_actual_view_34",
+      "passed": true
+    },
+    {
+      "name": "request_hash_35",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_35",
+      "passed": true
+    },
+    {
+      "name": "final_fixed_question_35",
+      "passed": true
+    },
+    {
+      "name": "final_actual_view_35",
+      "passed": true
+    },
+    {
+      "name": "request_hash_36",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_36",
+      "passed": true
+    },
+    {
+      "name": "final_fixed_question_36",
+      "passed": true
+    },
+    {
+      "name": "final_actual_view_36",
+      "passed": true
+    },
+    {
+      "name": "gatefreeze_before_final",
+      "passed": true
+    },
+    {
+      "name": "four_policy_selection_independent",
+      "passed": true
+    },
+    {
+      "name": "union_trueROI",
+      "passed": true
+    },
+    {
+      "name": "executed_crop_0",
+      "passed": true
+    },
+    {
+      "name": "executed_crop_1",
+      "passed": true
+    },
+    {
+      "name": "executed_crop_2",
+      "passed": true
+    },
+    {
+      "name": "executed_crop_3",
+      "passed": true
+    },
+    {
+      "name": "executed_crop_4",
+      "passed": true
+    },
+    {
+      "name": "executed_crop_5",
+      "passed": true
+    },
+    {
+      "name": "executed_crop_6",
+      "passed": true
+    },
+    {
+      "name": "executed_crop_7",
+      "passed": true
+    },
+    {
+      "name": "executed_crop_8",
+      "passed": true
+    },
+    {
+      "name": "executed_crop_9",
+      "passed": true
+    },
+    {
+      "name": "executed_crop_10",
+      "passed": true
+    },
+    {
+      "name": "executed_crop_11",
+      "passed": true
+    },
+    {
+      "name": "executed_crop_12",
+      "passed": true
+    },
+    {
+      "name": "all24newduplicates",
+      "passed": true
+    },
+    {
+      "name": "runtime_phase_binding",
+      "passed": true
+    },
+    {
+      "name": "api_unknown_free",
+      "passed": true
+    }
+  ],
+  "auditor_sha256": "7f56a42e2d69222dea882fba16713211e5c9a36f25d15e6b9e9ca291de6702b6",
+  "runner_sha256": "52b53e8d95351ab28ea4660302d2426733f9c44b732179303390542d5d624ca7",
+  "protocol_sha256": "32df1c663a2d0bae1427211e66830e721c511fd9b0c3529f41ba6c25e8fe0a52",
+  "contract_sha256": "16941598c4589bdc4eedbbe2990d1e75bee0dde3db41be889bc3e23fac2473c1",
+  "phase_contract_sha256": "73af57de0b68cac64c3d0e2d592d6655fad5837765406c3c9b51641a38c91c9c",
+  "n": 24,
+  "eligible": 13,
+  "K": 8,
+  "api_snapshot": {
+    "accepted": 0,
+    "started": 0,
+    "failed": 0,
+    "unknown": 0
+  },
+  "approved24_labels_read": false,
+  "GT_masks_read": false,
+  "stage13_data_read": false,
+  "new_api_calls": 0,
+  "note": "Gate semantics are need-for-closeup, not anomaly; gate score not used as final anomaly probability; exploratory previously viewed sample"
+}

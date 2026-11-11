@@ -1,0 +1,97 @@
+{
+  "schema": "jev-decision-round2-frozen-protocol-v1",
+  "status": "frozen_before_round2_threshold_selection",
+  "timestamp_utc": "2026-11-10T19:49:36.336694+00:00",
+  "hostname": "autodl-container-132444827f-9c594038",
+  "analysis_code_sha256": "585f4e29c434517fcb79049683257840e9eea783a5a79c42fcbfdbfa0d40239d",
+  "source_root": "/root/autodl-tmp/industrial_vlm/experiments/jev_followup_20261111",
+  "input_sha256": {
+    "stage12/run/contract.json": "45d593a9833ab2b1dd003afb954b6eca10cd85a574055f3d0e821ac7aa515ea1",
+    "stage12/run/predictions.jsonl": "f81d0006dcd17d305f768f4065cd5ce4b7da5a991200955a5f7ff2c46af9116a",
+    "stage12/run/attempts.jsonl": "093c835c376cad858d0177964890120cea6764bf98c371d6f385847ffc29b2e8",
+    "stage12/run/prediction_freeze.json": "07c742b039dac77f345682fe7c5c3f82482e867aa1dfbdb58f9e7adc98f5c30a",
+    "stage12/run/calibrator.json": "0bac063df108bd44938c25a8bb2c07261d79bfe2350b6d1bdb8b8cf1c1bcd9ec",
+    "stage12/run/metrics.json": "075f823dc6fc0617844e3d5578ffd0c04b3b0d077e07052f5cff9628408afea4",
+    "stage12_calibration_plan/calibration_labels.jsonl": "aaaf4898122c685ed5a511af5b1d0d85d6eaa4d699a7822174eaa2a84a56fd1d",
+    "stage12_calibration_plan/heldout_eval_labels.jsonl": "7cc2853e08c36af1491a29b60622d42cdc2a377d803f07b962dd5a81942761d3",
+    "stages/12_postexecution_audit.json": "595c853d71a3dee79bfa11d40497cf9c0017ab5a07b54f5625bc6a6f3e8a31bb"
+  },
+  "inference": "No new API, model forward, image opening, training or refit",
+  "data_roles": {
+    "calibration": "stage12 calibration120, same fixed logistic fit data; reuse for thresholds is in-sample development",
+    "heldout": "stage12 heldout120 has already been evaluated in prior work; once-only fixed round2 policy evaluation, not new blind holdout",
+    "forbidden": "No stage13 inputs, probabilities, labels, GT masks or legacy confirmation reads; no new routing evaluation on confirmation"
+  },
+  "probability": "Only fixed stage12 logit-logistic mapping, clip1e-6; no refit",
+  "actions": {
+    "auto_normal": "p_cal < lower",
+    "auto_anomaly": "p_cal >= upper",
+    "human_review": "lower <= p_cal < upper",
+    "tie": "At equal lower and upper there is no human band, p>=threshold anomalous"
+  },
+  "threshold_grid": {
+    "values": "np.linspace(0,1,101)",
+    "pairs": "all lower<=upper,5151 pairs; includes0/1",
+    "selection": "Calibration120 only"
+  },
+  "scenarios": {
+    "fn_to_fp": [
+      1,
+      5,
+      10,
+      20
+    ],
+    "human_penalty_fp_units": [
+      0.1,
+      0.25,
+      0.5
+    ],
+    "primary": {
+      "fn_to_fp": 10,
+      "human_penalty_fp_units": 0.25
+    },
+    "interpretation": "Transparent illustrative assumptions; not measured business costs, not measured human performance"
+  },
+  "selection": {
+    "objective": "[r * anomaly_autonormal + normal_autoanomaly + h * human_count] / N",
+    "human_model": "Deferral incurs penalty h only in this surrogate. Eventual human errors are not measured; objective omits them, so is not real end-to-end loss",
+    "tie_break": [
+      "objective rounded14decimals",
+      "smaller anomaly_autonormal count",
+      "larger human_count",
+      "smaller normal_autoanomaly count",
+      "smaller lower",
+      "larger upper"
+    ],
+    "primary_reason": "Illustrative predeclared r10 h.25; no claim this is deployment-optimal"
+  },
+  "report_metrics": {
+    "normal_fpr": "normal auto_anomaly / all normal",
+    "unsafe_release": "anomaly auto_normal / all anomaly",
+    "auto_normal_contamination": "anomaly auto_normal / all auto_normal; None if no release",
+    "automatic_coverage": "(auto_normal+auto_anomaly)/allN",
+    "human_rate": "human/allN",
+    "wilson": "Two-sided95, z1.959963984540054, every numerator and denominator explicit"
+  },
+  "baselines": [
+    "raw probability threshold.5",
+    "calibrated probability threshold.5",
+    "all human review"
+  ],
+  "uncertainty": {
+    "bootstrap_replicates": 2000,
+    "seed": 42,
+    "strata": "category x image_label",
+    "paired": "fixed policy surrogate cost vs calibrated binary.5",
+    "limits": "conditions on fitted calibrator/selected thresholds/responses; excludes fitting and threshold-selection uncertainty; Wilson has no deployment guarantee"
+  },
+  "exploratory_curve": "Save full5151 heldout threshold grid and single-threshold curves clearly exploratory; no heldout optimum, new threshold choice or rule switch",
+  "scientific_limits": [
+    "Balanced50percent anomaly prevalence differs from production",
+    "Each role has5normal+5anomaly per category; small risk denominators",
+    "Auto-normal contamination is prevalence dependent",
+    "Native validation remainder may have historical exposure; already seen heldout is development analysis",
+    "No guarantee from empirical or Wilson risk estimates",
+    "Existing final confirmation is not reused to select or evaluate new policies"
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "schema": "jev-support-qwen-figure-provenance-v1",
+  "timestamp_utc": "2026-11-10T18:37:52.261690+00:00",
+  "hostname": "autodl-container-132444827f-9c594038",
+  "script_sha256": "b3d80a468c70fbf5e2f1832dedd18174a53d69f2fbd68a8c3ee0de35ea960c10",
+  "inputs_sha256": {
+    "stage08_rescue/metrics.json": "0d12d2e387bced5eb2de93b362cace3b2eed9e627bc680bef9b23ec664874a00",
+    "stage08_rescue/completion_certificate.json": "c9ec5d068d6533f4165e52ff61b8cfd24d605b21e2ab6d19c47ea408977a1eae",
+    "stages/08_postexecution_audit.json": "33481864faea246dfa2779c97c5087afa579c3d0204ee1920afc934762eaabf2",
+    "stages/07_calibration_results.json": "a5bb87f0f6863143ca44b8b60a3c030d37d9bb710a8af9f6308481f0719f9e8b",
+    "stages/05_evaluation.json": "fe2702586f60d575b319790c7ec37b737bc189d864d6f6238b98f34588992a92",
+    "source_qwen/base_scores.jsonl": "dc109510af9e58701257ef943e05cee4b100f46df80a14620b36fdfb64f96499",
+    "source_qwen/decision_decision_scores.jsonl": "d19c70935d3369d400a921d5a9281c6382566c327667b9b3f6de0bb3a7b4681c"
+  },
+  "outputs_sha256": {
+    "support_qwen_comparison.png": "8ed2d05f9cefb81b4d21ed7ee9040ba272cd355d7b7e11acaf4008941917dd36",
+    "support_qwen_comparison.svg": "807d620f6e40ac2604810b19d93dd263c6463a314e4da859b03a5c7a4c7f6722"
+  },
+  "pooled_auroc": {
+    "Jev 0": 0.8345833333333333,
+    "Jev 1\nseed43": 0.8920833333333333,
+    "Jev 1\nseed44": 0.8913888888888888,
+    "Jev 4\nseed43": 0.9133333333333333,
+    "Jev 4\nseed44": 0.91125,
+    "Qwen\nbase": 0.8238888888888889,
+    "Qwen\nDD LoRA": 0.9455555555555555
+  },
+  "category_macro_auroc": {
+    "Jev 0": 0.8900000000000001,
+    "Jev 1\nseed43": 0.92,
+    "Jev 1\nseed44": 0.9283333333333333,
+    "Jev 4\nseed43": 0.9600000000000001,
+    "Jev 4\nseed44": 0.9516666666666668,
+    "Qwen\nbase": 0.8483333333333333,
+    "Qwen\nDD LoRA": 0.9233333333333333
+  },
+  "native_qwen_rules": {
+    "qwen_base": {
+      "strict_tp": 18,
+      "strict_fp": 0,
+      "ties": 1,
+      "n": 120,
+      "prompt_tokens": {
+        "min": 506,
+        "max": 535,
+        "mean": 516.0
+      },
+      "candidate_input_tokens_example": {
+        "true": 524,
+        "false": 524
+      }
+    },
+    "qwen_decision_decision": {
+      "strict_tp": 49,
+      "strict_fp": 7,
+      "ties": 3,
+      "n": 120,
+      "prompt_tokens": {
+        "min": 506,
+        "max": 535,
+        "mean": 516.0
+      },
+      "candidate_input_tokens_example": {
+        "true": 524,
+        "false": 524
+      }
+    }
+  },
+  "qwen_internal_budget_caveat": "Qwen maxpixels524288 and conditional sequence lengths vs Jev448 perasset/provider tokens are not equivalent; differing internal patch/token encoders",
+  "confirmation_opened": false,
+  "new_api_requests": 0,
+  "rgb_opened": false,
+  "gt_masks_opened": false
+}

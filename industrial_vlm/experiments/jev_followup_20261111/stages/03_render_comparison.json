@@ -1,0 +1,8 @@
+{
+  "verified_old_pngs": 120,
+  "pixel_identical_queries": 0,
+  "max_pixel_channel_abs_difference": 12,
+  "old_pillow": "10.3.0",
+  "new_pillow": "12.3.0",
+  "scope": "120 approved query only; PNG bytes differ"
+}

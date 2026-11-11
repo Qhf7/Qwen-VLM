@@ -1,0 +1,48 @@
+{
+  "schema": "jev-followup-figure-provenance-v1",
+  "timestamp_utc": "2026-11-10T18:07:56.629028+00:00",
+  "hostname": "autodl-container-132444827f-9c594038",
+  "source_sha256": {
+    "stage05": "fe2702586f60d575b319790c7ec37b737bc189d864d6f6238b98f34588992a92",
+    "stage06": "51e0f1791d01c163859377197f56f27b1e7819657e600c5138da122ff323f0fd",
+    "stage07": "a5bb87f0f6863143ca44b8b60a3c030d37d9bb710a8af9f6308481f0719f9e8b"
+  },
+  "script_sha256": "065826ba5849796257d3459a2daebf62119a1b39a61dd2ce26ac362bd6f25527",
+  "versions": {
+    "matplotlib": "3.10.9",
+    "numpy": "2.2.6",
+    "Pillow": "12.3.0"
+  },
+  "font": "DejaVu Sans",
+  "font_path": "/root/autodl-tmp/conda-envs/qwen3vl2/lib/python3.10/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf",
+  "font_sha256": "3fdf69cabf06049ea70a00b5919340e2ce1e6d02b0cc3c4b44fb6801bd1e0d22",
+  "font_glyph_check": true,
+  "figure_files": {
+    "followup_roi_routing_calibration.png": {
+      "sha256": "c414d6567e6b2761ab8fc2a58e221635bb1f03e41ef5d6b18077852db268702e",
+      "bytes": 748412
+    },
+    "followup_roi_routing_calibration.svg": {
+      "sha256": "70625897350d965dc331abe4a666a515ccdfa6527c335c22b60751a4a0094fe3",
+      "bytes": 39098
+    }
+  },
+  "png_dimensions": [
+    5400,
+    2460
+  ],
+  "complete_denominators": {
+    "anomaly": 60,
+    "normal": 60
+  },
+  "ROI_IoU_unit": "0..1 fraction, not percent; separate axis from recall/FPR",
+  "routing_y_axis_truncated": true,
+  "routing_points_jittered": false,
+  "displayed_confidence_intervals": false,
+  "caption_reports_roi_paired_interval_crosses_zero": true,
+  "confirmation_opened": false,
+  "new_api_calls": 0,
+  "model_calls": 0,
+  "gt_masks_opened": 0,
+  "existing_frozen_scientific_artifacts_modified": false
+}

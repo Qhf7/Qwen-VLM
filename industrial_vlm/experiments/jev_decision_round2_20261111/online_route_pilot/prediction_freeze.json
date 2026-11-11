@@ -1,0 +1,17 @@
+{
+  "schema": "jev-live-noul-crop-gate-pilot-v1",
+  "parent_contract_sha256": "16941598c4589bdc4eedbbe2990d1e75bee0dde3db41be889bc3e23fac2473c1",
+  "routing_sha256": "0b25f7bd7a9922626ede7567da641216a0d0faa5f22c830ddf34dc2c6924665a",
+  "protocol_sha256": "32df1c663a2d0bae1427211e66830e721c511fd9b0c3529f41ba6c25e8fe0a52",
+  "gate_request_hashes_sha256": "f5eaa4387ad10e2782ba7cb214546c497e823d660d53299d462cd10f56af0a30",
+  "final_request_hashes_sha256": "bea26ed618245fe046c40e5541945ee2df75639176aea00d4f1dce563459cbc2",
+  "gate_contract_sha256": "8611845796a064747e14b36c0fd7a8e8bf8bbffdfe3fc5c543b2e8214a9d77c7",
+  "gate_predictions_sha256": "f4cd12a3ef13e0043e19a1d42a8a8899c1f998e6aa317382fb82d8dfc0506592",
+  "gate_attempts_sha256": "7d4e5cfdc84e2a7a8e29c7102ad0b1d56da13f85f0b1c740ec3943203566a277",
+  "final_contract_sha256": "73af57de0b68cac64c3d0e2d592d6655fad5837765406c3c9b51641a38c91c9c",
+  "final_predictions_sha256": "5566f79abb33cdf153a4fcd9ebbb7fd88dbb7f73d42987085d23a652d231f8e1",
+  "final_attempts_sha256": "a7b8bd4f2c55fcbc5eafcf4a8f6f889bf2ef1c5418629167fa057b220e178594",
+  "runner_sha256": "52b53e8d95351ab28ea4660302d2426733f9c44b732179303390542d5d624ca7",
+  "predictions_before_pilot_GT": true,
+  "stage13_data_read": false
+}

@@ -1,0 +1,69 @@
+{
+  "timestamp_utc": "2026-11-10T14:07:19.253619+00:00",
+  "endpoint": "https://api.modelgo.ai/v1/systemone",
+  "request_model": "jev-1.14.0",
+  "no_benchmark_predictions": true,
+  "model_version_note": "ModelGo documents model as logical request-name echo; not independent upstream version proof.",
+  "records": [
+    {
+      "shots": 1,
+      "purpose": "synthetic_image_transport_smoke_only",
+      "query_color": "red",
+      "request_model": "jev-1.14.0",
+      "image_size": [
+        448,
+        448
+      ],
+      "assets_count": 2,
+      "request_sha256": "5a60842e69f0676cb45e4a69ac21577b8754c1682f93d84d30a215884c31fa42",
+      "http_status": 200,
+      "request_id": "gw_5544dfa0-b0d4-4d08-b268-9f863a64ea5b",
+      "response": {
+        "model": "jev-1.14.0",
+        "answers": {
+          "anomaly": {
+            "type": "noul",
+            "noul": 1
+          }
+        },
+        "usage": {
+          "input_tokens": 1407,
+          "output_tokens": 21
+        }
+      },
+      "valid_noul": true,
+      "model_name_matches": true,
+      "seconds": 2.978595791850239
+    },
+    {
+      "shots": 4,
+      "purpose": "synthetic_image_transport_smoke_only",
+      "query_color": "red",
+      "request_model": "jev-1.14.0",
+      "image_size": [
+        448,
+        448
+      ],
+      "assets_count": 5,
+      "request_sha256": "44cf9848160ce67e6061d34b36b4fb47ce9fcfbc22e8da850942848ae8d866cc",
+      "http_status": 200,
+      "request_id": "gw_8a1e384f-719d-44ec-933b-c099acdf5629",
+      "response": {
+        "model": "jev-1.14.0",
+        "answers": {
+          "anomaly": {
+            "type": "noul",
+            "noul": 1
+          }
+        },
+        "usage": {
+          "input_tokens": 3051,
+          "output_tokens": 21
+        }
+      },
+      "valid_noul": true,
+      "model_name_matches": true,
+      "seconds": 2.8026074999943376
+    }
+  ]
+}

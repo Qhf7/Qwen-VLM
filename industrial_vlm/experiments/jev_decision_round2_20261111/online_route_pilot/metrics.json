@@ -1,0 +1,731 @@
+{
+  "schema": "jev-live-noul-crop-gate-pilot-v1",
+  "status": "complete",
+  "timestamp_utc": "2026-11-10T20:14:10.334483+00:00",
+  "hostname": "autodl-container-132444827f-9c594038",
+  "prediction_freeze": {
+    "schema": "jev-live-noul-crop-gate-pilot-v1",
+    "parent_contract_sha256": "16941598c4589bdc4eedbbe2990d1e75bee0dde3db41be889bc3e23fac2473c1",
+    "routing_sha256": "0b25f7bd7a9922626ede7567da641216a0d0faa5f22c830ddf34dc2c6924665a",
+    "protocol_sha256": "32df1c663a2d0bae1427211e66830e721c511fd9b0c3529f41ba6c25e8fe0a52",
+    "gate_request_hashes_sha256": "f5eaa4387ad10e2782ba7cb214546c497e823d660d53299d462cd10f56af0a30",
+    "final_request_hashes_sha256": "bea26ed618245fe046c40e5541945ee2df75639176aea00d4f1dce563459cbc2",
+    "gate_contract_sha256": "8611845796a064747e14b36c0fd7a8e8bf8bbffdfe3fc5c543b2e8214a9d77c7",
+    "gate_predictions_sha256": "f4cd12a3ef13e0043e19a1d42a8a8899c1f998e6aa317382fb82d8dfc0506592",
+    "gate_attempts_sha256": "7d4e5cfdc84e2a7a8e29c7102ad0b1d56da13f85f0b1c740ec3943203566a277",
+    "final_contract_sha256": "73af57de0b68cac64c3d0e2d592d6655fad5837765406c3c9b51641a38c91c9c",
+    "final_predictions_sha256": "5566f79abb33cdf153a4fcd9ebbb7fd88dbb7f73d42987085d23a652d231f8e1",
+    "final_attempts_sha256": "a7b8bd4f2c55fcbc5eafcf4a8f6f889bf2ef1c5418629167fa057b220e178594",
+    "runner_sha256": "52b53e8d95351ab28ea4660302d2426733f9c44b732179303390542d5d624ca7",
+    "predictions_before_pilot_GT": true,
+    "stage13_data_read": false
+  },
+  "n": 24,
+  "normal": 12,
+  "anomalous": 12,
+  "K": 8,
+  "eligible": 13,
+  "unionROI": 13,
+  "results": {
+    "learned_gate": {
+      "selected_source_ids": [
+        "visa_1be7809506f2372505d7506c47502f75ec9ba094e306c9d394a067b368c6a8e3",
+        "visa_3209433cd5be38bef4b85e73d4b0a8ad9f0af9b8f89d1d13b91d3991f5cdc0a1",
+        "visa_369c056fe93c793b0341285d45c0b2d73a488ae3c8c0f8caa395e95127bea109",
+        "visa_06923fecac473165ea7cc74dd763f38d88aec13b0f35c479f8dbc24fe63fd4b1",
+        "visa_3538f10a1d93329b6b3512454f12d304bad710ba16d6f873decf595de8daec7a",
+        "visa_80826359e7704e236090453a9c4eeda4631b40ce4c891ed1a492a83f28af2c2c",
+        "visa_b81a85941ba79e2767f90bf712c6b6a09871dc960a78b1e7030aaae82d6c4320",
+        "visa_6b6c78513751314419209dffa03c21d693c0791f4e9ec92158addb73c1eca987"
+      ],
+      "classification": {
+        "n": 24,
+        "normal": 12,
+        "anomalous": 12,
+        "auroc": 0.7708333333333334,
+        "ap": 0.8162457912457913,
+        "macro_f1": 0.7078260869565217,
+        "recall": 0.6666666666666666,
+        "fpr": 0.25
+      },
+      "candidate_retention": {
+        "n": 24,
+        "n_anomaly": 12,
+        "n_normal": 12,
+        "TP": 8,
+        "FN": 4,
+        "FP": 3,
+        "TN": 9,
+        "anomaly_bbox_iou_mean_all": 0.07520359835461289,
+        "anomaly_iou_at_05_all": 0.08333333333333333,
+        "anomaly_retained_recall": 0.6666666666666666,
+        "normal_positive_box_rate": 0.25,
+        "anomaly_retained_recall_wilson95": [
+          0.39062208887279953,
+          0.8618799089087867
+        ],
+        "normal_positive_box_rate_wilson95": [
+          0.08894166839405471,
+          0.5323053349335657
+        ],
+        "binomial_interval_note": "Descriptive Wilson95 with observed group denominator; fixed development set, not deployment guarantee",
+        "anomaly_retained_iou_mean": 0.11280539753191934
+      },
+      "budgets": {
+        "actual_shared_collection": "See operations; all4policies share same newly collected potential outcomes",
+        "selected_final_responses": {
+          "successful_calls": 24,
+          "successful_seconds_sum": 136.39332273602486,
+          "successful_seconds_note": "Sum of individual request durations; not concurrent wallclock or independent policy deployment timing",
+          "usage": {
+            "input_tokens": {
+              "observed_sum": 40326.0,
+              "observed_calls": 24,
+              "missing_calls": 0
+            },
+            "output_tokens": {
+              "observed_sum": 504.0,
+              "observed_calls": 24,
+              "missing_calls": 0
+            }
+          }
+        },
+        "pilot_single_policy_evidence_calls": 56,
+        "theoretical_minimal_live_policy_calls": 48,
+        "theoretical_note": "Gate24+onefinal24 versus controlonefinal24; uncertainty control additionally depends on old model score prepass not charged as newcall",
+        "extra_duplicate_control_calls_for_selected_crop_sources": 8,
+        "duplicate_control_note": "K selectedROI sources also have duplicatecontrol; other24-K duplicatecalls are chosenfinal outcomes",
+        "gate24_extra_cost": {
+          "successful_calls": 24,
+          "successful_seconds_sum": 108.57130736857653,
+          "successful_seconds_note": "Sum of individual request durations; not concurrent wallclock or independent policy deployment timing",
+          "usage": {
+            "input_tokens": {
+              "observed_sum": 26256.0,
+              "observed_calls": 24,
+              "missing_calls": 0
+            },
+            "output_tokens": {
+              "observed_sum": 504.0,
+              "observed_calls": 24,
+              "missing_calls": 0
+            }
+          }
+        },
+        "selected_paired_newROI": {
+          "successful_calls": 8,
+          "successful_seconds_sum": 37.21923552453518,
+          "successful_seconds_note": "Sum of individual request durations; not concurrent wallclock or independent policy deployment timing",
+          "usage": {
+            "input_tokens": {
+              "observed_sum": 13629.0,
+              "observed_calls": 8,
+              "missing_calls": 0
+            },
+            "output_tokens": {
+              "observed_sum": 168.0,
+              "observed_calls": 8,
+              "missing_calls": 0
+            }
+          }
+        },
+        "selected_paired_newduplicate": {
+          "successful_calls": 8,
+          "successful_seconds_sum": 41.027472138404846,
+          "successful_seconds_note": "Sum of individual request durations; not concurrent wallclock or independent policy deployment timing",
+          "usage": {
+            "input_tokens": {
+              "observed_sum": 13633.0,
+              "observed_calls": 8,
+              "missing_calls": 0
+            },
+            "output_tokens": {
+              "observed_sum": 168.0,
+              "observed_calls": 8,
+              "missing_calls": 0
+            }
+          }
+        }
+      },
+      "interpretation": "Exploratory fixed24; shared potential outcomes, not four separately timed online deployments"
+    },
+    "matched_random": {
+      "selected_source_ids": [
+        "visa_07bfdf2da58b61d1de26368da4b5aa2c4587de4c3ea220389647057745ba6c4a",
+        "visa_06923fecac473165ea7cc74dd763f38d88aec13b0f35c479f8dbc24fe63fd4b1",
+        "visa_80826359e7704e236090453a9c4eeda4631b40ce4c891ed1a492a83f28af2c2c",
+        "visa_165dc8aa9b514b8644d5e6aee40b2e6b9a4252619a49bff78e2f4713b19c9119",
+        "visa_3209433cd5be38bef4b85e73d4b0a8ad9f0af9b8f89d1d13b91d3991f5cdc0a1",
+        "visa_6b6c78513751314419209dffa03c21d693c0791f4e9ec92158addb73c1eca987",
+        "visa_1be7809506f2372505d7506c47502f75ec9ba094e306c9d394a067b368c6a8e3",
+        "visa_3538f10a1d93329b6b3512454f12d304bad710ba16d6f873decf595de8daec7a"
+      ],
+      "classification": {
+        "n": 24,
+        "normal": 12,
+        "anomalous": 12,
+        "auroc": 0.7777777777777779,
+        "ap": 0.8202140452140453,
+        "macro_f1": 0.7078260869565217,
+        "recall": 0.6666666666666666,
+        "fpr": 0.25
+      },
+      "candidate_retention": {
+        "n": 24,
+        "n_anomaly": 12,
+        "n_normal": 12,
+        "TP": 8,
+        "FN": 4,
+        "FP": 3,
+        "TN": 9,
+        "anomaly_bbox_iou_mean_all": 0.07520359835461289,
+        "anomaly_iou_at_05_all": 0.08333333333333333,
+        "anomaly_retained_recall": 0.6666666666666666,
+        "normal_positive_box_rate": 0.25,
+        "anomaly_retained_recall_wilson95": [
+          0.39062208887279953,
+          0.8618799089087867
+        ],
+        "normal_positive_box_rate_wilson95": [
+          0.08894166839405471,
+          0.5323053349335657
+        ],
+        "binomial_interval_note": "Descriptive Wilson95 with observed group denominator; fixed development set, not deployment guarantee",
+        "anomaly_retained_iou_mean": 0.11280539753191934
+      },
+      "budgets": {
+        "actual_shared_collection": "See operations; all4policies share same newly collected potential outcomes",
+        "selected_final_responses": {
+          "successful_calls": 24,
+          "successful_seconds_sum": 136.20624056458473,
+          "successful_seconds_note": "Sum of individual request durations; not concurrent wallclock or independent policy deployment timing",
+          "usage": {
+            "input_tokens": {
+              "observed_sum": 40321.0,
+              "observed_calls": 24,
+              "missing_calls": 0
+            },
+            "output_tokens": {
+              "observed_sum": 504.0,
+              "observed_calls": 24,
+              "missing_calls": 0
+            }
+          }
+        },
+        "pilot_single_policy_evidence_calls": 32,
+        "theoretical_minimal_live_policy_calls": 24,
+        "theoretical_note": "Gate24+onefinal24 versus controlonefinal24; uncertainty control additionally depends on old model score prepass not charged as newcall",
+        "extra_duplicate_control_calls_for_selected_crop_sources": 8,
+        "duplicate_control_note": "K selectedROI sources also have duplicatecontrol; other24-K duplicatecalls are chosenfinal outcomes",
+        "gate24_extra_cost": null,
+        "selected_paired_newROI": {
+          "successful_calls": 8,
+          "successful_seconds_sum": 37.6720869243145,
+          "successful_seconds_note": "Sum of individual request durations; not concurrent wallclock or independent policy deployment timing",
+          "usage": {
+            "input_tokens": {
+              "observed_sum": 13619.0,
+              "observed_calls": 8,
+              "missing_calls": 0
+            },
+            "output_tokens": {
+              "observed_sum": 168.0,
+              "observed_calls": 8,
+              "missing_calls": 0
+            }
+          }
+        },
+        "selected_paired_newduplicate": {
+          "successful_calls": 8,
+          "successful_seconds_sum": 41.66740570962429,
+          "successful_seconds_note": "Sum of individual request durations; not concurrent wallclock or independent policy deployment timing",
+          "usage": {
+            "input_tokens": {
+              "observed_sum": 13628.0,
+              "observed_calls": 8,
+              "missing_calls": 0
+            },
+            "output_tokens": {
+              "observed_sum": 168.0,
+              "observed_calls": 8,
+              "missing_calls": 0
+            }
+          }
+        }
+      },
+      "interpretation": "Exploratory fixed24; shared potential outcomes, not four separately timed online deployments"
+    },
+    "historical_uncertainty": {
+      "selected_source_ids": [
+        "visa_369c056fe93c793b0341285d45c0b2d73a488ae3c8c0f8caa395e95127bea109",
+        "visa_1be7809506f2372505d7506c47502f75ec9ba094e306c9d394a067b368c6a8e3",
+        "visa_3538f10a1d93329b6b3512454f12d304bad710ba16d6f873decf595de8daec7a",
+        "visa_19c53aa37353abee35a64fd37d8225095d93e6c1e973a2d0b19fa7631cea100e",
+        "visa_f3a026383e4573baca1494d3687b7316222f06e8fef2014cefc22ad94f704d79",
+        "visa_80826359e7704e236090453a9c4eeda4631b40ce4c891ed1a492a83f28af2c2c",
+        "visa_165dc8aa9b514b8644d5e6aee40b2e6b9a4252619a49bff78e2f4713b19c9119",
+        "visa_3209433cd5be38bef4b85e73d4b0a8ad9f0af9b8f89d1d13b91d3991f5cdc0a1"
+      ],
+      "classification": {
+        "n": 24,
+        "normal": 12,
+        "anomalous": 12,
+        "auroc": 0.78125,
+        "ap": 0.8185077592972331,
+        "macro_f1": 0.7078260869565217,
+        "recall": 0.6666666666666666,
+        "fpr": 0.25
+      },
+      "candidate_retention": {
+        "n": 24,
+        "n_anomaly": 12,
+        "n_normal": 12,
+        "TP": 8,
+        "FN": 4,
+        "FP": 3,
+        "TN": 9,
+        "anomaly_bbox_iou_mean_all": 0.07520359835461289,
+        "anomaly_iou_at_05_all": 0.08333333333333333,
+        "anomaly_retained_recall": 0.6666666666666666,
+        "normal_positive_box_rate": 0.25,
+        "anomaly_retained_recall_wilson95": [
+          0.39062208887279953,
+          0.8618799089087867
+        ],
+        "normal_positive_box_rate_wilson95": [
+          0.08894166839405471,
+          0.5323053349335657
+        ],
+        "binomial_interval_note": "Descriptive Wilson95 with observed group denominator; fixed development set, not deployment guarantee",
+        "anomaly_retained_iou_mean": 0.11280539753191934
+      },
+      "budgets": {
+        "actual_shared_collection": "See operations; all4policies share same newly collected potential outcomes",
+        "selected_final_responses": {
+          "successful_calls": 24,
+          "successful_seconds_sum": 134.50185738503933,
+          "successful_seconds_note": "Sum of individual request durations; not concurrent wallclock or independent policy deployment timing",
+          "usage": {
+            "input_tokens": {
+              "observed_sum": 40332.0,
+              "observed_calls": 24,
+              "missing_calls": 0
+            },
+            "output_tokens": {
+              "observed_sum": 504.0,
+              "observed_calls": 24,
+              "missing_calls": 0
+            }
+          }
+        },
+        "pilot_single_policy_evidence_calls": 32,
+        "theoretical_minimal_live_policy_calls": 24,
+        "theoretical_note": "Gate24+onefinal24 versus controlonefinal24; uncertainty control additionally depends on old model score prepass not charged as newcall",
+        "extra_duplicate_control_calls_for_selected_crop_sources": 8,
+        "duplicate_control_note": "K selectedROI sources also have duplicatecontrol; other24-K duplicatecalls are chosenfinal outcomes",
+        "gate24_extra_cost": null,
+        "selected_paired_newROI": {
+          "successful_calls": 8,
+          "successful_seconds_sum": 48.30995412915945,
+          "successful_seconds_note": "Sum of individual request durations; not concurrent wallclock or independent policy deployment timing",
+          "usage": {
+            "input_tokens": {
+              "observed_sum": 13588.0,
+              "observed_calls": 8,
+              "missing_calls": 0
+            },
+            "output_tokens": {
+              "observed_sum": 168.0,
+              "observed_calls": 8,
+              "missing_calls": 0
+            }
+          }
+        },
+        "selected_paired_newduplicate": {
+          "successful_calls": 8,
+          "successful_seconds_sum": 54.009656094014645,
+          "successful_seconds_note": "Sum of individual request durations; not concurrent wallclock or independent policy deployment timing",
+          "usage": {
+            "input_tokens": {
+              "observed_sum": 13586.0,
+              "observed_calls": 8,
+              "missing_calls": 0
+            },
+            "output_tokens": {
+              "observed_sum": 168.0,
+              "observed_calls": 8,
+              "missing_calls": 0
+            }
+          }
+        }
+      },
+      "interpretation": "Exploratory fixed24; shared potential outcomes, not four separately timed online deployments"
+    },
+    "geometry_small": {
+      "selected_source_ids": [
+        "visa_80826359e7704e236090453a9c4eeda4631b40ce4c891ed1a492a83f28af2c2c",
+        "visa_6b6c78513751314419209dffa03c21d693c0791f4e9ec92158addb73c1eca987",
+        "visa_892614dd5d2ce2b080136ef54fc175e225931c10adadfe782ff65013849e2bcc",
+        "visa_3538f10a1d93329b6b3512454f12d304bad710ba16d6f873decf595de8daec7a",
+        "visa_369c056fe93c793b0341285d45c0b2d73a488ae3c8c0f8caa395e95127bea109",
+        "visa_07bfdf2da58b61d1de26368da4b5aa2c4587de4c3ea220389647057745ba6c4a",
+        "visa_b81a85941ba79e2767f90bf712c6b6a09871dc960a78b1e7030aaae82d6c4320",
+        "visa_165dc8aa9b514b8644d5e6aee40b2e6b9a4252619a49bff78e2f4713b19c9119"
+      ],
+      "classification": {
+        "n": 24,
+        "normal": 12,
+        "anomalous": 12,
+        "auroc": 0.8194444444444444,
+        "ap": 0.8458273208273209,
+        "macro_f1": 0.7037037037037037,
+        "recall": 0.5833333333333334,
+        "fpr": 0.16666666666666666
+      },
+      "candidate_retention": {
+        "n": 24,
+        "n_anomaly": 12,
+        "n_normal": 12,
+        "TP": 7,
+        "FN": 5,
+        "FP": 2,
+        "TN": 10,
+        "anomaly_bbox_iou_mean_all": 0.07380985477588704,
+        "anomaly_iou_at_05_all": 0.08333333333333333,
+        "anomaly_retained_recall": 0.5833333333333334,
+        "normal_positive_box_rate": 0.16666666666666666,
+        "anomaly_retained_recall_wilson95": [
+          0.31951131254954973,
+          0.8067396863412435
+        ],
+        "normal_positive_box_rate_wilson95": [
+          0.04696514218385378,
+          0.4480308622529734
+        ],
+        "binomial_interval_note": "Descriptive Wilson95 with observed group denominator; fixed development set, not deployment guarantee",
+        "anomaly_retained_iou_mean": 0.12653117961580634
+      },
+      "budgets": {
+        "actual_shared_collection": "See operations; all4policies share same newly collected potential outcomes",
+        "selected_final_responses": {
+          "successful_calls": 24,
+          "successful_seconds_sum": 137.02371744811535,
+          "successful_seconds_note": "Sum of individual request durations; not concurrent wallclock or independent policy deployment timing",
+          "usage": {
+            "input_tokens": {
+              "observed_sum": 40325.0,
+              "observed_calls": 24,
+              "missing_calls": 0
+            },
+            "output_tokens": {
+              "observed_sum": 504.0,
+              "observed_calls": 24,
+              "missing_calls": 0
+            }
+          }
+        },
+        "pilot_single_policy_evidence_calls": 32,
+        "theoretical_minimal_live_policy_calls": 24,
+        "theoretical_note": "Gate24+onefinal24 versus controlonefinal24; uncertainty control additionally depends on old model score prepass not charged as newcall",
+        "extra_duplicate_control_calls_for_selected_crop_sources": 8,
+        "duplicate_control_note": "K selectedROI sources also have duplicatecontrol; other24-K duplicatecalls are chosenfinal outcomes",
+        "gate24_extra_cost": null,
+        "selected_paired_newROI": {
+          "successful_calls": 8,
+          "successful_seconds_sum": 38.022038869559765,
+          "successful_seconds_note": "Sum of individual request durations; not concurrent wallclock or independent policy deployment timing",
+          "usage": {
+            "input_tokens": {
+              "observed_sum": 13807.0,
+              "observed_calls": 8,
+              "missing_calls": 0
+            },
+            "output_tokens": {
+              "observed_sum": 168.0,
+              "observed_calls": 8,
+              "missing_calls": 0
+            }
+          }
+        },
+        "selected_paired_newduplicate": {
+          "successful_calls": 8,
+          "successful_seconds_sum": 41.19988077133894,
+          "successful_seconds_note": "Sum of individual request durations; not concurrent wallclock or independent policy deployment timing",
+          "usage": {
+            "input_tokens": {
+              "observed_sum": 13812.0,
+              "observed_calls": 8,
+              "missing_calls": 0
+            },
+            "output_tokens": {
+              "observed_sum": 168.0,
+              "observed_calls": 8,
+              "missing_calls": 0
+            }
+          }
+        }
+      },
+      "interpretation": "Exploratory fixed24; shared potential outcomes, not four separately timed online deployments"
+    },
+    "new_duplicate": {
+      "classification": {
+        "n": 24,
+        "normal": 12,
+        "anomalous": 12,
+        "auroc": 0.8298611111111112,
+        "ap": 0.8572631072631073,
+        "macro_f1": 0.7037037037037037,
+        "recall": 0.5833333333333334,
+        "fpr": 0.16666666666666666
+      },
+      "candidate_retention": {
+        "n": 24,
+        "n_anomaly": 12,
+        "n_normal": 12,
+        "TP": 7,
+        "FN": 5,
+        "FP": 2,
+        "TN": 10,
+        "anomaly_bbox_iou_mean_all": 0.07380985477588704,
+        "anomaly_iou_at_05_all": 0.08333333333333333,
+        "anomaly_retained_recall": 0.5833333333333334,
+        "normal_positive_box_rate": 0.16666666666666666,
+        "anomaly_retained_recall_wilson95": [
+          0.31951131254954973,
+          0.8067396863412435
+        ],
+        "normal_positive_box_rate_wilson95": [
+          0.04696514218385378,
+          0.4480308622529734
+        ],
+        "binomial_interval_note": "Descriptive Wilson95 with observed group denominator; fixed development set, not deployment guarantee",
+        "anomaly_retained_iou_mean": 0.12653117961580634
+      },
+      "budgets": {
+        "successful_calls": 24,
+        "successful_seconds_sum": 140.20155934989452,
+        "successful_seconds_note": "Sum of individual request durations; not concurrent wallclock or independent policy deployment timing",
+        "usage": {
+          "input_tokens": {
+            "observed_sum": 40330.0,
+            "observed_calls": 24,
+            "missing_calls": 0
+          },
+          "output_tokens": {
+            "observed_sum": 504.0,
+            "observed_calls": 24,
+            "missing_calls": 0
+          }
+        }
+      }
+    }
+  },
+  "paired_bootstrap_vs_newduplicate": {
+    "learned_gate": {
+      "auroc": {
+        "delta": -0.05902777777777779,
+        "ci95": [
+          -0.17361111111111116,
+          0.02083333333333337
+        ]
+      },
+      "ap": {
+        "delta": -0.04101731601731595,
+        "ci95": [
+          -0.1344810426106277,
+          0.023302099946836918
+        ]
+      },
+      "macro_f1": {
+        "delta": 0.004122383252817996,
+        "ci95": [
+          -0.11470191937524057,
+          0.12833994708994687
+        ]
+      },
+      "recall": {
+        "delta": 0.08333333333333326,
+        "ci95": [
+          0.0,
+          0.25
+        ]
+      },
+      "fpr": {
+        "delta": 0.08333333333333334,
+        "ci95": [
+          0.0,
+          0.25
+        ]
+      }
+    },
+    "matched_random": {
+      "auroc": {
+        "delta": -0.05208333333333326,
+        "ci95": [
+          -0.15633680555555554,
+          0.02083333333333337
+        ]
+      },
+      "ap": {
+        "delta": -0.037049062049062,
+        "ci95": [
+          -0.12610108809605725,
+          0.02383420075235921
+        ]
+      },
+      "macro_f1": {
+        "delta": 0.004122383252817996,
+        "ci95": [
+          -0.11470191937524057,
+          0.12833994708994687
+        ]
+      },
+      "recall": {
+        "delta": 0.08333333333333326,
+        "ci95": [
+          0.0,
+          0.25
+        ]
+      },
+      "fpr": {
+        "delta": 0.08333333333333334,
+        "ci95": [
+          0.0,
+          0.25
+        ]
+      }
+    },
+    "historical_uncertainty": {
+      "auroc": {
+        "delta": -0.04861111111111116,
+        "ci95": [
+          -0.1597222222222222,
+          0.02083333333333337
+        ]
+      },
+      "ap": {
+        "delta": -0.03875534796587421,
+        "ci95": [
+          -0.13391586558865962,
+          0.02383661766474254
+        ]
+      },
+      "macro_f1": {
+        "delta": 0.004122383252817996,
+        "ci95": [
+          -0.11470191937524057,
+          0.12833994708994687
+        ]
+      },
+      "recall": {
+        "delta": 0.08333333333333326,
+        "ci95": [
+          0.0,
+          0.25
+        ]
+      },
+      "fpr": {
+        "delta": 0.08333333333333334,
+        "ci95": [
+          0.0,
+          0.25
+        ]
+      }
+    },
+    "geometry_small": {
+      "auroc": {
+        "delta": -0.01041666666666674,
+        "ci95": [
+          -0.04861111111111116,
+          0.0
+        ]
+      },
+      "ap": {
+        "delta": -0.011435786435786355,
+        "ci95": [
+          -0.045590277777777584,
+          0.0
+        ]
+      },
+      "macro_f1": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "recall": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "fpr": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  },
+  "bootstrap": {
+    "replicates": 2000,
+    "seed": 42,
+    "strata": "image_label only",
+    "stratum_sizes": {
+      "0": 12,
+      "1": 12
+    },
+    "fixed_routes": true,
+    "limitation": "Fixed24/routes/provider outcomes; excludes policyselection/model/provider variation; categorydescriptiveonly"
+  },
+  "operations": {
+    "accepted": 61,
+    "gate_accepted": 24,
+    "final_accepted": 37,
+    "started": 61,
+    "failed": 0,
+    "unknown": 0,
+    "actual_collection_budget": {
+      "successful_calls": 61,
+      "successful_seconds_sum": 321.7523425668478,
+      "successful_seconds_note": "Sum of individual request durations; not concurrent wallclock or independent policy deployment timing",
+      "usage": {
+        "input_tokens": {
+          "observed_sum": 88719.0,
+          "observed_calls": 61,
+          "missing_calls": 0
+        },
+        "output_tokens": {
+          "observed_sum": 1281.0,
+          "observed_calls": 61,
+          "missing_calls": 0
+        }
+      }
+    },
+    "failed_usage": "unknown",
+    "currency_bill": "unavailable"
+  },
+  "approved_label_sha256": "6b46a731a113eedac1dc73b86fbe2d09a7c1218b5514417fd7dde1cd52d0bdc6",
+  "historical_target_sha256": "fe2702586f60d575b319790c7ec37b737bc189d864d6f6238b98f34588992a92",
+  "approved_targets24_sha256": "5e6d006165cb7b3d1914ebe589f469e453f74356642f24e4f6bad642df69be2f",
+  "approved_labels24_sha256": "70a19bd3171a16df19eb6f1537e8e8f3bdb0f23fe1f1b173e88500bb336a521f",
+  "source_label_container_opened": "Approved historical120 container; evaluatedselected24 only after complete predictionfreeze",
+  "gate_is_live_model_decision": true,
+  "final_outcomes_newly_collected": true,
+  "crops_executed_after_gatefreeze": true,
+  "no_new_mask_reads": true,
+  "no_GT_route_selection": true,
+  "stage13_data_read": false,
+  "limitations": [
+    "Previously viewed24 development subset, not new blind data",
+    "FixedK model ranking, not autonomous unbounded tool loop",
+    "Gatep measures crop usefulness, not anomalyconfidence",
+    "Candidate geometry frozen and teacher exposure persists",
+    "Four strategies share same new potential outcomes; not four independent deployment timings",
+    "Input view and timing may affect provider responses; olduncertaintycontrol has historicaltime",
+    "No learned policy head training, no directBox/Choice/Score requests"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "schema": "jev-online-pilot-figure-provenance-v1",
+  "timestamp_utc": "2026-11-10T20:15:29.570672+00:00",
+  "hostname": "autodl-container-132444827f-9c594038",
+  "script_sha256": "bbaa8a60182a545df0d50e4ae515ffccbd5f6d5ee88aeecc055459d44f2fc169",
+  "inputs_sha256": {
+    "metrics.json": "107a71410a11da68ac2748adde68a6c6ac5d40c004b6a39dae515b0a573160cc",
+    "INDEPENDENT_STATISTICAL_SUPPLEMENT.json": "9e3b04d53b0eda1079340e56d11520829cb784c6e377c7a81db614ead5aac5a9",
+    "independent_postexecution_audit.json": "6a1506e0b2678b0f1097d942239e0c7369294f892083fa65132089cdc8acc35c",
+    "completion_certificate.json": "d7beff9742f2680b77eb4a2594601bcd1716076f3ba4803530b9b63651b9391e"
+  },
+  "outputs_sha256": {
+    "online_route_pilot_analysis.png": "2b51f040bb51e3ca0c540ea31aa03392b7b8381602223fec00cc2726550c76f1",
+    "online_route_pilot_analysis.svg": "b78e042f7361f4cc5959eccede29247beef5fb13caf2022e7739c05e4d6a520a"
+  },
+  "labels_read": false,
+  "images_or_masks_read": false,
+  "stage13_data_read": false,
+  "new_api_calls": 0
+}

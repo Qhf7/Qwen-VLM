@@ -1,0 +1,98 @@
+{
+  "schema": "jev-support-http502-operational-amendment-v1",
+  "status": "operational_amendment_frozen",
+  "original_stage": "stage08_support",
+  "original_contract_sha256": "49a55faf08234a9c7d1c199c87b8f5e5e1de02fa0c0bdbc4ca20b11a9d66d511",
+  "original_contract_canonical_sha256": "b8438cec41443aa2db8fddba2a6107b70ee843d5161fafae362400152137aadf",
+  "original_files": {
+    "contract.json": {
+      "bytes": 319236,
+      "sha256": "49a55faf08234a9c7d1c199c87b8f5e5e1de02fa0c0bdbc4ca20b11a9d66d511"
+    },
+    "protocol.json": {
+      "bytes": 1920,
+      "sha256": "02b955ff334210db928a1615a45351a22eaf8320f4122a2e9f35c0ed7eca3bbb"
+    },
+    "predictions.jsonl": {
+      "bytes": 368427,
+      "sha256": "a7b0244279562b702735ca0bc0336f260af897e3c06ac984c50200233bdd68cc"
+    },
+    "attempts.jsonl": {
+      "bytes": 599331,
+      "sha256": "2ca89465b2dd778c4810a5018b71b4e25aeabf894ba9e616928bdc44c853ea4e"
+    },
+    "status.json": {
+      "bytes": 559,
+      "sha256": "47b7fbadb63df84b328bd2014e80686a1c52b393f218b6ee7d1d34f21f1ed8bd"
+    },
+    "invocations.jsonl": {
+      "bytes": 1111,
+      "sha256": "c8ce5c69c26fa9ff4b09414e81ae2e69d5427551b46ff64ded39c7fce0882ade"
+    }
+  },
+  "original_accepted": 597,
+  "original_started": 696,
+  "original_failures": 99,
+  "eligible_targets": [
+    {
+      "source_id": "visa_59261648b344053c2f75436747f39503fa272f962e72d87a2177457aa08fee8d",
+      "arm": "s43_4",
+      "category": "pcb4",
+      "request_sha256": "940286ec106ab9e9c77d8ad06e95f3dc38db97000dd0ef4b2511d769dbee5c3f",
+      "original_started": 3,
+      "original_failed": 3,
+      "original_terminal_sha256": "521dc12d695e1381f0db83560948ed245e985aaef059bd974c07f220e2c847af"
+    },
+    {
+      "source_id": "visa_696d91b33e290952cd60ef09b886eabb75ab7e0a183b2972a8c681208bda4e50",
+      "arm": "shared0",
+      "category": "chewinggum",
+      "request_sha256": "f49e4d8577db653fc85f3d9af58968ef255a7b275d37db8379051c006292c1c2",
+      "original_started": 3,
+      "original_failed": 3,
+      "original_terminal_sha256": "c413d1b29f45ef5dc759d50c5f68bcc8388209d1b7813607173b58a727874ae5"
+    },
+    {
+      "source_id": "visa_9226ca3ad7ad192e481efbc58a4835b6353f4844435f06aff5980d99401378ed",
+      "arm": "s44_1",
+      "category": "candle",
+      "request_sha256": "8cff6639637ea774dd4173c1f34970a77925c51e4fd2f0f5bee3de2355ef32a7",
+      "original_started": 3,
+      "original_failed": 3,
+      "original_terminal_sha256": "cda490753085c4290d2b433f6924b5d3ccac54c1a5dbd704a08092218f90d1cc"
+    }
+  ],
+  "expected_total": 600,
+  "scientific_change": false,
+  "reason": "At most two extra explicit starts for fully settled threeHTTP502 failures",
+  "max_additional_starts_per_target": 2,
+  "max_total_starts_per_target": 5,
+  "workers": 1,
+  "one_start_per_target_per_invocation": true,
+  "min_seconds_before_second_extra_start": 5,
+  "retry_requires_new_explicit_invocation": true,
+  "retry_only_after_http502": true,
+  "unknown_completion_not_retried": true,
+  "original_logs_exactly_immutable_after_amendment": true,
+  "original_log_prefix_must_remain_identical": true,
+  "request_builder": "Unmodified support.payload(original_query,original_arm,original_contract,original_images,original_canonical_contract_sha)",
+  "request_uuid_assets_png_question_support_order_unchanged": true,
+  "no_gt_or_metrics_read": true,
+  "runner_sha256": "1ea9ec2340faeb089f24f038484f0e24f8b69f699ed9d2abde0c808a9a537e22",
+  "support_source_sha256": "fc6ddc02eb2e2a8c0556f3843a5e73321f9d9bfcf1b5f14314de1aea2077d0bd",
+  "transport_source_sha256": "4f7b5ed1f703b3751f9fd4bb8c86131d684cec0bed3a9011f5108621e7aa9e01",
+  "dependencies": {
+    "python": "3.10.22",
+    "packages": {
+      "Pillow": "12.3.0",
+      "requests": "2.34.2",
+      "urllib3": "2.8.0",
+      "certifi": "2026.10.23",
+      "charset-normalizer": "3.5.2",
+      "idna": "3.20"
+    },
+    "numpy": "2.2.6",
+    "sklearn": "1.7.2"
+  },
+  "confirmation_opened": false
+}

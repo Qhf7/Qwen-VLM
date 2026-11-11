@@ -1,0 +1,34 @@
+{
+  "schema": "jev-candidate-roi-v1",
+  "model": "jev-1.14.0",
+  "query_plan_sha256": "88beb9f2043ecd1487ed10ed8b1f709b8c3b2574325c76fb6db604b12e0822f2",
+  "candidate_rule": "map >= numpy.quantile(map, 0.95, method=linear); union bbox; never tune on GT",
+  "teacher_geometry": "RGB direct resize 224; raw orientation; audited EXIF required to equal 1",
+  "asset_geometry": "448x448; EXIF transpose; RGB; LANCZOS contain; centered white pad; PNG compress_level6",
+  "candidate_crop": "floor xmin/ymin, ceil xmax/ymax in raw original pixels; clamp; no extra margin",
+  "roi_arms": [
+    "original_plus_candidate_crop",
+    "original_plus_duplicate_original"
+  ],
+  "normal_references": 0,
+  "assets_per_request": 2,
+  "keep_threshold": 0.5,
+  "expected_targets": 240,
+  "endpoint": "https://api.modelgo.ai/v1/systemone",
+  "workers": 3,
+  "connect_timeout": 60,
+  "read_timeout": 120,
+  "automatic_http_retries": 0,
+  "max_started_per_target": 3,
+  "explicit_retry_required": true,
+  "evaluation": "All 60 anomaly denominators and all60 normal denominators; also teacher-unseen subset",
+  "exposure_caveat": "Teacher-supervised training overlap is disclosed; all120 not unseen evaluation",
+  "ground_truth_gate": "No GT masks until candidate and formal ROI prediction hashes frozen",
+  "confirmation_opened": false,
+  "versions": {
+    "Pillow": "12.3.0",
+    "numpy": "2.2.6",
+    "torch": "2.3.0+cu121",
+    "requests": "2.34.2"
+  }
+}

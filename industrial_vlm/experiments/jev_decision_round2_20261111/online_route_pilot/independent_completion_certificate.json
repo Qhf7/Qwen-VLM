@@ -1,0 +1,24 @@
+{
+  "schema": "jev-online-independent-analysis-completion-v1",
+  "status": "complete",
+  "timestamp_utc": "2026-11-10T20:17:56.178592+00:00",
+  "hostname": "autodl-container-132444827f-9c594038",
+  "audit_passed": 107,
+  "failed": 0,
+  "artifacts_sha256": {
+    "INDEPENDENT_STATISTICAL_SUPPLEMENT.json": "9e3b04d53b0eda1079340e56d11520829cb784c6e377c7a81db614ead5aac5a9",
+    "independent_postexecution_audit.json": "6a1506e0b2678b0f1097d942239e0c7369294f892083fa65132089cdc8acc35c",
+    "INDEPENDENT_ANALYSIS.md": "ea5a67219f9c6c0382a962175bb3535ddc73bfcb8b398ebe4cc476b5ee1ac03a",
+    "online_route_pilot_analysis.png": "2b51f040bb51e3ca0c540ea31aa03392b7b8381602223fec00cc2726550c76f1",
+    "online_route_pilot_analysis.svg": "b78e042f7361f4cc5959eccede29247beef5fb13caf2022e7739c05e4d6a520a",
+    "online_route_pilot_analysis.provenance.json": "afd11bcda3d5a790498783ad0cb42bf5235471ae1f962fd8c7d091f40e8cea4e",
+    "independent_methodology_freeze.json": "c52643ff4cfe3a80a6b931d5f5b574fd3d0d62c39db24ca85a0dc4d6bd8fc8bd",
+    "independent_interface_amendment.json": "43af891d1f7d49cf7ff08b092958e02a422a3686f9556c461da03e3799883856",
+    "INTERFACE_AMENDMENT_TIMING_CLARIFICATION.json": "1d1288f83e2ef00c47ddb99cabfbce6fdf4f515a1793d944a3a479d3754d1ab2"
+  },
+  "visual_qa": "FullserverrenderedPNG viewed locally;3panels all labels/legends/captions readable, negative AUC and extra gatecost visible",
+  "metrics_target": "regionalcandidate-output versusimage-labelproxy, notregionalcalibration",
+  "new_api_calls": 0,
+  "GT_masks_read": false,
+  "stage13_data_read": false
+}

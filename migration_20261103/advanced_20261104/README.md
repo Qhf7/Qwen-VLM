@@ -12,7 +12,7 @@
 | 外部MVTec | 1575图、15类、7模型×3seed。D−C AUROC +0.2754pp/F1 −0.6024pp；R−Cpair AUROC −0.6143pp/FPR +5.6973pp | [结果](EXTERNAL_RESULTS.md)、[分析](EXTERNAL_ANALYSIS.md)、[冻结](external_selection_freeze.json) |
 | 外部结构化与固定框 | S−Cstructured AUROC +1.8747pp，但框IoU .071108→.069815；teacher框 .224989，C门控teacher .210527 | [结构诊断](EXTERNAL_STRUCTURED_DIAGNOSTICS.md)、[固定框控制](external_teacher_control.md)、[控制审计](EXTERNAL_TEACHER_CONTROL_AUDIT.md) |
 
-[最终证据审计](FINAL_EVIDENCE_AUDIT.md)核对原始预测、数据/权重身份声明、源码及生成策略绑定；服务器权重核验与本机result-only复算分别记录。[项目经历与简历](PROJECT_PROGRESS.md)提供可支持的技术表述。[开发图](figures/)与[外部图](external_figures/)均附来源SHA。
+[最终证据审计](FINAL_EVIDENCE_AUDIT.md)核对原始预测、数据/权重身份声明、源码及生成策略绑定；服务器权重核验与本机result-only复算分别记录。[开发图](figures/)与[外部图](external_figures/)均附来源SHA。
 
 数据为含真实异常监督的自定义VisA train9985/val380；val用于选点和报告。外部为MVTec官方test扣除项目历史150图pilot后的1575图，公开数据的基座预训练暴露未知。外部结果没有用于反向选择权重、提示、阈值或超参。三seed是在同一批图上的训练随机性重复。
 

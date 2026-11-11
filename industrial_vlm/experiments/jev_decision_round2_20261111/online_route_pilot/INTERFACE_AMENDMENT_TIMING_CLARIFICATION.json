@@ -1,0 +1,18 @@
+{
+  "schema": "jev-online-interface-amendment-timing-clarification-v1",
+  "timestamp_utc": "2026-11-10T20:15:08.700682+00:00",
+  "amendment_sha256": "43af891d1f7d49cf7ff08b092958e02a422a3686f9556c461da03e3799883856",
+  "original_status_wording": "frozen_before_complete_pilot",
+  "correct_scope": "After final37 acquisition complete, before original evaluator predictionfreeze/metrics or approved24 label access; original method frozen before gateAPI",
+  "evidence": {
+    "status": "complete",
+    "completed": 37,
+    "expected": 37,
+    "global_started": 61,
+    "global_failed": 0,
+    "global_unknown": 0
+  },
+  "new_predictions_or_labels_opened_by_amendment": false,
+  "numerical_methods_changed": false,
+  "explanation": "The broad completepilot label was ambiguous; acquisitioncomplete != evaluationcomplete. Preserve original file and clarify rather than overwrite."
+}

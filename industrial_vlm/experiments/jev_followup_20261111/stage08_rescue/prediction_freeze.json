@@ -1,0 +1,14 @@
+{
+  "schema": "jev-support-http502-operational-amendment-v1",
+  "contract_sha256": "49a55faf08234a9c7d1c199c87b8f5e5e1de02fa0c0bdbc4ca20b11a9d66d511",
+  "predictions_sha256": "3ac5598625bf22ded0ff56497f60dc9b3e8276c60cbb6e90b0b04ea9d7345a0f",
+  "original_predictions_sha256": "a7b0244279562b702735ca0bc0336f260af897e3c06ac984c50200233bdd68cc",
+  "original_attempts_sha256": "2ca89465b2dd778c4810a5018b71b4e25aeabf894ba9e616928bdc44c853ea4e",
+  "rescue_predictions_sha256": "d50b15f4a4ff7cc462bc339ef2530f0c7eba64f6f3cc5d876148d4540c15c8c0",
+  "rescue_attempts_sha256": "2c391ebd62c04872822a5e68e67a27efa4b4cb279b85db8ee4c0f267c55bb3c9",
+  "operational_amendment_sha256": "c504d573889d77286e9e985c3e96b11fa73500909f41cc9350e7e78335b7e0d5",
+  "runner_sha256": "1ea9ec2340faeb089f24f038484f0e24f8b69f699ed9d2abde0c808a9a537e22",
+  "original_support_runner_sha256": "fc6ddc02eb2e2a8c0556f3843a5e73321f9d9bfcf1b5f14314de1aea2077d0bd",
+  "predictions_before_metric_labels": true,
+  "confirmation_opened": false
+}

@@ -1,0 +1,8 @@
+{
+  "schema": "qwen-stage08-matched-png-v1",
+  "contract_sha256": "905d2f978a041de44b0078811aed001985b15acaf351796805ca37a8c6573f01",
+  "scores_sha256": "14eb5850370b2b706c82a9a46c208c2ef97b173fba3042248ce21587c3dcd83b",
+  "accepted": 240,
+  "labels_opened_before_prediction_freeze": false,
+  "confirmation_opened": false
+}

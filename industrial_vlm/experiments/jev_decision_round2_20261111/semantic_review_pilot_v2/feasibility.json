@@ -1,0 +1,628 @@
+{
+  "schema": "jev-mask-derived-spatial-support-diagnostic-v2",
+  "status": "eligible_sources_frozen",
+  "source_contract_sha256": "f1ea9b7a4f24b795b35a44d12e629be4eca5799f58fecd58e65a03fad43bcc51",
+  "online_prediction_freeze_sha256": "eba5f2f3815f5be7fc353a87c996858de46abad5d6f0d3223e84cfe54137308f",
+  "approved_development_GT_sha256": "fe2702586f60d575b319790c7ec37b737bc189d864d6f6238b98f34588992a92",
+  "denominator": 24,
+  "normal": 12,
+  "anomaly": 12,
+  "eligible": 2,
+  "selected": 2,
+  "reasons": {
+    "normal_descriptive_only_no_API_budget": 12,
+    "multiple_8_connected_components": 6,
+    "no_empty_nonadjacent_false_cell": 7,
+    "dominant_fraction_below_80percent": 3,
+    "other_cell_above_10percent": 5,
+    "GT_within_2pixels_or_outside_dominant_cell_edge": 8
+  },
+  "records": [
+    {
+      "source_id": "visa_f1d12249261d62f00fd20c476804de6884a96d351e04e7943b3a82852ba86c34",
+      "label": 0,
+      "selected": false,
+      "eligible": false,
+      "reasons": [
+        "normal_descriptive_only_no_API_budget"
+      ]
+    },
+    {
+      "source_id": "visa_892614dd5d2ce2b080136ef54fc175e225931c10adadfe782ff65013849e2bcc",
+      "label": 0,
+      "selected": false,
+      "eligible": false,
+      "reasons": [
+        "normal_descriptive_only_no_API_budget"
+      ]
+    },
+    {
+      "source_id": "visa_7faf8ff401dbb9a9f14b36c4f0f3e5ec0950391351aa57be812dc515eed0c5e0",
+      "label": 0,
+      "selected": false,
+      "eligible": false,
+      "reasons": [
+        "normal_descriptive_only_no_API_budget"
+      ]
+    },
+    {
+      "source_id": "visa_461215936f1309a8c75f06be3d091f1feb0b19c388c3dc73e1aa313214e927cb",
+      "label": 1,
+      "selected": false,
+      "eligible": false,
+      "reasons": [
+        "multiple_8_connected_components",
+        "no_empty_nonadjacent_false_cell"
+      ],
+      "GT_pixels": 2847,
+      "components_8connected": 2,
+      "grid_GT_pixels": [
+        0,
+        0,
+        0,
+        0,
+        2847,
+        0,
+        0,
+        0,
+        0
+      ],
+      "grid_GT_fractions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dominant_grid": 4,
+      "dominant_cell": "middle-center",
+      "minimum_cell_edge_margin_original_pixels": 80.16666666666663,
+      "false_grid": null,
+      "false_cell": null,
+      "mask_sha256": "b678d1aea267c62f24ea6ca4c17917ecac9267a8fe34f27a31846d3315624355",
+      "mask_path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pipe_fryum/Data/Masks/Anomaly/012.png"
+    },
+    {
+      "source_id": "visa_6b6c78513751314419209dffa03c21d693c0791f4e9ec92158addb73c1eca987",
+      "label": 1,
+      "selected": false,
+      "eligible": false,
+      "reasons": [
+        "dominant_fraction_below_80percent",
+        "other_cell_above_10percent",
+        "GT_within_2pixels_or_outside_dominant_cell_edge",
+        "no_empty_nonadjacent_false_cell"
+      ],
+      "GT_pixels": 191017,
+      "components_8connected": 1,
+      "grid_GT_pixels": [
+        0,
+        20117,
+        0,
+        10512,
+        111936,
+        658,
+        85,
+        47709,
+        0
+      ],
+      "grid_GT_fractions": [
+        0.0,
+        0.10531523372265296,
+        0.0,
+        0.05503175110068737,
+        0.5860001989351733,
+        0.0034447195799326763,
+        0.0004449865718758016,
+        0.2497631100896779,
+        0.0
+      ],
+      "dominant_grid": 4,
+      "dominant_cell": "middle-center",
+      "minimum_cell_edge_margin_original_pixels": -177.83333333333337,
+      "false_grid": null,
+      "false_cell": null,
+      "mask_sha256": "053685db77de7b23636d3402153496b27eda4e56f840cf5cbfd22520ae6250d7",
+      "mask_path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/fryum/Data/Masks/Anomaly/051.png"
+    },
+    {
+      "source_id": "visa_80826359e7704e236090453a9c4eeda4631b40ce4c891ed1a492a83f28af2c2c",
+      "label": 0,
+      "selected": false,
+      "eligible": false,
+      "reasons": [
+        "normal_descriptive_only_no_API_budget"
+      ]
+    },
+    {
+      "source_id": "visa_c765753d3b3f06de90428ee947f4ec5f51ee3baaacd10ff6dcd23ce533474432",
+      "label": 1,
+      "selected": false,
+      "eligible": false,
+      "reasons": [
+        "multiple_8_connected_components",
+        "GT_within_2pixels_or_outside_dominant_cell_edge",
+        "no_empty_nonadjacent_false_cell"
+      ],
+      "GT_pixels": 1034,
+      "components_8connected": 6,
+      "grid_GT_pixels": [
+        0,
+        0,
+        0,
+        0,
+        993,
+        15,
+        0,
+        26,
+        0
+      ],
+      "grid_GT_fractions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.960348162475822,
+        0.014506769825918761,
+        0.0,
+        0.025145067698259187,
+        0.0
+      ],
+      "dominant_grid": 4,
+      "dominant_cell": "middle-center",
+      "minimum_cell_edge_margin_original_pixels": -35.5,
+      "false_grid": null,
+      "false_cell": null,
+      "mask_sha256": "0c628853eec6da4818dcaf1ce812ad1f3a57a89680a756d7f847d747cbde4acc",
+      "mask_path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/cashew/Data/Masks/Anomaly/058.png"
+    },
+    {
+      "source_id": "visa_0905967ed6f69618638a663faab8051fdb8b7b4ff87c7b26d7a993f15fd8d052",
+      "label": 0,
+      "selected": false,
+      "eligible": false,
+      "reasons": [
+        "normal_descriptive_only_no_API_budget"
+      ]
+    },
+    {
+      "source_id": "visa_19c53aa37353abee35a64fd37d8225095d93e6c1e973a2d0b19fa7631cea100e",
+      "label": 1,
+      "selected": false,
+      "eligible": false,
+      "reasons": [
+        "dominant_fraction_below_80percent",
+        "other_cell_above_10percent",
+        "GT_within_2pixels_or_outside_dominant_cell_edge"
+      ],
+      "GT_pixels": 1272,
+      "components_8connected": 1,
+      "grid_GT_pixels": [
+        0,
+        878,
+        379,
+        0,
+        0,
+        15,
+        0,
+        0,
+        0
+      ],
+      "grid_GT_fractions": [
+        0.0,
+        0.690251572327044,
+        0.2979559748427673,
+        0.0,
+        0.0,
+        0.01179245283018868,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dominant_grid": 1,
+      "dominant_cell": "top-center",
+      "minimum_cell_edge_margin_original_pixels": -13.5,
+      "false_grid": 7,
+      "false_cell": "bottom-center",
+      "mask_sha256": "ad485cdf23142c7483da1f33a3756682d0daaa3b03d2fbb8435ed0c7fa4b5110",
+      "mask_path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni2/Data/Masks/Anomaly/070.png"
+    },
+    {
+      "source_id": "visa_3538f10a1d93329b6b3512454f12d304bad710ba16d6f873decf595de8daec7a",
+      "label": 1,
+      "selected": false,
+      "eligible": false,
+      "reasons": [
+        "other_cell_above_10percent",
+        "GT_within_2pixels_or_outside_dominant_cell_edge",
+        "no_empty_nonadjacent_false_cell"
+      ],
+      "GT_pixels": 435,
+      "components_8connected": 1,
+      "grid_GT_pixels": [
+        0,
+        0,
+        0,
+        63,
+        372,
+        0,
+        0,
+        0,
+        0
+      ],
+      "grid_GT_fractions": [
+        0.0,
+        0.0,
+        0.0,
+        0.14482758620689656,
+        0.8551724137931035,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dominant_grid": 4,
+      "dominant_cell": "middle-center",
+      "minimum_cell_edge_margin_original_pixels": -21.5,
+      "false_grid": null,
+      "false_cell": null,
+      "mask_sha256": "47c66b802630fec1f8311d340ecf2a7bbd91ee8ea71359c86a8460ef3d3c15ce",
+      "mask_path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/fryum/Data/Masks/Anomaly/090.png"
+    },
+    {
+      "source_id": "visa_1be7809506f2372505d7506c47502f75ec9ba094e306c9d394a067b368c6a8e3",
+      "label": 1,
+      "selected": false,
+      "eligible": false,
+      "reasons": [
+        "multiple_8_connected_components",
+        "no_empty_nonadjacent_false_cell"
+      ],
+      "GT_pixels": 1288,
+      "components_8connected": 4,
+      "grid_GT_pixels": [
+        0,
+        0,
+        0,
+        0,
+        1288,
+        0,
+        0,
+        0,
+        0
+      ],
+      "grid_GT_fractions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dominant_grid": 4,
+      "dominant_cell": "middle-center",
+      "minimum_cell_edge_margin_original_pixels": 25.83333333333337,
+      "false_grid": null,
+      "false_cell": null,
+      "mask_sha256": "a59499edb9319a8759d22bcde2547f63a118a816f1e708b3a1bde5104387b5dc",
+      "mask_path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb2/Data/Masks/Anomaly/047.png"
+    },
+    {
+      "source_id": "visa_165dc8aa9b514b8644d5e6aee40b2e6b9a4252619a49bff78e2f4713b19c9119",
+      "label": 0,
+      "selected": false,
+      "eligible": false,
+      "reasons": [
+        "normal_descriptive_only_no_API_budget"
+      ]
+    },
+    {
+      "source_id": "visa_b81a85941ba79e2767f90bf712c6b6a09871dc960a78b1e7030aaae82d6c4320",
+      "label": 1,
+      "selected": false,
+      "eligible": false,
+      "reasons": [
+        "multiple_8_connected_components",
+        "GT_within_2pixels_or_outside_dominant_cell_edge",
+        "no_empty_nonadjacent_false_cell"
+      ],
+      "GT_pixels": 25307,
+      "components_8connected": 2,
+      "grid_GT_pixels": [
+        0,
+        0,
+        0,
+        1105,
+        23951,
+        0,
+        0,
+        251,
+        0
+      ],
+      "grid_GT_fractions": [
+        0.0,
+        0.0,
+        0.0,
+        0.04366380843244952,
+        0.9464179871181887,
+        0.0,
+        0.0,
+        0.009918204449361836,
+        0.0
+      ],
+      "dominant_grid": 4,
+      "dominant_cell": "middle-center",
+      "minimum_cell_edge_margin_original_pixels": -164.83333333333331,
+      "false_grid": null,
+      "false_cell": null,
+      "mask_sha256": "a03cd9241c0ce1a251c8fbb4d4a7e3ea609c2687c977ec823a1fe984feeecee9",
+      "mask_path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/chewinggum/Data/Masks/Anomaly/006.png"
+    },
+    {
+      "source_id": "visa_12113008ba45eebb2ffd45b369cbd690c7f91ed4531bd99034737834ade89ab7",
+      "label": 0,
+      "selected": false,
+      "eligible": false,
+      "reasons": [
+        "normal_descriptive_only_no_API_budget"
+      ]
+    },
+    {
+      "source_id": "visa_07bfdf2da58b61d1de26368da4b5aa2c4587de4c3ea220389647057745ba6c4a",
+      "label": 1,
+      "selected": true,
+      "eligible": true,
+      "reasons": [],
+      "GT_pixels": 1875,
+      "components_8connected": 1,
+      "grid_GT_pixels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1875,
+        0,
+        0,
+        0
+      ],
+      "grid_GT_fractions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dominant_grid": 5,
+      "dominant_cell": "middle-right",
+      "minimum_cell_edge_margin_original_pixels": 22.5,
+      "false_grid": 6,
+      "false_cell": "bottom-left",
+      "mask_sha256": "43b9ade24649b0023976a569a5ae322461e17bdff0cee61e6d6b882c84f37a1a",
+      "mask_path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/cashew/Data/Masks/Anomaly/020.png"
+    },
+    {
+      "source_id": "visa_65f4be0362b2ca3fae482efa598fd409c38fb7665f71bb0f1101a6c9a0c6acaa",
+      "label": 1,
+      "selected": false,
+      "eligible": false,
+      "reasons": [
+        "GT_within_2pixels_or_outside_dominant_cell_edge",
+        "no_empty_nonadjacent_false_cell"
+      ],
+      "GT_pixels": 5291,
+      "components_8connected": 1,
+      "grid_GT_pixels": [
+        0,
+        0,
+        0,
+        0,
+        5029,
+        0,
+        0,
+        262,
+        0
+      ],
+      "grid_GT_fractions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.9504819504819505,
+        0.0,
+        0.0,
+        0.04951804951804952,
+        0.0
+      ],
+      "dominant_grid": 4,
+      "dominant_cell": "middle-center",
+      "minimum_cell_edge_margin_original_pixels": -11.166666666666629,
+      "false_grid": null,
+      "false_cell": null,
+      "mask_sha256": "2e90b6c5b4d8fb6c6771be44d873df522859a44e0c718e4f61c99f6910b93553",
+      "mask_path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/chewinggum/Data/Masks/Anomaly/054.png"
+    },
+    {
+      "source_id": "visa_f3a026383e4573baca1494d3687b7316222f06e8fef2014cefc22ad94f704d79",
+      "label": 0,
+      "selected": false,
+      "eligible": false,
+      "reasons": [
+        "normal_descriptive_only_no_API_budget"
+      ]
+    },
+    {
+      "source_id": "visa_e3f8ccfd909a536181e05348d44e76ae56b2c06026b666c96babb963f3081e0a",
+      "label": 0,
+      "selected": false,
+      "eligible": false,
+      "reasons": [
+        "normal_descriptive_only_no_API_budget"
+      ]
+    },
+    {
+      "source_id": "visa_7eace5a2fd5b57b63c61f2f9aab9a61694c9f667b5e9ca8c5a206d3d9852a848",
+      "label": 1,
+      "selected": false,
+      "eligible": false,
+      "reasons": [
+        "multiple_8_connected_components",
+        "dominant_fraction_below_80percent",
+        "other_cell_above_10percent",
+        "GT_within_2pixels_or_outside_dominant_cell_edge"
+      ],
+      "GT_pixels": 481,
+      "components_8connected": 5,
+      "grid_GT_pixels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        208,
+        273
+      ],
+      "grid_GT_fractions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.43243243243243246,
+        0.5675675675675675
+      ],
+      "dominant_grid": 8,
+      "dominant_cell": "bottom-right",
+      "minimum_cell_edge_margin_original_pixels": -80.5,
+      "false_grid": 0,
+      "false_cell": "top-left",
+      "mask_sha256": "446fa505220336572335a40674abecf35d06b632c8c886aa9a2819181dc80003",
+      "mask_path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/macaroni1/Data/Masks/Anomaly/091.png"
+    },
+    {
+      "source_id": "visa_369c056fe93c793b0341285d45c0b2d73a488ae3c8c0f8caa395e95127bea109",
+      "label": 1,
+      "selected": false,
+      "eligible": false,
+      "reasons": [
+        "multiple_8_connected_components",
+        "other_cell_above_10percent",
+        "GT_within_2pixels_or_outside_dominant_cell_edge"
+      ],
+      "GT_pixels": 1360,
+      "components_8connected": 2,
+      "grid_GT_pixels": [
+        0,
+        0,
+        0,
+        0,
+        224,
+        0,
+        0,
+        1136,
+        0
+      ],
+      "grid_GT_fractions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.16470588235294117,
+        0.0,
+        0.0,
+        0.8352941176470589,
+        0.0
+      ],
+      "dominant_grid": 7,
+      "dominant_cell": "bottom-center",
+      "minimum_cell_edge_margin_original_pixels": -20.83333333333337,
+      "false_grid": 1,
+      "false_cell": "top-center",
+      "mask_sha256": "9db68324b23b0aa973e0a099bf4892081c27eaba674b990384f876d0ca383b83",
+      "mask_path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/pcb1/Data/Masks/Anomaly/072.png"
+    },
+    {
+      "source_id": "visa_094f90fda64be342bd38b8e43d8aeea5e7a6b02d266e5e41cfc8a448d62c0c01",
+      "label": 1,
+      "selected": true,
+      "eligible": true,
+      "reasons": [],
+      "GT_pixels": 2088,
+      "components_8connected": 1,
+      "grid_GT_pixels": [
+        0,
+        2088,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "grid_GT_fractions": [
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dominant_grid": 1,
+      "dominant_cell": "top-center",
+      "minimum_cell_edge_margin_original_pixels": 44.5,
+      "false_grid": 6,
+      "false_cell": "bottom-left",
+      "mask_sha256": "9128cb402973787dfb358e82f23b6ca7407d2ee19ff35818e0bf25c00e21a572",
+      "mask_path": "/root/autodl-tmp/industrial_vlm/datasets/VisA/capsules/Data/Masks/Anomaly/019.png"
+    },
+    {
+      "source_id": "visa_3209433cd5be38bef4b85e73d4b0a8ad9f0af9b8f89d1d13b91d3991f5cdc0a1",
+      "label": 0,
+      "selected": false,
+      "eligible": false,
+      "reasons": [
+        "normal_descriptive_only_no_API_budget"
+      ]
+    },
+    {
+      "source_id": "visa_d64fd49078bf1585b89af15ec4dfb108f71fc7ffeabc68e43b9cfbb09362e3e0",
+      "label": 0,
+      "selected": false,
+      "eligible": false,
+      "reasons": [
+        "normal_descriptive_only_no_API_budget"
+      ]
+    },
+    {
+      "source_id": "visa_06923fecac473165ea7cc74dd763f38d88aec13b0f35c479f8dbc24fe63fd4b1",
+      "label": 0,
+      "selected": false,
+      "eligible": false,
+      "reasons": [
+        "normal_descriptive_only_no_API_budget"
+      ]
+    }
+  ],
+  "labels_are_mask_derived_proxy": true,
+  "human_visual_fact_validation": false,
+  "stage13_data_read": false
+}

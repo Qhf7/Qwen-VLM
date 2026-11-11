@@ -1,0 +1,1953 @@
+{
+  "schema": "jev-stage13-fixed-statistical-supplement-v1",
+  "status": "complete",
+  "timestamp_utc": "2026-11-10T19:14:44.070360+00:00",
+  "hostname": "autodl-container-132444827f-9c594038",
+  "inputs_sha256": {
+    "metrics": "2838095b23bba31a4c233be7a385f3e010c4af7a978673de40bccf10f6e63976",
+    "bundle": "72ab9b8706cdf77c102f7fb53c372e3a183ecdf69e67599d9d58732838fd392e",
+    "freeze": "785e76ea8593c1dcba52111581d92fd090b456ba22e95421ee07a339c152a20f",
+    "audit": "c6a590ef9470c644cec4848a5205d4d68b60a312f58667adbb3b1a5d6a0ae668"
+  },
+  "methods": {
+    "primary_calibrated": {
+      "n": 240,
+      "threshold": 0.5,
+      "comparison": "p>=0.5",
+      "confusion": {
+        "TP": 102,
+        "FP": 25,
+        "TN": 95,
+        "FN": 18
+      },
+      "recall": {
+        "count": 102,
+        "denominator": 120,
+        "estimate": 0.85,
+        "ci95": [
+          0.775324706432755,
+          0.9029618770741527
+        ],
+        "method": "Wilson two-sided95"
+      },
+      "fpr": {
+        "count": 25,
+        "denominator": 120,
+        "estimate": 0.20833333333333334,
+        "ci95": [
+          0.14528439608109694,
+          0.2894767843298135
+        ],
+        "method": "Wilson two-sided95"
+      },
+      "accuracy": {
+        "count": 197,
+        "denominator": 240,
+        "estimate": 0.8208333333333333,
+        "ci95": [
+          0.7673804761591676,
+          0.8641774252116654
+        ],
+        "method": "Wilson two-sided95"
+      },
+      "error": {
+        "count": 43,
+        "denominator": 240,
+        "estimate": 0.17916666666666667,
+        "ci95": [
+          0.13582257478833457,
+          0.23261952384083237
+        ],
+        "method": "Wilson two-sided95"
+      },
+      "binary_logloss": 0.3995763316902998,
+      "logloss_clip_epsilon": 1e-15,
+      "exact_half_ties": 0
+    },
+    "secondary_raw": {
+      "n": 240,
+      "threshold": 0.5,
+      "comparison": "p>=0.5",
+      "confusion": {
+        "TP": 106,
+        "FP": 30,
+        "TN": 90,
+        "FN": 14
+      },
+      "recall": {
+        "count": 106,
+        "denominator": 120,
+        "estimate": 0.8833333333333333,
+        "ci95": [
+          0.8136664838239611,
+          0.9292188219216995
+        ],
+        "method": "Wilson two-sided95"
+      },
+      "fpr": {
+        "count": 30,
+        "denominator": 120,
+        "estimate": 0.25,
+        "ci95": [
+          0.18109821656809566,
+          0.33441136664125615
+        ],
+        "method": "Wilson two-sided95"
+      },
+      "accuracy": {
+        "count": 196,
+        "denominator": 240,
+        "estimate": 0.8166666666666667,
+        "ci95": [
+          0.7628558049322243,
+          0.8605000457714551
+        ],
+        "method": "Wilson two-sided95"
+      },
+      "error": {
+        "count": 44,
+        "denominator": 240,
+        "estimate": 0.18333333333333332,
+        "ci95": [
+          0.1394999542285449,
+          0.23714419506777568
+        ],
+        "method": "Wilson two-sided95"
+      },
+      "binary_logloss": 0.44069163013462115,
+      "logloss_clip_epsilon": 1e-15,
+      "exact_half_ties": 4
+    }
+  },
+  "by_category": {
+    "candle": {
+      "primary_calibrated": {
+        "n": 20,
+        "threshold": 0.5,
+        "comparison": "p>=0.5",
+        "confusion": {
+          "TP": 10,
+          "FP": 3,
+          "TN": 7,
+          "FN": 0
+        },
+        "recall": {
+          "count": 10,
+          "denominator": 10,
+          "estimate": 1.0,
+          "ci95": [
+            0.7224672001371107,
+            0.9999999999999999
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "fpr": {
+          "count": 3,
+          "denominator": 10,
+          "estimate": 0.3,
+          "ci95": [
+            0.10779126740630099,
+            0.6032218525388546
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "accuracy": {
+          "count": 17,
+          "denominator": 20,
+          "estimate": 0.85,
+          "ci95": [
+            0.6395811352592431,
+            0.9476312541037835
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "error": {
+          "count": 3,
+          "denominator": 20,
+          "estimate": 0.15,
+          "ci95": [
+            0.052368745896216595,
+            0.36041886474075696
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "binary_logloss": 0.3502811680214009,
+        "logloss_clip_epsilon": 1e-15,
+        "exact_half_ties": 0
+      },
+      "secondary_raw": {
+        "n": 20,
+        "threshold": 0.5,
+        "comparison": "p>=0.5",
+        "confusion": {
+          "TP": 10,
+          "FP": 3,
+          "TN": 7,
+          "FN": 0
+        },
+        "recall": {
+          "count": 10,
+          "denominator": 10,
+          "estimate": 1.0,
+          "ci95": [
+            0.7224672001371107,
+            0.9999999999999999
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "fpr": {
+          "count": 3,
+          "denominator": 10,
+          "estimate": 0.3,
+          "ci95": [
+            0.10779126740630099,
+            0.6032218525388546
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "accuracy": {
+          "count": 17,
+          "denominator": 20,
+          "estimate": 0.85,
+          "ci95": [
+            0.6395811352592431,
+            0.9476312541037835
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "error": {
+          "count": 3,
+          "denominator": 20,
+          "estimate": 0.15,
+          "ci95": [
+            0.052368745896216595,
+            0.36041886474075696
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "binary_logloss": 0.4113121422244076,
+        "logloss_clip_epsilon": 1e-15,
+        "exact_half_ties": 0
+      }
+    },
+    "capsules": {
+      "primary_calibrated": {
+        "n": 20,
+        "threshold": 0.5,
+        "comparison": "p>=0.5",
+        "confusion": {
+          "TP": 6,
+          "FP": 2,
+          "TN": 8,
+          "FN": 4
+        },
+        "recall": {
+          "count": 6,
+          "denominator": 10,
+          "estimate": 0.6,
+          "ci95": [
+            0.31267376973365824,
+            0.8318196702937638
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "fpr": {
+          "count": 2,
+          "denominator": 10,
+          "estimate": 0.2,
+          "ci95": [
+            0.05668215145437519,
+            0.5098375284633583
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "accuracy": {
+          "count": 14,
+          "denominator": 20,
+          "estimate": 0.7,
+          "ci95": [
+            0.4810271816464765,
+            0.8545227551323956
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "error": {
+          "count": 6,
+          "denominator": 20,
+          "estimate": 0.3,
+          "ci95": [
+            0.1454772448676043,
+            0.5189728183535235
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "binary_logloss": 0.625513210308103,
+        "logloss_clip_epsilon": 1e-15,
+        "exact_half_ties": 0
+      },
+      "secondary_raw": {
+        "n": 20,
+        "threshold": 0.5,
+        "comparison": "p>=0.5",
+        "confusion": {
+          "TP": 6,
+          "FP": 2,
+          "TN": 8,
+          "FN": 4
+        },
+        "recall": {
+          "count": 6,
+          "denominator": 10,
+          "estimate": 0.6,
+          "ci95": [
+            0.31267376973365824,
+            0.8318196702937638
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "fpr": {
+          "count": 2,
+          "denominator": 10,
+          "estimate": 0.2,
+          "ci95": [
+            0.05668215145437519,
+            0.5098375284633583
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "accuracy": {
+          "count": 14,
+          "denominator": 20,
+          "estimate": 0.7,
+          "ci95": [
+            0.4810271816464765,
+            0.8545227551323956
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "error": {
+          "count": 6,
+          "denominator": 20,
+          "estimate": 0.3,
+          "ci95": [
+            0.1454772448676043,
+            0.5189728183535235
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "binary_logloss": 0.5600511481764132,
+        "logloss_clip_epsilon": 1e-15,
+        "exact_half_ties": 0
+      }
+    },
+    "cashew": {
+      "primary_calibrated": {
+        "n": 20,
+        "threshold": 0.5,
+        "comparison": "p>=0.5",
+        "confusion": {
+          "TP": 7,
+          "FP": 3,
+          "TN": 7,
+          "FN": 3
+        },
+        "recall": {
+          "count": 7,
+          "denominator": 10,
+          "estimate": 0.7,
+          "ci95": [
+            0.39677814746114537,
+            0.8922087325936989
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "fpr": {
+          "count": 3,
+          "denominator": 10,
+          "estimate": 0.3,
+          "ci95": [
+            0.10779126740630099,
+            0.6032218525388546
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "accuracy": {
+          "count": 14,
+          "denominator": 20,
+          "estimate": 0.7,
+          "ci95": [
+            0.4810271816464765,
+            0.8545227551323956
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "error": {
+          "count": 6,
+          "denominator": 20,
+          "estimate": 0.3,
+          "ci95": [
+            0.1454772448676043,
+            0.5189728183535235
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "binary_logloss": 0.6038673101375482,
+        "logloss_clip_epsilon": 1e-15,
+        "exact_half_ties": 0
+      },
+      "secondary_raw": {
+        "n": 20,
+        "threshold": 0.5,
+        "comparison": "p>=0.5",
+        "confusion": {
+          "TP": 7,
+          "FP": 3,
+          "TN": 7,
+          "FN": 3
+        },
+        "recall": {
+          "count": 7,
+          "denominator": 10,
+          "estimate": 0.7,
+          "ci95": [
+            0.39677814746114537,
+            0.8922087325936989
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "fpr": {
+          "count": 3,
+          "denominator": 10,
+          "estimate": 0.3,
+          "ci95": [
+            0.10779126740630099,
+            0.6032218525388546
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "accuracy": {
+          "count": 14,
+          "denominator": 20,
+          "estimate": 0.7,
+          "ci95": [
+            0.4810271816464765,
+            0.8545227551323956
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "error": {
+          "count": 6,
+          "denominator": 20,
+          "estimate": 0.3,
+          "ci95": [
+            0.1454772448676043,
+            0.5189728183535235
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "binary_logloss": 0.573841378464766,
+        "logloss_clip_epsilon": 1e-15,
+        "exact_half_ties": 0
+      }
+    },
+    "chewinggum": {
+      "primary_calibrated": {
+        "n": 20,
+        "threshold": 0.5,
+        "comparison": "p>=0.5",
+        "confusion": {
+          "TP": 10,
+          "FP": 0,
+          "TN": 10,
+          "FN": 0
+        },
+        "recall": {
+          "count": 10,
+          "denominator": 10,
+          "estimate": 1.0,
+          "ci95": [
+            0.7224672001371107,
+            0.9999999999999999
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "fpr": {
+          "count": 0,
+          "denominator": 10,
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.2775327998628892
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "accuracy": {
+          "count": 20,
+          "denominator": 20,
+          "estimate": 1.0,
+          "ci95": [
+            0.8388748419471806,
+            1.0
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "error": {
+          "count": 0,
+          "denominator": 20,
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.16112515805281938
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "binary_logloss": 0.06168502974790112,
+        "logloss_clip_epsilon": 1e-15,
+        "exact_half_ties": 0
+      },
+      "secondary_raw": {
+        "n": 20,
+        "threshold": 0.5,
+        "comparison": "p>=0.5",
+        "confusion": {
+          "TP": 10,
+          "FP": 0,
+          "TN": 10,
+          "FN": 0
+        },
+        "recall": {
+          "count": 10,
+          "denominator": 10,
+          "estimate": 1.0,
+          "ci95": [
+            0.7224672001371107,
+            0.9999999999999999
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "fpr": {
+          "count": 0,
+          "denominator": 10,
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.2775327998628892
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "accuracy": {
+          "count": 20,
+          "denominator": 20,
+          "estimate": 1.0,
+          "ci95": [
+            0.8388748419471806,
+            1.0
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "error": {
+          "count": 0,
+          "denominator": 20,
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.16112515805281938
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "binary_logloss": 0.15430818519321682,
+        "logloss_clip_epsilon": 1e-15,
+        "exact_half_ties": 0
+      }
+    },
+    "fryum": {
+      "primary_calibrated": {
+        "n": 20,
+        "threshold": 0.5,
+        "comparison": "p>=0.5",
+        "confusion": {
+          "TP": 9,
+          "FP": 0,
+          "TN": 10,
+          "FN": 1
+        },
+        "recall": {
+          "count": 9,
+          "denominator": 10,
+          "estimate": 0.9,
+          "ci95": [
+            0.5958499732047615,
+            0.9821237869049271
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "fpr": {
+          "count": 0,
+          "denominator": 10,
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.2775327998628892
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "accuracy": {
+          "count": 19,
+          "denominator": 20,
+          "estimate": 0.95,
+          "ci95": [
+            0.763868806553258,
+            0.9911185511992047
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "error": {
+          "count": 1,
+          "denominator": 20,
+          "estimate": 0.05,
+          "ci95": [
+            0.008881448800795402,
+            0.23613119344674205
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "binary_logloss": 0.27048933894312777,
+        "logloss_clip_epsilon": 1e-15,
+        "exact_half_ties": 0
+      },
+      "secondary_raw": {
+        "n": 20,
+        "threshold": 0.5,
+        "comparison": "p>=0.5",
+        "confusion": {
+          "TP": 9,
+          "FP": 0,
+          "TN": 10,
+          "FN": 1
+        },
+        "recall": {
+          "count": 9,
+          "denominator": 10,
+          "estimate": 0.9,
+          "ci95": [
+            0.5958499732047615,
+            0.9821237869049271
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "fpr": {
+          "count": 0,
+          "denominator": 10,
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.2775327998628892
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "accuracy": {
+          "count": 19,
+          "denominator": 20,
+          "estimate": 0.95,
+          "ci95": [
+            0.763868806553258,
+            0.9911185511992047
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "error": {
+          "count": 1,
+          "denominator": 20,
+          "estimate": 0.05,
+          "ci95": [
+            0.008881448800795402,
+            0.23613119344674205
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "binary_logloss": 0.35007935587759736,
+        "logloss_clip_epsilon": 1e-15,
+        "exact_half_ties": 0
+      }
+    },
+    "macaroni1": {
+      "primary_calibrated": {
+        "n": 20,
+        "threshold": 0.5,
+        "comparison": "p>=0.5",
+        "confusion": {
+          "TP": 6,
+          "FP": 0,
+          "TN": 10,
+          "FN": 4
+        },
+        "recall": {
+          "count": 6,
+          "denominator": 10,
+          "estimate": 0.6,
+          "ci95": [
+            0.31267376973365824,
+            0.8318196702937638
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "fpr": {
+          "count": 0,
+          "denominator": 10,
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.2775327998628892
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "accuracy": {
+          "count": 16,
+          "denominator": 20,
+          "estimate": 0.8,
+          "ci95": [
+            0.5839825677481064,
+            0.919342337420202
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "error": {
+          "count": 4,
+          "denominator": 20,
+          "estimate": 0.2,
+          "ci95": [
+            0.08065766257979806,
+            0.41601743225189364
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "binary_logloss": 0.39419112386244687,
+        "logloss_clip_epsilon": 1e-15,
+        "exact_half_ties": 0
+      },
+      "secondary_raw": {
+        "n": 20,
+        "threshold": 0.5,
+        "comparison": "p>=0.5",
+        "confusion": {
+          "TP": 8,
+          "FP": 0,
+          "TN": 10,
+          "FN": 2
+        },
+        "recall": {
+          "count": 8,
+          "denominator": 10,
+          "estimate": 0.8,
+          "ci95": [
+            0.49016247153664183,
+            0.9433178485456247
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "fpr": {
+          "count": 0,
+          "denominator": 10,
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.2775327998628892
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "accuracy": {
+          "count": 18,
+          "denominator": 20,
+          "estimate": 0.9,
+          "ci95": [
+            0.6989663547715128,
+            0.9721335187862319
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "error": {
+          "count": 2,
+          "denominator": 20,
+          "estimate": 0.1,
+          "ci95": [
+            0.027866481213768224,
+            0.3010336452284873
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "binary_logloss": 0.458737808063996,
+        "logloss_clip_epsilon": 1e-15,
+        "exact_half_ties": 1
+      }
+    },
+    "macaroni2": {
+      "primary_calibrated": {
+        "n": 20,
+        "threshold": 0.5,
+        "comparison": "p>=0.5",
+        "confusion": {
+          "TP": 7,
+          "FP": 5,
+          "TN": 5,
+          "FN": 3
+        },
+        "recall": {
+          "count": 7,
+          "denominator": 10,
+          "estimate": 0.7,
+          "ci95": [
+            0.39677814746114537,
+            0.8922087325936989
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "fpr": {
+          "count": 5,
+          "denominator": 10,
+          "estimate": 0.5,
+          "ci95": [
+            0.236593090512564,
+            0.7634069094874361
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "accuracy": {
+          "count": 12,
+          "denominator": 20,
+          "estimate": 0.6,
+          "ci95": [
+            0.3865815007622531,
+            0.781193467627183
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "error": {
+          "count": 8,
+          "denominator": 20,
+          "estimate": 0.4,
+          "ci95": [
+            0.21880653237281705,
+            0.6134184992377469
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "binary_logloss": 0.6415881613142634,
+        "logloss_clip_epsilon": 1e-15,
+        "exact_half_ties": 0
+      },
+      "secondary_raw": {
+        "n": 20,
+        "threshold": 0.5,
+        "comparison": "p>=0.5",
+        "confusion": {
+          "TP": 8,
+          "FP": 6,
+          "TN": 4,
+          "FN": 2
+        },
+        "recall": {
+          "count": 8,
+          "denominator": 10,
+          "estimate": 0.8,
+          "ci95": [
+            0.49016247153664183,
+            0.9433178485456247
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "fpr": {
+          "count": 6,
+          "denominator": 10,
+          "estimate": 0.6,
+          "ci95": [
+            0.31267376973365824,
+            0.8318196702937638
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "accuracy": {
+          "count": 12,
+          "denominator": 20,
+          "estimate": 0.6,
+          "ci95": [
+            0.3865815007622531,
+            0.781193467627183
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "error": {
+          "count": 8,
+          "denominator": 20,
+          "estimate": 0.4,
+          "ci95": [
+            0.21880653237281705,
+            0.6134184992377469
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "binary_logloss": 0.6423780639594042,
+        "logloss_clip_epsilon": 1e-15,
+        "exact_half_ties": 0
+      }
+    },
+    "pcb1": {
+      "primary_calibrated": {
+        "n": 20,
+        "threshold": 0.5,
+        "comparison": "p>=0.5",
+        "confusion": {
+          "TP": 9,
+          "FP": 2,
+          "TN": 8,
+          "FN": 1
+        },
+        "recall": {
+          "count": 9,
+          "denominator": 10,
+          "estimate": 0.9,
+          "ci95": [
+            0.5958499732047615,
+            0.9821237869049271
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "fpr": {
+          "count": 2,
+          "denominator": 10,
+          "estimate": 0.2,
+          "ci95": [
+            0.05668215145437519,
+            0.5098375284633583
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "accuracy": {
+          "count": 17,
+          "denominator": 20,
+          "estimate": 0.85,
+          "ci95": [
+            0.6395811352592431,
+            0.9476312541037835
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "error": {
+          "count": 3,
+          "denominator": 20,
+          "estimate": 0.15,
+          "ci95": [
+            0.052368745896216595,
+            0.36041886474075696
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "binary_logloss": 0.3603251859718721,
+        "logloss_clip_epsilon": 1e-15,
+        "exact_half_ties": 0
+      },
+      "secondary_raw": {
+        "n": 20,
+        "threshold": 0.5,
+        "comparison": "p>=0.5",
+        "confusion": {
+          "TP": 9,
+          "FP": 2,
+          "TN": 8,
+          "FN": 1
+        },
+        "recall": {
+          "count": 9,
+          "denominator": 10,
+          "estimate": 0.9,
+          "ci95": [
+            0.5958499732047615,
+            0.9821237869049271
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "fpr": {
+          "count": 2,
+          "denominator": 10,
+          "estimate": 0.2,
+          "ci95": [
+            0.05668215145437519,
+            0.5098375284633583
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "accuracy": {
+          "count": 17,
+          "denominator": 20,
+          "estimate": 0.85,
+          "ci95": [
+            0.6395811352592431,
+            0.9476312541037835
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "error": {
+          "count": 3,
+          "denominator": 20,
+          "estimate": 0.15,
+          "ci95": [
+            0.052368745896216595,
+            0.36041886474075696
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "binary_logloss": 0.4151905414626147,
+        "logloss_clip_epsilon": 1e-15,
+        "exact_half_ties": 0
+      }
+    },
+    "pcb2": {
+      "primary_calibrated": {
+        "n": 20,
+        "threshold": 0.5,
+        "comparison": "p>=0.5",
+        "confusion": {
+          "TP": 10,
+          "FP": 5,
+          "TN": 5,
+          "FN": 0
+        },
+        "recall": {
+          "count": 10,
+          "denominator": 10,
+          "estimate": 1.0,
+          "ci95": [
+            0.7224672001371107,
+            0.9999999999999999
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "fpr": {
+          "count": 5,
+          "denominator": 10,
+          "estimate": 0.5,
+          "ci95": [
+            0.236593090512564,
+            0.7634069094874361
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "accuracy": {
+          "count": 15,
+          "denominator": 20,
+          "estimate": 0.75,
+          "ci95": [
+            0.531299122381256,
+            0.8881382985923343
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "error": {
+          "count": 5,
+          "denominator": 20,
+          "estimate": 0.25,
+          "ci95": [
+            0.11186170140766569,
+            0.468700877618744
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "binary_logloss": 0.44396090435003455,
+        "logloss_clip_epsilon": 1e-15,
+        "exact_half_ties": 0
+      },
+      "secondary_raw": {
+        "n": 20,
+        "threshold": 0.5,
+        "comparison": "p>=0.5",
+        "confusion": {
+          "TP": 10,
+          "FP": 7,
+          "TN": 3,
+          "FN": 0
+        },
+        "recall": {
+          "count": 10,
+          "denominator": 10,
+          "estimate": 1.0,
+          "ci95": [
+            0.7224672001371107,
+            0.9999999999999999
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "fpr": {
+          "count": 7,
+          "denominator": 10,
+          "estimate": 0.7,
+          "ci95": [
+            0.39677814746114537,
+            0.8922087325936989
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "accuracy": {
+          "count": 13,
+          "denominator": 20,
+          "estimate": 0.65,
+          "ci95": [
+            0.43285427668523624,
+            0.818808175898918
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "error": {
+          "count": 7,
+          "denominator": 20,
+          "estimate": 0.35,
+          "ci95": [
+            0.18119182410108206,
+            0.5671457233147638
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "binary_logloss": 0.5078862115193633,
+        "logloss_clip_epsilon": 1e-15,
+        "exact_half_ties": 2
+      }
+    },
+    "pcb3": {
+      "primary_calibrated": {
+        "n": 20,
+        "threshold": 0.5,
+        "comparison": "p>=0.5",
+        "confusion": {
+          "TP": 8,
+          "FP": 1,
+          "TN": 9,
+          "FN": 2
+        },
+        "recall": {
+          "count": 8,
+          "denominator": 10,
+          "estimate": 0.8,
+          "ci95": [
+            0.49016247153664183,
+            0.9433178485456247
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "fpr": {
+          "count": 1,
+          "denominator": 10,
+          "estimate": 0.1,
+          "ci95": [
+            0.017876213095072896,
+            0.4041500267952385
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "accuracy": {
+          "count": 17,
+          "denominator": 20,
+          "estimate": 0.85,
+          "ci95": [
+            0.6395811352592431,
+            0.9476312541037835
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "error": {
+          "count": 3,
+          "denominator": 20,
+          "estimate": 0.15,
+          "ci95": [
+            0.052368745896216595,
+            0.36041886474075696
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "binary_logloss": 0.3833252937237397,
+        "logloss_clip_epsilon": 1e-15,
+        "exact_half_ties": 0
+      },
+      "secondary_raw": {
+        "n": 20,
+        "threshold": 0.5,
+        "comparison": "p>=0.5",
+        "confusion": {
+          "TP": 9,
+          "FP": 1,
+          "TN": 9,
+          "FN": 1
+        },
+        "recall": {
+          "count": 9,
+          "denominator": 10,
+          "estimate": 0.9,
+          "ci95": [
+            0.5958499732047615,
+            0.9821237869049271
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "fpr": {
+          "count": 1,
+          "denominator": 10,
+          "estimate": 0.1,
+          "ci95": [
+            0.017876213095072896,
+            0.4041500267952385
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "accuracy": {
+          "count": 18,
+          "denominator": 20,
+          "estimate": 0.9,
+          "ci95": [
+            0.6989663547715128,
+            0.9721335187862319
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "error": {
+          "count": 2,
+          "denominator": 20,
+          "estimate": 0.1,
+          "ci95": [
+            0.027866481213768224,
+            0.3010336452284873
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "binary_logloss": 0.46084085407427666,
+        "logloss_clip_epsilon": 1e-15,
+        "exact_half_ties": 1
+      }
+    },
+    "pcb4": {
+      "primary_calibrated": {
+        "n": 20,
+        "threshold": 0.5,
+        "comparison": "p>=0.5",
+        "confusion": {
+          "TP": 10,
+          "FP": 4,
+          "TN": 6,
+          "FN": 0
+        },
+        "recall": {
+          "count": 10,
+          "denominator": 10,
+          "estimate": 1.0,
+          "ci95": [
+            0.7224672001371107,
+            0.9999999999999999
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "fpr": {
+          "count": 4,
+          "denominator": 10,
+          "estimate": 0.4,
+          "ci95": [
+            0.16818032970623614,
+            0.6873262302663417
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "accuracy": {
+          "count": 16,
+          "denominator": 20,
+          "estimate": 0.8,
+          "ci95": [
+            0.5839825677481064,
+            0.919342337420202
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "error": {
+          "count": 4,
+          "denominator": 20,
+          "estimate": 0.2,
+          "ci95": [
+            0.08065766257979806,
+            0.41601743225189364
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "binary_logloss": 0.47105498705553084,
+        "logloss_clip_epsilon": 1e-15,
+        "exact_half_ties": 0
+      },
+      "secondary_raw": {
+        "n": 20,
+        "threshold": 0.5,
+        "comparison": "p>=0.5",
+        "confusion": {
+          "TP": 10,
+          "FP": 6,
+          "TN": 4,
+          "FN": 0
+        },
+        "recall": {
+          "count": 10,
+          "denominator": 10,
+          "estimate": 1.0,
+          "ci95": [
+            0.7224672001371107,
+            0.9999999999999999
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "fpr": {
+          "count": 6,
+          "denominator": 10,
+          "estimate": 0.6,
+          "ci95": [
+            0.31267376973365824,
+            0.8318196702937638
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "accuracy": {
+          "count": 14,
+          "denominator": 20,
+          "estimate": 0.7,
+          "ci95": [
+            0.4810271816464765,
+            0.8545227551323956
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "error": {
+          "count": 6,
+          "denominator": 20,
+          "estimate": 0.3,
+          "ci95": [
+            0.1454772448676043,
+            0.5189728183535235
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "binary_logloss": 0.4716856726869996,
+        "logloss_clip_epsilon": 1e-15,
+        "exact_half_ties": 0
+      }
+    },
+    "pipe_fryum": {
+      "primary_calibrated": {
+        "n": 20,
+        "threshold": 0.5,
+        "comparison": "p>=0.5",
+        "confusion": {
+          "TP": 10,
+          "FP": 0,
+          "TN": 10,
+          "FN": 0
+        },
+        "recall": {
+          "count": 10,
+          "denominator": 10,
+          "estimate": 1.0,
+          "ci95": [
+            0.7224672001371107,
+            0.9999999999999999
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "fpr": {
+          "count": 0,
+          "denominator": 10,
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.2775327998628892
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "accuracy": {
+          "count": 20,
+          "denominator": 20,
+          "estimate": 1.0,
+          "ci95": [
+            0.8388748419471806,
+            1.0
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "error": {
+          "count": 0,
+          "denominator": 20,
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.16112515805281938
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "binary_logloss": 0.18863426684762874,
+        "logloss_clip_epsilon": 1e-15,
+        "exact_half_ties": 0
+      },
+      "secondary_raw": {
+        "n": 20,
+        "threshold": 0.5,
+        "comparison": "p>=0.5",
+        "confusion": {
+          "TP": 10,
+          "FP": 0,
+          "TN": 10,
+          "FN": 0
+        },
+        "recall": {
+          "count": 10,
+          "denominator": 10,
+          "estimate": 1.0,
+          "ci95": [
+            0.7224672001371107,
+            0.9999999999999999
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "fpr": {
+          "count": 0,
+          "denominator": 10,
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.2775327998628892
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "accuracy": {
+          "count": 20,
+          "denominator": 20,
+          "estimate": 1.0,
+          "ci95": [
+            0.8388748419471806,
+            1.0
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "error": {
+          "count": 0,
+          "denominator": 20,
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.16112515805281938
+          ],
+          "method": "Wilson two-sided95"
+        },
+        "binary_logloss": 0.2819881999123983,
+        "logloss_clip_epsilon": 1e-15,
+        "exact_half_ties": 0
+      }
+    }
+  },
+  "coverage": {
+    "primary_calibrated": {
+      "0.5": {
+        "accepted": 120,
+        "abstained": 120,
+        "coverage": 0.5,
+        "conditional": {
+          "n": 120,
+          "threshold": 0.5,
+          "comparison": "p>=0.5",
+          "confusion": {
+            "TP": 65,
+            "FP": 2,
+            "TN": 48,
+            "FN": 5
+          },
+          "recall": {
+            "count": 65,
+            "denominator": 70,
+            "estimate": 0.9285714285714286,
+            "ci95": [
+              0.8434458778290468,
+              0.969105782962153
+            ],
+            "method": "Wilson two-sided95"
+          },
+          "fpr": {
+            "count": 2,
+            "denominator": 50,
+            "estimate": 0.04,
+            "ci95": [
+              0.011038884327619805,
+              0.1346009068750702
+            ],
+            "method": "Wilson two-sided95"
+          },
+          "accuracy": {
+            "count": 113,
+            "denominator": 120,
+            "estimate": 0.9416666666666667,
+            "ci95": [
+              0.8844740796636988,
+              0.9714589899997798
+            ],
+            "method": "Wilson two-sided95"
+          },
+          "error": {
+            "count": 7,
+            "denominator": 120,
+            "estimate": 0.058333333333333334,
+            "ci95": [
+              0.028541010000220295,
+              0.11552592033630113
+            ],
+            "method": "Wilson two-sided95"
+          },
+          "binary_logloss": 0.21278894917062488,
+          "logloss_clip_epsilon": 1e-15,
+          "exact_half_ties": 0
+        },
+        "accepted_source_set_sha256": "570d6771e5573a4b6be5bf59c6eb33080c6afa354db7135208b750077822d5cf"
+      },
+      "0.75": {
+        "accepted": 180,
+        "abstained": 60,
+        "coverage": 0.75,
+        "conditional": {
+          "n": 180,
+          "threshold": 0.5,
+          "comparison": "p>=0.5",
+          "confusion": {
+            "TP": 87,
+            "FP": 11,
+            "TN": 74,
+            "FN": 8
+          },
+          "recall": {
+            "count": 87,
+            "denominator": 95,
+            "estimate": 0.9157894736842105,
+            "ci95": [
+              0.8425478687567327,
+              0.9567118846157054
+            ],
+            "method": "Wilson two-sided95"
+          },
+          "fpr": {
+            "count": 11,
+            "denominator": 85,
+            "estimate": 0.12941176470588237,
+            "ci95": [
+              0.07382352798125273,
+              0.21704808943386777
+            ],
+            "method": "Wilson two-sided95"
+          },
+          "accuracy": {
+            "count": 161,
+            "denominator": 180,
+            "estimate": 0.8944444444444445,
+            "ci95": [
+              0.8410276570803017,
+              0.9313770056704258
+            ],
+            "method": "Wilson two-sided95"
+          },
+          "error": {
+            "count": 19,
+            "denominator": 180,
+            "estimate": 0.10555555555555556,
+            "ci95": [
+              0.0686229943295742,
+              0.1589723429196983
+            ],
+            "method": "Wilson two-sided95"
+          },
+          "binary_logloss": 0.3131555166284277,
+          "logloss_clip_epsilon": 1e-15,
+          "exact_half_ties": 0
+        },
+        "accepted_source_set_sha256": "1a536f6d63208a3cc5c3c07705d2ef154ca6d9479101c519d7de342cf456cce6"
+      },
+      "1.0": {
+        "accepted": 240,
+        "abstained": 0,
+        "coverage": 1.0,
+        "conditional": {
+          "n": 240,
+          "threshold": 0.5,
+          "comparison": "p>=0.5",
+          "confusion": {
+            "TP": 102,
+            "FP": 25,
+            "TN": 95,
+            "FN": 18
+          },
+          "recall": {
+            "count": 102,
+            "denominator": 120,
+            "estimate": 0.85,
+            "ci95": [
+              0.775324706432755,
+              0.9029618770741527
+            ],
+            "method": "Wilson two-sided95"
+          },
+          "fpr": {
+            "count": 25,
+            "denominator": 120,
+            "estimate": 0.20833333333333334,
+            "ci95": [
+              0.14528439608109694,
+              0.2894767843298135
+            ],
+            "method": "Wilson two-sided95"
+          },
+          "accuracy": {
+            "count": 197,
+            "denominator": 240,
+            "estimate": 0.8208333333333333,
+            "ci95": [
+              0.7673804761591676,
+              0.8641774252116654
+            ],
+            "method": "Wilson two-sided95"
+          },
+          "error": {
+            "count": 43,
+            "denominator": 240,
+            "estimate": 0.17916666666666667,
+            "ci95": [
+              0.13582257478833457,
+              0.23261952384083237
+            ],
+            "method": "Wilson two-sided95"
+          },
+          "binary_logloss": 0.3995763316902998,
+          "logloss_clip_epsilon": 1e-15,
+          "exact_half_ties": 0
+        },
+        "accepted_source_set_sha256": "acb5cba6b32fb78a213eda4c3dc7001e4345b70b6ef496a651e986118027f1aa"
+      }
+    },
+    "secondary_raw": {
+      "0.5": {
+        "accepted": 120,
+        "abstained": 120,
+        "coverage": 0.5,
+        "conditional": {
+          "n": 120,
+          "threshold": 0.5,
+          "comparison": "p>=0.5",
+          "confusion": {
+            "TP": 71,
+            "FP": 3,
+            "TN": 41,
+            "FN": 5
+          },
+          "recall": {
+            "count": 71,
+            "denominator": 76,
+            "estimate": 0.9342105263157895,
+            "ci95": [
+              0.8550647346629656,
+              0.9715734677804679
+            ],
+            "method": "Wilson two-sided95"
+          },
+          "fpr": {
+            "count": 3,
+            "denominator": 44,
+            "estimate": 0.06818181818181818,
+            "ci95": [
+              0.023459395907381622,
+              0.18225044370221527
+            ],
+            "method": "Wilson two-sided95"
+          },
+          "accuracy": {
+            "count": 112,
+            "denominator": 120,
+            "estimate": 0.9333333333333333,
+            "ci95": [
+              0.8739486959646967,
+              0.9658346931390938
+            ],
+            "method": "Wilson two-sided95"
+          },
+          "error": {
+            "count": 8,
+            "denominator": 120,
+            "estimate": 0.06666666666666667,
+            "ci95": [
+              0.03416530686090633,
+              0.12605130403530337
+            ],
+            "method": "Wilson two-sided95"
+          },
+          "binary_logloss": 0.2697908758011833,
+          "logloss_clip_epsilon": 1e-15,
+          "exact_half_ties": 0
+        },
+        "accepted_source_set_sha256": "483b8f9a308be9facca61ee5ab134cb935e96df166d819fe609043958e2a9a75"
+      },
+      "0.75": {
+        "accepted": 180,
+        "abstained": 60,
+        "coverage": 0.75,
+        "conditional": {
+          "n": 180,
+          "threshold": 0.5,
+          "comparison": "p>=0.5",
+          "confusion": {
+            "TP": 91,
+            "FP": 12,
+            "TN": 69,
+            "FN": 8
+          },
+          "recall": {
+            "count": 91,
+            "denominator": 99,
+            "estimate": 0.9191919191919192,
+            "ci95": [
+              0.8485819115773596,
+              0.9584855974970883
+            ],
+            "method": "Wilson two-sided95"
+          },
+          "fpr": {
+            "count": 12,
+            "denominator": 81,
+            "estimate": 0.14814814814814814,
+            "ci95": [
+              0.08682708209959752,
+              0.241331570612102
+            ],
+            "method": "Wilson two-sided95"
+          },
+          "accuracy": {
+            "count": 160,
+            "denominator": 180,
+            "estimate": 0.8888888888888888,
+            "ci95": [
+              0.83461326608738,
+              0.9269124577513652
+            ],
+            "method": "Wilson two-sided95"
+          },
+          "error": {
+            "count": 20,
+            "denominator": 180,
+            "estimate": 0.1111111111111111,
+            "ci95": [
+              0.07308754224863465,
+              0.16538673391261993
+            ],
+            "method": "Wilson two-sided95"
+          },
+          "binary_logloss": 0.3636098217251635,
+          "logloss_clip_epsilon": 1e-15,
+          "exact_half_ties": 0
+        },
+        "accepted_source_set_sha256": "011fdf63b0d9d3c29ba8c018d39c637d842ed300860d26d21d457f0617c6c447"
+      },
+      "1.0": {
+        "accepted": 240,
+        "abstained": 0,
+        "coverage": 1.0,
+        "conditional": {
+          "n": 240,
+          "threshold": 0.5,
+          "comparison": "p>=0.5",
+          "confusion": {
+            "TP": 106,
+            "FP": 30,
+            "TN": 90,
+            "FN": 14
+          },
+          "recall": {
+            "count": 106,
+            "denominator": 120,
+            "estimate": 0.8833333333333333,
+            "ci95": [
+              0.8136664838239611,
+              0.9292188219216995
+            ],
+            "method": "Wilson two-sided95"
+          },
+          "fpr": {
+            "count": 30,
+            "denominator": 120,
+            "estimate": 0.25,
+            "ci95": [
+              0.18109821656809566,
+              0.33441136664125615
+            ],
+            "method": "Wilson two-sided95"
+          },
+          "accuracy": {
+            "count": 196,
+            "denominator": 240,
+            "estimate": 0.8166666666666667,
+            "ci95": [
+              0.7628558049322243,
+              0.8605000457714551
+            ],
+            "method": "Wilson two-sided95"
+          },
+          "error": {
+            "count": 44,
+            "denominator": 240,
+            "estimate": 0.18333333333333332,
+            "ci95": [
+              0.1394999542285449,
+              0.23714419506777568
+            ],
+            "method": "Wilson two-sided95"
+          },
+          "binary_logloss": 0.4406916301346212,
+          "logloss_clip_epsilon": 1e-15,
+          "exact_half_ties": 4
+        },
+        "accepted_source_set_sha256": "32cf4b647b89cd2d92b3cd9965185fb4b44574bdce213f6dcade664164c7f4e3"
+      }
+    }
+  },
+  "paired_primary_minus_secondary": {
+    "pooled": {
+      "auroc": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "ap": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "macro_f1": {
+        "delta": 0.004832573189742284,
+        "ci95": [
+          -0.016533289358572557,
+          0.029790882751621124
+        ]
+      },
+      "recall": {
+        "delta": -0.033333333333333326,
+        "ci95": [
+          -0.06666666666666665,
+          -0.008333333333333304
+        ]
+      },
+      "fpr": {
+        "delta": -0.04166666666666666,
+        "ci95": [
+          -0.07500000000000001,
+          -0.00833333333333336
+        ]
+      },
+      "brier": {
+        "delta": -0.013128352367646562,
+        "ci95": [
+          -0.01838995932429864,
+          -0.007616873014610284
+        ]
+      },
+      "ece_10_equal_width": {
+        "delta": -0.050165404537500694,
+        "ci95": [
+          -0.07212124962333227,
+          -0.007087488032452734
+        ]
+      }
+    },
+    "category_macro": {
+      "auroc": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "ap": {
+        "delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "macro_f1": {
+        "delta": 0.009038151582011258,
+        "ci95": [
+          -0.01671056434647597,
+          0.037927375308894146
+        ]
+      },
+      "recall": {
+        "delta": -0.03333333333333335,
+        "ci95": [
+          -0.06666666666666667,
+          -0.008333333333333331
+        ]
+      },
+      "fpr": {
+        "delta": -0.04166666666666666,
+        "ci95": [
+          -0.07500000000000001,
+          -0.008333333333333337
+        ]
+      },
+      "brier": {
+        "delta": -0.013128352367646581,
+        "ci95": [
+          -0.01838995932429864,
+          -0.007616873014610295
+        ]
+      },
+      "ece_10_equal_width": {
+        "delta": -0.035271199509256994,
+        "ci95": [
+          -0.05569828211682306,
+          -0.013382001645399643
+        ]
+      }
+    }
+  },
+  "paired_logloss_difference": {
+    "pooled": {
+      "delta": -0.041115298444321366,
+      "ci95": [
+        -0.058343251614842016,
+        -0.022772920205431712
+      ]
+    },
+    "category_macro": {
+      "delta": -0.04111529844432137,
+      "ci95": [
+        -0.05834325161484202,
+        -0.022772920205431712
+      ]
+    }
+  },
+  "bootstrap": {
+    "replicates": 2000,
+    "seed": 42,
+    "strata": "category x label",
+    "calibrator_refitted": false,
+    "provider_uncertainty": false
+  },
+  "definitions": {
+    "confusion": "p>=.5 anomalypositive; primary all240 no abstention",
+    "logloss_clip": 1e-15,
+    "mapping_clip": 1e-06,
+    "coverage": "predeclared .5/.75/1 ceil fraction, descendingmax(p,1-p),sourceIDtie; subset conditional Wilson denominators",
+    "macro": "Arithmetic average12 categories at point and each paired replicate"
+  },
+  "limitations": [
+    "Single balanced fixed240, not deployment prevalence or crossdomain",
+    "Fixedcalibrator bootstrap excludes fit/provider/support selection uncertainty",
+    "Sourcebyte isolation does not establish physicalpart or nearduplicate independence; public pretraining unknown",
+    "Historical metadata stratification is distinct from sealed final prediction/label evaluation; teacher exposure separate audit",
+    "Supplement does not alter primary or tune thresholds"
+  ],
+  "gt_masks_opened": false,
+  "new_api_requests": 0
+}

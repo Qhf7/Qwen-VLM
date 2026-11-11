@@ -1,0 +1,20 @@
+{
+  "schema": "jev-resolution-figure-provenance-v1",
+  "timestamp_utc": "2026-11-10T18:41:21.351555+00:00",
+  "hostname": "autodl-container-132444827f-9c594038",
+  "script_sha256": "e7da91d05b943f645767fbdcdc2b268f5896a6e6820d23dc6138e1d49c883095",
+  "inputs_sha256": {
+    "stage10_resolution/metrics.json": "1a8642dbc2790f4b2bfca35b31c52810077f4befadf9848bed385adf874dc1a5",
+    "stage10_resolution/prediction_freeze.json": "835e18765069a481bd7185e57fa50a27f06140378f88737d4e224c4056d1f3a7",
+    "stage10_resolution/evaluation_contract_amended_reference.json": "79e0b0dab9fb166b1da7f922459642d621eed93c67ce31626cde0396da3fc256",
+    "stages/10_postexecution_audit.json": "dcdef3e9374860986b96016820c65b66acf08e8bd178092f024e3bc598ea2362"
+  },
+  "outputs_sha256": {
+    "resolution_tradeoff.png": "baa6e29e554fab1cbb22bc20e7de2e637ffe74c3451f98c77f70f2d2cff9e268",
+    "resolution_tradeoff.svg": "ca09902404813dc181714c22263cfe92d91251cc834bc49805c79148442f5c70"
+  },
+  "input_token_ratio320_over448": 0.7635290287956503,
+  "canvas_pixel_ratio": 0.5102040816326531,
+  "confirmation_opened": false,
+  "new_api_requests": 0
+}

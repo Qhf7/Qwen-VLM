@@ -38,7 +38,7 @@ AnomalyGPT 原始协议是正常图 + cut-paste/Poisson 模拟异常训练，真
 
 ### 3. 旧方案文档有“设计”和“实测”混写
 
-`docs/Anomaly-VL_v2框架设计.md` 将 DINOv3、图像锚点、9 个定位 token、Qwen 语言层写成后续框架设计，其中多处仍是待实现项；`docs/project_design_20261023/框架图与岗位能力说明.md` 明确写的是拟议设计、没有实验性能。它们不能作为已完成模型的证据。当前已完成的实测 native Qwen 项目应以 `industrial_vlm/reports/multitask_v2/实验报告.md` 和交付 manifest 为准。
+`docs/Anomaly-VL_v2框架设计.md` 将 DINOv3、图像锚点、9 个定位 token、Qwen 语言层写成后续框架设计，其中多处仍是待实现项；`docs/project_design_20261023/框架图与能力说明.md` 明确写的是拟议设计、没有实验性能。它们不能作为已完成模型的证据。当前已完成的实测 native Qwen 项目应以 `industrial_vlm/reports/multitask_v2/实验报告.md` 和交付 manifest 为准。
 
 ### 4. AnomalyGPT 语言 QA 本身没有解决
 

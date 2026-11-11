@@ -1,0 +1,28 @@
+{
+  "schema": "jev-source-disjoint-calibration-v1",
+  "feature": "logit(clip(p,1e-6,1-1e-6))",
+  "C": 1.0,
+  "penalty": "l2",
+  "solver": "lbfgs",
+  "max_iter": 1000,
+  "random_state": 42,
+  "coefficient": [
+    [
+      1.56720531322167
+    ]
+  ],
+  "intercept": [
+    -0.15632219069119976
+  ],
+  "classes": [
+    0,
+    1
+  ],
+  "n_iter": [
+    5
+  ],
+  "calibration_label_sha256": "aaaf4898122c685ed5a511af5b1d0d85d6eaa4d699a7822174eaa2a84a56fd1d",
+  "calibration_prediction_records_sha256": "96a709551b0fdd2376b2d97e4065853993dfac0284ef26f1217dcc684e3d7b9a",
+  "heldout_labels_used_for_fit": false,
+  "confirmation_opened": false
+}

@@ -1,0 +1,143 @@
+{
+  "schema": "jev-mask-derived-spatial-support-diagnostic-v2",
+  "status": "targets_frozen",
+  "source_contract_sha256": "f1ea9b7a4f24b795b35a44d12e629be4eca5799f58fecd58e65a03fad43bcc51",
+  "protocol_sha256": "442d650e54ab5fdbece6318e842a2af941fba619a7e009ea8e8bd3c7a058c75a",
+  "feasibility_sha256": "b91187d4fad25921e466181e8a7c39d4ba9439d5c12fcef5c5f5271ca700484b",
+  "n_sources": 2,
+  "n_targets": 8,
+  "records": [
+    {
+      "source_id": "visa_094f90fda64be342bd38b8e43d8aeea5e7a6b02d266e5e41cfc8a448d62c0c01",
+      "arm": "text_a",
+      "claim": "A visible defect is present in the bottom-left cell of the image.",
+      "query_asset": null,
+      "content_bounds_in_query448": [
+        0.0,
+        0.16517857142857142,
+        1.0,
+        0.8325892857142857
+      ]
+    },
+    {
+      "source_id": "visa_094f90fda64be342bd38b8e43d8aeea5e7a6b02d266e5e41cfc8a448d62c0c01",
+      "arm": "image_b",
+      "claim": "A visible defect is present in the top-center cell of the image.",
+      "query_asset": {
+        "path": "assets/query/visa_094f90fda64be342bd38b8e43d8aeea5e7a6b02d266e5e41cfc8a448d62c0c01.png",
+        "png_bytes": 247628,
+        "png_sha256": "83983e748a5b19efbb60224b6129a754cc4aa9ea0d82f140534168ab3b29c0e4",
+        "size": [
+          448,
+          448
+        ]
+      },
+      "content_bounds_in_query448": [
+        0.0,
+        0.16517857142857142,
+        1.0,
+        0.8325892857142857
+      ]
+    },
+    {
+      "source_id": "visa_094f90fda64be342bd38b8e43d8aeea5e7a6b02d266e5e41cfc8a448d62c0c01",
+      "arm": "text_b",
+      "claim": "A visible defect is present in the top-center cell of the image.",
+      "query_asset": null,
+      "content_bounds_in_query448": [
+        0.0,
+        0.16517857142857142,
+        1.0,
+        0.8325892857142857
+      ]
+    },
+    {
+      "source_id": "visa_094f90fda64be342bd38b8e43d8aeea5e7a6b02d266e5e41cfc8a448d62c0c01",
+      "arm": "image_a",
+      "claim": "A visible defect is present in the bottom-left cell of the image.",
+      "query_asset": {
+        "path": "assets/query/visa_094f90fda64be342bd38b8e43d8aeea5e7a6b02d266e5e41cfc8a448d62c0c01.png",
+        "png_bytes": 247628,
+        "png_sha256": "83983e748a5b19efbb60224b6129a754cc4aa9ea0d82f140534168ab3b29c0e4",
+        "size": [
+          448,
+          448
+        ]
+      },
+      "content_bounds_in_query448": [
+        0.0,
+        0.16517857142857142,
+        1.0,
+        0.8325892857142857
+      ]
+    },
+    {
+      "source_id": "visa_07bfdf2da58b61d1de26368da4b5aa2c4587de4c3ea220389647057745ba6c4a",
+      "arm": "image_b",
+      "claim": "A visible defect is present in the middle-right cell of the image.",
+      "query_asset": {
+        "path": "assets/query/visa_07bfdf2da58b61d1de26368da4b5aa2c4587de4c3ea220389647057745ba6c4a.png",
+        "png_bytes": 419886,
+        "png_sha256": "1b4a924cfcaf1ed975b89889d04825b77ba71250419cf582bd4727170ffdd613",
+        "size": [
+          448,
+          448
+        ]
+      },
+      "content_bounds_in_query448": [
+        0.0,
+        0.03794642857142857,
+        1.0,
+        0.9620535714285714
+      ]
+    },
+    {
+      "source_id": "visa_07bfdf2da58b61d1de26368da4b5aa2c4587de4c3ea220389647057745ba6c4a",
+      "arm": "image_a",
+      "claim": "A visible defect is present in the bottom-left cell of the image.",
+      "query_asset": {
+        "path": "assets/query/visa_07bfdf2da58b61d1de26368da4b5aa2c4587de4c3ea220389647057745ba6c4a.png",
+        "png_bytes": 419886,
+        "png_sha256": "1b4a924cfcaf1ed975b89889d04825b77ba71250419cf582bd4727170ffdd613",
+        "size": [
+          448,
+          448
+        ]
+      },
+      "content_bounds_in_query448": [
+        0.0,
+        0.03794642857142857,
+        1.0,
+        0.9620535714285714
+      ]
+    },
+    {
+      "source_id": "visa_07bfdf2da58b61d1de26368da4b5aa2c4587de4c3ea220389647057745ba6c4a",
+      "arm": "text_b",
+      "claim": "A visible defect is present in the middle-right cell of the image.",
+      "query_asset": null,
+      "content_bounds_in_query448": [
+        0.0,
+        0.03794642857142857,
+        1.0,
+        0.9620535714285714
+      ]
+    },
+    {
+      "source_id": "visa_07bfdf2da58b61d1de26368da4b5aa2c4587de4c3ea220389647057745ba6c4a",
+      "arm": "text_a",
+      "claim": "A visible defect is present in the bottom-left cell of the image.",
+      "query_asset": null,
+      "content_bounds_in_query448": [
+        0.0,
+        0.03794642857142857,
+        1.0,
+        0.9620535714285714
+      ]
+    }
+  ],
+  "max_successes": 48,
+  "no_GT_in_state": true,
+  "label_semantics": "mask-derived spatial proxy",
+  "proxy_labels_sha256": "a0111ebc750174f15cf4061bbde3bbe890f2d84f192d2cf8380c43b152367573"
+}

@@ -1,0 +1,12 @@
+{
+  "timestamp_utc": "2026-11-10T14:15:50.657648+00:00",
+  "queries": 120,
+  "supports": 48,
+  "expected_target_judgments": 360,
+  "historical_identity_checks_passed": true,
+  "current_bytes_verified": false,
+  "missing_images": [],
+  "available_path_count_only": 168,
+  "status": "prepared_pending_materialization",
+  "confirmation_images_opened": false
+}

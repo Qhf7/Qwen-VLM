@@ -1,0 +1,20 @@
+{
+  "schema": "jev-three-way-figure-provenance-v1",
+  "timestamp_utc": "2026-11-10T19:53:30.242610+00:00",
+  "hostname": "autodl-container-132444827f-9c594038",
+  "script_sha256": "7baea5b1d0f6efcd7ab6e743ad31a1a66c585f261aba52b47ad81c93db6de5bb",
+  "inputs_sha256": {
+    "protocol.json": "f513d908347c5ead1429786e29da0bdfe33f3b3d44f76daf7101f23cfe291fbc",
+    "selected_policies.json": "f667483e7e4c97967b3f77811ab980159fb097b25e6f1543af73a49318eb6dc1",
+    "results.json": "acd2cdd5c30e535109b9979ecb64b39533955b3c95fea7ad46d21d60ee97a4f7",
+    "independent_audit.json": "143a99465ba34ae45436f59899b8704d06d98140e72629dbfbb2e3ec07e8a571",
+    "EXPLORATORY_HELDOUT_GRID.jsonl": "5d8e4eb4ce509150ba32b8ff0dd1eff3ae0739472080634182352ae4f6556a66"
+  },
+  "outputs_sha256": {
+    "decision_routing_analysis.png": "29b9dd346b38de81764e89121a80e40bce3f2190d73ad13d626a08e8d349422e",
+    "decision_routing_analysis.svg": "1a08bca36d0a477ae2fcac6dd232220fe6879eace2108f2534e2f676f9e111fd"
+  },
+  "statistics_on_server": true,
+  "stage13_data_read": false,
+  "api_calls": 0
+}

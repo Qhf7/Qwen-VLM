@@ -1,0 +1,92 @@
+{
+  "schema": "jev-offline-sequential-routing-v1",
+  "status": "frozen",
+  "timestamp_utc": "2026-11-10T17:48:39.435826+00:00",
+  "hostname": "autodl-container-132444827f-9c594038",
+  "ground_truth_or_metrics_read": false,
+  "protocol": {
+    "schema": "jev-offline-sequential-routing-v1",
+    "run": "runs/modelgo_roi",
+    "formal_contract_sha256": "03c1d0382427b75b30dce6044066cbb4e0f78e3e1c4396694e6fa7da7e112108",
+    "formal_contract_canonical_sha256": "f40a0ea5e6ca1921e3876838c022f38765b12c8301841e4b6a2ba617be0503e8",
+    "candidates_sha256": "8ce1e859a74de0d33abefaff8c0b3f66a58a8daeca6eb7be70d5cd23591414ef",
+    "routing_source_sha256": "388ade60c119cbc209d3d5b3c80c1712ea24b28e716ac1af88b17d408048e08f",
+    "evaluation_source_sha256": "aad082c77ee00f9cc1fcd214fa50a06ee9cf7560469e8891fb6fd05274c18496",
+    "api_source_sha256": "4f7b5ed1f703b3751f9fd4bb8c86131d684cec0bed3a9011f5108621e7aa9e01",
+    "dependencies": {
+      "python": "3.10.22",
+      "numpy": "2.2.6"
+    },
+    "n_queries": 120,
+    "threshold": 0.5,
+    "decision": "p>=0.5 retains the fixed candidate",
+    "policies": {
+      "duplicate": "One duplicate arm response per query; one logical request",
+      "roi": "One ROI arm response per query; one logical request",
+      "sequential_uncertain": {
+        "first": "duplicate",
+        "lower": 0.25,
+        "upper": 0.75,
+        "interval": "closed_both",
+        "require_different_crop": true,
+        "action": "Use ROI response iff duplicate probability in [.25,.75] and crop bytes differ; else duplicate",
+        "calls": "one duplicate for every query plus one ROI for every triggered query"
+      },
+      "matched_random": {
+        "seeds": [
+          42,
+          43,
+          44
+        ],
+        "eligible": "crop bytes differ",
+        "count": "Same number as sequential_uncertain over the full120; never label dependent",
+        "selection": "Sort sha256(jev-routing-matched-random-v1|seed|source_id) ascending, then source_id; first K",
+        "first": "duplicate",
+        "action": "Use ROI for selected K and duplicate otherwise",
+        "interpretation": "Three descriptive matched random selections; not trained seeds or independent datasets"
+      },
+      "geometry_small": {
+        "max_area": 0.5,
+        "comparison": "area<=0.5",
+        "require_different_crop": true,
+        "first": "duplicate",
+        "action": "Use ROI iff original-normalized candidate area<=0.5 and crop bytes differ"
+      }
+    },
+    "partitions": [
+      "all120",
+      "teacher_unseen",
+      "teacher_training_exposed",
+      "query_crop_bytes_identical",
+      "query_crop_bytes_different",
+      "full_image_candidate",
+      "nonfull_image_candidate"
+    ],
+    "teacher_unseen_definition": "teacher_split != train; fixed development subset",
+    "group_routing": "Compute routing and matched K once on all120; subgroups only evaluate that frozen route",
+    "metrics": [
+      "anomaly_bbox_iou_mean_all",
+      "anomaly_iou_at_05_all",
+      "anomaly_retained_recall",
+      "normal_positive_box_rate"
+    ],
+    "bootstrap": {
+      "replicates": 2000,
+      "seed": 42,
+      "strata": "category x image_label",
+      "paired": true,
+      "route_frozen_during_resampling": true,
+      "policy_reselection_uncertainty": false
+    },
+    "input_budget": "Logical successful model requests and observed usage of selected saved calls; no monetary estimate",
+    "collection_budget": "The full240 table was collected; replay logical budgets do not undo actual calls/retries",
+    "no_gt_or_metric_policy_tuning": true,
+    "no_oracle_arm_selection": true,
+    "no_api_calls": true,
+    "offline_replay_only": true,
+    "online_agent_benefit_measured": false,
+    "confirmation_opened": false,
+    "freeze_gate": "prepare reads only formal contract and fixed candidates; evaluate requires stage05 complete and identical frozen predictions"
+  },
+  "protocol_sha256": "f71f946972c53eb861859216f368c5e4b1046d859368eca3d3d41c9d0117f5bc"
+}
