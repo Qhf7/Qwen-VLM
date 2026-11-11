@@ -94,16 +94,7 @@ Jev gate 多检出 1 个异常，同时多报 1 个正常；相对基准 AUROC �
 7. **闭源模型的概率不能直接迁移**：版本、图片 header、网关行为和域内校准都需要本地复验。
 8. **评测纪律比单点数字更重要**：训练暴露 96/120、unseen 24 只有 2 张正常、confirmation 已查看，这些边界必须写清楚。
 
-## 8. 体现的能力
-
-- **受控多模态评测**：同 query、同输入、同标签、同候选、同 K，对比 0/1/4-shot 与 Qwen base/DD。
-- **评测基础设施**：冻结 contract、SHA256、断点恢复、失败账本、独立审计；正式阶段 1,440 个目标、1,588 次请求、0 未知。
-- **校准与运行点分析**：Brier/ECE、固定 FPR、三态路由、Wilson/配对 bootstrap，能区分排序、校准和策略。
-- **失败模式定位**：候选几何退化、Teacher 训练暴露、proxy label、阈值语义差异。
-- **闭源模型接入与审计**：版本固定、图片 header、网关回显限制、失败重试上限、预测冻结后才读 GT。
-- **研究诚信**：预注册、负结果保留、不拿已看 confirmation 调参、不把空表当人工标签、不把厂商数字当自有证据。
-
-## 9. 边界
+## 8. 边界
 
 - 所有结果来自 **已查看的开发集**，不是新盲测；confirmation240 已查看，不能再用于同轮调参。
 - Jev 4-shot 91.33% 低于 Qwen DD 93.49%，**不能写“Jev 更强”**；两者阈值和内部算力也不同。
@@ -111,7 +102,7 @@ Jev gate 多检出 1 个异常，同时多报 1 个正常；相对基准 AUROC �
 - 图片/Box 是厂商实验特性，不能写生产就绪；语义复核尚未完成人工 gold。
 - 仓库只保留报告、代码、协议、汇总指标和图表，不包含原始图片、权重、缓存、逐样本预测或人工复核原图。
 
-## 10. 目录与证据
+## 9. 目录与证据
 
 ### 文档
 
@@ -134,18 +125,3 @@ Jev gate 多检出 1 个异常，同时多报 1 个正常；相对基准 AUROC �
 - [固定 FPR 独立审计](../../industrial_vlm/experiments/jev_decision_round2_20261111/fixed_fpr_operating_points/independent_audit.md)
 - [语义复核设计](../../industrial_vlm/experiments/jev_decision_round2_20261111/human_semantic_review/DESIGN_AND_PLAN.md)
 - [最终确认报告](../../industrial_vlm/experiments/jev_followup_20261111/stage13_confirmation/REPORT.md)
-
-## 11. 与大模型基座算法的联系
-
-- **后训练目标**：Qwen 用 SFT/QLoRA；Jev 厂商称用 RLCD（calibrated decisions）。目标函数决定输出契约：RLHF 偏偏好、RLVR 偏可验证、RLCD 偏校准决策；要概率就应优化 proper scoring/校准目标，而不只是 next-token CE。
-- **判别头 / 奖励模型 / 验证器**：项目的 `logP(true) − logP(false)` 是手搓判别头；Jev 是专用判别模型。基座模型可以“生成骨干 + 判别头”两段式，奖励模型、验证器、路由器都是这个模式。
-- **PEFT vs 上下文学习**：QLoRA 15.3M 参数 vs Jev 0/1/4-shot 参考图。有标签、要稳定 → SFT/LoRA；没标签、要快速试 → few-shot/ICL。
-- **多模态对齐**：Qwen 原生视觉塔 196 token@448；AnomalyGPT 19 个 soft token；Jev 图片输入是实验特性。视觉 token 预算、分辨率和 projector 对齐决定上限。
-- **校准与部署**：Brier/ECE、固定 FPR、三态路由、Wilson/配对 bootstrap；基座模型部署必须做域内校准，并报告 coverage/risk，而不只是 AUROC。
-- **评测与数据隔离**：预注册、source/byte 隔离、审计、负结果；这是基座模型评测的核心素养。
-
-## 12. 简历表达
-
-> 引入 TypeSafe Jev（System One 判别模型）作为工业异常检测的通用基线与决策层：构建 0/1/4-shot 同图评测，4-shot AUROC 91.33%（较 0-shot +7.9pp），但低于同输入 Qwen DD LoRA 93.49%；通过域内校准将 heldout FPR 18.33%→10.00%（AUROC 不变），并完成 24 图真实 gate→裁剪→末级请求 pilot，系统报告 ROI/路由负结果与候选几何瓶颈。
-
-> 建立预注册、SHA 冻结、断点恢复、独立审计的评测流程；正式阶段 1,440 个目标、1,588 次请求、0 未知，能够区分“排序 / 校准 / 策略”三层，并诚实保留负结果。

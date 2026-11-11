@@ -90,4 +90,4 @@ teacher固定框明显强于S，当前语言坐标输出没有充分保留teache
 
 本轮已完成。新一轮优先研究保留空间信息的patch/map接口与坐标头，并加入同曝光继续CE控制；其次在新校准数据研究误报约束，再用新留出集验证；最后为ROI策略加入有益裁剪/直接回答示范，测试调用率、效用与成本。新研究应先冻结新协议，本轮外部结果不用于调阈值、prompt或选checkpoint。
 
-[简历与面试表述](PROJECT_PROGRESS.md)；[开发图](figures/)和[外部图](external_figures/)分别附来源SHA。
+[开发图](figures/)和[外部图](external_figures/)分别附来源SHA。
