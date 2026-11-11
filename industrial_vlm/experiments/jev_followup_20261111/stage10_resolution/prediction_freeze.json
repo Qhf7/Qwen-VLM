@@ -1,0 +1,32 @@
+{
+  "schema": "jev-independent-resolution-ablation-v1",
+  "contract_sha256": "dcb93b15d2d83491a74997ba40ea01d22b32a09e51ed224f722aab3205adcfbe",
+  "predictions320_sha256": "74a656a2d8c71ae6a3d80de4c36deb1759f4d8704bccf2f3f2a8272432be7974",
+  "reference_contract_sha256": "49a55faf08234a9c7d1c199c87b8f5e5e1de02fa0c0bdbc4ca20b11a9d66d511",
+  "reference_predictions_sha256": "3ac5598625bf22ded0ff56497f60dc9b3e8276c60cbb6e90b0b04ea9d7345a0f",
+  "support_source_sha256": "fc6ddc02eb2e2a8c0556f3843a5e73321f9d9bfcf1b5f14314de1aea2077d0bd",
+  "resolution_source_sha256": "4458848524108d22220d1196cffef65967d06f730425e1cb73277e651b1db9af",
+  "evaluator_source_sha256": "55c387f9195017e888fb24567cc7b49680ec2e9fab988701afcc7b4860854dee",
+  "evaluation_contract_sha256": "79e0b0dab9fb166b1da7f922459642d621eed93c67ce31626cde0396da3fc256",
+  "reference_completion_certificate_sha256": "c9ec5d068d6533f4165e52ff61b8cfd24d605b21e2ab6d19c47ea408977a1eae",
+  "reference_operational_amendment": {
+    "reference_completion_status": "complete_with_operational_amendment",
+    "original_stage_status": "incomplete_requires_explicit_retry",
+    "original_status_unchanged": true,
+    "scientific_change": false,
+    "certificate_path": "stage08_rescue/completion_certificate.json",
+    "certificate_sha256": "c9ec5d068d6533f4165e52ff61b8cfd24d605b21e2ab6d19c47ea408977a1eae",
+    "combined_predictions_path": "stage08_rescue/combined_predictions.jsonl",
+    "combined_predictions_sha256": "3ac5598625bf22ded0ff56497f60dc9b3e8276c60cbb6e90b0b04ea9d7345a0f",
+    "operational_amendment_sha256": "c504d573889d77286e9e985c3e96b11fa73500909f41cc9350e7e78335b7e0d5",
+    "original_contract_sha256": "49a55faf08234a9c7d1c199c87b8f5e5e1de02fa0c0bdbc4ca20b11a9d66d511",
+    "original_predictions_sha256": "a7b0244279562b702735ca0bc0336f260af897e3c06ac984c50200233bdd68cc",
+    "reference_source_sha256": "1ea9ec2340faeb089f24f038484f0e24f8b69f699ed9d2abde0c808a9a537e22",
+    "evaluator_source_sha256": "55c387f9195017e888fb24567cc7b49680ec2e9fab988701afcc7b4860854dee",
+    "reused_arm": "shared0",
+    "reused_accepted": 120,
+    "excluded_support_arm_observations": 480
+  },
+  "labels_not_opened_by_wrapper_before_prediction_freeze": true,
+  "confirmation_opened": false
+}

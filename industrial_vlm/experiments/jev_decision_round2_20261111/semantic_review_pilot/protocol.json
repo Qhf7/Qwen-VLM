@@ -1,0 +1,66 @@
+{
+  "schema": "jev-mask-derived-spatial-support-diagnostic-v1",
+  "model": "jev-1.14.0",
+  "endpoint": "https://api.modelgo.ai/v1/systemone",
+  "question_type": "noul",
+  "source_set": "Exactly the already frozen online_route_pilot24 sources; no replacements.",
+  "prepare_reads": "Online label-free contract and original448 PNG only; no GT labels/masks.",
+  "feasibility_gate": "Complete online gate+final predictions freeze, then explicit authorization to open approved development targets/masks.",
+  "image_geometry": "Exact online query448 PNG; square view; original pixel-center thirds define grid.",
+  "eligibility": {
+    "anomaly_only": true,
+    "nonempty_binary_GT": true,
+    "one_8_connected_component": true,
+    "dominant_GT_fraction_at_least": 0.8,
+    "each_other_cell_GT_fraction_at_most": 0.1,
+    "GT_pixel_centers_minimum_margin_from_all_dominant_cell_edges_original_pixels": 2,
+    "margin_interpretation": "Every positive pixel at least2 original pixels inside dominant cell; stricter than80% alone.",
+    "false_cell": "Zero GT pixels and Chebyshev grid distance>1 from dominant cell.",
+    "middle_center": "Excluded: no non-adjacent grid cell.",
+    "failure": "Record all applicable exclusion reasons; no substitutes outside24."
+  },
+  "selection": "Eligible first min(12,n) by sha256(semantic-spatial-v1|source_id), then source_id.",
+  "false_cell_selection": "Minimum sha256(semantic-false-v1|source_id|grid_index), then index among empty nonadjacent cells.",
+  "claim_text": "A visible defect is present in the {grid_cell} cell of the image.",
+  "label_semantics": "Mask-derived spatial proxy; not human-verified visual fact gold, defect type, or causal explanation truth.",
+  "rubric": "Does the image provide visible evidence supporting the claim in state.claim? The claim is: a visible defect is present in the named cell of a fixed 3 by 3 grid of the original image. Rows are top, middle, bottom; columns are left, center, right, with equal thirds. Judge only support from visible image content. Do not invent defects, causes, or unseen details. If no image is supplied, no visual evidence is supplied; do not use the wording alone as evidence.",
+  "criteria": {
+    "true": "The supplied image provides visible evidence of a defect in the claimed grid cell.",
+    "false": "The claim lacks visible support, contradicts the image, or cannot be judged from supplied evidence."
+  },
+  "targets": "True/false spatial claims each with image and without image;4/source.",
+  "normal_sources": "All-negative descriptive denominator only; no API budget allocated.",
+  "question": "supported",
+  "state_allowlist": [
+    "query",
+    "claim"
+  ],
+  "prohibited_inputs": [
+    "GT mask",
+    "label",
+    "eligibility statistics",
+    "candidate box",
+    "teacher map",
+    "old probability",
+    "correct answer"
+  ],
+  "output_interpretation": "Typed Noul support probability; confidence calibration not assumed.",
+  "budget": {
+    "max_sources": 12,
+    "max_successful_targets": 48,
+    "max_started": 144,
+    "per_target_started": 3,
+    "rolling_workers": 3,
+    "cumulative_failure_stop_new_submission": 10,
+    "inflight_failure_drain_bound": 12,
+    "consecutive_failure_stop": 3,
+    "unknown_completion_hardstop": true,
+    "explicit_new_invocation_required_for_known_failed_retry": true,
+    "automatic_HTTP_retry": false
+  },
+  "metrics": "Image proxy accuracy/separation; no-image prior separation; paired source-level separation change. Descriptive development diagnostic.",
+  "threshold": "Fixed0.5 for image proxy accuracy only; no tuning.",
+  "stage13_access": false,
+  "native_test_access": false,
+  "training": false
+}

@@ -1,0 +1,1211 @@
+{
+  "schema": "jev-industrial-baseline-v1",
+  "data_role": "previously_viewed_development_validation_not_blind_test",
+  "queries": [
+    {
+      "source_id": "visa_02118dfcc70533cacff3d1f94e7545584a0162a8d5af70a71a95e9a44c1ec23b",
+      "category": "cashew",
+      "relative_image": "cashew/Data/Images/Anomaly/050.JPG",
+      "sha256": "02118dfcc70533cacff3d1f94e7545584a0162a8d5af70a71a95e9a44c1ec23b",
+      "source_bytes": 327906
+    },
+    {
+      "source_id": "visa_03bf3de6c94990a0e03ea785c205a9a6370cd05afc344d8b2bfb9f0db98b0b7d",
+      "category": "pcb1",
+      "relative_image": "pcb1/Data/Images/Normal/0228.JPG",
+      "sha256": "03bf3de6c94990a0e03ea785c205a9a6370cd05afc344d8b2bfb9f0db98b0b7d",
+      "source_bytes": 260020
+    },
+    {
+      "source_id": "visa_056418a7dea6b445f00af24256b5a867068bc720484d335ed7c59ead13bda5f5",
+      "category": "macaroni2",
+      "relative_image": "macaroni2/Data/Images/Normal/0409.JPG",
+      "sha256": "056418a7dea6b445f00af24256b5a867068bc720484d335ed7c59ead13bda5f5",
+      "source_bytes": 111278
+    },
+    {
+      "source_id": "visa_06923fecac473165ea7cc74dd763f38d88aec13b0f35c479f8dbc24fe63fd4b1",
+      "category": "pcb4",
+      "relative_image": "pcb4/Data/Images/Normal/0336.JPG",
+      "sha256": "06923fecac473165ea7cc74dd763f38d88aec13b0f35c479f8dbc24fe63fd4b1",
+      "source_bytes": 207952
+    },
+    {
+      "source_id": "visa_06d6756770a3762dbd04216f88a4c14da3aa92683e06d584cecac3fb87a683b5",
+      "category": "pipe_fryum",
+      "relative_image": "pipe_fryum/Data/Images/Anomaly/016.JPG",
+      "sha256": "06d6756770a3762dbd04216f88a4c14da3aa92683e06d584cecac3fb87a683b5",
+      "source_bytes": 109079
+    },
+    {
+      "source_id": "visa_07bfdf2da58b61d1de26368da4b5aa2c4587de4c3ea220389647057745ba6c4a",
+      "category": "cashew",
+      "relative_image": "cashew/Data/Images/Anomaly/020.JPG",
+      "sha256": "07bfdf2da58b61d1de26368da4b5aa2c4587de4c3ea220389647057745ba6c4a",
+      "source_bytes": 360575
+    },
+    {
+      "source_id": "visa_08b018905002d81f6c03e9bd7811c9e0592bb575b5655d899e7adebc5f3bf98b",
+      "category": "pcb3",
+      "relative_image": "pcb3/Data/Images/Anomaly/020.JPG",
+      "sha256": "08b018905002d81f6c03e9bd7811c9e0592bb575b5655d899e7adebc5f3bf98b",
+      "source_bytes": 139628
+    },
+    {
+      "source_id": "visa_0905967ed6f69618638a663faab8051fdb8b7b4ff87c7b26d7a993f15fd8d052",
+      "category": "macaroni1",
+      "relative_image": "macaroni1/Data/Images/Normal/0008.JPG",
+      "sha256": "0905967ed6f69618638a663faab8051fdb8b7b4ff87c7b26d7a993f15fd8d052",
+      "source_bytes": 112179
+    },
+    {
+      "source_id": "visa_094f90fda64be342bd38b8e43d8aeea5e7a6b02d266e5e41cfc8a448d62c0c01",
+      "category": "capsules",
+      "relative_image": "capsules/Data/Images/Anomaly/019.JPG",
+      "sha256": "094f90fda64be342bd38b8e43d8aeea5e7a6b02d266e5e41cfc8a448d62c0c01",
+      "source_bytes": 254687
+    },
+    {
+      "source_id": "visa_0a507972356d8c3f70840298cb94342d791efddfc0b857ea1b9673c2d19ccdeb",
+      "category": "pcb3",
+      "relative_image": "pcb3/Data/Images/Normal/0481.JPG",
+      "sha256": "0a507972356d8c3f70840298cb94342d791efddfc0b857ea1b9673c2d19ccdeb",
+      "source_bytes": 140141
+    },
+    {
+      "source_id": "visa_0ad1e76137ca16b7baf5e2988ba6008e52d54319664359383446ba6aee9426af",
+      "category": "chewinggum",
+      "relative_image": "chewinggum/Data/Images/Normal/214.JPG",
+      "sha256": "0ad1e76137ca16b7baf5e2988ba6008e52d54319664359383446ba6aee9426af",
+      "source_bytes": 133403
+    },
+    {
+      "source_id": "visa_0e1137bd859430b2dc914a81a517c2eafb95507f8622f3bd0d85143cf903ac84",
+      "category": "fryum",
+      "relative_image": "fryum/Data/Images/Normal/139.JPG",
+      "sha256": "0e1137bd859430b2dc914a81a517c2eafb95507f8622f3bd0d85143cf903ac84",
+      "source_bytes": 139505
+    },
+    {
+      "source_id": "visa_12113008ba45eebb2ffd45b369cbd690c7f91ed4531bd99034737834ade89ab7",
+      "category": "capsules",
+      "relative_image": "capsules/Data/Images/Normal/441.JPG",
+      "sha256": "12113008ba45eebb2ffd45b369cbd690c7f91ed4531bd99034737834ade89ab7",
+      "source_bytes": 246453
+    },
+    {
+      "source_id": "visa_165dc8aa9b514b8644d5e6aee40b2e6b9a4252619a49bff78e2f4713b19c9119",
+      "category": "pcb3",
+      "relative_image": "pcb3/Data/Images/Normal/0582.JPG",
+      "sha256": "165dc8aa9b514b8644d5e6aee40b2e6b9a4252619a49bff78e2f4713b19c9119",
+      "source_bytes": 140548
+    },
+    {
+      "source_id": "visa_17b1056a4488d59413cbf86d879d470bdbae88fdfa05d981b28a6b909bfedae8",
+      "category": "pcb1",
+      "relative_image": "pcb1/Data/Images/Normal/0834.JPG",
+      "sha256": "17b1056a4488d59413cbf86d879d470bdbae88fdfa05d981b28a6b909bfedae8",
+      "source_bytes": 294356
+    },
+    {
+      "source_id": "visa_19c53aa37353abee35a64fd37d8225095d93e6c1e973a2d0b19fa7631cea100e",
+      "category": "macaroni2",
+      "relative_image": "macaroni2/Data/Images/Anomaly/070.JPG",
+      "sha256": "19c53aa37353abee35a64fd37d8225095d93e6c1e973a2d0b19fa7631cea100e",
+      "source_bytes": 104644
+    },
+    {
+      "source_id": "visa_1be7809506f2372505d7506c47502f75ec9ba094e306c9d394a067b368c6a8e3",
+      "category": "pcb2",
+      "relative_image": "pcb2/Data/Images/Anomaly/047.JPG",
+      "sha256": "1be7809506f2372505d7506c47502f75ec9ba094e306c9d394a067b368c6a8e3",
+      "source_bytes": 266476
+    },
+    {
+      "source_id": "visa_22d46fe93b56c9c54c70798c09510990dd80427f764469d742ccab3ae19cd22c",
+      "category": "fryum",
+      "relative_image": "fryum/Data/Images/Anomaly/012.JPG",
+      "sha256": "22d46fe93b56c9c54c70798c09510990dd80427f764469d742ccab3ae19cd22c",
+      "source_bytes": 136311
+    },
+    {
+      "source_id": "visa_237b3130d94c23e97c61f64034b54e1452844a529f59aac625a05e1aa34d07c9",
+      "category": "pcb3",
+      "relative_image": "pcb3/Data/Images/Normal/0201.JPG",
+      "sha256": "237b3130d94c23e97c61f64034b54e1452844a529f59aac625a05e1aa34d07c9",
+      "source_bytes": 137834
+    },
+    {
+      "source_id": "visa_239efd141060d4cc71769087867869cf8f5e6e616c6f6b3c37aa533fe9b7c30a",
+      "category": "macaroni2",
+      "relative_image": "macaroni2/Data/Images/Normal/0661.JPG",
+      "sha256": "239efd141060d4cc71769087867869cf8f5e6e616c6f6b3c37aa533fe9b7c30a",
+      "source_bytes": 112697
+    },
+    {
+      "source_id": "visa_245af4e00c07467a6c79bca646862343f8b788a2ba1f99e69fb276779729c8dc",
+      "category": "macaroni1",
+      "relative_image": "macaroni1/Data/Images/Normal/0140.JPG",
+      "sha256": "245af4e00c07467a6c79bca646862343f8b788a2ba1f99e69fb276779729c8dc",
+      "source_bytes": 119174
+    },
+    {
+      "source_id": "visa_24b73ed6c3e0ef894969e307b4b53ad78c3cc4c031de786307100224158bd54c",
+      "category": "pcb2",
+      "relative_image": "pcb2/Data/Images/Normal/0175.JPG",
+      "sha256": "24b73ed6c3e0ef894969e307b4b53ad78c3cc4c031de786307100224158bd54c",
+      "source_bytes": 256073
+    },
+    {
+      "source_id": "visa_26e8994377df592315f6fe95dddf1f4bf7fa11e1844dabf8b10183b70c803ff2",
+      "category": "candle",
+      "relative_image": "candle/Data/Images/Anomaly/019.JPG",
+      "sha256": "26e8994377df592315f6fe95dddf1f4bf7fa11e1844dabf8b10183b70c803ff2",
+      "source_bytes": 123271
+    },
+    {
+      "source_id": "visa_274537cc9cf2df811c54a90477f1af5c0bc01ed89b8d1f586040f844f7aefb31",
+      "category": "macaroni1",
+      "relative_image": "macaroni1/Data/Images/Anomaly/057.JPG",
+      "sha256": "274537cc9cf2df811c54a90477f1af5c0bc01ed89b8d1f586040f844f7aefb31",
+      "source_bytes": 124712
+    },
+    {
+      "source_id": "visa_275532f2cbe28d92bf32b925602c174d56af798ce6963bcfa1fbc913f8cdf80e",
+      "category": "capsules",
+      "relative_image": "capsules/Data/Images/Anomaly/020.JPG",
+      "sha256": "275532f2cbe28d92bf32b925602c174d56af798ce6963bcfa1fbc913f8cdf80e",
+      "source_bytes": 250103
+    },
+    {
+      "source_id": "visa_27d55bbf49acdaa3120733d213d58f6d86bd7b30520a5c7c3b77aeab06c789b6",
+      "category": "pcb1",
+      "relative_image": "pcb1/Data/Images/Normal/0014.JPG",
+      "sha256": "27d55bbf49acdaa3120733d213d58f6d86bd7b30520a5c7c3b77aeab06c789b6",
+      "source_bytes": 260229
+    },
+    {
+      "source_id": "visa_27e8ef0c6219a8cf7a6417aa6f9c5bf46b5e3c17c1c3b0fac2f11d81911efd98",
+      "category": "candle",
+      "relative_image": "candle/Data/Images/Normal/0728.JPG",
+      "sha256": "27e8ef0c6219a8cf7a6417aa6f9c5bf46b5e3c17c1c3b0fac2f11d81911efd98",
+      "source_bytes": 111242
+    },
+    {
+      "source_id": "visa_2ad68cdec7cfd55a58f554f93a07dba4e054ed5e1f5b578984381e09c88393ae",
+      "category": "capsules",
+      "relative_image": "capsules/Data/Images/Normal/499.JPG",
+      "sha256": "2ad68cdec7cfd55a58f554f93a07dba4e054ed5e1f5b578984381e09c88393ae",
+      "source_bytes": 234775
+    },
+    {
+      "source_id": "visa_2b2f19d8bfbb2761a5f2b3afba2d73f04435eb68d5f10a590a2d9de74a3475c5",
+      "category": "pcb1",
+      "relative_image": "pcb1/Data/Images/Anomaly/024.JPG",
+      "sha256": "2b2f19d8bfbb2761a5f2b3afba2d73f04435eb68d5f10a590a2d9de74a3475c5",
+      "source_bytes": 249793
+    },
+    {
+      "source_id": "visa_3209433cd5be38bef4b85e73d4b0a8ad9f0af9b8f89d1d13b91d3991f5cdc0a1",
+      "category": "pcb2",
+      "relative_image": "pcb2/Data/Images/Normal/0523.JPG",
+      "sha256": "3209433cd5be38bef4b85e73d4b0a8ad9f0af9b8f89d1d13b91d3991f5cdc0a1",
+      "source_bytes": 236976
+    },
+    {
+      "source_id": "visa_327f5fa628f8de6e7e9af779c9964163fc5fd3d2d4da8706e5b3331d6b815af9",
+      "category": "macaroni2",
+      "relative_image": "macaroni2/Data/Images/Anomaly/086.JPG",
+      "sha256": "327f5fa628f8de6e7e9af779c9964163fc5fd3d2d4da8706e5b3331d6b815af9",
+      "source_bytes": 111369
+    },
+    {
+      "source_id": "visa_331a918522239e8befad4c93940649fb9bb85bf237a63b04791c586d75b4f5b5",
+      "category": "candle",
+      "relative_image": "candle/Data/Images/Normal/0821.JPG",
+      "sha256": "331a918522239e8befad4c93940649fb9bb85bf237a63b04791c586d75b4f5b5",
+      "source_bytes": 121554
+    },
+    {
+      "source_id": "visa_3538f10a1d93329b6b3512454f12d304bad710ba16d6f873decf595de8daec7a",
+      "category": "fryum",
+      "relative_image": "fryum/Data/Images/Anomaly/090.JPG",
+      "sha256": "3538f10a1d93329b6b3512454f12d304bad710ba16d6f873decf595de8daec7a",
+      "source_bytes": 146438
+    },
+    {
+      "source_id": "visa_369c056fe93c793b0341285d45c0b2d73a488ae3c8c0f8caa395e95127bea109",
+      "category": "pcb1",
+      "relative_image": "pcb1/Data/Images/Anomaly/072.JPG",
+      "sha256": "369c056fe93c793b0341285d45c0b2d73a488ae3c8c0f8caa395e95127bea109",
+      "source_bytes": 264749
+    },
+    {
+      "source_id": "visa_37324060625ebe75b5d9a2a219d2d613ba668923803429d00d81c133928e0a7a",
+      "category": "macaroni2",
+      "relative_image": "macaroni2/Data/Images/Normal/0267.JPG",
+      "sha256": "37324060625ebe75b5d9a2a219d2d613ba668923803429d00d81c133928e0a7a",
+      "source_bytes": 104419
+    },
+    {
+      "source_id": "visa_3818647071f5f7c1ed01b7c48c9797b8a9285c38587738ab449ab55d8f0b2bb3",
+      "category": "macaroni2",
+      "relative_image": "macaroni2/Data/Images/Normal/0648.JPG",
+      "sha256": "3818647071f5f7c1ed01b7c48c9797b8a9285c38587738ab449ab55d8f0b2bb3",
+      "source_bytes": 115909
+    },
+    {
+      "source_id": "visa_3bcf05efa51bebfa0df49867683cdeaf0e10568ba4ba35779d1336803e21aeb4",
+      "category": "pcb4",
+      "relative_image": "pcb4/Data/Images/Normal/0478.JPG",
+      "sha256": "3bcf05efa51bebfa0df49867683cdeaf0e10568ba4ba35779d1336803e21aeb4",
+      "source_bytes": 224831
+    },
+    {
+      "source_id": "visa_3cd84b868058a3576c3aa8367a6c42376af2018b11be1ac0d9e983a4715d9274",
+      "category": "candle",
+      "relative_image": "candle/Data/Images/Normal/0482.JPG",
+      "sha256": "3cd84b868058a3576c3aa8367a6c42376af2018b11be1ac0d9e983a4715d9274",
+      "source_bytes": 116017
+    },
+    {
+      "source_id": "visa_3d8c21d64cc497ca03a95a21995abdcbd3b7271de7a7133b0a03fbe4faa171d0",
+      "category": "pcb1",
+      "relative_image": "pcb1/Data/Images/Normal/0132.JPG",
+      "sha256": "3d8c21d64cc497ca03a95a21995abdcbd3b7271de7a7133b0a03fbe4faa171d0",
+      "source_bytes": 229669
+    },
+    {
+      "source_id": "visa_3e14ced880fb26c8fed002e3c2906cc897bad408c4319f499caae010b32687fd",
+      "category": "pipe_fryum",
+      "relative_image": "pipe_fryum/Data/Images/Anomaly/085.JPG",
+      "sha256": "3e14ced880fb26c8fed002e3c2906cc897bad408c4319f499caae010b32687fd",
+      "source_bytes": 96354
+    },
+    {
+      "source_id": "visa_3f0eb76d52933fbe7607fe4ec7fe07abfabe536506df7a756313d432e9698b88",
+      "category": "pcb4",
+      "relative_image": "pcb4/Data/Images/Anomaly/076.JPG",
+      "sha256": "3f0eb76d52933fbe7607fe4ec7fe07abfabe536506df7a756313d432e9698b88",
+      "source_bytes": 213733
+    },
+    {
+      "source_id": "visa_4068584cb961745bcf1b30ba642206d4ddb41a34287bc40a50c8f897787b5004",
+      "category": "capsules",
+      "relative_image": "capsules/Data/Images/Normal/268.JPG",
+      "sha256": "4068584cb961745bcf1b30ba642206d4ddb41a34287bc40a50c8f897787b5004",
+      "source_bytes": 234434
+    },
+    {
+      "source_id": "visa_40ee15f5ebfc20af2e739db0ceafd12469221302742f5cf8150b5d1576640ed3",
+      "category": "pipe_fryum",
+      "relative_image": "pipe_fryum/Data/Images/Normal/240.JPG",
+      "sha256": "40ee15f5ebfc20af2e739db0ceafd12469221302742f5cf8150b5d1576640ed3",
+      "source_bytes": 89372
+    },
+    {
+      "source_id": "visa_41af2fdf67383050a4b626d24a88742125c29866c8cfe4965f2d624a9deb1c2f",
+      "category": "pcb3",
+      "relative_image": "pcb3/Data/Images/Normal/0748.JPG",
+      "sha256": "41af2fdf67383050a4b626d24a88742125c29866c8cfe4965f2d624a9deb1c2f",
+      "source_bytes": 139963
+    },
+    {
+      "source_id": "visa_461215936f1309a8c75f06be3d091f1feb0b19c388c3dc73e1aa313214e927cb",
+      "category": "pipe_fryum",
+      "relative_image": "pipe_fryum/Data/Images/Anomaly/012.JPG",
+      "sha256": "461215936f1309a8c75f06be3d091f1feb0b19c388c3dc73e1aa313214e927cb",
+      "source_bytes": 92815
+    },
+    {
+      "source_id": "visa_489e688c69ed7811ec54aa4de9ba2bb84505b86771fc24b6cd625e8e393c8784",
+      "category": "pcb2",
+      "relative_image": "pcb2/Data/Images/Anomaly/028.JPG",
+      "sha256": "489e688c69ed7811ec54aa4de9ba2bb84505b86771fc24b6cd625e8e393c8784",
+      "source_bytes": 236638
+    },
+    {
+      "source_id": "visa_4a755110d545b74d2f75224f139ed41ea3ce5b61f450997f3be7067e13eab5e9",
+      "category": "pcb3",
+      "relative_image": "pcb3/Data/Images/Anomaly/036.JPG",
+      "sha256": "4a755110d545b74d2f75224f139ed41ea3ce5b61f450997f3be7067e13eab5e9",
+      "source_bytes": 143467
+    },
+    {
+      "source_id": "visa_502c3257aaed24fd0007a98536086baf7b87c72379904f8cfe651179a743caa5",
+      "category": "fryum",
+      "relative_image": "fryum/Data/Images/Normal/223.JPG",
+      "sha256": "502c3257aaed24fd0007a98536086baf7b87c72379904f8cfe651179a743caa5",
+      "source_bytes": 148217
+    },
+    {
+      "source_id": "visa_50f5f6d1d68c158d39744936d26ccca425386fe542d48cff4fb00cf3dc4948cc",
+      "category": "pcb3",
+      "relative_image": "pcb3/Data/Images/Anomaly/069.JPG",
+      "sha256": "50f5f6d1d68c158d39744936d26ccca425386fe542d48cff4fb00cf3dc4948cc",
+      "source_bytes": 138995
+    },
+    {
+      "source_id": "visa_5862eadc67eebf7da8c35b61bd0bbc7f47ffeccafc0d74d87beac0f381bd5267",
+      "category": "pcb2",
+      "relative_image": "pcb2/Data/Images/Normal/0386.JPG",
+      "sha256": "5862eadc67eebf7da8c35b61bd0bbc7f47ffeccafc0d74d87beac0f381bd5267",
+      "source_bytes": 244207
+    },
+    {
+      "source_id": "visa_59261648b344053c2f75436747f39503fa272f962e72d87a2177457aa08fee8d",
+      "category": "pcb4",
+      "relative_image": "pcb4/Data/Images/Anomaly/074.JPG",
+      "sha256": "59261648b344053c2f75436747f39503fa272f962e72d87a2177457aa08fee8d",
+      "source_bytes": 214755
+    },
+    {
+      "source_id": "visa_592e4588daadf77158dad0561872ee43a5042ff825173d929e054b063f5fc142",
+      "category": "pcb3",
+      "relative_image": "pcb3/Data/Images/Anomaly/004.JPG",
+      "sha256": "592e4588daadf77158dad0561872ee43a5042ff825173d929e054b063f5fc142",
+      "source_bytes": 139784
+    },
+    {
+      "source_id": "visa_65f4be0362b2ca3fae482efa598fd409c38fb7665f71bb0f1101a6c9a0c6acaa",
+      "category": "chewinggum",
+      "relative_image": "chewinggum/Data/Images/Anomaly/054.JPG",
+      "sha256": "65f4be0362b2ca3fae482efa598fd409c38fb7665f71bb0f1101a6c9a0c6acaa",
+      "source_bytes": 142050
+    },
+    {
+      "source_id": "visa_696d91b33e290952cd60ef09b886eabb75ab7e0a183b2972a8c681208bda4e50",
+      "category": "chewinggum",
+      "relative_image": "chewinggum/Data/Images/Normal/471.JPG",
+      "sha256": "696d91b33e290952cd60ef09b886eabb75ab7e0a183b2972a8c681208bda4e50",
+      "source_bytes": 141990
+    },
+    {
+      "source_id": "visa_699b527824e48ac44e0f054adcad7d7220ecd83c71755d5ce36eacf49499574a",
+      "category": "macaroni2",
+      "relative_image": "macaroni2/Data/Images/Anomaly/093.JPG",
+      "sha256": "699b527824e48ac44e0f054adcad7d7220ecd83c71755d5ce36eacf49499574a",
+      "source_bytes": 105881
+    },
+    {
+      "source_id": "visa_69a89ce9bf726a8a376e41d01cef31dede1a6f7f8dd5e29aacfdd22ed3d92f2c",
+      "category": "pipe_fryum",
+      "relative_image": "pipe_fryum/Data/Images/Anomaly/047.JPG",
+      "sha256": "69a89ce9bf726a8a376e41d01cef31dede1a6f7f8dd5e29aacfdd22ed3d92f2c",
+      "source_bytes": 107141
+    },
+    {
+      "source_id": "visa_6b6bca78ae7ba8babca4c24f7e04125e1e96a3ded627288e67d945d2e474791a",
+      "category": "pcb4",
+      "relative_image": "pcb4/Data/Images/Anomaly/022.JPG",
+      "sha256": "6b6bca78ae7ba8babca4c24f7e04125e1e96a3ded627288e67d945d2e474791a",
+      "source_bytes": 234919
+    },
+    {
+      "source_id": "visa_6b6c78513751314419209dffa03c21d693c0791f4e9ec92158addb73c1eca987",
+      "category": "fryum",
+      "relative_image": "fryum/Data/Images/Anomaly/051.JPG",
+      "sha256": "6b6c78513751314419209dffa03c21d693c0791f4e9ec92158addb73c1eca987",
+      "source_bytes": 143149
+    },
+    {
+      "source_id": "visa_6f55f9413413d3febdef98b1919cb5882c0df8a9b6d28580ab8665be92be8e60",
+      "category": "fryum",
+      "relative_image": "fryum/Data/Images/Anomaly/081.JPG",
+      "sha256": "6f55f9413413d3febdef98b1919cb5882c0df8a9b6d28580ab8665be92be8e60",
+      "source_bytes": 142412
+    },
+    {
+      "source_id": "visa_7124ae0359137ced54749ec7dfc6a9e0c2eab5c4c998471e2ceb69711bdf6a8c",
+      "category": "cashew",
+      "relative_image": "cashew/Data/Images/Normal/334.JPG",
+      "sha256": "7124ae0359137ced54749ec7dfc6a9e0c2eab5c4c998471e2ceb69711bdf6a8c",
+      "source_bytes": 259649
+    },
+    {
+      "source_id": "visa_73ee79b8b1f5e528e61ad441c76ce886d76d7041ce05c28b2829fa1545e866e3",
+      "category": "macaroni1",
+      "relative_image": "macaroni1/Data/Images/Anomaly/025.JPG",
+      "sha256": "73ee79b8b1f5e528e61ad441c76ce886d76d7041ce05c28b2829fa1545e866e3",
+      "source_bytes": 109136
+    },
+    {
+      "source_id": "visa_78a54d30e0a03b1ddacb373acd894f5fb595b3306da7ff1598724338c69d7036",
+      "category": "pcb1",
+      "relative_image": "pcb1/Data/Images/Normal/0222.JPG",
+      "sha256": "78a54d30e0a03b1ddacb373acd894f5fb595b3306da7ff1598724338c69d7036",
+      "source_bytes": 263790
+    },
+    {
+      "source_id": "visa_78c0678463ccbbb28f078b5d1a95e95f40e229ff042d3592310bcb5e6cbcc7a8",
+      "category": "capsules",
+      "relative_image": "capsules/Data/Images/Anomaly/035.JPG",
+      "sha256": "78c0678463ccbbb28f078b5d1a95e95f40e229ff042d3592310bcb5e6cbcc7a8",
+      "source_bytes": 249590
+    },
+    {
+      "source_id": "visa_7a640f61d9ea9ec28e6eda5f70bd4dc7a965f1cb7de24f7a894c64ebb98c5127",
+      "category": "chewinggum",
+      "relative_image": "chewinggum/Data/Images/Normal/148.JPG",
+      "sha256": "7a640f61d9ea9ec28e6eda5f70bd4dc7a965f1cb7de24f7a894c64ebb98c5127",
+      "source_bytes": 134704
+    },
+    {
+      "source_id": "visa_7eace5a2fd5b57b63c61f2f9aab9a61694c9f667b5e9ca8c5a206d3d9852a848",
+      "category": "macaroni1",
+      "relative_image": "macaroni1/Data/Images/Anomaly/091.JPG",
+      "sha256": "7eace5a2fd5b57b63c61f2f9aab9a61694c9f667b5e9ca8c5a206d3d9852a848",
+      "source_bytes": 138169
+    },
+    {
+      "source_id": "visa_7faf8ff401dbb9a9f14b36c4f0f3e5ec0950391351aa57be812dc515eed0c5e0",
+      "category": "cashew",
+      "relative_image": "cashew/Data/Images/Normal/168.JPG",
+      "sha256": "7faf8ff401dbb9a9f14b36c4f0f3e5ec0950391351aa57be812dc515eed0c5e0",
+      "source_bytes": 234956
+    },
+    {
+      "source_id": "visa_7fe2d5df369e8713ca46b1cb9c4d07741746b4ec96cf4c16e09aa4cfe4baeb6f",
+      "category": "macaroni1",
+      "relative_image": "macaroni1/Data/Images/Normal/0604.JPG",
+      "sha256": "7fe2d5df369e8713ca46b1cb9c4d07741746b4ec96cf4c16e09aa4cfe4baeb6f",
+      "source_bytes": 107292
+    },
+    {
+      "source_id": "visa_80826359e7704e236090453a9c4eeda4631b40ce4c891ed1a492a83f28af2c2c",
+      "category": "pipe_fryum",
+      "relative_image": "pipe_fryum/Data/Images/Normal/321.JPG",
+      "sha256": "80826359e7704e236090453a9c4eeda4631b40ce4c891ed1a492a83f28af2c2c",
+      "source_bytes": 81563
+    },
+    {
+      "source_id": "visa_80bf0ee5a0a24dfcff35c15d663a981e88e04ccad33dc6eb229c4f7e52c3c077",
+      "category": "pcb1",
+      "relative_image": "pcb1/Data/Images/Anomaly/063.JPG",
+      "sha256": "80bf0ee5a0a24dfcff35c15d663a981e88e04ccad33dc6eb229c4f7e52c3c077",
+      "source_bytes": 273259
+    },
+    {
+      "source_id": "visa_82147a7d0c321426267a87f92bbe3b77fc135f0fc6f4ce6f6dd337ead6858765",
+      "category": "macaroni2",
+      "relative_image": "macaroni2/Data/Images/Anomaly/049.JPG",
+      "sha256": "82147a7d0c321426267a87f92bbe3b77fc135f0fc6f4ce6f6dd337ead6858765",
+      "source_bytes": 107277
+    },
+    {
+      "source_id": "visa_86bfe261614be2c47034888b985dfb27629947f88e6e196d637ed3b7635e65a2",
+      "category": "capsules",
+      "relative_image": "capsules/Data/Images/Normal/339.JPG",
+      "sha256": "86bfe261614be2c47034888b985dfb27629947f88e6e196d637ed3b7635e65a2",
+      "source_bytes": 241704
+    },
+    {
+      "source_id": "visa_892614dd5d2ce2b080136ef54fc175e225931c10adadfe782ff65013849e2bcc",
+      "category": "fryum",
+      "relative_image": "fryum/Data/Images/Normal/460.JPG",
+      "sha256": "892614dd5d2ce2b080136ef54fc175e225931c10adadfe782ff65013849e2bcc",
+      "source_bytes": 148838
+    },
+    {
+      "source_id": "visa_89fcd08a408a078300b536636a9d32134c7a349c7036110aac39aeffe7e7ed5e",
+      "category": "cashew",
+      "relative_image": "cashew/Data/Images/Normal/341.JPG",
+      "sha256": "89fcd08a408a078300b536636a9d32134c7a349c7036110aac39aeffe7e7ed5e",
+      "source_bytes": 291076
+    },
+    {
+      "source_id": "visa_9226ca3ad7ad192e481efbc58a4835b6353f4844435f06aff5980d99401378ed",
+      "category": "candle",
+      "relative_image": "candle/Data/Images/Normal/0345.JPG",
+      "sha256": "9226ca3ad7ad192e481efbc58a4835b6353f4844435f06aff5980d99401378ed",
+      "source_bytes": 109886
+    },
+    {
+      "source_id": "visa_96f92391b80123b7eb3af927fd3af10671026eb9b063de2b9ca47b49964b0a30",
+      "category": "pcb3",
+      "relative_image": "pcb3/Data/Images/Anomaly/072.JPG",
+      "sha256": "96f92391b80123b7eb3af927fd3af10671026eb9b063de2b9ca47b49964b0a30",
+      "source_bytes": 138438
+    },
+    {
+      "source_id": "visa_9aaac129e234e0fce7ce1ba032167f1a5b96fd4b098cdb4a1016378d7d5b6dfb",
+      "category": "macaroni2",
+      "relative_image": "macaroni2/Data/Images/Normal/0325.JPG",
+      "sha256": "9aaac129e234e0fce7ce1ba032167f1a5b96fd4b098cdb4a1016378d7d5b6dfb",
+      "source_bytes": 119026
+    },
+    {
+      "source_id": "visa_9c1d1f5ae6c30175bd38879f95a2f87d4e8eb2d6dbc9a577ca57c3cab22acc10",
+      "category": "candle",
+      "relative_image": "candle/Data/Images/Anomaly/066.JPG",
+      "sha256": "9c1d1f5ae6c30175bd38879f95a2f87d4e8eb2d6dbc9a577ca57c3cab22acc10",
+      "source_bytes": 112970
+    },
+    {
+      "source_id": "visa_9c470dd5e1785200fd73a38c339713664248eeb6d5e335f0c02b1c38c7685528",
+      "category": "pcb4",
+      "relative_image": "pcb4/Data/Images/Normal/0723.JPG",
+      "sha256": "9c470dd5e1785200fd73a38c339713664248eeb6d5e335f0c02b1c38c7685528",
+      "source_bytes": 221681
+    },
+    {
+      "source_id": "visa_a0027349aa1afc7dd8e6b779192c80bb4eacce3e07fc8e0d7d6a367af9509d39",
+      "category": "chewinggum",
+      "relative_image": "chewinggum/Data/Images/Normal/131.JPG",
+      "sha256": "a0027349aa1afc7dd8e6b779192c80bb4eacce3e07fc8e0d7d6a367af9509d39",
+      "source_bytes": 141429
+    },
+    {
+      "source_id": "visa_a3a9234a1a5bd713928e289afab41cb53505a56fae4faa2fda20f116e07d7c34",
+      "category": "pcb2",
+      "relative_image": "pcb2/Data/Images/Normal/0319.JPG",
+      "sha256": "a3a9234a1a5bd713928e289afab41cb53505a56fae4faa2fda20f116e07d7c34",
+      "source_bytes": 251500
+    },
+    {
+      "source_id": "visa_a84a9a364bf527803e035d51ce8fcd8c9550aba41a38f9a5c7586f14bf56afb5",
+      "category": "candle",
+      "relative_image": "candle/Data/Images/Anomaly/022.JPG",
+      "sha256": "a84a9a364bf527803e035d51ce8fcd8c9550aba41a38f9a5c7586f14bf56afb5",
+      "source_bytes": 113306
+    },
+    {
+      "source_id": "visa_a92b025d0e1a5a6bb6aebf951077601708fc56b97b8e4baf301a1f08c0d02d4b",
+      "category": "chewinggum",
+      "relative_image": "chewinggum/Data/Images/Anomaly/052.JPG",
+      "sha256": "a92b025d0e1a5a6bb6aebf951077601708fc56b97b8e4baf301a1f08c0d02d4b",
+      "source_bytes": 138877
+    },
+    {
+      "source_id": "visa_ababe8f688ad026370002e0f5f9b3f53b36942fa317b6b688cebe2228e376a09",
+      "category": "pcb2",
+      "relative_image": "pcb2/Data/Images/Anomaly/079.JPG",
+      "sha256": "ababe8f688ad026370002e0f5f9b3f53b36942fa317b6b688cebe2228e376a09",
+      "source_bytes": 254536
+    },
+    {
+      "source_id": "visa_ad662d336c2daa1b8225a499c27331be0eaa9800d7e7855e0e1b53807fe3879f",
+      "category": "fryum",
+      "relative_image": "fryum/Data/Images/Anomaly/067.JPG",
+      "sha256": "ad662d336c2daa1b8225a499c27331be0eaa9800d7e7855e0e1b53807fe3879f",
+      "source_bytes": 140673
+    },
+    {
+      "source_id": "visa_ada5f9c784ffcc0d2ba643a11ae48fec215950fb220036085907360273816523",
+      "category": "fryum",
+      "relative_image": "fryum/Data/Images/Normal/072.JPG",
+      "sha256": "ada5f9c784ffcc0d2ba643a11ae48fec215950fb220036085907360273816523",
+      "source_bytes": 140842
+    },
+    {
+      "source_id": "visa_aee76fb8b46988be09be5958cba31785124377041c96e59472552f8ae88773ef",
+      "category": "chewinggum",
+      "relative_image": "chewinggum/Data/Images/Anomaly/058.JPG",
+      "sha256": "aee76fb8b46988be09be5958cba31785124377041c96e59472552f8ae88773ef",
+      "source_bytes": 146654
+    },
+    {
+      "source_id": "visa_b04a27e2687de5cc064b577c418b5b120a4c8bc008a1f458a28aa5d3d9fe459e",
+      "category": "capsules",
+      "relative_image": "capsules/Data/Images/Anomaly/056.JPG",
+      "sha256": "b04a27e2687de5cc064b577c418b5b120a4c8bc008a1f458a28aa5d3d9fe459e",
+      "source_bytes": 248885
+    },
+    {
+      "source_id": "visa_b1bb734ac934f58421c178a6d8f6b7bf96148c5d0413f023e7da7075126c071d",
+      "category": "candle",
+      "relative_image": "candle/Data/Images/Anomaly/012.JPG",
+      "sha256": "b1bb734ac934f58421c178a6d8f6b7bf96148c5d0413f023e7da7075126c071d",
+      "source_bytes": 120968
+    },
+    {
+      "source_id": "visa_b340ef3805e0887d9e607bdbd40ca8f43dbedc952fc7bfca7f04c34965523225",
+      "category": "pcb1",
+      "relative_image": "pcb1/Data/Images/Anomaly/088.JPG",
+      "sha256": "b340ef3805e0887d9e607bdbd40ca8f43dbedc952fc7bfca7f04c34965523225",
+      "source_bytes": 265808
+    },
+    {
+      "source_id": "visa_b81a85941ba79e2767f90bf712c6b6a09871dc960a78b1e7030aaae82d6c4320",
+      "category": "chewinggum",
+      "relative_image": "chewinggum/Data/Images/Anomaly/006.JPG",
+      "sha256": "b81a85941ba79e2767f90bf712c6b6a09871dc960a78b1e7030aaae82d6c4320",
+      "source_bytes": 145812
+    },
+    {
+      "source_id": "visa_c0f81d6f9a9060e3c1b5f48258e2bd6e3c05b992fa9b9039fd2f2c3f944df44b",
+      "category": "cashew",
+      "relative_image": "cashew/Data/Images/Normal/475.JPG",
+      "sha256": "c0f81d6f9a9060e3c1b5f48258e2bd6e3c05b992fa9b9039fd2f2c3f944df44b",
+      "source_bytes": 335769
+    },
+    {
+      "source_id": "visa_c32480dad6beb0160b5bc969d18a533c4cd7242dc8ca96cd100cd3d067620c1d",
+      "category": "macaroni1",
+      "relative_image": "macaroni1/Data/Images/Anomaly/011.JPG",
+      "sha256": "c32480dad6beb0160b5bc969d18a533c4cd7242dc8ca96cd100cd3d067620c1d",
+      "source_bytes": 130924
+    },
+    {
+      "source_id": "visa_c5c0f803e6fa2e54617736fae4c7fa965fcc15fa40d0b126306861ffd7fafdbe",
+      "category": "candle",
+      "relative_image": "candle/Data/Images/Normal/0537.JPG",
+      "sha256": "c5c0f803e6fa2e54617736fae4c7fa965fcc15fa40d0b126306861ffd7fafdbe",
+      "source_bytes": 122263
+    },
+    {
+      "source_id": "visa_c765753d3b3f06de90428ee947f4ec5f51ee3baaacd10ff6dcd23ce533474432",
+      "category": "cashew",
+      "relative_image": "cashew/Data/Images/Anomaly/058.JPG",
+      "sha256": "c765753d3b3f06de90428ee947f4ec5f51ee3baaacd10ff6dcd23ce533474432",
+      "source_bytes": 339513
+    },
+    {
+      "source_id": "visa_c857c6af258a04c1beaa7b34a5c5b74adc68b9fe3b66287af1814853c5949361",
+      "category": "pcb4",
+      "relative_image": "pcb4/Data/Images/Anomaly/019.JPG",
+      "sha256": "c857c6af258a04c1beaa7b34a5c5b74adc68b9fe3b66287af1814853c5949361",
+      "source_bytes": 220951
+    },
+    {
+      "source_id": "visa_cd1b5cdb7e8bd8a194164101bff94ecc3d17d86e1eb452361fdca76729ddd4dc",
+      "category": "pcb1",
+      "relative_image": "pcb1/Data/Images/Anomaly/057.JPG",
+      "sha256": "cd1b5cdb7e8bd8a194164101bff94ecc3d17d86e1eb452361fdca76729ddd4dc",
+      "source_bytes": 249130
+    },
+    {
+      "source_id": "visa_cec0e1b971f1da88b662b945d85555b01b9815008b385bd8d16280e33143f1c2",
+      "category": "pipe_fryum",
+      "relative_image": "pipe_fryum/Data/Images/Anomaly/028.JPG",
+      "sha256": "cec0e1b971f1da88b662b945d85555b01b9815008b385bd8d16280e33143f1c2",
+      "source_bytes": 96703
+    },
+    {
+      "source_id": "visa_d2c4982cf4cde7957d2c39a3b55e5d54985fc9e11050ad0476e5ab125c94be15",
+      "category": "pcb4",
+      "relative_image": "pcb4/Data/Images/Normal/0939.JPG",
+      "sha256": "d2c4982cf4cde7957d2c39a3b55e5d54985fc9e11050ad0476e5ab125c94be15",
+      "source_bytes": 222123
+    },
+    {
+      "source_id": "visa_d42e14742264bb9e9393ae9044aac2fb325c03fd35e9846faad7f63d865e825c",
+      "category": "capsules",
+      "relative_image": "capsules/Data/Images/Anomaly/034.JPG",
+      "sha256": "d42e14742264bb9e9393ae9044aac2fb325c03fd35e9846faad7f63d865e825c",
+      "source_bytes": 253219
+    },
+    {
+      "source_id": "visa_d64fd49078bf1585b89af15ec4dfb108f71fc7ffeabc68e43b9cfbb09362e3e0",
+      "category": "pcb2",
+      "relative_image": "pcb2/Data/Images/Normal/0593.JPG",
+      "sha256": "d64fd49078bf1585b89af15ec4dfb108f71fc7ffeabc68e43b9cfbb09362e3e0",
+      "source_bytes": 219020
+    },
+    {
+      "source_id": "visa_d859e02fc937073d2ad266dcb0102b3f43e7e0611649f4e964aa31bcb7c19217",
+      "category": "macaroni1",
+      "relative_image": "macaroni1/Data/Images/Normal/0602.JPG",
+      "sha256": "d859e02fc937073d2ad266dcb0102b3f43e7e0611649f4e964aa31bcb7c19217",
+      "source_bytes": 111567
+    },
+    {
+      "source_id": "visa_dcf8bd48cae28d15c66f7219a2646116c857c88a1ff16634d47968adc713d125",
+      "category": "cashew",
+      "relative_image": "cashew/Data/Images/Normal/037.JPG",
+      "sha256": "dcf8bd48cae28d15c66f7219a2646116c857c88a1ff16634d47968adc713d125",
+      "source_bytes": 291080
+    },
+    {
+      "source_id": "visa_dd1d62eb6c25db5f94a5e0bbdfd728ee3174b0c0ec215ec2567c32e27479acf4",
+      "category": "capsules",
+      "relative_image": "capsules/Data/Images/Normal/393.JPG",
+      "sha256": "dd1d62eb6c25db5f94a5e0bbdfd728ee3174b0c0ec215ec2567c32e27479acf4",
+      "source_bytes": 226789
+    },
+    {
+      "source_id": "visa_de72214c79777745fe18fa271a12b4a73a03587bac5e96cc7d8cae7ac8235778",
+      "category": "macaroni2",
+      "relative_image": "macaroni2/Data/Images/Anomaly/012.JPG",
+      "sha256": "de72214c79777745fe18fa271a12b4a73a03587bac5e96cc7d8cae7ac8235778",
+      "source_bytes": 107769
+    },
+    {
+      "source_id": "visa_e1b0ff3feb43ce597d40cf67913a60151bd23a52cc19309cc70ea0d35a8a8e15",
+      "category": "candle",
+      "relative_image": "candle/Data/Images/Anomaly/055.JPG",
+      "sha256": "e1b0ff3feb43ce597d40cf67913a60151bd23a52cc19309cc70ea0d35a8a8e15",
+      "source_bytes": 117653
+    },
+    {
+      "source_id": "visa_e1db10ae3c3a76064af134e8cb52b8f7dcb8ecdab83bcd8a1e8902141f0bcb0f",
+      "category": "chewinggum",
+      "relative_image": "chewinggum/Data/Images/Normal/481.JPG",
+      "sha256": "e1db10ae3c3a76064af134e8cb52b8f7dcb8ecdab83bcd8a1e8902141f0bcb0f",
+      "source_bytes": 144205
+    },
+    {
+      "source_id": "visa_e3f8ccfd909a536181e05348d44e76ae56b2c06026b666c96babb963f3081e0a",
+      "category": "pipe_fryum",
+      "relative_image": "pipe_fryum/Data/Images/Normal/095.JPG",
+      "sha256": "e3f8ccfd909a536181e05348d44e76ae56b2c06026b666c96babb963f3081e0a",
+      "source_bytes": 95943
+    },
+    {
+      "source_id": "visa_e47e6d72e8f55160d0d47273ae6f7670b5b308e53c1ccf601726b4daf2d24ada",
+      "category": "chewinggum",
+      "relative_image": "chewinggum/Data/Images/Anomaly/001.JPG",
+      "sha256": "e47e6d72e8f55160d0d47273ae6f7670b5b308e53c1ccf601726b4daf2d24ada",
+      "source_bytes": 139911
+    },
+    {
+      "source_id": "visa_e52327c124f16ff844b05aa3818660a9b0481af14913a20f19c75aea0c00d434",
+      "category": "pcb2",
+      "relative_image": "pcb2/Data/Images/Anomaly/004.JPG",
+      "sha256": "e52327c124f16ff844b05aa3818660a9b0481af14913a20f19c75aea0c00d434",
+      "source_bytes": 266222
+    },
+    {
+      "source_id": "visa_e792b23268ce631361e08b52655a4ffc7a571de02061945a7a2b54ae64a9f948",
+      "category": "macaroni1",
+      "relative_image": "macaroni1/Data/Images/Normal/0361.JPG",
+      "sha256": "e792b23268ce631361e08b52655a4ffc7a571de02061945a7a2b54ae64a9f948",
+      "source_bytes": 113237
+    },
+    {
+      "source_id": "visa_e7c62008b7f4bc8e0e3e43d4d65823a9623fe467a1f27584a9876580c04ab6e8",
+      "category": "pcb4",
+      "relative_image": "pcb4/Data/Images/Anomaly/055.JPG",
+      "sha256": "e7c62008b7f4bc8e0e3e43d4d65823a9623fe467a1f27584a9876580c04ab6e8",
+      "source_bytes": 220944
+    },
+    {
+      "source_id": "visa_e97ef05da5ed9aefeb06e63c527743b47b7f9778e0d8b708f0201e78b29ebe4c",
+      "category": "fryum",
+      "relative_image": "fryum/Data/Images/Normal/315.JPG",
+      "sha256": "e97ef05da5ed9aefeb06e63c527743b47b7f9778e0d8b708f0201e78b29ebe4c",
+      "source_bytes": 145786
+    },
+    {
+      "source_id": "visa_ea40de182554b6fd42a5c700bbfcad8ffcafe3086fd8c8f95c66337c2dbaf691",
+      "category": "pipe_fryum",
+      "relative_image": "pipe_fryum/Data/Images/Normal/408.JPG",
+      "sha256": "ea40de182554b6fd42a5c700bbfcad8ffcafe3086fd8c8f95c66337c2dbaf691",
+      "source_bytes": 101714
+    },
+    {
+      "source_id": "visa_f1d12249261d62f00fd20c476804de6884a96d351e04e7943b3a82852ba86c34",
+      "category": "pipe_fryum",
+      "relative_image": "pipe_fryum/Data/Images/Normal/484.JPG",
+      "sha256": "f1d12249261d62f00fd20c476804de6884a96d351e04e7943b3a82852ba86c34",
+      "source_bytes": 94780
+    },
+    {
+      "source_id": "visa_f2a9758e961a446ded92f68287e810b401b74d0d731d2e33475e335efb158ab7",
+      "category": "pcb2",
+      "relative_image": "pcb2/Data/Images/Anomaly/010.JPG",
+      "sha256": "f2a9758e961a446ded92f68287e810b401b74d0d731d2e33475e335efb158ab7",
+      "source_bytes": 255188
+    },
+    {
+      "source_id": "visa_f3a026383e4573baca1494d3687b7316222f06e8fef2014cefc22ad94f704d79",
+      "category": "pcb4",
+      "relative_image": "pcb4/Data/Images/Normal/0385.JPG",
+      "sha256": "f3a026383e4573baca1494d3687b7316222f06e8fef2014cefc22ad94f704d79",
+      "source_bytes": 245167
+    },
+    {
+      "source_id": "visa_f8f2281ab983cbeb9cb650ffe437b81642df1565764d2c7675ff173788bf1008",
+      "category": "cashew",
+      "relative_image": "cashew/Data/Images/Anomaly/028.JPG",
+      "sha256": "f8f2281ab983cbeb9cb650ffe437b81642df1565764d2c7675ff173788bf1008",
+      "source_bytes": 344711
+    },
+    {
+      "source_id": "visa_f9f3e8ef99623c63b69a694e7ab9e5a958c62b5e9cfb238136e6ad06a833737c",
+      "category": "macaroni1",
+      "relative_image": "macaroni1/Data/Images/Anomaly/034.JPG",
+      "sha256": "f9f3e8ef99623c63b69a694e7ab9e5a958c62b5e9cfb238136e6ad06a833737c",
+      "source_bytes": 124808
+    },
+    {
+      "source_id": "visa_fd78e36ad21b32a65ac940279be55cf8817cdaa05d55be17e0987c40acf614d0",
+      "category": "cashew",
+      "relative_image": "cashew/Data/Images/Anomaly/032.JPG",
+      "sha256": "fd78e36ad21b32a65ac940279be55cf8817cdaa05d55be17e0987c40acf614d0",
+      "source_bytes": 315398
+    },
+    {
+      "source_id": "visa_ffa6d01176ebd6cce6849b91ba620cd2d7e1a8bb50d272d4cc2f27a5e8037d73",
+      "category": "pcb3",
+      "relative_image": "pcb3/Data/Images/Normal/0949.JPG",
+      "sha256": "ffa6d01176ebd6cce6849b91ba620cd2d7e1a8bb50d272d4cc2f27a5e8037d73",
+      "source_bytes": 137552
+    }
+  ],
+  "supports_by_category": {
+    "candle": [
+      {
+        "source_id": "visa_a9a53c08f67008de10fb073f36b927a80943f94f27e4352866618296458695f3",
+        "category": "candle",
+        "relative_image": "candle/Data/Images/Normal/0652.JPG",
+        "sha256": "a9a53c08f67008de10fb073f36b927a80943f94f27e4352866618296458695f3",
+        "source_bytes": 110688
+      },
+      {
+        "source_id": "visa_a554c2488d79de720fb0f809aaf03c24a448041ecf0b4f8a402ba5af3aa20671",
+        "category": "candle",
+        "relative_image": "candle/Data/Images/Normal/0003.JPG",
+        "sha256": "a554c2488d79de720fb0f809aaf03c24a448041ecf0b4f8a402ba5af3aa20671",
+        "source_bytes": 126521
+      },
+      {
+        "source_id": "visa_87b961cb1e314f9e7b26c8ec257346dd7fbf2b8b56c878369600c4510e561c4c",
+        "category": "candle",
+        "relative_image": "candle/Data/Images/Normal/0138.JPG",
+        "sha256": "87b961cb1e314f9e7b26c8ec257346dd7fbf2b8b56c878369600c4510e561c4c",
+        "source_bytes": 128943
+      },
+      {
+        "source_id": "visa_3e1c41acc0428fe39f58ac59e688822a583aae03e948ab4f8142b108d85f5f25",
+        "category": "candle",
+        "relative_image": "candle/Data/Images/Normal/0982.JPG",
+        "sha256": "3e1c41acc0428fe39f58ac59e688822a583aae03e948ab4f8142b108d85f5f25",
+        "source_bytes": 118901
+      }
+    ],
+    "capsules": [
+      {
+        "source_id": "visa_3842ae719968508bcdcc6354d67c77fb0b85ed47964f5cf9e8ec291addab36fa",
+        "category": "capsules",
+        "relative_image": "capsules/Data/Images/Normal/240.JPG",
+        "sha256": "3842ae719968508bcdcc6354d67c77fb0b85ed47964f5cf9e8ec291addab36fa",
+        "source_bytes": 234434
+      },
+      {
+        "source_id": "visa_48061e08656751ab15bbaab738913c29f1be1fde680587210a496f458207f400",
+        "category": "capsules",
+        "relative_image": "capsules/Data/Images/Normal/418.JPG",
+        "sha256": "48061e08656751ab15bbaab738913c29f1be1fde680587210a496f458207f400",
+        "source_bytes": 241044
+      },
+      {
+        "source_id": "visa_973f60cf953259317dbb5cbdb589b061ffd662c875ca9e08d4d61735577d9785",
+        "category": "capsules",
+        "relative_image": "capsules/Data/Images/Normal/467.JPG",
+        "sha256": "973f60cf953259317dbb5cbdb589b061ffd662c875ca9e08d4d61735577d9785",
+        "source_bytes": 228617
+      },
+      {
+        "source_id": "visa_7412be6b6cffd9cb66898ef85bd89d39c1820f18608eb1046f39b0ad9495aa53",
+        "category": "capsules",
+        "relative_image": "capsules/Data/Images/Normal/381.JPG",
+        "sha256": "7412be6b6cffd9cb66898ef85bd89d39c1820f18608eb1046f39b0ad9495aa53",
+        "source_bytes": 249743
+      }
+    ],
+    "cashew": [
+      {
+        "source_id": "visa_d9fe8686ade17d7b8b5cefd672620aa3a6893138182e39a5655b36fb9dce6154",
+        "category": "cashew",
+        "relative_image": "cashew/Data/Images/Normal/368.JPG",
+        "sha256": "d9fe8686ade17d7b8b5cefd672620aa3a6893138182e39a5655b36fb9dce6154",
+        "source_bytes": 302530
+      },
+      {
+        "source_id": "visa_d17238131a34e526b3e92e01b816c3fa17b4c79bb4d5591c2e71c58fc0995f62",
+        "category": "cashew",
+        "relative_image": "cashew/Data/Images/Normal/248.JPG",
+        "sha256": "d17238131a34e526b3e92e01b816c3fa17b4c79bb4d5591c2e71c58fc0995f62",
+        "source_bytes": 297823
+      },
+      {
+        "source_id": "visa_5201be9dd0ae04acb90da5ddf7957b50be4e07187e949197c6ab5148c103ed85",
+        "category": "cashew",
+        "relative_image": "cashew/Data/Images/Normal/152.JPG",
+        "sha256": "5201be9dd0ae04acb90da5ddf7957b50be4e07187e949197c6ab5148c103ed85",
+        "source_bytes": 286645
+      },
+      {
+        "source_id": "visa_d2a8eb287fdde588054356df020dc7fd3af1f3175e220233d84823254bac1f77",
+        "category": "cashew",
+        "relative_image": "cashew/Data/Images/Normal/191.JPG",
+        "sha256": "d2a8eb287fdde588054356df020dc7fd3af1f3175e220233d84823254bac1f77",
+        "source_bytes": 294470
+      }
+    ],
+    "chewinggum": [
+      {
+        "source_id": "visa_e7790ce5cd0466bd9079c3545e2f83d5889ff170002030947ee3d09058e3f9e8",
+        "category": "chewinggum",
+        "relative_image": "chewinggum/Data/Images/Normal/375.JPG",
+        "sha256": "e7790ce5cd0466bd9079c3545e2f83d5889ff170002030947ee3d09058e3f9e8",
+        "source_bytes": 138614
+      },
+      {
+        "source_id": "visa_826eeb3d4d84919404d7684df6494ab44e1f4d8495b9a0813072ca0d0a042eb5",
+        "category": "chewinggum",
+        "relative_image": "chewinggum/Data/Images/Normal/038.JPG",
+        "sha256": "826eeb3d4d84919404d7684df6494ab44e1f4d8495b9a0813072ca0d0a042eb5",
+        "source_bytes": 135039
+      },
+      {
+        "source_id": "visa_59b14ddfadb2594103f05e0376f1ec5a8b84d2db8d951c7d8984c4e3072fe70b",
+        "category": "chewinggum",
+        "relative_image": "chewinggum/Data/Images/Normal/142.JPG",
+        "sha256": "59b14ddfadb2594103f05e0376f1ec5a8b84d2db8d951c7d8984c4e3072fe70b",
+        "source_bytes": 139742
+      },
+      {
+        "source_id": "visa_6eff4516189943fc7faa18ec23e601b0fc29163b5ff2842e660fc559366c30e1",
+        "category": "chewinggum",
+        "relative_image": "chewinggum/Data/Images/Normal/117.JPG",
+        "sha256": "6eff4516189943fc7faa18ec23e601b0fc29163b5ff2842e660fc559366c30e1",
+        "source_bytes": 140462
+      }
+    ],
+    "fryum": [
+      {
+        "source_id": "visa_7e2f9f2df52265d22ab537b0224c88d5d551e2c032c1461e3ab8f67c1d140c48",
+        "category": "fryum",
+        "relative_image": "fryum/Data/Images/Normal/116.JPG",
+        "sha256": "7e2f9f2df52265d22ab537b0224c88d5d551e2c032c1461e3ab8f67c1d140c48",
+        "source_bytes": 145654
+      },
+      {
+        "source_id": "visa_d4911f579c5222e389b46742589f88627c653ebada78751b3dd9729fb36266ea",
+        "category": "fryum",
+        "relative_image": "fryum/Data/Images/Normal/148.JPG",
+        "sha256": "d4911f579c5222e389b46742589f88627c653ebada78751b3dd9729fb36266ea",
+        "source_bytes": 140861
+      },
+      {
+        "source_id": "visa_c2a177a604b29a99ccf31f0fb915cd43cfd52cb36fd161b43434391d59c58c89",
+        "category": "fryum",
+        "relative_image": "fryum/Data/Images/Normal/290.JPG",
+        "sha256": "c2a177a604b29a99ccf31f0fb915cd43cfd52cb36fd161b43434391d59c58c89",
+        "source_bytes": 143202
+      },
+      {
+        "source_id": "visa_9e41bb500a87c6ae61b478b882d0caca95568ca7bdbad89e9e8969fe89f36b1c",
+        "category": "fryum",
+        "relative_image": "fryum/Data/Images/Normal/257.JPG",
+        "sha256": "9e41bb500a87c6ae61b478b882d0caca95568ca7bdbad89e9e8969fe89f36b1c",
+        "source_bytes": 142422
+      }
+    ],
+    "macaroni1": [
+      {
+        "source_id": "visa_0fbada18bd10cd514ebfae8bf4818e114404c55decb55fe20a8b61ecbfe7a5b7",
+        "category": "macaroni1",
+        "relative_image": "macaroni1/Data/Images/Normal/0112.JPG",
+        "sha256": "0fbada18bd10cd514ebfae8bf4818e114404c55decb55fe20a8b61ecbfe7a5b7",
+        "source_bytes": 98357
+      },
+      {
+        "source_id": "visa_6c888b088915d6c0383acb749d4460beee4429eaf45977a2ce6ee3fab17753ae",
+        "category": "macaroni1",
+        "relative_image": "macaroni1/Data/Images/Normal/0825.JPG",
+        "sha256": "6c888b088915d6c0383acb749d4460beee4429eaf45977a2ce6ee3fab17753ae",
+        "source_bytes": 130472
+      },
+      {
+        "source_id": "visa_e2c897c8ff458725d9db2056d2947c40c3044621491a1744a14f22de083b0f9c",
+        "category": "macaroni1",
+        "relative_image": "macaroni1/Data/Images/Normal/0071.JPG",
+        "sha256": "e2c897c8ff458725d9db2056d2947c40c3044621491a1744a14f22de083b0f9c",
+        "source_bytes": 112862
+      },
+      {
+        "source_id": "visa_5375f91e48ddf8da79b7ba57504a00dece27199342d81216a9da9e47543a07ee",
+        "category": "macaroni1",
+        "relative_image": "macaroni1/Data/Images/Normal/0955.JPG",
+        "sha256": "5375f91e48ddf8da79b7ba57504a00dece27199342d81216a9da9e47543a07ee",
+        "source_bytes": 127760
+      }
+    ],
+    "macaroni2": [
+      {
+        "source_id": "visa_c3569dffb6360c96bb549d6a7e18435e6a0c1c4ac1d42774764aff8921f1ebb3",
+        "category": "macaroni2",
+        "relative_image": "macaroni2/Data/Images/Normal/0245.JPG",
+        "sha256": "c3569dffb6360c96bb549d6a7e18435e6a0c1c4ac1d42774764aff8921f1ebb3",
+        "source_bytes": 113606
+      },
+      {
+        "source_id": "visa_4da4329a09583871a5fc4a47e6f3ea7319a5a58973061f83cf6bb7ba153b2aef",
+        "category": "macaroni2",
+        "relative_image": "macaroni2/Data/Images/Normal/0697.JPG",
+        "sha256": "4da4329a09583871a5fc4a47e6f3ea7319a5a58973061f83cf6bb7ba153b2aef",
+        "source_bytes": 102569
+      },
+      {
+        "source_id": "visa_f1fc69bafbfb8fa018f76a960c18e61c5d892cb1c5e0e22d5a3bc53a3e659e5c",
+        "category": "macaroni2",
+        "relative_image": "macaroni2/Data/Images/Normal/0429.JPG",
+        "sha256": "f1fc69bafbfb8fa018f76a960c18e61c5d892cb1c5e0e22d5a3bc53a3e659e5c",
+        "source_bytes": 105803
+      },
+      {
+        "source_id": "visa_03dab75e9ef590a972b8cc987e17f0fc5b4b8b9a9a9671ec1b5aa963985bdf6f",
+        "category": "macaroni2",
+        "relative_image": "macaroni2/Data/Images/Normal/0657.JPG",
+        "sha256": "03dab75e9ef590a972b8cc987e17f0fc5b4b8b9a9a9671ec1b5aa963985bdf6f",
+        "source_bytes": 109258
+      }
+    ],
+    "pcb1": [
+      {
+        "source_id": "visa_2c831a21c74ee3385d69e11dfbee70c960dea2b0369fe3c11444d9f6a7780d8d",
+        "category": "pcb1",
+        "relative_image": "pcb1/Data/Images/Normal/0618.JPG",
+        "sha256": "2c831a21c74ee3385d69e11dfbee70c960dea2b0369fe3c11444d9f6a7780d8d",
+        "source_bytes": 268403
+      },
+      {
+        "source_id": "visa_da556dfaab047c385dcda4330d09e2c997d7513c445c327b7340200ef1ebab40",
+        "category": "pcb1",
+        "relative_image": "pcb1/Data/Images/Normal/0115.JPG",
+        "sha256": "da556dfaab047c385dcda4330d09e2c997d7513c445c327b7340200ef1ebab40",
+        "source_bytes": 229623
+      },
+      {
+        "source_id": "visa_c71fc38d4d03498c0827c114e21157b5e71d3da25b549a693ac23a961db68202",
+        "category": "pcb1",
+        "relative_image": "pcb1/Data/Images/Normal/0001.JPG",
+        "sha256": "c71fc38d4d03498c0827c114e21157b5e71d3da25b549a693ac23a961db68202",
+        "source_bytes": 271930
+      },
+      {
+        "source_id": "visa_fb53e2533edfcfa67b5c81f840d8e539a121dfb56d518bcd6e7b7bf322f361e8",
+        "category": "pcb1",
+        "relative_image": "pcb1/Data/Images/Normal/0449.JPG",
+        "sha256": "fb53e2533edfcfa67b5c81f840d8e539a121dfb56d518bcd6e7b7bf322f361e8",
+        "source_bytes": 267880
+      }
+    ],
+    "pcb2": [
+      {
+        "source_id": "visa_b671a85bafc4094edd641aa899fd032e98cff91fd2b1f99109c355133234dc04",
+        "category": "pcb2",
+        "relative_image": "pcb2/Data/Images/Normal/0423.JPG",
+        "sha256": "b671a85bafc4094edd641aa899fd032e98cff91fd2b1f99109c355133234dc04",
+        "source_bytes": 223665
+      },
+      {
+        "source_id": "visa_d0021867d8cc052c8288f7042a0db92264aae9639c4897f873c72899d094b2bf",
+        "category": "pcb2",
+        "relative_image": "pcb2/Data/Images/Normal/0397.JPG",
+        "sha256": "d0021867d8cc052c8288f7042a0db92264aae9639c4897f873c72899d094b2bf",
+        "source_bytes": 207119
+      },
+      {
+        "source_id": "visa_f691119cf963db6895dbc446a60f9d7b8d4944063a8a2099aa230d7f6e3ca3bd",
+        "category": "pcb2",
+        "relative_image": "pcb2/Data/Images/Normal/0960.JPG",
+        "sha256": "f691119cf963db6895dbc446a60f9d7b8d4944063a8a2099aa230d7f6e3ca3bd",
+        "source_bytes": 242802
+      },
+      {
+        "source_id": "visa_a40ac729bb023e29b1f0fb2c56d71142c5b48e19f43a6dd03629dc7e0a2d7d7f",
+        "category": "pcb2",
+        "relative_image": "pcb2/Data/Images/Normal/0549.JPG",
+        "sha256": "a40ac729bb023e29b1f0fb2c56d71142c5b48e19f43a6dd03629dc7e0a2d7d7f",
+        "source_bytes": 252531
+      }
+    ],
+    "pcb3": [
+      {
+        "source_id": "visa_2684bfd5afc26b3e4615a10dc01d4075ce594c819f48ceea7f8d9ad54f45cc2f",
+        "category": "pcb3",
+        "relative_image": "pcb3/Data/Images/Normal/0255.JPG",
+        "sha256": "2684bfd5afc26b3e4615a10dc01d4075ce594c819f48ceea7f8d9ad54f45cc2f",
+        "source_bytes": 136286
+      },
+      {
+        "source_id": "visa_1b4961a19a97c122727aec6577e16ef1cc6bc7cb48bb91544bde5f00ee0e9ac6",
+        "category": "pcb3",
+        "relative_image": "pcb3/Data/Images/Normal/0779.JPG",
+        "sha256": "1b4961a19a97c122727aec6577e16ef1cc6bc7cb48bb91544bde5f00ee0e9ac6",
+        "source_bytes": 144390
+      },
+      {
+        "source_id": "visa_505e9dbbacbd631a42a9dceb2de8e6cf40e0e8d5ec4c18857f009c872e46a034",
+        "category": "pcb3",
+        "relative_image": "pcb3/Data/Images/Normal/0326.JPG",
+        "sha256": "505e9dbbacbd631a42a9dceb2de8e6cf40e0e8d5ec4c18857f009c872e46a034",
+        "source_bytes": 135768
+      },
+      {
+        "source_id": "visa_113d4163ca4156f5c72f8a24a611194531df9b5fd13f368bbfd8ed3e996d1563",
+        "category": "pcb3",
+        "relative_image": "pcb3/Data/Images/Normal/0023.JPG",
+        "sha256": "113d4163ca4156f5c72f8a24a611194531df9b5fd13f368bbfd8ed3e996d1563",
+        "source_bytes": 136565
+      }
+    ],
+    "pcb4": [
+      {
+        "source_id": "visa_2f587b5369ed79df09cef65a044404445e51eecc255ce9405c8684240784f6f5",
+        "category": "pcb4",
+        "relative_image": "pcb4/Data/Images/Normal/0109.JPG",
+        "sha256": "2f587b5369ed79df09cef65a044404445e51eecc255ce9405c8684240784f6f5",
+        "source_bytes": 223867
+      },
+      {
+        "source_id": "visa_af8ed7a91ad7d9b17efbec09cf694133754c68f997496208c8f19d8d849f8e5d",
+        "category": "pcb4",
+        "relative_image": "pcb4/Data/Images/Normal/0145.JPG",
+        "sha256": "af8ed7a91ad7d9b17efbec09cf694133754c68f997496208c8f19d8d849f8e5d",
+        "source_bytes": 230300
+      },
+      {
+        "source_id": "visa_d15d5fa3e08b6602e00e4e0866613b5f8e8e5f28a404ad2f97339c3813f14690",
+        "category": "pcb4",
+        "relative_image": "pcb4/Data/Images/Normal/0427.JPG",
+        "sha256": "d15d5fa3e08b6602e00e4e0866613b5f8e8e5f28a404ad2f97339c3813f14690",
+        "source_bytes": 188827
+      },
+      {
+        "source_id": "visa_6ff74cc651a5b8d2be92887cd354b5869e771cc2cbee7f4119c3790b1970d84e",
+        "category": "pcb4",
+        "relative_image": "pcb4/Data/Images/Normal/0893.JPG",
+        "sha256": "6ff74cc651a5b8d2be92887cd354b5869e771cc2cbee7f4119c3790b1970d84e",
+        "source_bytes": 144639
+      }
+    ],
+    "pipe_fryum": [
+      {
+        "source_id": "visa_6359205af6009d8119bf8295f3c91da0377782a7a06ef8c7af988ea16d8d3974",
+        "category": "pipe_fryum",
+        "relative_image": "pipe_fryum/Data/Images/Normal/371.JPG",
+        "sha256": "6359205af6009d8119bf8295f3c91da0377782a7a06ef8c7af988ea16d8d3974",
+        "source_bytes": 84141
+      },
+      {
+        "source_id": "visa_7dd85f4d4f8c41c05ac5c29d6c2352a845de542190a691db5eb5d41dcfd7dc31",
+        "category": "pipe_fryum",
+        "relative_image": "pipe_fryum/Data/Images/Normal/398.JPG",
+        "sha256": "7dd85f4d4f8c41c05ac5c29d6c2352a845de542190a691db5eb5d41dcfd7dc31",
+        "source_bytes": 92121
+      },
+      {
+        "source_id": "visa_b710eee8874ee448c695cd124ac0ed702fc20f44127c9455d3c11c1026ed5389",
+        "category": "pipe_fryum",
+        "relative_image": "pipe_fryum/Data/Images/Normal/270.JPG",
+        "sha256": "b710eee8874ee448c695cd124ac0ed702fc20f44127c9455d3c11c1026ed5389",
+        "source_bytes": 93634
+      },
+      {
+        "source_id": "visa_50c2d0557fee3bcd2ffac612cb67dab5d7f7675f5077aee49ed0a8d1c19c66e9",
+        "category": "pipe_fryum",
+        "relative_image": "pipe_fryum/Data/Images/Normal/125.JPG",
+        "sha256": "50c2d0557fee3bcd2ffac612cb67dab5d7f7675f5077aee49ed0a8d1c19c66e9",
+        "source_bytes": 95171
+      }
+    ]
+  },
+  "support_selection": "sha256(jev-support-v1|42|source_id) ascending; first 4; 1-shot first 1",
+  "training_rows": 1536,
+  "unique_training_sources": 768
+}

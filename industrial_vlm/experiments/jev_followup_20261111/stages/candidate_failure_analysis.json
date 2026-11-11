@@ -1,0 +1,1032 @@
+{
+  "schema": "jev-fixed-candidate-failure-analysis-v1",
+  "status": "complete",
+  "timestamp_utc": "2026-11-10T18:22:03.946536+00:00",
+  "hostname": "autodl-container-132444827f-9c594038",
+  "inputs_sha256": {
+    "stages/03_candidates.json": "8ce1e859a74de0d33abefaff8c0b3f66a58a8daeca6eb7be70d5cd23591414ef",
+    "stages/05_evaluation.json": "fe2702586f60d575b319790c7ec37b737bc189d864d6f6238b98f34588992a92"
+  },
+  "auditor_sha256": "c19e4376333b840e1709eac44081265155bc1702566b61135136716d8963c39d",
+  "all120": {
+    "sources": 120,
+    "anomalous": 60,
+    "normal": 60,
+    "fullboxes": 60,
+    "same_pixels": 60,
+    "area_summary": {
+      "n": 120,
+      "minimum": 0.07077088647959183,
+      "q25": 0.4795420121173469,
+      "median": 0.953125,
+      "mean": 0.7502517803996599,
+      "q75": 1.0,
+      "maximum": 1.0
+    },
+    "candidate_mean_iou_all_anomaly_denominator": 0.08952864054015944,
+    "normal_unconditional_boxes": 60,
+    "arms": {
+      "roi": {
+        "anomaly_kept": 43,
+        "anomaly_dropped": 17,
+        "recall": 0.7166666666666667,
+        "normal_boxes_kept": 13,
+        "normal_box_fpr": 0.21666666666666667,
+        "mean_iou_all_anomaly_denominator": 0.0697186796786667,
+        "discarded_iou_mass": 1.188597651689566,
+        "mean_iou_loss_vs_unconditional": 0.019809960861492767,
+        "retained_iou_mass_fraction": 0.778730462766195,
+        "anomaly_dropped_with_positive_iou": 17
+      },
+      "duplicate": {
+        "anomaly_kept": 39,
+        "anomaly_dropped": 21,
+        "recall": 0.65,
+        "normal_boxes_kept": 11,
+        "normal_box_fpr": 0.18333333333333332,
+        "mean_iou_all_anomaly_denominator": 0.06854232633564047,
+        "discarded_iou_mass": 1.2591788522711393,
+        "mean_iou_loss_vs_unconditional": 0.020986314204518988,
+        "retained_iou_mass_fraction": 0.7655910546848386,
+        "anomaly_dropped_with_positive_iou": 21
+      }
+    }
+  },
+  "by_area": {
+    "area_lt_0.01": {
+      "sources": 0,
+      "anomalous": 0,
+      "normal": 0,
+      "fullboxes": 0,
+      "same_pixels": 0,
+      "area_summary": null,
+      "candidate_mean_iou_all_anomaly_denominator": null,
+      "normal_unconditional_boxes": 0,
+      "arms": {
+        "roi": {
+          "anomaly_kept": 0,
+          "anomaly_dropped": 0,
+          "recall": null,
+          "normal_boxes_kept": 0,
+          "normal_box_fpr": null,
+          "mean_iou_all_anomaly_denominator": null,
+          "discarded_iou_mass": 0,
+          "mean_iou_loss_vs_unconditional": null,
+          "retained_iou_mass_fraction": null,
+          "anomaly_dropped_with_positive_iou": 0
+        },
+        "duplicate": {
+          "anomaly_kept": 0,
+          "anomaly_dropped": 0,
+          "recall": null,
+          "normal_boxes_kept": 0,
+          "normal_box_fpr": null,
+          "mean_iou_all_anomaly_denominator": null,
+          "discarded_iou_mass": 0,
+          "mean_iou_loss_vs_unconditional": null,
+          "retained_iou_mass_fraction": null,
+          "anomaly_dropped_with_positive_iou": 0
+        }
+      }
+    },
+    "area_0.01_to_0.1": {
+      "sources": 4,
+      "anomalous": 3,
+      "normal": 1,
+      "fullboxes": 0,
+      "same_pixels": 0,
+      "area_summary": {
+        "n": 4,
+        "minimum": 0.07077088647959183,
+        "q25": 0.07156309789540816,
+        "median": 0.07527503188775508,
+        "mean": 0.07962472098214285,
+        "q75": 0.08333665497448976,
+        "maximum": 0.09717793367346939
+      },
+      "candidate_mean_iou_all_anomaly_denominator": 0.4138494230124585,
+      "normal_unconditional_boxes": 1,
+      "arms": {
+        "roi": {
+          "anomaly_kept": 2,
+          "anomaly_dropped": 1,
+          "recall": 0.6666666666666666,
+          "normal_boxes_kept": 1,
+          "normal_box_fpr": 1.0,
+          "mean_iou_all_anomaly_denominator": 0.3054965113373324,
+          "discarded_iou_mass": 0.3250587350253782,
+          "mean_iou_loss_vs_unconditional": 0.10835291167512606,
+          "retained_iou_mass_fraction": 0.7381827649138363,
+          "anomaly_dropped_with_positive_iou": 1
+        },
+        "duplicate": {
+          "anomaly_kept": 2,
+          "anomaly_dropped": 1,
+          "recall": 0.6666666666666666,
+          "normal_boxes_kept": 1,
+          "normal_box_fpr": 1.0,
+          "mean_iou_all_anomaly_denominator": 0.3054965113373324,
+          "discarded_iou_mass": 0.3250587350253782,
+          "mean_iou_loss_vs_unconditional": 0.10835291167512606,
+          "retained_iou_mass_fraction": 0.7381827649138363,
+          "anomaly_dropped_with_positive_iou": 1
+        }
+      }
+    },
+    "area_0.1_to_0.5": {
+      "sources": 29,
+      "anomalous": 21,
+      "normal": 8,
+      "fullboxes": 0,
+      "same_pixels": 0,
+      "area_summary": {
+        "n": 29,
+        "minimum": 0.12695312499999997,
+        "q25": 0.19694674744897958,
+        "median": 0.2570950255102041,
+        "mean": 0.2962076937456017,
+        "q75": 0.413265306122449,
+        "maximum": 0.49433992346938777
+      },
+      "candidate_mean_iou_all_anomaly_denominator": 0.1667806998967084,
+      "normal_unconditional_boxes": 8,
+      "arms": {
+        "roi": {
+          "anomaly_kept": 14,
+          "anomaly_dropped": 7,
+          "recall": 0.6666666666666666,
+          "normal_boxes_kept": 3,
+          "normal_box_fpr": 0.375,
+          "mean_iou_all_anomaly_denominator": 0.13029957988634858,
+          "discarded_iou_mass": 0.7661035202175563,
+          "mean_iou_loss_vs_unconditional": 0.03648112001035982,
+          "retained_iou_mass_fraction": 0.7812629396989368,
+          "anomaly_dropped_with_positive_iou": 7
+        },
+        "duplicate": {
+          "anomaly_kept": 12,
+          "anomaly_dropped": 9,
+          "recall": 0.5714285714285714,
+          "normal_boxes_kept": 0,
+          "normal_box_fpr": 0.0,
+          "mean_iou_all_anomaly_denominator": 0.1278191857131646,
+          "discarded_iou_mass": 0.8181917978544195,
+          "mean_iou_loss_vs_unconditional": 0.03896151418354379,
+          "retained_iou_mass_fraction": 0.7663907502026693,
+          "anomaly_dropped_with_positive_iou": 9
+        }
+      }
+    },
+    "area_0.5_to_1": {
+      "sources": 27,
+      "anomalous": 12,
+      "normal": 15,
+      "fullboxes": 0,
+      "same_pixels": 0,
+      "area_summary": {
+        "n": 27,
+        "minimum": 0.5294363839285714,
+        "q25": 0.7630739795918368,
+        "median": 0.8125,
+        "mean": 0.7822848757558579,
+        "q75": 0.8794642857142857,
+        "maximum": 0.90625
+      },
+      "candidate_mean_iou_all_anomaly_denominator": 0.027645311673572176,
+      "normal_unconditional_boxes": 15,
+      "arms": {
+        "roi": {
+          "anomaly_kept": 9,
+          "anomaly_dropped": 3,
+          "recall": 0.75,
+          "normal_boxes_kept": 2,
+          "normal_box_fpr": 0.13333333333333333,
+          "mean_iou_all_anomaly_denominator": 0.027115821479221234,
+          "discarded_iou_mass": 0.006353882332211236,
+          "mean_iou_loss_vs_unconditional": 0.0005294901943509364,
+          "retained_iou_mass_fraction": 0.9808470166441601,
+          "anomaly_dropped_with_positive_iou": 3
+        },
+        "duplicate": {
+          "anomaly_kept": 8,
+          "anomaly_dropped": 4,
+          "recall": 0.6666666666666666,
+          "normal_boxes_kept": 1,
+          "normal_box_fpr": 0.06666666666666667,
+          "mean_iou_all_anomaly_denominator": 0.02572207790049538,
+          "discarded_iou_mass": 0.02307880527692152,
+          "mean_iou_loss_vs_unconditional": 0.0019232337730767934,
+          "retained_iou_mass_fraction": 0.9304318288834729,
+          "anomaly_dropped_with_positive_iou": 4
+        }
+      }
+    },
+    "fullbox": {
+      "sources": 60,
+      "anomalous": 24,
+      "normal": 36,
+      "fullboxes": 60,
+      "same_pixels": 60,
+      "area_summary": {
+        "n": 60,
+        "minimum": 1.0,
+        "q25": 1.0,
+        "median": 1.0,
+        "mean": 1.0,
+        "q75": 1.0,
+        "maximum": 1.0
+      },
+      "candidate_mean_iou_all_anomaly_denominator": 0.012334655227435333,
+      "normal_unconditional_boxes": 36,
+      "arms": {
+        "roi": {
+          "anomaly_kept": 18,
+          "anomaly_dropped": 6,
+          "recall": 0.75,
+          "normal_boxes_kept": 7,
+          "normal_box_fpr": 0.19444444444444445,
+          "mean_iou_all_anomaly_denominator": 0.008539592139334555,
+          "discarded_iou_mass": 0.09108151411441859,
+          "mean_iou_loss_vs_unconditional": 0.0037950630881007745,
+          "retained_iou_mass_fraction": 0.692325158820847,
+          "anomaly_dropped_with_positive_iou": 6
+        },
+        "duplicate": {
+          "anomaly_kept": 17,
+          "anomaly_dropped": 7,
+          "recall": 0.7083333333333334,
+          "normal_boxes_kept": 9,
+          "normal_box_fpr": 0.25,
+          "mean_iou_all_anomaly_denominator": 0.008465925472667888,
+          "discarded_iou_mass": 0.09284951411441858,
+          "mean_iou_loss_vs_unconditional": 0.003868729754767441,
+          "retained_iou_mass_fraction": 0.6863528259661099,
+          "anomaly_dropped_with_positive_iou": 7
+        }
+      }
+    }
+  },
+  "by_category": {
+    "candle": {
+      "sources": 10,
+      "anomalous": 5,
+      "normal": 5,
+      "fullboxes": 9,
+      "same_pixels": 9,
+      "area_summary": {
+        "n": 10,
+        "minimum": 0.5339604591836735,
+        "q25": 1.0,
+        "median": 1.0,
+        "mean": 0.9533960459183675,
+        "q75": 1.0,
+        "maximum": 1.0
+      },
+      "candidate_mean_iou_all_anomaly_denominator": 0.017625558009795383,
+      "normal_unconditional_boxes": 5,
+      "arms": {
+        "roi": {
+          "anomaly_kept": 5,
+          "anomaly_dropped": 0,
+          "recall": 1.0,
+          "normal_boxes_kept": 2,
+          "normal_box_fpr": 0.4,
+          "mean_iou_all_anomaly_denominator": 0.017625558009795383,
+          "discarded_iou_mass": 0.0,
+          "mean_iou_loss_vs_unconditional": 0.0,
+          "retained_iou_mass_fraction": 1.0,
+          "anomaly_dropped_with_positive_iou": 0
+        },
+        "duplicate": {
+          "anomaly_kept": 5,
+          "anomaly_dropped": 0,
+          "recall": 1.0,
+          "normal_boxes_kept": 2,
+          "normal_box_fpr": 0.4,
+          "mean_iou_all_anomaly_denominator": 0.017625558009795383,
+          "discarded_iou_mass": 0.0,
+          "mean_iou_loss_vs_unconditional": 0.0,
+          "retained_iou_mass_fraction": 1.0,
+          "anomaly_dropped_with_positive_iou": 0
+        }
+      }
+    },
+    "capsules": {
+      "sources": 10,
+      "anomalous": 5,
+      "normal": 5,
+      "fullboxes": 6,
+      "same_pixels": 6,
+      "area_summary": {
+        "n": 10,
+        "minimum": 0.3862404336734694,
+        "q25": 0.7666812818877551,
+        "median": 1.0,
+        "mean": 0.8544622927295918,
+        "q75": 1.0,
+        "maximum": 1.0
+      },
+      "candidate_mean_iou_all_anomaly_denominator": 0.014716600351328542,
+      "normal_unconditional_boxes": 5,
+      "arms": {
+        "roi": {
+          "anomaly_kept": 2,
+          "anomaly_dropped": 3,
+          "recall": 0.4,
+          "normal_boxes_kept": 0,
+          "normal_box_fpr": 0.0,
+          "mean_iou_all_anomaly_denominator": 0.00038533333333333296,
+          "discarded_iou_mass": 0.07165633508997606,
+          "mean_iou_loss_vs_unconditional": 0.014331267017995211,
+          "retained_iou_mass_fraction": 0.026183583445516814,
+          "anomaly_dropped_with_positive_iou": 3
+        },
+        "duplicate": {
+          "anomaly_kept": 1,
+          "anomaly_dropped": 4,
+          "recall": 0.2,
+          "normal_boxes_kept": 0,
+          "normal_box_fpr": 0.0,
+          "mean_iou_all_anomaly_denominator": 3.1733333333333296e-05,
+          "discarded_iou_mass": 0.07342433508997605,
+          "mean_iou_loss_vs_unconditional": 0.01468486701799521,
+          "retained_iou_mass_fraction": 0.002156295107277855,
+          "anomaly_dropped_with_positive_iou": 4
+        }
+      }
+    },
+    "cashew": {
+      "sources": 10,
+      "anomalous": 5,
+      "normal": 5,
+      "fullboxes": 9,
+      "same_pixels": 9,
+      "area_summary": {
+        "n": 10,
+        "minimum": 0.41085379464285715,
+        "q25": 1.0,
+        "median": 1.0,
+        "mean": 0.9410853794642857,
+        "q75": 1.0,
+        "maximum": 1.0
+      },
+      "candidate_mean_iou_all_anomaly_denominator": 0.011553795370005579,
+      "normal_unconditional_boxes": 5,
+      "arms": {
+        "roi": {
+          "anomaly_kept": 2,
+          "anomaly_dropped": 3,
+          "recall": 0.4,
+          "normal_boxes_kept": 0,
+          "normal_box_fpr": 0.0,
+          "mean_iou_all_anomaly_denominator": 0.004269837830946001,
+          "discarded_iou_mass": 0.03641978769529789,
+          "mean_iou_loss_vs_unconditional": 0.007283957539059578,
+          "retained_iou_mass_fraction": 0.36956148990060733,
+          "anomaly_dropped_with_positive_iou": 3
+        },
+        "duplicate": {
+          "anomaly_kept": 2,
+          "anomaly_dropped": 3,
+          "recall": 0.4,
+          "normal_boxes_kept": 0,
+          "normal_box_fpr": 0.0,
+          "mean_iou_all_anomaly_denominator": 0.004269837830946001,
+          "discarded_iou_mass": 0.03641978769529789,
+          "mean_iou_loss_vs_unconditional": 0.007283957539059578,
+          "retained_iou_mass_fraction": 0.36956148990060733,
+          "anomaly_dropped_with_positive_iou": 3
+        }
+      }
+    },
+    "chewinggum": {
+      "sources": 10,
+      "anomalous": 5,
+      "normal": 5,
+      "fullboxes": 7,
+      "same_pixels": 7,
+      "area_summary": {
+        "n": 10,
+        "minimum": 0.07182716836734694,
+        "q25": 0.6470772879464286,
+        "median": 1.0,
+        "mean": 0.8085200095663264,
+        "q75": 1.0,
+        "maximum": 1.0
+      },
+      "candidate_mean_iou_all_anomaly_denominator": 0.1606957051441328,
+      "normal_unconditional_boxes": 5,
+      "arms": {
+        "roi": {
+          "anomaly_kept": 5,
+          "anomaly_dropped": 0,
+          "recall": 1.0,
+          "normal_boxes_kept": 1,
+          "normal_box_fpr": 0.2,
+          "mean_iou_all_anomaly_denominator": 0.1606957051441328,
+          "discarded_iou_mass": 0.0,
+          "mean_iou_loss_vs_unconditional": 0.0,
+          "retained_iou_mass_fraction": 1.0,
+          "anomaly_dropped_with_positive_iou": 0
+        },
+        "duplicate": {
+          "anomaly_kept": 5,
+          "anomaly_dropped": 0,
+          "recall": 1.0,
+          "normal_boxes_kept": 1,
+          "normal_box_fpr": 0.2,
+          "mean_iou_all_anomaly_denominator": 0.1606957051441328,
+          "discarded_iou_mass": 0.0,
+          "mean_iou_loss_vs_unconditional": 0.0,
+          "retained_iou_mass_fraction": 1.0,
+          "anomaly_dropped_with_positive_iou": 0
+        }
+      }
+    },
+    "fryum": {
+      "sources": 10,
+      "anomalous": 5,
+      "normal": 5,
+      "fullboxes": 0,
+      "same_pixels": 0,
+      "area_summary": {
+        "n": 10,
+        "minimum": 0.12695312499999997,
+        "q25": 0.1734195631377551,
+        "median": 0.20603475765306123,
+        "mean": 0.2932676977040816,
+        "q75": 0.41703204719387754,
+        "maximum": 0.6919642857142857
+      },
+      "candidate_mean_iou_all_anomaly_denominator": 0.37034528392801225,
+      "normal_unconditional_boxes": 5,
+      "arms": {
+        "roi": {
+          "anomaly_kept": 4,
+          "anomaly_dropped": 1,
+          "recall": 0.8,
+          "normal_boxes_kept": 1,
+          "normal_box_fpr": 0.2,
+          "mean_iou_all_anomaly_denominator": 0.2508658284649328,
+          "discarded_iou_mass": 0.597397277315397,
+          "mean_iou_loss_vs_unconditional": 0.1194794554630794,
+          "retained_iou_mass_fraction": 0.6773836183470778,
+          "anomaly_dropped_with_positive_iou": 1
+        },
+        "duplicate": {
+          "anomaly_kept": 3,
+          "anomaly_dropped": 2,
+          "recall": 0.6,
+          "normal_boxes_kept": 0,
+          "normal_box_fpr": 0.0,
+          "mean_iou_all_anomaly_denominator": 0.24919939413113198,
+          "discarded_iou_mass": 0.6057294489844012,
+          "mean_iou_loss_vs_unconditional": 0.12114588979688024,
+          "retained_iou_mass_fraction": 0.6728839408673863,
+          "anomaly_dropped_with_positive_iou": 2
+        }
+      }
+    },
+    "macaroni1": {
+      "sources": 10,
+      "anomalous": 5,
+      "normal": 5,
+      "fullboxes": 10,
+      "same_pixels": 10,
+      "area_summary": {
+        "n": 10,
+        "minimum": 1.0,
+        "q25": 1.0,
+        "median": 1.0,
+        "mean": 1.0,
+        "q75": 1.0,
+        "maximum": 1.0
+      },
+      "candidate_mean_iou_all_anomaly_denominator": 0.002539200000000003,
+      "normal_unconditional_boxes": 5,
+      "arms": {
+        "roi": {
+          "anomaly_kept": 4,
+          "anomaly_dropped": 1,
+          "recall": 0.8,
+          "normal_boxes_kept": 0,
+          "normal_box_fpr": 0.0,
+          "mean_iou_all_anomaly_denominator": 0.0018820000000000024,
+          "discarded_iou_mass": 0.003286000000000004,
+          "mean_iou_loss_vs_unconditional": 0.0006572000000000008,
+          "retained_iou_mass_fraction": 0.7411783238815375,
+          "anomaly_dropped_with_positive_iou": 1
+        },
+        "duplicate": {
+          "anomaly_kept": 4,
+          "anomaly_dropped": 1,
+          "recall": 0.8,
+          "normal_boxes_kept": 1,
+          "normal_box_fpr": 0.2,
+          "mean_iou_all_anomaly_denominator": 0.0018820000000000024,
+          "discarded_iou_mass": 0.003286000000000004,
+          "mean_iou_loss_vs_unconditional": 0.0006572000000000008,
+          "retained_iou_mass_fraction": 0.7411783238815375,
+          "anomaly_dropped_with_positive_iou": 1
+        }
+      }
+    },
+    "macaroni2": {
+      "sources": 10,
+      "anomalous": 5,
+      "normal": 5,
+      "fullboxes": 7,
+      "same_pixels": 7,
+      "area_summary": {
+        "n": 10,
+        "minimum": 0.8169642857142857,
+        "q25": 0.9129464285714286,
+        "median": 1.0,
+        "mean": 0.9575892857142858,
+        "q75": 1.0,
+        "maximum": 1.0
+      },
+      "candidate_mean_iou_all_anomaly_denominator": 0.004475923762212289,
+      "normal_unconditional_boxes": 5,
+      "arms": {
+        "roi": {
+          "anomaly_kept": 4,
+          "anomaly_dropped": 1,
+          "recall": 0.8,
+          "normal_boxes_kept": 1,
+          "normal_box_fpr": 0.2,
+          "mean_iou_all_anomaly_denominator": 0.0043895878787878805,
+          "discarded_iou_mass": 0.00043167941712204255,
+          "mean_iou_loss_vs_unconditional": 8.633588342440852e-05,
+          "retained_iou_mass_fraction": 0.9807110469232533,
+          "anomaly_dropped_with_positive_iou": 1
+        },
+        "duplicate": {
+          "anomaly_kept": 4,
+          "anomaly_dropped": 1,
+          "recall": 0.8,
+          "normal_boxes_kept": 2,
+          "normal_box_fpr": 0.4,
+          "mean_iou_all_anomaly_denominator": 0.0043895878787878805,
+          "discarded_iou_mass": 0.00043167941712204255,
+          "mean_iou_loss_vs_unconditional": 8.633588342440852e-05,
+          "retained_iou_mass_fraction": 0.9807110469232533,
+          "anomaly_dropped_with_positive_iou": 1
+        }
+      }
+    },
+    "pcb1": {
+      "sources": 10,
+      "anomalous": 5,
+      "normal": 5,
+      "fullboxes": 2,
+      "same_pixels": 2,
+      "area_summary": {
+        "n": 10,
+        "minimum": 0.2570950255102041,
+        "q25": 0.33567342952806123,
+        "median": 0.6729113520408163,
+        "mean": 0.6398975605867346,
+        "q75": 0.890625,
+        "maximum": 1.0
+      },
+      "candidate_mean_iou_all_anomaly_denominator": 0.02218976824243355,
+      "normal_unconditional_boxes": 5,
+      "arms": {
+        "roi": {
+          "anomaly_kept": 1,
+          "anomaly_dropped": 4,
+          "recall": 0.2,
+          "normal_boxes_kept": 0,
+          "normal_box_fpr": 0.0,
+          "mean_iou_all_anomaly_denominator": 0.005437192831237601,
+          "discarded_iou_mass": 0.08376287705597976,
+          "mean_iou_loss_vs_unconditional": 0.01675257541119595,
+          "retained_iou_mass_fraction": 0.24503152857811478,
+          "anomaly_dropped_with_positive_iou": 4
+        },
+        "duplicate": {
+          "anomaly_kept": 1,
+          "anomaly_dropped": 4,
+          "recall": 0.2,
+          "normal_boxes_kept": 0,
+          "normal_box_fpr": 0.0,
+          "mean_iou_all_anomaly_denominator": 0.00593505236986801,
+          "discarded_iou_mass": 0.08127357936282771,
+          "mean_iou_loss_vs_unconditional": 0.016254715872565544,
+          "retained_iou_mass_fraction": 0.26746797465502115,
+          "anomaly_dropped_with_positive_iou": 4
+        }
+      }
+    },
+    "pcb2": {
+      "sources": 10,
+      "anomalous": 5,
+      "normal": 5,
+      "fullboxes": 3,
+      "same_pixels": 3,
+      "area_summary": {
+        "n": 10,
+        "minimum": 0.8125,
+        "q25": 0.8761160714285714,
+        "median": 0.8861607142857143,
+        "mean": 0.9107142857142858,
+        "q75": 0.9765625,
+        "maximum": 1.0
+      },
+      "candidate_mean_iou_all_anomaly_denominator": 0.03442247049356465,
+      "normal_unconditional_boxes": 5,
+      "arms": {
+        "roi": {
+          "anomaly_kept": 5,
+          "anomaly_dropped": 0,
+          "recall": 1.0,
+          "normal_boxes_kept": 5,
+          "normal_box_fpr": 1.0,
+          "mean_iou_all_anomaly_denominator": 0.03442247049356465,
+          "discarded_iou_mass": 0.0,
+          "mean_iou_loss_vs_unconditional": 0.0,
+          "retained_iou_mass_fraction": 1.0,
+          "anomaly_dropped_with_positive_iou": 0
+        },
+        "duplicate": {
+          "anomaly_kept": 4,
+          "anomaly_dropped": 1,
+          "recall": 0.8,
+          "normal_boxes_kept": 4,
+          "normal_box_fpr": 0.8,
+          "mean_iou_all_anomaly_denominator": 0.031077485904622604,
+          "discarded_iou_mass": 0.01672492294471023,
+          "mean_iou_loss_vs_unconditional": 0.003344984588942046,
+          "retained_iou_mass_fraction": 0.9028255514209128,
+          "anomaly_dropped_with_positive_iou": 1
+        }
+      }
+    },
+    "pcb3": {
+      "sources": 10,
+      "anomalous": 5,
+      "normal": 5,
+      "fullboxes": 1,
+      "same_pixels": 1,
+      "area_summary": {
+        "n": 10,
+        "minimum": 0.07077088647959183,
+        "q25": 0.31680982940051017,
+        "median": 0.4963727678571429,
+        "mean": 0.5203483737244898,
+        "q75": 0.7734375,
+        "maximum": 1.0
+      },
+      "candidate_mean_iou_all_anomaly_denominator": 0.08837781975536042,
+      "normal_unconditional_boxes": 5,
+      "arms": {
+        "roi": {
+          "anomaly_kept": 1,
+          "anomaly_dropped": 4,
+          "recall": 0.2,
+          "normal_boxes_kept": 0,
+          "normal_box_fpr": 0.0,
+          "mean_iou_all_anomaly_denominator": 0.009249080732202156,
+          "discarded_iou_mass": 0.39564369511579134,
+          "mean_iou_loss_vs_unconditional": 0.07912873902315827,
+          "retained_iou_mass_fraction": 0.10465386855892843,
+          "anomaly_dropped_with_positive_iou": 4
+        },
+        "duplicate": {
+          "anomaly_kept": 0,
+          "anomaly_dropped": 5,
+          "recall": 0.0,
+          "normal_boxes_kept": 0,
+          "normal_box_fpr": 0.0,
+          "mean_iou_all_anomaly_denominator": 0.0,
+          "discarded_iou_mass": 0.4418890987768021,
+          "mean_iou_loss_vs_unconditional": 0.08837781975536042,
+          "retained_iou_mass_fraction": 0.0,
+          "anomaly_dropped_with_positive_iou": 5
+        }
+      }
+    },
+    "pcb4": {
+      "sources": 10,
+      "anomalous": 5,
+      "normal": 5,
+      "fullboxes": 0,
+      "same_pixels": 0,
+      "area_summary": {
+        "n": 10,
+        "minimum": 0.14857700892857142,
+        "q25": 0.19553671077806123,
+        "median": 0.22793765943877548,
+        "mean": 0.3884845344387755,
+        "q75": 0.5921456473214285,
+        "maximum": 0.8125
+      },
+      "candidate_mean_iou_all_anomaly_denominator": 0.2640450272909073,
+      "normal_unconditional_boxes": 5,
+      "arms": {
+        "roi": {
+          "anomaly_kept": 5,
+          "anomaly_dropped": 0,
+          "recall": 1.0,
+          "normal_boxes_kept": 2,
+          "normal_box_fpr": 0.4,
+          "mean_iou_all_anomaly_denominator": 0.2640450272909073,
+          "discarded_iou_mass": 0.0,
+          "mean_iou_loss_vs_unconditional": 0.0,
+          "retained_iou_mass_fraction": 1.0,
+          "anomaly_dropped_with_positive_iou": 0
+        },
+        "duplicate": {
+          "anomaly_kept": 5,
+          "anomaly_dropped": 0,
+          "recall": 1.0,
+          "normal_boxes_kept": 0,
+          "normal_box_fpr": 0.0,
+          "mean_iou_all_anomaly_denominator": 0.2640450272909073,
+          "discarded_iou_mass": 0.0,
+          "mean_iou_loss_vs_unconditional": 0.0,
+          "retained_iou_mass_fraction": 1.0,
+          "anomaly_dropped_with_positive_iou": 0
+        }
+      }
+    },
+    "pipe_fryum": {
+      "sources": 10,
+      "anomalous": 5,
+      "normal": 5,
+      "fullboxes": 6,
+      "same_pixels": 6,
+      "area_summary": {
+        "n": 10,
+        "minimum": 0.07872289540816323,
+        "q25": 0.5007971938775511,
+        "median": 1.0,
+        "mean": 0.7352558992346939,
+        "q75": 1.0,
+        "maximum": 1.0
+      },
+      "candidate_mean_iou_all_anomaly_denominator": 0.08335653413416043,
+      "normal_unconditional_boxes": 5,
+      "arms": {
+        "roi": {
+          "anomaly_kept": 5,
+          "anomaly_dropped": 0,
+          "recall": 1.0,
+          "normal_boxes_kept": 1,
+          "normal_box_fpr": 0.2,
+          "mean_iou_all_anomaly_denominator": 0.08335653413416043,
+          "discarded_iou_mass": 0.0,
+          "mean_iou_loss_vs_unconditional": 0.0,
+          "retained_iou_mass_fraction": 1.0,
+          "anomaly_dropped_with_positive_iou": 0
+        },
+        "duplicate": {
+          "anomaly_kept": 5,
+          "anomaly_dropped": 0,
+          "recall": 1.0,
+          "normal_boxes_kept": 1,
+          "normal_box_fpr": 0.2,
+          "mean_iou_all_anomaly_denominator": 0.08335653413416043,
+          "discarded_iou_mass": 0.0,
+          "mean_iou_loss_vs_unconditional": 0.0,
+          "retained_iou_mass_fraction": 1.0,
+          "anomaly_dropped_with_positive_iou": 0
+        }
+      }
+    }
+  },
+  "by_teacher_exposure": {
+    "teacher_training_exposed": {
+      "sources": 96,
+      "anomalous": 38,
+      "normal": 58,
+      "fullboxes": 49,
+      "same_pixels": 49,
+      "area_summary": {
+        "n": 96,
+        "minimum": 0.07077088647959183,
+        "q25": 0.5240553252551021,
+        "median": 1.0,
+        "mean": 0.7702825637090772,
+        "q75": 1.0,
+        "maximum": 1.0
+      },
+      "candidate_mean_iou_all_anomaly_denominator": 0.07496496649509181,
+      "normal_unconditional_boxes": 58,
+      "arms": {
+        "roi": {
+          "anomaly_kept": 25,
+          "anomaly_dropped": 13,
+          "recall": 0.6578947368421053,
+          "normal_boxes_kept": 11,
+          "normal_box_fpr": 0.1896551724137931,
+          "mean_iou_all_anomaly_denominator": 0.04723183302111117,
+          "discarded_iou_mass": 1.0538590720112655,
+          "mean_iou_loss_vs_unconditional": 0.02773313347398067,
+          "retained_iou_mass_fraction": 0.6300520793830218,
+          "anomaly_dropped_with_positive_iou": 13
+        },
+        "duplicate": {
+          "anomaly_kept": 21,
+          "anomaly_dropped": 17,
+          "recall": 0.5526315789473685,
+          "normal_boxes_kept": 9,
+          "normal_box_fpr": 0.15517241379310345,
+          "mean_iou_all_anomaly_denominator": 0.0446400313781924,
+          "discarded_iou_mass": 1.1523475344421787,
+          "mean_iou_loss_vs_unconditional": 0.030324935116899442,
+          "retained_iou_mass_fraction": 0.5954785743966831,
+          "anomaly_dropped_with_positive_iou": 17
+        }
+      }
+    },
+    "teacher_unseen": {
+      "sources": 24,
+      "anomalous": 22,
+      "normal": 2,
+      "fullboxes": 11,
+      "same_pixels": 11,
+      "area_summary": {
+        "n": 24,
+        "minimum": 0.07182716836734694,
+        "q25": 0.2820671237244898,
+        "median": 0.8794642857142857,
+        "mean": 0.6701286471619898,
+        "q75": 1.0,
+        "maximum": 1.0
+      },
+      "candidate_mean_iou_all_anomaly_denominator": 0.11468407752709436,
+      "normal_unconditional_boxes": 2,
+      "arms": {
+        "roi": {
+          "anomaly_kept": 18,
+          "anomaly_dropped": 4,
+          "recall": 0.8181818181818182,
+          "normal_boxes_kept": 2,
+          "normal_box_fpr": 1.0,
+          "mean_iou_all_anomaly_denominator": 0.10855959663262622,
+          "discarded_iou_mass": 0.13473857967829916,
+          "mean_iou_loss_vs_unconditional": 0.0061244808944681435,
+          "retained_iou_mass_fraction": 0.9465969380708388,
+          "anomaly_dropped_with_positive_iou": 4
+        },
+        "duplicate": {
+          "anomaly_kept": 18,
+          "anomaly_dropped": 4,
+          "recall": 0.8181818181818182,
+          "normal_boxes_kept": 2,
+          "normal_box_fpr": 1.0,
+          "mean_iou_all_anomaly_denominator": 0.10982810853486896,
+          "discarded_iou_mass": 0.10683131782895883,
+          "mean_iou_loss_vs_unconditional": 0.004855968992225401,
+          "retained_iou_mass_fraction": 0.9576578623908958,
+          "anomaly_dropped_with_positive_iou": 4
+        }
+      }
+    }
+  },
+  "fullbox": {
+    "sources": 60,
+    "anomalous": 24,
+    "normal": 36,
+    "fullboxes": 60,
+    "same_pixels": 60,
+    "area_summary": {
+      "n": 60,
+      "minimum": 1.0,
+      "q25": 1.0,
+      "median": 1.0,
+      "mean": 1.0,
+      "q75": 1.0,
+      "maximum": 1.0
+    },
+    "candidate_mean_iou_all_anomaly_denominator": 0.012334655227435333,
+    "normal_unconditional_boxes": 36,
+    "arms": {
+      "roi": {
+        "anomaly_kept": 18,
+        "anomaly_dropped": 6,
+        "recall": 0.75,
+        "normal_boxes_kept": 7,
+        "normal_box_fpr": 0.19444444444444445,
+        "mean_iou_all_anomaly_denominator": 0.008539592139334555,
+        "discarded_iou_mass": 0.09108151411441859,
+        "mean_iou_loss_vs_unconditional": 0.0037950630881007745,
+        "retained_iou_mass_fraction": 0.692325158820847,
+        "anomaly_dropped_with_positive_iou": 6
+      },
+      "duplicate": {
+        "anomaly_kept": 17,
+        "anomaly_dropped": 7,
+        "recall": 0.7083333333333334,
+        "normal_boxes_kept": 9,
+        "normal_box_fpr": 0.25,
+        "mean_iou_all_anomaly_denominator": 0.008465925472667888,
+        "discarded_iou_mass": 0.09284951411441858,
+        "mean_iou_loss_vs_unconditional": 0.003868729754767441,
+        "retained_iou_mass_fraction": 0.6863528259661099,
+        "anomaly_dropped_with_positive_iou": 7
+      }
+    }
+  },
+  "nonfullbox": {
+    "sources": 60,
+    "anomalous": 36,
+    "normal": 24,
+    "fullboxes": 0,
+    "same_pixels": 0,
+    "area_summary": {
+      "n": 60,
+      "minimum": 0.07077088647959183,
+      "q25": 0.21245715082908168,
+      "median": 0.4751474808673469,
+      "mean": 0.5005035607993197,
+      "q75": 0.7834821428571428,
+      "maximum": 0.90625
+    },
+    "candidate_mean_iou_all_anomaly_denominator": 0.14099129741530886,
+    "normal_unconditional_boxes": 24,
+    "arms": {
+      "roi": {
+        "anomaly_kept": 25,
+        "anomaly_dropped": 11,
+        "recall": 0.6944444444444444,
+        "normal_boxes_kept": 6,
+        "normal_box_fpr": 0.25,
+        "mean_iou_all_anomaly_denominator": 0.11050473803822145,
+        "discarded_iou_mass": 1.097516137575146,
+        "mean_iou_loss_vs_unconditional": 0.030486559377087392,
+        "retained_iou_mass_fraction": 0.7837699210094853,
+        "anomaly_dropped_with_positive_iou": 11
+      },
+      "duplicate": {
+        "anomaly_kept": 22,
+        "anomaly_dropped": 14,
+        "recall": 0.6111111111111112,
+        "normal_boxes_kept": 2,
+        "normal_box_fpr": 0.08333333333333333,
+        "mean_iou_all_anomaly_denominator": 0.10859326024428886,
+        "discarded_iou_mass": 1.1663293381567192,
+        "mean_iou_loss_vs_unconditional": 0.03239803717101998,
+        "retained_iou_mass_fraction": 0.7702125041406832,
+        "anomaly_dropped_with_positive_iou": 14
+      }
+    }
+  },
+  "map_scalar_diagnostics": {
+    "fullbox_quantile": {
+      "n": 60,
+      "minimum": 2.2130533083170034e-12,
+      "q25": 5.3741214603442167e-11,
+      "median": 2.711815771938575e-10,
+      "mean": 2.3173822841461954e-08,
+      "q75": 5.505046862808172e-09,
+      "maximum": 5.714871917916753e-07
+    },
+    "nonfullbox_quantile": {
+      "n": 60,
+      "minimum": 5.2055419003105285e-11,
+      "q25": 1.7140034280771488e-08,
+      "median": 5.156252669280548e-08,
+      "mean": 3.138181999199433e-06,
+      "q75": 3.774073249473986e-07,
+      "maximum": 7.625803118571639e-05
+    },
+    "fullbox_map_min": {
+      "n": 60,
+      "minimum": 2.7688275725991637e-32,
+      "q25": 8.020497890359723e-27,
+      "median": 5.222208113819485e-24,
+      "mean": 5.142014099799526e-22,
+      "q75": 2.1287036976231205e-22,
+      "maximum": 1.118441165211249e-20
+    },
+    "fullbox_map_max": {
+      "n": 60,
+      "minimum": 9.637689757369117e-09,
+      "q25": 6.113106536531632e-07,
+      "median": 3.729598347490537e-06,
+      "mean": 0.2841543054820157,
+      "q75": 0.9815149307250977,
+      "maximum": 0.9999986886978149
+    },
+    "fullbox_threshold_equals_min": 0,
+    "fullbox_gt_area_equals_candidate_iou_max_abs_error": 6.938893903907228e-18,
+    "fullbox_same_pixels": 60
+  },
+  "probability_semantics": "ROI gate judges fixed candidate region, not calibrated whole-image probability",
+  "no_new_thresholds_or_candidates": true,
+  "original_map_distribution_opened": false,
+  "gt_masks_reopened": false,
+  "rgb_reopened": false,
+  "confirmation_opened": false,
+  "new_api_requests": 0,
+  "limits": [
+    "Current120 previously viewed development sources",
+    "Teacher training exposure96/120; unseen24 has only2normal",
+    "Scalar map range andquantile cannot identify spatial disconnected components,tie mass or background score distribution",
+    "No alternative quantile/threshold tried; no GT-guided tuning",
+    "ROI keep gate can only retain or discard this fixed bbox; it cannot repair bbox geometry"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "schema": "jev-stage13-fixed-confirmation-figure-v1",
+  "timestamp_utc": "2026-11-10T19:15:08.053743+00:00",
+  "hostname": "autodl-container-132444827f-9c594038",
+  "script_sha256": "3c970f43ca30d47882155db432eae8ed144ec2092524de0291a6cb2161e57229",
+  "inputs_sha256": {
+    "stage13_confirmation/metrics.json": "2838095b23bba31a4c233be7a385f3e010c4af7a978673de40bccf10f6e63976",
+    "stage13_confirmation/STATISTICAL_SUPPLEMENT.json": "ff5193c86beb5d85ddc0f70324b906efef023e2e08f689e214d321114332af36",
+    "stages/13_postexecution_audit.json": "c6a590ef9470c644cec4848a5205d4d68b60a312f58667adbb3b1a5d6a0ae668",
+    "stage13_confirmation/final_system_bundle.json": "72ab9b8706cdf77c102f7fb53c372e3a183ecdf69e67599d9d58732838fd392e",
+    "stage13_confirmation/completion_certificate.json": "415f40f52644c0d716c3f563add5d4d03c540c37cbd249c197b6b8a80d899241"
+  },
+  "outputs_sha256": {
+    "confirmation_fixed_system_analysis.png": "4884529a769664dbc5416dba547a2af588d846632c5186da77543bd0da29d79f",
+    "confirmation_fixed_system_analysis.svg": "02eb299a09d9881f4591036547eddf9b7dac84729e407e26c2c5b3af66cf1386"
+  },
+  "protected_labels_or_legacy_read": false,
+  "new_api_requests": 0
+}

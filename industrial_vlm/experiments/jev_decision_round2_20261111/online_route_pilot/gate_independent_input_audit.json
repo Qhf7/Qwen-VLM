@@ -1,0 +1,922 @@
+{
+  "schema": "jev-online-pilot-independent-input-audit-v1",
+  "status": "complete",
+  "timestamp_utc": "2026-11-10T20:06:29.850411+00:00",
+  "hostname": "autodl-container-132444827f-9c594038",
+  "phase": "gate",
+  "passed": 223,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "server",
+      "passed": true
+    },
+    {
+      "name": "24_hash_no_replacement",
+      "passed": true
+    },
+    {
+      "name": "fixed_version_source",
+      "passed": true
+    },
+    {
+      "name": "budget_caps",
+      "passed": true
+    },
+    {
+      "name": "candidate_0",
+      "passed": true
+    },
+    {
+      "name": "eligibility_0",
+      "passed": true
+    },
+    {
+      "name": "oldscore_control_only_0",
+      "passed": true
+    },
+    {
+      "name": "asset_0_query",
+      "passed": true
+    },
+    {
+      "name": "asset_0_crop",
+      "passed": true
+    },
+    {
+      "name": "candidate_1",
+      "passed": true
+    },
+    {
+      "name": "eligibility_1",
+      "passed": true
+    },
+    {
+      "name": "oldscore_control_only_1",
+      "passed": true
+    },
+    {
+      "name": "asset_1_query",
+      "passed": true
+    },
+    {
+      "name": "asset_1_crop",
+      "passed": true
+    },
+    {
+      "name": "candidate_2",
+      "passed": true
+    },
+    {
+      "name": "eligibility_2",
+      "passed": true
+    },
+    {
+      "name": "oldscore_control_only_2",
+      "passed": true
+    },
+    {
+      "name": "asset_2_query",
+      "passed": true
+    },
+    {
+      "name": "asset_2_crop",
+      "passed": true
+    },
+    {
+      "name": "candidate_3",
+      "passed": true
+    },
+    {
+      "name": "eligibility_3",
+      "passed": true
+    },
+    {
+      "name": "oldscore_control_only_3",
+      "passed": true
+    },
+    {
+      "name": "asset_3_query",
+      "passed": true
+    },
+    {
+      "name": "asset_3_crop",
+      "passed": true
+    },
+    {
+      "name": "candidate_4",
+      "passed": true
+    },
+    {
+      "name": "eligibility_4",
+      "passed": true
+    },
+    {
+      "name": "oldscore_control_only_4",
+      "passed": true
+    },
+    {
+      "name": "asset_4_query",
+      "passed": true
+    },
+    {
+      "name": "asset_4_crop",
+      "passed": true
+    },
+    {
+      "name": "candidate_5",
+      "passed": true
+    },
+    {
+      "name": "eligibility_5",
+      "passed": true
+    },
+    {
+      "name": "oldscore_control_only_5",
+      "passed": true
+    },
+    {
+      "name": "asset_5_query",
+      "passed": true
+    },
+    {
+      "name": "asset_5_crop",
+      "passed": true
+    },
+    {
+      "name": "candidate_6",
+      "passed": true
+    },
+    {
+      "name": "eligibility_6",
+      "passed": true
+    },
+    {
+      "name": "oldscore_control_only_6",
+      "passed": true
+    },
+    {
+      "name": "asset_6_query",
+      "passed": true
+    },
+    {
+      "name": "asset_6_crop",
+      "passed": true
+    },
+    {
+      "name": "candidate_7",
+      "passed": true
+    },
+    {
+      "name": "eligibility_7",
+      "passed": true
+    },
+    {
+      "name": "oldscore_control_only_7",
+      "passed": true
+    },
+    {
+      "name": "asset_7_query",
+      "passed": true
+    },
+    {
+      "name": "asset_7_crop",
+      "passed": true
+    },
+    {
+      "name": "candidate_8",
+      "passed": true
+    },
+    {
+      "name": "eligibility_8",
+      "passed": true
+    },
+    {
+      "name": "oldscore_control_only_8",
+      "passed": true
+    },
+    {
+      "name": "asset_8_query",
+      "passed": true
+    },
+    {
+      "name": "asset_8_crop",
+      "passed": true
+    },
+    {
+      "name": "candidate_9",
+      "passed": true
+    },
+    {
+      "name": "eligibility_9",
+      "passed": true
+    },
+    {
+      "name": "oldscore_control_only_9",
+      "passed": true
+    },
+    {
+      "name": "asset_9_query",
+      "passed": true
+    },
+    {
+      "name": "asset_9_crop",
+      "passed": true
+    },
+    {
+      "name": "candidate_10",
+      "passed": true
+    },
+    {
+      "name": "eligibility_10",
+      "passed": true
+    },
+    {
+      "name": "oldscore_control_only_10",
+      "passed": true
+    },
+    {
+      "name": "asset_10_query",
+      "passed": true
+    },
+    {
+      "name": "asset_10_crop",
+      "passed": true
+    },
+    {
+      "name": "candidate_11",
+      "passed": true
+    },
+    {
+      "name": "eligibility_11",
+      "passed": true
+    },
+    {
+      "name": "oldscore_control_only_11",
+      "passed": true
+    },
+    {
+      "name": "asset_11_query",
+      "passed": true
+    },
+    {
+      "name": "asset_11_crop",
+      "passed": true
+    },
+    {
+      "name": "candidate_12",
+      "passed": true
+    },
+    {
+      "name": "eligibility_12",
+      "passed": true
+    },
+    {
+      "name": "oldscore_control_only_12",
+      "passed": true
+    },
+    {
+      "name": "asset_12_query",
+      "passed": true
+    },
+    {
+      "name": "asset_12_crop",
+      "passed": true
+    },
+    {
+      "name": "candidate_13",
+      "passed": true
+    },
+    {
+      "name": "eligibility_13",
+      "passed": true
+    },
+    {
+      "name": "oldscore_control_only_13",
+      "passed": true
+    },
+    {
+      "name": "asset_13_query",
+      "passed": true
+    },
+    {
+      "name": "asset_13_crop",
+      "passed": true
+    },
+    {
+      "name": "candidate_14",
+      "passed": true
+    },
+    {
+      "name": "eligibility_14",
+      "passed": true
+    },
+    {
+      "name": "oldscore_control_only_14",
+      "passed": true
+    },
+    {
+      "name": "asset_14_query",
+      "passed": true
+    },
+    {
+      "name": "asset_14_crop",
+      "passed": true
+    },
+    {
+      "name": "candidate_15",
+      "passed": true
+    },
+    {
+      "name": "eligibility_15",
+      "passed": true
+    },
+    {
+      "name": "oldscore_control_only_15",
+      "passed": true
+    },
+    {
+      "name": "asset_15_query",
+      "passed": true
+    },
+    {
+      "name": "asset_15_crop",
+      "passed": true
+    },
+    {
+      "name": "candidate_16",
+      "passed": true
+    },
+    {
+      "name": "eligibility_16",
+      "passed": true
+    },
+    {
+      "name": "oldscore_control_only_16",
+      "passed": true
+    },
+    {
+      "name": "asset_16_query",
+      "passed": true
+    },
+    {
+      "name": "asset_16_crop",
+      "passed": true
+    },
+    {
+      "name": "candidate_17",
+      "passed": true
+    },
+    {
+      "name": "eligibility_17",
+      "passed": true
+    },
+    {
+      "name": "oldscore_control_only_17",
+      "passed": true
+    },
+    {
+      "name": "asset_17_query",
+      "passed": true
+    },
+    {
+      "name": "asset_17_crop",
+      "passed": true
+    },
+    {
+      "name": "candidate_18",
+      "passed": true
+    },
+    {
+      "name": "eligibility_18",
+      "passed": true
+    },
+    {
+      "name": "oldscore_control_only_18",
+      "passed": true
+    },
+    {
+      "name": "asset_18_query",
+      "passed": true
+    },
+    {
+      "name": "asset_18_crop",
+      "passed": true
+    },
+    {
+      "name": "candidate_19",
+      "passed": true
+    },
+    {
+      "name": "eligibility_19",
+      "passed": true
+    },
+    {
+      "name": "oldscore_control_only_19",
+      "passed": true
+    },
+    {
+      "name": "asset_19_query",
+      "passed": true
+    },
+    {
+      "name": "asset_19_crop",
+      "passed": true
+    },
+    {
+      "name": "candidate_20",
+      "passed": true
+    },
+    {
+      "name": "eligibility_20",
+      "passed": true
+    },
+    {
+      "name": "oldscore_control_only_20",
+      "passed": true
+    },
+    {
+      "name": "asset_20_query",
+      "passed": true
+    },
+    {
+      "name": "asset_20_crop",
+      "passed": true
+    },
+    {
+      "name": "candidate_21",
+      "passed": true
+    },
+    {
+      "name": "eligibility_21",
+      "passed": true
+    },
+    {
+      "name": "oldscore_control_only_21",
+      "passed": true
+    },
+    {
+      "name": "asset_21_query",
+      "passed": true
+    },
+    {
+      "name": "asset_21_crop",
+      "passed": true
+    },
+    {
+      "name": "candidate_22",
+      "passed": true
+    },
+    {
+      "name": "eligibility_22",
+      "passed": true
+    },
+    {
+      "name": "oldscore_control_only_22",
+      "passed": true
+    },
+    {
+      "name": "asset_22_query",
+      "passed": true
+    },
+    {
+      "name": "asset_22_crop",
+      "passed": true
+    },
+    {
+      "name": "candidate_23",
+      "passed": true
+    },
+    {
+      "name": "eligibility_23",
+      "passed": true
+    },
+    {
+      "name": "oldscore_control_only_23",
+      "passed": true
+    },
+    {
+      "name": "asset_23_query",
+      "passed": true
+    },
+    {
+      "name": "asset_23_crop",
+      "passed": true
+    },
+    {
+      "name": "commonK",
+      "passed": true
+    },
+    {
+      "name": "request_hash_0",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_0",
+      "passed": true
+    },
+    {
+      "name": "gate_single_query_0",
+      "passed": true
+    },
+    {
+      "name": "gate_no_crop_0",
+      "passed": true
+    },
+    {
+      "name": "request_hash_1",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_1",
+      "passed": true
+    },
+    {
+      "name": "gate_single_query_1",
+      "passed": true
+    },
+    {
+      "name": "gate_no_crop_1",
+      "passed": true
+    },
+    {
+      "name": "request_hash_2",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_2",
+      "passed": true
+    },
+    {
+      "name": "gate_single_query_2",
+      "passed": true
+    },
+    {
+      "name": "gate_no_crop_2",
+      "passed": true
+    },
+    {
+      "name": "request_hash_3",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_3",
+      "passed": true
+    },
+    {
+      "name": "gate_single_query_3",
+      "passed": true
+    },
+    {
+      "name": "gate_no_crop_3",
+      "passed": true
+    },
+    {
+      "name": "request_hash_4",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_4",
+      "passed": true
+    },
+    {
+      "name": "gate_single_query_4",
+      "passed": true
+    },
+    {
+      "name": "gate_no_crop_4",
+      "passed": true
+    },
+    {
+      "name": "request_hash_5",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_5",
+      "passed": true
+    },
+    {
+      "name": "gate_single_query_5",
+      "passed": true
+    },
+    {
+      "name": "gate_no_crop_5",
+      "passed": true
+    },
+    {
+      "name": "request_hash_6",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_6",
+      "passed": true
+    },
+    {
+      "name": "gate_single_query_6",
+      "passed": true
+    },
+    {
+      "name": "gate_no_crop_6",
+      "passed": true
+    },
+    {
+      "name": "request_hash_7",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_7",
+      "passed": true
+    },
+    {
+      "name": "gate_single_query_7",
+      "passed": true
+    },
+    {
+      "name": "gate_no_crop_7",
+      "passed": true
+    },
+    {
+      "name": "request_hash_8",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_8",
+      "passed": true
+    },
+    {
+      "name": "gate_single_query_8",
+      "passed": true
+    },
+    {
+      "name": "gate_no_crop_8",
+      "passed": true
+    },
+    {
+      "name": "request_hash_9",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_9",
+      "passed": true
+    },
+    {
+      "name": "gate_single_query_9",
+      "passed": true
+    },
+    {
+      "name": "gate_no_crop_9",
+      "passed": true
+    },
+    {
+      "name": "request_hash_10",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_10",
+      "passed": true
+    },
+    {
+      "name": "gate_single_query_10",
+      "passed": true
+    },
+    {
+      "name": "gate_no_crop_10",
+      "passed": true
+    },
+    {
+      "name": "request_hash_11",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_11",
+      "passed": true
+    },
+    {
+      "name": "gate_single_query_11",
+      "passed": true
+    },
+    {
+      "name": "gate_no_crop_11",
+      "passed": true
+    },
+    {
+      "name": "request_hash_12",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_12",
+      "passed": true
+    },
+    {
+      "name": "gate_single_query_12",
+      "passed": true
+    },
+    {
+      "name": "gate_no_crop_12",
+      "passed": true
+    },
+    {
+      "name": "request_hash_13",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_13",
+      "passed": true
+    },
+    {
+      "name": "gate_single_query_13",
+      "passed": true
+    },
+    {
+      "name": "gate_no_crop_13",
+      "passed": true
+    },
+    {
+      "name": "request_hash_14",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_14",
+      "passed": true
+    },
+    {
+      "name": "gate_single_query_14",
+      "passed": true
+    },
+    {
+      "name": "gate_no_crop_14",
+      "passed": true
+    },
+    {
+      "name": "request_hash_15",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_15",
+      "passed": true
+    },
+    {
+      "name": "gate_single_query_15",
+      "passed": true
+    },
+    {
+      "name": "gate_no_crop_15",
+      "passed": true
+    },
+    {
+      "name": "request_hash_16",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_16",
+      "passed": true
+    },
+    {
+      "name": "gate_single_query_16",
+      "passed": true
+    },
+    {
+      "name": "gate_no_crop_16",
+      "passed": true
+    },
+    {
+      "name": "request_hash_17",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_17",
+      "passed": true
+    },
+    {
+      "name": "gate_single_query_17",
+      "passed": true
+    },
+    {
+      "name": "gate_no_crop_17",
+      "passed": true
+    },
+    {
+      "name": "request_hash_18",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_18",
+      "passed": true
+    },
+    {
+      "name": "gate_single_query_18",
+      "passed": true
+    },
+    {
+      "name": "gate_no_crop_18",
+      "passed": true
+    },
+    {
+      "name": "request_hash_19",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_19",
+      "passed": true
+    },
+    {
+      "name": "gate_single_query_19",
+      "passed": true
+    },
+    {
+      "name": "gate_no_crop_19",
+      "passed": true
+    },
+    {
+      "name": "request_hash_20",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_20",
+      "passed": true
+    },
+    {
+      "name": "gate_single_query_20",
+      "passed": true
+    },
+    {
+      "name": "gate_no_crop_20",
+      "passed": true
+    },
+    {
+      "name": "request_hash_21",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_21",
+      "passed": true
+    },
+    {
+      "name": "gate_single_query_21",
+      "passed": true
+    },
+    {
+      "name": "gate_no_crop_21",
+      "passed": true
+    },
+    {
+      "name": "request_hash_22",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_22",
+      "passed": true
+    },
+    {
+      "name": "gate_single_query_22",
+      "passed": true
+    },
+    {
+      "name": "gate_no_crop_22",
+      "passed": true
+    },
+    {
+      "name": "request_hash_23",
+      "passed": true
+    },
+    {
+      "name": "payload_noprivileged_23",
+      "passed": true
+    },
+    {
+      "name": "gate_single_query_23",
+      "passed": true
+    },
+    {
+      "name": "gate_no_crop_23",
+      "passed": true
+    },
+    {
+      "name": "schedule_gate24",
+      "passed": true
+    },
+    {
+      "name": "api_unknown_free",
+      "passed": true
+    }
+  ],
+  "auditor_sha256": "be7ea77a9b104011105d967c5358039ec58b8937099c03e7144f52e2ab95edc5",
+  "runner_sha256": "52b53e8d95351ab28ea4660302d2426733f9c44b732179303390542d5d624ca7",
+  "protocol_sha256": "32df1c663a2d0bae1427211e66830e721c511fd9b0c3529f41ba6c25e8fe0a52",
+  "contract_sha256": "16941598c4589bdc4eedbbe2990d1e75bee0dde3db41be889bc3e23fac2473c1",
+  "phase_contract_sha256": "8611845796a064747e14b36c0fd7a8e8bf8bbffdfe3fc5c543b2e8214a9d77c7",
+  "n": 24,
+  "eligible": 13,
+  "K": 8,
+  "api_snapshot": {
+    "accepted": 0,
+    "started": 0,
+    "failed": 0,
+    "unknown": 0
+  },
+  "approved24_labels_read": false,
+  "GT_masks_read": false,
+  "stage13_data_read": false,
+  "new_api_calls": 0,
+  "note": "Gate semantics are need-for-closeup, not anomaly; gate score not used as final anomaly probability; exploratory previously viewed sample"
+}

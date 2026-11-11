@@ -1,0 +1,97 @@
+{
+  "schema": "jev-source-disjoint-system-selection-v1",
+  "status": "frozen",
+  "timestamp_utc": "2026-11-10T18:17:02.934958+00:00",
+  "hostname": "autodl-container-132444827f-9c594038",
+  "protocol": {
+    "schema": "jev-source-disjoint-system-selection-v1",
+    "model": "jev-1.14.0",
+    "size": 448,
+    "stage08_contract_file_sha256": "49a55faf08234a9c7d1c199c87b8f5e5e1de02fa0c0bdbc4ca20b11a9d66d511",
+    "stage08_contract_canonical_sha256": "b8438cec41443aa2db8fddba2a6107b70ee843d5161fafae362400152137aadf",
+    "selection_metric": "Whole-image development pooled AUROC from complete stage08 metrics.json only",
+    "candidates": {
+      "0": [
+        "shared0"
+      ],
+      "1": [
+        "s43_1",
+        "s44_1"
+      ],
+      "4": [
+        "s43_4",
+        "s44_4"
+      ]
+    },
+    "aggregation": "Arithmetic mean of the listed AUROCs; shared0 collected once",
+    "tolerance_absolute_auroc": 0.01,
+    "rule": "Find largest candidate mean AUROC; choose smallest shot count with mean >= maximum-0.01, inclusive; no best-seed selection",
+    "support_seed_if_nonzero": 43,
+    "normal_reference_order": "Frozen stage08 seed43 hash order; first1 or first4",
+    "prompt": "Exact stage08 full-image INSTRUCTIONS and criteria; never regional ROI prompt",
+    "no320_fewshot_extrapolation": true,
+    "prerequisites": [
+      "stage08 complete600 and immutable metrics",
+      "stage09 matched Qwen complete and stage10 resolution complete",
+      "final research summary published before system choice"
+    ],
+    "forbidden_selection_inputs": [
+      "stage12 predictions",
+      "stage12 calibration labels/outcomes",
+      "stage12 heldout labels/outcomes",
+      "best seed",
+      "heldout FPR/AUROC",
+      "320 fewshot unmeasured outcomes",
+      "confirmation"
+    ],
+    "source_policy": "Two mutually exclusive new120 subsets, each12categories x5normal x5anomaly; source/byte disjoint from train and prior120",
+    "calibration": {
+      "fit_split": "calibration120 only",
+      "feature": "logit(clip(raw_probability,1e-6,1-1e-6))",
+      "model": "sklearn LogisticRegression",
+      "C": 1.0,
+      "solver": "lbfgs",
+      "penalty": "l2",
+      "max_iter": 1000,
+      "random_state": 42,
+      "decision_threshold": 0.5,
+      "heldout_fit_forbidden": true
+    },
+    "refusal": {
+      "confidence": "max(p,1-p)",
+      "coverages": [
+        0.5,
+        0.75,
+        1.0
+      ],
+      "selection": "Sort confidence descending; tie break by source_id ascending; retain exactly ceil(coverage*N)",
+      "interpretation": "Retrospective fixed-coverage development risk analysis; coverage rule predeclared, no heldout metric optimization"
+    },
+    "metrics": [
+      "AUROC",
+      "AP",
+      "Brier",
+      "ECE10_equal_width",
+      "Recall_at0.5",
+      "FPR_at0.5",
+      "MacroF1",
+      "fixed_coverage_risk"
+    ],
+    "bootstrap": {
+      "split": "heldout120 only",
+      "replicates": 2000,
+      "seed": 42,
+      "strata": "category x image_label",
+      "paired_raw_vs_calibrated": true,
+      "refit_on_heldout": false
+    },
+    "historical_exposure_note": "Native validation remainder may have participated in historical validation; source-disjoint is not blind or confirmation",
+    "no_stage08_metrics_read_at_rule_freeze": true,
+    "no_stage12_data_read_at_rule_freeze": true,
+    "confirmation_opened": false
+  },
+  "protocol_sha256": "b7591339c7304fc66fb3ca0d6ffc0d98c3597d96b7df9a69a28e35d757889e7f",
+  "stage08_predictions_or_metrics_read": false,
+  "stage12_data_or_results_read": false,
+  "confirmation_opened": false
+}

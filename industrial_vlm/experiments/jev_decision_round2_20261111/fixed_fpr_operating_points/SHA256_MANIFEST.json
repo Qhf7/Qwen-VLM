@@ -1,0 +1,11 @@
+{
+  "created_at_utc": "2026-11-10T20:25:17.949772+00:00",
+  "files": {
+    "PROTOCOL.md": "851c59fa71f79997ee033effe1164c89743124c8814e81cd796599b25b0f2fb1",
+    "REPORT.md": "6a765be89c667d83abee3a8730bbcb8f3fe7ced9447f4c3ca00b45c003a94435",
+    "heldout_decisions.json": "8f649f62b1ace78419bcbfb0dd28eda04ef9d495022e3acd459c4365e1af1933",
+    "results.json": "db603bbeafbbd471cdb62c3b6076a1446b6c4edc3c4f6bad51e059ff3618cc78",
+    "thresholds.json": "ffbc25d10d69ef8ef3516b0cde7441aebf92301008ba4996f732d5383300b6ce"
+  },
+  "runner_sha256": "29d4a3f37a9464dbe35310bc75eeb4836ac3e4032124fe70ff34edacf2014ca9"
+}

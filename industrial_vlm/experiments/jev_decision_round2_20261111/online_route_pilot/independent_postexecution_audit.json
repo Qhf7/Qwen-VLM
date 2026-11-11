@@ -1,0 +1,444 @@
+{
+  "schema": "jev-online-independent-postexecution-audit-v1",
+  "status": "complete",
+  "timestamp_utc": "2026-11-10T20:15:27.756856+00:00",
+  "hostname": "autodl-container-132444827f-9c594038",
+  "passed": 107,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "server",
+      "passed": true
+    },
+    {
+      "name": "method_unchanged",
+      "passed": true
+    },
+    {
+      "name": "24unique",
+      "passed": true
+    },
+    {
+      "name": "complete_gate",
+      "passed": true
+    },
+    {
+      "name": "response_gate_visa_892614dd5d2_gate",
+      "passed": true
+    },
+    {
+      "name": "response_gate_visa_f1d12249261_gate",
+      "passed": true
+    },
+    {
+      "name": "response_gate_visa_7faf8ff401d_gate",
+      "passed": true
+    },
+    {
+      "name": "response_gate_visa_461215936f1_gate",
+      "passed": true
+    },
+    {
+      "name": "response_gate_visa_6b6c7851375_gate",
+      "passed": true
+    },
+    {
+      "name": "response_gate_visa_80826359e77_gate",
+      "passed": true
+    },
+    {
+      "name": "response_gate_visa_c765753d3b3_gate",
+      "passed": true
+    },
+    {
+      "name": "response_gate_visa_0905967ed6f_gate",
+      "passed": true
+    },
+    {
+      "name": "response_gate_visa_19c53aa3735_gate",
+      "passed": true
+    },
+    {
+      "name": "response_gate_visa_3538f10a1d9_gate",
+      "passed": true
+    },
+    {
+      "name": "response_gate_visa_1be7809506f_gate",
+      "passed": true
+    },
+    {
+      "name": "response_gate_visa_b81a85941ba_gate",
+      "passed": true
+    },
+    {
+      "name": "response_gate_visa_165dc8aa9b5_gate",
+      "passed": true
+    },
+    {
+      "name": "response_gate_visa_12113008ba4_gate",
+      "passed": true
+    },
+    {
+      "name": "response_gate_visa_07bfdf2da58_gate",
+      "passed": true
+    },
+    {
+      "name": "response_gate_visa_65f4be0362b_gate",
+      "passed": true
+    },
+    {
+      "name": "response_gate_visa_f3a026383e4_gate",
+      "passed": true
+    },
+    {
+      "name": "response_gate_visa_e3f8ccfd909_gate",
+      "passed": true
+    },
+    {
+      "name": "response_gate_visa_7eace5a2fd5_gate",
+      "passed": true
+    },
+    {
+      "name": "response_gate_visa_369c056fe93_gate",
+      "passed": true
+    },
+    {
+      "name": "response_gate_visa_094f90fda64_gate",
+      "passed": true
+    },
+    {
+      "name": "response_gate_visa_3209433cd5b_gate",
+      "passed": true
+    },
+    {
+      "name": "response_gate_visa_d64fd49078b_gate",
+      "passed": true
+    },
+    {
+      "name": "response_gate_visa_06923fecac4_gate",
+      "passed": true
+    },
+    {
+      "name": "complete_final",
+      "passed": true
+    },
+    {
+      "name": "response_final_visa_65f4be0362b_duplicate",
+      "passed": true
+    },
+    {
+      "name": "response_final_visa_19c53aa3735_roi",
+      "passed": true
+    },
+    {
+      "name": "response_final_visa_19c53aa3735_duplicate",
+      "passed": true
+    },
+    {
+      "name": "response_final_visa_80826359e77_roi",
+      "passed": true
+    },
+    {
+      "name": "response_final_visa_80826359e77_duplicate",
+      "passed": true
+    },
+    {
+      "name": "response_final_visa_e3f8ccfd909_duplicate",
+      "passed": true
+    },
+    {
+      "name": "response_final_visa_892614dd5d2_roi",
+      "passed": true
+    },
+    {
+      "name": "response_final_visa_892614dd5d2_duplicate",
+      "passed": true
+    },
+    {
+      "name": "response_final_visa_c765753d3b3_duplicate",
+      "passed": true
+    },
+    {
+      "name": "response_final_visa_f1d12249261_duplicate",
+      "passed": true
+    },
+    {
+      "name": "response_final_visa_7eace5a2fd5_duplicate",
+      "passed": true
+    },
+    {
+      "name": "response_final_visa_07bfdf2da58_roi",
+      "passed": true
+    },
+    {
+      "name": "response_final_visa_07bfdf2da58_duplicate",
+      "passed": true
+    },
+    {
+      "name": "response_final_visa_3209433cd5b_roi",
+      "passed": true
+    },
+    {
+      "name": "response_final_visa_3209433cd5b_duplicate",
+      "passed": true
+    },
+    {
+      "name": "response_final_visa_094f90fda64_duplicate",
+      "passed": true
+    },
+    {
+      "name": "response_final_visa_06923fecac4_roi",
+      "passed": true
+    },
+    {
+      "name": "response_final_visa_06923fecac4_duplicate",
+      "passed": true
+    },
+    {
+      "name": "response_final_visa_369c056fe93_duplicate",
+      "passed": true
+    },
+    {
+      "name": "response_final_visa_369c056fe93_roi",
+      "passed": true
+    },
+    {
+      "name": "response_final_visa_1be7809506f_duplicate",
+      "passed": true
+    },
+    {
+      "name": "response_final_visa_1be7809506f_roi",
+      "passed": true
+    },
+    {
+      "name": "response_final_visa_0905967ed6f_duplicate",
+      "passed": true
+    },
+    {
+      "name": "response_final_visa_165dc8aa9b5_roi",
+      "passed": true
+    },
+    {
+      "name": "response_final_visa_165dc8aa9b5_duplicate",
+      "passed": true
+    },
+    {
+      "name": "response_final_visa_12113008ba4_duplicate",
+      "passed": true
+    },
+    {
+      "name": "response_final_visa_3538f10a1d9_roi",
+      "passed": true
+    },
+    {
+      "name": "response_final_visa_3538f10a1d9_duplicate",
+      "passed": true
+    },
+    {
+      "name": "response_final_visa_f3a026383e4_duplicate",
+      "passed": true
+    },
+    {
+      "name": "response_final_visa_f3a026383e4_roi",
+      "passed": true
+    },
+    {
+      "name": "response_final_visa_6b6c7851375_duplicate",
+      "passed": true
+    },
+    {
+      "name": "response_final_visa_6b6c7851375_roi",
+      "passed": true
+    },
+    {
+      "name": "response_final_visa_7faf8ff401d_duplicate",
+      "passed": true
+    },
+    {
+      "name": "response_final_visa_d64fd49078b_duplicate",
+      "passed": true
+    },
+    {
+      "name": "response_final_visa_461215936f1_duplicate",
+      "passed": true
+    },
+    {
+      "name": "response_final_visa_b81a85941ba_duplicate",
+      "passed": true
+    },
+    {
+      "name": "response_final_visa_b81a85941ba_roi",
+      "passed": true
+    },
+    {
+      "name": "gatefreeze_hash",
+      "passed": true
+    },
+    {
+      "name": "freeze_runner",
+      "passed": true
+    },
+    {
+      "name": "predictionfreeze_has_bindings",
+      "passed": true
+    },
+    {
+      "name": "predictionfreeze_contract.json",
+      "passed": true
+    },
+    {
+      "name": "predictionfreeze_routing.json",
+      "passed": true
+    },
+    {
+      "name": "predictionfreeze_gate/contract.json",
+      "passed": true
+    },
+    {
+      "name": "predictionfreeze_gate/predictions.jsonl",
+      "passed": true
+    },
+    {
+      "name": "predictionfreeze_gate/attempts.jsonl",
+      "passed": true
+    },
+    {
+      "name": "predictionfreeze_final/contract.json",
+      "passed": true
+    },
+    {
+      "name": "predictionfreeze_final/predictions.jsonl",
+      "passed": true
+    },
+    {
+      "name": "predictionfreeze_final/attempts.jsonl",
+      "passed": true
+    },
+    {
+      "name": "full_set_before_labels",
+      "passed": true
+    },
+    {
+      "name": "approved24_label_freeze",
+      "passed": true
+    },
+    {
+      "name": "approved24_label_identity",
+      "passed": true
+    },
+    {
+      "name": "bothlabels_for_metrics",
+      "passed": true
+    },
+    {
+      "name": "runner_complete",
+      "passed": true
+    },
+    {
+      "name": "runner_point_new_duplicate",
+      "passed": true
+    },
+    {
+      "name": "runner_point_learned_gate",
+      "passed": true
+    },
+    {
+      "name": "runner_paired_learned_gate_auroc",
+      "passed": true
+    },
+    {
+      "name": "runner_paired_learned_gate_ap",
+      "passed": true
+    },
+    {
+      "name": "runner_paired_learned_gate_macro_f1",
+      "passed": true
+    },
+    {
+      "name": "runner_paired_learned_gate_recall",
+      "passed": true
+    },
+    {
+      "name": "runner_paired_learned_gate_fpr",
+      "passed": true
+    },
+    {
+      "name": "runner_point_matched_random",
+      "passed": true
+    },
+    {
+      "name": "runner_paired_matched_random_auroc",
+      "passed": true
+    },
+    {
+      "name": "runner_paired_matched_random_ap",
+      "passed": true
+    },
+    {
+      "name": "runner_paired_matched_random_macro_f1",
+      "passed": true
+    },
+    {
+      "name": "runner_paired_matched_random_recall",
+      "passed": true
+    },
+    {
+      "name": "runner_paired_matched_random_fpr",
+      "passed": true
+    },
+    {
+      "name": "runner_point_historical_uncertainty",
+      "passed": true
+    },
+    {
+      "name": "runner_paired_historical_uncertainty_auroc",
+      "passed": true
+    },
+    {
+      "name": "runner_paired_historical_uncertainty_ap",
+      "passed": true
+    },
+    {
+      "name": "runner_paired_historical_uncertainty_macro_f1",
+      "passed": true
+    },
+    {
+      "name": "runner_paired_historical_uncertainty_recall",
+      "passed": true
+    },
+    {
+      "name": "runner_paired_historical_uncertainty_fpr",
+      "passed": true
+    },
+    {
+      "name": "runner_point_geometry_small",
+      "passed": true
+    },
+    {
+      "name": "runner_paired_geometry_small_auroc",
+      "passed": true
+    },
+    {
+      "name": "runner_paired_geometry_small_ap",
+      "passed": true
+    },
+    {
+      "name": "runner_paired_geometry_small_macro_f1",
+      "passed": true
+    },
+    {
+      "name": "runner_paired_geometry_small_recall",
+      "passed": true
+    },
+    {
+      "name": "runner_paired_geometry_small_fpr",
+      "passed": true
+    }
+  ],
+  "auditor_sha256": "d39818eb683f64f0be8ed5669db27799e8f11282ac1a896aa573d2360e2701f6",
+  "supplement_sha256": "9e3b04d53b0eda1079340e56d11520829cb784c6e377c7a81db614ead5aac5a9",
+  "prediction_freeze_sha256": "eba5f2f3815f5be7fc353a87c996858de46abad5d6f0d3223e84cfe54137308f",
+  "api_calls": 0,
+  "stage13_data_read": false,
+  "GT_masks_read": false
+}

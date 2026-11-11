@@ -1,0 +1,16 @@
+{
+  "schema": "jev-mask-derived-spatial-support-diagnostic-v2",
+  "status": "input_and_ledger_audit_passed",
+  "source_count": 24,
+  "selected": 2,
+  "targets": 8,
+  "accepted": 0,
+  "started": 0,
+  "failed": 0,
+  "unknown": 0,
+  "no_GT_in_state": true,
+  "new_API_calls": 0,
+  "stage13_data_read": false,
+  "runner_sha256": "5a5a614fa139fe5ff9a8e098d8e591b2ab8db0e171288d3340062e554872cafe",
+  "contract_sha256": "2f8fec5fc19d2c5e77ef8e17161ca413f5f1aa2b5a78ed32874f7b9975db7d1f"
+}

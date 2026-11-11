@@ -1,0 +1,57 @@
+{
+  "timestamp_utc": "2026-11-10T15:08:52.822984+00:00",
+  "amendment_sha256": "f23330d734229b827d495b558f51005710012a848b5d60c24daf997b27cec3b5",
+  "phases": {
+    "original_workers3": {
+      "actual_workers": 3,
+      "successful_targets": 61,
+      "started_attempts": 78,
+      "failed_attempts": 16,
+      "errors": {
+        "transport_error_unknown_server_completion_no_automatic_retry": 9,
+        "http_502": 7
+      },
+      "exception_classes": {},
+      "cause_classes": {},
+      "stages": {},
+      "mean_success_seconds": 18.920222508175236,
+      "median_success_seconds": 16.933050584048033,
+      "p95_success_seconds": 36.60900058387779
+    },
+    "rolling6": {
+      "actual_workers": 6,
+      "successful_targets": 135,
+      "started_attempts": 221,
+      "failed_attempts": 86,
+      "errors": {
+        "transport_error_unknown_server_completion_no_automatic_retry_this_invocation": 54,
+        "http_502": 29,
+        "timeout_unknown_server_completion_no_automatic_retry_this_invocation": 3
+      },
+      "exception_classes": {},
+      "cause_classes": {},
+      "stages": {},
+      "mean_success_seconds": 27.728316320371988,
+      "median_success_seconds": 24.054415832972154,
+      "p95_success_seconds": 60.138641158305106
+    },
+    "transport_rolling6": {
+      "actual_workers": 6,
+      "successful_targets": 164,
+      "started_attempts": 195,
+      "failed_attempts": 31,
+      "errors": {
+        "http_502": 31
+      },
+      "exception_classes": {},
+      "cause_classes": {},
+      "stages": {},
+      "mean_success_seconds": 28.060370499752292,
+      "median_success_seconds": 24.648354499950074,
+      "p95_success_seconds": 63.89586356439394
+    }
+  },
+  "total_completed": 360,
+  "expected": 360,
+  "note": "Success latency by phase; rates are operational and not controlled model comparisons. Started attempts may include interrupted unknown outcomes."
+}

@@ -1,0 +1,20 @@
+{
+  "schema": "preAPI-semantic-geometry-revision-v1",
+  "timestamp_utc": "2026-11-10T20:12:47.065180+00:00",
+  "reason": "Correct original-grid versus letterbox448 canvas mismatch with label-free content bounds.",
+  "prior_root": "/root/autodl-tmp/industrial_vlm/experiments/jev_decision_round2_20261111/semantic_review_pilot",
+  "prior_sha256": {
+    "code/semantic_review.py": "8c3523c8b521aa53b835e514de5d0557271740b4f33ee02f86ca0371e0f40207",
+    "protocol.json": "aaf7a323ae09d593b314e8765e534099029ac87b8909ca8ad9beec6cc62aa546",
+    "source_contract.json": "8c64e6491ff028b59d2afd037fc43997e32bc4b02a730852d99086c9dad5644d"
+  },
+  "new_root": "/root/autodl-tmp/industrial_vlm/experiments/jev_decision_round2_20261111/semantic_review_pilot_v2",
+  "new_sha256": {
+    "code/semantic_review.py": "5a5a614fa139fe5ff9a8e098d8e591b2ab8db0e171288d3340062e554872cafe",
+    "protocol.json": "442d650e54ab5fdbece6318e842a2af941fba619a7e009ea8e8bd3c7a058c75a",
+    "source_contract.json": "f1ea9b7a4f24b795b35a44d12e629be4eca5799f58fecd58e65a03fad43bcc51"
+  },
+  "API_started_before_revision": 0,
+  "real_GT_reads_before_revision": 0,
+  "prior_preserved": true
+}

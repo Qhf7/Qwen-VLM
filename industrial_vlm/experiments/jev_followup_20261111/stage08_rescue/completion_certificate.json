@@ -1,0 +1,46 @@
+{
+  "schema": "jev-support-http502-operational-amendment-v1",
+  "status": "complete_with_operational_amendment",
+  "expected": 600,
+  "completed": 600,
+  "original_stage_status": "incomplete_requires_explicit_retry",
+  "original_status_unchanged": true,
+  "original_contract_sha256": "49a55faf08234a9c7d1c199c87b8f5e5e1de02fa0c0bdbc4ca20b11a9d66d511",
+  "original_files": {
+    "contract.json": {
+      "bytes": 319236,
+      "sha256": "49a55faf08234a9c7d1c199c87b8f5e5e1de02fa0c0bdbc4ca20b11a9d66d511"
+    },
+    "protocol.json": {
+      "bytes": 1920,
+      "sha256": "02b955ff334210db928a1615a45351a22eaf8320f4122a2e9f35c0ed7eca3bbb"
+    },
+    "predictions.jsonl": {
+      "bytes": 368427,
+      "sha256": "a7b0244279562b702735ca0bc0336f260af897e3c06ac984c50200233bdd68cc"
+    },
+    "attempts.jsonl": {
+      "bytes": 599331,
+      "sha256": "2ca89465b2dd778c4810a5018b71b4e25aeabf894ba9e616928bdc44c853ea4e"
+    },
+    "status.json": {
+      "bytes": 559,
+      "sha256": "47b7fbadb63df84b328bd2014e80686a1c52b393f218b6ee7d1d34f21f1ed8bd"
+    },
+    "invocations.jsonl": {
+      "bytes": 1111,
+      "sha256": "c8ce5c69c26fa9ff4b09414e81ae2e69d5427551b46ff64ded39c7fce0882ade"
+    }
+  },
+  "operational_amendment_sha256": "c504d573889d77286e9e985c3e96b11fa73500909f41cc9350e7e78335b7e0d5",
+  "combined_predictions_sha256": "3ac5598625bf22ded0ff56497f60dc9b3e8276c60cbb6e90b0b04ea9d7345a0f",
+  "prediction_freeze_sha256": "3e0d35d473528cc24820c67e0cb7857418d3505797eabe1fd9df72d0d9ce9e5c",
+  "rescue_predictions_sha256": "d50b15f4a4ff7cc462bc339ef2530f0c7eba64f6f3cc5d876148d4540c15c8c0",
+  "rescue_attempts_sha256": "2c391ebd62c04872822a5e68e67a27efa4b4cb279b85db8ee4c0f267c55bb3c9",
+  "metrics_sha256": "0d12d2e387bced5eb2de93b362cace3b2eed9e627bc680bef9b23ec664874a00",
+  "report_sha256": "b7ce0c3d7bf40ede03af3b7b49e852ef3cae070d82d48bf3db4bea6766d7c507",
+  "runner_sha256": "1ea9ec2340faeb089f24f038484f0e24f8b69f699ed9d2abde0c808a9a537e22",
+  "scientific_change": false,
+  "no_gt_tuning": true,
+  "confirmation_opened": false
+}

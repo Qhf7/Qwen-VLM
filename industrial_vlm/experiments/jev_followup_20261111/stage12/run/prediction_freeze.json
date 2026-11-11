@@ -1,0 +1,10 @@
+{
+  "schema": "jev-source-disjoint-calibration-v1",
+  "contract_sha256": "45d593a9833ab2b1dd003afb954b6eca10cd85a574055f3d0e821ac7aa515ea1",
+  "system_contract_sha256": "55292eb602330e62f4ca6d7badee45eddf6911dc7a7e71539ded74969c36fc9a",
+  "predictions_sha256": "f81d0006dcd17d305f768f4065cd5ce4b7da5a991200955a5f7ff2c46af9116a",
+  "attempts_sha256": "093c835c376cad858d0177964890120cea6764bf98c371d6f385847ffc29b2e8",
+  "runner_sha256": "d8489c953ec4cb5e9d7804643d35f43d5ad0801211abc118bcc8e0003fec37d1",
+  "confirmation_opened": false,
+  "predictions_before_labels": true
+}

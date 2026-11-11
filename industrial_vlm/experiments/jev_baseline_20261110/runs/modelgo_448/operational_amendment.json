@@ -1,0 +1,38 @@
+{
+  "schema": "jev-operational-amendment-v1",
+  "timestamp_utc": "2026-11-10T14:31:33.906451+00:00",
+  "reason": "Improve throughput with audited rolling concurrency; no scientific inputs or request identities change.",
+  "operational_phase": "rolling6",
+  "original_contract_file_sha256": "8b7218ab87fefcfb991796404972044a64d03e62ec439189e03a72c7b103a27a",
+  "original_contract_canonical_sha256": "a3dd4dec8ad8832fe2493c45e18d0dce1e8e1333ff0e433bcc48eca5406a9ed8",
+  "original_runner_sha256": "32645dafd5b45d18de9dd93bf31dc8e1e23b597fe244b49212c401f841a59ddf",
+  "executor_sha256": "84988f0cde336c9dd8978498ecef5a1f0406e196a513304d0acd78553431d8b6",
+  "actual_workers": 6,
+  "actual_timeout_seconds": 90.0,
+  "original_workers": 3,
+  "original_timeout_seconds": 90.0,
+  "max_total_started_per_target": 3,
+  "initial_completed_count": 61,
+  "initial_predictions_file": {
+    "exists": true,
+    "sha256": "a0bea3855378be156c405f4906c3b937add4e579b5dce5fbdc0344d5a7e5e229",
+    "bytes": 31573
+  },
+  "initial_attempts_file": {
+    "exists": true,
+    "sha256": "09c725879a1d2d58f924f9b7cea38b123ee62a34acbb78f647fc4f9b360bfc23",
+    "bytes": 34033
+  },
+  "interrupted_unknown_targets": [
+    {
+      "source_id": "visa_27d55bbf49acdaa3120733d213d58f6d86bd7b30520a5c7c3b77aeab06c789b6",
+      "shots": 1,
+      "attempt": 1,
+      "request_sha256": "34655b272a7e872b3fcedbc6eb3e829c57cf97d4490ab51fcc3ddbc97e79e25f"
+    }
+  ],
+  "maximum_original_inflight_at_interrupt": 3,
+  "retry_authorization": "Explicit --retry-failed required; each target max 3 total started across all phases.",
+  "same_invocation_retry": "HTTP 502 only. Transport/timeout/other failures wait until next explicit invocation.",
+  "latency_note": "Original phase and rolling6 report separate latency; do not treat actual concurrency as old contract workers."
+}

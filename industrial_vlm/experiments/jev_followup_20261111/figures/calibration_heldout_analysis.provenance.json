@@ -1,0 +1,142 @@
+{
+  "schema": "jev-stage12-calibration-figure-v1",
+  "timestamp_utc": "2026-11-10T19:01:08.033209+00:00",
+  "hostname": "autodl-container-132444827f-9c594038",
+  "script_sha256": "d7a16c54929eb95a9e90cc7daee7247701f2b862b869272950a3a3eb21b31635",
+  "inputs_sha256": {
+    "stage12/run/metrics.json": "075f823dc6fc0617844e3d5578ffd0c04b3b0d077e07052f5cff9628408afea4",
+    "stage12/run/calibrator.json": "0bac063df108bd44938c25a8bb2c07261d79bfe2350b6d1bdb8b8cf1c1bcd9ec",
+    "stage12/run/STATISTICAL_SUPPLEMENT.json": "25d0cf2b74f2b9c9441cb9bdaeae7eb11a22b96b6f6c89e6811cb6acb0e38912",
+    "stages/12_postexecution_audit.json": "595c853d71a3dee79bfa11d40497cf9c0017ab5a07b54f5625bc6a6f3e8a31bb",
+    "stage12/run/predictions.jsonl": "f81d0006dcd17d305f768f4065cd5ce4b7da5a991200955a5f7ff2c46af9116a",
+    "stage12/run/contract.json": "45d593a9833ab2b1dd003afb954b6eca10cd85a574055f3d0e821ac7aa515ea1",
+    "stage12_calibration_plan/heldout_eval_labels.jsonl": "7cc2853e08c36af1491a29b60622d42cdc2a377d803f07b962dd5a81942761d3"
+  },
+  "outputs_sha256": {
+    "calibration_heldout_analysis.png": "cb9054cbf4c5ea86ab021b690d916e11720c5c7b5a68b096b7e8d7aac9059423",
+    "calibration_heldout_analysis.svg": "0dc6526fa15b048a9daa5cfe092055f46ccfae1ad0436c290b611436dd76703c"
+  },
+  "reliability_bins": {
+    "raw": [
+      {
+        "bin": 1,
+        "n": 12,
+        "mean_probability": 0.17416666666666666,
+        "anomaly_fraction": 0.0
+      },
+      {
+        "bin": 2,
+        "n": 14,
+        "mean_probability": 0.23357142857142857,
+        "anomaly_fraction": 0.14285714285714285
+      },
+      {
+        "bin": 3,
+        "n": 16,
+        "mean_probability": 0.34249999999999997,
+        "anomaly_fraction": 0.25
+      },
+      {
+        "bin": 4,
+        "n": 14,
+        "mean_probability": 0.4357142857142858,
+        "anomaly_fraction": 0.07142857142857142
+      },
+      {
+        "bin": 5,
+        "n": 13,
+        "mean_probability": 0.5399999999999999,
+        "anomaly_fraction": 0.38461538461538464
+      },
+      {
+        "bin": 6,
+        "n": 11,
+        "mean_probability": 0.639090909090909,
+        "anomaly_fraction": 0.9090909090909091
+      },
+      {
+        "bin": 7,
+        "n": 11,
+        "mean_probability": 0.7436363636363637,
+        "anomaly_fraction": 0.8181818181818182
+      },
+      {
+        "bin": 8,
+        "n": 17,
+        "mean_probability": 0.851764705882353,
+        "anomaly_fraction": 1.0
+      },
+      {
+        "bin": 9,
+        "n": 12,
+        "mean_probability": 0.9391666666666666,
+        "anomaly_fraction": 1.0
+      }
+    ],
+    "calibrated": [
+      {
+        "bin": 0,
+        "n": 16,
+        "mean_probability": 0.07549554473429451,
+        "anomaly_fraction": 0.0
+      },
+      {
+        "bin": 1,
+        "n": 11,
+        "mean_probability": 0.13351599297102837,
+        "anomaly_fraction": 0.18181818181818182
+      },
+      {
+        "bin": 2,
+        "n": 15,
+        "mean_probability": 0.2395618164868689,
+        "anomaly_fraction": 0.26666666666666666
+      },
+      {
+        "bin": 3,
+        "n": 10,
+        "mean_probability": 0.3376674305692121,
+        "anomaly_fraction": 0.1
+      },
+      {
+        "bin": 4,
+        "n": 9,
+        "mean_probability": 0.459417471620851,
+        "anomaly_fraction": 0.0
+      },
+      {
+        "bin": 5,
+        "n": 7,
+        "mean_probability": 0.5416739206646729,
+        "anomaly_fraction": 0.5714285714285714
+      },
+      {
+        "bin": 6,
+        "n": 8,
+        "mean_probability": 0.6440566295901755,
+        "anomaly_fraction": 0.875
+      },
+      {
+        "bin": 7,
+        "n": 8,
+        "mean_probability": 0.7491977650679837,
+        "anomaly_fraction": 0.875
+      },
+      {
+        "bin": 8,
+        "n": 10,
+        "mean_probability": 0.8547143317771703,
+        "anomaly_fraction": 0.9
+      },
+      {
+        "bin": 9,
+        "n": 26,
+        "mean_probability": 0.9585175562644964,
+        "anomaly_fraction": 1.0
+      }
+    ]
+  },
+  "raw_equivalent_threshold_for_calibrated_half": 0.5249158025232356,
+  "confirmation_opened": false,
+  "new_api_requests": 0
+}

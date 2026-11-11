@@ -1,0 +1,16 @@
+{
+  "schema": "jev-candidate-failure-figure-provenance-v1",
+  "analysis_sha256": "ba251673012c6facaebddac77b32d6426764fdc7c4a93e1c3867f4b5075c7014",
+  "script_sha256": "c19e4376333b840e1709eac44081265155bc1702566b61135136716d8963c39d",
+  "inputs_sha256": {
+    "stages/03_candidates.json": "8ce1e859a74de0d33abefaff8c0b3f66a58a8daeca6eb7be70d5cd23591414ef",
+    "stages/05_evaluation.json": "fe2702586f60d575b319790c7ec37b737bc189d864d6f6238b98f34588992a92"
+  },
+  "outputs_sha256": {
+    "candidate_failure_analysis.png": "c9cd302f2c76ed149a8da328c2aa3b29d7eb5c4a3ae50cba68e3cce6cc7f7ca9",
+    "candidate_failure_analysis.svg": "6922851f33c1d3a0768a539057be88b4e8415a946ee9c3c7cfa6fb1236de8ee9"
+  },
+  "rendered_on": "autodl-container-132444827f-9c594038",
+  "new_api_requests": 0,
+  "confirmation_opened": false
+}

@@ -1,0 +1,53 @@
+{
+  "timestamp_utc": "2026-11-10T14:02:18.486081+00:00",
+  "endpoint": "https://api.modelgo.ai/v1/systemone",
+  "request_model": "jev-1.14.0",
+  "no_benchmark_predictions": true,
+  "model_version_note": "ModelGo documents model as logical request-name echo; not independent upstream version proof.",
+  "records": [
+    {
+      "shots": 0,
+      "purpose": "synthetic_image_transport_smoke_only",
+      "request_model": "jev-1.14.0",
+      "image_size": [
+        448,
+        448
+      ],
+      "assets_count": 1,
+      "request_sha256": "dc69130e0079a5a4f2a7ecedf1c54eebcb7b15370b704efabffd9d8d2aaee4d4",
+      "http_status": 200,
+      "request_id": "gw_1945a09f-f671-4152-b024-8fb2111533c3",
+      "response": {
+        "model": "jev-1.14.0",
+        "answers": {
+          "anomaly": {
+            "type": "noul",
+            "noul": 0.99
+          }
+        },
+        "usage": {
+          "input_tokens": 856,
+          "output_tokens": 21
+        }
+      },
+      "valid_noul": true,
+      "model_name_matches": true,
+      "seconds": 3.0708689999300987
+    },
+    {
+      "shots": 1,
+      "purpose": "synthetic_image_transport_smoke_only",
+      "request_model": "jev-1.14.0",
+      "image_size": [
+        448,
+        448
+      ],
+      "assets_count": 2,
+      "request_sha256": "54437a715e9ed3a963dc8c339056148824aed5a599887f6c24dc71b62888f314",
+      "http_status": 502,
+      "request_id": "gw_fff3fd0d-e3a8-4b2a-9775-55491a93d094",
+      "error": "{'error': {'code': 502, 'message': 'provider server error', 'metadata': {'app_error_id': 5022, 'error_class': 'provider_server', 'request_id': 'gw_fff3fd0d-e3a8-4b2a-9775-55491a93d094'}}, 'trace_id': '4866708b80329136c1d46a128ba64d9d'}",
+      "seconds": 3.855319167021662
+    }
+  ]
+}

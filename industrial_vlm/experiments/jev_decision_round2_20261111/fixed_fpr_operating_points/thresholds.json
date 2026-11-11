@@ -1,0 +1,136 @@
+{
+  "alphas": [
+    0.05,
+    0.1
+  ],
+  "calibration_normal_n": 60,
+  "calibrator_refit": false,
+  "comparison": "score > threshold",
+  "frozen_at_utc": "2026-11-10T20:25:17.923733+00:00",
+  "heldout_labels_read_before_threshold_freeze": false,
+  "input_sha256": {
+    "code/isolated_calibration.py": "d8489c953ec4cb5e9d7804643d35f43d5ad0801211abc118bcc8e0003fec37d1",
+    "stage12/run/calibrator.json": "0bac063df108bd44938c25a8bb2c07261d79bfe2350b6d1bdb8b8cf1c1bcd9ec",
+    "stage12/run/contract.json": "45d593a9833ab2b1dd003afb954b6eca10cd85a574055f3d0e821ac7aa515ea1",
+    "stage12/run/predictions.jsonl": "f81d0006dcd17d305f768f4065cd5ce4b7da5a991200955a5f7ff2c46af9116a",
+    "stage12_calibration_plan/calibration_labels.jsonl": "aaaf4898122c685ed5a511af5b1d0d85d6eaa4d699a7822174eaa2a84a56fd1d"
+  },
+  "protocol_sha256": "851c59fa71f79997ee033effe1164c89743124c8814e81cd796599b25b0f2fb1",
+  "rows": [
+    {
+      "alpha": 0.05,
+      "calibration": {
+        "anomalous_n": 60,
+        "anomalous_scores_equal_threshold": 0,
+        "fn": 22,
+        "fp": 3,
+        "fpr": 0.05,
+        "fpr_wilson95": [
+          0.01714950216439568,
+          0.1370051647634852
+        ],
+        "normal_n": 60,
+        "normal_scores_equal_threshold": 1,
+        "recall": 0.6333333333333333,
+        "recall_wilson95": [
+          0.5068300063010303,
+          0.7437908331277456
+        ],
+        "scores_equal_threshold_total": 1,
+        "tn": 57,
+        "tp": 38
+      },
+      "maximum_calibration_fp": 3,
+      "method": "raw",
+      "normal_threshold_one_based_rank": 4,
+      "threshold": 0.63
+    },
+    {
+      "alpha": 0.05,
+      "calibration": {
+        "anomalous_n": 60,
+        "anomalous_scores_equal_threshold": 0,
+        "fn": 22,
+        "fp": 3,
+        "fpr": 0.05,
+        "fpr_wilson95": [
+          0.01714950216439568,
+          0.1370051647634852
+        ],
+        "normal_n": 60,
+        "normal_scores_equal_threshold": 1,
+        "recall": 0.6333333333333333,
+        "recall_wilson95": [
+          0.5068300063010303,
+          0.7437908331277456
+        ],
+        "scores_equal_threshold_total": 1,
+        "tn": 57,
+        "tp": 38
+      },
+      "maximum_calibration_fp": 3,
+      "method": "calibrated",
+      "normal_threshold_one_based_rank": 4,
+      "threshold": 0.6632409877622698
+    },
+    {
+      "alpha": 0.1,
+      "calibration": {
+        "anomalous_n": 60,
+        "anomalous_scores_equal_threshold": 3,
+        "fn": 20,
+        "fp": 5,
+        "fpr": 0.08333333333333333,
+        "fpr_wilson95": [
+          0.03612045660173077,
+          0.1806894201833441
+        ],
+        "normal_n": 60,
+        "normal_scores_equal_threshold": 2,
+        "recall": 0.6666666666666666,
+        "recall_wilson95": [
+          0.5405686645211968,
+          0.7727073847647731
+        ],
+        "scores_equal_threshold_total": 5,
+        "tn": 55,
+        "tp": 40
+      },
+      "maximum_calibration_fp": 6,
+      "method": "raw",
+      "normal_threshold_one_based_rank": 7,
+      "threshold": 0.58
+    },
+    {
+      "alpha": 0.1,
+      "calibration": {
+        "anomalous_n": 60,
+        "anomalous_scores_equal_threshold": 3,
+        "fn": 20,
+        "fp": 5,
+        "fpr": 0.08333333333333333,
+        "fpr_wilson95": [
+          0.03612045660173077,
+          0.1806894201833441
+        ],
+        "normal_n": 60,
+        "normal_scores_equal_threshold": 2,
+        "recall": 0.6666666666666666,
+        "recall_wilson95": [
+          0.5405686645211968,
+          0.7727073847647731
+        ],
+        "scores_equal_threshold_total": 5,
+        "tn": 55,
+        "tp": 40
+      },
+      "maximum_calibration_fp": 6,
+      "method": "calibrated",
+      "normal_threshold_one_based_rank": 7,
+      "threshold": 0.586503596776197
+    }
+  ],
+  "rule": "descending normal score at one-based rank floor(alpha*n_normal)+1",
+  "runner_sha256": "29d4a3f37a9464dbe35310bc75eeb4836ac3e4032124fe70ff34edacf2014ca9",
+  "schema": "fixed-empirical-fpr-operating-points-v1"
+}

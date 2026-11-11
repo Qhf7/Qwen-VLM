@@ -1,0 +1,205 @@
+{
+  "schema": "jev-final-system-bundle-independent-audit-v1",
+  "status": "passed",
+  "hostname": "autodl-container-132444827f-9c594038",
+  "passed": 42,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "designated_server",
+      "passed": true
+    },
+    {
+      "name": "reviewed_runner_source",
+      "passed": true
+    },
+    {
+      "name": "bundle_sha_expected",
+      "passed": true
+    },
+    {
+      "name": "policy_file_predeclared",
+      "passed": true
+    },
+    {
+      "name": "policy_canonical_digest",
+      "passed": true
+    },
+    {
+      "name": "fixed_primary_secondary_threshold",
+      "passed": true
+    },
+    {
+      "name": "fixed_shots_seed_size_model",
+      "passed": true
+    },
+    {
+      "name": "policy_bundle_identity",
+      "passed": true
+    },
+    {
+      "name": "bundle_confirmation_closed",
+      "passed": true
+    },
+    {
+      "name": "selection_independent_heldout",
+      "passed": true
+    },
+    {
+      "name": "stage12_source_contract.json",
+      "passed": true
+    },
+    {
+      "name": "stage12_source_predictions.jsonl",
+      "passed": true
+    },
+    {
+      "name": "stage12_source_attempts.jsonl",
+      "passed": true
+    },
+    {
+      "name": "stage12_source_prediction_freeze.json",
+      "passed": true
+    },
+    {
+      "name": "stage12_source_calibrator.json",
+      "passed": true
+    },
+    {
+      "name": "stage12_source_metrics.json",
+      "passed": true
+    },
+    {
+      "name": "stage12_source_REPORT.md",
+      "passed": true
+    },
+    {
+      "name": "runtime_source_final_confirmation",
+      "passed": true
+    },
+    {
+      "name": "runtime_source_isolated_calibration",
+      "passed": true
+    },
+    {
+      "name": "runtime_source_support_robustness",
+      "passed": true
+    },
+    {
+      "name": "runtime_source_roi_api",
+      "passed": true
+    },
+    {
+      "name": "runtime_dependencies",
+      "passed": true
+    },
+    {
+      "name": "selected_system_contract_identity",
+      "passed": true
+    },
+    {
+      "name": "exact_coefficient_intercept",
+      "passed": true
+    },
+    {
+      "name": "bundle_uses_exact_fit",
+      "passed": true
+    },
+    {
+      "name": "fit_calibration120_only",
+      "passed": true
+    },
+    {
+      "name": "all240_unique",
+      "passed": true
+    },
+    {
+      "name": "two120_roles",
+      "passed": true
+    },
+    {
+      "name": "policy_before_every12_api_start",
+      "passed": true
+    },
+    {
+      "name": "policy_before_every12_outcome",
+      "passed": true
+    },
+    {
+      "name": "freeze_prelabel_and_source_identity",
+      "passed": true
+    },
+    {
+      "name": "calibration_pred_only120",
+      "passed": true
+    },
+    {
+      "name": "heldout_eval_not_fit",
+      "passed": true
+    },
+    {
+      "name": "post_independent_passed1550",
+      "passed": true
+    },
+    {
+      "name": "post_hash_contract.json",
+      "passed": true
+    },
+    {
+      "name": "post_hash_prediction_freeze.json",
+      "passed": true
+    },
+    {
+      "name": "post_hash_calibrator.json",
+      "passed": true
+    },
+    {
+      "name": "post_hash_metrics.json",
+      "passed": true
+    },
+    {
+      "name": "post_operation_counts",
+      "passed": true
+    },
+    {
+      "name": "post_confirmation_closed",
+      "passed": true
+    },
+    {
+      "name": "all_failed_exact_http502",
+      "passed": true
+    },
+    {
+      "name": "load_bundle_production_gate",
+      "passed": true
+    }
+  ],
+  "bundle_sha256": "72ab9b8706cdf77c102f7fb53c372e3a183ecdf69e67599d9d58732838fd392e",
+  "preprotocol_sha256": "1630df051d37301944cd30baae2a7e4107e4684edcf43b0e90dbe0fa37a57986",
+  "policy_sha256": "4027285c2039c2b2ef69f83285a68665134b83a3f4cebc5239718776ad8351cc",
+  "runner_sha256": "ba312df2a904122e1a9dab72c62fe01d5beed40dbe507e1091bc8c21e8366bc4",
+  "stage12_postaudit_sha256": "595c853d71a3dee79bfa11d40497cf9c0017ab5a07b54f5625bc6a6f3e8a31bb",
+  "coefficient": [
+    [
+      1.56720531322167
+    ]
+  ],
+  "intercept": [
+    -0.15632219069119976
+  ],
+  "main": "calibrated",
+  "secondary": "raw",
+  "threshold": 0.5,
+  "stage12_counts": {
+    "accepted": 240,
+    "started": 251,
+    "failed_http502": 11,
+    "unknown": 0
+  },
+  "confirmation_schema_or_members_read": false,
+  "confirmation_metadata_or_images_read": false,
+  "protected_labels_read": false,
+  "new_api_requests": 0,
+  "model_calls": 0,
+  "authorized_next_step": "Protocol owner may execute the already authorized one-time open_inputs and dry_run under frozen source; audit does not itself open data"
+}

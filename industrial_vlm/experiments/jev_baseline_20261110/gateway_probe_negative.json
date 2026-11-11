@@ -1,0 +1,25 @@
+{
+  "timestamp_utc": "2026-11-10T14:10:09.442710+00:00",
+  "endpoint": "https://api.modelgo.ai/v1/systemone",
+  "request_model": "jev-1.14.0",
+  "no_benchmark_predictions": true,
+  "model_version_note": "ModelGo documents model as logical request-name echo; not independent upstream version proof.",
+  "records": [
+    {
+      "shots": 0,
+      "purpose": "synthetic_image_transport_smoke_only",
+      "query_color": "blue",
+      "request_model": "jev-1.14.0",
+      "image_size": [
+        448,
+        448
+      ],
+      "assets_count": 1,
+      "request_sha256": "9e13ee6f390cc8adba364e13e1c6270720eef4353383d9e3bff6e2b393a5f402",
+      "http_status": 502,
+      "request_id": "gw_b5ee672c-4e1e-4199-8c99-26fe96fec18b",
+      "error": "{'error': {'code': 502, 'message': 'provider server error', 'metadata': {'app_error_id': 5022, 'error_class': 'provider_server', 'request_id': 'gw_b5ee672c-4e1e-4199-8c99-26fe96fec18b'}}, 'trace_id': '13cb1df8d9363350d587115b399822cc'}",
+      "seconds": 4.716956709045917
+    }
+  ]
+}

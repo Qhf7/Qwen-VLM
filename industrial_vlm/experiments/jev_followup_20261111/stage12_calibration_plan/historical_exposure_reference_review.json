@@ -1,0 +1,83 @@
+{
+  "schema": "jev-stage12-historical-reference-scope-v1",
+  "status": "source_reference_review_only",
+  "timestamp_utc": "2026-11-10T18:27:52.908098+00:00",
+  "hostname": "autodl-container-132444827f-9c594038",
+  "files": [
+    {
+      "path": "configs/quality_decision.json",
+      "sha256": "7412b777ff0a1f16f5fe05b9c0b1a585a1f3a0b957dbb2b0bac2922ebeb58f76",
+      "references": [
+        {
+          "line": 4,
+          "text": "  \"val_file\": \"/root/autodl-tmp/industrial_vlm/prepared/visa/val_balanced_120_decision.jsonl\","
+        }
+      ]
+    },
+    {
+      "path": "configs/quality_region.json",
+      "sha256": "1b67a87900e9c2f5eb479bcbc20be2acd18cfa926a1cda95ed30cd3e0edb9244",
+      "references": [
+        {
+          "line": 4,
+          "text": "  \"val_file\": \"/root/autodl-tmp/industrial_vlm/prepared/visa/val_balanced_120.jsonl\","
+        }
+      ]
+    },
+    {
+      "path": "configs/random_region.json",
+      "sha256": "d96dfc17ee5ba1d14158da3d3515a85ce966f5deb9daf4b3df806b55d30db4a3",
+      "references": [
+        {
+          "line": 4,
+          "text": "  \"val_file\": \"/root/autodl-tmp/industrial_vlm/prepared/visa/val_balanced_120.jsonl\","
+        }
+      ]
+    },
+    {
+      "path": "ops/run_scores_v2.py",
+      "sha256": "7b4fdab7c8ca3c1f1ccc977d90f6d566e21524f9a6698ad5f11c2f3cb677525d",
+      "references": [
+        {
+          "line": 41,
+          "text": "            \"scope\": \"Frozen scoring import tree plus runner; boolean scores never use confirmation manifests.\","
+        },
+        {
+          "line": 87,
+          "text": "        for role, data in ((\"validation\", ROOT / \"prepared/multitask_v2/val_decision_120.jsonl\"),"
+        }
+      ]
+    },
+    {
+      "path": "ops/prepare_multitask_v2.py",
+      "sha256": "26ba095cf173f6865eb43de7f6751f17d2607b4c98a7198ca23a1d39e99ceace",
+      "references": [
+        {
+          "line": 131,
+          "text": "    full_test, full_val = read(\"test.jsonl\"), read(\"val.jsonl\")"
+        },
+        {
+          "line": 151,
+          "text": "    val_region = read(\"val_balanced_120.jsonl\")"
+        },
+        {
+          "line": 157,
+          "text": "    decision_val_path = visa / \"val_balanced_120_decision.jsonl\""
+        }
+      ]
+    }
+  ],
+  "findings": [
+    "Known initial train configs point to balanced120 region/decision validation files",
+    "Known v2 scorer uses prepared/multitask_v2/val_decision_120.jsonl for validation-normal threshold calibration; that known path is the excluded current120",
+    "Builder does load fullval for schema/split integrity validation, which is metadata/annotation access rather than proof of inference on all1624",
+    "These source references do not establish an exhaustive historical exposure ledger; manual runs, earlier configs and cached fullval-loss/predictions may exist",
+    "No claim that selected stage12 sources are unseen to researchers or every historical model; nativeval-remainder source-disjoint study remains correct terminology"
+  ],
+  "evaluation_predictions_read": false,
+  "current_stage12_labels_reopened": false,
+  "confirmation_opened": false,
+  "rgb_opened": false,
+  "gt_masks_opened": false,
+  "new_api_requests": 0
+}

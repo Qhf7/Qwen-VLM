@@ -1,0 +1,53 @@
+{
+  "schema": "jev-resolution-certified-reference-evaluation-v1",
+  "status": "evaluation_protocol_frozen",
+  "hostname": "autodl-container-132444827f-9c594038",
+  "original_resolution_contract_sha256": "dcb93b15d2d83491a74997ba40ea01d22b32a09e51ed224f722aab3205adcfbe",
+  "original_resolution_source_sha256": "4458848524108d22220d1196cffef65967d06f730425e1cb73277e651b1db9af",
+  "evaluator_source_sha256": "55c387f9195017e888fb24567cc7b49680ec2e9fab988701afcc7b4860854dee",
+  "reference": {
+    "reference_completion_status": "complete_with_operational_amendment",
+    "original_stage_status": "incomplete_requires_explicit_retry",
+    "original_status_unchanged": true,
+    "scientific_change": false,
+    "certificate_path": "stage08_rescue/completion_certificate.json",
+    "certificate_sha256": "c9ec5d068d6533f4165e52ff61b8cfd24d605b21e2ab6d19c47ea408977a1eae",
+    "combined_predictions_path": "stage08_rescue/combined_predictions.jsonl",
+    "combined_predictions_sha256": "3ac5598625bf22ded0ff56497f60dc9b3e8276c60cbb6e90b0b04ea9d7345a0f",
+    "operational_amendment_sha256": "c504d573889d77286e9e985c3e96b11fa73500909f41cc9350e7e78335b7e0d5",
+    "original_contract_sha256": "49a55faf08234a9c7d1c199c87b8f5e5e1de02fa0c0bdbc4ca20b11a9d66d511",
+    "original_predictions_sha256": "a7b0244279562b702735ca0bc0336f260af897e3c06ac984c50200233bdd68cc",
+    "reference_source_sha256": "1ea9ec2340faeb089f24f038484f0e24f8b69f699ed9d2abde0c808a9a537e22",
+    "evaluator_source_sha256": "55c387f9195017e888fb24567cc7b49680ec2e9fab988701afcc7b4860854dee",
+    "reused_arm": "shared0",
+    "reused_accepted": 120,
+    "excluded_support_arm_observations": 480
+  },
+  "query_order_sha256": "e9208b7cacaf4df695a8997647be321b8a337d78a8a075b5ba4bcbbff4fe0a80",
+  "thresholds": {
+    "size320_0shot": "probability >= 0.5",
+    "shared0_448": "probability >= 0.5"
+  },
+  "metrics": [
+    "auroc",
+    "ap",
+    "macro_f1",
+    "recall",
+    "fpr",
+    "brier",
+    "ece_10_equal_width"
+  ],
+  "bootstrap": {
+    "replicates": 2000,
+    "seed": 42,
+    "strata": "category x image_label",
+    "paired": true
+  },
+  "statistical_implementation": "Original resolution.paired_bootstrap / support.metrics; no fit or threshold selection",
+  "budgets": "120new320;120shared0448reused;480support observations excluded",
+  "operational_change_only": true,
+  "scientific_contract_unchanged": true,
+  "labels_not_opened_by_wrapper_before_freeze": true,
+  "previously_viewed_development_not_blind": true,
+  "confirmation_opened": false
+}

@@ -1,0 +1,332 @@
+{
+  "schema": "qwen-matched-input-final-audit-v1",
+  "status": "complete",
+  "script_sha256": "402dea74220164f6fcc615764d24d225af79dd8cdd0d72ea496c65ef51954546",
+  "n_targets": 240,
+  "n_unique_pairs": 240,
+  "source_counts": {
+    "base": 120,
+    "decision_decision": 120
+  },
+  "cross_arm_pixel_tensor_hash_mismatches": 0,
+  "all_rows_grid": [
+    1,
+    28,
+    28
+  ],
+  "merged_visual_tokens": 196,
+  "loaders": {
+    "base": {
+      "quantized_modules": 252,
+      "lora_modules": 0,
+      "visual_dtype": "torch.bfloat16",
+      "attention": "sdpa"
+    },
+    "decision_decision": {
+      "quantized_modules": 252,
+      "lora_modules": 144,
+      "visual_dtype": "torch.bfloat16",
+      "attention": "sdpa"
+    }
+  },
+  "arms": {
+    "base": {
+      "auroc": 0.8244444444444444,
+      "ap": 0.8596780408578113,
+      "recall": 0.23333333333333334,
+      "fpr": 0.0,
+      "macro_f1": 0.5506349723217193,
+      "n": 120,
+      "n_anomaly": 60,
+      "n_normal": 60,
+      "tp": 14,
+      "fp": 0,
+      "tn": 60,
+      "fn": 46
+    },
+    "decision_decision": {
+      "auroc": 0.9348611111111111,
+      "ap": 0.9432879438886241,
+      "recall": 0.7166666666666667,
+      "fpr": 0.05,
+      "macro_f1": 0.8310335116868488,
+      "n": 120,
+      "n_anomaly": 60,
+      "n_normal": 60,
+      "tp": 43,
+      "fp": 3,
+      "tn": 57,
+      "fn": 17
+    }
+  },
+  "paired_dd_minus_base": {
+    "pooled": {
+      "auroc": {
+        "delta": 0.11041666666666672,
+        "ci95": [
+          0.0740277777777778,
+          0.14972916666666672
+        ],
+        "replicates": 2000,
+        "seed": 42,
+        "strata": "category x image_label",
+        "paired": true,
+        "includes_provider_repeat_randomness": false,
+        "includes_training_seed_variance": false,
+        "includes_support_selection_variance": false,
+        "multiplicity_corrected": false
+      },
+      "ap": {
+        "delta": 0.08360990303081284,
+        "ci95": [
+          0.054266340301012767,
+          0.11473849892590687
+        ],
+        "replicates": 2000,
+        "seed": 42,
+        "strata": "category x image_label",
+        "paired": true,
+        "includes_provider_repeat_randomness": false,
+        "includes_training_seed_variance": false,
+        "includes_support_selection_variance": false,
+        "multiplicity_corrected": false
+      },
+      "macro_f1": {
+        "delta": 0.2803985393651295,
+        "ci95": [
+          0.20416626426297357,
+          0.3608647008800597
+        ],
+        "replicates": 2000,
+        "seed": 42,
+        "strata": "category x image_label",
+        "paired": true,
+        "includes_provider_repeat_randomness": false,
+        "includes_training_seed_variance": false,
+        "includes_support_selection_variance": false,
+        "multiplicity_corrected": false
+      },
+      "recall": {
+        "delta": 0.48333333333333334,
+        "ci95": [
+          0.3666666666666667,
+          0.6000000000000001
+        ],
+        "replicates": 2000,
+        "seed": 42,
+        "strata": "category x image_label",
+        "paired": true,
+        "includes_provider_repeat_randomness": false,
+        "includes_training_seed_variance": false,
+        "includes_support_selection_variance": false,
+        "multiplicity_corrected": false
+      },
+      "fpr": {
+        "delta": 0.05,
+        "ci95": [
+          0.016666666666666666,
+          0.1
+        ],
+        "replicates": 2000,
+        "seed": 42,
+        "strata": "category x image_label",
+        "paired": true,
+        "includes_provider_repeat_randomness": false,
+        "includes_training_seed_variance": false,
+        "includes_support_selection_variance": false,
+        "multiplicity_corrected": false
+      }
+    },
+    "category_macro": {
+      "auroc": {
+        "delta": 0.010000000000000018,
+        "ci95": [
+          -0.043375000000000004,
+          0.065
+        ],
+        "replicates": 2000,
+        "seed": 42,
+        "strata": "category x image_label",
+        "paired": true,
+        "includes_provider_repeat_randomness": false,
+        "includes_training_seed_variance": false,
+        "includes_support_selection_variance": false,
+        "multiplicity_corrected": false
+      },
+      "ap": {
+        "delta": 0.020138888888888918,
+        "ci95": [
+          -0.021667328042328054,
+          0.053895006613756576
+        ],
+        "replicates": 2000,
+        "seed": 42,
+        "strata": "category x image_label",
+        "paired": true,
+        "includes_provider_repeat_randomness": false,
+        "includes_training_seed_variance": false,
+        "includes_support_selection_variance": false,
+        "multiplicity_corrected": false
+      },
+      "macro_f1": {
+        "delta": 0.29722083472083477,
+        "ci95": [
+          0.2206441706441707,
+          0.3789042265604766
+        ],
+        "replicates": 2000,
+        "seed": 42,
+        "strata": "category x image_label",
+        "paired": true,
+        "includes_provider_repeat_randomness": false,
+        "includes_training_seed_variance": false,
+        "includes_support_selection_variance": false,
+        "multiplicity_corrected": false
+      },
+      "recall": {
+        "delta": 0.48333333333333334,
+        "ci95": [
+          0.3666666666666667,
+          0.6
+        ],
+        "replicates": 2000,
+        "seed": 42,
+        "strata": "category x image_label",
+        "paired": true,
+        "includes_provider_repeat_randomness": false,
+        "includes_training_seed_variance": false,
+        "includes_support_selection_variance": false,
+        "multiplicity_corrected": false
+      },
+      "fpr": {
+        "delta": 0.05000000000000001,
+        "ci95": [
+          0.016666666666666666,
+          0.10000000000000002
+        ],
+        "replicates": 2000,
+        "seed": 42,
+        "strata": "category x image_label",
+        "paired": true,
+        "includes_provider_repeat_randomness": false,
+        "includes_training_seed_variance": false,
+        "includes_support_selection_variance": false,
+        "multiplicity_corrected": false
+      }
+    }
+  },
+  "hashes": {
+    "contract.json": "eada1d9c5fe7e02289eab471ec9fbea737b63e9dd25e3e88d9879a4fa75716cd",
+    "scores.jsonl": "14eb5850370b2b706c82a9a46c208c2ef97b173fba3042248ce21587c3dcd83b",
+    "metrics.json": "82936f475ecf105839bdb387db52adb28024a82c73a424573bf6b06b91ff3d3e",
+    "prediction_freeze.json": "04db017c0600c11ecca14901c776a7dc563010629c99e41c5611854dfd6864cd",
+    "preflight.json": "fa3a029d48b799409fbc61195b30d41fbc8e49c817fc4a90f84fc6a843d18774"
+  },
+  "history_comparison": {
+    "base": {
+      "scores_sha256": "dc109510af9e58701257ef943e05cee4b100f46df80a14620b36fdfb64f96499",
+      "original_input": {
+        "auroc": 0.8238888888888889,
+        "ap": 0.8557746149933004,
+        "recall": 0.3,
+        "fpr": 0.0,
+        "macro_f1": 0.6011396011396011,
+        "n": 120,
+        "n_anomaly": 60,
+        "n_normal": 60,
+        "tp": 18,
+        "fp": 0,
+        "tn": 60,
+        "fn": 42
+      },
+      "new448": {
+        "auroc": 0.8244444444444444,
+        "ap": 0.8596780408578113,
+        "recall": 0.23333333333333334,
+        "fpr": 0.0,
+        "macro_f1": 0.5506349723217193,
+        "n": 120,
+        "n_anomaly": 60,
+        "n_normal": 60,
+        "tp": 14,
+        "fp": 0,
+        "tn": 60,
+        "fn": 46
+      },
+      "new_minus_original": {
+        "auroc": 0.0005555555555555314,
+        "ap": 0.0039034258645108677,
+        "macro_f1": -0.05050462881788176,
+        "recall": -0.06666666666666665,
+        "fpr": 0.0
+      },
+      "interpretation": "Historical original-input control; render geometry budget changed; not a new matched-input run"
+    },
+    "decision_decision": {
+      "scores_sha256": "d19c70935d3369d400a921d5a9281c6382566c327667b9b3f6de0bb3a7b4681c",
+      "original_input": {
+        "auroc": 0.9455555555555556,
+        "ap": 0.9525940316116764,
+        "recall": 0.8166666666666667,
+        "fpr": 0.11666666666666667,
+        "macro_f1": 0.8498331479421579,
+        "n": 120,
+        "n_anomaly": 60,
+        "n_normal": 60,
+        "tp": 49,
+        "fp": 7,
+        "tn": 53,
+        "fn": 11
+      },
+      "new448": {
+        "auroc": 0.9348611111111111,
+        "ap": 0.9432879438886241,
+        "recall": 0.7166666666666667,
+        "fpr": 0.05,
+        "macro_f1": 0.8310335116868488,
+        "n": 120,
+        "n_anomaly": 60,
+        "n_normal": 60,
+        "tp": 43,
+        "fp": 3,
+        "tn": 57,
+        "fn": 17
+      },
+      "new_minus_original": {
+        "auroc": -0.01069444444444445,
+        "ap": -0.009306087723052303,
+        "macro_f1": -0.018799636255309116,
+        "recall": -0.09999999999999998,
+        "fpr": -0.06666666666666667
+      },
+      "interpretation": "Historical original-input control; render geometry budget changed; not a new matched-input run"
+    }
+  },
+  "bootstrap": {
+    "replicates": 2000,
+    "seed": 42,
+    "strata": "category x image_label",
+    "paired": true,
+    "includes_provider_repeat_randomness": false,
+    "includes_training_seed_variance": false,
+    "includes_support_selection_variance": false,
+    "multiplicity_corrected": false
+  },
+  "model_forward_budget": {
+    "image_decisions": 240,
+    "boolean_candidate_forwards": 480,
+    "extra_warmups": 0
+  },
+  "no_new_training": true,
+  "no_new_api": true,
+  "labels_opened_after_prediction_freeze": true,
+  "confirmation_opened": false,
+  "limitations": [
+    "Previously viewed development validation; no blind confirmation or deployment claim.",
+    "Exact same stage08 query PNG bytes, one image and no references in both Qwen arms.",
+    "Qwen JSON boolean prompt/scoring and Jev typed Noul protocol differ.",
+    "Jev internal visual tokens and compute are unknown; matching pixels/images is not matching FLOPs or tokens.",
+    "Qwen two-candidate normalized score is not calibrated confidence.",
+    "Historical Qwen original-resolution scores and historical Jev renderer remain separate evidence."
+  ]
+}

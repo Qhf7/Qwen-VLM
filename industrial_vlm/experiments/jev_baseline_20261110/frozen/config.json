@@ -1,0 +1,38 @@
+{
+  "schema": "jev-industrial-baseline-v1",
+  "model": "jev-1.14.0",
+  "shots": [
+    0,
+    1,
+    4
+  ],
+  "size": 448,
+  "preprocessing": "EXIF transpose; RGB; LANCZOS contain; centered white padding; PNG compress_level=6",
+  "instructions": "Does the image in state field query show at least one visible industrial anomaly (surface damage, contamination, missing material or component, or structural irregularity)? Treat normal_references, if provided, as normal examples of the same object category. Judge query, not the references. Ordinary differences in viewpoint, lighting, background, or object identity alone are not defects.",
+  "criteria": {
+    "true": "At least one visible industrial defect is present in query.",
+    "false": "No visible industrial defect is present in query."
+  },
+  "threshold": 0.5,
+  "ece_bins": 10,
+  "bootstrap": {
+    "seed": 42,
+    "replicates": 2000,
+    "strata": "category_and_label"
+  },
+  "source_hashes": {
+    "queries": "cffb9a3bce5da68d6e026b06ee068ca9c266e033f9622d8d01986daa0c0e64f9",
+    "train": "214778943ccb8be292c533708d12f42944ae8c8f23364560d2e221798e610da4",
+    "audit": "ca5ba84aa4dc5932e127bbf62698ffe196f7c4181b33b74f8e72be9586f685b0"
+  },
+  "plan_sha256": "c17a69fed4ed1b7626913b2f91959f8c7de804df7d161df855acdfb85be1fb94",
+  "labels_sha256": "8420740b12aef8787ce8a2850300f882e833e6cd2e16f59b323cc2e193dafcea",
+  "runner_sha256": "32645dafd5b45d18de9dd93bf31dc8e1e23b597fe244b49212c401f841a59ddf",
+  "versions": {
+    "python": "3.12.2",
+    "pillow": "10.3.0",
+    "numpy": "1.26.4",
+    "sklearn": "1.6.1",
+    "requests": "2.32.2"
+  }
+}

@@ -1,0 +1,942 @@
+{
+  "schema": "jev-stages04-07-independent-integrity-audit-v1",
+  "status": "passed_with_disclosed_limits",
+  "timestamp_utc": "2026-11-10T17:59:38.516760+00:00",
+  "hostname": "autodl-container-132444827f-9c594038",
+  "checks_count": 177,
+  "checks_failed": 0,
+  "checks": [
+    {
+      "name": "formal_contract_rebuild",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "formal240_unique",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "formal_status_and_no_unknown",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "attempt_budget3_per_target",
+      "passed": true,
+      "detail": {
+        "started": 278,
+        "failed": 38,
+        "unknown": 0
+      }
+    },
+    {
+      "name": "stage04_prediction_hash",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage04_api_source_hash",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage04_evaluator_source_hash",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage04_freeze_before_GT_stage05",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_full120_denominators",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_mask_count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_confirmation_and_no_tuning",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_gt_target_hash",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_per_source_IoU",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_metric_all120_unconditional_teacher",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_metric_all120_historical_jev_0shot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_metric_all120_historical_jev_1shot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_metric_all120_historical_jev_4shot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_metric_all120_roi",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_metric_all120_duplicate",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_metric_all120_historical_qwen_base",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_metric_all120_historical_qwen_decision_decision",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_bootstrap_all120",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_metric_teacher_unseen_unconditional_teacher",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_metric_teacher_unseen_historical_jev_0shot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_metric_teacher_unseen_historical_jev_1shot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_metric_teacher_unseen_historical_jev_4shot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_metric_teacher_unseen_roi",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_metric_teacher_unseen_duplicate",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_metric_teacher_unseen_historical_qwen_base",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_metric_teacher_unseen_historical_qwen_decision_decision",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_bootstrap_teacher_unseen",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_metric_teacher_training_exposed_unconditional_teacher",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_metric_teacher_training_exposed_historical_jev_0shot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_metric_teacher_training_exposed_historical_jev_1shot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_metric_teacher_training_exposed_historical_jev_4shot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_metric_teacher_training_exposed_roi",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_metric_teacher_training_exposed_duplicate",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_metric_teacher_training_exposed_historical_qwen_base",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_metric_teacher_training_exposed_historical_qwen_decision_decision",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_bootstrap_teacher_training_exposed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_metric_full_image_candidate_unconditional_teacher",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_metric_full_image_candidate_historical_jev_0shot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_metric_full_image_candidate_historical_jev_1shot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_metric_full_image_candidate_historical_jev_4shot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_metric_full_image_candidate_roi",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_metric_full_image_candidate_duplicate",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_metric_full_image_candidate_historical_qwen_base",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_metric_full_image_candidate_historical_qwen_decision_decision",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_bootstrap_full_image_candidate",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_metric_nonfull_image_candidate_unconditional_teacher",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_metric_nonfull_image_candidate_historical_jev_0shot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_metric_nonfull_image_candidate_historical_jev_1shot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_metric_nonfull_image_candidate_historical_jev_4shot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_metric_nonfull_image_candidate_roi",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_metric_nonfull_image_candidate_duplicate",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_metric_nonfull_image_candidate_historical_qwen_base",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_metric_nonfull_image_candidate_historical_qwen_decision_decision",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_bootstrap_nonfull_image_candidate",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_metric_query_crop_bytes_identical_unconditional_teacher",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_metric_query_crop_bytes_identical_historical_jev_0shot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_metric_query_crop_bytes_identical_historical_jev_1shot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_metric_query_crop_bytes_identical_historical_jev_4shot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_metric_query_crop_bytes_identical_roi",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_metric_query_crop_bytes_identical_duplicate",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_metric_query_crop_bytes_identical_historical_qwen_base",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_metric_query_crop_bytes_identical_historical_qwen_decision_decision",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_bootstrap_query_crop_bytes_identical",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_metric_query_crop_bytes_different_unconditional_teacher",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_metric_query_crop_bytes_different_historical_jev_0shot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_metric_query_crop_bytes_different_historical_jev_1shot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_metric_query_crop_bytes_different_historical_jev_4shot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_metric_query_crop_bytes_different_roi",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_metric_query_crop_bytes_different_duplicate",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_metric_query_crop_bytes_different_historical_qwen_base",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_metric_query_crop_bytes_different_historical_qwen_decision_decision",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage05_bootstrap_query_crop_bytes_different",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unseen24_normal2_anomaly22",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "routing_protocol_canonical_hash",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "routing_code_hash",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "routing_inputs_linked",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "routing_is_replay",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "routing_choice_duplicate",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage06_metric_all120_duplicate",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage06_metric_teacher_unseen_duplicate",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage06_metric_teacher_training_exposed_duplicate",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage06_metric_full_image_candidate_duplicate",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage06_metric_nonfull_image_candidate_duplicate",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage06_metric_query_crop_bytes_identical_duplicate",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage06_metric_query_crop_bytes_different_duplicate",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "routing_choice_roi",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage06_metric_all120_roi",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage06_metric_teacher_unseen_roi",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage06_metric_teacher_training_exposed_roi",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage06_metric_full_image_candidate_roi",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage06_metric_nonfull_image_candidate_roi",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage06_metric_query_crop_bytes_identical_roi",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage06_metric_query_crop_bytes_different_roi",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "routing_choice_sequential_uncertain",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage06_metric_all120_sequential_uncertain",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage06_metric_teacher_unseen_sequential_uncertain",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage06_metric_teacher_training_exposed_sequential_uncertain",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage06_metric_full_image_candidate_sequential_uncertain",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage06_metric_nonfull_image_candidate_sequential_uncertain",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage06_metric_query_crop_bytes_identical_sequential_uncertain",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage06_metric_query_crop_bytes_different_sequential_uncertain",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "routing_choice_geometry_small",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage06_metric_all120_geometry_small",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage06_metric_teacher_unseen_geometry_small",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage06_metric_teacher_training_exposed_geometry_small",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage06_metric_full_image_candidate_geometry_small",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage06_metric_nonfull_image_candidate_geometry_small",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage06_metric_query_crop_bytes_identical_geometry_small",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage06_metric_query_crop_bytes_different_geometry_small",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "routing_choice_matched_random_s42",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage06_metric_all120_matched_random_s42",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage06_metric_teacher_unseen_matched_random_s42",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage06_metric_teacher_training_exposed_matched_random_s42",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage06_metric_full_image_candidate_matched_random_s42",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage06_metric_nonfull_image_candidate_matched_random_s42",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage06_metric_query_crop_bytes_identical_matched_random_s42",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage06_metric_query_crop_bytes_different_matched_random_s42",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "routing_choice_matched_random_s43",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage06_metric_all120_matched_random_s43",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage06_metric_teacher_unseen_matched_random_s43",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage06_metric_teacher_training_exposed_matched_random_s43",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage06_metric_full_image_candidate_matched_random_s43",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage06_metric_nonfull_image_candidate_matched_random_s43",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage06_metric_query_crop_bytes_identical_matched_random_s43",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage06_metric_query_crop_bytes_different_matched_random_s43",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "routing_choice_matched_random_s44",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage06_metric_all120_matched_random_s44",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage06_metric_teacher_unseen_matched_random_s44",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage06_metric_teacher_training_exposed_matched_random_s44",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage06_metric_full_image_candidate_matched_random_s44",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage06_metric_nonfull_image_candidate_matched_random_s44",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage06_metric_query_crop_bytes_identical_matched_random_s44",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stage06_metric_query_crop_bytes_different_matched_random_s44",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "routing_bootstrap_protocol",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "calibration_protocol_canonical_hash",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "calibration_protocol_rebuild",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "calibration_source_hash",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "calibration_stage05_link",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "calibration_shared_source_fold_map",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "calibration_fold_disjoint_0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "calibration_fold_disjoint_1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "calibration_fold_disjoint_2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "calibration_fold_disjoint_3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "calibration_fold_disjoint_4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "calibration_refit_coefficients_jev_0shot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "calibration_metric_and_rejection_jev_0shot_raw",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "calibration_oof_records_jev_0shot_raw",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "calibration_metric_and_rejection_jev_0shot_oof_logistic",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "calibration_oof_records_jev_0shot_oof_logistic",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "calibration_refit_coefficients_jev_1shot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "calibration_metric_and_rejection_jev_1shot_raw",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "calibration_oof_records_jev_1shot_raw",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "calibration_metric_and_rejection_jev_1shot_oof_logistic",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "calibration_oof_records_jev_1shot_oof_logistic",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "calibration_refit_coefficients_jev_4shot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "calibration_metric_and_rejection_jev_4shot_raw",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "calibration_oof_records_jev_4shot_raw",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "calibration_metric_and_rejection_jev_4shot_oof_logistic",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "calibration_oof_records_jev_4shot_oof_logistic",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "calibration_refit_coefficients_qwen_base",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "calibration_metric_and_rejection_qwen_base_raw",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "calibration_oof_records_qwen_base_raw",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "calibration_metric_and_rejection_qwen_base_oof_logistic",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "calibration_oof_records_qwen_base_oof_logistic",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "calibration_refit_coefficients_qwen_decision_decision",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "calibration_metric_and_rejection_qwen_decision_decision_raw",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "calibration_oof_records_qwen_decision_decision_raw",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "calibration_metric_and_rejection_qwen_decision_decision_oof_logistic",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "calibration_oof_records_qwen_decision_decision_oof_logistic",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "calibration_development_only",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "calibration_timing_disclosed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "frozen_api_confirmed4f7",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_label_GT_in_ROI_payload",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "code_version_audit": {
+    "frozen_api_sha256": "4f7b5ed1f703b3751f9fd4bb8c86131d684cec0bed3a9011f5108621e7aa9e01",
+    "known_postfreeze_revision_sha256": "d11dd9be233a4d42cbb254fb8587672ee0e4a24fbbf2d6b8970d833189881d77",
+    "observed_diff": [
+      "import socket",
+      "SERVER_HOSTNAME constant",
+      "hostname require in run"
+    ],
+    "payload_changed": false,
+    "analysis_changed": false,
+    "host_gate_absent_in_frozen_runner": true,
+    "actual_execution_server_verified": true,
+    "max_started_per_target": 3,
+    "consecutive_error_stop": 3,
+    "separate_cumulative_total_error_guard": false,
+    "finite_total_started_cap": 720,
+    "resolution": "Preserve actual server-frozen source as reproduction code; archive later host-gated revision separately; no postfreeze replacement; downstream scripts enforce own server hostname"
+  },
+  "files_sha256": {
+    "04_prediction_freeze.json": "a36944f2f1e7b5e947bf6b38c9895c62bce2f22f5604efe86c15cdaeca2e2b62",
+    "05_evaluation.json": "fe2702586f60d575b319790c7ec37b737bc189d864d6f6238b98f34588992a92",
+    "06_routing_protocol.json": "6834c3ce1080d698a825b10377632147b4ffd3c5ae9a55a532c60293e3a5515b",
+    "06_routing_results.json": "51e0f1791d01c163859377197f56f27b1e7819657e600c5138da122ff323f0fd",
+    "07_calibration_protocol.json": "7442f1c0b504bdc0d4c3836d145b5151cfc72adb6889ad52ca049652c9c294c0",
+    "07_calibration_results.json": "a5bb87f0f6863143ca44b8b60a3c030d37d9bb710a8af9f6308481f0719f9e8b",
+    "07_calibration_timing_and_ties_audit.json": "9ff58c0bd94dca692961b230e1cf6d6625957ec98ff2872a6ce95a372c1465a1",
+    "CALIBRATION_REPORT.md": "df299ce3a1055c36071c9a6d58ca7b8c36c6e022ad10ebac488706fa70f469ca"
+  },
+  "scientific_limits": [
+    "Teacher train overlaps96/120; unseen24 includes22 anomaly and2 normal",
+    "60/120 union95 candidates are full-image and exact same query/crop pixels",
+    "Historical renderer differs; cross-stage score changes not crop effects",
+    "stage06 offline replay; actual240 collection cost not undone",
+    "stage07 formed after stage05 but before calibration fit; development crossfit only",
+    "Native strict logodds>0 versus stage07 p>=.5 yields base1 andDD3 equality cases; report supplemented",
+    "No syscall access tracing; no-confirmation access established by explicit code paths/allowlists/hash gates and recorded isolation flags"
+  ],
+  "new_api_calls": 0,
+  "original_rgb_opened_for_this_audit": 0,
+  "gt_masks_opened_for_this_audit": 0,
+  "confirmation_opened": false,
+  "old_frozen_code_or_numeric_outputs_modified": false,
+  "report_note_append_only": true
+}
